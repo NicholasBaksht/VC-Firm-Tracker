@@ -132,7 +132,7 @@
   }
   .stamp strong { color: var(--ink); font-weight: 600; }
 
-  /* ---------- IPO HIGHLIGHT ---------- */
+  /* ---------- NEWS: FEATURED (most recent) ---------- */
   .highlight {
     margin: 24px 0 0;
     padding: 22px;
@@ -153,6 +153,42 @@
     font-size: 15px;
     line-height: 1.55;
     color: var(--ink);
+  }
+
+  /* ---------- NEWS: ARCHIVE (older entries) ---------- */
+  .news-archive {
+    margin-top: 14px;
+  }
+  .news-archive-label {
+    font-family: var(--mono);
+    font-size: 10px;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: var(--ink-dim);
+    margin: 22px 0 10px;
+  }
+  .news-item {
+    padding: 14px 0;
+    border-top: 1px solid var(--hairline);
+    display: grid;
+    grid-template-columns: 130px 1fr;
+    gap: 16px;
+  }
+  .news-item .date {
+    font-family: var(--mono);
+    font-size: 11.5px;
+    color: var(--gold);
+    white-space: nowrap;
+  }
+  .news-item p {
+    margin: 0;
+    font-size: 14px;
+    line-height: 1.55;
+    color: var(--ink-dim);
+  }
+  .news-item p strong { color: var(--ink); }
+  @media (max-width: 560px) {
+    .news-item { grid-template-columns: 1fr; gap: 4px; }
   }
 
   /* ---------- SECTION LABEL ---------- */
@@ -347,10 +383,7 @@
       <p><strong>VC firms don't publish their profits.</strong> Fund returns (IRR, gains, losses) are private, shared only with the firm's own investors. What follows instead is the closest honest picture: real, verified early bets these firms made — and how those bets have performed as public stocks, once the company went public. Type in today's price for any holding to see it update.</p>
     </div>
 
-    <div class="highlight">
-      <div class="tag">Just happened — June 12, 2026</div>
-      <p><strong>SpaceX went public</strong> on Nasdaq under ticker <strong>SPCX</strong>, one of the largest IPOs in history. Founders Fund's roughly 3% stake — built from about $600M invested since 2008 — was worth an estimated <strong>$50 billion+</strong> on debut. An ~80x return, and one of the biggest single venture wins ever recorded.</p>
-    </div>
+    <div id="newsContainer"></div>
   </section>
 
   <div class="section-label">
@@ -368,6 +401,22 @@
 </div>
 
 <script>
+// ============================================================
+// WEEKLY NEWS — Peter edits this part every week.
+// Add a new entry to the TOP of this array (right after the
+// opening bracket below). The newest entry becomes the big
+// featured box; everything else drops into the list below it.
+// Just copy one whole { ... }, block, paste it above the others,
+// and change the date/tag/text.
+// ============================================================
+const newsItems = [
+  {
+    date: "June 12, 2026",
+    tag: "Just happened",
+    text: '<strong>SpaceX went public</strong> on Nasdaq under ticker <strong>SPCX</strong>, one of the largest IPOs in history. Founders Fund\'s roughly 3% stake — built from about $600M invested since 2008 — was worth an estimated <strong>$50 billion+</strong> on debut. An ~80x return, and one of the biggest single venture wins ever recorded.'
+  }
+];
+
 const firms = [
   {
     rank: 1,
@@ -500,6 +549,33 @@ const firms = [
     ]
   }
 ];
+
+// Render the news feed: newest item as the big featured box,
+// everything else as a compact dated list underneath.
+const newsContainer = document.getElementById('newsContainer');
+if (newsItems.length > 0) {
+  const [latest, ...older] = newsItems;
+
+  let html = `
+    <div class="highlight">
+      <div class="tag">${latest.tag} — ${latest.date}</div>
+      <p>${latest.text}</p>
+    </div>`;
+
+  if (older.length > 0) {
+    html += `<div class="news-archive"><div class="news-archive-label">Earlier Updates</div>`;
+    older.forEach(item => {
+      html += `
+        <div class="news-item">
+          <div class="date">${item.date}</div>
+          <p>${item.text}</p>
+        </div>`;
+    });
+    html += `</div>`;
+  }
+
+  newsContainer.innerHTML = html;
+}
 
 const container = document.getElementById('firmsContainer');
 
