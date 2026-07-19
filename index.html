@@ -260,6 +260,15 @@
     font-size: 26px;
     margin: 4px 0 2px;
   }
+  .firm-link {
+    color: var(--ink);
+    text-decoration: none;
+    transition: color 0.15s ease;
+  }
+  .firm-link:hover {
+    color: var(--gold-bright);
+    text-decoration: underline;
+  }
   .firm-meta {
     font-family: var(--mono);
     font-size: 12px;
@@ -446,6 +455,7 @@ const firms = [
   {
     rank: 1,
     name: "Andreessen Horowitz",
+    website: "https://a16z.com",
     short: "a16z",
     founded: 2009,
     hq: "Menlo Park, CA",
@@ -459,6 +469,7 @@ const firms = [
   {
     rank: 2,
     name: "Sequoia Capital",
+    website: "https://www.sequoiacap.com",
     short: "Sequoia",
     founded: 1972,
     hq: "Menlo Park, CA",
@@ -472,6 +483,7 @@ const firms = [
   {
     rank: 3,
     name: "Insight Partners",
+    website: "https://www.insightpartners.com",
     short: "Insight",
     founded: 1995,
     hq: "New York, NY",
@@ -485,6 +497,7 @@ const firms = [
   {
     rank: 4,
     name: "General Catalyst",
+    website: "https://www.generalcatalyst.com",
     short: "GC",
     founded: 2000,
     hq: "Cambridge, MA",
@@ -498,6 +511,7 @@ const firms = [
   {
     rank: 5,
     name: "Thrive Capital",
+    website: "https://thrivecap.com",
     short: "Thrive",
     founded: 2009,
     hq: "New York, NY",
@@ -511,6 +525,7 @@ const firms = [
   {
     rank: 6,
     name: "New Enterprise Associates",
+    website: "https://www.nea.com",
     short: "NEA",
     founded: 1977,
     hq: "Menlo Park, CA",
@@ -524,6 +539,7 @@ const firms = [
   {
     rank: 7,
     name: "Tiger Global Management",
+    website: "https://www.tigerglobal.com",
     short: "Tiger Global",
     founded: 2001,
     hq: "New York, NY",
@@ -537,6 +553,7 @@ const firms = [
   {
     rank: 8,
     name: "Lightspeed Venture Partners",
+    website: "https://lsvp.com",
     short: "Lightspeed",
     founded: 2000,
     hq: "Menlo Park, CA",
@@ -550,6 +567,7 @@ const firms = [
   {
     rank: 9,
     name: "Accel",
+    website: "https://www.accel.com",
     short: "Accel",
     founded: 1983,
     hq: "Palo Alto, CA",
@@ -563,6 +581,7 @@ const firms = [
   {
     rank: 10,
     name: "Founders Fund",
+    website: "https://foundersfund.com",
     short: "Founders Fund",
     founded: 2005,
     hq: "San Francisco, CA",
@@ -576,6 +595,7 @@ const firms = [
   {
     rank: 11,
     name: "Bessemer Venture Partners",
+    website: "https://www.bvp.com",
     short: "Bessemer",
     founded: 1911,
     hq: "Redwood City, CA",
@@ -590,6 +610,7 @@ const firms = [
   {
     rank: 12,
     name: "Benchmark",
+    website: "https://www.benchmark.com",
     short: "Benchmark",
     founded: 1995,
     hq: "San Francisco, CA",
@@ -603,6 +624,7 @@ const firms = [
   {
     rank: 13,
     name: "Khosla Ventures",
+    website: "https://www.khoslaventures.com",
     short: "Khosla",
     founded: 2004,
     hq: "Menlo Park, CA",
@@ -669,7 +691,7 @@ firms.forEach(firm => {
     <div class="firm-head">
       <div>
         <div class="firm-rank">NO. ${String(firm.rank).padStart(2, '0')}</div>
-        <div class="firm-name">${firm.name}</div>
+        <div class="firm-name"><a href="${firm.website}" target="_blank" rel="noopener noreferrer" class="firm-link">${firm.name} ↗</a></div>
         <div class="firm-meta">Founded ${firm.founded} · ${firm.hq}</div>
       </div>
       <div class="firm-aum">
