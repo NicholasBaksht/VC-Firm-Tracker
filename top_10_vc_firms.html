@@ -1,0 +1,579 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>The Power Board — Top 10 U.S. Venture Capital Firms</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,300;9..144,500;9..144,600;9..144,700&family=Inter:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --bg: #0C0F14;
+    --surface: #14181F;
+    --surface-raised: #191E27;
+    --hairline: #2A3140;
+    --ink: #EDEFF3;
+    --ink-dim: #8B93A7;
+    --gold: #C9A227;
+    --gold-bright: #E8C34A;
+    --green: #4ADE80;
+    --red: #F87171;
+    --serif: 'Fraunces', serif;
+    --sans: 'Inter', sans-serif;
+    --mono: 'IBM Plex Mono', monospace;
+  }
+
+  * { box-sizing: border-box; }
+
+  body {
+    background: var(--bg);
+    color: var(--ink);
+    font-family: var(--sans);
+    margin: 0;
+    padding: 0;
+    -webkit-font-smoothing: antialiased;
+  }
+
+  a { color: inherit; }
+
+  .wrap {
+    max-width: 1080px;
+    margin: 0 auto;
+    padding: 0 24px;
+  }
+
+  /* ---------- TICKER ---------- */
+  .ticker-outer {
+    background: var(--surface);
+    border-bottom: 1px solid var(--hairline);
+    overflow: hidden;
+    white-space: nowrap;
+    padding: 10px 0;
+  }
+  .ticker-track {
+    display: inline-block;
+    font-family: var(--mono);
+    font-size: 13px;
+    letter-spacing: 0.03em;
+    color: var(--ink-dim);
+    animation: scroll 38s linear infinite;
+  }
+  .ticker-track span { margin-right: 42px; }
+  .ticker-track .up { color: var(--green); }
+  @keyframes scroll {
+    from { transform: translateX(0); }
+    to { transform: translateX(-50%); }
+  }
+  @media (prefers-reduced-motion: reduce) {
+    .ticker-track { animation: none; }
+  }
+
+  /* ---------- HERO ---------- */
+  .hero {
+    padding: 72px 0 48px;
+    border-bottom: 1px solid var(--hairline);
+  }
+  .eyebrow {
+    font-family: var(--mono);
+    font-size: 12px;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    color: var(--gold);
+    margin-bottom: 18px;
+  }
+  h1 {
+    font-family: var(--serif);
+    font-weight: 600;
+    font-size: clamp(38px, 5.5vw, 64px);
+    line-height: 1.05;
+    margin: 0 0 20px;
+    max-width: 780px;
+  }
+  .hero p {
+    font-size: 17px;
+    line-height: 1.6;
+    color: var(--ink-dim);
+    max-width: 620px;
+    margin: 0;
+  }
+
+  /* ---------- DISCLAIMER STAMP ---------- */
+  .stamp {
+    margin: 40px 0 0;
+    padding: 20px 22px;
+    border: 1px dashed var(--hairline);
+    border-radius: 2px;
+    background: var(--surface);
+    display: flex;
+    gap: 16px;
+    align-items: flex-start;
+  }
+  .stamp-badge {
+    flex-shrink: 0;
+    width: 52px;
+    height: 52px;
+    border-radius: 50%;
+    border: 1.5px solid var(--gold);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: var(--mono);
+    font-size: 10px;
+    letter-spacing: 0.05em;
+    color: var(--gold);
+    text-align: center;
+    line-height: 1.2;
+  }
+  .stamp p {
+    margin: 0;
+    font-size: 14px;
+    line-height: 1.55;
+    color: var(--ink-dim);
+  }
+  .stamp strong { color: var(--ink); font-weight: 600; }
+
+  /* ---------- IPO HIGHLIGHT ---------- */
+  .highlight {
+    margin: 24px 0 0;
+    padding: 22px;
+    border-radius: 2px;
+    background: linear-gradient(135deg, rgba(201,162,39,0.10), rgba(201,162,39,0.02));
+    border: 1px solid rgba(201,162,39,0.35);
+  }
+  .highlight .tag {
+    font-family: var(--mono);
+    font-size: 11px;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: var(--gold-bright);
+    margin-bottom: 8px;
+  }
+  .highlight p {
+    margin: 0;
+    font-size: 15px;
+    line-height: 1.55;
+    color: var(--ink);
+  }
+
+  /* ---------- SECTION LABEL ---------- */
+  .section-label {
+    padding: 56px 0 28px;
+    display: flex;
+    align-items: baseline;
+    justify-content: space-between;
+    gap: 20px;
+    flex-wrap: wrap;
+  }
+  .section-label h2 {
+    font-family: var(--serif);
+    font-weight: 600;
+    font-size: 28px;
+    margin: 0;
+  }
+  .section-label .note {
+    font-family: var(--mono);
+    font-size: 12px;
+    color: var(--ink-dim);
+  }
+
+  /* ---------- FIRM CARDS ---------- */
+  .firms {
+    display: grid;
+    gap: 18px;
+    padding-bottom: 60px;
+  }
+  .firm {
+    background: var(--surface);
+    border: 1px solid var(--hairline);
+    border-radius: 3px;
+    padding: 26px 28px;
+    position: relative;
+  }
+  .firm-head {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 20px;
+    margin-bottom: 6px;
+  }
+  .firm-rank {
+    font-family: var(--mono);
+    font-size: 13px;
+    color: var(--gold);
+    letter-spacing: 0.05em;
+  }
+  .firm-name {
+    font-family: var(--serif);
+    font-weight: 600;
+    font-size: 26px;
+    margin: 4px 0 2px;
+  }
+  .firm-meta {
+    font-family: var(--mono);
+    font-size: 12px;
+    color: var(--ink-dim);
+    letter-spacing: 0.02em;
+  }
+  .firm-aum {
+    text-align: right;
+    flex-shrink: 0;
+  }
+  .firm-aum .num {
+    font-family: var(--mono);
+    font-size: 20px;
+    color: var(--ink);
+  }
+  .firm-aum .lbl {
+    font-family: var(--mono);
+    font-size: 10px;
+    color: var(--ink-dim);
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+  }
+  .firm-thesis {
+    font-size: 14.5px;
+    line-height: 1.55;
+    color: var(--ink-dim);
+    margin: 14px 0 20px;
+    max-width: 640px;
+  }
+
+  .holdings {
+    border-top: 1px solid var(--hairline);
+    padding-top: 16px;
+  }
+  .holdings-label {
+    font-family: var(--mono);
+    font-size: 10px;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: var(--ink-dim);
+    margin-bottom: 10px;
+  }
+  .holding-row {
+    display: grid;
+    grid-template-columns: 1fr auto auto auto;
+    align-items: center;
+    gap: 14px;
+    padding: 10px 0;
+    border-bottom: 1px solid var(--hairline);
+  }
+  .holding-row:last-child { border-bottom: none; }
+  .holding-name {
+    font-size: 14.5px;
+    font-weight: 500;
+  }
+  .holding-ticker {
+    font-family: var(--mono);
+    font-size: 12px;
+    color: var(--gold);
+    background: rgba(201,162,39,0.08);
+    padding: 3px 8px;
+    border-radius: 3px;
+    white-space: nowrap;
+  }
+  .price-input-wrap {
+    display: flex;
+    align-items: center;
+    gap: 4px;
+    font-family: var(--mono);
+    font-size: 14px;
+  }
+  .price-input-wrap span.dollar { color: var(--ink-dim); }
+  .price-input {
+    width: 84px;
+    background: var(--surface-raised);
+    border: 1px solid var(--hairline);
+    border-radius: 3px;
+    color: var(--ink);
+    font-family: var(--mono);
+    font-size: 14px;
+    padding: 5px 7px;
+    text-align: right;
+  }
+  .price-input:focus {
+    outline: none;
+    border-color: var(--gold);
+  }
+  .price-input.placeholder-empty { color: var(--ink-dim); }
+  .price-hint {
+    font-family: var(--mono);
+    font-size: 10.5px;
+    color: var(--ink-dim);
+    white-space: nowrap;
+  }
+
+  /* ---------- FOOTER ---------- */
+  footer {
+    border-top: 1px solid var(--hairline);
+    padding: 36px 0 60px;
+  }
+  footer p {
+    font-size: 13px;
+    line-height: 1.6;
+    color: var(--ink-dim);
+    max-width: 640px;
+    margin: 0 0 10px;
+  }
+  footer .sig {
+    font-family: var(--mono);
+    font-size: 11px;
+    color: var(--hairline);
+    margin-top: 24px;
+  }
+
+  @media (max-width: 640px) {
+    .holding-row { grid-template-columns: 1fr auto; row-gap: 8px; }
+    .price-hint { grid-column: 1 / -1; }
+    .firm-head { flex-direction: column; }
+    .firm-aum { text-align: left; }
+  }
+</style>
+</head>
+<body>
+
+<div class="ticker-outer">
+  <div class="ticker-track" id="tickerTrack"></div>
+</div>
+
+<div class="wrap">
+  <section class="hero">
+    <div class="eyebrow">Private Markets, Public Proof</div>
+    <h1>The Power Board</h1>
+    <p>The top 10 venture capital firms in the United States, ranked by assets under management — and the real, publicly traded companies each one bet on early.</p>
+
+    <div class="stamp">
+      <div class="stamp-badge">NOT<br>PUBLIC<br>DATA</div>
+      <p><strong>VC firms don't publish their profits.</strong> Fund returns (IRR, gains, losses) are private, shared only with the firm's own investors. What follows instead is the closest honest picture: real, verified early bets these firms made — and how those bets have performed as public stocks, once the company went public. Type in today's price for any holding to see it update.</p>
+    </div>
+
+    <div class="highlight">
+      <div class="tag">Just happened — June 12, 2026</div>
+      <p><strong>SpaceX went public</strong> on Nasdaq under ticker <strong>SPCX</strong>, one of the largest IPOs in history. Founders Fund's roughly 3% stake — built from about $600M invested since 2008 — was worth an estimated <strong>$50 billion+</strong> on debut. An ~80x return, and one of the biggest single venture wins ever recorded.</p>
+    </div>
+  </section>
+
+  <div class="section-label">
+    <h2>Ranked 1–10 by AUM</h2>
+    <div class="note">Prices are editable — look one up, type it in</div>
+  </div>
+
+  <div class="firms" id="firmsContainer"></div>
+
+  <footer>
+    <p><strong>How to use this:</strong> pull up any stock's current price on a site like Google Finance, Yahoo Finance, or your broker's app, and type it into the matching field above. The page will remember your numbers while it's open.</p>
+    <p><strong>On the rankings:</strong> AUM figures are approximate and change as firms raise new funds — treat them as a snapshot of relative scale, not a precise or current figure. Portfolio companies listed are each firm's own publicly confirmed early investments, sourced from firm websites, SEC filings, and reporting from Crunchbase, Fortune, and TechCrunch.</p>
+    <div class="sig">Built by a future VC. Snapshot compiled mid-July 2026.</div>
+  </footer>
+</div>
+
+<script>
+const firms = [
+  {
+    rank: 1,
+    name: "Andreessen Horowitz",
+    short: "a16z",
+    founded: 2009,
+    hq: "Menlo Park, CA",
+    aum: "$90B+",
+    thesis: "Stage-agnostic, software-eats-the-world thesis. Backs founders from seed through growth across AI, crypto, fintech, and consumer.",
+    holdings: [
+      { name: "Airbnb", ticker: "ABNB", price: 147.00 },
+      { name: "Coinbase", ticker: "COIN", price: 161.00 }
+    ]
+  },
+  {
+    rank: 2,
+    name: "Sequoia Capital",
+    short: "Sequoia",
+    founded: 1972,
+    hq: "Menlo Park, CA",
+    aum: "$90B+",
+    thesis: "The industry's oldest kingmaker — first institutional money behind Apple, Google, and Nvidia across five decades.",
+    holdings: [
+      { name: "Nvidia", ticker: "NVDA", price: 202.81 },
+      { name: "DoorDash", ticker: "DASH", price: 175.00 }
+    ]
+  },
+  {
+    rank: 3,
+    name: "Insight Partners",
+    short: "Insight",
+    founded: 1995,
+    hq: "New York, NY",
+    aum: "$90B+",
+    thesis: "Software-only growth investor — scales companies from Series B straight through to IPO with an in-house operating team.",
+    holdings: [
+      { name: "Shopify", ticker: "SHOP", price: null },
+      { name: "DocuSign", ticker: "DOCU", price: null }
+    ]
+  },
+  {
+    rank: 4,
+    name: "General Catalyst",
+    short: "GC",
+    founded: 2000,
+    hq: "Cambridge, MA",
+    aum: "$35B+",
+    thesis: "Seed to growth, with a self-described \"responsible innovation\" focus on healthcare, AI infrastructure, and resilience.",
+    holdings: [
+      { name: "HubSpot", ticker: "HUBS", price: null },
+      { name: "Samsara", ticker: "IOT", price: null }
+    ]
+  },
+  {
+    rank: 5,
+    name: "Thrive Capital",
+    short: "Thrive",
+    founded: 2009,
+    hq: "New York, NY",
+    aum: "$10B+ (latest fund)",
+    thesis: "Concentrated, high-conviction bets — only 8-12 new companies a year, but among the earliest money into Instagram and OpenAI.",
+    holdings: [
+      { name: "Figma", ticker: "FIG", price: null },
+      { name: "Instacart", ticker: "CART", price: null }
+    ]
+  },
+  {
+    rank: 6,
+    name: "New Enterprise Associates",
+    short: "NEA",
+    founded: 1977,
+    hq: "Menlo Park, CA",
+    aum: "$25B+",
+    thesis: "One of the longest-running U.S. venture firms — dual-track model spanning enterprise tech and a deep healthcare practice.",
+    holdings: [
+      { name: "Robinhood", ticker: "HOOD", price: null },
+      { name: "Workday", ticker: "WDAY", price: null }
+    ]
+  },
+  {
+    rank: 7,
+    name: "Tiger Global Management",
+    short: "Tiger Global",
+    founded: 2001,
+    hq: "New York, NY",
+    aum: "$58B+",
+    thesis: "A hybrid public-private \"crossover\" investor — deploys capital fast, takes a hands-off board approach compared to traditional VCs.",
+    holdings: [
+      { name: "Coinbase", ticker: "COIN", price: 161.00 },
+      { name: "JD.com", ticker: "JD", price: null }
+    ]
+  },
+  {
+    rank: 8,
+    name: "Lightspeed Venture Partners",
+    short: "Lightspeed",
+    founded: 2000,
+    hq: "Menlo Park, CA",
+    aum: "$25B+",
+    thesis: "Enterprise infrastructure roots, famous for being Snapchat's very first institutional check back in 2012.",
+    holdings: [
+      { name: "Snap", ticker: "SNAP", price: null },
+      { name: "Affirm", ticker: "AFRM", price: 64.71 }
+    ]
+  },
+  {
+    rank: 9,
+    name: "Accel",
+    short: "Accel",
+    founded: 1983,
+    hq: "Palo Alto, CA",
+    aum: "$20B+",
+    thesis: "Early money behind Facebook in 2005 — still one of the highest-multiple returns in venture capital history.",
+    holdings: [
+      { name: "Meta Platforms", ticker: "META", price: null },
+      { name: "Etsy", ticker: "ETSY", price: null }
+    ]
+  },
+  {
+    rank: 10,
+    name: "Founders Fund",
+    short: "Founders Fund",
+    founded: 2005,
+    hq: "San Francisco, CA",
+    aum: "$12B+",
+    thesis: "Peter Thiel's contrarian, hard-tech firm — first institutional investor in both SpaceX and Palantir.",
+    holdings: [
+      { name: "Palantir", ticker: "PLTR", price: 134.44 },
+      { name: "SpaceX", ticker: "SPCX", price: 160.95 }
+    ]
+  }
+];
+
+const container = document.getElementById('firmsContainer');
+
+firms.forEach(firm => {
+  const card = document.createElement('div');
+  card.className = 'firm';
+
+  const holdingsHTML = firm.holdings.map(h => {
+    const val = h.price !== null ? h.price.toFixed(2) : '';
+    const placeholderCls = h.price === null ? 'placeholder-empty' : '';
+    return `
+      <div class="holding-row">
+        <div class="holding-name">${h.name}</div>
+        <div class="holding-ticker">${h.ticker}</div>
+        <div class="price-input-wrap">
+          <span class="dollar">$</span>
+          <input class="price-input ${placeholderCls}" type="text" inputmode="decimal"
+                 value="${val}" placeholder="type price"
+                 data-ticker="${h.ticker}">
+        </div>
+        <div class="price-hint">per share</div>
+      </div>`;
+  }).join('');
+
+  card.innerHTML = `
+    <div class="firm-head">
+      <div>
+        <div class="firm-rank">NO. ${String(firm.rank).padStart(2, '0')}</div>
+        <div class="firm-name">${firm.name}</div>
+        <div class="firm-meta">Founded ${firm.founded} · ${firm.hq}</div>
+      </div>
+      <div class="firm-aum">
+        <div class="num">${firm.aum}</div>
+        <div class="lbl">Assets Managed</div>
+      </div>
+    </div>
+    <div class="firm-thesis">${firm.thesis}</div>
+    <div class="holdings">
+      <div class="holdings-label">Notable Public Portfolio Companies</div>
+      ${holdingsHTML}
+    </div>
+  `;
+  container.appendChild(card);
+});
+
+// Ticker tape at top — pulls every unique ticker + whatever price is set
+function buildTicker() {
+  const track = document.getElementById('tickerTrack');
+  const seen = new Map();
+  firms.forEach(f => f.holdings.forEach(h => {
+    if (!seen.has(h.ticker)) seen.set(h.ticker, h.price);
+  }));
+  const parts = [];
+  seen.forEach((price, ticker) => {
+    const priceStr = price !== null ? `$${price.toFixed(2)}` : '—';
+    parts.push(`<span>${ticker} <span class="up">${priceStr}</span></span>`);
+  });
+  const line = parts.join('');
+  track.innerHTML = line + line; // duplicate for seamless scroll
+}
+buildTicker();
+
+// Live-update the ticker tape when someone edits a price field
+document.addEventListener('input', (e) => {
+  if (e.target.classList.contains('price-input')) {
+    const ticker = e.target.dataset.ticker;
+    const newVal = parseFloat(e.target.value);
+    firms.forEach(f => f.holdings.forEach(h => {
+      if (h.ticker === ticker) h.price = isNaN(newVal) ? null : newVal;
+    }));
+    buildTicker();
+  }
+});
+</script>
+
+</body>
+</html>
