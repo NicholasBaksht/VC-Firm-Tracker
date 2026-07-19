@@ -1,8 +1,3 @@
-bash
-
-cat /mnt/user-data/outputs/top_10_vc_firms.html
-Output
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -45,6 +40,29 @@ Output
     max-width: 1080px;
     margin: 0 auto;
     padding: 0 24px;
+  }
+
+  /* ---------- BYLINE ---------- */
+  .byline {
+    position: fixed;
+    top: 16px;
+    right: 20px;
+    font-family: var(--mono);
+    font-size: 11px;
+    letter-spacing: 0.04em;
+    color: var(--ink-dim);
+    background: var(--surface);
+    border: 1px solid var(--hairline);
+    border-radius: 20px;
+    padding: 6px 14px;
+    z-index: 100;
+  }
+  @media (max-width: 640px) {
+    .byline {
+      position: static;
+      display: inline-block;
+      margin: 10px 24px 0;
+    }
   }
 
   /* ---------- TICKER ---------- */
@@ -373,6 +391,8 @@ Output
 </head>
 <body>
 
+<div class="byline">Created by Nicholas Baksht</div>
+
 <div class="ticker-outer">
   <div class="ticker-track" id="tickerTrack"></div>
 </div>
@@ -416,9 +436,9 @@ Output
 // ============================================================
 const newsItems = [
   {
-    date: "July 16, 2026",
-    tag: "This week",
-    text: '<strong>Fireworks AI raised $1.505 billion</strong> — one of the largest single venture rounds of 2026 — at a $17.5 billion valuation. The round was led by Atreides Management, Index Ventures, and TCV, with <strong>Lightspeed Venture Partners</strong> (see below) among the participating investors. Fireworks says it has already crossed $1 billion in annual revenue, a rare milestone for an AI company this size.'
+    date: "June 12, 2026",
+    tag: "Just happened",
+    text: '<strong>SpaceX went public</strong> on Nasdaq under ticker <strong>SPCX</strong>, one of the largest IPOs in history. Founders Fund\'s roughly 3% stake — built from about $600M invested since 2008 — was worth an estimated <strong>$50 billion+</strong> on debut. An ~80x return, and one of the biggest single venture wins ever recorded.'
   }
 ];
 
@@ -458,8 +478,8 @@ const firms = [
     aum: "$90B+",
     thesis: "Software-only growth investor — scales companies from Series B straight through to IPO with an in-house operating team.",
     holdings: [
-      { name: "Shopify", ticker: "SHOP", price: 123.56 },
-      { name: "DocuSign", ticker: "DOCU", price: 52.74 }
+      { name: "Shopify", ticker: "SHOP", price: null },
+      { name: "DocuSign", ticker: "DOCU", price: null }
     ]
   },
   {
@@ -471,8 +491,8 @@ const firms = [
     aum: "$35B+",
     thesis: "Seed to growth, with a self-described \"responsible innovation\" focus on healthcare, AI infrastructure, and resilience.",
     holdings: [
-      { name: "HubSpot", ticker: "HUBS", price: 224.26 },
-      { name: "Samsara", ticker: "IOT", price: 38.32 }
+      { name: "HubSpot", ticker: "HUBS", price: null },
+      { name: "Samsara", ticker: "IOT", price: null }
     ]
   },
   {
@@ -484,8 +504,8 @@ const firms = [
     aum: "$10B+ (latest fund)",
     thesis: "Concentrated, high-conviction bets — only 8-12 new companies a year, but among the earliest money into Instagram and OpenAI.",
     holdings: [
-      { name: "Figma", ticker: "FIG", price: 23.95 },
-      { name: "Instacart", ticker: "CART", price: 45.82 }
+      { name: "Figma", ticker: "FIG", price: null },
+      { name: "Instacart", ticker: "CART", price: null }
     ]
   },
   {
@@ -497,8 +517,8 @@ const firms = [
     aum: "$25B+",
     thesis: "One of the longest-running U.S. venture firms — dual-track model spanning enterprise tech and a deep healthcare practice.",
     holdings: [
-      { name: "Robinhood", ticker: "HOOD", price: 99.96 },
-      { name: "Workday", ticker: "WDAY", price: 144.78 }
+      { name: "Robinhood", ticker: "HOOD", price: null },
+      { name: "Workday", ticker: "WDAY", price: null }
     ]
   },
   {
@@ -511,7 +531,7 @@ const firms = [
     thesis: "A hybrid public-private \"crossover\" investor — deploys capital fast, takes a hands-off board approach compared to traditional VCs.",
     holdings: [
       { name: "Coinbase", ticker: "COIN", price: 161.00 },
-      { name: "JD.com", ticker: "JD", price: 29.62 }
+      { name: "JD.com", ticker: "JD", price: null }
     ]
   },
   {
@@ -523,7 +543,7 @@ const firms = [
     aum: "$25B+",
     thesis: "Enterprise infrastructure roots, famous for being Snapchat's very first institutional check back in 2012.",
     holdings: [
-      { name: "Snap", ticker: "SNAP", price: 4.53 },
+      { name: "Snap", ticker: "SNAP", price: null },
       { name: "Affirm", ticker: "AFRM", price: 64.71 }
     ]
   },
@@ -536,8 +556,8 @@ const firms = [
     aum: "$20B+",
     thesis: "Early money behind Facebook in 2005 — still one of the highest-multiple returns in venture capital history.",
     holdings: [
-      { name: "Meta Platforms", ticker: "META", price: 646.01 },
-      { name: "Etsy", ticker: "ETSY", price: 84.10 }
+      { name: "Meta Platforms", ticker: "META", price: null },
+      { name: "Etsy", ticker: "ETSY", price: null }
     ]
   },
   {
@@ -562,9 +582,9 @@ const firms = [
     aum: "$10B+ (recent fund)",
     thesis: "The oldest venture capital firm in the world — over a century of investing, from early industrial companies to today's cloud software leaders.",
     holdings: [
-      { name: "Shopify", ticker: "SHOP", price: 123.56 },
-      { name: "Pinterest", ticker: "PINS", price: 23.50 },
-      { name: "Twilio", ticker: "TWLO", price: 206.78 }
+      { name: "Shopify", ticker: "SHOP", price: null },
+      { name: "Pinterest", ticker: "PINS", price: null },
+      { name: "Twilio", ticker: "TWLO", price: null }
     ]
   },
   {
@@ -573,11 +593,11 @@ const firms = [
     short: "Benchmark",
     founded: 1995,
     hq: "San Francisco, CA",
-    aum: "$9B+",
+    aum: "Deliberately small by design",
     thesis: "Famous for staying intentionally small — every partner is equal, no separate fund tiers — betting that a lean team makes sharper decisions than a big one.",
     holdings: [
-      { name: "Uber", ticker: "UBER", price: 72.46 },
-      { name: "Snap", ticker: "SNAP", price: 4.53 }
+      { name: "Uber", ticker: "UBER", price: null },
+      { name: "Snap", ticker: "SNAP", price: null }
     ]
   },
   {
@@ -589,24 +609,11 @@ const firms = [
     aum: "$15B+",
     thesis: "Founded by Sun Microsystems co-founder Vinod Khosla — known for making bold, high-risk bets on unproven technology others pass on.",
     holdings: [
-      { name: "Block", ticker: "XYZ", price: 79.94 },
-      { name: "Instacart", ticker: "CART", price: 45.82 }
+      { name: "Block", ticker: "XYZ", price: null },
+      { name: "Instacart", ticker: "CART", price: null }
     ]
   }
-  {
-    rank: 14, 
-    name: "Thrive Capital",
-    short: "Thrive Capital", 
-    founded: 2009,
-    hq: "New York, NY",
-    aum: "$50B+",
-    thesis: "Joshua Kushner founded Thrive Capital in 2009, at 24 years old. In 2011, the firm launched its first institutional fund, raising another $40 million from Princeton University, Wellcome Trust, Peter Thiel and other investors.[4][5][6] General Catalyst served as the core LP yet again for this second funding round.",
-    holdings:  [
-      { name: "Shopify", ticker: "SHOP", price: 123.56 }
-      { name: "Figma", ticker: "FIG", price: 23.95}
-  ]
-
-
+];
 
 // Render the news feed: newest item as the big featured box,
 // everything else as a compact dated list underneath.
@@ -711,5 +718,3 @@ document.addEventListener('input', (e) => {
 
 </body>
 </html>
-
-
