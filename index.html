@@ -1,3 +1,8 @@
+bash
+
+cat /mnt/user-data/outputs/top_10_vc_firms.html
+Output
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -376,7 +381,7 @@
   <section class="hero">
     <div class="eyebrow">Private Markets, Public Proof</div>
     <h1>The Power Board</h1>
-    <p>The top 10 venture capital firms in the United States, ranked by assets under management — and the real, publicly traded companies each one bet on early.</p>
+    <p>The top venture capital firms in the United States, ranked by assets under management — and the real, publicly traded companies each one bet on early.</p>
 
     <div class="stamp">
       <div class="stamp-badge">NOT<br>PUBLIC<br>DATA</div>
@@ -387,7 +392,7 @@
   </section>
 
   <div class="section-label">
-    <h2>Ranked 1–10 by AUM</h2>
+    <h2>Ranked by AUM</h2>
     <div class="note">Prices are editable — look one up, type it in</div>
   </div>
 
@@ -411,9 +416,9 @@
 // ============================================================
 const newsItems = [
   {
-    date: "July 16, 2026",
-    tag: "This week",
-    text: "Fireworks AI raised $1.505 billion</strong> — one of the largest single venture rounds of 2026 — at a $17.5 billion valuation. The round was led by Atreides Management, Index Ventures, and TCV, with <strong>Lightspeed Venture Partners</strong> (see below) among the participating investors. Fireworks says it has already crossed $1 billion in annual revenue, a rare milestone for an AI company this size.",
+    date: "June 12, 2026",
+    tag: "Just happened",
+    text: '<strong>SpaceX went public</strong> on Nasdaq under ticker <strong>SPCX</strong>, one of the largest IPOs in history. Founders Fund\'s roughly 3% stake — built from about $600M invested since 2008 — was worth an estimated <strong>$50 billion+</strong> on debut. An ~80x return, and one of the biggest single venture wins ever recorded.'
   }
 ];
 
@@ -547,6 +552,46 @@ const firms = [
       { name: "Palantir", ticker: "PLTR", price: 134.44 },
       { name: "SpaceX", ticker: "SPCX", price: 160.95 }
     ]
+  },
+  {
+    rank: 11,
+    name: "Bessemer Venture Partners",
+    short: "Bessemer",
+    founded: 1911,
+    hq: "Redwood City, CA",
+    aum: "$10B+ (recent fund)",
+    thesis: "The oldest venture capital firm in the world — over a century of investing, from early industrial companies to today's cloud software leaders.",
+    holdings: [
+      { name: "Shopify", ticker: "SHOP", price: null },
+      { name: "Pinterest", ticker: "PINS", price: null },
+      { name: "Twilio", ticker: "TWLO", price: null }
+    ]
+  },
+  {
+    rank: 12,
+    name: "Benchmark",
+    short: "Benchmark",
+    founded: 1995,
+    hq: "San Francisco, CA",
+    aum: "Deliberately small by design",
+    thesis: "Famous for staying intentionally small — every partner is equal, no separate fund tiers — betting that a lean team makes sharper decisions than a big one.",
+    holdings: [
+      { name: "Uber", ticker: "UBER", price: null },
+      { name: "Snap", ticker: "SNAP", price: null }
+    ]
+  },
+  {
+    rank: 13,
+    name: "Khosla Ventures",
+    short: "Khosla",
+    founded: 2004,
+    hq: "Menlo Park, CA",
+    aum: "$15B+",
+    thesis: "Founded by Sun Microsystems co-founder Vinod Khosla — known for making bold, high-risk bets on unproven technology others pass on.",
+    holdings: [
+      { name: "Block", ticker: "XYZ", price: null },
+      { name: "Instacart", ticker: "CART", price: null }
+    ]
   }
 ];
 
@@ -653,3 +698,5 @@ document.addEventListener('input', (e) => {
 
 </body>
 </html>
+
+
