@@ -366,7 +366,7 @@
   }
   .holding-row {
     display: grid;
-    grid-template-columns: 1fr auto auto auto;
+    grid-template-columns: 1fr auto auto auto auto;
     align-items: center;
     gap: 14px;
     padding: 10px 0;
@@ -415,6 +415,25 @@
     font-size: 10.5px;
     color: var(--ink-dim);
     white-space: nowrap;
+  }
+  .return-badge {
+    font-family: var(--mono);
+    font-size: 11px;
+    padding: 2px 7px;
+    border-radius: 3px;
+    white-space: nowrap;
+  }
+  .return-badge.positive {
+    color: var(--green);
+    background: rgba(74,222,128,0.12);
+  }
+  .return-badge.negative {
+    color: var(--red);
+    background: rgba(248,113,113,0.12);
+  }
+  .return-badge.unknown {
+    color: var(--ink-dim);
+    background: var(--surface-raised);
   }
 
   .firm-page-link {
@@ -720,6 +739,7 @@
   @media (max-width: 640px) {
     .holding-row { grid-template-columns: 1fr auto; row-gap: 8px; }
     .price-hint { grid-column: 1 / -1; }
+    .return-badge { grid-column: 1 / -1; width: fit-content; }
     .firm-head { flex-direction: column; }
     .firm-aum { text-align: left; }
   }
@@ -879,11 +899,11 @@ const firms = [
       { year: "2022", event: "Raises a $4.5 billion fund dedicated to crypto, one of the largest ever raised for the category." }
     ],
     holdings: [
-      { name: "Airbnb", ticker: "ABNB", price: 147.00 },
-      { name: "Coinbase", ticker: "COIN", price: 161.00 },
-      { name: "Roblox", ticker: "RBLX", price: 51.68 },
-      { name: "Lyft", ticker: "LYFT", price: 15.67 },
-      { name: "Pinterest", ticker: "PINS", price: 23.20 }
+      { name: "Airbnb", ticker: "ABNB", historicalPrice: null, price: 147.00 },
+      { name: "Coinbase", ticker: "COIN", historicalPrice: 257.21, price: 161.00 },
+      { name: "Roblox", ticker: "RBLX", historicalPrice: null, price: 51.68 },
+      { name: "Lyft", ticker: "LYFT", historicalPrice: null, price: 15.67 },
+      { name: "Pinterest", ticker: "PINS", historicalPrice: null, price: 23.20 }
     ]
   },
   {
@@ -909,8 +929,8 @@ const firms = [
       { year: "2023", event: "Splits into three independent firms — Sequoia Capital, Peak XV Partners (India/Southeast Asia), and HongShan (China)." }
     ],
     holdings: [
-      { name: "Nvidia", ticker: "NVDA", price: 202.81 },
-      { name: "DoorDash", ticker: "DASH", price: 175.00 }
+      { name: "Nvidia", ticker: "NVDA", historicalPrice: 138.1, price: 202.81 },
+      { name: "DoorDash", ticker: "DASH", historicalPrice: 170.65, price: 175.00 }
     ]
   },
   {
@@ -936,8 +956,8 @@ const firms = [
       { year: "2025", event: "Assets under management surpass $90 billion, with over 875 companies invested in to date." }
     ],
     holdings: [
-      { name: "Shopify", ticker: "SHOP", price: 123.56 },
-      { name: "DocuSign", ticker: "DOCU", price: 52.74 }
+      { name: "Shopify", ticker: "SHOP", historicalPrice: 107.53, price: 123.56 },
+      { name: "DocuSign", ticker: "DOCU", historicalPrice: null, price: 52.74 }
     ]
   },
   {
@@ -963,8 +983,8 @@ const firms = [
       { year: "2021", event: "Becomes one of the most active venture investors globally, deploying capital at unusually high speed." }
     ],
     holdings: [
-      { name: "Coinbase", ticker: "COIN", price: 161.00 },
-      { name: "JD.com", ticker: "JD", price: 29.62 }
+      { name: "Coinbase", ticker: "COIN", historicalPrice: 257.21, price: 161.00 },
+      { name: "JD.com", ticker: "JD", historicalPrice: null, price: 29.62 }
     ]
   },
   {
@@ -991,8 +1011,8 @@ const firms = [
       { year: "2017", event: "Portfolio company Snap goes public in one of the largest consumer tech IPOs of its era." }
     ],
     holdings: [
-      { name: "HubSpot", ticker: "HUBS", price: 224.26 },
-      { name: "Samsara", ticker: "IOT", price: 38.32 }
+      { name: "HubSpot", ticker: "HUBS", historicalPrice: null, price: 224.26 },
+      { name: "Samsara", ticker: "IOT", historicalPrice: null, price: 38.32 }
     ]
   },
   {
@@ -1020,8 +1040,8 @@ const firms = [
       { year: "2021", event: "Portfolio company Robinhood goes public, bringing retail stock trading to the public markets." }
     ],
     holdings: [
-      { name: "Robinhood", ticker: "HOOD", price: 99.96 },
-      { name: "Workday", ticker: "WDAY", price: 144.78 }
+      { name: "Robinhood", ticker: "HOOD", historicalPrice: null, price: 99.96 },
+      { name: "Workday", ticker: "WDAY", historicalPrice: null, price: 144.78 }
     ]
   },
   {
@@ -1048,8 +1068,8 @@ const firms = [
       { year: "2020s", event: "Expands heavily into enterprise infrastructure alongside its consumer roots." }
     ],
     holdings: [
-      { name: "Snap", ticker: "SNAP", price: 4.53 },
-      { name: "Affirm", ticker: "AFRM", price: 64.71 }
+      { name: "Snap", ticker: "SNAP", historicalPrice: null, price: 4.53 },
+      { name: "Affirm", ticker: "AFRM", historicalPrice: null, price: 64.71 }
     ]
   },
   {
@@ -1075,8 +1095,8 @@ const firms = [
       { year: "2010s", event: "Backs Slack, Atlassian, and Dropbox as the firm builds a reputation in enterprise software." }
     ],
     holdings: [
-      { name: "Meta Platforms", ticker: "META", price: 646.01 },
-      { name: "Etsy", ticker: "ETSY", price: 84.10 }
+      { name: "Meta Platforms", ticker: "META", historicalPrice: null, price: 646.01 },
+      { name: "Etsy", ticker: "ETSY", historicalPrice: null, price: 84.10 }
     ]
   },
   {
@@ -1101,8 +1121,8 @@ const firms = [
       { year: "2020s", event: "Shifts significant focus toward artificial intelligence alongside its long-running clean energy bets." }
     ],
     holdings: [
-      { name: "Block", ticker: "XYZ", price: 79.94 },
-      { name: "Instacart", ticker: "CART", price: 45.82 }
+      { name: "Block", ticker: "XYZ", historicalPrice: null, price: 79.94 },
+      { name: "Instacart", ticker: "CART", historicalPrice: null, price: 45.82 }
     ]
   },
   {
@@ -1129,8 +1149,8 @@ const firms = [
       { year: "2026", event: "SpaceX goes public, turning the firm's original 2008 stake into an estimated ~80x return." }
     ],
     holdings: [
-      { name: "Palantir", ticker: "PLTR", price: 134.44 },
-      { name: "SpaceX", ticker: "SPCX", price: 160.95 }
+      { name: "Palantir", ticker: "PLTR", historicalPrice: 75.19, price: 134.44 },
+      { name: "SpaceX", ticker: "SPCX", historicalPrice: null, price: 160.95 }
     ]
   },
   {
@@ -1155,8 +1175,8 @@ const firms = [
       { year: "2020s", event: "Becomes one of the earliest and largest institutional investors in OpenAI." }
     ],
     holdings: [
-      { name: "Figma", ticker: "FIG", price: 23.95 },
-      { name: "Instacart", ticker: "CART", price: 45.82 }
+      { name: "Figma", ticker: "FIG", historicalPrice: null, price: 23.95 },
+      { name: "Instacart", ticker: "CART", historicalPrice: null, price: 45.82 }
     ]
   },
   {
@@ -1181,9 +1201,9 @@ const firms = [
       { year: "1986", event: "Formally spins out as Bessemer Venture Partners, a dedicated venture capital firm." }
     ],
     holdings: [
-      { name: "Shopify", ticker: "SHOP", price: 123.56 },
-      { name: "Pinterest", ticker: "PINS", price: 23.50 },
-      { name: "Twilio", ticker: "TWLO", price: 206.78 }
+      { name: "Shopify", ticker: "SHOP", historicalPrice: 107.53, price: 123.56 },
+      { name: "Pinterest", ticker: "PINS", historicalPrice: null, price: 23.50 },
+      { name: "Twilio", ticker: "TWLO", historicalPrice: null, price: 206.78 }
     ]
   },
   {
@@ -1211,8 +1231,8 @@ const firms = [
       { year: "2010s", event: "Backs Uber and Snap, continuing its pattern of early, high-conviction consumer bets." }
     ],
     holdings: [
-      { name: "Uber", ticker: "UBER", price: 72.46 },
-      { name: "Snap", ticker: "SNAP", price: 4.53 }
+      { name: "Uber", ticker: "UBER", historicalPrice: null, price: 72.46 },
+      { name: "Snap", ticker: "SNAP", historicalPrice: null, price: 4.53 }
     ]
   }
 ];
@@ -1266,6 +1286,20 @@ function matchesSearch(firm) {
   );
 }
 
+// Builds the small colored badge showing return since Jan 2, 2025,
+// for any holding that has a real historicalPrice on file. Holdings
+// without one yet (historicalPrice: null) show a neutral "—" badge
+// instead of guessing.
+function buildReturnBadge(h) {
+  if (h.historicalPrice === null || h.price === null) {
+    return `<span class="return-badge unknown">— since Jan '25</span>`;
+  }
+  const pct = ((h.price - h.historicalPrice) / h.historicalPrice) * 100;
+  const cls = pct >= 0 ? 'positive' : 'negative';
+  const sign = pct >= 0 ? '+' : '';
+  return `<span class="return-badge ${cls}">${sign}${pct.toFixed(1)}% since Jan '25</span>`;
+}
+
 function renderFirms() {
   const container = document.getElementById('firmsContainer');
   const noResults = document.getElementById('noResults');
@@ -1293,6 +1327,7 @@ function renderFirms() {
                    data-ticker="${h.ticker}">
           </div>
           <div class="price-hint">per share</div>
+          ${buildReturnBadge(h)}
         </div>`;
     }).join('');
 
@@ -1340,6 +1375,7 @@ function renderDetail(firm) {
                  data-ticker="${h.ticker}">
         </div>
         <div class="price-hint">per share</div>
+        ${buildReturnBadge(h)}
       </div>`;
   }).join('');
 
