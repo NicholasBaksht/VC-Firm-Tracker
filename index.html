@@ -445,7 +445,144 @@
     text-decoration: none;
   }
   .firm-page-link:hover { color: var(--gold-bright); }
+.card-footer {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-top: 18px;
+    flex-wrap: wrap;
+    gap: 10px;
+  }
+  .compare-check {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    font-family: var(--mono);
+    font-size: 12px;
+    color: var(--ink-dim);
+    cursor: pointer;
+    user-select: none;
+  }
+  .compare-checkbox {
+    accent-color: var(--gold);
+    cursor: pointer;
+  }
 
+  /* ---------- COMPARE BAR & TABLE ---------- */
+  .compare-bar {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: var(--surface);
+    border-top: 1px solid var(--gold);
+    padding: 16px 24px;
+    z-index: 200;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 14px;
+  }
+  .compare-bar-chips {
+    display: flex;
+    gap: 8px;
+    flex-wrap: wrap;
+    align-items: center;
+  }
+  .compare-bar-label {
+    font-family: var(--mono);
+    font-size: 12px;
+    color: var(--ink-dim);
+    margin-right: 4px;
+  }
+  .compare-chip {
+    font-family: var(--mono);
+    font-size: 12px;
+    color: var(--ink);
+    background: var(--surface-raised);
+    border: 1px solid var(--hairline);
+    border-radius: 20px;
+    padding: 5px 12px;
+  }
+  .compare-bar-actions {
+    display: flex;
+    gap: 10px;
+  }
+  .compare-btn {
+    font-family: var(--mono);
+    font-size: 13px;
+    padding: 9px 18px;
+    border-radius: 4px;
+    cursor: pointer;
+    border: none;
+  }
+  .compare-btn.primary {
+    background: var(--gold);
+    color: var(--bg);
+    font-weight: 600;
+  }
+  .compare-btn.primary:disabled {
+    background: var(--hairline);
+    color: var(--ink-dim);
+    cursor: not-allowed;
+  }
+  .compare-btn.secondary {
+    background: transparent;
+    color: var(--ink-dim);
+    border: 1px solid var(--hairline);
+  }
+  .compare-table-wrap {
+    overflow-x: auto;
+    margin-bottom: 60px;
+  }
+  .compare-table {
+    width: 100%;
+    border-collapse: collapse;
+    min-width: 560px;
+  }
+  .compare-table th, .compare-table td {
+    text-align: left;
+    padding: 14px 18px;
+    border-bottom: 1px solid var(--hairline);
+    vertical-align: top;
+  }
+  .compare-table th {
+    font-family: var(--mono);
+    font-size: 11px;
+    letter-spacing: 0.05em;
+    text-transform: uppercase;
+    color: var(--ink-dim);
+    white-space: nowrap;
+  }
+  .compare-table .row-label {
+    font-family: var(--mono);
+    font-size: 11px;
+    letter-spacing: 0.05em;
+    text-transform: uppercase;
+    color: var(--gold);
+    white-space: nowrap;
+  }
+  .compare-table .firm-col-name {
+    font-family: var(--serif);
+    font-weight: 600;
+    font-size: 20px;
+  }
+  .compare-table td {
+    font-size: 14px;
+    color: var(--ink);
+    line-height: 1.5;
+  }
+  .compare-sector-tag {
+    display: inline-block;
+    font-family: var(--mono);
+    font-size: 11px;
+    color: var(--gold);
+    background: rgba(201,162,39,0.08);
+    padding: 2px 8px;
+    border-radius: 3px;
+    margin: 2px 4px 2px 0;
+  }
   /* ---------- FIRM DETAIL PAGE ---------- */
   .detail-back {
     font-family: var(--mono);
@@ -789,7 +926,10 @@
     <div class="no-results" id="noResults" style="display: none;">No firms match your search or filter.</div>
   </div>
 
-  <div id="detailView" style="display: none;"></div>
+ <div id="detailView" style="display: none;"></div>
+  <div id="compareView" style="display: none;"></div>
+
+  <div class="compare-bar" id="compareBar" style="display: none;"></div>
 
   <section class="analytics">
     <h2>By the Numbers</h2>
@@ -1269,7 +1409,7 @@ function renderNews() {
 // Current search text and active era filter - both start "empty"
 let searchTerm = '';
 let activeFilter = 'all';
-
+let compareSet = new Set(); // slugs of firms picked for comparison, max 3
 function matchesFilter(firm) {
   if (activeFilter === 'pre2000') return firm.founded < 2000;
   if (activeFilter === '2000s') return firm.founded >= 2000 && firm.founded < 2010;
@@ -1348,7 +1488,13 @@ function renderFirms() {
         <div class="holdings-label">Notable Public Portfolio Companies</div>
         ${holdingsHTML}
       </div>
-      <a href="#${firm.slug}" class="firm-page-link">View Firm Page →</a>
+<div class="card-footer">
+        <a href="#${firm.slug}" class="firm-page-link">View Firm Page →</a>
+        <label class="compare-check">
+          <input type="checkbox" class="compare-checkbox" data-slug="${firm.slug}" ${compareSet.has(firm.slug) ? 'checked' : ''}>
+          Compare
+        </label>
+      </div>
     `;
     container.appendChild(card);
   });
@@ -1449,22 +1595,119 @@ function renderDetail(firm) {
 
 // Decides what to show based on the URL - a firm slug shows its
 // detail page, anything else (or nothing) shows the full list.
+  // Shows/hides the sticky bottom bar based on how many firms are
+// currently picked for comparison.
+function renderCompareBar() {
+  const bar = document.getElementById('compareBar');
+
+  if (compareSet.size === 0) {
+    bar.style.display = 'none';
+    return;
+  }
+
+  bar.style.display = 'flex';
+  const chips = [...compareSet].map(slug => {
+    const firm = firms.find(f => f.slug === slug);
+    return `<span class="compare-chip">${firm.short}</span>`;
+  }).join('');
+
+  const canCompare = compareSet.size >= 2;
+
+  bar.innerHTML = `
+    <div class="compare-bar-chips">
+      <span class="compare-bar-label">Comparing (${compareSet.size}/3):</span>
+      ${chips}
+    </div>
+    <div class="compare-bar-actions">
+      <button class="compare-btn secondary" id="clearCompareBtn">Clear</button>
+      <button class="compare-btn primary" id="goCompareBtn" ${canCompare ? '' : 'disabled'}>Compare →</button>
+    </div>
+  `;
+
+  document.getElementById('clearCompareBtn').addEventListener('click', () => {
+    compareSet.clear();
+    renderCompareBar();
+    renderFirms();
+  });
+
+  document.getElementById('goCompareBtn').addEventListener('click', () => {
+    if (compareSet.size >= 2) window.location.hash = 'compare';
+  });
+}
+
+// Renders the side-by-side comparison table into #compareView
+function renderComparison() {
+  const selected = firms.filter(f => compareSet.has(f.slug));
+
+  if (selected.length < 2) {
+    document.getElementById('compareView').innerHTML = `
+      <a href="#" class="detail-back" id="backFromCompare">← Back to all firms</a>
+      <p style="color: var(--ink-dim); font-size: 14px;">Pick at least 2 firms from the list to compare them.</p>
+    `;
+    document.getElementById('backFromCompare').addEventListener('click', (e) => {
+      e.preventDefault();
+      window.location.hash = '';
+    });
+    return;
+  }
+
+  const rows = [
+    { label: 'Assets Managed', render: f => f.aum },
+    { label: 'Founded', render: f => f.founded },
+    { label: 'Headquarters', render: f => f.hq },
+    { label: 'Sectors', render: f => f.sectors.map(s => `<span class="compare-sector-tag">${s}</span>`).join('') },
+    { label: 'Signature Exit', render: f => f.signatureExit },
+    { label: 'Tracked Holdings', render: f => f.holdings.map(h => h.name).join(', ') },
+    { label: 'Website', render: f => `<a href="${f.website}" target="_blank" rel="noopener noreferrer" class="firm-link">${f.website.replace('https://', '')} ↗</a>` }
+  ];
+
+  const headerCells = selected.map(f => `<th class="firm-col-name">${f.name}</th>`).join('');
+  const bodyRows = rows.map(row => `
+    <tr>
+      <td class="row-label">${row.label}</td>
+      ${selected.map(f => `<td>${row.render(f)}</td>`).join('')}
+    </tr>
+  `).join('');
+
+  document.getElementById('compareView').innerHTML = `
+    <a href="#" class="detail-back" id="backFromCompare">← Back to all firms</a>
+    <div class="compare-table-wrap">
+      <table class="compare-table">
+        <thead><tr><th></th>${headerCells}</tr></thead>
+        <tbody>${bodyRows}</tbody>
+      </table>
+    </div>
+  `;
+
+  document.getElementById('backFromCompare').addEventListener('click', (e) => {
+    e.preventDefault();
+    window.location.hash = '';
+  });
+}
 function router() {
   const slug = window.location.hash.replace('#', '');
   const firm = firms.find(f => f.slug === slug);
 
-  if (firm) {
+  if (slug === 'compare') {
+    document.getElementById('listView').style.display = 'none';
+    document.getElementById('detailView').style.display = 'none';
+    document.getElementById('compareView').style.display = 'block';
+    renderComparison();
+    window.scrollTo(0, 0);
+  } else if (firm) {
     document.getElementById('listView').style.display = 'none';
     document.getElementById('detailView').style.display = 'block';
+    document.getElementById('compareView').style.display = 'none';
     renderDetail(firm);
     window.scrollTo(0, 0);
   } else {
     document.getElementById('listView').style.display = 'block';
     document.getElementById('detailView').style.display = 'none';
+    document.getElementById('compareView').style.display = 'none';
     renderFirms();
   }
+  renderCompareBar();
 }
-
 window.addEventListener('hashchange', router);
 
 // Computes and renders "By the Numbers" - real stats derived from
@@ -1582,8 +1825,21 @@ document.addEventListener('input', (e) => {
     }));
     buildTicker();
   }
-});
 
+  if (e.target.classList.contains('compare-checkbox')) {
+    const slug = e.target.dataset.slug;
+    if (e.target.checked) {
+      if (compareSet.size >= 3) {
+        e.target.checked = false;
+        return;
+      }
+      compareSet.add(slug);
+    } else {
+      compareSet.delete(slug);
+    }
+    renderCompareBar();
+  }
+});
 // Search box - filters live as you type
 document.getElementById('searchInput').addEventListener('input', (e) => {
   searchTerm = e.target.value;
