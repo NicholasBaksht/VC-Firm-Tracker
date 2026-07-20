@@ -485,6 +485,14 @@
     text-transform: uppercase;
     margin-top: 2px;
   }
+  .detail-about {
+    font-size: 15.5px;
+    line-height: 1.65;
+    color: var(--ink-dim);
+    max-width: 700px;
+    margin-bottom: 8px;
+  }
+
   .detail-subhead {
     font-family: var(--mono);
     font-size: 11px;
@@ -545,13 +553,6 @@
     color: var(--ink-dim);
     line-height: 1.5;
     max-width: 600px;
-  }
-  .detail-about {
-    font-size: 15.5px;
-    line-height: 1.65;
-    color: var(--ink-dim);
-    max-width: 700px;
-    margin-bottom: 8px;
   }
 
   /* ---------- ANALYTICS ---------- */
@@ -862,11 +863,6 @@ const firms = [
       { name: "Roblox", ticker: "RBLX", price: 51.68 },
       { name: "Lyft", ticker: "LYFT", price: 15.67 },
       { name: "Pinterest", ticker: "PINS", price: 23.20 }
-    ]
-  },
-    holdings: [
-      { name: "Airbnb", ticker: "ABNB", price: 147.00 },
-      { name: "Coinbase", ticker: "COIN", price: 161.00 }
     ]
   },
   {
@@ -1202,7 +1198,6 @@ function renderDetail(firm) {
       </div>`;
   }).join('');
 
-  document.getElementById('detailView').innerHTML = `
   const leadershipHTML = firm.leadership ? `
     <div class="detail-subhead">Key Partners &amp; Leadership</div>
     <div class="leadership-grid">
@@ -1262,3 +1257,167 @@ function renderDetail(firm) {
       </div>
     </div>
   `;
+
+  document.getElementById('backToList').addEventListener('click', (e) => {
+    e.preventDefault();
+    window.location.hash = '';
+  });
+
+  buildTicker();
+}
+
+// Decides what to show based on the URL - a firm slug shows its
+// detail page, anything else (or nothing) shows the full list.
+function router() {
+  const slug = window.location.hash.replace('#', '');
+  const firm = firms.find(f => f.slug === slug);
+
+  if (firm) {
+    document.getElementById('listView').style.display = 'none';
+    document.getElementById('detailView').style.display = 'block';
+    renderDetail(firm);
+    window.scrollTo(0, 0);
+  } else {
+    document.getElementById('listView').style.display = 'block';
+    document.getElementById('detailView').style.display = 'none';
+    renderFirms();
+  }
+}
+
+window.addEventListener('hashchange', router);
+
+// Computes and renders "By the Numbers" - real stats derived from
+// the firms array itself, not hardcoded, so it stays accurate as
+// firms get added or edited.
+function renderAnalytics() {
+  const totalFirms = firms.length;
+  const totalHoldings = firms.reduce((sum, f) => sum + f.holdings.length, 0);
+
+  const combinedAUM = firms.reduce((sum, f) => {
+    const match = f.aum.match(/\$(\d+)B/);
+    return match ? sum + parseInt(match[1]) : sum;
+  }, 0);
+
+  const oldestFirm = firms.reduce((a, b) => (a.founded < b.founded ? a : b));
+  const newestFirm = firms.reduce((a, b) => (a.founded > b.founded ? a : b));
+
+  document.getElementById('statRow').innerHTML = `
+    <div class="stat-box">
+      <div class="num">${totalFirms}</div>
+      <div class="lbl">Firms Tracked</div>
+    </div>
+    <div class="stat-box">
+      <div class="num">${totalHoldings}</div>
+      <div class="lbl">Portfolio Companies</div>
+    </div>
+    <div class="stat-box">
+      <div class="num">$${combinedAUM}B+</div>
+      <div class="lbl">Combined AUM (approx.)</div>
+    </div>
+    <div class="stat-box">
+      <div class="num">${oldestFirm.founded}</div>
+      <div class="lbl">Oldest: ${oldestFirm.short}</div>
+    </div>
+    <div class="stat-box">
+      <div class="num">${newestFirm.founded}</div>
+      <div class="lbl">Newest: ${newestFirm.short}</div>
+    </div>
+  `;
+
+  // Count how many firms touch each sector
+  const sectorCounts = {};
+  firms.forEach(f => {
+    f.sectors.forEach(s => {
+      sectorCounts[s] = (sectorCounts[s] || 0) + 1;
+    });
+  });
+  const maxCount = Math.max(...Object.values(sectorCounts));
+  const sortedSectors = Object.entries(sectorCounts).sort((a, b) => b[1] - a[1]);
+
+  document.getElementById('sectorChart').innerHTML = sortedSectors.map(([sector, count]) => `
+    <div class="sector-row">
+      <div class="sector-name">${sector}</div>
+      <div class="sector-bar-track">
+        <div class="sector-bar-fill" style="width: ${(count / maxCount) * 100}%"></div>
+      </div>
+      <div class="sector-count">${count}</div>
+    </div>
+  `).join('');
+
+  document.getElementById('exitsList').innerHTML = firms.map(f => `
+    <div class="exit-row">
+      <div class="exit-firm">${f.name}</div>
+      <div class="exit-detail">${f.signatureExit}</div>
+    </div>
+  `).join('');
+}
+
+// Ticker tape at top — pulls every unique ticker + whatever price is set
+function buildTicker() {
+  const track = document.getElementById('tickerTrack');
+  const seen = new Map();
+  firms.forEach(f => f.holdings.forEach(h => {
+    if (!seen.has(h.ticker)) seen.set(h.ticker, h.price);
+  }));
+  const parts = [];
+  seen.forEach((price, ticker) => {
+    const priceStr = price !== null ? `$${price.toFixed(2)}` : '—';
+    parts.push(`<span>${ticker} <span class="up">${priceStr}</span></span>`);
+  });
+  const line = parts.join('');
+  track.innerHTML = line + line; // duplicate for seamless scroll
+}
+
+// Try to load real, automatically-updated prices from prices.json
+// (built daily by a GitHub Action). If it's missing or fails to
+// load, the site just falls back to the prices written in the code.
+fetch('prices.json')
+  .then(res => res.json())
+  .then(data => {
+    firms.forEach(f => f.holdings.forEach(h => {
+      if (data[h.ticker] !== undefined) h.price = data[h.ticker];
+    }));
+    const noteEl = document.querySelector('.section-label .note');
+    if (noteEl && data.last_updated) {
+      noteEl.textContent = `Prices auto-updated daily · Last: ${data.last_updated}`;
+    }
+  })
+  .catch(err => {
+    console.log('Could not load live prices, using built-in defaults.', err);
+  })
+  .finally(() => {
+    renderNews();
+    renderAnalytics();
+    router();
+  });
+
+// Live-update the ticker tape when someone edits a price field
+document.addEventListener('input', (e) => {
+  if (e.target.classList.contains('price-input')) {
+    const ticker = e.target.dataset.ticker;
+    const newVal = parseFloat(e.target.value);
+    firms.forEach(f => f.holdings.forEach(h => {
+      if (h.ticker === ticker) h.price = isNaN(newVal) ? null : newVal;
+    }));
+    buildTicker();
+  }
+});
+
+// Search box - filters live as you type
+document.getElementById('searchInput').addEventListener('input', (e) => {
+  searchTerm = e.target.value;
+  renderFirms();
+});
+
+// Filter chips - clicking one sets the active era filter
+document.getElementById('filterChips').addEventListener('click', (e) => {
+  if (!e.target.classList.contains('chip')) return;
+  document.querySelectorAll('.chip').forEach(c => c.classList.remove('active'));
+  e.target.classList.add('active');
+  activeFilter = e.target.dataset.filter;
+  renderFirms();
+});
+</script>
+
+</body>
+</html>
