@@ -1777,16 +1777,13 @@ function renderComparison() {
     </div>
   `;
 
-  document.getElementById('backFromCompare').addEventListener('click', (e) => {
+document.getElementById('backFromCompare').addEventListener('click', (e) => {
     e.preventDefault();
     window.location.hash = '';
   });
 }
-  document.getElementById('backFromCompare').addEventListener('click', (e) => {
-    e.preventDefault();
-    window.location.hash = '';
-  });
-}
+
+// Renders the dedicated Analytics Dashboard page into #dashboardView:
 
 // Renders the dedicated Analytics Dashboard page into #dashboardView:
 // a visual AUM bar chart for all 13 firms, and a performance
