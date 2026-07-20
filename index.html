@@ -828,6 +828,27 @@ const newsItems = [
   }
 ];
 
+// ============================================================
+// FULL PROFILE PAGES — optional, works for ANY firm below.
+// Right now only Andreessen Horowitz (a16z) has one, but any
+// firm can get the same treatment. Two fields are all it takes:
+//
+//   leadership: [
+//     { name: "Full Name", role: "Their Title" },
+//     { name: "Full Name", role: "Their Title" }
+//   ],
+//   timeline: [
+//     { year: "YYYY", event: "One sentence describing what happened." },
+//     { year: "YYYY", event: "One sentence describing what happened." }
+//   ],
+//
+// Paste both blocks in right after that firm's "thesis" line (see
+// how a16z does it below for the exact placement). A firm with
+// NEITHER field still works completely normally — the page just
+// won't show a leadership grid or timeline for it. Nothing else
+// in the code needs to change; the detail page renders whatever
+// fields it finds automatically.
+// ============================================================
 const firms = [
   {
     rank: 1,
@@ -877,6 +898,16 @@ const firms = [
     hq: "Menlo Park, CA",
     aum: "$90B+",
     thesis: "Founded in 1972 by Don Valentine, a former Fairchild Semiconductor sales executive often called the \"grandfather of Silicon Valley venture capital,\" Sequoia was there for the first wave of the personal computer era, providing early funding to Apple and Atari. Over five decades it has repeated that pattern again and again — Google, PayPal, and Nvidia among them — building a reputation as the industry's steadiest and most consistent winner across multiple technology cycles.",
+    leadership: [
+      { name: "Don Valentine", role: "Founder (1972)" },
+      { name: "Roelof Botha", role: "Senior Steward, Global Managing Partner" }
+    ],
+    timeline: [
+      { year: "1972", event: "Don Valentine, a former Fairchild Semiconductor sales executive, founds the firm in Menlo Park." },
+      { year: "1978", event: "Becomes an early backer of Apple, one of the defining investments of Silicon Valley's first tech boom." },
+      { year: "2005", event: "Makes an early bet on Nvidia, decades before the chipmaker became one of the world's most valuable companies." },
+      { year: "2023", event: "Splits into three independent firms — Sequoia Capital, Peak XV Partners (India/Southeast Asia), and HongShan (China)." }
+    ],
     holdings: [
       { name: "Nvidia", ticker: "NVDA", price: 202.81 },
       { name: "DoorDash", ticker: "DASH", price: 175.00 }
@@ -894,6 +925,16 @@ const firms = [
     hq: "New York, NY",
     aum: "$90B+",
     thesis: "Founded in 1995 by Jeff Horing and Jerry Murdock in New York, Insight built its identity on outbound sourcing long before that was common practice — in the firm's earliest years, the two co-founders would comb through trade publications by hand looking for software companies that were hiring, and therefore growing. That research-driven, find-them-before-anyone-else approach scaled into a firm managing tens of billions of dollars, still built around the same instinct to spot momentum early.",
+    leadership: [
+      { name: "Jeff Horing", role: "Co-Founder & Managing Director" },
+      { name: "Jerry Murdock", role: "Co-Founder (Managing Director until 2011)" }
+    ],
+    timeline: [
+      { year: "1995", event: "Jeff Horing and Jerry Murdock found the firm in New York, betting early on B2B software." },
+      { year: "1995-2000", event: "Sources deals by manually reading trade publications for software companies that were hiring." },
+      { year: "2015", event: "Portfolio company Shopify goes public, one of the firm's defining software exits." },
+      { year: "2025", event: "Assets under management surpass $90 billion, with over 875 companies invested in to date." }
+    ],
     holdings: [
       { name: "Shopify", ticker: "SHOP", price: 123.56 },
       { name: "DocuSign", ticker: "DOCU", price: 52.74 }
@@ -911,6 +952,16 @@ const firms = [
     hq: "New York, NY",
     aum: "$58B+",
     thesis: "Chase Coleman was only 25 when he launched Tiger Global (originally named Tiger Technology) in 2001, seeded with roughly $25 million from his mentor Julian Robertson after Robertson's own famed hedge fund, Tiger Management, wound down. Coleman built Tiger Global as a hybrid the industry hadn't quite seen before — a fund equally comfortable buying public stocks and writing private venture checks, a strategy that let it move unusually fast into deals other VCs took months to close.",
+    leadership: [
+      { name: "Chase Coleman", role: "Founder" },
+      { name: "Scott Shleifer", role: "Partner, led expansion into private equity" }
+    ],
+    timeline: [
+      { year: "2001", event: "Chase Coleman, then 25, launches the firm (originally Tiger Technology) with $25 million seeded by mentor Julian Robertson." },
+      { year: "2003", event: "Scott Shleifer joins and helps expand the firm from public markets into private equity and venture deals." },
+      { year: "2010s", event: "Builds an early pre-IPO stake in Facebook, defining the firm's hybrid public-private strategy." },
+      { year: "2021", event: "Becomes one of the most active venture investors globally, deploying capital at unusually high speed." }
+    ],
     holdings: [
       { name: "Coinbase", ticker: "COIN", price: 161.00 },
       { name: "JD.com", ticker: "JD", price: 29.62 }
@@ -928,6 +979,17 @@ const firms = [
     hq: "Cambridge, MA",
     aum: "$35B+",
     thesis: "David Fialkow and Joel Cutler, childhood friends since the age of five or six, spent years building and selling travel and consumer companies together before co-founding General Catalyst in Cambridge, Massachusetts in 2000. What started as a Boston-area firm with a first fund of $250 million has since expanded into Silicon Valley, Europe, and India, evolving into one of the largest venture firms in the world.",
+    leadership: [
+      { name: "Joel Cutler", role: "Co-Founder" },
+      { name: "David Fialkow", role: "Co-Founder & Managing Director" },
+      { name: "Hemant Taneja", role: "CEO & Managing Director" }
+    ],
+    timeline: [
+      { year: "2000", event: "Childhood friends Joel Cutler and David Fialkow found the firm in Cambridge, Massachusetts." },
+      { year: "2001", event: "Closes its first fund at $250 million, focused on early-stage technology companies." },
+      { year: "2010", event: "Opens a Silicon Valley office, expanding beyond its Boston roots." },
+      { year: "2017", event: "Portfolio company Snap goes public in one of the largest consumer tech IPOs of its era." }
+    ],
     holdings: [
       { name: "HubSpot", ticker: "HUBS", price: 224.26 },
       { name: "Samsara", ticker: "IOT", price: 38.32 }
@@ -945,6 +1007,18 @@ const firms = [
     hq: "Menlo Park, CA",
     aum: "$25B+",
     thesis: "NEA was founded in 1977 by three men who each brought a different piece of the puzzle: Dick Kramlich, who had trained under legendary investor Arthur Rock; Frank Bonsal, an investment banker who had taken startups public; and Chuck Newhall, who had managed investment funds at T. Rowe Price. Deliberately built with offices on both coasts from day one — unusual for the era — NEA's first fund raised just $16 million, a fraction of the more than $25 billion it manages today.",
+    leadership: [
+      { name: "Dick Kramlich", role: "Co-Founder" },
+      { name: "Chuck Newhall", role: "Co-Founder" },
+      { name: "Frank Bonsal", role: "Co-Founder" },
+      { name: "Scott Sandell", role: "Executive Chairman" }
+    ],
+    timeline: [
+      { year: "1977", event: "Three founders with complementary backgrounds — banking, fund management, and VC — launch NEA with a $16 million first fund." },
+      { year: "1981", event: "Makes one of its earliest notable investments in 3Com." },
+      { year: "2015", event: "Closes a $3.1 billion fund, the largest venture fund raised up to that point." },
+      { year: "2021", event: "Portfolio company Robinhood goes public, bringing retail stock trading to the public markets." }
+    ],
     holdings: [
       { name: "Robinhood", ticker: "HOOD", price: 99.96 },
       { name: "Workday", ticker: "WDAY", price: 144.78 }
@@ -962,6 +1036,17 @@ const firms = [
     hq: "Menlo Park, CA",
     aum: "$25B+",
     thesis: "Lightspeed traces its roots to Weiss, Peck & Greer Venture Partners, rebranding under its current name in 2000 as it sharpened its focus on enterprise infrastructure and consumer technology. The firm's willingness to back unproven, young founders paid off dramatically in 2012, when partner Jeremy Liew wrote the first institutional check into a then-tiny disappearing-photo app called Snapchat.",
+    leadership: [
+      { name: "Barry Eggers", role: "Co-Founder" },
+      { name: "Ravi Mhatre", role: "Co-Founder" },
+      { name: "Jeremy Liew", role: "Partner, wrote Snapchat's first check" }
+    ],
+    timeline: [
+      { year: "2000", event: "Rebrands from Weiss, Peck & Greer Venture Partners into Lightspeed Venture Partners." },
+      { year: "2012", event: "Partner Jeremy Liew writes the first institutional check into a then-tiny app called Snapchat." },
+      { year: "2017", event: "Snap goes public, five years after that first bet." },
+      { year: "2020s", event: "Expands heavily into enterprise infrastructure alongside its consumer roots." }
+    ],
     holdings: [
       { name: "Snap", ticker: "SNAP", price: 4.53 },
       { name: "Affirm", ticker: "AFRM", price: 64.71 }
@@ -979,6 +1064,16 @@ const firms = [
     hq: "Palo Alto, CA",
     aum: "$20B+",
     thesis: "Arthur Patterson and Jim Swartz founded Accel in 1983, betting on a strategy of deep specialization in specific technology categories rather than spreading investments broadly — an approach that was unusual at the time. That focus paid off most famously in 2005, when Accel led Facebook's Series A, a single investment that became one of the highest-multiple returns in venture capital history and cemented the firm's reputation for spotting category-defining companies early.",
+    leadership: [
+      { name: "Arthur Patterson", role: "Co-Founder" },
+      { name: "Jim Swartz", role: "Co-Founder" }
+    ],
+    timeline: [
+      { year: "1983", event: "Arthur Patterson and Jim Swartz found the firm on a strategy of deep specialization in specific tech categories." },
+      { year: "2000s", event: "Expands internationally, opening a London office to invest across Europe." },
+      { year: "2005", event: "Leads Facebook's Series A — a single check that became one of the highest-multiple returns in VC history." },
+      { year: "2010s", event: "Backs Slack, Atlassian, and Dropbox as the firm builds a reputation in enterprise software." }
+    ],
     holdings: [
       { name: "Meta Platforms", ticker: "META", price: 646.01 },
       { name: "Etsy", ticker: "ETSY", price: 84.10 }
@@ -996,6 +1091,15 @@ const firms = [
     hq: "Menlo Park, CA",
     aum: "$15B+",
     thesis: "Vinod Khosla co-founded Sun Microsystems in 1982 before moving into venture capital, eventually launching his own firm, Khosla Ventures, in 2004. True to his engineering background, Khosla built the firm's reputation on taking bets other investors considered too risky or too far from proven markets — from early clean energy to artificial intelligence — arguing that the biggest returns come from technology bets everyone else is too cautious to make.",
+    leadership: [
+      { name: "Vinod Khosla", role: "Founder" }
+    ],
+    timeline: [
+      { year: "1982", event: "Vinod Khosla co-founds Sun Microsystems, years before moving into venture capital." },
+      { year: "2004", event: "Khosla founds his own firm, focused on high-risk, high-reward technology bets." },
+      { year: "2009", event: "Makes an early investment in Square (now Block), years ahead of its 2015 IPO." },
+      { year: "2020s", event: "Shifts significant focus toward artificial intelligence alongside its long-running clean energy bets." }
+    ],
     holdings: [
       { name: "Block", ticker: "XYZ", price: 79.94 },
       { name: "Instacart", ticker: "CART", price: 45.82 }
@@ -1013,6 +1117,17 @@ const firms = [
     hq: "San Francisco, CA",
     aum: "$12B+",
     thesis: "Peter Thiel, Ken Howery, and Luke Nosek — all veterans of PayPal's founding team — launched Founders Fund in 2005 with a deliberately contrarian philosophy: back ambitious, technically difficult companies that other VCs pass on for being too weird or too capital-intensive. That thesis led directly to the firm becoming the first institutional investor in both SpaceX and Palantir, two of the highest-conviction, longest-held bets in the firm's history.",
+    leadership: [
+      { name: "Peter Thiel", role: "Co-Founder" },
+      { name: "Ken Howery", role: "Co-Founder" },
+      { name: "Luke Nosek", role: "Co-Founder" }
+    ],
+    timeline: [
+      { year: "2005", event: "Three PayPal Mafia veterans — Thiel, Howery, and Nosek — found the firm on a contrarian, hard-tech thesis." },
+      { year: "2008", event: "Becomes an early investor in SpaceX, a bet that would compound for nearly two decades." },
+      { year: "2010s", event: "Becomes the first institutional investor in Palantir, another long-held, high-conviction position." },
+      { year: "2026", event: "SpaceX goes public, turning the firm's original 2008 stake into an estimated ~80x return." }
+    ],
     holdings: [
       { name: "Palantir", ticker: "PLTR", price: 134.44 },
       { name: "SpaceX", ticker: "SPCX", price: 160.95 }
@@ -1030,6 +1145,15 @@ const firms = [
     hq: "New York, NY",
     aum: "$10B+ (latest fund)",
     thesis: "Joshua Kushner founded Thrive Capital in 2009 at just 24 years old, initially funding it himself before raising outside capital from investors including Princeton University, the Wellcome Trust, and Peter Thiel. Thrive has stayed deliberately small in deal volume — funding only 8 to 12 new companies most years — while making some of the earliest bets on Instagram, and more recently OpenAI, a concentrated approach that has made it one of the highest-returning firms of its size.",
+    leadership: [
+      { name: "Joshua Kushner", role: "Founder" }
+    ],
+    timeline: [
+      { year: "2009", event: "Joshua Kushner founds the firm at age 24, initially funding it himself." },
+      { year: "2011", event: "Raises its first institutional fund, with Princeton University and the Wellcome Trust among early backers." },
+      { year: "2012", event: "Makes one of its earliest and most famous bets on Instagram, years before its acquisition by Facebook." },
+      { year: "2020s", event: "Becomes one of the earliest and largest institutional investors in OpenAI." }
+    ],
     holdings: [
       { name: "Figma", ticker: "FIG", price: 23.95 },
       { name: "Instacart", ticker: "CART", price: 45.82 }
@@ -1047,6 +1171,15 @@ const firms = [
     hq: "Redwood City, CA",
     aum: "$10B+ (recent fund)",
     thesis: "Bessemer's story starts nowhere near a startup: in 1911, steel magnate Henry Phipps Jr. — Andrew Carnegie's business partner and the second-largest shareholder in Carnegie Steel — formed a family office to manage the fortune from Carnegie Steel's sale. That family office didn't formally become a venture capital firm until the 1970s, when it opened a Silicon Valley outpost to chase the emerging tech industry, eventually spinning out as Bessemer Venture Partners in 1986 — making it, by a wide margin, the oldest firm in venture capital.",
+    leadership: [
+      { name: "Henry Phipps Jr.", role: "Founder (1911, as Bessemer Trust)" }
+    ],
+    timeline: [
+      { year: "1911", event: "Steel magnate Henry Phipps Jr. forms a family office to manage the fortune from Carnegie Steel's sale." },
+      { year: "1974", event: "Begins accepting outside investors for the first time, beyond the Phipps family itself." },
+      { year: "1975", event: "Opens a Silicon Valley office, shifting focus toward technology and medical companies." },
+      { year: "1986", event: "Formally spins out as Bessemer Venture Partners, a dedicated venture capital firm." }
+    ],
     holdings: [
       { name: "Shopify", ticker: "SHOP", price: 123.56 },
       { name: "Pinterest", ticker: "PINS", price: 23.50 },
@@ -1065,6 +1198,18 @@ const firms = [
     hq: "San Francisco, CA",
     aum: "$9B+",
     thesis: "Five young partners — Bob Kagle, Bruce Dunlevie, Andy Rachleff, Kevin Harvey, and Val Vaden — broke off from their established firms in 1995 to found Benchmark on a radical premise for the time: every partner would be paid and treated exactly equally, with no senior hierarchy. Barely two years later, the firm's $6.7 million bet on a tiny auction site called eBay became one of the best-performing venture investments ever made, validating the flat-partnership model Benchmark still runs today.",
+    leadership: [
+      { name: "Bob Kagle", role: "Co-Founder" },
+      { name: "Bruce Dunlevie", role: "Co-Founder" },
+      { name: "Andy Rachleff", role: "Co-Founder" },
+      { name: "Kevin Harvey", role: "Co-Founder" }
+    ],
+    timeline: [
+      { year: "1995", event: "Five partners break off from established firms to found Benchmark as a radically equal partnership." },
+      { year: "1997", event: "Makes a $6.7 million Series A bet on a tiny auction site called eBay — one of the best-performing VC investments ever made." },
+      { year: "1999", event: "Bill Gurley joins as a partner, going on to become one of the firm's most prominent investors." },
+      { year: "2010s", event: "Backs Uber and Snap, continuing its pattern of early, high-conviction consumer bets." }
+    ],
     holdings: [
       { name: "Uber", ticker: "UBER", price: 72.46 },
       { name: "Snap", ticker: "SNAP", price: 4.53 }
