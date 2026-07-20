@@ -1612,7 +1612,8 @@ function renderFirms() {
         ${holdingsHTML}
       </div>
 <div class="card-footer">
-        <a href="#${firm.slug}" class="firm-page-link">View Firm Page →</a>
+      <a href="#${firm.slug}" class="firm-page-link">View Firm Page →</a>
+        ${firm.seoPage ? `<a href="${firm.seoPage}" class="seo-page-link">Standalone Profile ↗</a>` : ''}
         <label class="compare-check">
           <input type="checkbox" class="compare-checkbox" data-slug="${firm.slug}" ${compareSet.has(firm.slug) ? 'checked' : ''}>
           Compare
