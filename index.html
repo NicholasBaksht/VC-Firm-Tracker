@@ -112,27 +112,25 @@ html { scroll-behavior: smooth; }
     max-width: 620px;
     margin: 0;
   }
-/* ---------- VALUE BAR ---------- */
-  .value-bar {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 10px;
-    margin-top: 24px;
-  }
-  .value-item {
-    display: flex;
-    align-items: center;
-    gap: 7px;
+/* ---------- HERO CTA ---------- */
+  .hero-cta {
+    display: inline-block;
     font-family: var(--mono);
-    font-size: 13px;
-    color: var(--ink);
-    background: var(--surface);
-    border: 1px solid var(--hairline);
-    border-radius: 20px;
-    padding: 8px 14px;
-  }
-  .value-icon {
     font-size: 14px;
+    font-weight: 600;
+    color: var(--bg);
+    background: var(--gold);
+    text-decoration: none;
+    border-radius: 4px;
+    padding: 13px 26px;
+    margin-top: 28px;
+    transition: background 0.15s ease;
+  }
+  .hero-cta:hover {
+    background: var(--gold-bright);
+  }
+  .below-hero {
+    padding-top: 40px;
   }
   /* ---------- DISCLAIMER STAMP ---------- */
   .stamp {
