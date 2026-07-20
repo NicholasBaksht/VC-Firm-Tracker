@@ -583,6 +583,102 @@
     border-radius: 3px;
     margin: 2px 4px 2px 0;
   }
+  /* ---------- ANALYTICS DASHBOARD ---------- */
+  .dashboard-link {
+    display: inline-block;
+    font-family: var(--mono);
+    font-size: 13px;
+    color: var(--gold);
+    text-decoration: none;
+    border: 1px solid var(--hairline);
+    border-radius: 20px;
+    padding: 8px 16px;
+    margin-bottom: 24px;
+    transition: border-color 0.15s ease, color 0.15s ease;
+  }
+  .dashboard-link:hover {
+    border-color: var(--gold);
+    color: var(--gold-bright);
+  }
+  .dashboard-title {
+    font-family: var(--serif);
+    font-weight: 600;
+    font-size: 34px;
+    margin: 24px 0 8px;
+  }
+  .dashboard-sub {
+    font-size: 14px;
+    color: var(--ink-dim);
+    margin: 0 0 32px;
+    max-width: 620px;
+  }
+  .dashboard-section {
+    margin-bottom: 48px;
+  }
+  .aum-bar-row {
+    display: grid;
+    grid-template-columns: 190px 1fr 90px;
+    align-items: center;
+    gap: 14px;
+    padding: 9px 0;
+  }
+  .aum-bar-name {
+    font-size: 13.5px;
+    color: var(--ink);
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+  .aum-bar-track {
+    background: var(--surface);
+    border-radius: 3px;
+    height: 14px;
+    overflow: hidden;
+  }
+  .aum-bar-fill {
+    background: linear-gradient(90deg, var(--gold), var(--gold-bright));
+    height: 100%;
+    border-radius: 3px;
+  }
+  .aum-bar-value {
+    font-family: var(--mono);
+    font-size: 12.5px;
+    color: var(--ink-dim);
+    text-align: right;
+  }
+  .leaderboard-row {
+    display: grid;
+    grid-template-columns: 30px 1fr auto auto;
+    align-items: center;
+    gap: 14px;
+    padding: 12px 0;
+    border-top: 1px solid var(--hairline);
+  }
+  .leaderboard-row:last-child { border-bottom: 1px solid var(--hairline); }
+  .leaderboard-rank {
+    font-family: var(--mono);
+    font-size: 12px;
+    color: var(--ink-dim);
+  }
+  .leaderboard-name {
+    font-size: 14px;
+    color: var(--ink);
+  }
+  .leaderboard-name .ticker {
+    font-family: var(--mono);
+    font-size: 11px;
+    color: var(--gold);
+    margin-left: 6px;
+  }
+  .leaderboard-note {
+    font-family: var(--mono);
+    font-size: 12px;
+    color: var(--ink-dim);
+  }
+  @media (max-width: 560px) {
+    .aum-bar-row { grid-template-columns: 100px 1fr 70px; }
+    .leaderboard-row { grid-template-columns: 24px 1fr auto; }
+  }
   /* ---------- FIRM DETAIL PAGE ---------- */
   .detail-back {
     font-family: var(--mono);
@@ -906,11 +1002,13 @@
     <div id="newsContainer"></div>
   </section>
 
-  <div id="listView">
+ <div id="listView">
     <div class="section-label">
       <h2>Ranked by AUM</h2>
       <div class="note">Prices are editable — look one up, type it in</div>
     </div>
+
+    <a href="#analytics" class="dashboard-link">📊 Open Analytics Dashboard →</a>
 
     <div class="controls">
       <input type="text" id="searchInput" class="search-input" placeholder="Search by firm, company, or ticker...">
@@ -926,11 +1024,11 @@
     <div class="no-results" id="noResults" style="display: none;">No firms match your search or filter.</div>
   </div>
 
- <div id="detailView" style="display: none;"></div>
+<div id="detailView" style="display: none;"></div>
   <div id="compareView" style="display: none;"></div>
+  <div id="dashboardView" style="display: none;"></div>
 
   <div class="compare-bar" id="compareBar" style="display: none;"></div>
-
   <section class="analytics">
     <h2>By the Numbers</h2>
     <p class="sub">Real statistics computed from every firm and portfolio company tracked on this page — not estimates, not vibes, just counting what's actually here.</p>
