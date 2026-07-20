@@ -228,6 +228,59 @@
     color: var(--ink-dim);
   }
 
+  /* ---------- SEARCH & FILTERS ---------- */
+  .controls {
+    padding-bottom: 24px;
+  }
+  .search-input {
+    width: 100%;
+    background: var(--surface);
+    border: 1px solid var(--hairline);
+    border-radius: 6px;
+    color: var(--ink);
+    font-family: var(--sans);
+    font-size: 15px;
+    padding: 12px 16px;
+    margin-bottom: 14px;
+  }
+  .search-input::placeholder { color: var(--ink-dim); }
+  .search-input:focus {
+    outline: none;
+    border-color: var(--gold);
+  }
+  .filter-chips {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+  }
+  .chip {
+    font-family: var(--mono);
+    font-size: 12.5px;
+    color: var(--ink-dim);
+    background: var(--surface);
+    border: 1px solid var(--hairline);
+    border-radius: 20px;
+    padding: 7px 14px;
+    cursor: pointer;
+    transition: border-color 0.15s ease, color 0.15s ease, background 0.15s ease;
+  }
+  .chip:hover {
+    border-color: var(--gold);
+    color: var(--ink);
+  }
+  .chip.active {
+    background: rgba(201,162,39,0.12);
+    border-color: var(--gold);
+    color: var(--gold-bright);
+  }
+  .no-results {
+    font-family: var(--mono);
+    font-size: 14px;
+    color: var(--ink-dim);
+    text-align: center;
+    padding: 60px 0;
+  }
+
   /* ---------- FIRM CARDS ---------- */
   .firms {
     display: grid;
@@ -459,7 +512,18 @@
     <div class="note">Prices are editable — look one up, type it in</div>
   </div>
 
+  <div class="controls">
+    <input type="text" id="searchInput" class="search-input" placeholder="Search by firm, company, or ticker...">
+    <div class="filter-chips" id="filterChips">
+      <button class="chip active" data-filter="all">All Eras</button>
+      <button class="chip" data-filter="pre2000">Founded Before 2000</button>
+      <button class="chip" data-filter="2000s">Founded 2000s</button>
+      <button class="chip" data-filter="2010s">Founded 2010+</button>
+    </div>
+  </div>
+
   <div class="firms" id="firmsContainer"></div>
+  <div class="no-results" id="noResults" style="display: none;">No firms match your search or filter.</div>
 
   <section class="methodology">
     <h2>Methodology &amp; Sources</h2>
@@ -690,7 +754,7 @@ const firms = [
   }
 ];
 
-function renderSite() {
+function renderNews() {
   // Render the news feed: newest item as the big featured box,
   // everything else as a compact dated list underneath.
   const newsContainer = document.getElementById('newsContainer');
@@ -717,11 +781,38 @@ function renderSite() {
 
     newsContainer.innerHTML = html;
   }
+}
 
+// Current search text and active era filter - both start "empty"
+let searchTerm = '';
+let activeFilter = 'all';
+
+function matchesFilter(firm) {
+  if (activeFilter === 'pre2000') return firm.founded < 2000;
+  if (activeFilter === '2000s') return firm.founded >= 2000 && firm.founded < 2010;
+  if (activeFilter === '2010s') return firm.founded >= 2010;
+  return true; // 'all'
+}
+
+function matchesSearch(firm) {
+  if (searchTerm === '') return true;
+  const term = searchTerm.toLowerCase();
+  if (firm.name.toLowerCase().includes(term)) return true;
+  return firm.holdings.some(h =>
+    h.name.toLowerCase().includes(term) || h.ticker.toLowerCase().includes(term)
+  );
+}
+
+function renderFirms() {
   const container = document.getElementById('firmsContainer');
+  const noResults = document.getElementById('noResults');
   container.innerHTML = '';
 
-  firms.forEach(firm => {
+  const visibleFirms = firms.filter(f => matchesFilter(f) && matchesSearch(f));
+
+  noResults.style.display = visibleFirms.length === 0 ? 'block' : 'none';
+
+  visibleFirms.forEach(firm => {
     const card = document.createElement('div');
     card.className = 'firm';
 
@@ -800,7 +891,8 @@ fetch('prices.json')
     console.log('Could not load live prices, using built-in defaults.', err);
   })
   .finally(() => {
-    renderSite();
+    renderNews();
+    renderFirms();
   });
 
 // Live-update the ticker tape when someone edits a price field
@@ -813,6 +905,21 @@ document.addEventListener('input', (e) => {
     }));
     buildTicker();
   }
+});
+
+// Search box - filters live as you type
+document.getElementById('searchInput').addEventListener('input', (e) => {
+  searchTerm = e.target.value;
+  renderFirms();
+});
+
+// Filter chips - clicking one sets the active era filter
+document.getElementById('filterChips').addEventListener('click', (e) => {
+  if (!e.target.classList.contains('chip')) return;
+  document.querySelectorAll('.chip').forEach(c => c.classList.remove('active'));
+  e.target.classList.add('active');
+  activeFilter = e.target.dataset.filter;
+  renderFirms();
 });
 </script>
 
