@@ -1840,6 +1840,7 @@ function renderComparison() {
   }
 
   const rows = [
+  { label: 'Power Score', render: f => `<strong style="color: var(--gold-bright); font-family: var(--mono); font-size: 16px;">${computePowerScore(f)}</strong>` },
     { label: 'Assets Managed', render: f => f.aum },
     { label: 'Founded', render: f => f.founded },
     { label: 'Headquarters', render: f => f.hq },
