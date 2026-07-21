@@ -3942,57 +3942,93 @@ function renderCompareBar() {
 }
 
 // Renders the side-by-side comparison table into #compareView
-function renderComparison() {
-  const selected = firms.filter(f => compareSet.has(f.slug));
+const rows = [
+  {
+    label: 'Power Score',
+    render: f => `
+      <strong style="color: var(--gold-bright); font-family: var(--mono); font-size:16px;">
+        ${computePowerScore(f)}
+      </strong>
+    `
+  },
 
-  if (selected.length < 2) {
-    document.getElementById('compareView').innerHTML = `
-      <a href="#" class="detail-back" id="backFromCompare">← Back to all firms</a>
-      <p style="color: var(--ink-dim); font-size: 14px;">Pick at least 2 firms from the list to compare them.</p>
-    `;
-    document.getElementById('backFromCompare').addEventListener('click', (e) => {
-      e.preventDefault();
-      window.location.hash = '';
-    });
-    return;
+  {
+    label: 'Current Fund',
+    render: f => getCurrentFundDisplay(f)
+  },
+
+  {
+    label: 'Typical Check Size',
+    render: f => getCheckSizeDisplay(f)
+  },
+
+  {
+    label: 'Founded',
+    render: f => f.founded
+  },
+
+  {
+    label: 'Headquarters',
+    render: f => f.headquarters
+  },
+
+  {
+    label: 'Stages',
+    render: f => f.stages.join(', ')
+  },
+
+  {
+    label: 'Industries',
+    render: f =>
+      f.industries
+        .map(i => `<span class="compare-sector-tag">${i}</span>`)
+        .join('')
+  },
+
+  {
+    label: 'Geographic Focus',
+    render: f => f.geographicPreferences.join(', ')
+  },
+
+  {
+    label: 'Portfolio Companies',
+    render: f => getPortfolioCountDisplay(f)
+  },
+
+  {
+    label: 'Signature Exit',
+    render: f => f.signatureExit
+  },
+
+  {
+    label: 'Tracked Holdings',
+    render: f => f.holdings.map(h => h.name).join(', ')
+  },
+
+  {
+    label: 'Contact',
+    render: f =>
+      f.contact
+        ? `<a href="${getContactURL(f)}"
+             target="_blank"
+             rel="noopener noreferrer">
+             ${f.contact}
+           </a>`
+        : '—'
+  },
+
+  {
+    label: 'Website',
+    render: f => `
+      <a href="${f.website}"
+         target="_blank"
+         rel="noopener noreferrer"
+         class="firm-link">
+        ${f.website.replace('https://', '')} ↗
+      </a>
+    `
   }
-
-  const rows = [
-    { label: 'Power Score', render: f => `<strong style="color: var(--gold-bright); font-family: var(--mono); font-size: 16px;">${computePowerScore(f)}</strong>` },
-    { label: 'Assets Managed', render: f => f.aum },
-    { label: 'Founded', render: f => f.founded },
-    { label: 'Headquarters', render: f => f.hq },
-    { label: 'Sectors', render: f => f.sectors.map(s => `<span class="compare-sector-tag">${s}</span>`).join('') },
-    { label: 'Signature Exit', render: f => f.signatureExit },
-    { label: 'Tracked Holdings', render: f => f.holdings.map(h => h.name).join(', ') },
-    { label: 'Website', render: f => `<a href="${f.website}" target="_blank" rel="noopener noreferrer" class="firm-link">${f.website.replace('https://', '')} ↗</a>` }
-  ];
-
-  const headerCells = selected.map(f => `<th class="firm-col-name">${f.name}</th>`).join('');
-  const bodyRows = rows.map(row => `
-    <tr>
-      <td class="row-label">${row.label}</td>
-      ${selected.map(f => `<td>${row.render(f)}</td>`).join('')}
-    </tr>
-  `).join('');
-
-  document.getElementById('compareView').innerHTML = `
-    <a href="#" class="detail-back" id="backFromCompare">← Back to all firms</a>
-    <div class="scroll-hint">← Swipe to see all firms →</div>
-    <div class="compare-table-wrap">
-      <table class="compare-table">
-        <thead><tr><th></th>${headerCells}</tr></thead>
-        <tbody>${bodyRows}</tbody>
-      </table>
-    </div>
-  `;
-
-  document.getElementById('backFromCompare').addEventListener('click', (e) => {
-    e.preventDefault();
-    window.location.hash = '';
-  });
-}
-
+];
 // Renders the dedicated Analytics Dashboard page into #dashboardView:
 // a visual AUM bar chart for all 13 firms, and a performance
 // leaderboard built from every holding that has real historical
