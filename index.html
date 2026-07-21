@@ -4306,67 +4306,127 @@ window.addEventListener('hashchange', router);
 // firms get added or edited.
 function renderAnalytics() {
   const totalFirms = firms.length;
-  const totalHoldings = firms.reduce((sum, f) => sum + f.holdings.length, 0);
 
-  const combinedAUM = firms.reduce((sum, f) => {
-    const match = f.aum.match(/\$(\d+)B/);
-    return match ? sum + parseInt(match[1]) : sum;
-  }, 0);
+  const totalHoldings = firms.reduce(
+    (sum, f) => sum + f.holdings.length,
+    0
+  );
 
-  const oldestFirm = firms.reduce((a, b) => (a.founded < b.founded ? a : b));
-  const newestFirm = firms.reduce((a, b) => (a.founded > b.founded ? a : b));
+  const fundAmounts = firms
+    .map(f => getCurrentFundAmount(f))
+    .filter(amount => amount !== null && amount > 0);
+
+  const combinedCurrentFundSize = fundAmounts.reduce(
+    (sum, amount) => sum + amount,
+    0
+  );
+
+  const firmsWithFundData = fundAmounts.length;
+
+  const oldestFirm = firms.reduce(
+    (a, b) => (a.founded < b.founded ? a : b)
+  );
+
+  const newestFirm = firms.reduce(
+    (a, b) => (a.founded > b.founded ? a : b)
+  );
 
   document.getElementById('statRow').innerHTML = `
     <div class="stat-box">
       <div class="num">${totalFirms}</div>
       <div class="lbl">Firms Tracked</div>
     </div>
+
     <div class="stat-box">
       <div class="num">${totalHoldings}</div>
-      <div class="lbl">Portfolio Companies</div>
+      <div class="lbl">Tracked Public Holdings</div>
     </div>
+
     <div class="stat-box">
-      <div class="num">$${combinedAUM}B+</div>
-      <div class="lbl">Combined AUM (approx.)</div>
+      <div class="num">
+        ${
+          combinedCurrentFundSize > 0
+            ? formatMoney(combinedCurrentFundSize)
+            : 'Not Available'
+        }
+      </div>
+      <div class="lbl">
+        Combined Current Fund Size (${firmsWithFundData} firms)
+      </div>
     </div>
+
     <div class="stat-box">
       <div class="num">${oldestFirm.founded}</div>
       <div class="lbl">Oldest: ${oldestFirm.short}</div>
     </div>
+
     <div class="stat-box">
       <div class="num">${newestFirm.founded}</div>
       <div class="lbl">Newest: ${newestFirm.short}</div>
     </div>
   `;
 
-  // Count how many firms touch each sector
-  const sectorCounts = {};
+  // Count how many firms invest in each industry.
+  const industryCounts = {};
+
   firms.forEach(f => {
-    f.sectors.forEach(s => {
-      sectorCounts[s] = (sectorCounts[s] || 0) + 1;
+    const uniqueIndustries = new Set(f.industries || []);
+
+    uniqueIndustries.forEach(industry => {
+      industryCounts[industry] =
+        (industryCounts[industry] || 0) + 1;
     });
   });
-  const maxCount = Math.max(...Object.values(sectorCounts));
-  const sortedSectors = Object.entries(sectorCounts).sort((a, b) => b[1] - a[1]);
 
-  document.getElementById('sectorChart').innerHTML = sortedSectors.map(([sector, count]) => `
-    <div class="sector-row">
-      <div class="sector-name">${sector}</div>
-      <div class="sector-bar-track">
-        <div class="sector-bar-fill" style="width: ${(count / maxCount) * 100}%"></div>
+  const sortedIndustries = Object.entries(industryCounts)
+    .sort((a, b) => {
+      if (b[1] !== a[1]) {
+        return b[1] - a[1];
+      }
+
+      return a[0].localeCompare(b[0]);
+    });
+
+  const maxCount = sortedIndustries.length > 0
+    ? Math.max(...sortedIndustries.map(([, count]) => count))
+    : 0;
+
+  document.getElementById('sectorChart').innerHTML =
+    sortedIndustries.length > 0
+      ? sortedIndustries.map(([industry, count]) => `
+          <div class="sector-row">
+            <div class="sector-name">${industry}</div>
+
+            <div class="sector-bar-track">
+              <div
+                class="sector-bar-fill"
+                style="width: ${
+                  maxCount > 0
+                    ? (count / maxCount) * 100
+                    : 0
+                }%">
+              </div>
+            </div>
+
+            <div class="sector-count">${count}</div>
+          </div>
+        `).join('')
+      : `
+          <p class="leaderboard-note">
+            No industry data is currently available.
+          </p>
+        `;
+
+  document.getElementById('exitsList').innerHTML = firms
+    .filter(f => f.signatureExit)
+    .map(f => `
+      <div class="exit-row">
+        <div class="exit-firm">${f.name}</div>
+        <div class="exit-detail">${f.signatureExit}</div>
       </div>
-      <div class="sector-count">${count}</div>
-    </div>
-  `).join('');
-
-  document.getElementById('exitsList').innerHTML = firms.map(f => `
-    <div class="exit-row">
-      <div class="exit-firm">${f.name}</div>
-      <div class="exit-detail">${f.signatureExit}</div>
-    </div>
-  `).join('');
+    `)
+    .join('');
 }
-
 // Ticker tape at top — pulls every unique ticker + whatever price is set
 function buildTicker() {
   const track = document.getElementById('tickerTrack');
