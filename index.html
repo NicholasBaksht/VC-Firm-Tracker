@@ -2442,7 +2442,6 @@ thesis: "General Catalyst partners with founders from company creation through I
     ]
   },
   {
-  {
     rank: 6,
     name: "New Enterprise Associates",
 
@@ -2576,23 +2575,6 @@ thesis: "General Catalyst partners with founders from company creation through I
         historicalPrice: null,
         price: 144.78
       }
-    ]
-  },
-    leadership: [
-      { name: "Dick Kramlich", role: "Co-Founder" },
-      { name: "Chuck Newhall", role: "Co-Founder" },
-      { name: "Frank Bonsal", role: "Co-Founder" },
-      { name: "Scott Sandell", role: "Executive Chairman", profileSlug: "scott-sandell" }
-    ],
-    timeline: [
-      { year: "1977", event: "Three founders with complementary backgrounds — banking, fund management, and VC — launch NEA with a $16 million first fund." },
-      { year: "1981", event: "Makes one of its earliest notable investments in 3Com." },
-      { year: "2015", event: "Closes a $3.1 billion fund, the largest venture fund raised up to that point." },
-      { year: "2021", event: "Portfolio company Robinhood goes public, bringing retail stock trading to the public markets." }
-    ],
-    holdings: [
-      { name: "Robinhood", ticker: "HOOD", historicalPrice: null, price: 99.96 },
-      { name: "Workday", ticker: "WDAY", historicalPrice: null, price: 144.78 }
     ]
   },
   {
@@ -3675,29 +3657,41 @@ function buildTicker() {
   track.innerHTML = line + line; // duplicate for seamless scroll
 }
 
-// Try to load real, automatically-updated prices from prices.json
-// (built daily by a GitHub Action). If it's missing or fails to
-// load, the site just falls back to the prices written in the code.
+// Render the page immediately from the built-in data. This keeps the
+// firm cards visible even if prices.json is missing, slow, or malformed.
+renderNews();
+renderHeroTop5();
+renderScaleBar();
+renderAnalytics();
+router();
+buildTicker();
+
+// Then try to load automatically updated prices from prices.json.
+// Price values are normalized to numbers before being used so a JSON
+// string such as "72.46" cannot break .toFixed() during card rendering.
 fetch('prices.json')
-  .then(res => res.json())
+  .then(res => {
+    if (!res.ok) throw new Error(`prices.json returned ${res.status}`);
+    return res.json();
+  })
   .then(data => {
     firms.forEach(f => f.holdings.forEach(h => {
-      if (data[h.ticker] !== undefined) h.price = data[h.ticker];
+      if (data[h.ticker] !== undefined && data[h.ticker] !== null) {
+        const parsedPrice = Number(data[h.ticker]);
+        if (Number.isFinite(parsedPrice)) h.price = parsedPrice;
+      }
     }));
+
     const noteEl = document.querySelector('.section-label .note');
     if (noteEl && data.last_updated) {
       noteEl.textContent = `Prices auto-updated daily · Last: ${data.last_updated}`;
     }
+
+    buildTicker();
+    router();
   })
   .catch(err => {
     console.log('Could not load live prices, using built-in defaults.', err);
-  })
-  .finally(() => {
-    renderNews();
-    renderHeroTop5();
-    renderScaleBar();
-    renderAnalytics();
-    router();
   });
 
 // Live-update the ticker tape when someone edits a price field
