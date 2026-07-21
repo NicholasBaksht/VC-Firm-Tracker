@@ -3629,69 +3629,73 @@ function buildReturnBadge(h) {
   return `<span class="return-badge ${cls}">${sign}${pct.toFixed(1)}% since Jan '25</span>`;
 }
 
-function renderFirms() {
-  const container = document.getElementById('firmsContainer');
-  const noResults = document.getElementById('noResults');
-  container.innerHTML = '';
+card.innerHTML = `
+  <div class="firm-head">
+    <div>
+      <div class="firm-rank">
+        NO. ${String(firm.rank).padStart(2, '0')}
+        <span class="power-score">· POWER SCORE ${computePowerScore(firm)}</span>
+      </div>
 
-  const visibleFirms = firms.filter(f => matchesFilter(f) && matchesSearch(f));
+      <div class="firm-name">
+        <a href="${firm.website}" target="_blank" rel="noopener noreferrer" class="firm-link">
+          ${firm.name} ↗
+        </a>
+      </div>
 
-  noResults.style.display = visibleFirms.length === 0 ? 'block' : 'none';
-
-  visibleFirms.forEach(firm => {
-    const card = document.createElement('div');
-    card.className = 'firm';
-
-    const holdingsHTML = firm.holdings.map(h => {
-      const val = h.price !== null ? h.price.toFixed(2) : '';
-      const placeholderCls = h.price === null ? 'placeholder-empty' : '';
-      return `
-        <div class="holding-row">
-          <div class="holding-name">${h.name}</div>
-          <div class="holding-ticker">${h.ticker}</div>
-          <div class="price-input-wrap">
-            <span class="dollar">$</span>
-            <input class="price-input ${placeholderCls}" type="text" inputmode="decimal"
-                   value="${val}" placeholder="type price"
-                   data-ticker="${h.ticker}">
-          </div>
-          <div class="price-hint">per share</div>
-          ${buildReturnBadge(h)}
-          <a href="https://finance.yahoo.com/quote/${h.ticker}" target="_blank" rel="noopener noreferrer" class="source-link-small">Verify Price ↗</a>
-        </div>`;
-    }).join('');
-
-    card.innerHTML = `
-      <div class="firm-head">
-        <div>
-          <div class="firm-rank">NO. ${String(firm.rank).padStart(2, '0')} <span class="power-score">· POWER SCORE ${computePowerScore(firm)}</span></div>
-          <div class="firm-name"><a href="${firm.website}" target="_blank" rel="noopener noreferrer" class="firm-link">${firm.name} ↗</a></div>
       <div class="firm-meta">
-  Founded ${firm.founded} · ${firm.headquarters}
-</div>
-        </div>
-        <div class="firm-aum">
-          <div class="num">${firm.aum}</div>
-          <div class="lbl">Assets Managed</div>
-        </div>
+        Founded ${firm.founded} · ${firm.headquarters}
       </div>
-      <div class="firm-thesis">${firm.thesis}</div>
-      <div class="holdings">
-        <div class="holdings-label">Notable Public Portfolio Companies</div>
-        ${holdingsHTML}
-      </div>
-      <div class="card-footer">
-        <a href="#${firm.slug}" class="firm-page-link">View Firm Page →</a>
-        ${firm.seoPage ? `<a href="${firm.seoPage}" class="seo-page-link">Standalone Profile ↗</a>` : ''}
-        <label class="compare-check">
-          <input type="checkbox" class="compare-checkbox" data-slug="${firm.slug}" ${compareSet.has(firm.slug) ? 'checked' : ''}>
-          Compare
-        </label>
-      </div>
-    `;
-    container.appendChild(card);
-  });
+    </div>
 
+    <div class="firm-aum">
+      <div class="num">${getCurrentFundDisplay(firm)}</div>
+      <div class="lbl">${getCurrentFundLabel(firm)}</div>
+    </div>
+  </div>
+
+  <div class="firm-thesis">${firm.thesis}</div>
+
+  <div class="firm-meta" style="margin-bottom:18px;">
+    <strong>Check Size:</strong> ${getCheckSizeDisplay(firm)}
+    &nbsp; • &nbsp;
+    <strong>Stages:</strong> ${firm.stages.join(', ')}
+    &nbsp; • &nbsp;
+    <strong>Industries:</strong> ${firm.industries.join(', ')}
+    <br><br>
+
+    <strong>Portfolio:</strong> ${getPortfolioCountDisplay(firm)}
+    &nbsp; • &nbsp;
+    <strong>Geography:</strong> ${firm.geographicPreferences.join(', ')}
+  </div>
+
+  <div class="holdings">
+    <div class="holdings-label">Notable Public Portfolio Companies</div>
+    ${holdingsHTML}
+  </div>
+
+  <div class="card-footer">
+    <a href="#${firm.slug}" class="firm-page-link">
+      View Firm Page →
+    </a>
+
+    ${
+      firm.seoPage
+        ? `<a href="${firm.seoPage}" class="seo-page-link">Standalone Profile ↗</a>`
+        : ''
+    }
+
+    <label class="compare-check">
+      <input
+        type="checkbox"
+        class="compare-checkbox"
+        data-slug="${firm.slug}"
+        ${compareSet.has(firm.slug) ? 'checked' : ''}
+      >
+      Compare
+    </label>
+  </div>
+`;
   buildTicker();
 }
 
