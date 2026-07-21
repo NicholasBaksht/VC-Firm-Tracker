@@ -3271,11 +3271,30 @@ thesis: "Benchmark invests with high conviction in a small number of technology 
 // can never drift out of sync with what the site actually tracks.
 function renderScaleBar() {
   const totalFirms = firms.length;
-  const uniqueTickers = new Set(firms.flatMap(f => f.holdings.map(h => h.ticker))).size;
-  const combinedAUM = firms.reduce((sum, f) => {
-    const m = f.aum.match(/\$(\d+)B/);
-    return m ? sum + parseInt(m[1]) : sum;
+
+  const uniqueTickers = new Set(
+    firms.flatMap(firm =>
+      (firm.holdings || [])
+        .map(holding => holding.ticker)
+        .filter(Boolean)
+    )
+  ).size;
+
+  const disclosedPortfolioCompanies = firms.reduce((sum, firm) => {
+    const count = Number(firm.portfolioCompanyCount);
+    return Number.isFinite(count) ? sum + count : sum;
   }, 0);
+
+  document.getElementById("scaleBar").innerHTML = `
+    <span class="scale-num">${totalFirms}</span> VC Firms
+    <span class="scale-divider">·</span>
+    <span class="scale-num">${uniqueTickers}</span> Public Holdings Tracked
+    <span class="scale-divider">·</span>
+    <span class="scale-num">${disclosedPortfolioCompanies.toLocaleString()}+</span> Reported Portfolio Companies
+    <span class="scale-divider">·</span>
+    Updated Daily
+  `;
+}
 
   document.getElementById('scaleBar').innerHTML = `
     <span class="scale-num">${totalFirms}</span> VC Firms
