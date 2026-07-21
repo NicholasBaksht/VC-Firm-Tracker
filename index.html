@@ -3313,7 +3313,7 @@ function renderHeroTop5() {
     <a href="#${f.slug}" class="hero-widget-row">
       <span class="hero-widget-rank">${String(f.rank).padStart(2, '0')}</span>
       <span class="hero-widget-name">${f.short}</span>
-      <span class="hero-widget-aum">${f.aum}</span>
+ <span class="hero-widget-aum">${getCurrentFundDisplay(f)}</span>
     </a>
   `).join('');
 }
