@@ -61,7 +61,38 @@ html { scroll-behavior: smooth; }
     letter-spacing: 0.03em;
     color: #FFFFFF;
   }
-
+/* ---------- SITE NAV ---------- */
+  .site-nav {
+    position: sticky;
+    top: 0;
+    z-index: 300;
+    display: flex;
+    gap: 4px;
+    overflow-x: auto;
+    background: var(--bg);
+    border-bottom: 1px solid var(--hairline);
+    padding: 0 24px;
+    max-width: 1080px;
+    margin: 0 auto;
+  }
+  .nav-link {
+    font-family: var(--mono);
+    font-size: 13px;
+    color: var(--ink-dim);
+    text-decoration: none;
+    white-space: nowrap;
+    padding: 14px 16px;
+    border-bottom: 2px solid transparent;
+    transition: color 0.15s ease, border-color 0.15s ease;
+  }
+  .nav-link:hover {
+    color: var(--ink);
+    border-bottom-color: var(--hairline);
+  }
+  .nav-link:active {
+    color: var(--gold-bright);
+    border-bottom-color: var(--gold);
+  }
   /* ---------- TICKER ---------- */
   .ticker-outer {
     background: var(--surface);
