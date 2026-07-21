@@ -2105,8 +2105,9 @@ function renderComparison() {
     </tr>
   `).join('');
 
-  document.getElementById('compareView').innerHTML = `
+ document.getElementById('compareView').innerHTML = `
     <a href="#" class="detail-back" id="backFromCompare">← Back to all firms</a>
+    <div class="scroll-hint">← Swipe to see all firms →</div>
     <div class="compare-table-wrap">
       <table class="compare-table">
         <thead><tr><th></th>${headerCells}</tr></thead>
