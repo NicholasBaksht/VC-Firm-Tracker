@@ -1581,6 +1581,35 @@ function matchesSearch(firm) {
 // for any holding that has a real historicalPrice on file. Holdings
 // without one yet (historicalPrice: null) show a neutral "—" badge
 // instead of guessing.
+  function computePowerScore(firm) {
+  const maxHoldings = Math.max(...firms.map(f => f.holdings.length));
+  const maxAUM = Math.max(...firms.map(f => {
+    const m = f.aum.match(/\$(\d+)B/);
+    return m ? parseInt(m[1]) : 0;
+  }));
+  const currentYear = new Date().getFullYear();
+  const maxYearsActive = Math.max(...firms.map(f => currentYear - f.founded));
+
+  const breadthScore = (firm.holdings.length / maxHoldings) * 100;
+
+  const aumMatch = firm.aum.match(/\$(\d+)B/);
+  const firmAUM = aumMatch ? parseInt(aumMatch[1]) : 0;
+  const aumScore = (firmAUM / maxAUM) * 100;
+
+  const yearsActive = currentYear - firm.founded;
+  const longevityScore = (yearsActive / maxYearsActive) * 100;
+
+  const pricedHoldings = firm.holdings.filter(h => h.historicalPrice !== null && h.price !== null);
+  let performanceScore = 50; // neutral baseline - no verified data yet
+  if (pricedHoldings.length > 0) {
+    const avgReturn = pricedHoldings.reduce((sum, h) =>
+      sum + ((h.price - h.historicalPrice) / h.historicalPrice) * 100, 0) / pricedHoldings.length;
+    performanceScore = Math.max(0, Math.min(100, 50 + avgReturn));
+  }
+
+  const score = (0.35 * breadthScore) + (0.35 * aumScore) + (0.15 * longevityScore) + (0.15 * performanceScore);
+  return Math.round(score);
+}
 function buildReturnBadge(h) {
   if (h.historicalPrice === null || h.price === null) {
     return `<span class="return-badge unknown">— since Jan '25</span>`;
