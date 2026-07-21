@@ -2538,8 +2538,9 @@ fetch('prices.json')
   .catch(err => {
     console.log('Could not load live prices, using built-in defaults.', err);
   })
-  .finally(() => {
+ .finally(() => {
     renderNews();
+    renderHeroTop5();
     renderAnalytics();
     router();
   });
