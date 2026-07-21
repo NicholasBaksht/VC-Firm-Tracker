@@ -1613,8 +1613,9 @@ function renderFirms() {
                    value="${val}" placeholder="type price"
                    data-ticker="${h.ticker}">
           </div>
-          <div class="price-hint">per share</div>
+       <div class="price-hint">per share</div>
           ${buildReturnBadge(h)}
+          <a href="https://finance.yahoo.com/quote/${h.ticker}" target="_blank" rel="noopener noreferrer" class="source-link-small">Verify Price ↗</a>
         </div>`;
     }).join('');
 
