@@ -1890,7 +1890,16 @@ const firms = [
     ]
   }
 ];
-
+function renderHeroTop5() {
+  const top5 = firms.slice(0, 5);
+  document.getElementById('heroTop5List').innerHTML = top5.map(f => `
+    <a href="#${f.slug}" class="hero-widget-row">
+      <span class="hero-widget-rank">${String(f.rank).padStart(2, '0')}</span>
+      <span class="hero-widget-name">${f.short}</span>
+      <span class="hero-widget-aum">${f.aum}</span>
+    </a>
+  `).join('');
+}
 function renderNews() {
   // Render the news feed: newest item as the big featured box,
   // everything else as a compact dated list underneath.
