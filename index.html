@@ -3511,11 +3511,71 @@ function matchesSearch(firm) {
 //                              never penalized for missing data)
 // Recomputed live, so it stays accurate as more firms/data get added.
 function computePowerScore(firm) {
-  const maxHoldings = Math.max(...firms.map(f => f.holdings.length));
-  const maxAUM = Math.max(...firms.map(f => {
-    const m = f.aum.match(/\$(\d+)B/);
-    return m ? parseInt(m[1]) : 0;
-  }));
+  const maxHoldings = Math.max(
+    1,
+    ...firms.map(item => (item.holdings || []).length)
+  );
+
+  const maxCapital = Math.max(
+    1,
+    ...firms.map(item => getCurrentFundAmount(item))
+  );
+
+  const currentYear = new Date().getFullYear();
+
+  const maxYearsActive = Math.max(
+    1,
+    ...firms.map(item => currentYear - item.founded)
+  );
+
+  const breadthScore =
+    ((firm.holdings || []).length / maxHoldings) * 100;
+
+  const firmCapital = getCurrentFundAmount(firm);
+
+  // Firms without a disclosed number receive a neutral score
+  // instead of being treated as having zero capital.
+  const capitalScore = firmCapital > 0
+    ? (firmCapital / maxCapital) * 100
+    : 50;
+
+  const yearsActive = currentYear - firm.founded;
+  const longevityScore = (yearsActive / maxYearsActive) * 100;
+
+  const pricedHoldings = (firm.holdings || []).filter(holding =>
+    holding.historicalPrice !== null &&
+    holding.historicalPrice !== undefined &&
+    holding.price !== null &&
+    holding.price !== undefined &&
+    holding.historicalPrice > 0
+  );
+
+  let performanceScore = 50;
+
+  if (pricedHoldings.length > 0) {
+    const averageReturn = pricedHoldings.reduce((sum, holding) => {
+      const returnPercentage =
+        ((holding.price - holding.historicalPrice) /
+          holding.historicalPrice) * 100;
+
+      return sum + returnPercentage;
+    }, 0) / pricedHoldings.length;
+
+    // Converts returns into a bounded 0–100 component.
+    performanceScore = Math.max(
+      0,
+      Math.min(100, 50 + averageReturn / 2)
+    );
+  }
+
+  const score =
+    breadthScore * 0.35 +
+    capitalScore * 0.35 +
+    longevityScore * 0.15 +
+    performanceScore * 0.15;
+
+  return Math.round(Math.max(0, Math.min(100, score)));
+}
   const currentYear = new Date().getFullYear();
   const maxYearsActive = Math.max(...firms.map(f => currentYear - f.founded));
 
