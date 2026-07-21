@@ -3450,12 +3450,49 @@ function matchesFilter(firm) {
 }
 
 function matchesSearch(firm) {
-  if (searchTerm === '') return true;
-  const term = searchTerm.toLowerCase();
-  if (firm.name.toLowerCase().includes(term)) return true;
-  return firm.holdings.some(h =>
-    h.name.toLowerCase().includes(term) || h.ticker.toLowerCase().includes(term)
-  );
+  if (searchTerm.trim() === "") return true;
+
+  const term = searchTerm.trim().toLowerCase();
+
+  const searchableFirmText = [
+    firm.name,
+    firm.short,
+    firm.headquarters,
+    firm.thesis,
+    firm.signatureExit,
+    firm.currentFundSize?.label,
+    firm.currentFundSize?.note,
+    firm.typicalCheckSize?.label,
+    firm.typicalCheckSize?.note,
+    firm.contact?.email,
+    firm.contact?.note,
+    ...(firm.stages || []),
+    ...(firm.industries || []),
+    ...(firm.geographicPreferences || []),
+    ...(firm.leadership || []).flatMap(person => [
+      person.name,
+      person.role
+    ])
+  ]
+    .filter(Boolean)
+    .join(" ")
+    .toLowerCase();
+
+  if (searchableFirmText.includes(term)) {
+    return true;
+  }
+
+  return (firm.holdings || []).some(holding => {
+    const holdingText = [
+      holding.name,
+      holding.ticker
+    ]
+      .filter(Boolean)
+      .join(" ")
+      .toLowerCase();
+
+    return holdingText.includes(term);
+  });
 }
 
 // Builds the small colored badge showing return since Jan 2, 2025,
