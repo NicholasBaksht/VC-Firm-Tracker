@@ -806,16 +806,116 @@ html { scroll-behavior: smooth; }
     font-weight: 500;
     color: var(--ink);
   }
-  .leader-role {
+.leader-role {
     font-family: var(--mono);
     font-size: 11px;
     color: var(--ink-dim);
     margin-top: 2px;
   }
+  .leader-card.has-profile {
+    cursor: pointer;
+    transition: border-color 0.15s ease;
+  }
+  .leader-card.has-profile:hover {
+    border-color: var(--gold);
+  }
+  .leader-view-profile {
+    font-family: var(--mono);
+    font-size: 10.5px;
+    color: var(--gold);
+    margin-top: 8px;
+  }
+
+  /* ---------- PARTNER PROFILE PAGE ---------- */
+  .partner-title {
+    font-family: var(--serif);
+    font-weight: 600;
+    font-size: clamp(30px, 5vw, 44px);
+    margin: 8px 0 4px;
+  }
+  .partner-role-line {
+    font-family: var(--mono);
+    font-size: 14px;
+    color: var(--gold);
+    margin-bottom: 24px;
+  }
+  .partner-role-line a { color: var(--ink-dim); text-decoration: none; }
+  .partner-role-line a:hover { color: var(--gold-bright); }
+  .partner-section {
+    margin-top: 32px;
+  }
+  .partner-bio {
+    font-size: 15.5px;
+    line-height: 1.7;
+    color: var(--ink-dim);
+    max-width: 700px;
+  }
+  .partner-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+  .partner-list li {
+    font-size: 14px;
+    color: var(--ink-dim);
+    padding: 8px 0;
+    border-bottom: 1px solid var(--hairline);
+  }
+  .partner-list li:last-child { border-bottom: none; }
+  .partner-tag-row {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+  }
+  .partner-tag {
+    font-family: var(--mono);
+    font-size: 12px;
+    color: var(--gold);
+    background: rgba(201,162,39,0.08);
+    padding: 5px 12px;
+    border-radius: 20px;
+  }
+  .partner-investment-chip {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    font-size: 14px;
+    color: var(--ink);
+    background: var(--surface-raised);
+    border: 1px solid var(--hairline);
+    border-radius: 4px;
+    padding: 8px 14px;
+    margin: 0 8px 8px 0;
+  }
+  .partner-investment-chip .ticker-tag {
+    font-family: var(--mono);
+    font-size: 11px;
+    color: var(--gold);
+  }
+  .partner-stat-row {
+    display: flex;
+    gap: 32px;
+    flex-wrap: wrap;
+    padding: 20px 0;
+    border-top: 1px solid var(--hairline);
+    border-bottom: 1px solid var(--hairline);
+    margin: 24px 0;
+  }
+  .partner-source-list {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+  }
+  .partner-source-list a {
+    font-family: var(--mono);
+    font-size: 12.5px;
+    color: var(--gold);
+    text-decoration: none;
+  }
+  .partner-source-list a:hover { color: var(--gold-bright); }
+
   .timeline {
     border-left: 2px solid var(--hairline);
-    padding-left: 20px;
-  }
   .timeline-item {
     position: relative;
     padding-bottom: 18px;
