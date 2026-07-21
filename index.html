@@ -3707,30 +3707,52 @@ function renderDetail(firm) {
   const holdingsHTML = firm.holdings.map(h => {
     const val = h.price !== null ? h.price.toFixed(2) : '';
     const placeholderCls = h.price === null ? 'placeholder-empty' : '';
+
     return `
       <div class="holding-row">
         <div class="holding-name">${h.name}</div>
         <div class="holding-ticker">${h.ticker}</div>
+
         <div class="price-input-wrap">
           <span class="dollar">$</span>
-          <input class="price-input ${placeholderCls}" type="text" inputmode="decimal"
-                 value="${val}" placeholder="type price"
-                 data-ticker="${h.ticker}">
+          <input
+            class="price-input ${placeholderCls}"
+            type="text"
+            inputmode="decimal"
+            value="${val}"
+            placeholder="type price"
+            data-ticker="${h.ticker}">
         </div>
+
         <div class="price-hint">per share</div>
+
         ${buildReturnBadge(h)}
-        <a href="https://finance.yahoo.com/quote/${h.ticker}" target="_blank" rel="noopener noreferrer" class="source-link-small">Verify Price ↗</a>
-      </div>`;
+
+        <a href="https://finance.yahoo.com/quote/${h.ticker}"
+           target="_blank"
+           rel="noopener noreferrer"
+           class="source-link-small">
+           Verify Price ↗
+        </a>
+      </div>
+    `;
   }).join('');
 
   const leadershipHTML = firm.leadership ? `
     <div class="detail-subhead">Key Partners &amp; Leadership</div>
+
     <div class="leadership-grid">
       ${firm.leadership.map(l => `
-        <div class="leader-card ${l.profileSlug ? 'has-profile' : ''}" ${l.profileSlug ? `onclick="window.location.hash='partner/${l.profileSlug}'"` : ''}>
+        <div class="leader-card ${l.profileSlug ? 'has-profile' : ''}"
+             ${l.profileSlug ? `onclick="window.location.hash='partner/${l.profileSlug}'"` : ''}>
+
           <div class="leader-name">${l.name}</div>
           <div class="leader-role">${l.role}</div>
-          ${l.profileSlug ? '<div class="leader-view-profile">View Full Profile →</div>' : ''}
+
+          ${l.profileSlug
+            ? '<div class="leader-view-profile">View Full Profile →</div>'
+            : ''}
+
         </div>
       `).join('')}
     </div>
@@ -3738,6 +3760,7 @@ function renderDetail(firm) {
 
   const timelineHTML = firm.timeline ? `
     <div class="detail-subhead">Firm Timeline</div>
+
     <div class="timeline">
       ${firm.timeline.map(t => `
         <div class="timeline-item">
@@ -3749,45 +3772,124 @@ function renderDetail(firm) {
   ` : '';
 
   document.getElementById('detailView').innerHTML = `
-    <a href="#" class="detail-back" id="backToList">← Back to all firms</a>
+    <a href="#" class="detail-back" id="backToList">
+      ← Back to all firms
+    </a>
+
     <div class="detail-card">
-      <div class="detail-rank">NO. ${String(firm.rank).padStart(2, '0')} BY AUM</div>
-      <div class="detail-name">${firm.name}</div>
-      <div class="detail-meta">
-        <a href="${firm.website}" target="_blank" rel="noopener noreferrer" class="firm-link">${firm.website.replace('https://', '')} ↗</a>
-        ${firm.seoPage ? ` · <a href="${firm.seoPage}" class="firm-link">Standalone Profile Page ↗</a>` : ''}
+
+      <div class="detail-rank">
+        NO. ${String(firm.rank).padStart(2, '0')}
       </div>
+
+      <div class="detail-name">
+        ${firm.name}
+      </div>
+
+      <div class="detail-meta">
+        <a href="${firm.website}"
+           target="_blank"
+           rel="noopener noreferrer"
+           class="firm-link">
+           ${firm.website.replace('https://', '')} ↗
+        </a>
+
+        ${
+          firm.seoPage
+            ? ` · <a href="${firm.seoPage}" class="firm-link">Standalone Profile Page ↗</a>`
+            : ''
+        }
+      </div>
+
       <div class="detail-stats">
+
         <div class="detail-stat">
-          <div class="num">${firm.aum}</div>
-          <div class="lbl">Assets Managed</div>
+          <div class="num">${getCurrentFundDisplay(firm)}</div>
+          <div class="lbl">${getCurrentFundLabel(firm)}</div>
         </div>
+
+        <div class="detail-stat">
+          <div class="num">${getCheckSizeDisplay(firm)}</div>
+          <div class="lbl">Typical Check Size</div>
+        </div>
+
         <div class="detail-stat">
           <div class="num">${firm.founded}</div>
           <div class="lbl">Founded</div>
         </div>
+
         <div class="detail-stat">
-          <div class="num">${firm.hq}</div>
+          <div class="num">${firm.headquarters}</div>
           <div class="lbl">Headquarters</div>
         </div>
+
         <div class="detail-stat">
-          <div class="num">${totalHoldings}</div>
-          <div class="lbl">Tracked Holdings</div>
+          <div class="num">${getPortfolioCountDisplay(firm)}</div>
+          <div class="lbl">Portfolio Companies</div>
         </div>
+
         <div class="detail-stat">
-          <div class="num" style="color: var(--gold-bright);">${computePowerScore(firm)}</div>
+          <div class="num" style="color: var(--gold-bright);">
+            ${computePowerScore(firm)}
+          </div>
           <div class="lbl">Power Score</div>
         </div>
+
       </div>
-      <p class="detail-about">${firm.thesis}</p>
+
+      <p class="detail-about">
+        ${firm.thesis}
+      </p>
+
+      <div class="detail-subhead">Investment Profile</div>
+
+      <div class="detail-meta" style="margin-bottom:24px; line-height:1.9;">
+
+        <strong>Stages:</strong>
+        ${firm.stages.join(', ')}
+
+        <br>
+
+        <strong>Industries:</strong>
+        ${firm.industries.join(', ')}
+
+        <br>
+
+        <strong>Geographic Focus:</strong>
+        ${firm.geographicPreferences.join(', ')}
+
+        <br>
+
+        <strong>Signature Exit:</strong>
+        ${firm.signatureExit}
+
+        <br>
+
+        <strong>Contact:</strong>
+        <a href="${getContactURL(firm)}"
+           target="_blank"
+           rel="noopener noreferrer">
+          ${firm.contact}
+        </a>
+
+      </div>
+
       ${leadershipHTML}
+
       ${timelineHTML}
+
       <div class="holdings">
-        <div class="holdings-label">All Notable Public Portfolio Companies</div>
+        <div class="holdings-label">
+          All Notable Public Portfolio Companies
+          (${pricedHoldings}/${totalHoldings} priced)
+        </div>
+
         ${holdingsHTML}
       </div>
+
     </div>
   `;
+}
 
   document.getElementById('backToList').addEventListener('click', (e) => {
     e.preventDefault();
