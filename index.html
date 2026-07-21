@@ -2265,11 +2265,13 @@ function renderPartnerProfile(slug) {
 function router() {
   const slug = window.location.hash.replace('#', '');
   const firm = firms.find(f => f.slug === slug);
+  const partnerMatch = slug.match(/^partner\/(.+)$/);
 
   document.getElementById('listView').style.display = 'none';
   document.getElementById('detailView').style.display = 'none';
   document.getElementById('compareView').style.display = 'none';
   document.getElementById('dashboardView').style.display = 'none';
+  document.getElementById('partnerView').style.display = 'none';
 
   if (slug === 'compare') {
     document.getElementById('compareView').style.display = 'block';
@@ -2278,6 +2280,10 @@ function router() {
   } else if (slug === 'analytics') {
     document.getElementById('dashboardView').style.display = 'block';
     renderDashboard();
+    window.scrollTo(0, 0);
+  } else if (partnerMatch && partnerProfiles[partnerMatch[1]]) {
+    document.getElementById('partnerView').style.display = 'block';
+    renderPartnerProfile(partnerMatch[1]);
     window.scrollTo(0, 0);
   } else if (firm) {
     document.getElementById('detailView').style.display = 'block';
