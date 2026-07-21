@@ -1911,6 +1911,24 @@ const firms = [
     ]
   }
 ];
+  function renderScaleBar() {
+  const totalFirms = firms.length;
+  const uniqueTickers = new Set(firms.flatMap(f => f.holdings.map(h => h.ticker))).size;
+  const combinedAUM = firms.reduce((sum, f) => {
+    const m = f.aum.match(/\$(\d+)B/);
+    return m ? sum + parseInt(m[1]) : sum;
+  }, 0);
+
+  document.getElementById('scaleBar').innerHTML = `
+    <span class="scale-num">${totalFirms}</span> VC Firms
+    <span class="scale-divider">·</span>
+    <span class="scale-num">${uniqueTickers}</span> Public Holdings Tracked
+    <span class="scale-divider">·</span>
+    <span class="scale-num">$${combinedAUM}B+</span> Combined AUM
+    <span class="scale-divider">·</span>
+    Updated Daily
+  `;
+}
 function renderHeroTop5() {
   const top5 = firms.slice(0, 5);
   document.getElementById('heroTop5List').innerHTML = top5.map(f => `
