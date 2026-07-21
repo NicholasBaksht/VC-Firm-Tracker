@@ -4034,69 +4034,145 @@ const rows = [
 // leaderboard built from every holding that has real historical
 // price data on file (see historicalPrice field on each holding).
 function renderDashboard() {
-  const maxAUM = Math.max(...firms.map(f => {
-    const m = f.aum.match(/\$(\d+)B/);
-    return m ? parseInt(m[1]) : 0;
-  }));
+  const firmsWithFundData = firms
+    .map(f => ({
+      firm: f,
+      amount: getCurrentFundAmount(f)
+    }))
+    .filter(item => item.amount !== null && item.amount > 0);
 
-  const aumRows = firms.map(f => {
-    const m = f.aum.match(/\$(\d+)B/);
-    const val = m ? parseInt(m[1]) : 0;
+  const maxFundAmount = firmsWithFundData.length
+    ? Math.max(...firmsWithFundData.map(item => item.amount))
+    : 0;
+
+  const fundRows = firms.map(f => {
+    const amount = getCurrentFundAmount(f);
+    const hasFundData = amount !== null && amount > 0;
+
+    const width = hasFundData && maxFundAmount > 0
+      ? (amount / maxFundAmount) * 100
+      : 0;
+
     return `
       <div class="aum-bar-row">
         <div class="aum-bar-name">${f.short}</div>
+
         <div class="aum-bar-track">
-          <div class="aum-bar-fill" style="width: ${(val / maxAUM) * 100}%"></div>
+          <div
+            class="aum-bar-fill"
+            style="width: ${width}%">
+          </div>
         </div>
-        <div class="aum-bar-value">${f.aum}</div>
-      </div>`;
+
+        <div class="aum-bar-value">
+          ${hasFundData ? getCurrentFundDisplay(f) : 'Not disclosed'}
+        </div>
+      </div>
+    `;
   }).join('');
 
   // Build a de-duplicated leaderboard: one entry per unique ticker
   // that has a real historicalPrice, even if several firms hold it.
   const seen = new Map();
-  firms.forEach(f => f.holdings.forEach(h => {
-    if (h.historicalPrice !== null && h.price !== null && !seen.has(h.ticker)) {
-      const pct = ((h.price - h.historicalPrice) / h.historicalPrice) * 100;
-      seen.set(h.ticker, { name: h.name, ticker: h.ticker, pct });
-    }
-  }));
-  const leaderboard = [...seen.values()].sort((a, b) => b.pct - a.pct);
 
-  const leaderboardHTML = leaderboard.length > 0 ? leaderboard.map((item, i) => {
-    const cls = item.pct >= 0 ? 'positive' : 'negative';
-    const sign = item.pct >= 0 ? '+' : '';
-    return `
-      <div class="leaderboard-row">
-        <div class="leaderboard-rank">${i + 1}</div>
-        <div class="leaderboard-name">${item.name}<span class="ticker">${item.ticker}</span></div>
-        <span class="return-badge ${cls}">${sign}${item.pct.toFixed(1)}%</span>
-      </div>`;
-  }).join('') : `<p class="leaderboard-note">No holdings with verified historical prices yet.</p>`;
+  firms.forEach(f => {
+    f.holdings.forEach(h => {
+      if (
+        h.historicalPrice !== null &&
+        h.price !== null &&
+        !seen.has(h.ticker)
+      ) {
+        const pct =
+          ((h.price - h.historicalPrice) / h.historicalPrice) * 100;
+
+        seen.set(h.ticker, {
+          name: h.name,
+          ticker: h.ticker,
+          pct
+        });
+      }
+    });
+  });
+
+  const leaderboard = [...seen.values()]
+    .sort((a, b) => b.pct - a.pct);
+
+  const leaderboardHTML = leaderboard.length > 0
+    ? leaderboard.map((item, i) => {
+        const cls = item.pct >= 0 ? 'positive' : 'negative';
+        const sign = item.pct >= 0 ? '+' : '';
+
+        return `
+          <div class="leaderboard-row">
+            <div class="leaderboard-rank">${i + 1}</div>
+
+            <div class="leaderboard-name">
+              ${item.name}
+              <span class="ticker">${item.ticker}</span>
+            </div>
+
+            <span class="return-badge ${cls}">
+              ${sign}${item.pct.toFixed(1)}%
+            </span>
+          </div>
+        `;
+      }).join('')
+    : `
+      <p class="leaderboard-note">
+        No holdings with verified historical prices yet.
+      </p>
+    `;
 
   document.getElementById('dashboardView').innerHTML = `
-    <a href="#" class="detail-back" id="backFromDashboard">← Back to all firms</a>
-    <div class="dashboard-title">Analytics Dashboard</div>
-    <p class="dashboard-sub">Two real views into the data already on this page: how the 13 tracked firms stack up by assets managed, and how their public portfolio companies have actually performed since January 2, 2025.</p>
+    <a href="#" class="detail-back" id="backFromDashboard">
+      ← Back to all firms
+    </a>
+
+    <div class="dashboard-title">
+      Analytics Dashboard
+    </div>
+
+    <p class="dashboard-sub">
+      Two views into the data on this page: how the tracked firms compare by
+      their latest disclosed fund size, and how their public portfolio
+      companies have performed since January 2, 2025.
+    </p>
 
     <div class="dashboard-section">
-      <div class="analytics-subhead">Firms Ranked by AUM</div>
-      ${aumRows}
+      <div class="analytics-subhead">
+        Firms by Current Fund Size
+      </div>
+
+      <p class="leaderboard-note" style="margin-bottom: 12px;">
+        This chart uses each firm's latest disclosed fund size, not total
+        assets under management. Firms without disclosed fund-size data are
+        shown as unavailable rather than as zero.
+      </p>
+
+      ${fundRows}
     </div>
 
     <div class="dashboard-section">
-      <div class="analytics-subhead">Portfolio Performance Leaderboard (Since Jan '25)</div>
-      <p class="leaderboard-note" style="margin-bottom: 12px;">Only companies with a verified historical starting price are included — see the Methodology section for how the rest get filled in over time.</p>
+      <div class="analytics-subhead">
+        Portfolio Performance Leaderboard (Since Jan '25)
+      </div>
+
+      <p class="leaderboard-note" style="margin-bottom: 12px;">
+        Only companies with a verified historical starting price are included.
+        See the Methodology section for how additional prices are added.
+      </p>
+
       ${leaderboardHTML}
     </div>
   `;
 
-  document.getElementById('backFromDashboard').addEventListener('click', (e) => {
-    e.preventDefault();
-    window.location.hash = '';
-  });
+  document
+    .getElementById('backFromDashboard')
+    .addEventListener('click', e => {
+      e.preventDefault();
+      window.location.hash = '';
+    });
 }
-
 // Renders a full partner profile page into #partnerView, using the
 // data in partnerProfiles keyed by slug.
 function renderPartnerProfile(slug) {
