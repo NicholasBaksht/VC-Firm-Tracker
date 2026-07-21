@@ -89,9 +89,18 @@ html { scroll-behavior: smooth; }
   }
 
   /* ---------- HERO ---------- */
-  .hero {
+.hero {
+    display: grid;
+    grid-template-columns: 1fr 340px;
+    gap: 48px;
+    align-items: center;
     padding: 72px 0 48px;
     border-bottom: 1px solid var(--hairline);
+  }
+  @media (max-width: 900px) {
+    .hero {
+      grid-template-columns: 1fr;
+    }
   }
   .eyebrow {
     font-family: var(--mono);
@@ -116,7 +125,78 @@ html { scroll-behavior: smooth; }
     max-width: 620px;
     margin: 0;
   }
-/* ---------- HERO CTA ---------- */
+
+  /* ---------- HERO WIDGET ---------- */
+  .hero-widget {
+    background: var(--surface);
+    border: 1px solid var(--hairline);
+    border-radius: 6px;
+    padding: 20px;
+  }
+  .hero-widget-label {
+    font-family: var(--mono);
+    font-size: 10.5px;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: var(--gold);
+    margin-bottom: 14px;
+    display: flex;
+    align-items: center;
+    gap: 6px;
+  }
+  .hero-widget-label::before {
+    content: '';
+    width: 6px;
+    height: 6px;
+    border-radius: 50%;
+    background: var(--green);
+    display: inline-block;
+  }
+  .hero-widget-row {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    padding: 10px 0;
+    border-bottom: 1px solid var(--hairline);
+    text-decoration: none;
+    color: inherit;
+    transition: opacity 0.15s ease;
+  }
+  .hero-widget-row:last-child { border-bottom: none; }
+  .hero-widget-row:hover { opacity: 0.7; }
+  .hero-widget-rank {
+    font-family: var(--mono);
+    font-size: 11px;
+    color: var(--gold);
+    width: 20px;
+    flex-shrink: 0;
+  }
+  .hero-widget-name {
+    font-size: 13.5px;
+    color: var(--ink);
+    flex: 1;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+  .hero-widget-aum {
+    font-family: var(--mono);
+    font-size: 12px;
+    color: var(--ink-dim);
+    flex-shrink: 0;
+  }
+  .hero-widget-footer {
+    font-family: var(--mono);
+    font-size: 11px;
+    color: var(--gold);
+    text-decoration: none;
+    display: block;
+    margin-top: 14px;
+    text-align: center;
+  }
+  .hero-widget-footer:hover { color: var(--gold-bright); }
+
+  /* ---------- HERO CTA ---------- */
   .hero-cta {
     display: inline-block;
     font-family: var(--mono);
