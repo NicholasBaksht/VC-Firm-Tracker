@@ -1754,9 +1754,13 @@ function renderDetail(firm) {
           <div class="num">${firm.hq}</div>
           <div class="lbl">Headquarters</div>
         </div>
-        <div class="detail-stat">
+       <div class="detail-stat">
           <div class="num">${totalHoldings}</div>
           <div class="lbl">Tracked Holdings</div>
+        </div>
+        <div class="detail-stat">
+          <div class="num" style="color: var(--gold-bright);">${computePowerScore(firm)}</div>
+          <div class="lbl">Power Score</div>
         </div>
       </div>
       <p class="detail-about">${firm.thesis}</p>
