@@ -3332,7 +3332,116 @@ function renderNews() {
 let searchTerm = '';
 let activeFilter = 'all';
 let compareSet = new Set(); // slugs of firms picked for comparison, max 3
+function formatMoney(amount, currency = "USD") {
+  if (amount === null || amount === undefined || Number.isNaN(Number(amount))) {
+    return "Not disclosed";
+  }
 
+  const value = Number(amount);
+  const symbol = currency === "USD" ? "$" : `${currency} `;
+
+  if (value >= 1_000_000_000) {
+    const billions = value / 1_000_000_000;
+    const formatted = Number.isInteger(billions)
+      ? billions.toFixed(0)
+      : billions.toFixed(2).replace(/0+$/, "").replace(/\.$/, "");
+
+    return `${symbol}${formatted}B`;
+  }
+
+  if (value >= 1_000_000) {
+    const millions = value / 1_000_000;
+    const formatted = Number.isInteger(millions)
+      ? millions.toFixed(0)
+      : millions.toFixed(1).replace(/\.0$/, "");
+
+    return `${symbol}${formatted}M`;
+  }
+
+  if (value >= 1_000) {
+    return `${symbol}${Math.round(value / 1_000)}K`;
+  }
+
+  return `${symbol}${value.toLocaleString()}`;
+}
+
+function getCurrentFundAmount(firm) {
+  const amount = Number(firm.currentFundSize?.amount);
+
+  if (Number.isFinite(amount) && amount > 0) {
+    return amount;
+  }
+
+  // Some firms disclose total capital only inside the note.
+  const note = firm.currentFundSize?.note || "";
+  const match = note.match(/\$([\d.]+)\s*(B|M)/i);
+
+  if (!match) return 0;
+
+  const number = Number(match[1]);
+  const multiplier = match[2].toUpperCase() === "B"
+    ? 1_000_000_000
+    : 1_000_000;
+
+  return number * multiplier;
+}
+
+function getCurrentFundDisplay(firm) {
+  const amount = getCurrentFundAmount(firm);
+
+  if (amount > 0) {
+    return formatMoney(
+      amount,
+      firm.currentFundSize?.currency || "USD"
+    );
+  }
+
+  return firm.currentFundSize?.label || "Not disclosed";
+}
+
+function getCurrentFundLabel(firm) {
+  return firm.currentFundSize?.label || "Current fund";
+}
+
+function getCheckSizeDisplay(firm) {
+  const check = firm.typicalCheckSize;
+
+  if (!check) return "Not disclosed";
+
+  if (check.min !== null && check.max !== null) {
+    return `${formatMoney(check.min, check.currency)}–${formatMoney(check.max, check.currency)}`;
+  }
+
+  if (check.min !== null) {
+    return `${formatMoney(check.min, check.currency)}+`;
+  }
+
+  if (check.max !== null) {
+    return `Up to ${formatMoney(check.max, check.currency)}`;
+  }
+
+  return check.label || "Varies";
+}
+
+function getPortfolioCountDisplay(firm) {
+  if (firm.portfolioCompanyCountLabel) {
+    return firm.portfolioCompanyCountLabel;
+  }
+
+  if (firm.portfolioCompanyCount !== null && firm.portfolioCompanyCount !== undefined) {
+    return `${firm.portfolioCompanyCount.toLocaleString()}+ portfolio companies`;
+  }
+
+  return "Not publicly disclosed";
+}
+
+function getContactURL(firm) {
+  return (
+    firm.contact?.applicationUrl ||
+    firm.contact?.url ||
+    firm.website
+  );
+}
 function matchesFilter(firm) {
   if (activeFilter === 'pre2000') return firm.founded < 2000;
   if (activeFilter === '2000s') return firm.founded >= 2000 && firm.founded < 2010;
