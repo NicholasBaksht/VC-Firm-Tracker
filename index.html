@@ -3,6 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>The Power Board — Top 10 U.S. Venture Capital Firms</title>
 <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 220 220'%3E%3Ccircle cx='110' cy='110' r='104' fill='%230C0F14' stroke='%23C9A227' stroke-width='6'/%3E%3Ctext x='110' y='130' font-family='Georgia,serif' font-size='90' font-weight='600' text-anchor='middle'%3E%3Ctspan fill='%23EDEFF3'%3EP%3C/tspan%3E%3Ctspan fill='%23E8C34A'%3EB%3C/tspan%3E%3C/text%3E%3C/svg%3E">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,300;9..144,500;9..144,600;9..144,700&family=Inter:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500;600&display=swap" rel="stylesheet">
@@ -24,7 +25,8 @@
   }
 
   * { box-sizing: border-box; }
-html { scroll-behavior: smooth; }
+  html { scroll-behavior: smooth; }
+
   body {
     background: var(--bg);
     color: var(--ink);
@@ -43,7 +45,7 @@ html { scroll-behavior: smooth; }
   }
 
   /* ---------- BYLINE ---------- */
- .byline-bar {
+  .byline-bar {
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -61,7 +63,8 @@ html { scroll-behavior: smooth; }
     letter-spacing: 0.03em;
     color: #FFFFFF;
   }
-/* ---------- SITE NAV ---------- */
+
+  /* ---------- SITE NAV ---------- */
   .site-nav {
     position: sticky;
     top: 0;
@@ -93,6 +96,7 @@ html { scroll-behavior: smooth; }
     color: var(--gold-bright);
     border-bottom-color: var(--gold);
   }
+
   /* ---------- TICKER ---------- */
   .ticker-outer {
     background: var(--surface);
@@ -120,7 +124,7 @@ html { scroll-behavior: smooth; }
   }
 
   /* ---------- HERO ---------- */
-.hero {
+  .hero {
     display: grid;
     grid-template-columns: 1fr 340px;
     gap: 48px;
@@ -247,6 +251,7 @@ html { scroll-behavior: smooth; }
   .below-hero {
     padding-top: 40px;
   }
+
   /* ---------- SCALE BAR ---------- */
   .scale-bar {
     display: flex;
@@ -266,6 +271,7 @@ html { scroll-behavior: smooth; }
   .scale-bar .scale-divider {
     color: var(--hairline);
   }
+
   /* ---------- DISCLAIMER STAMP ---------- */
   .stamp {
     margin: 40px 0 0;
@@ -457,7 +463,7 @@ html { scroll-behavior: smooth; }
     gap: 20px;
     margin-bottom: 6px;
   }
- .firm-rank {
+  .firm-rank {
     font-family: var(--mono);
     font-size: 13px;
     color: var(--gold);
@@ -554,7 +560,7 @@ html { scroll-behavior: smooth; }
     font-size: 14px;
   }
   .price-input-wrap span.dollar { color: var(--ink-dim); }
- .price-input {
+  .price-input {
     width: 92px;
     background: var(--surface-raised);
     border: 1px solid var(--hairline);
@@ -591,7 +597,7 @@ html { scroll-behavior: smooth; }
     color: var(--red);
     background: rgba(248,113,113,0.12);
   }
- .return-badge.unknown {
+  .return-badge.unknown {
     color: var(--ink-dim);
     background: var(--surface-raised);
   }
@@ -603,6 +609,7 @@ html { scroll-behavior: smooth; }
     text-decoration: none;
   }
   .source-link-small:hover { color: var(--gold); }
+
   .firm-page-link {
     display: inline-block;
     margin-top: 18px;
@@ -619,7 +626,8 @@ html { scroll-behavior: smooth; }
     text-decoration: none;
   }
   .seo-page-link:hover { color: var(--gold); }
-.card-footer {
+
+  .card-footer {
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -637,7 +645,7 @@ html { scroll-behavior: smooth; }
     cursor: pointer;
     user-select: none;
   }
-.compare-checkbox {
+  .compare-checkbox {
     accent-color: var(--gold);
     cursor: pointer;
     width: 20px;
@@ -685,7 +693,7 @@ html { scroll-behavior: smooth; }
     display: flex;
     gap: 10px;
   }
- .compare-btn {
+  .compare-btn {
     font-family: var(--mono);
     font-size: 13px;
     padding: 12px 20px;
@@ -709,7 +717,7 @@ html { scroll-behavior: smooth; }
     color: var(--ink-dim);
     border: 1px solid var(--hairline);
   }
-.compare-table-wrap {
+  .compare-table-wrap {
     overflow-x: auto;
     -webkit-overflow-scrolling: touch;
     margin-bottom: 60px;
@@ -769,6 +777,7 @@ html { scroll-behavior: smooth; }
     border-radius: 3px;
     margin: 2px 4px 2px 0;
   }
+
   /* ---------- ANALYTICS DASHBOARD ---------- */
   .dashboard-link {
     display: inline-block;
@@ -865,6 +874,7 @@ html { scroll-behavior: smooth; }
     .aum-bar-row { grid-template-columns: 100px 1fr 70px; }
     .leaderboard-row { grid-template-columns: 24px 1fr auto; }
   }
+
   /* ---------- FIRM DETAIL PAGE ---------- */
   .detail-back {
     font-family: var(--mono);
@@ -955,7 +965,7 @@ html { scroll-behavior: smooth; }
     font-weight: 500;
     color: var(--ink);
   }
-.leader-role {
+  .leader-role {
     font-family: var(--mono);
     font-size: 11px;
     color: var(--ink-dim);
@@ -1065,6 +1075,8 @@ html { scroll-behavior: smooth; }
 
   .timeline {
     border-left: 2px solid var(--hairline);
+    padding-left: 20px;
+  }
   .timeline-item {
     position: relative;
     padding-bottom: 18px;
@@ -1255,7 +1267,7 @@ html { scroll-behavior: smooth; }
     margin-top: 24px;
   }
 
-@media (max-width: 640px) {
+  @media (max-width: 640px) {
     .holding-row { grid-template-columns: 1fr auto; row-gap: 8px; }
     .price-hint { grid-column: 1 / -1; }
     .return-badge { grid-column: 1 / -1; width: fit-content; }
@@ -1294,7 +1306,7 @@ html { scroll-behavior: smooth; }
     <rect x="110" y="132" width="10" height="32" fill="#C9A227"/>
     <rect x="124" y="122" width="10" height="42" fill="#C9A227"/>
   </svg>
-<div class="byline">Created by Nicholas Baksht</div>
+  <div class="byline">Created by Nicholas Baksht</div>
 </div>
 
 <nav class="site-nav">
@@ -1311,7 +1323,7 @@ html { scroll-behavior: smooth; }
 </div>
 
 <div class="wrap">
-<section class="hero">
+  <section class="hero">
     <div class="hero-text">
       <div class="eyebrow">Private Markets, Public Proof</div>
       <h1>The Power Board</h1>
@@ -1324,7 +1336,8 @@ html { scroll-behavior: smooth; }
       <a href="#firmsContainer" class="hero-widget-footer">See All 13 Firms →</a>
     </div>
   </section>
-<div class="below-hero">
+
+  <div class="below-hero">
     <div class="scale-bar" id="scaleBar"></div>
 
     <div class="stamp">
@@ -1357,12 +1370,13 @@ html { scroll-behavior: smooth; }
     <div class="no-results" id="noResults" style="display: none;">No firms match your search or filter.</div>
   </div>
 
-<div id="detailView" style="display: none;"></div>
+  <div id="detailView" style="display: none;"></div>
   <div id="compareView" style="display: none;"></div>
   <div id="dashboardView" style="display: none;"></div>
   <div id="partnerView" style="display: none;"></div>
 
   <div class="compare-bar" id="compareBar" style="display: none;"></div>
+
   <section class="analytics">
     <h2>By the Numbers</h2>
     <p class="sub">Real statistics computed from every firm and portfolio company tracked on this page — not estimates, not vibes, just counting what's actually here.</p>
@@ -1377,7 +1391,7 @@ html { scroll-behavior: smooth; }
     </div>
   </section>
 
-<section class="methodology" id="methodologyAnchor">
+  <section class="methodology" id="methodologyAnchor">
     <h2>Methodology &amp; Sources</h2>
     <p><strong>Rankings:</strong> firms are ordered by assets under management (AUM), highest to lowest. AUM figures are approximate — venture firms round these numbers in public statements, and totals shift as new funds are raised. Treat the ranking as a snapshot of relative scale, not a precise or constantly current figure.</p>
     <p><strong>Power Score:</strong> a 0–100 rating computed entirely from data already on this page — never opinion, never editorial judgment. It's a weighted formula: <strong>35% Portfolio Breadth</strong> (how many tracked public exits, relative to the firm with the most), <strong>35% Capital Scale</strong> (AUM, relative to the largest firm tracked), <strong>15% Track Record</strong> (years active, relative to the longest-running firm), and <strong>15% Verified Performance</strong> (average stock return since Jan 2, 2025, across holdings with a confirmed historical price on file). Firms without verified performance data yet receive a neutral score for that portion — never a penalty for a gap in our data collection, not their track record. The score recalculates automatically as more data is added.</p>
@@ -1393,7 +1407,7 @@ html { scroll-behavior: smooth; }
     <p>Each firm's own website (linked on its card above) was also used directly to confirm its founding year, headquarters, and stated investment focus.</p>
   </section>
 
-<footer id="siteFooter">
+  <footer id="siteFooter">
     <p><strong>How to use this:</strong> stock prices update automatically once a day. Founding details, AUM, and portfolio companies are updated manually — see the Methodology section above for how that data is sourced.</p>
     <div class="sig">Built by a future VC. Snapshot compiled mid-July 2026.</div>
   </footer>
@@ -1401,7 +1415,7 @@ html { scroll-behavior: smooth; }
 
 <script>
 // ============================================================
-// WEEKLY NEWS — Nicholas edits this part every week.
+// WEEKLY NEWS — Peter edits this part every week.
 // Add a new entry to the TOP of this array (right after the
 // opening bracket below). The newest entry becomes the big
 // featured box; everything else drops into the list below it.
@@ -1568,8 +1582,373 @@ const partnerProfiles = {
       { label: "Britannica", url: "https://www.britannica.com/money/Peter-Thiel" },
       { label: "Wikipedia", url: "https://en.wikipedia.org/wiki/Peter_Thiel" }
     ]
+  },
+  "jeff-horing": {
+    name: "Jeff Horing",
+    firm: "Insight Partners",
+    firmSlug: "insight-partners",
+    title: "Co-Founder & Managing Director",
+    joinedYear: 1995,
+    education: ["B.A. Electrical Engineering, University of Pennsylvania", "M.B.A., MIT Sloan School of Management"],
+    previousExperience: [
+      "Principal, Goldman Sachs",
+      "Principal, Warburg Pincus & Company"
+    ],
+    investmentFocus: ["Software", "SaaS", "Data & Analytics", "Cybersecurity"],
+    notableInvestments: [
+      { name: "Alteryx", ticker: null },
+      { name: "Wix", ticker: "WIX" },
+      { name: "Shutterstock", ticker: "SSTK" },
+      { name: "JFrog", ticker: "FROG" },
+      { name: "nCino", ticker: "NCNO" },
+      { name: "AirWatch", ticker: null }
+    ],
+    boardSeats: ["monday.com (Chairman)", "Wiz", "JFrog", "Alteryx"],
+    ipoCount: 5,
+    majorExits: 2,
+    careerTimeline: [
+      { year: "1995", event: "Co-founds Insight Partners with Jerry Murdock, betting that 'software is the best business in the world.'" },
+      { year: "2012", event: "Leads Insight's investment in Shutterstock ahead of its IPO." },
+      { year: "2013", event: "Leads Insight's investment in Wix ahead of its IPO." },
+      { year: "2014", event: "AirWatch, an Insight portfolio company, is acquired by VMware for $1.5 billion." },
+      { year: "2017", event: "Leads Insight's investment in Alteryx ahead of its IPO." },
+      { year: "2025", event: "Insight Partners surpasses $90 billion in assets under management, with over 875 companies invested in to date." }
+    ],
+    biography: "Jeff Horing co-founded Insight Partners in 1995 after working as a principal at Goldman Sachs and Warburg Pincus, building the firm around a then-contrarian thesis: software, not hardware, was the best business in the world. In the firm's earliest years, Horing and his co-founder famously sourced deals by manually reading trade publications for growing software companies — an outbound, research-driven approach that still defines Insight's culture. Over three decades, he has led investments in more than 140 companies and personally led the firm to public exits including Wix, Shutterstock, Alteryx, JFrog, and nCino. He currently chairs the board of monday.com and sits on the boards of Wiz, JFrog, and Alteryx.",
+    sources: [
+      { label: "Insight Partners — Jeff Horing", url: "https://www.insightpartners.com/team/jeff-horing/" },
+      { label: "Forbes Profile", url: "https://www.forbes.com/profile/jeff-horing/" },
+      { label: "Wikipedia — Insight Partners", url: "https://en.wikipedia.org/wiki/Insight_Partners" }
+    ]
+  },
+  "chase-coleman": {
+    name: "Chase Coleman",
+    firm: "Tiger Global Management",
+    firmSlug: "tiger-global",
+    title: "Founder & Managing Partner",
+    joinedYear: 2001,
+    education: ["B.A. Economics & Spanish, Williams College (1997)"],
+    previousExperience: [
+      "Technology Analyst & Partner, Tiger Management (1997–2000) — under Julian Robertson"
+    ],
+    investmentFocus: ["Internet", "Fintech", "Consumer Tech", "Global Public & Private Equity"],
+    notableInvestments: [
+      { name: "Facebook", ticker: "META" },
+      { name: "Coinbase", ticker: "COIN" },
+      { name: "JD.com", ticker: "JD" },
+      { name: "Stripe", ticker: null },
+      { name: "Uber", ticker: "UBER" }
+    ],
+    boardSeats: ["Tiger Foundation", "Hospital for Special Surgery (Investment Committee Co-Chair)"],
+    ipoCount: 4,
+    majorExits: 1,
+    careerTimeline: [
+      { year: "1997", event: "Joins Julian Robertson's Tiger Management as a technology analyst straight out of Williams College." },
+      { year: "2000", event: "Robertson closes Tiger Management and entrusts Coleman with over $25 million to manage as one of the original 'Tiger Cubs.'" },
+      { year: "2001", event: "Launches Tiger Technology (later renamed Tiger Global Management) as a public-markets hedge fund." },
+      { year: "2010s", event: "Builds an early pre-IPO stake in Facebook, later selling it for an estimated $1 billion." },
+      { year: "2021", event: "Tiger Global becomes one of the most active venture investors globally, expanding aggressively into private markets." }
+    ],
+    biography: "Chase Coleman was only 25 when Julian Robertson closed Tiger Management in 2000 and handed him roughly $25 million to manage — one of the original 'Tiger Cubs' who launched their own funds from Tiger's wind-down. A childhood friend of Robertson's son, Coleman had joined Tiger Management as a technology analyst straight out of Williams College in 1997. He founded Tiger Global in 2001 and built it into a hybrid the industry hadn't quite seen before: a fund equally comfortable buying public stocks and writing private venture checks, moving unusually fast into deals other investors took months to close. His early, high-conviction stake in Facebook — sold for an estimated $1 billion in 2013 — remains one of the defining bets of his career.",
+    sources: [
+      { label: "Tiger Global — Chase Coleman", url: "https://www.tigerglobal.com/chase-coleman" },
+      { label: "Wikipedia", url: "https://en.wikipedia.org/wiki/Chase_Coleman_III" }
+    ]
+  },
+  "hemant-taneja": {
+    name: "Hemant Taneja",
+    firm: "General Catalyst",
+    firmSlug: "general-catalyst",
+    title: "CEO & Managing Director",
+    joinedYear: 2002,
+    education: ["B.S. Biology, B.S. Mathematics, B.S. EECS, M.Eng. EECS, M.S. Operations Research — Massachusetts Institute of Technology"],
+    previousExperience: [
+      "Co-Founder, Chairman & CEO, Isovia — acquired by JP Mobile"
+    ],
+    investmentFocus: ["Healthcare", "AI Infrastructure", "Defense", "Fintech"],
+    notableInvestments: [
+      { name: "Snap", ticker: "SNAP" },
+      { name: "Samsara", ticker: "IOT" },
+      { name: "Stripe", ticker: null },
+      { name: "GitLab", ticker: null },
+      { name: "Anduril", ticker: null },
+      { name: "Grammarly", ticker: null }
+    ],
+    boardSeats: ["Khan Academy", "Revolution Healthcare Acquisition"],
+    ipoCount: 3,
+    majorExits: 2,
+    careerTimeline: [
+      { year: "2002", event: "Joins General Catalyst as an entrepreneur-in-residence after selling his first company, Isovia." },
+      { year: "2017", event: "Leads General Catalyst's investment in Snap ahead of its IPO." },
+      { year: "2020", event: "Portfolio company Livongo is acquired for $18.5 billion — the largest digital health transaction to date at the time." },
+      { year: "2021", event: "Becomes CEO of General Catalyst, succeeding the firm's earlier leadership." },
+      { year: "2025", event: "Publishes 'The Transformation Principles,' laying out his thesis for AI-driven resilience across healthcare, defense, and industrials." }
+    ],
+    biography: "Hemant Taneja moved from Delhi, India to the U.S. as a teenager and went on to earn five degrees from MIT before dropping out of a PhD program to found his first company, Isovia, which he sold to JP Mobile. He joined General Catalyst as an entrepreneur-in-residence in 2002 and became CEO in 2021, architecting the firm's strategy around what he calls 'economies of unscale' — using AI to build platform companies aligned with long-term societal interests. He has led early investments in Stripe, Snap, Samsara, and Anthropic, and guided portfolio company Livongo through an $18.5 billion acquisition, the largest digital health deal of its era.",
+    sources: [
+      { label: "General Catalyst — Hemant Taneja", url: "https://www.generalcatalyst.com/team/hemant-taneja" },
+      { label: "Wikipedia", url: "https://en.wikipedia.org/wiki/Hemant_Taneja" }
+    ]
+  },
+  "scott-sandell": {
+    name: "Scott Sandell",
+    firm: "New Enterprise Associates",
+    firmSlug: "nea",
+    title: "Executive Chairman & Chief Investment Officer",
+    joinedYear: 1996,
+    education: ["A.B. Engineering Sciences, Dartmouth College (1986)", "M.B.A., Stanford Graduate School of Business (1992)"],
+    previousExperience: [
+      "Product Manager, Microsoft — worked on Windows 95",
+      "Co-Founder, European Subsidiary, C-ATS Software",
+      "Consultant, Boston Consulting Group"
+    ],
+    investmentFocus: ["Enterprise Technology", "Cloud Infrastructure", "Fintech"],
+    notableInvestments: [
+      { name: "Salesforce", ticker: null },
+      { name: "Workday", ticker: "WDAY" },
+      { name: "Robinhood", ticker: "HOOD" },
+      { name: "Cloudflare", ticker: null },
+      { name: "Bloom Energy", ticker: null },
+      { name: "Tableau", ticker: null }
+    ],
+    boardSeats: ["Cloudflare (Lead Independent Director)"],
+    ipoCount: 5,
+    majorExits: 2,
+    careerTimeline: [
+      { year: "1996", event: "Joins NEA after roles at Microsoft, C-ATS Software, and Boston Consulting Group." },
+      { year: "2000s", event: "Leads NEA's early investments in Salesforce and WebEx." },
+      { year: "2012", event: "Leads NEA's investment in Workday ahead of its IPO." },
+      { year: "2021", event: "Leads NEA's investment in Robinhood ahead of its IPO." },
+      { year: "2023", event: "Becomes CEO of NEA, later transitioning to Executive Chairman and Chief Investment Officer." }
+    ],
+    biography: "Scott Sandell joined NEA in 1996 after stints at Microsoft, where he worked as a product manager on Windows 95, and Boston Consulting Group. Over nearly three decades at the firm, he has personally led investments in a run of industry-transforming companies — Salesforce, WebEx, Workday, Tableau, Bloom Energy, and Robinhood among them — and been named to the Forbes Midas List repeatedly for it. He has held nearly every senior title at NEA, from Managing General Partner to CEO to his current role as Executive Chairman and Chief Investment Officer, and currently serves as lead independent director of Cloudflare.",
+    sources: [
+      { label: "NEA — Scott Sandell", url: "https://www.nea.com/team/scott-sandell" },
+      { label: "Forbes Profile", url: "https://www.forbes.com/profile/scott-sandell/" }
+    ]
+  },
+  "jeremy-liew": {
+    name: "Jeremy Liew",
+    firm: "Lightspeed Venture Partners",
+    firmSlug: "lightspeed",
+    title: "Partner",
+    joinedYear: 2006,
+    education: ["B.Sc. & B.A. (Hons), Australian National University", "M.B.A., Stanford University (2000)"],
+    previousExperience: [
+      "SVP Corporate Development & Chief of Staff to CEO, AOL",
+      "General Manager, Netscape",
+      "VP Strategic Planning, IAC (InterActiveCorp)"
+    ],
+    investmentFocus: ["Consumer", "Mobile", "Social Media", "Fintech"],
+    notableInvestments: [
+      { name: "Snap", ticker: "SNAP" },
+      { name: "Affirm", ticker: "AFRM" },
+      { name: "The Honest Company", ticker: "HNST" },
+      { name: "Bonobos", ticker: null },
+      { name: "Giphy", ticker: null }
+    ],
+    boardSeats: ["Affirm", "Blockchain.com"],
+    ipoCount: 3,
+    majorExits: 3,
+    careerTimeline: [
+      { year: "1988", event: "Represents Australia at the International Mathematical Olympiad alongside future Fields Medalist Terence Tao." },
+      { year: "1990s", event: "Works at early web pioneers Netscape, AOL, CitySearch, and IAC." },
+      { year: "2006", event: "Joins Lightspeed Venture Partners as its first dedicated consumer specialist." },
+      { year: "2012", event: "Makes the first institutional investment in a then-tiny app called Snapchat." },
+      { year: "2017", event: "Snap goes public, five years after that first bet." },
+      { year: "2021", event: "Steps back from leading new investments while remaining on the boards of his existing portfolio companies." }
+    ],
+    biography: "Jeremy Liew represented Australia at the International Mathematical Olympiad as a teenager before deciding, in his words, that he wasn't cut out to be a professional mathematician. He spent the 1990s and early 2000s as an operator at Netscape, AOL, CitySearch, and IAC before joining Lightspeed Venture Partners in 2006 as the firm's first dedicated consumer specialist. In 2012, he made the first institutional investment in a then-tiny disappearing-photo app called Snapchat, a bet that defined his career and the firm's consumer practice alike. He has also backed Affirm, The Honest Company, and Bonobos, and stepped back from new investments in 2021 while remaining active on his portfolio companies' boards.",
+    sources: [
+      { label: "Lightspeed — Jeremy Liew", url: "https://lsvp.com/team-member/jeremy-liew/" },
+      { label: "Wikipedia", url: "https://en.wikipedia.org/wiki/Jeremy_Liew" }
+    ]
+  },
+  "arthur-patterson": {
+    name: "Arthur Patterson",
+    firm: "Accel",
+    firmSlug: "accel",
+    title: "Founding Partner",
+    joinedYear: 1983,
+    education: ["A.B., Harvard University", "M.B.A., Harvard Business School"],
+    previousExperience: [
+      "General Partner, Adler & Company",
+      "Venture Capital Investor, Citicorp Venture Capital",
+      "International Office, U.S. Treasury Department"
+    ],
+    investmentFocus: ["Enterprise Software", "Consumer", "Services"],
+    notableInvestments: [
+      { name: "Facebook", ticker: "META" },
+      { name: "MetroPCS", ticker: null },
+      { name: "Veritas Software", ticker: null },
+      { name: "Portal Software", ticker: null },
+      { name: "UUNet", ticker: null }
+    ],
+    boardSeats: ["Aalyria", "Acalvio", "Integral Development", "QMC Telecom International"],
+    ipoCount: 7,
+    majorExits: 3,
+    careerTimeline: [
+      { year: "1983", event: "Co-founds Accel with Jim Swartz on a strategy of deep specialization in specific technology categories." },
+      { year: "1990s", event: "Leads Accel investments through IPOs including Veritas Software, UUNet, and Portal Software." },
+      { year: "2005", event: "Accel leads Facebook's Series A, a single check that became one of the highest-multiple returns in VC history." },
+      { year: "2013", event: "Named MetroPCS's Presiding Director as the company merges with T-Mobile." },
+      { year: "2022", event: "Receives the National Venture Capital Association's Lifetime Achievement Award." }
+    ],
+    biography: "Arthur Patterson co-founded Accel in 1983 after roles at Citicorp Venture Capital, Adler & Company, and the U.S. Treasury Department, betting on a strategy of deep specialization in specific technology categories rather than spreading investments broadly — an unusual approach at the time. Over four decades, he has led Accel investments through IPOs including Veritas Software, UUNet, Portal Software, and Actuate, and served as a director of MetroPCS through its eventual merger with T-Mobile. His most famous bet came in 2005, when he led Accel's Series A investment in Facebook, still cited as one of the highest-multiple returns in venture capital history. He received the National Venture Capital Association's Lifetime Achievement Award in 2022.",
+    sources: [
+      { label: "Accel — Arthur Patterson", url: "https://www.accel.com/team/arthur-patterson" },
+      { label: "PitchBook Profile", url: "https://pitchbook.com/profiles/investor/167544-19" }
+    ]
+  },
+  "vinod-khosla": {
+    name: "Vinod Khosla",
+    firm: "Khosla Ventures",
+    firmSlug: "khosla-ventures",
+    title: "Founder",
+    joinedYear: 2004,
+    education: ["B.Tech. Electrical Engineering, IIT Delhi", "M.S. Biomedical Engineering, Carnegie Mellon University", "M.B.A., Stanford University"],
+    previousExperience: [
+      "Co-Founder, Sun Microsystems (1982) — served as first CEO",
+      "General Partner, Kleiner Perkins (1986–2004)"
+    ],
+    investmentFocus: ["Clean Energy", "Artificial Intelligence", "Deep Tech"],
+    notableInvestments: [
+      { name: "Block (Square)", ticker: "XYZ" },
+      { name: "Instacart", ticker: "CART" },
+      { name: "OpenAI", ticker: null },
+      { name: "Impossible Foods", ticker: null }
+    ],
+    boardSeats: ["Multiple private portfolio companies across clean energy and AI"],
+    ipoCount: 2,
+    majorExits: 2,
+    careerTimeline: [
+      { year: "1982", event: "Co-founds Sun Microsystems, serving as its first CEO before transitioning to venture capital." },
+      { year: "1986", event: "Joins Kleiner Perkins as a General Partner, investing there for nearly two decades." },
+      { year: "2004", event: "Founds Khosla Ventures, focused on high-risk, high-reward technology bets others consider too early." },
+      { year: "2009", event: "Makes an early investment in Square (now Block), years ahead of its 2015 IPO." },
+      { year: "2019", event: "Becomes an early institutional backer of OpenAI, one of the firm's highest-profile recent bets." }
+    ],
+    biography: "Vinod Khosla co-founded Sun Microsystems in 1982, serving as its first CEO, before moving into venture capital as a General Partner at Kleiner Perkins for nearly two decades. In 2004, he founded his own firm, Khosla Ventures, built on the conviction that the biggest returns come from technology bets everyone else is too cautious to make — from early clean energy investments long before the category was fashionable to some of the earliest institutional capital behind OpenAI. True to his engineering training at IIT Delhi and Carnegie Mellon, Khosla has built a reputation for backing technically difficult, capital-intensive bets that more conservative investors pass on.",
+    sources: [
+      { label: "Wikipedia", url: "https://en.wikipedia.org/wiki/Vinod_Khosla" },
+      { label: "Khosla Ventures", url: "https://www.khoslaventures.com" }
+    ]
+  },
+  "joshua-kushner": {
+    name: "Joshua Kushner",
+    firm: "Thrive Capital",
+    firmSlug: "thrive-capital",
+    title: "Founder & Managing Partner",
+    joinedYear: 2009,
+    education: ["B.A., Harvard University (2008)", "M.B.A., Harvard Business School (2011)"],
+    previousExperience: [
+      "Private Equity Group, Goldman Sachs — distressed debt"
+    ],
+    investmentFocus: ["Consumer Internet", "AI", "Fintech", "Healthcare"],
+    notableInvestments: [
+      { name: "Instagram", ticker: null },
+      { name: "OpenAI", ticker: null },
+      { name: "Stripe", ticker: null },
+      { name: "GitHub", ticker: null },
+      { name: "Figma", ticker: "FIG" },
+      { name: "Instacart", ticker: "CART" }
+    ],
+    boardSeats: ["Oscar Health (Vice Chairman)", "A24 Films"],
+    ipoCount: 2,
+    majorExits: 3,
+    careerTimeline: [
+      { year: "2008", event: "Graduates from Harvard College and joins Goldman Sachs' private equity group, working on distressed debt." },
+      { year: "2009", event: "Founds Thrive Capital at age 24 with a $5 million first fund, initially funding it himself." },
+      { year: "2012", event: "Makes one of his earliest and most famous bets on Instagram, years before its acquisition by Facebook." },
+      { year: "2013", event: "Co-founds Oscar Health, serving as vice chairman." },
+      { year: "2020s", event: "Becomes one of the earliest and largest institutional investors in OpenAI." }
+    ],
+    biography: "Joshua Kushner founded Thrive Capital in 2009 at just 24 years old, funding the firm's first, $5 million fund largely himself after a brief stint in Goldman Sachs' private equity group. Thrive has stayed deliberately small in deal volume — funding only a handful of new companies most years — while making some of the earliest bets on Instagram and, more recently, OpenAI, a concentrated approach that has made it one of the highest-returning firms of its size. Outside of Thrive, Kushner co-founded and serves as vice chairman of Oscar Health, the technology-driven health insurance company.",
+    sources: [
+      { label: "Wikipedia", url: "https://en.wikipedia.org/wiki/Joshua_Kushner" },
+      { label: "Forbes Profile", url: "https://www.forbes.com/profile/josh-kushner/" }
+    ]
+  },
+  "byron-deeter": {
+    name: "Byron Deeter",
+    firm: "Bessemer Venture Partners",
+    firmSlug: "bessemer",
+    title: "Partner",
+    joinedYear: 2005,
+    education: ["B.A., University of California, Berkeley"],
+    previousExperience: [
+      "Co-Founder, President & CEO, Trigo Technologies (1999–2004) — acquired by IBM",
+      "Business Development Executive, IBM",
+      "Associate, TA Associates",
+      "Analyst, McKinsey & Company"
+    ],
+    investmentFocus: ["Cloud Computing", "SaaS", "AI", "Enterprise Software"],
+    notableInvestments: [
+      { name: "Twilio", ticker: "TWLO" },
+      { name: "DocuSign", ticker: "DOCU" },
+      { name: "Box", ticker: null },
+      { name: "HashiCorp", ticker: null },
+      { name: "SendGrid", ticker: null },
+      { name: "Anthropic", ticker: null }
+    ],
+    boardSeats: ["ServiceTitan", "MaintainX", "Syndio"],
+    ipoCount: 13,
+    majorExits: 11,
+    careerTimeline: [
+      { year: "1999", event: "Co-founds cloud-computing company Trigo Technologies, serving as President and CEO." },
+      { year: "2004", event: "Trigo Technologies is acquired by IBM, where Deeter continues on as an executive." },
+      { year: "2005", event: "Joins Bessemer Venture Partners to help build out the firm's global cloud practice." },
+      { year: "2010", event: "Leads Bessemer's early investment in Twilio, years ahead of its 2016 IPO." },
+      { year: "2016", event: "Twilio and SendGrid, two companies Deeter backed, both go public." },
+      { year: "2024", event: "ServiceTitan, one of Deeter's Series A investments, goes public in a roughly $9 billion IPO." }
+    ],
+    biography: "Byron Deeter built and sold his own cloud-computing company, Trigo Technologies, to IBM before returning to venture capital in 2005 to help lead Bessemer's global cloud practice. Since then, he has backed more than 100 cloud companies, 13 of which have gone public — including Twilio, DocuSign, Box, HashiCorp, and SendGrid — and co-authored Bessemer's widely cited 'Ten Laws of Cloud Computing' along with the firm's annual State of the Cloud report. His early, contrarian bet on Twilio in 2010, when the company was widely dismissed as a niche tool with a small market, became one of the defining cloud investments of the decade after its 2016 IPO.",
+    sources: [
+      { label: "Bessemer — Byron Deeter", url: "https://www.bvp.com/team/byron-deeter" },
+      { label: "Forbes Profile", url: "https://www.forbes.com/profile/byron-deeter/" }
+    ]
+  },
+  "bill-gurley": {
+    name: "Bill Gurley",
+    firm: "Benchmark",
+    firmSlug: "benchmark",
+    title: "General Partner",
+    joinedYear: 1999,
+    education: ["B.S. Computer Science, University of Florida (1989)", "M.B.A., University of Texas at Austin, McCombs School of Business (1993)"],
+    previousExperience: [
+      "Design Engineer, Compaq Computer",
+      "Technical Marketing, AMD Embedded Processor Division",
+      "Technology Research Analyst, CS First Boston",
+      "General Partner, Hummer Winblad Venture Partners"
+    ],
+    investmentFocus: ["Consumer Internet", "Marketplaces", "Enterprise"],
+    notableInvestments: [
+      { name: "Uber", ticker: "UBER" },
+      { name: "Zillow", ticker: null },
+      { name: "GrubHub", ticker: null },
+      { name: "OpenTable", ticker: null },
+      { name: "Nextdoor", ticker: null },
+      { name: "Stitch Fix", ticker: null }
+    ],
+    boardSeats: ["Nextdoor", "HackerOne", "Solv"],
+    ipoCount: 5,
+    majorExits: 2,
+    careerTimeline: [
+      { year: "1989", event: "Graduates from the University of Florida with a computer science degree and joins Compaq as a design engineer." },
+      { year: "1993", event: "Earns an MBA from UT Austin, then moves into technology research on Wall Street, working on the Amazon IPO." },
+      { year: "1999", event: "Joins Benchmark as a General Partner." },
+      { year: "2011", event: "Leads Benchmark's early investment in Uber." },
+      { year: "2017", event: "Steps down from Uber's board following the company's leadership turmoil, handing the seat to fellow Benchmark partner Matt Cohler." },
+      { year: "2025", event: "Publishes 'Runnin' Down a Dream,' a book on building a career you love." }
+    ],
+    biography: "Bill Gurley built an unusually well-rounded technical and financial foundation before venture capital — a computer science degree from the University of Florida, engineering roles at Compaq and AMD, and years as a Wall Street technology analyst covering the Amazon IPO — before joining Benchmark as a General Partner in 1999. He became one of the most influential investors of the 2010s through early, high-conviction bets on Uber, Zillow, GrubHub, OpenTable, and Nextdoor, and built a parallel reputation as a widely read commentator through his blog, Above the Crowd. He stepped down from Uber's board in 2017 amid the company's leadership crisis and has since relocated to Austin, Texas, while remaining active on several portfolio company boards.",
+    sources: [
+      { label: "Wikipedia", url: "https://en.wikipedia.org/wiki/Bill_Gurley" },
+      { label: "Texas Exes Distinguished Alumnus", url: "https://www.texasexes.org/about-us/awards/distinguished-alumnus-award-0" }
+    ]
   }
 };
+
 const firms = [
   {
     rank: 1,
@@ -1585,7 +1964,7 @@ const firms = [
     aum: "$90B+",
     thesis: "Founded in 2009 by Marc Andreessen, the co-creator of the Netscape browser, and Ben Horowitz, a former enterprise software executive, a16z set out to build a different kind of VC firm — one staffed with in-house recruiters, marketers, and engineers to support founders directly, not just write checks. The firm's stage-agnostic, software-eats-the-world thesis has since carried it into crypto, biotech, and AI, backing companies from seed rounds through late-stage growth across every category it touches.",
     leadership: [
-    { name: "Marc Andreessen", role: "Co-Founder & General Partner", profileSlug: "marc-andreessen" },
+      { name: "Marc Andreessen", role: "Co-Founder & General Partner", profileSlug: "marc-andreessen" },
       { name: "Ben Horowitz", role: "Co-Founder & General Partner" },
       { name: "Chris Dixon", role: "General Partner, a16z crypto" },
       { name: "Martin Casado", role: "General Partner, Infrastructure & Enterprise" },
@@ -1651,7 +2030,7 @@ const firms = [
     aum: "$90B+",
     thesis: "Founded in 1995 by Jeff Horing and Jerry Murdock in New York, Insight built its identity on outbound sourcing long before that was common practice — in the firm's earliest years, the two co-founders would comb through trade publications by hand looking for software companies that were hiring, and therefore growing. That research-driven, find-them-before-anyone-else approach scaled into a firm managing tens of billions of dollars, still built around the same instinct to spot momentum early.",
     leadership: [
-      { name: "Jeff Horing", role: "Co-Founder & Managing Director" },
+      { name: "Jeff Horing", role: "Co-Founder & Managing Director", profileSlug: "jeff-horing" },
       { name: "Jerry Murdock", role: "Co-Founder (Managing Director until 2011)" }
     ],
     timeline: [
@@ -1671,7 +2050,6 @@ const firms = [
     sectors: ["Internet", "Fintech", "Consumer Tech"],
     signatureExit: "An early pre-IPO stake in Facebook that helped define Tiger Global's hybrid public-private strategy",
     slug: "tiger-global",
-    seoPage: "firms/tiger-global/",
     website: "https://www.tigerglobal.com",
     short: "Tiger Global",
     founded: 2001,
@@ -1679,7 +2057,7 @@ const firms = [
     aum: "$58B+",
     thesis: "Chase Coleman was only 25 when he launched Tiger Global (originally named Tiger Technology) in 2001, seeded with roughly $25 million from his mentor Julian Robertson after Robertson's own famed hedge fund, Tiger Management, wound down. Coleman built Tiger Global as a hybrid the industry hadn't quite seen before — a fund equally comfortable buying public stocks and writing private venture checks, a strategy that let it move unusually fast into deals other VCs took months to close.",
     leadership: [
-      { name: "Chase Coleman", role: "Founder" },
+      { name: "Chase Coleman", role: "Founder", profileSlug: "chase-coleman" },
       { name: "Scott Shleifer", role: "Partner, led expansion into private equity" }
     ],
     timeline: [
@@ -1699,7 +2077,6 @@ const firms = [
     sectors: ["Healthcare", "Fintech", "AI Infrastructure"],
     signatureExit: "Snap's 2017 IPO, one of the largest consumer tech listings of its era",
     slug: "general-catalyst",
-    seoPage: "firms/general-catalyst/",
     website: "https://www.generalcatalyst.com",
     short: "GC",
     founded: 2000,
@@ -1709,7 +2086,7 @@ const firms = [
     leadership: [
       { name: "Joel Cutler", role: "Co-Founder" },
       { name: "David Fialkow", role: "Co-Founder & Managing Director" },
-      { name: "Hemant Taneja", role: "CEO & Managing Director" }
+      { name: "Hemant Taneja", role: "CEO & Managing Director", profileSlug: "hemant-taneja" }
     ],
     timeline: [
       { year: "2000", event: "Childhood friends Joel Cutler and David Fialkow found the firm in Cambridge, Massachusetts." },
@@ -1728,7 +2105,6 @@ const firms = [
     sectors: ["Technology", "Healthcare", "Life Sciences"],
     signatureExit: "Robinhood's 2021 IPO, bringing retail stock trading to the public markets",
     slug: "nea",
-    seoPage: "firms/nea/",
     website: "https://www.nea.com",
     short: "NEA",
     founded: 1977,
@@ -1739,7 +2115,7 @@ const firms = [
       { name: "Dick Kramlich", role: "Co-Founder" },
       { name: "Chuck Newhall", role: "Co-Founder" },
       { name: "Frank Bonsal", role: "Co-Founder" },
-      { name: "Scott Sandell", role: "Executive Chairman" }
+      { name: "Scott Sandell", role: "Executive Chairman", profileSlug: "scott-sandell" }
     ],
     timeline: [
       { year: "1977", event: "Three founders with complementary backgrounds — banking, fund management, and VC — launch NEA with a $16 million first fund." },
@@ -1758,7 +2134,6 @@ const firms = [
     sectors: ["Enterprise Infrastructure", "Consumer"],
     signatureExit: "Snap's 2017 IPO, five years after Lightspeed wrote Snapchat's first-ever institutional check",
     slug: "lightspeed",
-    seoPage: "firms/lightspeed/",
     website: "https://lsvp.com",
     short: "Lightspeed",
     founded: 2000,
@@ -1768,7 +2143,7 @@ const firms = [
     leadership: [
       { name: "Barry Eggers", role: "Co-Founder" },
       { name: "Ravi Mhatre", role: "Co-Founder" },
-      { name: "Jeremy Liew", role: "Partner, wrote Snapchat's first check" }
+      { name: "Jeremy Liew", role: "Partner, wrote Snapchat's first check", profileSlug: "jeremy-liew" }
     ],
     timeline: [
       { year: "2000", event: "Rebrands from Weiss, Peck & Greer Venture Partners into Lightspeed Venture Partners." },
@@ -1787,7 +2162,6 @@ const firms = [
     sectors: ["Enterprise Software", "Consumer", "Security"],
     signatureExit: "Facebook's Series A in 2005 — still cited as one of the highest-multiple returns in VC history",
     slug: "accel",
-    seoPage: "firms/accel/",
     website: "https://www.accel.com",
     short: "Accel",
     founded: 1983,
@@ -1795,7 +2169,7 @@ const firms = [
     aum: "$20B+",
     thesis: "Arthur Patterson and Jim Swartz founded Accel in 1983, betting on a strategy of deep specialization in specific technology categories rather than spreading investments broadly — an approach that was unusual at the time. That focus paid off most famously in 2005, when Accel led Facebook's Series A, a single investment that became one of the highest-multiple returns in venture capital history and cemented the firm's reputation for spotting category-defining companies early.",
     leadership: [
-      { name: "Arthur Patterson", role: "Co-Founder" },
+      { name: "Arthur Patterson", role: "Co-Founder", profileSlug: "arthur-patterson" },
       { name: "Jim Swartz", role: "Co-Founder" }
     ],
     timeline: [
@@ -1815,7 +2189,6 @@ const firms = [
     sectors: ["Clean Energy", "AI", "Deep Tech"],
     signatureExit: "Block (formerly Square)'s 2015 IPO, one of fintech's defining public debuts",
     slug: "khosla-ventures",
-    seoPage: "firms/khosla-ventures/",
     website: "https://www.khoslaventures.com",
     short: "Khosla",
     founded: 2004,
@@ -1823,7 +2196,7 @@ const firms = [
     aum: "$15B+",
     thesis: "Vinod Khosla co-founded Sun Microsystems in 1982 before moving into venture capital, eventually launching his own firm, Khosla Ventures, in 2004. True to his engineering background, Khosla built the firm's reputation on taking bets other investors considered too risky or too far from proven markets — from early clean energy to artificial intelligence — arguing that the biggest returns come from technology bets everyone else is too cautious to make.",
     leadership: [
-      { name: "Vinod Khosla", role: "Founder" }
+      { name: "Vinod Khosla", role: "Founder", profileSlug: "vinod-khosla" }
     ],
     timeline: [
       { year: "1982", event: "Vinod Khosla co-founds Sun Microsystems, years before moving into venture capital." },
@@ -1842,7 +2215,6 @@ const firms = [
     sectors: ["Aerospace", "Defense Tech", "Hard Tech"],
     signatureExit: "SpaceX's June 2026 IPO — an estimated ~80x return on Founders Fund's original stake",
     slug: "founders-fund",
-    seoPage: "firms/founders-fund/",
     website: "https://foundersfund.com",
     short: "Founders Fund",
     founded: 2005,
@@ -1871,7 +2243,6 @@ const firms = [
     sectors: ["Consumer Internet", "AI"],
     signatureExit: "An early stake in Instagram years before its acquisition by Facebook",
     slug: "thrive-capital",
-    seoPage: "firms/thrive-capital/",
     website: "https://thrivecap.com",
     short: "Thrive",
     founded: 2009,
@@ -1879,7 +2250,7 @@ const firms = [
     aum: "$10B+ (latest fund)",
     thesis: "Joshua Kushner founded Thrive Capital in 2009 at just 24 years old, initially funding it himself before raising outside capital from investors including Princeton University, the Wellcome Trust, and Peter Thiel. Thrive has stayed deliberately small in deal volume — funding only 8 to 12 new companies most years — while making some of the earliest bets on Instagram, and more recently OpenAI, a concentrated approach that has made it one of the highest-returning firms of its size.",
     leadership: [
-      { name: "Joshua Kushner", role: "Founder" }
+      { name: "Joshua Kushner", role: "Founder", profileSlug: "joshua-kushner" }
     ],
     timeline: [
       { year: "2009", event: "Joshua Kushner founds the firm at age 24, initially funding it himself." },
@@ -1898,7 +2269,6 @@ const firms = [
     sectors: ["Cloud Software", "Consumer", "Healthcare"],
     signatureExit: "LinkedIn's 2011 IPO, followed by its 2016 acquisition by Microsoft",
     slug: "bessemer",
-    seoPage: "firms/bessemer/",
     website: "https://www.bvp.com",
     short: "Bessemer",
     founded: 1911,
@@ -1906,7 +2276,8 @@ const firms = [
     aum: "$10B+ (recent fund)",
     thesis: "Bessemer's story starts nowhere near a startup: in 1911, steel magnate Henry Phipps Jr. — Andrew Carnegie's business partner and the second-largest shareholder in Carnegie Steel — formed a family office to manage the fortune from Carnegie Steel's sale. That family office didn't formally become a venture capital firm until the 1970s, when it opened a Silicon Valley outpost to chase the emerging tech industry, eventually spinning out as Bessemer Venture Partners in 1986 — making it, by a wide margin, the oldest firm in venture capital.",
     leadership: [
-      { name: "Henry Phipps Jr.", role: "Founder (1911, as Bessemer Trust)" }
+      { name: "Henry Phipps Jr.", role: "Founder (1911, as Bessemer Trust)" },
+      { name: "Byron Deeter", role: "Partner", profileSlug: "byron-deeter" }
     ],
     timeline: [
       { year: "1911", event: "Steel magnate Henry Phipps Jr. forms a family office to manage the fortune from Carnegie Steel's sale." },
@@ -1926,7 +2297,6 @@ const firms = [
     sectors: ["Consumer Internet", "Marketplaces", "Enterprise"],
     signatureExit: "eBay — a $6.7 million Series A in 1997 that became one of the best-performing venture bets ever made",
     slug: "benchmark",
-    seoPage: "firms/benchmark/",
     website: "https://www.benchmark.com",
     short: "Benchmark",
     founded: 1995,
@@ -1937,7 +2307,8 @@ const firms = [
       { name: "Bob Kagle", role: "Co-Founder" },
       { name: "Bruce Dunlevie", role: "Co-Founder" },
       { name: "Andy Rachleff", role: "Co-Founder" },
-      { name: "Kevin Harvey", role: "Co-Founder" }
+      { name: "Kevin Harvey", role: "Co-Founder" },
+      { name: "Bill Gurley", role: "General Partner", profileSlug: "bill-gurley" }
     ],
     timeline: [
       { year: "1995", event: "Five partners break off from established firms to found Benchmark as a radically equal partnership." },
@@ -1951,7 +2322,15 @@ const firms = [
     ]
   }
 ];
-  function renderScaleBar() {
+
+// Renders the "Live Top 5" widget in the hero - the same real
+// firms array used everywhere else on the site, just showing the
+// top 5 by AUM (firms are already ordered by rank, so this is
+// simply the first 5 entries).
+// Renders the credibility stat strip below the hero - every number
+// computed live from the real firms data, never hardcoded, so it
+// can never drift out of sync with what the site actually tracks.
+function renderScaleBar() {
   const totalFirms = firms.length;
   const uniqueTickers = new Set(firms.flatMap(f => f.holdings.map(h => h.ticker))).size;
   const combinedAUM = firms.reduce((sum, f) => {
@@ -1969,6 +2348,7 @@ const firms = [
     Updated Daily
   `;
 }
+
 function renderHeroTop5() {
   const top5 = firms.slice(0, 5);
   document.getElementById('heroTop5List').innerHTML = top5.map(f => `
@@ -1979,6 +2359,7 @@ function renderHeroTop5() {
     </a>
   `).join('');
 }
+
 function renderNews() {
   // Render the news feed: newest item as the big featured box,
   // everything else as a compact dated list underneath.
@@ -2012,6 +2393,7 @@ function renderNews() {
 let searchTerm = '';
 let activeFilter = 'all';
 let compareSet = new Set(); // slugs of firms picked for comparison, max 3
+
 function matchesFilter(firm) {
   if (activeFilter === 'pre2000') return firm.founded < 2000;
   if (activeFilter === '2000s') return firm.founded >= 2000 && firm.founded < 2010;
@@ -2032,7 +2414,18 @@ function matchesSearch(firm) {
 // for any holding that has a real historicalPrice on file. Holdings
 // without one yet (historicalPrice: null) show a neutral "—" badge
 // instead of guessing.
-  function computePowerScore(firm) {
+// Computes the Power Score: a transparent, formula-based rating out
+// of 100 built entirely from real data already on this page - no
+// opinions, no hidden inputs. Four measurable factors:
+//   35% Portfolio Breadth  - how many tracked public exits, relative to the most
+//   35% Capital Scale      - AUM, relative to the largest firm tracked
+//   15% Track Record       - years active, relative to the longest-running firm
+//   15% Verified Performance - avg. return since Jan 2025 across holdings
+//                              with a real historicalPrice on file (firms
+//                              with no verified data yet get a neutral 50,
+//                              never penalized for missing data)
+// Recomputed live, so it stays accurate as more firms/data get added.
+function computePowerScore(firm) {
   const maxHoldings = Math.max(...firms.map(f => f.holdings.length));
   const maxAUM = Math.max(...firms.map(f => {
     const m = f.aum.match(/\$(\d+)B/);
@@ -2061,6 +2454,7 @@ function matchesSearch(firm) {
   const score = (0.35 * breadthScore) + (0.35 * aumScore) + (0.15 * longevityScore) + (0.15 * performanceScore);
   return Math.round(score);
 }
+
 function buildReturnBadge(h) {
   if (h.historicalPrice === null || h.price === null) {
     return `<span class="return-badge unknown">— since Jan '25</span>`;
@@ -2097,7 +2491,7 @@ function renderFirms() {
                    value="${val}" placeholder="type price"
                    data-ticker="${h.ticker}">
           </div>
-       <div class="price-hint">per share</div>
+          <div class="price-hint">per share</div>
           ${buildReturnBadge(h)}
           <a href="https://finance.yahoo.com/quote/${h.ticker}" target="_blank" rel="noopener noreferrer" class="source-link-small">Verify Price ↗</a>
         </div>`;
@@ -2106,7 +2500,7 @@ function renderFirms() {
     card.innerHTML = `
       <div class="firm-head">
         <div>
-        <div class="firm-rank">NO. ${String(firm.rank).padStart(2, '0')} <span class="power-score">· POWER SCORE ${computePowerScore(firm)}</span></div>
+          <div class="firm-rank">NO. ${String(firm.rank).padStart(2, '0')} <span class="power-score">· POWER SCORE ${computePowerScore(firm)}</span></div>
           <div class="firm-name"><a href="${firm.website}" target="_blank" rel="noopener noreferrer" class="firm-link">${firm.name} ↗</a></div>
           <div class="firm-meta">Founded ${firm.founded} · ${firm.hq}</div>
         </div>
@@ -2120,8 +2514,8 @@ function renderFirms() {
         <div class="holdings-label">Notable Public Portfolio Companies</div>
         ${holdingsHTML}
       </div>
-<div class="card-footer">
-      <a href="#${firm.slug}" class="firm-page-link">View Firm Page →</a>
+      <div class="card-footer">
+        <a href="#${firm.slug}" class="firm-page-link">View Firm Page →</a>
         ${firm.seoPage ? `<a href="${firm.seoPage}" class="seo-page-link">Standalone Profile ↗</a>` : ''}
         <label class="compare-check">
           <input type="checkbox" class="compare-checkbox" data-slug="${firm.slug}" ${compareSet.has(firm.slug) ? 'checked' : ''}>
@@ -2153,13 +2547,13 @@ function renderDetail(firm) {
                  value="${val}" placeholder="type price"
                  data-ticker="${h.ticker}">
         </div>
-       <div class="price-hint">per share</div>
+        <div class="price-hint">per share</div>
         ${buildReturnBadge(h)}
         <a href="https://finance.yahoo.com/quote/${h.ticker}" target="_blank" rel="noopener noreferrer" class="source-link-small">Verify Price ↗</a>
       </div>`;
   }).join('');
 
-const leadershipHTML = firm.leadership ? `
+  const leadershipHTML = firm.leadership ? `
     <div class="detail-subhead">Key Partners &amp; Leadership</div>
     <div class="leadership-grid">
       ${firm.leadership.map(l => `
@@ -2206,7 +2600,7 @@ const leadershipHTML = firm.leadership ? `
           <div class="num">${firm.hq}</div>
           <div class="lbl">Headquarters</div>
         </div>
-       <div class="detail-stat">
+        <div class="detail-stat">
           <div class="num">${totalHoldings}</div>
           <div class="lbl">Tracked Holdings</div>
         </div>
@@ -2235,7 +2629,7 @@ const leadershipHTML = firm.leadership ? `
 
 // Decides what to show based on the URL - a firm slug shows its
 // detail page, anything else (or nothing) shows the full list.
-  // Shows/hides the sticky bottom bar based on how many firms are
+// Shows/hides the sticky bottom bar based on how many firms are
 // currently picked for comparison.
 function renderCompareBar() {
   const bar = document.getElementById('compareBar');
@@ -2292,7 +2686,7 @@ function renderComparison() {
   }
 
   const rows = [
-  { label: 'Power Score', render: f => `<strong style="color: var(--gold-bright); font-family: var(--mono); font-size: 16px;">${computePowerScore(f)}</strong>` },
+    { label: 'Power Score', render: f => `<strong style="color: var(--gold-bright); font-family: var(--mono); font-size: 16px;">${computePowerScore(f)}</strong>` },
     { label: 'Assets Managed', render: f => f.aum },
     { label: 'Founded', render: f => f.founded },
     { label: 'Headquarters', render: f => f.hq },
@@ -2310,7 +2704,7 @@ function renderComparison() {
     </tr>
   `).join('');
 
- document.getElementById('compareView').innerHTML = `
+  document.getElementById('compareView').innerHTML = `
     <a href="#" class="detail-back" id="backFromCompare">← Back to all firms</a>
     <div class="scroll-hint">← Swipe to see all firms →</div>
     <div class="compare-table-wrap">
@@ -2321,13 +2715,11 @@ function renderComparison() {
     </div>
   `;
 
-document.getElementById('backFromCompare').addEventListener('click', (e) => {
+  document.getElementById('backFromCompare').addEventListener('click', (e) => {
     e.preventDefault();
     window.location.hash = '';
   });
 }
-
-// Renders the dedicated Analytics Dashboard page into #dashboardView:
 
 // Renders the dedicated Analytics Dashboard page into #dashboardView:
 // a visual AUM bar chart for all 13 firms, and a performance
@@ -2352,6 +2744,8 @@ function renderDashboard() {
       </div>`;
   }).join('');
 
+  // Build a de-duplicated leaderboard: one entry per unique ticker
+  // that has a real historicalPrice, even if several firms hold it.
   const seen = new Map();
   firms.forEach(f => f.holdings.forEach(h => {
     if (h.historicalPrice !== null && h.price !== null && !seen.has(h.ticker)) {
@@ -2394,6 +2788,9 @@ function renderDashboard() {
     window.location.hash = '';
   });
 }
+
+// Renders a full partner profile page into #partnerView, using the
+// data in partnerProfiles keyed by slug.
 function renderPartnerProfile(slug) {
   const p = partnerProfiles[slug];
   if (!p) return;
@@ -2483,6 +2880,7 @@ function renderPartnerProfile(slug) {
     </div>
   `;
 }
+
 function router() {
   const slug = window.location.hash.replace('#', '');
   const firm = firms.find(f => f.slug === slug);
@@ -2516,6 +2914,7 @@ function router() {
   }
   renderCompareBar();
 }
+
 window.addEventListener('hashchange', router);
 
 // Computes and renders "By the Numbers" - real stats derived from
@@ -2617,9 +3016,9 @@ fetch('prices.json')
   .catch(err => {
     console.log('Could not load live prices, using built-in defaults.', err);
   })
- .finally(() => {
+  .finally(() => {
     renderNews();
-renderHeroTop5();
+    renderHeroTop5();
     renderScaleBar();
     renderAnalytics();
     router();
@@ -2640,6 +3039,7 @@ document.addEventListener('input', (e) => {
     const slug = e.target.dataset.slug;
     if (e.target.checked) {
       if (compareSet.size >= 3) {
+        // Cap at 3 - undo this check, don't let a 4th get added
         e.target.checked = false;
         return;
       }
@@ -2650,6 +3050,7 @@ document.addEventListener('input', (e) => {
     renderCompareBar();
   }
 });
+
 // Search box - filters live as you type
 document.getElementById('searchInput').addEventListener('input', (e) => {
   searchTerm = e.target.value;
