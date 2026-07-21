@@ -1939,13 +1939,14 @@ function renderDetail(firm) {
       </div>`;
   }).join('');
 
-  const leadershipHTML = firm.leadership ? `
+const leadershipHTML = firm.leadership ? `
     <div class="detail-subhead">Key Partners &amp; Leadership</div>
     <div class="leadership-grid">
       ${firm.leadership.map(l => `
-        <div class="leader-card">
+        <div class="leader-card ${l.profileSlug ? 'has-profile' : ''}" ${l.profileSlug ? `onclick="window.location.hash='partner/${l.profileSlug}'"` : ''}>
           <div class="leader-name">${l.name}</div>
           <div class="leader-role">${l.role}</div>
+          ${l.profileSlug ? '<div class="leader-view-profile">View Full Profile →</div>' : ''}
         </div>
       `).join('')}
     </div>
