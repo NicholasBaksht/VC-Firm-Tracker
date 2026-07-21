@@ -1121,12 +1121,29 @@ html { scroll-behavior: smooth; }
     margin-top: 24px;
   }
 
-  @media (max-width: 640px) {
+@media (max-width: 640px) {
     .holding-row { grid-template-columns: 1fr auto; row-gap: 8px; }
     .price-hint { grid-column: 1 / -1; }
     .return-badge { grid-column: 1 / -1; width: fit-content; }
     .firm-head { flex-direction: column; }
     .firm-aum { text-align: left; }
+
+    /* ---------- MOBILE OPTIMIZATION ---------- */
+    .scroll-hint { display: block; }
+    .source-link-small { padding: 6px 0; display: inline-block; }
+    .compare-bar { padding: 14px 16px; }
+    .compare-bar-actions { width: 100%; }
+    .compare-btn { flex: 1; text-align: center; }
+    .dashboard-link, .hero-cta, .firm-page-link, .seo-page-link {
+      padding: 10px 16px;
+      display: inline-block;
+    }
+    .compare-check { padding: 6px 0; }
+    .detail-stat .num { font-size: 18px; }
+    .stat-box .num { font-size: 22px; }
+    .partner-stat-row { gap: 20px; }
+    .leadership-grid { grid-template-columns: 1fr; }
+    .leader-card { padding: 14px 16px; }
   }
 </style>
 </head>
