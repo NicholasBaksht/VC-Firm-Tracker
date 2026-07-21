@@ -1951,18 +1951,89 @@ const partnerProfiles = {
 
 const firms = [
   {
-    rank: 1,
-    name: "Andreessen Horowitz",
-    sectors: ["AI", "Crypto", "Fintech", "Consumer"],
-    signatureExit: "Coinbase's 2021 direct listing on Nasdaq — one of the largest crypto IPOs ever",
-    slug: "a16z",
-    seoPage: "firms/a16z/",
-    website: "https://a16z.com",
-    short: "a16z",
-    founded: 2009,
-    hq: "Menlo Park, CA",
-    aum: "$90B+",
-    thesis: "Founded in 2009 by Marc Andreessen, the co-creator of the Netscape browser, and Ben Horowitz, a former enterprise software executive, a16z set out to build a different kind of VC firm — one staffed with in-house recruiters, marketers, and engineers to support founders directly, not just write checks. The firm's stage-agnostic, software-eats-the-world thesis has since carried it into crypto, biotech, and AI, backing companies from seed rounds through late-stage growth across every category it touches.",
+ rank: 1,
+name: "Andreessen Horowitz",
+
+// Founder-matching information
+typicalCheckSize: {
+  label: "Varies by fund; Speedrun invests up to $1M",
+  min: 500000,
+  max: null,
+  currency: "USD",
+  note: "a16z operates multiple seed, venture, growth, and specialist funds, so there is no single firm-wide check-size range."
+},
+
+stages: [
+  "Pre-Seed",
+  "Seed",
+  "Series A",
+  "Series B",
+  "Series C+",
+  "Growth"
+],
+
+industries: [
+  "AI",
+  "American Dynamism",
+  "Bio & Healthcare",
+  "Consumer",
+  "Crypto",
+  "Enterprise",
+  "Fintech",
+  "Games",
+  "Infrastructure"
+],
+
+headquarters: "Menlo Park, California",
+
+geographicPreferences: [
+  "United States",
+  "Global"
+],
+
+portfolioCompanyCount: null,
+portfolioCompanyCountLabel: "Not publicly disclosed as one official total",
+
+currentFundSize: {
+  label: "Multiple active funds",
+  amount: null,
+  note: "$100B+ in total assets under management across multiple strategies"
+},
+
+founded: 2009,
+
+website: "https://a16z.com",
+
+contact: {
+  label: "Founder application and firm website",
+  url: "https://a16z.com",
+  applicationUrl: "https://speedrun.a16z.com/apply",
+  email: "sr-team@a16z.com",
+  note: "The application and email listed here are specifically for a16z Speedrun."
+},
+
+sectors: [
+  "AI",
+  "American Dynamism",
+  "Bio & Healthcare",
+  "Consumer",
+  "Crypto",
+  "Enterprise",
+  "Fintech",
+  "Games",
+  "Infrastructure"
+],
+
+signatureExit: "Coinbase's 2021 direct listing on Nasdaq — one of the largest crypto IPOs ever",
+
+slug: "a16z",
+seoPage: "firms/a16z/",
+short: "a16z",
+
+hq: "Menlo Park, CA",
+aum: "$100B+",
+
+thesis: "Andreessen Horowitz invests in technology companies from seed through later-stage growth. The firm is built around the belief that software will transform nearly every industry and supports portfolio founders through dedicated teams covering recruiting, marketing, sales, policy, legal strategy, and company building."
     leadership: [
       { name: "Marc Andreessen", role: "Co-Founder & General Partner", profileSlug: "marc-andreessen" },
       { name: "Ben Horowitz", role: "Co-Founder & General Partner" },
