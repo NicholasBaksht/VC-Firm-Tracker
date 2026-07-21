@@ -1148,6 +1148,134 @@ const newsItems = [
 // in the code needs to change; the detail page renders whatever
 // fields it finds automatically.
 // ============================================================
+// ============================================================
+// PARTNER PROFILES — deep-dive pages for individual VC partners.
+// Each key is a slug used in the URL (#partner/alfred-lin). To
+// give a leadership entry a clickable profile, add a matching
+// "profileSlug" field to that person's entry in the firms array
+// below (see Alfred Lin, Marc Andreessen, and Peter Thiel for
+// working examples).
+// ============================================================
+const partnerProfiles = {
+  "alfred-lin": {
+    name: "Alfred Lin",
+    firm: "Sequoia Capital",
+    firmSlug: "sequoia",
+    title: "Managing Partner",
+    joinedYear: 2010,
+    education: ["B.A. Applied Mathematics, Harvard University", "M.S. Statistics, Stanford University"],
+    previousExperience: [
+      "Chairman, COO & CFO, Zappos.com (2005–2010) — acquired by Amazon for $1.2B",
+      "VP Finance & Business Development, Tellme Networks (2001–2005) — acquired by Microsoft",
+      "Co-Founder, Venture Frogs (1999–2014)",
+      "Co-Founder & VP Finance, LinkExchange (1996–1999) — acquired by Microsoft for $265M"
+    ],
+    investmentFocus: ["Consumer", "Marketplaces", "Enterprise Software"],
+    notableInvestments: [
+      { name: "Airbnb", ticker: "ABNB" },
+      { name: "DoorDash", ticker: "DASH" },
+      { name: "Uber", ticker: "UBER" },
+      { name: "Reddit", ticker: "RDDT" },
+      { name: "Houzz", ticker: null },
+      { name: "OpenAI", ticker: null }
+    ],
+    boardSeats: ["Airbnb", "DoorDash", "Citadel Securities"],
+    ipoCount: 3,
+    majorExits: 2,
+    careerTimeline: [
+      { year: "1996", event: "Co-founds LinkExchange as VP Finance; the company is sold to Microsoft for $265M in 1999." },
+      { year: "2001", event: "Joins Tellme Networks as VP Finance & Business Development, later acquired by Microsoft." },
+      { year: "2005", event: "Becomes Chairman, COO, and CFO of Zappos.com." },
+      { year: "2009", event: "Zappos is acquired by Amazon for $1.2 billion." },
+      { year: "2010", event: "Joins Sequoia Capital as a partner, focused on consumer and enterprise investments." },
+      { year: "2025", event: "Becomes co-steward (Managing Partner) of Sequoia Capital alongside Pat Grady." }
+    ],
+    biography: "Alfred Lin is a Taiwanese-American venture capitalist who joined Sequoia Capital in 2010 after building his career as an operator, not just an investor — a background that shapes how he evaluates founders today. Before Sequoia, he served as Chairman, COO, and CFO of Zappos, guiding the online retailer to a $1.2 billion acquisition by Amazon in 2009. He first crossed paths with Sequoia as an operator at LinkExchange, which the firm backed in the 1990s. At Sequoia, Lin has specialized in consumer, marketplace, and enterprise software investments, leading or co-leading the firm's positions in Airbnb, DoorDash, and OpenAI. He topped the Forbes Midas List of top venture capitalists in both 2021 and 2025.",
+    sources: [
+      { label: "Sequoia Capital — Alfred Lin", url: "https://www.sequoiacap.com/people/alfred-lin/" },
+      { label: "Forbes Midas List Profile", url: "https://www.forbes.com/profile/alfred-lin/" },
+      { label: "Wikipedia", url: "https://en.wikipedia.org/wiki/Alfred_Lin" }
+    ]
+  },
+  "marc-andreessen": {
+    name: "Marc Andreessen",
+    firm: "Andreessen Horowitz",
+    firmSlug: "a16z",
+    title: "Co-Founder & General Partner",
+    joinedYear: 2009,
+    education: ["B.S. Computer Science, University of Illinois Urbana-Champaign"],
+    previousExperience: [
+      "Co-Creator, Mosaic web browser (1993)",
+      "Co-Founder, Netscape Communications (1994) — IPO 1995, acquired by AOL for $4.2B in 1999",
+      "Co-Founder, Loudcloud / Opsware (1999) — acquired by Hewlett-Packard for $1.6B in 2007"
+    ],
+    investmentFocus: ["Software", "Crypto", "Fintech", "Consumer", "AI Infrastructure"],
+    notableInvestments: [
+      { name: "Airbnb", ticker: "ABNB" },
+      { name: "Coinbase", ticker: "COIN" },
+      { name: "GitHub", ticker: null },
+      { name: "Facebook", ticker: "META" },
+      { name: "Pinterest", ticker: "PINS" },
+      { name: "Skype", ticker: null }
+    ],
+    boardSeats: ["Meta Platforms"],
+    ipoCount: 3,
+    majorExits: 2,
+    careerTimeline: [
+      { year: "1993", event: "Co-creates Mosaic, one of the first graphical web browsers, while a student at UIUC." },
+      { year: "1994", event: "Co-founds Netscape Communications." },
+      { year: "1995", event: "Netscape's IPO helps launch the commercial internet era and the dot-com boom." },
+      { year: "1999", event: "AOL acquires Netscape for $4.2 billion." },
+      { year: "2007", event: "Hewlett-Packard acquires Opsware (formerly Loudcloud) for $1.6 billion." },
+      { year: "2009", event: "Co-founds Andreessen Horowitz (a16z) with Ben Horowitz on a $300 million debut fund." }
+    ],
+    biography: "Marc Andreessen co-created Mosaic, the graphical web browser that made the early internet accessible to ordinary people, while still a student at the University of Illinois. He went on to co-found Netscape, whose 1995 IPO is widely credited with igniting the dot-com boom, before AOL acquired the company for $4.2 billion in 1999. After a second exit — selling Opsware to Hewlett-Packard for $1.6 billion in 2007 — Andreessen co-founded Andreessen Horowitz in 2009, building it into one of the largest venture capital firms in the world. He sits on the board of Meta Platforms and has backed category-defining companies including Airbnb, Coinbase, and GitHub.",
+    sources: [
+      { label: "Wikipedia", url: "https://en.wikipedia.org/wiki/Marc_Andreessen" },
+      { label: "a16z — Marc Andreessen", url: "https://a16z.com/author/marc-andreessen/" }
+    ]
+  },
+  "peter-thiel": {
+    name: "Peter Thiel",
+    firm: "Founders Fund",
+    firmSlug: "founders-fund",
+    title: "Co-Founder & Partner",
+    joinedYear: 2005,
+    education: ["B.A. Philosophy, Stanford University (1989)", "J.D., Stanford Law School (1992)"],
+    previousExperience: [
+      "Co-Founder & CEO, PayPal (1998–2002) — IPO 2002, acquired by eBay for $1.5B",
+      "Founder, Clarium Capital Management (2002)",
+      "Co-Founder & Chairman, Palantir Technologies (2003) — IPO 2020"
+    ],
+    investmentFocus: ["Aerospace", "Defense Tech", "Hard Tech", "Fintech"],
+    notableInvestments: [
+      { name: "Facebook", ticker: "META" },
+      { name: "SpaceX", ticker: "SPCX" },
+      { name: "Palantir", ticker: "PLTR" },
+      { name: "LinkedIn", ticker: null },
+      { name: "Airbnb", ticker: "ABNB" },
+      { name: "Stripe", ticker: null }
+    ],
+    boardSeats: ["Palantir (Chairman)"],
+    ipoCount: 3,
+    majorExits: 1,
+    careerTimeline: [
+      { year: "1998", event: "Co-founds PayPal, serving as CEO and chairman." },
+      { year: "2002", event: "PayPal goes public, then is acquired by eBay for $1.5 billion months later." },
+      { year: "2003", event: "Co-founds Palantir Technologies, serving as chairman." },
+      { year: "2004", event: "Makes the first outside investment in Facebook." },
+      { year: "2005", event: "Co-founds Founders Fund with fellow PayPal alumni Ken Howery and Luke Nosek." },
+      { year: "2008", event: "Founders Fund becomes an early investor in SpaceX." },
+      { year: "2020", event: "Palantir goes public on the NYSE via direct listing." }
+    ],
+    biography: "Peter Thiel co-founded PayPal and led it through its 2002 IPO and subsequent $1.5 billion acquisition by eBay, then became Facebook's first outside investor in 2004 — a bet that returned enormously when the company went public in 2012. In 2005, alongside fellow PayPal alumni Ken Howery and Luke Nosek, he co-founded Founders Fund on a deliberately contrarian philosophy: back ambitious, technically difficult companies other investors pass on. That thesis led the firm to become the first institutional investor in both SpaceX and Palantir, the data-analytics company Thiel co-founded and still chairs. Palantir went public in 2020; SpaceX followed in 2026.",
+    sources: [
+      { label: "Founders Fund — Peter Thiel", url: "https://foundersfund.com/team/peter-thiel/" },
+      { label: "Britannica", url: "https://www.britannica.com/money/Peter-Thiel" },
+      { label: "Wikipedia", url: "https://en.wikipedia.org/wiki/Peter_Thiel" }
+    ]
+  }
+};
 const firms = [
   {
     rank: 1,
