@@ -2754,13 +2754,42 @@ const firms = [
       { year: "1999", event: "Bill Gurley joins as a partner, going on to become one of the firm's most prominent investors." },
       { year: "2010s", event: "Backs Uber and Snap, continuing its pattern of early, high-conviction consumer bets." }
     ],
-    holdings: [
+ holdings: [
       { name: "Uber", ticker: "UBER", historicalPrice: null, price: 72.46 },
       { name: "Snap", ticker: "SNAP", historicalPrice: null, price: 4.53 }
     ]
+  },
+  {
+    rank: 14,
+    name: "Greylock Partners",
+    sectors: ["Enterprise Software", "Consumer Internet", "Cybersecurity", "AI"],
+    signatureExit: "LinkedIn's 2011 IPO, followed by Microsoft's $26.2 billion acquisition of the company in 2016",
+    slug: "greylock",
+    website: "https://greylock.com",
+    short: "Greylock",
+    founded: 1965,
+    hq: "Menlo Park, CA",
+    aum: "$3.5B+",
+    thesis: "Greylock Partners is one of the oldest venture capital firms in the world, founded in 1965 in Cambridge, Massachusetts by Bill Elfers and Dan Gregory, two investors who had cut their teeth at American Research and Development Corporation — one of the very first venture capital firms ever created. After more than four decades on the East Coast, Greylock relocated its headquarters to Silicon Valley in 2009, the same year it added LinkedIn co-founder Reid Hoffman as a partner. The firm focuses on early-stage consumer internet and enterprise software companies, with a six-decade history spanning from early biotech investments to today's AI-first startups.",
+    leadership: [
+      { name: "Bill Elfers", role: "Co-Founder (1965)" },
+      { name: "Dan Gregory", role: "Co-Founder (1965)" },
+      { name: "Reid Hoffman", role: "Partner", profileSlug: "reid-hoffman" }
+    ],
+    timeline: [
+      { year: "1965", event: "Bill Elfers and Dan Gregory found Greylock in Cambridge, Massachusetts, with $10 million committed by six families." },
+      { year: "1999", event: "Opens its first Silicon Valley office." },
+      { year: "2009", event: "Relocates headquarters to Menlo Park, California; LinkedIn co-founder Reid Hoffman joins as a partner." },
+      { year: "2011", event: "Portfolio company LinkedIn goes public." },
+      { year: "2016", event: "Microsoft acquires LinkedIn for $26.2 billion." }
+    ],
+    holdings: [
+      { name: "Workday", ticker: "WDAY", historicalPrice: null, price: 144.78 },
+      { name: "Palo Alto Networks", ticker: "PANW", historicalPrice: null, price: 341.59 },
+      { name: "Arista Networks", ticker: "ANET", historicalPrice: null, price: null }
+    ]
   }
 ];
-
 // Renders the "Live Top 5" widget in the hero - the same real
 // firms array used everywhere else on the site, just showing the
 // top 5 by AUM (firms are already ordered by rank, so this is
