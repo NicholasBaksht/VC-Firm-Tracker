@@ -2823,6 +2823,7 @@ let compareSet = new Set(); // slugs of firms picked for comparison, max 3
 // browsing, strict privacy settings) can block localStorage.
 // ============================================================
 const SHORTLIST_KEY = 'powerboard_shortlist';
+const SHORTLIST_FREE_LIMIT = 3; // Free plan cap - see Pricing page
 
 function getShortlist() {
   try {
@@ -2841,15 +2842,23 @@ function saveShortlistToStorage(set) {
   }
 }
 
+// Toggles a firm in/out of the shortlist, enforcing the free-tier
+// limit. Removing a firm always works, regardless of the limit.
+// Adding a new firm past the limit is blocked, and the caller is
+// told via limitReached so it can show an upgrade prompt.
 function toggleShortlist(slug) {
   const current = getShortlist();
   if (current.has(slug)) {
     current.delete(slug);
-  } else {
-    current.add(slug);
+    saveShortlistToStorage(current);
+    return { shortlist: current, limitReached: false };
   }
+  if (current.size >= SHORTLIST_FREE_LIMIT) {
+    return { shortlist: current, limitReached: true };
+  }
+  current.add(slug);
   saveShortlistToStorage(current);
-  return current;
+  return { shortlist: current, limitReached: false };
 }
 
 // Parses a firm's AUM string (e.g. "$58B+") into a plain number for
