@@ -2356,6 +2356,23 @@ const firms = [
 // Renders the credibility stat strip below the hero - every number
 // computed live from the real firms data, never hardcoded, so it
 // can never drift out of sync with what the site actually tracks.
+  function renderFeaturedFirm() {
+  const firm = firms.find(f => f.slug === featuredFirm.slug);
+  if (!firm) return; // bad slug typo - fail quietly rather than crash the page
+
+  document.getElementById('featuredFirmContainer').innerHTML = `
+    <div class="featured-firm">
+      <div class="featured-firm-label">⭐ Featured Firm</div>
+      <div class="featured-firm-head">
+        <div class="featured-firm-name"><a href="#${firm.slug}">${firm.name}</a></div>
+        <div class="featured-firm-meta">${firm.aum} AUM · Founded ${firm.founded} · ${firm.hq}</div>
+      </div>
+      <p class="featured-firm-reason">${featuredFirm.reason}</p>
+      <a href="#${firm.slug}" class="featured-firm-link">View Full Firm Profile →</a>
+    </div>
+  `;
+}
+
 function renderScaleBar() {
   const totalFirms = firms.length;
   const uniqueTickers = new Set(firms.flatMap(f => f.holdings.map(h => h.ticker))).size;
