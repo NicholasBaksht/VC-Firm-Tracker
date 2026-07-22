@@ -407,20 +407,6 @@
     outline: none;
     border-color: var(--gold);
   }
- .filter-group-label {
-    font-family: var(--mono);
-    font-size: 11px;
-    letter-spacing: 0.08em;
-    text-transform: uppercase;
-    color: var(--ink-dim);
-    margin: 18px 0 8px;
-  }
-  .filter-group-label:first-of-type { margin-top: 4px; }
-  .filter-hint {
-    text-transform: none;
-    letter-spacing: normal;
-    color: var(--hairline);
-  }
   .filter-chips {
     display: flex;
     flex-wrap: wrap;
@@ -1370,23 +1356,13 @@
 
     <a href="#analytics" class="dashboard-link">📊 Open Analytics Dashboard →</a>
 
- <div class="controls">
+    <div class="controls">
       <input type="text" id="searchInput" class="search-input" placeholder="Search by firm, company, or ticker...">
-      <div class="filter-group-label">Founding Era</div>
       <div class="filter-chips" id="filterChips">
         <button class="chip active" data-filter="all">All Eras</button>
         <button class="chip" data-filter="pre2000">Founded Before 2000</button>
         <button class="chip" data-filter="2000s">Founded 2000s</button>
         <button class="chip" data-filter="2010s">Founded 2010+</button>
-      </div>
-      <div class="filter-group-label">Sector Focus <span class="filter-hint">(select any that apply)</span></div>
-      <div class="filter-chips" id="sectorFilterChips"></div>
-      <div class="filter-group-label">Fund Size</div>
-      <div class="filter-chips" id="aumFilterChips">
-        <button class="chip active" data-aum="all">Any Size</button>
-        <button class="chip" data-aum="mega">$50B+ (Mega Fund)</button>
-        <button class="chip" data-aum="large">$20B–$50B</button>
-        <button class="chip" data-aum="mid">Under $20B</button>
       </div>
     </div>
 
@@ -2416,47 +2392,13 @@ function renderNews() {
 // Current search text and active era filter - both start "empty"
 let searchTerm = '';
 let activeFilter = 'all';
-let activeSectors = new Set(); // empty = no sector filter applied
-let activeAumTier = 'all';
 let compareSet = new Set(); // slugs of firms picked for comparison, max 3
 
-// Parses a firm's AUM string (e.g. "$58B+") into a plain number for
-// tier comparisons. Falls back to 0 if the format is unexpected.
-function parseAumNumber(aumStr) {
-  const m = aumStr.match(/\$(\d+)B/);
-  return m ? parseInt(m[1]) : 0;
-}
-
-function matchesAumTier(firm) {
-  const num = parseAumNumber(firm.aum);
-  if (activeAumTier === 'mega') return num >= 50;
-  if (activeAumTier === 'large') return num >= 20 && num < 50;
-  if (activeAumTier === 'mid') return num < 20;
-  return true; // 'all'
-}
-
-function matchesSectorFilter(firm) {
-  if (activeSectors.size === 0) return true; // no sectors selected = show all
-  return firm.sectors.some(s => activeSectors.has(s));
-}
-
 function matchesFilter(firm) {
-  const eraMatch =
-    activeFilter === 'pre2000' ? firm.founded < 2000 :
-    activeFilter === '2000s' ? (firm.founded >= 2000 && firm.founded < 2010) :
-    activeFilter === '2010s' ? firm.founded >= 2010 :
-    true; // 'all'
-  return eraMatch && matchesAumTier(firm) && matchesSectorFilter(firm);
-}
-
-// Builds the sector filter chips dynamically from every unique
-// sector across all tracked firms - never hardcoded, so a new
-// sector added to any firm automatically gets its own filter chip.
-function renderSectorFilterChips() {
-  const allSectors = [...new Set(firms.flatMap(f => f.sectors))].sort();
-  document.getElementById('sectorFilterChips').innerHTML = allSectors.map(s => `
-    <button class="chip" data-sector="${s}">${s}</button>
-  `).join('');
+  if (activeFilter === 'pre2000') return firm.founded < 2000;
+  if (activeFilter === '2000s') return firm.founded >= 2000 && firm.founded < 2010;
+  if (activeFilter === '2010s') return firm.founded >= 2010;
+  return true; // 'all'
 }
 
 function matchesSearch(firm) {
@@ -3074,14 +3016,14 @@ fetch('prices.json')
   .catch(err => {
     console.log('Could not load live prices, using built-in defaults.', err);
   })
- .finally(() => {
+  .finally(() => {
     renderNews();
     renderHeroTop5();
     renderScaleBar();
-    renderSectorFilterChips();
     renderAnalytics();
     router();
   });
+
 // Live-update the ticker tape when someone edits a price field
 document.addEventListener('input', (e) => {
   if (e.target.classList.contains('price-input')) {
@@ -3118,31 +3060,12 @@ document.getElementById('searchInput').addEventListener('input', (e) => {
 // Filter chips - clicking one sets the active era filter
 document.getElementById('filterChips').addEventListener('click', (e) => {
   if (!e.target.classList.contains('chip')) return;
-  document.querySelectorAll('#filterChips .chip').forEach(c => c.classList.remove('active'));
+  document.querySelectorAll('.chip').forEach(c => c.classList.remove('active'));
   e.target.classList.add('active');
   activeFilter = e.target.dataset.filter;
   renderFirms();
 });
+</script>
 
-// Sector chips - multi-select, toggle any number on/off
-document.getElementById('sectorFilterChips').addEventListener('click', (e) => {
-  if (!e.target.classList.contains('chip')) return;
-  const sector = e.target.dataset.sector;
-  if (activeSectors.has(sector)) {
-    activeSectors.delete(sector);
-    e.target.classList.remove('active');
-  } else {
-    activeSectors.add(sector);
-    e.target.classList.add('active');
-  }
-  renderFirms();
-});
-
-// AUM tier chips - single-select, like the era filter
-document.getElementById('aumFilterChips').addEventListener('click', (e) => {
-  if (!e.target.classList.contains('chip')) return;
-  document.querySelectorAll('#aumFilterChips .chip').forEach(c => c.classList.remove('active'));
-  e.target.classList.add('active');
-  activeAumTier = e.target.dataset.aum;
-  renderFirms();
-});
+</body>
+</html>
