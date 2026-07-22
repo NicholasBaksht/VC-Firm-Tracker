@@ -3853,8 +3853,12 @@ document.addEventListener('input', (e) => {
 document.addEventListener('click', (e) => {
   if (!e.target.classList.contains('shortlist-btn')) return;
   const slug = e.target.dataset.slug;
-  const updated = toggleShortlist(slug);
-  const isSaved = updated.has(slug);
+  const result = toggleShortlist(slug);
+  if (result.limitReached) {
+    alert(`Free plan limit reached (${SHORTLIST_FREE_LIMIT}/${SHORTLIST_FREE_LIMIT} saved firms). Upgrade to Pro for unlimited saves — see Pricing in the nav bar.`);
+    return;
+  }
+  const isSaved = result.shortlist.has(slug);
   e.target.classList.toggle('saved', isSaved);
   e.target.textContent = isSaved ? '★ Saved' : '☆ Save';
 });
