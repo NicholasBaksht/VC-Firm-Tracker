@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>The VC Power Board — Top 10 U.S. Venture Capital Firms</title>
+<title>The Power Board — Top 10 U.S. Venture Capital Firms</title>
 <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 220 220'%3E%3Ccircle cx='110' cy='110' r='104' fill='%230C0F14' stroke='%23C9A227' stroke-width='6'/%3E%3Ctext x='110' y='130' font-family='Georgia,serif' font-size='90' font-weight='600' text-anchor='middle'%3E%3Ctspan fill='%23EDEFF3'%3EP%3C/tspan%3E%3Ctspan fill='%23E8C34A'%3EB%3C/tspan%3E%3C/text%3E%3C/svg%3E">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,300;9..144,500;9..144,600;9..144,700&family=Inter:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500;600&display=swap" rel="stylesheet">
@@ -417,23 +417,6 @@
     .news-item { grid-template-columns: 1fr; gap: 4px; }
   }
 
-  // ============================================================
-// FEATURED FIRM — Peter edits this whenever he wants to spotlight
-// a different firm. Just change the "slug" below to any firm's
-// slug (see the firms array further down for valid slugs, e.g.
-// "a16z", "sequoia", "founders-fund"), and write a short reason
-// why it's featured. Everything else - name, AUM, sectors,
-// thesis - pulls automatically from that firm's real data, so
-// there's nothing to keep in sync by hand.
-// ============================================================
-const featuredFirm = {
-  slug: "founders-fund",
-  reason: "SpaceX's blockbuster June 2026 IPO turned Founders Fund's original 2008 stake into an estimated ~80x return — one of the biggest single wins in venture capital history."
-};
-
-// ============================================================
-// FULL PROFILE PAGES — optional, works for ANY firm below.
-
   /* ---------- SECTION LABEL ---------- */
   .section-label {
     padding: 56px 0 28px;
@@ -474,6 +457,20 @@ const featuredFirm = {
   .search-input:focus {
     outline: none;
     border-color: var(--gold);
+  }
+  .filter-group-label {
+    font-family: var(--mono);
+    font-size: 11px;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    color: var(--ink-dim);
+    margin: 18px 0 8px;
+  }
+  .filter-group-label:first-of-type { margin-top: 4px; }
+  .filter-hint {
+    text-transform: none;
+    letter-spacing: normal;
+    color: var(--hairline);
   }
   .filter-chips {
     display: flex;
@@ -1426,15 +1423,18 @@ const featuredFirm = {
 
     <a href="#analytics" class="dashboard-link">📊 Open Analytics Dashboard →</a>
 
- <div class="controls">
+    <div class="controls">
       <input type="text" id="searchInput" class="search-input" placeholder="Search by firm, company, or ticker...">
+      <div class="filter-group-label">Founding Era</div>
       <div class="filter-chips" id="filterChips">
         <button class="chip active" data-filter="all">All Eras</button>
         <button class="chip" data-filter="pre2000">Founded Before 2000</button>
         <button class="chip" data-filter="2000s">Founded 2000s</button>
         <button class="chip" data-filter="2010s">Founded 2010+</button>
       </div>
-   <div class="filter-chips" id="sectorFilterChips"></div>
+      <div class="filter-group-label">Sector Focus <span class="filter-hint">(select any that apply)</span></div>
+      <div class="filter-chips" id="sectorFilterChips"></div>
+      <div class="filter-group-label">Fund Size</div>
       <div class="filter-chips" id="aumFilterChips">
         <button class="chip active" data-aum="all">Any Size</button>
         <button class="chip" data-aum="mega">$50B+ (Mega Fund)</button>
@@ -1511,6 +1511,20 @@ const newsItems = [
     text: '<strong>SpaceX went public</strong> on Nasdaq under ticker <strong>SPCX</strong>, one of the largest IPOs in history. Founders Fund\'s roughly 3% stake — built from about $600M invested since 2008 — was worth an estimated <strong>$50 billion+</strong> on debut. An ~80x return, and one of the biggest single venture wins ever recorded.'
   }
 ];
+
+// ============================================================
+// FEATURED FIRM — Peter edits this whenever he wants to spotlight
+// a different firm. Just change the "slug" below to any firm's
+// slug (see the firms array further down for valid slugs, e.g.
+// "a16z", "sequoia", "founders-fund"), and write a short reason
+// why it's featured. Everything else - name, AUM, sectors,
+// thesis - pulls automatically from that firm's real data, so
+// there's nothing to keep in sync by hand.
+// ============================================================
+const featuredFirm = {
+  slug: "founders-fund",
+  reason: "SpaceX's blockbuster June 2026 IPO turned Founders Fund's original 2008 stake into an estimated ~80x return — one of the biggest single wins in venture capital history."
+};
 
 // ============================================================
 // FULL PROFILE PAGES — optional, works for ANY firm below.
@@ -2026,6 +2040,7 @@ const partnerProfiles = {
   }
 };
 
+
 const firms = [
   {
     rank: 1,
@@ -2407,7 +2422,10 @@ const firms = [
 // Renders the credibility stat strip below the hero - every number
 // computed live from the real firms data, never hardcoded, so it
 // can never drift out of sync with what the site actually tracks.
-  function renderFeaturedFirm() {
+// Renders the Featured Firm spotlight - looks up the real firm data
+// by slug from the featuredFirm object above, so Peter only ever
+// has to edit one slug and one sentence, never firm data itself.
+function renderFeaturedFirm() {
   const firm = firms.find(f => f.slug === featuredFirm.slug);
   if (!firm) return; // bad slug typo - fail quietly rather than crash the page
 
@@ -2453,12 +2471,6 @@ function renderHeroTop5() {
     </a>
   `).join('');
 }
-function renderSectorFilterChips() {
-  const allSectors = [...new Set(firms.flatMap(f => f.sectors))].sort();
-  document.getElementById('sectorFilterChips').innerHTML = allSectors.map(s => `
-    <button class="chip" data-sector="${s}">${s}</button>
-  `).join('');
-}
 
 function renderNews() {
   // Render the news feed: newest item as the big featured box,
@@ -2489,7 +2501,7 @@ function renderNews() {
   }
 }
 
-// Current search text and active era filter - both start "empty"
+// Current search text and active filters - all start "empty"/off
 let searchTerm = '';
 let activeFilter = 'all';
 let activeSectors = new Set(); // empty = no sector filter applied
@@ -2523,6 +2535,16 @@ function matchesFilter(firm) {
     activeFilter === '2010s' ? firm.founded >= 2010 :
     true; // 'all'
   return eraMatch && matchesAumTier(firm) && matchesSectorFilter(firm);
+}
+
+// Builds the sector filter chips dynamically from every unique
+// sector across all tracked firms - never hardcoded, so a new
+// sector added to any firm automatically gets its own filter chip.
+function renderSectorFilterChips() {
+  const allSectors = [...new Set(firms.flatMap(f => f.sectors))].sort();
+  document.getElementById('sectorFilterChips').innerHTML = allSectors.map(s => `
+    <button class="chip" data-sector="${s}">${s}</button>
+  `).join('');
 }
 
 function matchesSearch(firm) {
@@ -3140,11 +3162,11 @@ fetch('prices.json')
   .catch(err => {
     console.log('Could not load live prices, using built-in defaults.', err);
   })
- .finally(() => {
+  .finally(() => {
     renderNews();
     renderHeroTop5();
     renderScaleBar();
-      renderFeaturedFirm();
+    renderFeaturedFirm();
     renderSectorFilterChips();
     renderAnalytics();
     router();
@@ -3183,7 +3205,6 @@ document.getElementById('searchInput').addEventListener('input', (e) => {
   renderFirms();
 });
 
-// Filter chips - clicking one sets the active era filter
 // Filter chips - clicking one sets the active era filter
 // (scoped to this group only, so it doesn't affect sector/AUM chips)
 document.getElementById('filterChips').addEventListener('click', (e) => {
