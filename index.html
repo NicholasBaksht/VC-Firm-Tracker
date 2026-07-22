@@ -3680,8 +3680,19 @@ document.addEventListener('input', (e) => {
     } else {
       compareSet.delete(slug);
     }
-    renderCompareBar();
+ renderCompareBar();
   }
+});
+
+// Shortlist button - toggles a firm in/out of local storage, and
+// updates just that one button in place rather than a full re-render
+document.addEventListener('click', (e) => {
+  if (!e.target.classList.contains('shortlist-btn')) return;
+  const slug = e.target.dataset.slug;
+  const updated = toggleShortlist(slug);
+  const isSaved = updated.has(slug);
+  e.target.classList.toggle('saved', isSaved);
+  e.target.textContent = isSaved ? '★ Saved' : '☆ Save';
 });
 
 // Search box - filters live as you type
