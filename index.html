@@ -710,11 +710,31 @@
     cursor: pointer;
     user-select: none;
   }
-  .compare-checkbox {
+.compare-checkbox {
     accent-color: var(--gold);
     cursor: pointer;
     width: 20px;
     height: 20px;
+  }
+  .shortlist-btn {
+    font-family: var(--mono);
+    font-size: 12px;
+    color: var(--ink-dim);
+    background: transparent;
+    border: 1px solid var(--hairline);
+    border-radius: 20px;
+    padding: 6px 12px;
+    cursor: pointer;
+    transition: border-color 0.15s ease, color 0.15s ease, background 0.15s ease;
+  }
+  .shortlist-btn:hover {
+    border-color: var(--gold);
+    color: var(--ink);
+  }
+  .shortlist-btn.saved {
+    background: rgba(201,162,39,0.12);
+    border-color: var(--gold);
+    color: var(--gold-bright);
   }
 
   /* ---------- COMPARE BAR & TABLE ---------- */
