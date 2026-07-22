@@ -3662,8 +3662,9 @@ document.getElementById('listView').style.display = 'none';
   document.getElementById('detailView').style.display = 'none';
   document.getElementById('compareView').style.display = 'none';
   document.getElementById('dashboardView').style.display = 'none';
-  document.getElementById('partnerView').style.display = 'none';
+document.getElementById('partnerView').style.display = 'none';
   document.getElementById('findInvestorsView').style.display = 'none';
+  document.getElementById('pricingView').style.display = 'none';
 
   if (slug === 'compare') {
     document.getElementById('compareView').style.display = 'block';
@@ -3676,6 +3677,10 @@ document.getElementById('listView').style.display = 'none';
   } else if (slug === 'find-investors') {
     document.getElementById('findInvestorsView').style.display = 'block';
     renderFindInvestors();
+    window.scrollTo(0, 0);
+  } else if (slug === 'pricing') {
+    document.getElementById('pricingView').style.display = 'block';
+    renderPricing();
     window.scrollTo(0, 0);
   } else if (partnerMatch && partnerProfiles[partnerMatch[1]]) {
     document.getElementById('dashboardView').style.display = 'block';
