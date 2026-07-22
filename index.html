@@ -2701,6 +2701,17 @@ function parseAumNumber(aumStr) {
   return m ? parseInt(m[1]) : 0;
 }
 
+// Returns a plain-language fund scale label for a firm, using the
+// same tiers as the AUM filter and Find Investors questionnaire -
+// so the label a founder sees always matches how the site actually
+// filters and scores that firm elsewhere.
+function getScaleLabel(firm) {
+  const num = parseAumNumber(firm.aum);
+  if (num >= 50) return 'Mega Fund ($50B+)';
+  if (num >= 20) return 'Large Fund ($20B–$50B)';
+  return 'Mid-Size Fund (Under $20B)';
+}
+
 function matchesAumTier(firm) {
   const num = parseAumNumber(firm.aum);
   if (activeAumTier === 'mega') return num >= 50;
