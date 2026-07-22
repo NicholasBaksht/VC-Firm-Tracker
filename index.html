@@ -3181,22 +3181,27 @@ function renderFinderResults() {
   const container = document.getElementById('finderResultsList');
   if (!container) return;
 
-  if (matches.length === 0) {
-    container.innerHTML = `<p style="color: var(--ink-dim); font-size: 14px;">No firms matched all your criteria — try selecting fewer sectors or a broader fund size.</p>`;
-    return;
-  }
-
-  container.innerHTML = matches.map(({ firm, matched, possible, reasons }) => `
+  container.innerHTML = matches.map(({ firm, score, breakdown }) => `
     <div class="finder-result-card">
       <div class="finder-result-head">
         <div class="finder-result-name"><a href="#${firm.slug}">${firm.name}</a></div>
-        ${possible > 0 ? `<span class="finder-match-badge">${matched}/${possible} match</span>` : ''}
+        <span class="finder-score-badge">${score}/100</span>
       </div>
-      <div class="finder-match-reasons">${reasons.length > 0 ? reasons.join(' · ') : 'Browse this firm to see if it fits your startup.'}</div>
+      <div class="finder-breakdown">
+        ${breakdown.map(b => `
+          <div class="finder-breakdown-row">
+            <span class="finder-breakdown-label">${b.label}</span>
+            <div class="finder-breakdown-track">
+              <div class="finder-breakdown-fill" style="width: ${(b.points / b.maxPoints) * 100}%"></div>
+            </div>
+            <span class="finder-breakdown-pts">${Math.round(b.points)}/${b.maxPoints}</span>
+          </div>
+          <div class="finder-breakdown-detail">${b.detail}</div>
+        `).join('')}
+      </div>
     </div>
   `).join('');
 }
-
 function renderFindInvestors() {
   const allSectors = [...new Set(firms.flatMap(f => f.sectors))].sort();
 
