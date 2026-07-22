@@ -2361,6 +2361,12 @@ function renderHeroTop5() {
     </a>
   `).join('');
 }
+function renderSectorFilterChips() {
+  const allSectors = [...new Set(firms.flatMap(f => f.sectors))].sort();
+  document.getElementById('sectorFilterChips').innerHTML = allSectors.map(s => `
+    <button class="chip" data-sector="${s}">${s}</button>
+  `).join('');
+}
 
 function renderNews() {
   // Render the news feed: newest item as the big featured box,
