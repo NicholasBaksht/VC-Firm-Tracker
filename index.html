@@ -2416,13 +2416,47 @@ function renderNews() {
 // Current search text and active era filter - both start "empty"
 let searchTerm = '';
 let activeFilter = 'all';
+let activeSectors = new Set(); // empty = no sector filter applied
+let activeAumTier = 'all';
 let compareSet = new Set(); // slugs of firms picked for comparison, max 3
 
-function matchesFilter(firm) {
-  if (activeFilter === 'pre2000') return firm.founded < 2000;
-  if (activeFilter === '2000s') return firm.founded >= 2000 && firm.founded < 2010;
-  if (activeFilter === '2010s') return firm.founded >= 2010;
+// Parses a firm's AUM string (e.g. "$58B+") into a plain number for
+// tier comparisons. Falls back to 0 if the format is unexpected.
+function parseAumNumber(aumStr) {
+  const m = aumStr.match(/\$(\d+)B/);
+  return m ? parseInt(m[1]) : 0;
+}
+
+function matchesAumTier(firm) {
+  const num = parseAumNumber(firm.aum);
+  if (activeAumTier === 'mega') return num >= 50;
+  if (activeAumTier === 'large') return num >= 20 && num < 50;
+  if (activeAumTier === 'mid') return num < 20;
   return true; // 'all'
+}
+
+function matchesSectorFilter(firm) {
+  if (activeSectors.size === 0) return true; // no sectors selected = show all
+  return firm.sectors.some(s => activeSectors.has(s));
+}
+
+function matchesFilter(firm) {
+  const eraMatch =
+    activeFilter === 'pre2000' ? firm.founded < 2000 :
+    activeFilter === '2000s' ? (firm.founded >= 2000 && firm.founded < 2010) :
+    activeFilter === '2010s' ? firm.founded >= 2010 :
+    true; // 'all'
+  return eraMatch && matchesAumTier(firm) && matchesSectorFilter(firm);
+}
+
+// Builds the sector filter chips dynamically from every unique
+// sector across all tracked firms - never hardcoded, so a new
+// sector added to any firm automatically gets its own filter chip.
+function renderSectorFilterChips() {
+  const allSectors = [...new Set(firms.flatMap(f => f.sectors))].sort();
+  document.getElementById('sectorFilterChips').innerHTML = allSectors.map(s => `
+    <button class="chip" data-sector="${s}">${s}</button>
+  `).join('');
 }
 
 function matchesSearch(firm) {
