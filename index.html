@@ -1370,13 +1370,23 @@
 
     <a href="#analytics" class="dashboard-link">📊 Open Analytics Dashboard →</a>
 
-    <div class="controls">
+ <div class="controls">
       <input type="text" id="searchInput" class="search-input" placeholder="Search by firm, company, or ticker...">
+      <div class="filter-group-label">Founding Era</div>
       <div class="filter-chips" id="filterChips">
         <button class="chip active" data-filter="all">All Eras</button>
         <button class="chip" data-filter="pre2000">Founded Before 2000</button>
         <button class="chip" data-filter="2000s">Founded 2000s</button>
         <button class="chip" data-filter="2010s">Founded 2010+</button>
+      </div>
+      <div class="filter-group-label">Sector Focus <span class="filter-hint">(select any that apply)</span></div>
+      <div class="filter-chips" id="sectorFilterChips"></div>
+      <div class="filter-group-label">Fund Size</div>
+      <div class="filter-chips" id="aumFilterChips">
+        <button class="chip active" data-aum="all">Any Size</button>
+        <button class="chip" data-aum="mega">$50B+ (Mega Fund)</button>
+        <button class="chip" data-aum="large">$20B–$50B</button>
+        <button class="chip" data-aum="mid">Under $20B</button>
       </div>
     </div>
 
