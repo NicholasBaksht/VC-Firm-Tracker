@@ -3074,14 +3074,14 @@ fetch('prices.json')
   .catch(err => {
     console.log('Could not load live prices, using built-in defaults.', err);
   })
-  .finally(() => {
+ .finally(() => {
     renderNews();
     renderHeroTop5();
     renderScaleBar();
+    renderSectorFilterChips();
     renderAnalytics();
     router();
   });
-
 // Live-update the ticker tape when someone edits a price field
 document.addEventListener('input', (e) => {
   if (e.target.classList.contains('price-input')) {
