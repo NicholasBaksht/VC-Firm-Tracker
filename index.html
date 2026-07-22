@@ -998,13 +998,61 @@
     text-transform: uppercase;
     margin-top: 2px;
   }
-  .detail-about {
+.detail-about {
     font-size: 15.5px;
     line-height: 1.65;
     color: var(--ink-dim);
     max-width: 700px;
     margin-bottom: 8px;
   }
+
+  /* ---------- FOUNDER CALLOUT ---------- */
+  .founder-callout {
+    margin: 24px 0 32px;
+    padding: 22px 24px;
+    border-radius: 3px;
+    background: var(--surface);
+    border: 1px solid var(--hairline);
+  }
+  .founder-callout-label {
+    font-family: var(--mono);
+    font-size: 10.5px;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: var(--gold);
+    margin-bottom: 14px;
+  }
+  .founder-callout-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 16px;
+  }
+  .founder-callout-tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+  }
+  .founder-callout-scale {
+    font-family: var(--mono);
+    font-size: 12.5px;
+    color: var(--ink-dim);
+    white-space: nowrap;
+  }
+  .founder-callout-cta {
+    font-family: var(--mono);
+    font-size: 13px;
+    font-weight: 600;
+    color: var(--bg);
+    background: var(--gold);
+    text-decoration: none;
+    border-radius: 4px;
+    padding: 9px 18px;
+    white-space: nowrap;
+    transition: background 0.15s ease;
+  }
+  .founder-callout-cta:hover { background: var(--gold-bright); }
 
   .detail-subhead {
     font-family: var(--mono);
