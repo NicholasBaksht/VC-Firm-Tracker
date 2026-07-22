@@ -2694,6 +2694,43 @@ let activeSectors = new Set(); // empty = no sector filter applied
 let activeAumTier = 'all';
 let compareSet = new Set(); // slugs of firms picked for comparison, max 3
 
+// ============================================================
+// SAVED SHORTLIST — lets founders save firms they're interested
+// in, persisted in the browser's local storage so it survives
+// page reloads. Nothing is sent anywhere; it only ever lives on
+// this device. Wrapped in try/catch since some browsers (private
+// browsing, strict privacy settings) can block localStorage.
+// ============================================================
+const SHORTLIST_KEY = 'powerboard_shortlist';
+
+function getShortlist() {
+  try {
+    const raw = localStorage.getItem(SHORTLIST_KEY);
+    return raw ? new Set(JSON.parse(raw)) : new Set();
+  } catch (e) {
+    return new Set();
+  }
+}
+
+function saveShortlistToStorage(set) {
+  try {
+    localStorage.setItem(SHORTLIST_KEY, JSON.stringify([...set]));
+  } catch (e) {
+    // localStorage unavailable - fail quietly, shortlist just won't persist
+  }
+}
+
+function toggleShortlist(slug) {
+  const current = getShortlist();
+  if (current.has(slug)) {
+    current.delete(slug);
+  } else {
+    current.add(slug);
+  }
+  saveShortlistToStorage(current);
+  return current;
+}
+
 // Parses a firm's AUM string (e.g. "$58B+") into a plain number for
 // tier comparisons. Falls back to 0 if the format is unexpected.
 function parseAumNumber(aumStr) {
