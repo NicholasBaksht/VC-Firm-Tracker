@@ -3089,55 +3089,91 @@ let finderMaturity = 'any';
 // the founder actually picked count toward the match - skipping a
 // question never penalizes a firm. Returns firms sorted by match
 // count, each with a plain-language list of why it matched.
+// Scores every firm 0-100 against the founder's answers, using a
+// transparent weighted formula - same honest spirit as Power Score.
+// Weights: 40% Sector Fit, 30% Fund Scale, 15% Firm Maturity,
+// 15% Track Record (the firm's real, already-computed Power Score).
+// A question the founder skips contributes half-credit rather than
+// zero, so skipping never unfairly tanks a firm's score - and if
+// NO questions are answered, the score naturally reduces to a
+// ranking by real Power Score alone, since that's the only signal
+// left to differentiate firms.
 function computeFinderMatches() {
   const results = firms.map(firm => {
-    const reasons = [];
-    let possible = 0;
-    let matched = 0;
+    const breakdown = [];
 
+    // Sector Fit - 40 points max
+    let sectorPts;
     if (finderSectors.size > 0) {
-      possible++;
       const overlap = firm.sectors.filter(s => finderSectors.has(s));
-      if (overlap.length > 0) {
-        matched++;
-        reasons.push(`Invests in ${overlap.join(', ')}`);
-      }
+      sectorPts = (overlap.length / finderSectors.size) * 40;
+      breakdown.push({
+        label: 'Sector Fit',
+        points: sectorPts,
+        maxPoints: 40,
+        detail: overlap.length > 0
+          ? `Invests in ${overlap.join(', ')}`
+          : `Doesn't currently track a firm investment in ${[...finderSectors].join(', ')}`
+      });
+    } else {
+      sectorPts = 20; // half-credit, question skipped
+      breakdown.push({ label: 'Sector Fit', points: sectorPts, maxPoints: 40, detail: 'Not specified' });
     }
 
+    // Fund Scale - 30 points max
+    let scalePts;
     if (finderScale !== 'any') {
-      possible++;
       const num = parseAumNumber(firm.aum);
       const tierMatch =
         (finderScale === 'mega' && num >= 50) ||
         (finderScale === 'large' && num >= 20 && num < 50) ||
         (finderScale === 'mid' && num < 20);
-      if (tierMatch) {
-        matched++;
-        reasons.push(`${firm.aum} fund size matches your preference`);
-      }
+      scalePts = tierMatch ? 30 : 0;
+      breakdown.push({
+        label: 'Fund Scale',
+        points: scalePts,
+        maxPoints: 30,
+        detail: tierMatch ? `${firm.aum} matches your fund size preference` : `${firm.aum} is outside your preferred range`
+      });
+    } else {
+      scalePts = 15; // half-credit, question skipped
+      breakdown.push({ label: 'Fund Scale', points: scalePts, maxPoints: 30, detail: 'Not specified' });
     }
 
+    // Firm Maturity - 15 points max
+    let maturityPts;
     if (finderMaturity !== 'any') {
-      possible++;
       const maturityMatch =
         (finderMaturity === 'established' && firm.founded < 2000) ||
         (finderMaturity === 'modern' && firm.founded >= 2000 && firm.founded < 2010) ||
         (finderMaturity === 'newer' && firm.founded >= 2010);
-      if (maturityMatch) {
-        matched++;
-        reasons.push(`Founded ${firm.founded}, matches your maturity preference`);
-      }
+      maturityPts = maturityMatch ? 15 : 0;
+      breakdown.push({
+        label: 'Firm Maturity',
+        points: maturityPts,
+        maxPoints: 15,
+        detail: `Founded ${firm.founded}${maturityMatch ? ' — matches your preference' : ''}`
+      });
+    } else {
+      maturityPts = 7.5; // half-credit, question skipped
+      breakdown.push({ label: 'Firm Maturity', points: maturityPts, maxPoints: 15, detail: 'Not specified' });
     }
 
-    return { firm, matched, possible, reasons };
+    // Track Record - 15 points max, drawn from the firm's real,
+    // already-computed Power Score (transparent, not invented here)
+    const trackPts = (computePowerScore(firm) / 100) * 15;
+    breakdown.push({
+      label: 'Track Record',
+      points: trackPts,
+      maxPoints: 15,
+      detail: `Power Score of ${computePowerScore(firm)}/100`
+    });
+
+    const score = Math.round(sectorPts + scalePts + maturityPts + trackPts);
+    return { firm, score, breakdown };
   });
 
-  // Only show firms that matched at least one selected criterion
-  // (or all firms, if the founder didn't answer any question yet)
-  const anyAnswered = finderSectors.size > 0 || finderScale !== 'any' || finderMaturity !== 'any';
-  const filtered = anyAnswered ? results.filter(r => r.matched > 0) : results;
-
-  return filtered.sort((a, b) => b.matched - a.matched);
+  return results.sort((a, b) => b.score - a.score);
 }
 
 function renderFinderResults() {
