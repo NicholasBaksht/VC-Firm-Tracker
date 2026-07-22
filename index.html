@@ -3027,6 +3027,174 @@ function renderDashboard() {
 
 // Renders a full partner profile page into #partnerView, using the
 // data in partnerProfiles keyed by slug.
+  // ============================================================
+// FIND MY INVESTORS — a founder-facing questionnaire that matches
+// against three real data points already on this page: sector
+// focus, firm scale (AUM tier), and firm maturity (founding era).
+// No invented "check size" or "stage" data - just what's real.
+// ============================================================
+let finderSectors = new Set();
+let finderScale = 'any';
+let finderMaturity = 'any';
+
+// Scores every firm against the founder's answers. Only criteria
+// the founder actually picked count toward the match - skipping a
+// question never penalizes a firm. Returns firms sorted by match
+// count, each with a plain-language list of why it matched.
+function computeFinderMatches() {
+  const results = firms.map(firm => {
+    const reasons = [];
+    let possible = 0;
+    let matched = 0;
+
+    if (finderSectors.size > 0) {
+      possible++;
+      const overlap = firm.sectors.filter(s => finderSectors.has(s));
+      if (overlap.length > 0) {
+        matched++;
+        reasons.push(`Invests in ${overlap.join(', ')}`);
+      }
+    }
+
+    if (finderScale !== 'any') {
+      possible++;
+      const num = parseAumNumber(firm.aum);
+      const tierMatch =
+        (finderScale === 'mega' && num >= 50) ||
+        (finderScale === 'large' && num >= 20 && num < 50) ||
+        (finderScale === 'mid' && num < 20);
+      if (tierMatch) {
+        matched++;
+        reasons.push(`${firm.aum} fund size matches your preference`);
+      }
+    }
+
+    if (finderMaturity !== 'any') {
+      possible++;
+      const maturityMatch =
+        (finderMaturity === 'established' && firm.founded < 2000) ||
+        (finderMaturity === 'modern' && firm.founded >= 2000 && firm.founded < 2010) ||
+        (finderMaturity === 'newer' && firm.founded >= 2010);
+      if (maturityMatch) {
+        matched++;
+        reasons.push(`Founded ${firm.founded}, matches your maturity preference`);
+      }
+    }
+
+    return { firm, matched, possible, reasons };
+  });
+
+  // Only show firms that matched at least one selected criterion
+  // (or all firms, if the founder didn't answer any question yet)
+  const anyAnswered = finderSectors.size > 0 || finderScale !== 'any' || finderMaturity !== 'any';
+  const filtered = anyAnswered ? results.filter(r => r.matched > 0) : results;
+
+  return filtered.sort((a, b) => b.matched - a.matched);
+}
+
+function renderFinderResults() {
+  const matches = computeFinderMatches();
+  const container = document.getElementById('finderResultsList');
+  if (!container) return;
+
+  if (matches.length === 0) {
+    container.innerHTML = `<p style="color: var(--ink-dim); font-size: 14px;">No firms matched all your criteria — try selecting fewer sectors or a broader fund size.</p>`;
+    return;
+  }
+
+  container.innerHTML = matches.map(({ firm, matched, possible, reasons }) => `
+    <div class="finder-result-card">
+      <div class="finder-result-head">
+        <div class="finder-result-name"><a href="#${firm.slug}">${firm.name}</a></div>
+        ${possible > 0 ? `<span class="finder-match-badge">${matched}/${possible} match</span>` : ''}
+      </div>
+      <div class="finder-match-reasons">${reasons.length > 0 ? reasons.join(' · ') : 'Browse this firm to see if it fits your startup.'}</div>
+    </div>
+  `).join('');
+}
+
+function renderFindInvestors() {
+  const allSectors = [...new Set(firms.flatMap(f => f.sectors))].sort();
+
+  document.getElementById('findInvestorsView').innerHTML = `
+    <a href="#" class="detail-back">← Back to all firms</a>
+    <div class="dashboard-title">Find My Investors</div>
+    <div class="finder-intro">
+      <p>Answer a few questions and we'll match you against the 13 firms tracked on this page — using only real data already here, never guesses. Skip any question you're not sure about.</p>
+    </div>
+
+    <div class="finder-question">
+      <div class="finder-question-title">What sector is your startup in?</div>
+      <div class="finder-question-hint">Select any that apply — leave blank to skip</div>
+      <div class="filter-chips" id="finderSectorChips">
+        ${allSectors.map(s => `<button class="chip ${finderSectors.has(s) ? 'active' : ''}" data-sector="${s}">${s}</button>`).join('')}
+      </div>
+    </div>
+
+    <div class="finder-question">
+      <div class="finder-question-title">What size fund fits your round?</div>
+      <div class="finder-question-hint">Bigger funds typically write bigger, later-stage checks</div>
+      <div class="filter-chips" id="finderScaleChips">
+        <button class="chip ${finderScale === 'any' ? 'active' : ''}" data-scale="any">No preference</button>
+        <button class="chip ${finderScale === 'mid' ? 'active' : ''}" data-scale="mid">Under $20B (smaller funds)</button>
+        <button class="chip ${finderScale === 'large' ? 'active' : ''}" data-scale="large">$20B–$50B</button>
+        <button class="chip ${finderScale === 'mega' ? 'active' : ''}" data-scale="mega">$50B+ (mega funds)</button>
+      </div>
+    </div>
+
+    <div class="finder-question">
+      <div class="finder-question-title">Do you prefer an established or newer firm?</div>
+      <div class="finder-question-hint">Longer track record vs. newer, energetic firms</div>
+      <div class="filter-chips" id="finderMaturityChips">
+        <button class="chip ${finderMaturity === 'any' ? 'active' : ''}" data-maturity="any">No preference</button>
+        <button class="chip ${finderMaturity === 'established' ? 'active' : ''}" data-maturity="established">Established (founded before 2000)</button>
+        <button class="chip ${finderMaturity === 'modern' ? 'active' : ''}" data-maturity="modern">Modern (founded 2000s)</button>
+        <button class="chip ${finderMaturity === 'newer' ? 'active' : ''}" data-maturity="newer">Newer (founded 2010+)</button>
+      </div>
+    </div>
+
+    <div class="finder-results">
+      <div class="finder-results-label">Your Matches</div>
+      <div id="finderResultsList"></div>
+    </div>
+  `;
+
+  document.querySelector('#findInvestorsView .detail-back').addEventListener('click', (e) => {
+    e.preventDefault();
+    window.location.hash = '';
+  });
+
+  document.getElementById('finderSectorChips').addEventListener('click', (e) => {
+    if (!e.target.classList.contains('chip')) return;
+    const sector = e.target.dataset.sector;
+    if (finderSectors.has(sector)) {
+      finderSectors.delete(sector);
+      e.target.classList.remove('active');
+    } else {
+      finderSectors.add(sector);
+      e.target.classList.add('active');
+    }
+    renderFinderResults();
+  });
+
+  document.getElementById('finderScaleChips').addEventListener('click', (e) => {
+    if (!e.target.classList.contains('chip')) return;
+    document.querySelectorAll('#finderScaleChips .chip').forEach(c => c.classList.remove('active'));
+    e.target.classList.add('active');
+    finderScale = e.target.dataset.scale;
+    renderFinderResults();
+  });
+
+  document.getElementById('finderMaturityChips').addEventListener('click', (e) => {
+    if (!e.target.classList.contains('chip')) return;
+    document.querySelectorAll('#finderMaturityChips .chip').forEach(c => c.classList.remove('active'));
+    e.target.classList.add('active');
+    finderMaturity = e.target.dataset.maturity;
+    renderFinderResults();
+  });
+
+  renderFinderResults();
+}
 function renderPartnerProfile(slug) {
   const p = partnerProfiles[slug];
   if (!p) return;
