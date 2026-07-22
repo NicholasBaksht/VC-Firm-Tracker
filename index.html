@@ -2914,9 +2914,12 @@ function renderFirms() {
         <div class="holdings-label">Notable Public Portfolio Companies</div>
         ${holdingsHTML}
       </div>
-      <div class="card-footer">
+    <div class="card-footer">
         <a href="#${firm.slug}" class="firm-page-link">View Firm Page →</a>
         ${firm.seoPage ? `<a href="${firm.seoPage}" class="seo-page-link">Standalone Profile ↗</a>` : ''}
+        <button class="shortlist-btn ${getShortlist().has(firm.slug) ? 'saved' : ''}" data-slug="${firm.slug}">
+          ${getShortlist().has(firm.slug) ? '★ Saved' : '☆ Save'}
+        </button>
         <label class="compare-check">
           <input type="checkbox" class="compare-checkbox" data-slug="${firm.slug}" ${compareSet.has(firm.slug) ? 'checked' : ''}>
           Compare
