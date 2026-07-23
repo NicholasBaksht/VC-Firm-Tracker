@@ -3139,10 +3139,53 @@ function computePhilosophyScores(firm) {
     if (cat.sectorMatches) {
       matched = firm.sectors.some(s => cat.sectorMatches.includes(s));
     } else if (cat.stageMatches) {
-      matched = stages.some(s => cat.stageMatches.includes(s));
+matched = stages.some(s => cat.stageMatches.includes(s));
     }
     return { ...cat, score: matched ? 5 : 1 };
   });
+}
+
+// ============================================================
+// GEOGRAPHIC INVESTMENT HEATMAP — like the philosophy scorecard,
+// every region score here is derived from real, sourced data
+// rather than invented. Two tiers, deliberately not a fake 1-5
+// precision scale:
+//   - Primary region (score 5): derived automatically from the
+//     firm's real headquarters address (firm.hq) - always
+//     available, zero new research needed.
+//   - Secondary regions (score 3): only added via firmGeography
+//     below, and only for firms where a specific additional
+//     office or market was explicitly confirmed during that
+//     firm's research (see its thesis/timeline for the same
+//     facts in prose) - e.g. Battery Ventures' Tel Aviv and
+//     London offices, GV's London office, IVP's 2023 London
+//     office, Index Ventures' San Francisco office.
+// Every other firm shows a single, honest, HQ-derived region
+// until dedicated geography research is done for it - exactly
+// the same "gracefully handle missing data" pattern used by the
+// performance dashboard and philosophy scorecard.
+// ============================================================
+function getRegionFromHQ(hq) {
+  if (hq.includes(', UK') || hq.includes('London')) return 'United Kingdom';
+  // Every other firm's HQ in this dataset is a US city/state
+  return 'United States';
+}
+
+const firmGeography = {
+  "battery-ventures": { secondary: ['United Kingdom', 'Israel'] },
+  "gv": { secondary: ['United Kingdom'] },
+  "ivp": { secondary: ['United Kingdom'] },
+  "index-ventures": { secondary: ['United States'] }
+};
+
+function computeGeography(firm) {
+  const primary = getRegionFromHQ(firm.hq);
+  const secondary = (firmGeography[firm.slug] && firmGeography[firm.slug].secondary) || [];
+  const regions = [{ region: primary, score: 5 }];
+  secondary.forEach(r => {
+    if (r !== primary) regions.push({ region: r, score: 3 });
+  });
+  return regions;
 }
 
 const firms = [
