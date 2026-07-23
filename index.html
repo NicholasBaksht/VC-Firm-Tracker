@@ -4811,7 +4811,8 @@ function renderDetail(firm) {
     <a href="#" class="detail-back" id="backToList">← Back to all firms</a>
     <div class="detail-card">
       <div class="detail-rank">NO. ${String(firm.rank).padStart(2, '0')} BY AUM</div>
-      <div class="detail-name">${firm.name}</div>
+<div class="detail-name">${firm.name}</div>
+      <div class="detail-personality">${computeInvestmentPersonality(firm).sentence}</div>
       <div class="detail-meta">
         <a href="${firm.website}" target="_blank" rel="noopener noreferrer" class="firm-link">${firm.website.replace('https://', '')} ↗</a>
         ${firm.seoPage ? ` · <a href="${firm.seoPage}" class="firm-link">Standalone Profile Page ↗</a>` : ''}
