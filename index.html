@@ -1036,6 +1036,77 @@
     .leaderboard-row { grid-template-columns: 24px 1fr auto; }
   }
 
+ /* ---------- INVESTMENT PERFORMANCE DASHBOARD ---------- */
+  .performance-dashboard {
+    margin: 32px 0;
+    padding: 28px 26px;
+    background: var(--surface);
+    border: 1px solid var(--hairline);
+    border-radius: 6px;
+  }
+  .performance-dashboard-label {
+    font-family: var(--mono);
+    font-size: 11px;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: var(--gold);
+    margin-bottom: 4px;
+  }
+  .performance-dashboard-sub {
+    font-size: 13px;
+    color: var(--ink-dim);
+    margin-bottom: 20px;
+  }
+  .perf-stat-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+    gap: 14px;
+  }
+  .perf-stat-card {
+    background: var(--surface-raised);
+    border: 1px solid var(--hairline);
+    border-radius: 6px;
+    padding: 16px 16px 14px;
+    opacity: 0;
+    transform: translateY(6px);
+    animation: perfCardIn 0.4s ease forwards;
+    transition: border-color 0.2s ease, transform 0.2s ease;
+  }
+  .perf-stat-card:hover {
+    border-color: var(--gold);
+    transform: translateY(-2px);
+  }
+  @keyframes perfCardIn {
+    to { opacity: 1; transform: translateY(0); }
+  }
+  .perf-stat-value {
+    font-family: var(--mono);
+    font-size: 24px;
+    font-weight: 600;
+    color: var(--gold-bright);
+    line-height: 1.15;
+    word-break: break-word;
+  }
+  .perf-stat-value.text-value {
+    font-size: 16px;
+    font-family: var(--sans);
+    color: var(--ink);
+  }
+  .perf-stat-label {
+    font-family: var(--mono);
+    font-size: 10.5px;
+    letter-spacing: 0.05em;
+    text-transform: uppercase;
+    color: var(--ink-dim);
+    margin-top: 6px;
+  }
+  .performance-dashboard-note {
+    font-family: var(--mono);
+    font-size: 11px;
+    color: var(--hairline);
+    margin-top: 18px;
+  }
+
   /* ---------- FIRM DETAIL PAGE ---------- */
   .detail-back {
     font-family: var(--mono);
