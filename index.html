@@ -5084,13 +5084,13 @@ ${renderWhyThisVC(firm)}
       ${renderPhilosophyScorecard(firm)}
       ${leadershipHTML}
       ${timelineHTML}
-      <div class="holdings">
+   <div class="holdings">
         <div class="holdings-label">All Notable Public Portfolio Companies</div>
         ${holdingsHTML}
       </div>
+      ${renderSimilarFirms(firm)}
     </div>
   `;
-
   document.getElementById('backToList').addEventListener('click', (e) => {
     e.preventDefault();
     window.location.hash = '';
