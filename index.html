@@ -4265,6 +4265,40 @@ function renderPerformanceDashboard(firm) {
     </div>
   `;
 }
+// Builds the Investment Philosophy Scorecard for a firm's detail
+// page. Every score comes from computePhilosophyScores(), which
+// derives them deterministically from the firm's real, sourced
+// sectors and investment stages - nothing here is hand-picked per
+// firm. Adding a category later means adding one entry to
+// philosophyCategories above; this function needs no changes.
+function renderPhilosophyScorecard(firm) {
+  const scores = computePhilosophyScores(firm);
+
+  const rowsHTML = scores.map((c, i) => {
+    const starGlyphs = '★'.repeat(c.score) + '☆'.repeat(5 - c.score);
+    const fillPct = c.score * 20;
+    return `
+      <div class="phil-row">
+        <div class="phil-row-header">
+          <span class="phil-icon">${c.icon}</span>
+          <span class="phil-label">${c.label}</span>
+          <span class="phil-stars">${starGlyphs}</span>
+        </div>
+        <div class="phil-bar-track">
+          <div class="phil-bar-fill" style="width: ${fillPct}%; animation-delay: ${i * 0.04}s;"></div>
+        </div>
+      </div>
+    `;
+  }).join('');
+
+  return `
+    <div class="philosophy-scorecard">
+      <div class="philosophy-scorecard-label">Investment Philosophy Scorecard</div>
+      <div class="philosophy-scorecard-sub">Derived directly from this firm's researched sector and stage focus — 5 stars means it's one of their stated areas, 1 star means it isn't.</div>
+      <div class="philosophy-grid">${rowsHTML}</div>
+    </div>
+  `;
+}
 
 function renderDetail(firm) {
   const totalHoldings = firm.holdings.length;
