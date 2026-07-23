@@ -4417,12 +4417,7 @@ function matchesAumTier(firm) {
   if (activeAumTier === 'micro') return num < 0.5;
   return true; // 'all'
 }
-  const num = parseAumNumber(firm.aum);
-  if (activeAumTier === 'mega') return num >= 50;
-  if (activeAumTier === 'large') return num >= 20 && num < 50;
-  if (activeAumTier === 'mid') return num < 20;
-  return true; // 'all'
-}
+
 
 function matchesSectorFilter(firm) {
   if (activeSectors.size === 0) return true; // no sectors selected = show all
