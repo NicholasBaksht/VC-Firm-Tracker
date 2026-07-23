@@ -4101,6 +4101,64 @@ function renderFirms() {
 }
 
 // Renders one firm's full detail page into #detailView
+  // Builds the Investment Performance Dashboard for a firm's detail
+// page. Combines two kinds of metrics:
+//   1. Computed live from data already on the page (Power Score,
+//      years active, tracked public holdings, most valuable
+//      holding, current fund size) - always available, zero risk
+//      of being wrong or stale.
+//   2. Looked up from firmPerformance (total portfolio, unicorns,
+//      IPO exits, acquisitions) - real sourced figures where
+//      research turned them up, genuinely absent otherwise. Cards
+//      for missing fields are skipped entirely, never shown as
+//      "N/A" or a placeholder.
+// This is the reusable foundation: adding a new metric for more
+// firms later just means adding a key to firmPerformance above -
+// no changes needed here or to the rendering logic.
+function renderPerformanceDashboard(firm) {
+  const perf = firmPerformance[firm.slug] || {};
+  const currentYear = new Date().getFullYear();
+  const yearsActive = currentYear - firm.founded;
+
+  // Find the most valuable currently-priced holding, if any
+  const pricedHoldings = firm.holdings.filter(h => h.price !== null);
+  const mostValuable = pricedHoldings.length > 0
+    ? pricedHoldings.reduce((a, b) => (b.price > a.price ? b : a))
+    : null;
+
+  // Build the metric list - order matters for visual hierarchy.
+  // Each entry is skipped automatically if its value is null/undefined.
+  const metrics = [
+    { label: 'Total Portfolio Companies', value: perf.totalPortfolio ? `${perf.totalPortfolio}+` : null },
+    { label: 'Public Companies Tracked', value: firm.holdings.length },
+    { label: 'Unicorns', value: perf.unicorns ? `${perf.unicorns}+` : null },
+    { label: 'IPO Exits', value: perf.ipoExits ? `${perf.ipoExits}+` : null },
+    { label: 'Acquisitions', value: perf.acquisitions ? `${perf.acquisitions}+` : null },
+    { label: 'Power Score', value: computePowerScore(firm) },
+    { label: 'Years Active', value: yearsActive },
+    { label: 'Current Fund Size', value: firm.aum, isText: true },
+    { label: 'Most Valuable Holding', value: mostValuable ? `${mostValuable.name} (${mostValuable.ticker})` : null, isText: true }
+  ].filter(m => m.value !== null && m.value !== undefined);
+
+  const cardsHTML = metrics.map((m, i) => `
+    <div class="perf-stat-card" style="animation-delay: ${i * 0.05}s;">
+      <div class="perf-stat-value ${m.isText ? 'text-value' : ''}">${m.value}</div>
+      <div class="perf-stat-label">${m.label}</div>
+    </div>
+  `).join('');
+
+  const hasResearchedStats = Object.keys(perf).length > 0;
+
+  return `
+    <div class="performance-dashboard">
+      <div class="performance-dashboard-label">Investment Performance</div>
+      <div class="performance-dashboard-sub">Real, sourced metrics — figures with a "+" are approximate, gathered from the firm's own reporting or reputable coverage.</div>
+      <div class="perf-stat-grid">${cardsHTML}</div>
+      ${!hasResearchedStats ? '<div class="performance-dashboard-note">Total portfolio, unicorn, IPO, and acquisition counts for this firm haven\'t been researched yet — shown here are only the metrics already verified on this page.</div>' : ''}
+    </div>
+  `;
+}
+
 function renderDetail(firm) {
   const totalHoldings = firm.holdings.length;
   const pricedHoldings = firm.holdings.filter(h => h.price !== null).length;
