@@ -4421,6 +4421,61 @@ function renderPhilosophyScorecard(firm) {
     </div>
   `;
 }
+// Simple flag lookup for the regions currently in use. Falls back
+// to a globe icon for any future region without a specific flag,
+// so adding new regions never requires touching this function.
+const regionFlags = {
+  'United States': '🇺🇸',
+  'United Kingdom': '🇬🇧',
+  'Israel': '🇮🇱',
+  'Canada': '🇨🇦',
+  'Europe': '🇪🇺',
+  'India': '🇮🇳',
+  'Australia & New Zealand': '🇦🇺',
+  'Latin America': '🌎',
+  'Southeast Asia': '🌏',
+  'East Asia': '🌏',
+  'Middle East': '🌍',
+  'Africa': '🌍'
+};
+
+// Builds the Geographic Investment Heatmap for a firm's detail
+// page. Regions come from computeGeography(), which derives them
+// from the firm's real headquarters plus any specifically
+// verified secondary offices in firmGeography above - see the
+// comment block near that data for the honesty rationale.
+function renderGeographicHeatmap(firm) {
+  const regions = computeGeography(firm);
+  const hasSecondary = regions.length > 1;
+
+  const rowsHTML = regions.map((r, i) => {
+    const tier = r.score === 5 ? 'primary' : 'secondary';
+    const tierLabel = r.score === 5 ? 'Headquarters Region' : 'Confirmed Office';
+    const flag = regionFlags[r.region] || '🌐';
+    const fillPct = r.score * 20;
+    return `
+      <div class="geo-row ${tier}">
+        <div class="geo-row-header">
+          <span class="geo-flag">${flag}</span>
+          <span class="geo-region-name">${r.region}</span>
+          <span class="geo-tier-label">${tierLabel}</span>
+        </div>
+        <div class="geo-bar-track">
+          <div class="geo-bar-fill" style="width: ${fillPct}%; animation-delay: ${i * 0.06}s;"></div>
+        </div>
+      </div>
+    `;
+  }).join('');
+
+  return `
+    <div class="geo-heatmap">
+      <div class="geo-heatmap-label">Geographic Investment</div>
+      <div class="geo-heatmap-sub">Headquarters region is confirmed for every firm; additional regions are shown only where a specific office or market was verified during research.</div>
+      ${rowsHTML}
+      ${!hasSecondary ? '<div class="geo-heatmap-note">No additional regions have been researched for this firm yet — shown here is its confirmed headquarters region only.</div>' : ''}
+    </div>
+  `;
+}
 
 function renderDetail(firm) {
   const totalHoldings = firm.holdings.length;
