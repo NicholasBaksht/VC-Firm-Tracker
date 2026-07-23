@@ -5032,68 +5032,7 @@ function computeFinderMatches() {
   return results.sort((a, b) => b.score - a.score);
 }
 
-    // Fund Scale - 30 points max
-    let scalePts;
-    if (finderScale !== 'any') {
-      const num = parseAumNumber(firm.aum);
-      const tierMatch =
-        (finderScale === 'mega' && num >= 50) ||
-        (finderScale === 'large' && num >= 20 && num < 50) ||
-        (finderScale === 'mid' && num < 20);
-      scalePts = tierMatch ? 30 : 0;
-      breakdown.push({
-        label: 'Fund Scale',
-        points: scalePts,
-        maxPoints: 30,
-        detail: tierMatch ? `${firm.aum} matches your fund size preference` : `${firm.aum} is outside your preferred range`
-      });
-    } else {
-      scalePts = 15; // half-credit, question skipped
-      breakdown.push({ label: 'Fund Scale', points: scalePts, maxPoints: 30, detail: 'Not specified' });
-    }
 
-    // Firm Maturity - 15 points max
-    let maturityPts;
-    if (finderMaturity !== 'any') {
-      const maturityMatch =
-        (finderMaturity === 'established' && firm.founded < 2000) ||
-        (finderMaturity === 'modern' && firm.founded >= 2000 && firm.founded < 2010) ||
-        (finderMaturity === 'newer' && firm.founded >= 2010);
-      maturityPts = maturityMatch ? 15 : 0;
-      breakdown.push({
-        label: 'Firm Maturity',
-        points: maturityPts,
-        maxPoints: 15,
-        detail: `Founded ${firm.founded}${maturityMatch ? ' — matches your preference' : ''}`
-      });
-    } else {
-      maturityPts = 7.5; // half-credit, question skipped
-      breakdown.push({ label: 'Firm Maturity', points: maturityPts, maxPoints: 15, detail: 'Not specified' });
-    }
-
-    // Track Record - 15 points max, drawn from the firm's real,
-    // already-computed Power Score (transparent, not invented here)
-    const trackPts = (computePowerScore(firm) / 100) * 15;
-    breakdown.push({
-      label: 'Track Record',
-      points: trackPts,
-      maxPoints: 15,
-      detail: `Power Score of ${computePowerScore(firm)}/100`
-    });
-
-    const score = Math.round(sectorPts + scalePts + maturityPts + trackPts);
-    return { firm, score, breakdown };
-  });
-
-  return results.sort((a, b) => b.score - a.score);
-}
-function getMatchQualityLabel(score) {
-  if (score >= 90) return 'Excellent Match';
-  if (score >= 75) return 'Strong Match';
-  if (score >= 60) return 'Good Match';
-  if (score >= 40) return 'Moderate Match';
-  return 'Limited Match';
-}
 function getMatchQualityLabel(score) {
   if (score >= 90) return 'Excellent Match';
   if (score >= 75) return 'Strong Match';
@@ -5140,7 +5079,8 @@ function renderFinderResults() {
   `;
   }).join('');
 }
-  // Renders the Pricing page - a Free vs Pro comparison. Pro is
+
+// Renders the Pricing page - a Free vs Pro comparison. Pro is
 // clearly labeled "Coming Soon" since this is a static site with
 // no real payment processing behind it; this is UI structure only.
 function renderPricing() {
@@ -5191,12 +5131,14 @@ function renderPricing() {
 
 function renderFindInvestors() {
   const allSectors = [...new Set(firms.flatMap(f => f.sectors))].sort();
+  const allStages = ['Pre-Seed', 'Seed', 'Series A', 'Series B', 'Growth', 'Late Stage'];
+  const allRegions = [...new Set(firms.flatMap(f => computeGeography(f).map(r => r.region)))].sort();
 
   document.getElementById('findInvestorsView').innerHTML = `
     <a href="#" class="detail-back">← Back to all firms</a>
     <div class="dashboard-title">Find My Investors</div>
     <div class="finder-intro">
-      <p>Answer a few questions and we'll match you against the 13 firms tracked on this page — using only real data already here, never guesses. Skip any question you're not sure about.</p>
+      <p>Answer a few questions and we'll match you against all ${firms.length} firms tracked on this page — using only real data already here, never guesses. Skip any question you're not sure about.</p>
     </div>
 
     <div class="finder-question">
@@ -5208,24 +5150,49 @@ function renderFindInvestors() {
     </div>
 
     <div class="finder-question">
-      <div class="finder-question-title">What size fund fits your round?</div>
-      <div class="finder-question-hint">Bigger funds typically write bigger, later-stage checks</div>
-      <div class="filter-chips" id="finderScaleChips">
-        <button class="chip ${finderScale === 'any' ? 'active' : ''}" data-scale="any">No preference</button>
-        <button class="chip ${finderScale === 'mid' ? 'active' : ''}" data-scale="mid">Under $20B (smaller funds)</button>
-        <button class="chip ${finderScale === 'large' ? 'active' : ''}" data-scale="large">$20B–$50B</button>
-        <button class="chip ${finderScale === 'mega' ? 'active' : ''}" data-scale="mega">$50B+ (mega funds)</button>
+      <div class="finder-question-title">What stage is your startup at?</div>
+      <div class="finder-question-hint">Select any that apply — leave blank to skip</div>
+      <div class="filter-chips" id="finderStageChips">
+        ${allStages.map(s => `<button class="chip ${finderStages.has(s) ? 'active' : ''}" data-stage="${s}">${s}</button>`).join('')}
       </div>
     </div>
 
     <div class="finder-question">
-      <div class="finder-question-title">Do you prefer an established or newer firm?</div>
-      <div class="finder-question-hint">Longer track record vs. newer, energetic firms</div>
-      <div class="filter-chips" id="finderMaturityChips">
-        <button class="chip ${finderMaturity === 'any' ? 'active' : ''}" data-maturity="any">No preference</button>
-        <button class="chip ${finderMaturity === 'established' ? 'active' : ''}" data-maturity="established">Established (founded before 2000)</button>
-        <button class="chip ${finderMaturity === 'modern' ? 'active' : ''}" data-maturity="modern">Modern (founded 2000s)</button>
-        <button class="chip ${finderMaturity === 'newer' ? 'active' : ''}" data-maturity="newer">Newer (founded 2010+)</button>
+      <div class="finder-question-title">How much are you looking to raise?</div>
+      <div class="finder-question-hint">Bigger funds typically write bigger, later-stage checks</div>
+      <div class="filter-chips" id="finderScaleChips">
+        <button class="chip ${finderScale === 'any' ? 'active' : ''}" data-scale="any">No preference</button>
+        <button class="chip ${finderScale === 'mid' ? 'active' : ''}" data-scale="mid">Smaller check (funds under $20B)</button>
+        <button class="chip ${finderScale === 'large' ? 'active' : ''}" data-scale="large">Mid-size check ($20B–$50B funds)</button>
+        <button class="chip ${finderScale === 'mega' ? 'active' : ''}" data-scale="mega">Large check ($50B+ mega funds)</button>
+      </div>
+    </div>
+
+    <div class="finder-question">
+      <div class="finder-question-title">Where is your startup based?</div>
+      <div class="finder-question-hint">Matches firms with confirmed presence in that region</div>
+      <div class="filter-chips" id="finderRegionChips">
+        <button class="chip ${finderRegion === 'any' ? 'active' : ''}" data-region="any">No preference</button>
+        ${allRegions.map(r => `<button class="chip ${finderRegion === r ? 'active' : ''}" data-region="${r}">${r}</button>`).join('')}
+      </div>
+    </div>
+
+    <div class="finder-question">
+      <div class="finder-question-title">Enterprise or consumer?</div>
+      <div class="finder-question-hint">Which best describes your business model</div>
+      <div class="filter-chips" id="finderFocusChips">
+        <button class="chip ${finderFocus === 'any' ? 'active' : ''}" data-focus="any">No preference</button>
+        <button class="chip ${finderFocus === 'enterprise' ? 'active' : ''}" data-focus="enterprise">Enterprise</button>
+        <button class="chip ${finderFocus === 'consumer' ? 'active' : ''}" data-focus="consumer">Consumer</button>
+      </div>
+    </div>
+
+    <div class="finder-question">
+      <div class="finder-question-title">Is AI core to your product?</div>
+      <div class="finder-question-hint">Matches firms with a stated AI investment focus</div>
+      <div class="filter-chips" id="finderAIChips">
+        <button class="chip ${!finderAI ? 'active' : ''}" data-ai="no">No / not specified</button>
+        <button class="chip ${finderAI ? 'active' : ''}" data-ai="yes">Yes</button>
       </div>
     </div>
 
@@ -5253,6 +5220,19 @@ function renderFindInvestors() {
     renderFinderResults();
   });
 
+  document.getElementById('finderStageChips').addEventListener('click', (e) => {
+    if (!e.target.classList.contains('chip')) return;
+    const stage = e.target.dataset.stage;
+    if (finderStages.has(stage)) {
+      finderStages.delete(stage);
+      e.target.classList.remove('active');
+    } else {
+      finderStages.add(stage);
+      e.target.classList.add('active');
+    }
+    renderFinderResults();
+  });
+
   document.getElementById('finderScaleChips').addEventListener('click', (e) => {
     if (!e.target.classList.contains('chip')) return;
     document.querySelectorAll('#finderScaleChips .chip').forEach(c => c.classList.remove('active'));
@@ -5261,11 +5241,27 @@ function renderFindInvestors() {
     renderFinderResults();
   });
 
-  document.getElementById('finderMaturityChips').addEventListener('click', (e) => {
+  document.getElementById('finderRegionChips').addEventListener('click', (e) => {
     if (!e.target.classList.contains('chip')) return;
-    document.querySelectorAll('#finderMaturityChips .chip').forEach(c => c.classList.remove('active'));
+    document.querySelectorAll('#finderRegionChips .chip').forEach(c => c.classList.remove('active'));
     e.target.classList.add('active');
-    finderMaturity = e.target.dataset.maturity;
+    finderRegion = e.target.dataset.region;
+    renderFinderResults();
+  });
+
+  document.getElementById('finderFocusChips').addEventListener('click', (e) => {
+    if (!e.target.classList.contains('chip')) return;
+    document.querySelectorAll('#finderFocusChips .chip').forEach(c => c.classList.remove('active'));
+    e.target.classList.add('active');
+    finderFocus = e.target.dataset.focus;
+    renderFinderResults();
+  });
+
+  document.getElementById('finderAIChips').addEventListener('click', (e) => {
+    if (!e.target.classList.contains('chip')) return;
+    document.querySelectorAll('#finderAIChips .chip').forEach(c => c.classList.remove('active'));
+    e.target.classList.add('active');
+    finderAI = e.target.dataset.ai === 'yes';
     renderFinderResults();
   });
 
