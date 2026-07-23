@@ -4241,7 +4241,7 @@ function renderDetail(firm) {
       <p class="detail-about">${firm.thesis}</p>
       <div class="founder-callout">
         <div class="founder-callout-label">For Founders</div>
-        <div class="founder-callout-row">
+    <div class="founder-callout-row">
           <div class="founder-callout-tags">
             ${firm.sectors.map(s => `<span class="compare-sector-tag">${s}</span>`).join('')}
           </div>
@@ -4249,6 +4249,7 @@ function renderDetail(firm) {
           <a href="#find-investors" class="founder-callout-cta">Check Your Fit →</a>
         </div>
       </div>
+      ${renderPerformanceDashboard(firm)}
       ${leadershipHTML}
       ${timelineHTML}
       <div class="holdings">
