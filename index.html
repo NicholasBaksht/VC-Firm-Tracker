@@ -3846,15 +3846,23 @@ function matchesSectorFilter(firm) {
   return firm.sectors.some(s => activeSectors.has(s));
 }
 
+// Investment Stage cards - multi-select, OR within the group (e.g.
+// Seed + Series A shows firms that invest in either), AND with
+// every other active filter, same pattern as the sector chips.
+function matchesStageFilter(firm) {
+  if (activeStages.size === 0) return true; // no stages selected = show all
+  const stages = firmStages[firm.slug] || [];
+  return stages.some(s => activeStages.has(s));
+}
+
 function matchesFilter(firm) {
   const eraMatch =
     activeFilter === 'pre2000' ? firm.founded < 2000 :
     activeFilter === '2000s' ? (firm.founded >= 2000 && firm.founded < 2010) :
     activeFilter === '2010s' ? firm.founded >= 2010 :
     true; // 'all'
-  return eraMatch && matchesAumTier(firm) && matchesSectorFilter(firm);
+  return eraMatch && matchesAumTier(firm) && matchesSectorFilter(firm) && matchesStageFilter(firm);
 }
-
 // Builds the sector filter chips dynamically from every unique
 // sector across all tracked firms - never hardcoded, so a new
 // sector added to any firm automatically gets its own filter chip.
