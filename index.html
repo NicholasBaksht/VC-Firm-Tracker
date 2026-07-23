@@ -4864,20 +4864,6 @@ document.getElementById('sectorFilterChips').addEventListener('click', (e) => {
   renderFirms();
 });
 
-// Sector chips - multi-select, toggle any number on/off
-document.getElementById('sectorFilterChips').addEventListener('click', (e) => {
-  if (!e.target.classList.contains('chip')) return;
-  const sector = e.target.dataset.sector;
-  if (activeSectors.has(sector)) {
-    activeSectors.delete(sector);
-    e.target.classList.remove('active');
-  } else {
-    activeSectors.add(sector);
-    e.target.classList.add('active');
-  }
-  renderFirms();
-});
-
 // AUM tier chips - single-select, like the era filter
 document.getElementById('aumFilterChips').addEventListener('click', (e) => {
   if (!e.target.classList.contains('chip')) return;
