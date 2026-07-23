@@ -4379,8 +4379,15 @@ function toggleShortlist(slug) {
   return { shortlist: current, limitReached: false };
 }
 function parseAumNumber(aumStr) {
-  const m = aumStr.match(/\$(\d+\.?\d*)B/);
-  return m ? parseFloat(m[1]) : 0;
+  const bMatch = aumStr.match(/\$(\d+\.?\d*)B/);
+  if (bMatch) return parseFloat(bMatch[1]);
+  // Handles fund sizes stated in millions (e.g. "$200M+"), converting
+  // to the same billions-denominated scale everything else uses -
+  // without this, any millions-denominated firm would silently
+  // parse as 0 and land in the wrong tier once tiers below $1B exist.
+  const mMatch = aumStr.match(/\$(\d+\.?\d*)M/);
+  if (mMatch) return parseFloat(mMatch[1]) / 1000;
+  return 0;
 }
 // Parses a firm's AUM string (e.g. "$58B+") into a plain number for
 // tier comparisons. Falls back to 0 if the format is unexpected.
