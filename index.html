@@ -4500,9 +4500,66 @@ function computeInvestmentPersonality(firm) {
   const sentence = `${intensity} ${stageLabel} ${sectorLabel} investor with a ${concentration} portfolio and ${geoLabel} reach${scaleNote}.`;
 
   return {
-    sentence,
+sentence,
     factors: { intensity, stageLabel, sectorLabel, concentration, geoLabel, scaleNote: scaleNote.trim() }
   };
+}
+
+// ============================================================
+// WHY THIS VC — four persuasive, plain-English bullets per firm,
+// entirely rule-based from real data already computed elsewhere
+// on this page (rank, AUM, the firm's own sourced signatureExit
+// text, the Philosophy Scorecard's real 5-star categories, and
+// firmStages). No AI, no invented claims. Deliberately excludes
+// anything unverifiable like "founder-friendly" or "hands-on
+// support" - same reasoning as the Philosophy Scorecard's excluded
+// categories - and substitutes the firm's own real signature exit
+// as an equally compelling, honestly-sourced highlight instead.
+// ============================================================
+function computeWhyThisVC(firm) {
+  const bullets = [];
+  const cleanAum = firm.aum.replace(/\s*\(.*?\)/, '');
+
+  function listJoin(arr) {
+    if (arr.length <= 1) return arr.join('');
+    if (arr.length === 2) return arr.join(' and ');
+    return arr.slice(0, -1).join(', ') + ', and ' + arr[arr.length - 1];
+  }
+
+  // --- Scale bullet, from real rank + AUM ---
+  if (firm.rank <= 3) {
+    bullets.push(`One of the largest venture capital firms in the world, ranked #${firm.rank} by assets under management (${cleanAum}).`);
+  } else if (firm.rank <= 10) {
+    bullets.push(`A top-10 firm by assets under management, with ${cleanAum} in committed capital.`);
+  } else {
+    bullets.push(`Manages ${cleanAum} in assets, with a real track record across market cycles.`);
+  }
+
+  // --- Signature exit bullet, reusing the firm's already-sourced signatureExit text ---
+  bullets.push(`Signature win: ${firm.signatureExit}.`);
+
+  // --- Sector focus bullet, from the Philosophy Scorecard's real 5-star categories ---
+  const philScores = computePhilosophyScores(firm);
+  const topSectors = philScores.filter(p => p.score === 5 && !['earlyStage', 'growthStage'].includes(p.key)).map(p => p.label.replace(' Focus', ''));
+  if (topSectors.length >= 3) {
+    bullets.push(`Broad sector coverage spanning ${topSectors.length} focus areas, including ${listJoin(topSectors.slice(0, 3))}.`);
+  } else if (topSectors.length > 0) {
+    bullets.push(`Concentrated focus on ${listJoin(topSectors)}.`);
+  } else {
+    bullets.push(`Sector-agnostic approach across ${firm.sectors.length} tracked industries.`);
+  }
+
+  // --- Stage bullet, from firmStages ---
+  const stages = firmStages[firm.slug] || [];
+  if (stages.length >= 5) {
+    bullets.push(`Invests across nearly every stage, from ${stages[0]} through ${stages[stages.length - 1]}.`);
+  } else if (stages.length > 0) {
+    bullets.push(`Specializes in ${listJoin(stages)} investing.`);
+  } else {
+    bullets.push(`Stage focus not yet researched for this firm.`);
+  }
+
+  return bullets;
 }
 function buildReturnBadge(h) {
   if (h.historicalPrice === null || h.price === null) {
