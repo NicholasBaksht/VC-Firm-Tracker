@@ -3034,9 +3034,49 @@ const firmPerformance = {
   "crv": { totalPortfolio: 750, ipoExits: 80 },
   "union-square-ventures": { totalPortfolio: 130 },
   "first-round-capital": { totalPortfolio: 500 },
-  "ivp": { totalPortfolio: 400, ipoExits: 110 },
+"ivp": { totalPortfolio: 400, ipoExits: 110 },
   "true-ventures": { totalPortfolio: 390, unicorns: 8, ipoExits: 5, acquisitions: 130 }
 };
+
+// ============================================================
+// INVESTMENT PHILOSOPHY SCORECARD — every score below is computed
+// DETERMINISTICALLY from data already researched and sourced
+// elsewhere on this page (firm.sectors, firmStages). Nothing here
+// is a subjective judgment call: 5 stars means "this is one of the
+// firm's own stated focus areas," 1 star means "not a stated
+// focus." Categories like "Founder Friendly" or "Hands-on Support"
+// are deliberately excluded - there's no objective, sourced way to
+// score those without dedicated per-firm qualitative research.
+// Adding a category later just means adding one entry to this
+// array; the renderer handles the rest automatically.
+// ============================================================
+const philosophyCategories = [
+  { key: 'ai', label: 'AI Focus', icon: '🤖', sectorMatches: ['AI', 'AI Infrastructure'] },
+  { key: 'enterprise', label: 'Enterprise Focus', icon: '🏢', sectorMatches: ['Enterprise', 'Enterprise Infrastructure', 'Enterprise Software'] },
+  { key: 'consumer', label: 'Consumer Focus', icon: '🛍️', sectorMatches: ['Consumer', 'Consumer Internet', 'Consumer Tech'] },
+  { key: 'fintech', label: 'Fintech Focus', icon: '💳', sectorMatches: ['Fintech'] },
+  { key: 'healthcare', label: 'Healthcare Focus', icon: '🩺', sectorMatches: ['Healthcare', 'Life Sciences'] },
+  { key: 'climate', label: 'Climate Focus', icon: '🌎', sectorMatches: ['Clean Energy'] },
+  { key: 'marketplace', label: 'Marketplace Focus', icon: '🔀', sectorMatches: ['Marketplaces'] },
+  { key: 'devtools', label: 'Dev Tools & Infrastructure', icon: '🛠️', sectorMatches: ['Cloud Infrastructure', 'Cloud Software', 'Cybersecurity', 'Security', 'SaaS'] },
+  { key: 'earlyStage', label: 'Early-Stage Focus', icon: '🌱', stageMatches: ['Pre-Seed', 'Seed'] },
+  { key: 'growthStage', label: 'Growth Investing', icon: '📈', stageMatches: ['Growth', 'Late Stage'] }
+];
+
+// Score is binary by design (5 = stated focus, 1 = not) rather than
+// invented intermediate values - see comment block above.
+function computePhilosophyScores(firm) {
+  const stages = firmStages[firm.slug] || [];
+  return philosophyCategories.map(cat => {
+    let matched = false;
+    if (cat.sectorMatches) {
+      matched = firm.sectors.some(s => cat.sectorMatches.includes(s));
+    } else if (cat.stageMatches) {
+      matched = stages.some(s => cat.stageMatches.includes(s));
+    }
+    return { ...cat, score: matched ? 5 : 1 };
+  });
+}
 
 const firms = [
   {
