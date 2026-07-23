@@ -4474,6 +4474,33 @@ function computeGenomeScores(firm) {
 }
 
 // ============================================================
+// SIMILAR FIRMS — finds the firms with the closest overall
+// investment profile to a given firm, using straight-line
+// (Euclidean) distance across the same 8 real, already-computed
+// Genome dimensions (fund size, portfolio breadth, stage breadth,
+// sector breadth, geographic reach, years active, Power Score,
+// philosophy intensity). No new data, no separate "similarity"
+// scoring logic to maintain - two firms are "similar" here purely
+// because their real Genomes are numerically close, and results
+// automatically shift as more firms are added or existing data
+// is refined, with zero code changes needed.
+// ============================================================
+function computeSimilarFirms(firm, count = 3) {
+  const targetVector = computeGenomeScores(firm).map(d => d.value);
+
+  const distances = firms
+    .filter(f => f.slug !== firm.slug)
+    .map(f => {
+      const vector = computeGenomeScores(f).map(d => d.value);
+      const distance = Math.sqrt(vector.reduce((sum, v, i) => sum + Math.pow(v - targetVector[i], 2), 0));
+      return { firm: f, distance };
+    });
+
+  distances.sort((a, b) => a.distance - b.distance);
+  return distances.slice(0, count);
+}
+
+// ============================================================
 // INVESTMENT PERSONALITY — a one-line, plain-English description
 // of each firm's investing style, assembled entirely from simple
 // rules against real data already computed elsewhere on this page
