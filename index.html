@@ -4853,6 +4853,26 @@ function renderGenome(firm) {
     </div>
   `;
 }
+// Builds the "Why This VC?" card for a firm's detail page. Every
+// bullet comes straight from computeWhyThisVC() - a direct,
+// unedited list of real, rule-derived facts, not persuasive copy
+// written separately from the data.
+function renderWhyThisVC(firm) {
+  const bullets = computeWhyThisVC(firm);
+  const itemsHTML = bullets.map(b => `
+    <li class="why-this-vc-item">
+      <span class="why-this-vc-bullet">•</span>
+      <span>${b}</span>
+    </li>
+  `).join('');
+
+  return `
+    <div class="why-this-vc">
+      <div class="why-this-vc-title">Why ${firm.short}?</div>
+      <ul class="why-this-vc-list">${itemsHTML}</ul>
+    </div>
+  `;
+}
 
 function renderDetail(firm) {
   const totalHoldings = firm.holdings.length;
