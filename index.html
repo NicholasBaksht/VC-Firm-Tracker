@@ -4139,13 +4139,13 @@ function toggleShortlist(slug) {
   saveShortlistToStorage(current);
   return { shortlist: current, limitReached: false };
 }
-
+function parseAumNumber(aumStr) {
+  const m = aumStr.match(/\$(\d+\.?\d*)B/);
+  return m ? parseFloat(m[1]) : 0;
+}
 // Parses a firm's AUM string (e.g. "$58B+") into a plain number for
 // tier comparisons. Falls back to 0 if the format is unexpected.
-function parseAumNumber(aumStr) {
-  const m = aumStr.match(/\$(\d+)B/);
-  return m ? parseInt(m[1]) : 0;
-}
+
 
 // Returns a plain-language fund scale label for a firm, using the
 // same tiers as the AUM filter and Find Investors questionnaire -
