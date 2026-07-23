@@ -5088,19 +5088,38 @@ function computeFinderMatches() {
   return results.sort((a, b) => b.score - a.score);
 }
 
+function getMatchQualityLabel(score) {
+  if (score >= 90) return 'Excellent Match';
+  if (score >= 75) return 'Strong Match';
+  if (score >= 60) return 'Good Match';
+  if (score >= 40) return 'Moderate Match';
+  return 'Limited Match';
+}
+
 function renderFinderResults() {
   const matches = computeFinderMatches();
   const container = document.getElementById('finderResultsList');
   if (!container) return;
 
-  container.innerHTML = matches.map(({ firm, score, breakdown }) => `
+  container.innerHTML = matches.map(({ firm, score, reasons }) => {
+    const passedReasons = reasons.filter(r => r.passed === true);
+    return `
     <div class="finder-result-card">
       <div class="finder-result-head">
+        <div class="finder-score-block">
+          <div class="finder-score-pct">${score}%</div>
+          <div class="finder-score-quality">${getMatchQualityLabel(score)}</div>
+        </div>
         <div class="finder-result-name"><a href="#${firm.slug}">${firm.name}</a></div>
-        <span class="finder-score-badge">${score}/100</span>
       </div>
+      ${passedReasons.length > 0 ? `
+        <div class="finder-reasons">
+          <div class="finder-reasons-label">Reason:</div>
+          ${passedReasons.map(r => `<div class="finder-reason-check">✓ ${r.label}</div>`).join('')}
+        </div>
+      ` : `<div class="finder-reasons-empty">Add more preferences above to see specific reasons this firm fits.</div>`}
       <div class="finder-breakdown">
-        ${breakdown.map(b => `
+        ${reasons.map(b => `
           <div class="finder-breakdown-row">
             <span class="finder-breakdown-label">${b.label}</span>
             <div class="finder-breakdown-track">
@@ -5112,7 +5131,8 @@ function renderFinderResults() {
         `).join('')}
       </div>
     </div>
-  `).join('');
+  `;
+  }).join('');
 }
   // Renders the Pricing page - a Free vs Pro comparison. Pro is
 // clearly labeled "Coming Soon" since this is a static site with
