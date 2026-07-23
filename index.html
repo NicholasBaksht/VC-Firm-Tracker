@@ -2939,7 +2939,32 @@ const firmStages = {
   "true-ventures": ["Pre-Seed", "Seed", "Series A"],
   "greylock": ["Seed", "Series A", "Series B"],
   "union-square-ventures": ["Pre-Seed", "Seed", "Series A"],
-  "first-round-capital": ["Pre-Seed", "Seed"]
+ "first-round-capital": ["Pre-Seed", "Seed"]
+};
+
+// ============================================================
+// INVESTMENT PERFORMANCE LOOKUP — powers the dashboard on each
+// firm's detail page. Every number here is a real, sourced figure
+// gathered during that firm's research (see its thesis/timeline
+// for the same facts in prose). Deliberately NOT populated for
+// every firm or every field - where a solid number wasn't found,
+// the field is simply omitted here, and the dashboard renderer
+// skips it entirely rather than showing a placeholder or guess.
+// Fill in more over time as research is done on more firms.
+// ============================================================
+const firmPerformance = {
+  "insight-partners": { totalPortfolio: 875 },
+  "kleiner-perkins": { totalPortfolio: 900 },
+  "battery-ventures": { totalPortfolio: 450, ipoExits: 65, acquisitions: 185 },
+  "gv": { totalPortfolio: 400 },
+  "index-ventures": { totalPortfolio: 662, unicorns: 108 },
+  "spark-capital": { totalPortfolio: 861 },
+  "redpoint": { totalPortfolio: 465 },
+  "crv": { totalPortfolio: 750, ipoExits: 80 },
+  "union-square-ventures": { totalPortfolio: 130 },
+  "first-round-capital": { totalPortfolio: 500 },
+  "ivp": { totalPortfolio: 400, ipoExits: 110 },
+  "true-ventures": { totalPortfolio: 390, unicorns: 8, ipoExits: 5, acquisitions: 130 }
 };
 
 const firms = [
