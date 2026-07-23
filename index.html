@@ -1342,10 +1342,48 @@
     padding-top: 18px;
     border-top: 1px solid var(--hairline);
   }
-  .genome-strongest strong { color: var(--gold-bright); }
+ .genome-strongest strong { color: var(--gold-bright); }
   @media (max-width: 640px) {
     .genome-strip { gap: 5px; height: 120px; }
     .genome-bar-label { font-size: 8px; }
+  }
+
+  /* ---------- WHY THIS VC ---------- */
+  .why-this-vc {
+    margin: 32px 0;
+    padding: 28px 26px;
+    background: linear-gradient(135deg, rgba(201,162,39,0.07), transparent);
+    border: 1px solid var(--gold);
+    border-radius: 6px;
+  }
+  .why-this-vc-title {
+    font-family: var(--serif);
+    font-size: 22px;
+    font-weight: 600;
+    color: var(--ink);
+    margin-bottom: 16px;
+  }
+  .why-this-vc-list {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+  }
+  .why-this-vc-item {
+    display: flex;
+    gap: 10px;
+    align-items: flex-start;
+    font-size: 14.5px;
+    line-height: 1.55;
+    color: var(--ink);
+  }
+  .why-this-vc-bullet {
+    color: var(--gold-bright);
+    font-size: 18px;
+    line-height: 1.3;
+    flex-shrink: 0;
   }
 
   /* ---------- FIRM DETAIL PAGE ---------- */
