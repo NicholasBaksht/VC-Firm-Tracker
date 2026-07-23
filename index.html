@@ -4914,42 +4914,123 @@ function renderDashboard() {
 // ============================================================
 let finderSectors = new Set();
 let finderScale = 'any';
-let finderMaturity = 'any';
+let finderStages = new Set();
+let finderRegion = 'any';
+let finderFocus = 'any'; // 'enterprise' | 'consumer' | 'any'
+let finderAI = false;
 
-// Scores every firm against the founder's answers. Only criteria
-// the founder actually picked count toward the match - skipping a
-// question never penalizes a firm. Returns firms sorted by match
-// count, each with a plain-language list of why it matched.
 // Scores every firm 0-100 against the founder's answers, using a
-// transparent weighted formula - same honest spirit as Power Score.
-// Weights: 40% Sector Fit, 30% Fund Scale, 15% Firm Maturity,
-// 15% Track Record (the firm's real, already-computed Power Score).
+// transparent weighted formula built entirely from real data
+// already computed elsewhere on the page - firmStages, sectors,
+// computeGeography, and the Philosophy Scorecard's AI/Enterprise/
+// Consumer scores. Nothing here is a new invented signal.
+// Weights: 25% Sector Fit, 20% Investment Stage, 15% Fund Scale,
+// 15% Geographic Region, 10% Enterprise/Consumer Fit, 10% AI
+// Focus, 5% Track Record (Power Score).
 // A question the founder skips contributes half-credit rather than
 // zero, so skipping never unfairly tanks a firm's score - and if
 // NO questions are answered, the score naturally reduces to a
 // ranking by real Power Score alone, since that's the only signal
-// left to differentiate firms.
+// left to differentiate firms. Each criterion also produces a
+// pass/fail "reason" for the checklist shown in the results.
 function computeFinderMatches() {
   const results = firms.map(firm => {
-    const breakdown = [];
+    const reasons = [];
+    const stages = firmStages[firm.slug] || [];
+    const regions = computeGeography(firm).map(r => r.region);
+    const philScores = computePhilosophyScores(firm);
+    const aiScore = philScores.find(p => p.key === 'ai').score;
+    const enterpriseScore = philScores.find(p => p.key === 'enterprise').score;
+    const consumerScore = philScores.find(p => p.key === 'consumer').score;
 
-    // Sector Fit - 40 points max
+    // Sector Fit - 25 points max
     let sectorPts;
     if (finderSectors.size > 0) {
       const overlap = firm.sectors.filter(s => finderSectors.has(s));
-      sectorPts = (overlap.length / finderSectors.size) * 40;
-      breakdown.push({
-        label: 'Sector Fit',
-        points: sectorPts,
-        maxPoints: 40,
-        detail: overlap.length > 0
-          ? `Invests in ${overlap.join(', ')}`
-          : `Doesn't currently track a firm investment in ${[...finderSectors].join(', ')}`
-      });
+      sectorPts = (overlap.length / finderSectors.size) * 25;
+      reasons.push({ label: `Invests in your industry`, passed: overlap.length > 0, points: sectorPts, maxPoints: 25,
+        detail: overlap.length > 0 ? `Active in ${overlap.join(', ')}` : `No tracked activity in ${[...finderSectors].join(', ')}` });
     } else {
-      sectorPts = 20; // half-credit, question skipped
-      breakdown.push({ label: 'Sector Fit', points: sectorPts, maxPoints: 40, detail: 'Not specified' });
+      sectorPts = 12.5;
+      reasons.push({ label: 'Industry fit', passed: null, points: sectorPts, maxPoints: 25, detail: 'Not specified' });
     }
+
+    // Investment Stage - 20 points max
+    let stagePts;
+    if (finderStages.size > 0) {
+      const overlap = stages.filter(s => finderStages.has(s));
+      stagePts = (overlap.length / finderStages.size) * 20;
+      reasons.push({ label: 'Invests at your stage', passed: overlap.length > 0, points: stagePts, maxPoints: 20,
+        detail: overlap.length > 0 ? `Invests at ${overlap.join(', ')}` : `Doesn't invest at ${[...finderStages].join(', ')}` });
+    } else {
+      stagePts = 10;
+      reasons.push({ label: 'Stage fit', passed: null, points: stagePts, maxPoints: 20, detail: 'Not specified' });
+    }
+
+    // Fund Scale / Check Size proxy - 15 points max
+    let scalePts;
+    if (finderScale !== 'any') {
+      const num = parseAumNumber(firm.aum);
+      const tierMatch =
+        (finderScale === 'mega' && num >= 50) ||
+        (finderScale === 'large' && num >= 20 && num < 50) ||
+        (finderScale === 'mid' && num < 20);
+      scalePts = tierMatch ? 15 : 0;
+      reasons.push({ label: 'Writes checks in your range', passed: tierMatch, points: scalePts, maxPoints: 15,
+        detail: tierMatch ? `${firm.aum} matches your funding preference` : `${firm.aum} is outside your preferred range` });
+    } else {
+      scalePts = 7.5;
+      reasons.push({ label: 'Check size fit', passed: null, points: scalePts, maxPoints: 15, detail: 'Not specified' });
+    }
+
+    // Geographic Region - 15 points max
+    let regionPts;
+    if (finderRegion !== 'any') {
+      const regionMatch = regions.includes(finderRegion);
+      regionPts = regionMatch ? 15 : 0;
+      reasons.push({ label: `Active in ${finderRegion}`, passed: regionMatch, points: regionPts, maxPoints: 15,
+        detail: regionMatch ? `Confirmed presence in ${finderRegion}` : `No confirmed presence in ${finderRegion}` });
+    } else {
+      regionPts = 7.5;
+      reasons.push({ label: 'Geographic fit', passed: null, points: regionPts, maxPoints: 15, detail: 'Not specified' });
+    }
+
+    // Enterprise / Consumer Focus - 10 points max
+    let focusPts;
+    if (finderFocus !== 'any') {
+      const focusMatch = finderFocus === 'enterprise' ? enterpriseScore === 5 : consumerScore === 5;
+      focusPts = focusMatch ? 10 : 0;
+      reasons.push({ label: `Strong ${finderFocus} focus`, passed: focusMatch, points: focusPts, maxPoints: 10,
+        detail: focusMatch ? `Stated ${finderFocus} focus firm` : `Not a stated ${finderFocus}-focused firm` });
+    } else {
+      focusPts = 5;
+      reasons.push({ label: 'Enterprise/Consumer fit', passed: null, points: focusPts, maxPoints: 10, detail: 'Not specified' });
+    }
+
+    // AI Focus - 10 points max
+    let aiPts;
+    if (finderAI) {
+      const aiMatch = aiScore === 5;
+      aiPts = aiMatch ? 10 : 0;
+      reasons.push({ label: 'Invests in AI', passed: aiMatch, points: aiPts, maxPoints: 10,
+        detail: aiMatch ? 'Stated AI focus firm' : 'Not a stated AI-focused firm' });
+    } else {
+      aiPts = 5;
+      reasons.push({ label: 'AI focus', passed: null, points: aiPts, maxPoints: 10, detail: 'Not specified' });
+    }
+
+    // Track Record - 5 points max, drawn from the firm's real,
+    // already-computed Power Score (transparent, not invented here)
+    const trackPts = (computePowerScore(firm) / 100) * 5;
+    reasons.push({ label: 'Strong track record', passed: computePowerScore(firm) >= 50, points: trackPts, maxPoints: 5,
+      detail: `Power Score of ${computePowerScore(firm)}/100` });
+
+    const score = Math.round(sectorPts + stagePts + scalePts + regionPts + focusPts + aiPts + trackPts);
+    return { firm, score, reasons };
+  });
+
+  return results.sort((a, b) => b.score - a.score);
+}
 
     // Fund Scale - 30 points max
     let scalePts;
