@@ -453,11 +453,87 @@
     padding: 14px 16px;
     margin-bottom: 14px;
   }
-  .search-input::placeholder { color: var(--ink-dim); }
+.search-input::placeholder { color: var(--ink-dim); }
   .search-input:focus {
     outline: none;
     border-color: var(--gold);
   }
+
+  /* ---------- INVESTMENT STAGE DISCOVERY CARDS ---------- */
+  .stage-discovery-label {
+    font-family: var(--mono);
+    font-size: 11px;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: var(--gold);
+    margin: 4px 0 12px;
+  }
+  .stage-discovery-hint {
+    text-transform: none;
+    letter-spacing: normal;
+    color: var(--hairline);
+  }
+  .stage-card-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(130px, 1fr));
+    gap: 12px;
+    margin-bottom: 28px;
+  }
+  .stage-card {
+    background: var(--surface);
+    border: 1px solid var(--hairline);
+    border-radius: 10px;
+    padding: 20px 14px;
+    text-align: center;
+    cursor: pointer;
+    user-select: none;
+    transition: border-color 0.2s ease, transform 0.2s ease, box-shadow 0.2s ease, background 0.2s ease;
+  }
+  .stage-card:hover {
+    border-color: var(--gold);
+    transform: translateY(-3px);
+    box-shadow: 0 8px 20px rgba(0,0,0,0.35), 0 0 0 1px rgba(201,162,39,0.2);
+  }
+  .stage-card:active {
+    transform: translateY(-1px);
+  }
+  .stage-card.active {
+    background: linear-gradient(135deg, rgba(201,162,39,0.14), rgba(201,162,39,0.03));
+    border-color: var(--gold);
+    box-shadow: 0 8px 20px rgba(201,162,39,0.15), 0 0 0 1px var(--gold);
+  }
+  .stage-card-icon {
+    font-size: 28px;
+    display: block;
+    margin-bottom: 10px;
+    transition: transform 0.2s ease;
+  }
+  .stage-card:hover .stage-card-icon {
+    transform: scale(1.12);
+  }
+  .stage-card-label {
+    font-family: var(--mono);
+    font-size: 13px;
+    font-weight: 600;
+    color: var(--ink);
+    letter-spacing: 0.02em;
+  }
+  .stage-card.active .stage-card-label {
+    color: var(--gold-bright);
+  }
+  .stage-card-count {
+    font-family: var(--mono);
+    font-size: 10.5px;
+    color: var(--ink-dim);
+    margin-top: 4px;
+  }
+  @media (max-width: 640px) {
+    .stage-card-grid { grid-template-columns: repeat(3, 1fr); gap: 8px; }
+    .stage-card { padding: 14px 8px; }
+    .stage-card-icon { font-size: 22px; margin-bottom: 6px; }
+    .stage-card-label { font-size: 11px; }
+  }
+  
   .filter-group-label {
     font-family: var(--mono);
     font-size: 11px;
