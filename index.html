@@ -1729,12 +1729,39 @@
       display: inline-block;
     }
     .compare-check { padding: 6px 0; }
-    .detail-stat .num { font-size: 18px; }
-    .stat-box .num { font-size: 22px; }
-    .partner-stat-row { gap: 20px; }
-    .leadership-grid { grid-template-columns: 1fr; }
-    .leader-card { padding: 14px 16px; }
-  }
+ <div class="controls">
+      <input type="text" id="searchInput" class="search-input" placeholder="Search by firm, company, or ticker...">
+      <div class="stage-discovery-label">Investment Stage <span class="stage-discovery-hint">(select any that apply)</span></div>
+      <div class="stage-card-grid" id="stageCardGrid">
+        <div class="stage-card" data-stage="Pre-Seed">
+          <span class="stage-card-icon">🌱</span>
+          <div class="stage-card-label">Pre-Seed</div>
+        </div>
+        <div class="stage-card" data-stage="Seed">
+          <span class="stage-card-icon">🌿</span>
+          <div class="stage-card-label">Seed</div>
+        </div>
+        <div class="stage-card" data-stage="Series A">
+          <span class="stage-card-icon">🚀</span>
+          <div class="stage-card-label">Series A</div>
+        </div>
+        <div class="stage-card" data-stage="Series B">
+          <span class="stage-card-icon">📈</span>
+          <div class="stage-card-label">Series B</div>
+        </div>
+        <div class="stage-card" data-stage="Growth">
+          <span class="stage-card-icon">🏢</span>
+          <div class="stage-card-label">Growth</div>
+        </div>
+        <div class="stage-card" data-stage="Late Stage">
+          <span class="stage-card-icon">🌍</span>
+          <div class="stage-card-label">Late Stage</div>
+        </div>
+      </div>
+      <div class="filter-group-label">Founding Era</div>
+      <div class="filter-chips" id="filterChips">
+        <button class="chip active" data-filter="all">All Eras</button>
+        <button class="chip" data-filter="pre2000">Founded Before 2000</button>
 </style>
 </head>
 <body>
