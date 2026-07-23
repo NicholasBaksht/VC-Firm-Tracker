@@ -2809,6 +2809,42 @@ sources: [
   }
 };
 
+// ============================================================
+// INVESTMENT STAGE LOOKUP — powers the visual stage filter cards.
+// Grounded in each firm's own stated stage focus, gathered during
+// research for its profile above (e.g. "seed-stage specialist,"
+// "later-stage growth investor," "stage-agnostic seed through
+// growth"). Keyed by slug so it never has to touch the firms
+// array itself.
+// ============================================================
+const firmStages = {
+  "a16z": ["Seed", "Series A", "Series B", "Growth", "Late Stage"],
+  "sequoia": ["Seed", "Series A", "Series B", "Growth", "Late Stage"],
+  "insight-partners": ["Series A", "Series B", "Growth", "Late Stage"],
+  "tiger-global": ["Series B", "Growth", "Late Stage"],
+  "general-catalyst": ["Seed", "Series A", "Series B", "Growth"],
+  "nea": ["Seed", "Series A", "Series B", "Growth"],
+  "lightspeed": ["Seed", "Series A", "Series B", "Growth"],
+  "kleiner-perkins": ["Series A", "Series B", "Growth", "Late Stage"],
+  "accel": ["Seed", "Series A", "Series B", "Growth"],
+  "khosla-ventures": ["Pre-Seed", "Seed", "Series A", "Series B", "Growth"],
+  "battery-ventures": ["Seed", "Series A", "Series B", "Growth", "Late Stage"],
+  "gv": ["Seed", "Series A", "Series B", "Growth"],
+  "index-ventures": ["Pre-Seed", "Seed", "Series A", "Series B", "Growth"],
+  "founders-fund": ["Seed", "Series A", "Series B", "Growth"],
+  "thrive-capital": ["Seed", "Series A", "Series B"],
+  "bessemer": ["Seed", "Series A", "Series B", "Growth", "Late Stage"],
+  "benchmark": ["Seed", "Series A"],
+  "spark-capital": ["Pre-Seed", "Seed", "Series A", "Series B"],
+  "ivp": ["Series B", "Growth", "Late Stage"],
+  "redpoint": ["Seed", "Series A", "Series B", "Growth"],
+  "crv": ["Pre-Seed", "Seed", "Series A"],
+  "true-ventures": ["Pre-Seed", "Seed", "Series A"],
+  "greylock": ["Seed", "Series A", "Series B"],
+  "union-square-ventures": ["Pre-Seed", "Seed", "Series A"],
+  "first-round-capital": ["Pre-Seed", "Seed"]
+};
+
 const firms = [
   {
     rank: 1,
