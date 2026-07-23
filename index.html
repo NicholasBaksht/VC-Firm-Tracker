@@ -4833,11 +4833,34 @@ document.getElementById('searchInput').addEventListener('input', (e) => {
 
 // Filter chips - clicking one sets the active era filter
 // (scoped to this group only, so it doesn't affect sector/AUM chips)
-document.getElementById('filterChips').addEventListener('click', (e) => {
+// Investment Stage cards - multi-select, toggle any number on/off.
+// Uses closest() since clicks may land on the icon or label inside
+// the card, not just the card element itself.
+document.getElementById('stageCardGrid').addEventListener('click', (e) => {
+  const card = e.target.closest('.stage-card');
+  if (!card) return;
+  const stage = card.dataset.stage;
+  if (activeStages.has(stage)) {
+    activeStages.delete(stage);
+    card.classList.remove('active');
+  } else {
+    activeStages.add(stage);
+    card.classList.add('active');
+  }
+  renderFirms();
+});
+
+// Sector chips - multi-select, toggle any number on/off
+document.getElementById('sectorFilterChips').addEventListener('click', (e) => {
   if (!e.target.classList.contains('chip')) return;
-  document.querySelectorAll('#filterChips .chip').forEach(c => c.classList.remove('active'));
-  e.target.classList.add('active');
-  activeFilter = e.target.dataset.filter;
+  const sector = e.target.dataset.sector;
+  if (activeSectors.has(sector)) {
+    activeSectors.delete(sector);
+    e.target.classList.remove('active');
+  } else {
+    activeSectors.add(sector);
+    e.target.classList.add('active');
+  }
   renderFirms();
 });
 
