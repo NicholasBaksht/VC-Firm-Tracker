@@ -4956,6 +4956,36 @@ function renderWhyThisVC(firm) {
   `;
 }
 
+// Builds the Similar Firms section for a firm's detail page.
+// Match % is the Euclidean distance from computeSimilarFirms(),
+// normalized against the maximum possible distance across 8
+// dimensions each 0-100 (sqrt(8 * 100^2) ≈ 282.8) - a real,
+// deterministic conversion of the same real distance number, not
+// a separately invented score.
+const MAX_GENOME_DISTANCE = Math.sqrt(8 * 100 ** 2);
+
+function renderSimilarFirms(firm) {
+  const similar = computeSimilarFirms(firm, 3);
+  const cardsHTML = similar.map(({ firm: f, distance }) => {
+    const matchPct = Math.round((1 - distance / MAX_GENOME_DISTANCE) * 100);
+    return `
+      <a href="#${f.slug}" class="similar-firm-card">
+        <div class="similar-firm-name">${f.name}</div>
+        <div class="similar-firm-aum">${f.aum}</div>
+        <div class="similar-firm-match">${matchPct}% profile match</div>
+      </a>
+    `;
+  }).join('');
+
+  return `
+    <div class="similar-firms">
+      <div class="similar-firms-label">Similar Firms</div>
+      <div class="similar-firms-sub">Firms with the closest overall investment profile to ${firm.short}, based on real fund size, portfolio breadth, stage, sector, and geographic data.</div>
+      <div class="similar-firms-grid">${cardsHTML}</div>
+    </div>
+  `;
+}
+
 function renderDetail(firm) {
   const totalHoldings = firm.holdings.length;
   const pricedHoldings = firm.holdings.filter(h => h.price !== null).length;
