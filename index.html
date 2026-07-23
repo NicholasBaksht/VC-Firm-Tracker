@@ -4601,6 +4601,35 @@ function renderGeographicHeatmap(firm) {
     </div>
   `;
 }
+// Builds the VC Genome visual signature for a firm's detail page.
+// Every bar height comes straight from computeGenomeScores() - a
+// direct, unedited visualization of real data computed relative
+// to the current dataset. The "Strongest In" line is purely
+// mechanical too: it just names the top 2 dimensions by score,
+// no editorial judgment involved.
+function renderGenome(firm) {
+  const dims = computeGenomeScores(firm);
+  const barsHTML = dims.map((d, i) => `
+    <div class="genome-bar-col">
+      <div class="genome-bar-value">${d.value}</div>
+      <div class="genome-bar-track">
+        <div class="genome-bar-fill" style="height: ${d.value}%; background: ${d.color}; animation-delay: ${i * 0.05}s;"></div>
+      </div>
+      <div class="genome-bar-label">${d.label}</div>
+    </div>
+  `).join('');
+
+  const strongest = [...dims].sort((a, b) => b.value - a.value).slice(0, 2).map(d => d.label);
+
+  return `
+    <div class="genome-panel">
+      <div class="genome-panel-label">VC Genome</div>
+      <div class="genome-panel-sub">A visual signature of this firm relative to every other firm tracked on the page — computed live from its real sector, stage, geographic, and performance data.</div>
+      <div class="genome-strip">${barsHTML}</div>
+      <div class="genome-strongest">Strongest in: <strong>${strongest.join('</strong> and <strong>')}</strong></div>
+    </div>
+  `;
+}
 
 function renderDetail(firm) {
   const totalHoldings = firm.holdings.length;
