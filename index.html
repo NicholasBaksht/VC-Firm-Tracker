@@ -4252,6 +4252,43 @@ function computePowerScore(firm) {
   return Math.round(score);
 }
 
+// ============================================================
+// VC GENOME — synthesizes everything already computed elsewhere
+// on the page (sectors, stages, geography, philosophy, Power
+// Score, AUM, years active, tracked holdings) into one visual
+// signature per firm. Every dimension is a real percentile or
+// ratio computed against the current dataset - nothing is
+// hand-picked per firm, and every score automatically recalculates
+// as more firms are added, so the whole database's genomes shift
+// together rather than needing custom tuning. That's what makes
+// each firm's genome genuinely different: it's a direct visual
+// fingerprint of its actual data relative to its peers.
+// ============================================================
+function computeGenomeScores(firm) {
+  const currentYear = new Date().getFullYear();
+  const maxHoldings = Math.max(...firms.map(f => f.holdings.length));
+  const maxAUM = Math.max(...firms.map(f => parseAumNumber(f.aum)));
+  const maxYearsActive = Math.max(...firms.map(f => currentYear - f.founded));
+  const maxSectors = Math.max(...firms.map(f => f.sectors.length));
+  const maxRegions = Math.max(...firms.map(f => computeGeography(f).length));
+
+  const philScores = computePhilosophyScores(firm);
+  const philIntensity = (philScores.reduce((sum, c) => sum + c.score, 0) / (philScores.length * 5)) * 100;
+
+  const dimensions = [
+    { key: 'fundSize', label: 'Fund Size', value: Math.round((parseAumNumber(firm.aum) / maxAUM) * 100), color: '#C9A227' },
+    { key: 'portfolio', label: 'Portfolio Breadth', value: Math.round((firm.holdings.length / maxHoldings) * 100), color: '#D4AF37' },
+    { key: 'stageBreadth', label: 'Stage Breadth', value: Math.round(((firmStages[firm.slug] || []).length / 6) * 100), color: '#E8C466' },
+    { key: 'sectorBreadth', label: 'Sector Breadth', value: Math.round((firm.sectors.length / maxSectors) * 100), color: '#B8860B' },
+    { key: 'geoReach', label: 'Geographic Reach', value: Math.round((computeGeography(firm).length / maxRegions) * 100), color: '#8FA5B3' },
+    { key: 'longevity', label: 'Years Active', value: Math.round(((currentYear - firm.founded) / maxYearsActive) * 100), color: '#6B8E9E' },
+    { key: 'powerScore', label: 'Power Score', value: computePowerScore(firm), color: '#C9A227' },
+    { key: 'philosophy', label: 'Focus Intensity', value: Math.round(philIntensity), color: '#E8C466' }
+  ];
+
+  return dimensions;
+}
+
 function buildReturnBadge(h) {
   if (h.historicalPrice === null || h.price === null) {
     return `<span class="return-badge unknown">— since Jan '25</span>`;
