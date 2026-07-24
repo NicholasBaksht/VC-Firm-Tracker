@@ -7270,10 +7270,16 @@ function renderFindInvestors() {
       </div>
     </div>
 
-    <div class="finder-results">
+   <div class="finder-results">
       <div class="finder-results-label">Your Matches</div>
       <div id="finderResultsList"></div>
     </div>
+
+    <div class="fr-cta-block">
+      <button class="fr-cta-button" id="generateReportBtn">📊 Generate My Fundraising Report</button>
+      <div class="fr-cta-hint">A full research-report breakdown of your top matches — why each fits, what to watch for, and what to do next.</div>
+    </div>
+    <div id="fundraisingReportContainer"></div>
   `;
 
   document.querySelector('#findInvestorsView .detail-back').addEventListener('click', (e) => {
