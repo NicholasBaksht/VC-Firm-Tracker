@@ -5752,7 +5752,7 @@ function computeFinderMatches() {
     reasons.push({ label: 'Strong track record', passed: computePowerScore(firm) >= 50, points: trackPts, maxPoints: 5,
       detail: `Power Score of ${computePowerScore(firm)}/100` });
 
-    const score = Math.round(sectorPts + stagePts + scalePts + regionPts + focusPts + aiPts + trackPts);
+  const score = Math.round(sectorPts + stagePts + raisePts + regionPts + focusPts + aiPts + trackPts);
     return { firm, score, reasons };
   });
 
