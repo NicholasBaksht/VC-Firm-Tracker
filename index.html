@@ -5965,11 +5965,11 @@ function renderFindInvestors() {
     renderFinderResults();
   });
 
-  document.getElementById('finderScaleChips').addEventListener('click', (e) => {
+ document.getElementById('finderRaiseChips').addEventListener('click', (e) => {
     if (!e.target.classList.contains('chip')) return;
-    document.querySelectorAll('#finderScaleChips .chip').forEach(c => c.classList.remove('active'));
+    document.querySelectorAll('#finderRaiseChips .chip').forEach(c => c.classList.remove('active'));
     e.target.classList.add('active');
-    finderScale = e.target.dataset.scale;
+    finderRaise = e.target.dataset.raise;
     renderFinderResults();
   });
 
