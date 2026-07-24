@@ -6625,6 +6625,133 @@ function getMatchQualityLabel(score) {
   return 'Limited Match';
 }
 
+// ============================================================
+// FOUNDER FUNDRAISING REPORT — every function below is a pure
+// derivation from data already computed elsewhere on this page
+// (computeFinderMatches, firmStages, computeGeography,
+// computePowerScore, computePhilosophyScores, computeSimilarFirms,
+// RAISE_TO_STAGES). Nothing here is a new claim about any firm -
+// each function either reads a real field directly or applies a
+// stated, deterministic rule to real fields. Two fields founders
+// often expect - a specific "typical check size" dollar figure and
+// a per-investment "stage" or "valuation" - are not tracked
+// anywhere on this site, so rather than invent them, the check
+// size is honestly derived by inverting the same RAISE_TO_STAGES
+// map already used to match founders to firms, and no valuation or
+// per-deal stage field is shown at all.
+// ============================================================
+
+// Same 8 buckets as the "How much are you raising?" question,
+// reused here in reverse: given a firm's real stage list, find the
+// full span of raise sizes typically associated with those stages.
+const RAISE_BUCKET_ORDER = [
+  { key: 'under500k', label: 'Under $500K' },
+  { key: '500kto1m', label: '$500K–$1M' },
+  { key: '1mto3m', label: '$1M–$3M' },
+  { key: '3mto10m', label: '$3M–$10M' },
+  { key: '10mto25m', label: '$10M–$25M' },
+  { key: '25mto50m', label: '$25M–$50M' },
+  { key: '50mto100m', label: '$50M–$100M' },
+  { key: '100mplus', label: '$100M+' }
+];
+
+function getTypicalCheckRange(firm) {
+  const stages = firmStages[firm.slug] || [];
+  if (stages.length === 0) return 'Not enough stage data on file';
+  const matchingIndices = RAISE_BUCKET_ORDER
+    .map((b, i) => RAISE_TO_STAGES[b.key].some(s => stages.includes(s)) ? i : -1)
+    .filter(i => i !== -1);
+  if (matchingIndices.length === 0) return 'Not enough stage data on file';
+  const minIdx = Math.min(...matchingIndices);
+  const maxIdx = Math.max(...matchingIndices);
+  if (minIdx === maxIdx) return RAISE_BUCKET_ORDER[minIdx].label;
+  return `${RAISE_BUCKET_ORDER[minIdx].label.split('–')[0].replace('Under ', '')} – ${RAISE_BUCKET_ORDER[maxIdx].label.split('–').pop()}`;
+}
+
+// A distinct, slightly more premium-toned label scale for the
+// report's Executive Summary, kept separate from the per-card
+// getMatchQualityLabel() above so existing usages elsewhere are
+// never affected by this change.
+function getReportMatchQuality(score) {
+  if (score >= 90) return 'Exceptional Match';
+  if (score >= 75) return 'Excellent Match';
+  if (score >= 60) return 'Strong Match';
+  if (score >= 40) return 'Moderate Match';
+  return 'Weak Match';
+}
+
+// Confidence is a real, computable proxy: how many of the 6 finder
+// questions the founder actually answered, versus left at their
+// default/unspecified state. More real signal in -> more reliable
+// match out. Never a fabricated "confidence score."
+function getConfidenceLevel() {
+  const answered = [
+    finderSectors.size > 0,
+    finderRaise !== 'any',
+    finderStages.size > 0,
+    finderRegion !== 'any',
+    finderFocus !== 'any',
+    finderAI
+  ].filter(Boolean).length;
+  if (answered >= 5) return { label: 'High Confidence', answered, total: 6 };
+  if (answered >= 3) return { label: 'Medium Confidence', answered, total: 6 };
+  return { label: 'Low Confidence', answered, total: 6 };
+}
+
+// Concerns only fire when a real, computed condition is actually
+// true for this specific firm - never a generic disclaimer list.
+function getConcerns(firm, reasons) {
+  const concerns = [];
+  reasons.forEach(r => {
+    if (r.passed === false) {
+      if (r.label === 'Strong track record') {
+        concerns.push(`Below-average track record on this site's own scoring — ${r.detail}`);
+      } else {
+        concerns.push(r.detail);
+      }
+    }
+  });
+  const num = parseAumNumber(firm.aum);
+  if (num >= 20) concerns.push(`Large fund (${firm.aum}) — typically writes bigger checks and may be more competitive to access`);
+  const regions = computeGeography(firm);
+  if (regions.length === 1) concerns.push(`Limited confirmed international presence — primarily active in ${regions[0].region}`);
+  const power = computePowerScore(firm);
+  if (power >= 70) concerns.push(`High Power Score (${power}/100) reflects a highly sought-after firm — expect real competition for allocation`);
+  if (firm.sectors.length <= 2) concerns.push(`Concentrated sector focus (${firm.sectors.join(', ')}) — may not fit adjacent industries well`);
+  return concerns;
+}
+
+// Outreach tips: each one only appears when a real, computed
+// condition about this specific firm justifies it.
+function getOutreachTips(firm) {
+  const tips = [];
+  const num = parseAumNumber(firm.aum);
+  if (num >= 20) {
+    tips.push('A warm introduction will likely carry more weight than cold outreach at a firm this size.');
+  } else if (num < 0.5) {
+    tips.push('Direct outreach can work well at smaller, founder-accessible firms like this one.');
+  }
+  const philScores = computePhilosophyScores(firm);
+  const aiScore = philScores.find(p => p.key === 'ai').score;
+  const enterpriseScore = philScores.find(p => p.key === 'enterprise').score;
+  if (aiScore === 5) tips.push('Lead with your technical differentiation — this firm has a stated focus on AI.');
+  if (enterpriseScore === 5) tips.push('Highlight enterprise traction and revenue metrics — a stated focus area for this firm.');
+  const partnerWithProfile = (firm.leadership || []).find(l => l.profileSlug);
+  if (partnerWithProfile) tips.push(`Research ${partnerWithProfile.name} specifically before reaching out — see their full profile on this site.`);
+  tips.push("Reference relevant portfolio companies below to show you understand the firm's real investment pattern.");
+  return tips;
+}
+
+// Buckets a matched firm into a fundraising priority tier, using
+// only its real compatibility score and real fund-size tier - both
+// already computed above.
+function getFundraisingTier(firm, score) {
+  const num = parseAumNumber(firm.aum);
+  if (score < 60) return 'Reach Later';
+  if (num >= 20) return 'Stretch Targets';
+  return 'Start Here';
+}
+
 function renderFinderResults() {
   const matches = computeFinderMatches();
   const container = document.getElementById('finderResultsList');
