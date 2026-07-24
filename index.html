@@ -4207,14 +4207,43 @@ const firms = [
       { year: "1975", event: "Opens a Silicon Valley office, shifting focus toward technology and medical companies." },
       { year: "1986", event: "Formally spins out as Bessemer Venture Partners, a dedicated venture capital firm." }
     ],
-    holdings: [
-      { name: "Shopify", ticker: "SHOP", historicalPrice: 107.53, price: 123.56 },
+{ name: "Shopify", ticker: "SHOP", historicalPrice: 107.53, price: 123.56 },
       { name: "Pinterest", ticker: "PINS", historicalPrice: null, price: 23.50 },
       { name: "Twilio", ticker: "TWLO", historicalPrice: null, price: 206.78 }
     ]
   },
   {
     rank: 19,
+    name: "Bain Capital Ventures",
+    sectors: ["Enterprise Software", "Fintech", "SaaS", "Cybersecurity"],
+    signatureExit: "Amazon's 2012 acquisition of Kiva Systems — Ajay Agarwal led BCV's first institutional round in the warehouse robotics startup in 2004, and its technology now powers Amazon Robotics across more than 2,000 fulfillment centers",
+    slug: "bain-capital-ventures",
+    website: "https://baincapitalventures.com",
+    short: "BCV",
+    founded: 2001,
+    hq: "Boston, MA",
+    aum: "$10B+",
+    thesis: "Bain Capital Ventures was formed in 2001 as the dedicated venture capital arm of Bain Capital, the private investment firm Mitt Romney helped launch in 1984 as a spinoff from the consulting firm Bain & Company. That consulting DNA shaped BCV's approach: partner Ajay Agarwal, who joined in 2003, led the firm's first institutional round in Kiva Systems in 2004 — a warehouse robotics startup founded on the then-contrarian bet that e-commerce fulfillment costs would eventually balloon out of control. Amazon acquired Kiva in 2012, rebranding it Amazon Robotics; its systems now power more than 2,000 fulfillment centers worldwide. BCV has since backed DocuSign, LinkedIn, Twilio, and Redis across enterprise software, fintech, and infrastructure.",
+    leadership: [
+      { name: "James Nahirny", role: "Co-Founder" },
+      { name: "Michael Krupka", role: "Co-Founder" },
+      { name: "Ajay Agarwal", role: "Partner", profileSlug: "ajay-agarwal" }
+    ],
+    timeline: [
+      { year: "2001", event: "Bain Capital forms Bain Capital Ventures as its dedicated venture arm." },
+      { year: "2003", event: "Ajay Agarwal joins as a partner." },
+      { year: "2004", event: "Agarwal leads BCV's first institutional round in Kiva Systems, a warehouse robotics startup." },
+      { year: "2011", event: "Portfolio company LinkedIn goes public." },
+      { year: "2012", event: "Amazon acquires Kiva Systems, rebranding it Amazon Robotics." },
+      { year: "2018", event: "Portfolio company DocuSign goes public." }
+    ],
+    holdings: [
+      { name: "DocuSign", ticker: "DOCU", historicalPrice: null, price: null },
+      { name: "Twilio", ticker: "TWLO", historicalPrice: null, price: 206.78 }
+    ]
+  },
+  {
+    rank: 20,
     name: "Benchmark",
     sectors: ["Consumer Internet", "Marketplaces", "Enterprise"],
     signatureExit: "eBay — a $6.7 million Series A in 1997 that became one of the best-performing venture bets ever made",
@@ -4244,7 +4273,7 @@ const firms = [
     ]
   },
   {
-    rank: 20,
+    rank: 21,
     name: "Spark Capital",
     sectors: ["Consumer Internet", "Enterprise Software", "Fintech", "AI"],
     signatureExit: "Twitter's 2013 IPO — Spark led the company's early investment in 2007 when it had fewer than a dozen employees",
@@ -4274,7 +4303,7 @@ const firms = [
     ]
   },
   {
-    rank: 21,
+    rank: 22,
     name: "IVP",
     sectors: ["Consumer Internet", "Media", "Travel", "Fintech"],
     signatureExit: "Twitter's 2013 IPO — Todd Chaffee led IVP's $44 million investment in 2009 at a $220 million valuation, a stake that grew into a return of nearly $5 billion by 2018",
@@ -4303,7 +4332,7 @@ const firms = [
     ]
   },
   {
-    rank: 22,
+    rank: 23,
     name: "Menlo Ventures",
     sectors: ["Consumer Internet", "Enterprise Software", "AI"],
     signatureExit: "Uber's 2019 IPO — Menlo led the company's $32 million Series B in 2011 after a16z passed on the deal, and realized a 93x return when a SoftBank-led group bought part of its stake for $973 million in 2018",
@@ -4332,7 +4361,7 @@ const firms = [
     ]
   },
   {
-    rank: 23,
+    rank: 24,
     name: "Redpoint Ventures",
     sectors: ["Consumer Internet", "Cloud Infrastructure", "SaaS", "Enterprise Software"],
     signatureExit: "Netflix — an early investor that backed the company years before streaming existed as a category",
@@ -4362,7 +4391,7 @@ const firms = [
     ]
   },
   {
-    rank: 24,
+    rank: 25,
     name: "CRV",
     sectors: ["Consumer Internet", "Marketplaces", "Enterprise Software", "Cybersecurity"],
     signatureExit: "DoorDash's December 2020 IPO at a $39 billion valuation — CRV led the company's seed round in 2013, when it was just nine weeks old",
@@ -4391,7 +4420,7 @@ const firms = [
     ]
   },
   {
-    rank: 25,
+    rank: 26,
     name: "True Ventures",
     sectors: ["Consumer", "Hardware", "Media", "AI"],
     signatureExit: "Fitbit's 2015 IPO — True Ventures was among Fitbit's first institutional investors, backing the company when it looked like little more than a pedometer in a world with no wearables market yet",
@@ -4419,7 +4448,7 @@ const firms = [
     ]
   },
   {
-    rank: 26,
+    rank: 27,
     name: "Greylock Partners",
     sectors: ["Enterprise Software", "Consumer Internet", "Cybersecurity", "AI"],
     signatureExit: "LinkedIn's 2011 IPO, followed by Microsoft's $26.2 billion acquisition of the company in 2016",
@@ -4449,7 +4478,7 @@ const firms = [
     ]
   },
   {
-    rank: 27,
+    rank: 28,
     name: "Emergence Capital",
     sectors: ["Enterprise Software", "SaaS", "Cloud Infrastructure"],
     signatureExit: "Zoom's 2019 IPO — General Partner Santi Subotovsky led Emergence's investment when the video conferencing company was still a little-known startup, and remains on its board today",
@@ -4479,7 +4508,7 @@ const firms = [
     ]
   },
   {
-    rank: 28,
+    rank: 29,
     name: "Union Square Ventures",
     sectors: ["Consumer Internet", "Fintech", "Crypto", "Marketplaces"],
     signatureExit: "Etsy's 2015 IPO — USV backed the handmade-goods marketplace in 2008 when it looked like a niche bet against Amazon",
@@ -4510,7 +4539,7 @@ const firms = [
     ]
   },
   {
-    rank: 29,
+    rank: 30,
     name: "First Round Capital",
     sectors: ["Consumer Internet", "Marketplaces", "Fintech", "SaaS"],
     signatureExit: "Uber's 2019 IPO — First Round led the company's first-ever institutional funding round in 2010, a roughly $1.25 million bet that became one of the highest-multiple returns in venture history",
