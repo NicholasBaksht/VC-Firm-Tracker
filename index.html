@@ -7282,9 +7282,13 @@ function renderFindInvestors() {
     <div id="fundraisingReportContainer"></div>
   `;
 
-  document.querySelector('#findInvestorsView .detail-back').addEventListener('click', (e) => {
+ document.querySelector('#findInvestorsView .detail-back').addEventListener('click', (e) => {
     e.preventDefault();
     window.location.hash = '';
+  });
+
+  document.getElementById('generateReportBtn').addEventListener('click', () => {
+    renderFundraisingReport();
   });
 
   document.getElementById('finderSectorChips').addEventListener('click', (e) => {
