@@ -5884,14 +5884,19 @@ function renderFindInvestors() {
       </div>
     </div>
 
-    <div class="finder-question">
+   <div class="finder-question">
       <div class="finder-question-title">How much are you looking to raise?</div>
-      <div class="finder-question-hint">Bigger funds typically write bigger, later-stage checks</div>
-      <div class="filter-chips" id="finderScaleChips">
-        <button class="chip ${finderScale === 'any' ? 'active' : ''}" data-scale="any">No preference</button>
-        <button class="chip ${finderScale === 'mid' ? 'active' : ''}" data-scale="mid">Smaller check (funds under $20B)</button>
-        <button class="chip ${finderScale === 'large' ? 'active' : ''}" data-scale="large">Mid-size check ($20B–$50B funds)</button>
-        <button class="chip ${finderScale === 'mega' ? 'active' : ''}" data-scale="mega">Large check ($50B+ mega funds)</button>
+      <div class="finder-question-hint">Matched against firms active at the stage this size typically implies</div>
+      <div class="filter-chips" id="finderRaiseChips">
+        <button class="chip ${finderRaise === 'any' ? 'active' : ''}" data-raise="any">No preference</button>
+        <button class="chip ${finderRaise === 'under500k' ? 'active' : ''}" data-raise="under500k">Under $500K</button>
+        <button class="chip ${finderRaise === '500kto1m' ? 'active' : ''}" data-raise="500kto1m">$500K – $1M</button>
+        <button class="chip ${finderRaise === '1mto3m' ? 'active' : ''}" data-raise="1mto3m">$1M – $3M</button>
+        <button class="chip ${finderRaise === '3mto10m' ? 'active' : ''}" data-raise="3mto10m">$3M – $10M</button>
+        <button class="chip ${finderRaise === '10mto25m' ? 'active' : ''}" data-raise="10mto25m">$10M – $25M</button>
+        <button class="chip ${finderRaise === '25mto50m' ? 'active' : ''}" data-raise="25mto50m">$25M – $50M</button>
+        <button class="chip ${finderRaise === '50mto100m' ? 'active' : ''}" data-raise="50mto100m">$50M – $100M</button>
+        <button class="chip ${finderRaise === '100mplus' ? 'active' : ''}" data-raise="100mplus">$100M+</button>
       </div>
     </div>
 
