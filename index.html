@@ -6180,12 +6180,12 @@ function renderDetail(firm) {
   const totalHoldings = firm.holdings.length;
   const pricedHoldings = firm.holdings.filter(h => h.price !== null).length;
 
-  const holdingsHTML = firm.holdings.map(h => {
+const holdingsHTML = firm.holdings.map(h => {
     const val = h.price !== null ? h.price.toFixed(2) : '';
     const placeholderCls = h.price === null ? 'placeholder-empty' : '';
     return `
       <div class="holding-row">
-        <div class="holding-name">${h.name}</div>
+        <a href="#company/${slugifyCompany(h.name)}" class="holding-name holding-name-link">${h.name}</a>
         <div class="holding-ticker">${h.ticker}</div>
         <div class="price-input-wrap">
           <span class="dollar">$</span>
