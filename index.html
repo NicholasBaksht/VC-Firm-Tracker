@@ -4856,7 +4856,35 @@ const firms = [
     ]
   },
   {
+ {
     rank: 30,
+    name: "Haystack",
+    sectors: ["Consumer", "Cloud/SaaS", "AI", "Autonomy"],
+    signatureExit: "DoorDash's 2020 IPO — Semil Shah invested in DoorDash's $2.5 million seed round in 2013, one of Haystack's very first bets, made within six months of founding the firm",
+    slug: "haystack",
+    website: "https://haystack.vc",
+    short: "Haystack",
+    founded: 2013,
+    hq: "San Francisco, CA",
+    aum: "$450M+",
+    thesis: "Semil Shah founded Haystack in 2013 as one of the original solo general partners in venture capital — a structure he adopted partly because he didn't fit what traditional firms were looking for at the time. He built his investor network the unconventional way, through frequent public writing about startups that drew in the early backers who funded his first checks. Within Haystack's first six months, Shah invested in DoorDash's $2.5 million seed round, a bet that would grow into a company worth tens of billions by its 2020 IPO. He has since backed Instacart, Figma, and HashiCorp — all of which went public or were acquired for billions of dollars — while keeping Haystack a small, tightly focused team built around founder selection above all else.",
+    leadership: [
+      { name: "Semil Shah", role: "Founder & General Partner", profileSlug: "semil-shah" }
+    ],
+    timeline: [
+      { year: "2013", event: "Semil Shah founds Haystack as a solo general partner." },
+      { year: "2013", event: "Invests in DoorDash's $2.5 million seed round within Haystack's first six months." },
+      { year: "2018", event: "Also joins Lightspeed Venture Partners as a Venture Partner." },
+      { year: "2020", event: "DoorDash goes public." },
+      { year: "2022", event: "Shah is named to the Forbes Midas Seed List for the first time, a recognition repeated in 2023 and 2024." }
+    ],
+    holdings: [
+      { name: "DoorDash", ticker: "DASH", historicalPrice: 170.65, price: 175.00 },
+      { name: "Figma", ticker: "FIG", historicalPrice: null, price: 23.95 }
+    ]
+  },
+  {
+    rank: 31,
     name: "Uncork Capital",
     sectors: ["Consumer Internet", "SaaS", "Marketplaces"],
     signatureExit: "SendGrid's 2017 IPO, followed by its 2019 acquisition by Twilio — Uncork backed the email infrastructure company as a seed investor years before either milestone",
@@ -4883,7 +4911,34 @@ const firms = [
     ]
   },
   {
-    rank: 31,
+    rank: 32,
+    name: "NextView Ventures",
+    sectors: ["Marketplaces", "Consumer", "Digital Health", "Vertical SaaS"],
+    signatureExit: "ThredUp's 2021 Nasdaq IPO — NextView backed the online consignment marketplace as a seed-stage investor years before its public debut",
+    slug: "nextview-ventures",
+    website: "https://nextview.vc",
+    short: "NextView",
+    founded: 2010,
+    hq: "Boston, MA",
+    aum: "$300M+",
+    thesis: "Rob Go, David Beisel, and Lee Hower founded NextView Ventures in 2010 on a contrarian thesis for the time: that a dedicated seed-stage specialist firm belonged outside the Bay Area, built around what the firm calls the 'Everyday Economy' — startups that redesign the habitual moments of daily life for large populations, from commerce to health to money. That focus led NextView to an early stake in Attentive, which grew into a roughly $10 billion company, and to backing ThredUp ahead of its 2021 Nasdaq IPO. The firm has stayed a lean, partnership-based team where every partner can lead investments, deliberately avoiding the largest, most competitive Silicon Valley deals in favor of conviction-driven bets closer to home.",
+    leadership: [
+      { name: "Rob Go", role: "Co-Founder & Partner", profileSlug: "rob-go" },
+      { name: "David Beisel", role: "Co-Founder & Partner" },
+      { name: "Lee Hower", role: "Co-Founder & Partner" }
+    ],
+    timeline: [
+      { year: "2010", event: "Rob Go, David Beisel, and Lee Hower found NextView Ventures in Boston." },
+      { year: "2012", event: "Closes its first fund at $21 million." },
+      { year: "2017", event: "Closes a $50 million fund, its largest to that point." },
+      { year: "2021", event: "Portfolio company ThredUp goes public on Nasdaq." }
+    ],
+    holdings: [
+      { name: "ThredUp", ticker: "TDUP", historicalPrice: null, price: null }
+    ]
+  },
+  {
+    rank: 33,
     name: "SV Angel",
     sectors: ["Consumer Internet", "Early-Stage Technology"],
     signatureExit: "Twitter, Facebook, and PayPal's early growth — SV Angel and founder Ron Conway's Angel Investors LP were among the first checks into all three before they became household names",
@@ -4909,7 +4964,7 @@ const firms = [
     ]
   },
   {
-    rank: 32,
+    rank: 34,
     name: "Precursor Ventures",
     sectors: ["Software", "Hardware", "Consumer"],
     signatureExit: "The Athletic's 2022 acquisition by The New York Times for $525 million — Precursor backed the sports media company years before the deal, as one of founder Charles Hudson's earliest bets",
@@ -4932,7 +4987,7 @@ const firms = [
     holdings: []
   },
   {
-    rank: 33,
+    rank: 35,
     name: "First Round Capital",
     sectors: ["Consumer Internet", "Marketplaces", "Fintech", "SaaS"],
     signatureExit: "Uber's 2019 IPO — First Round led the company's first-ever institutional funding round in 2010, a roughly $1.25 million bet that became one of the highest-multiple returns in venture history",
@@ -4961,7 +5016,7 @@ const firms = [
     ]
   },
   {
-    rank: 34,
+    rank: 36,
     name: "Susa Ventures",
     sectors: ["Enterprise Software", "Fintech", "Healthcare"],
     signatureExit: "Robinhood's 2021 IPO — Susa's very first investment was a $250,000 seed check into Robinhood in 2013, a bet that grew into a roughly $400 million return, close to a 1,000x multiple",
@@ -4988,7 +5043,7 @@ const firms = [
     ]
   },
   {
-    rank: 35,
+    rank: 37,
     name: "Baseline Ventures",
     sectors: ["Consumer Internet", "Mobile", "Early-Stage Software"],
     signatureExit: "Instagram's 2012 acquisition by Facebook for roughly $1 billion — founder Steve Anderson was Instagram's very first investor",
@@ -5012,6 +5067,63 @@ const firms = [
     holdings: [
       { name: "Stitch Fix", ticker: "SFIX", historicalPrice: null, price: null },
       { name: "PagerDuty", ticker: "PD", historicalPrice: null, price: null }
+    ]
+  },
+  {
+    rank: 38,
+    name: "Founder Collective",
+    sectors: ["Seed-Stage", "Sector-Agnostic"],
+    signatureExit: "PillPack's 2018 acquisition by Amazon for approximately $1 billion — Founder Collective was among the pharmacy startup's first seed investors",
+    slug: "founder-collective",
+    website: "https://foundercollective.com",
+    short: "Founder Collective",
+    founded: 2009,
+    hq: "Cambridge, MA",
+    aum: "$95M+ (latest fund)",
+    thesis: "Founder Collective was founded in 2009 by David Frankel, Eric Paley, and Micah Rosenbloom on a deliberately founder-first philosophy: every full-time partner had been a startup founder first, and the firm has kept its fund sizes small by design rather than chasing scale, refusing to take the large pro-rata reserves that dilute the very founders it backs. That discipline led the firm to one of its earliest seed investments in Uber in 2010, and to being among the first investors in PillPack, the online pharmacy Amazon acquired for roughly $1 billion in 2018. Despite its small fund sizes, Founder Collective has backed more than 20 companies that went on to reach billion-dollar valuations, including The Trade Desk, Airtable, and WHOOP.",
+    leadership: [
+      { name: "David Frankel", role: "Co-Founder" },
+      { name: "Eric Paley", role: "Co-Founder & Partner Emeritus", profileSlug: "eric-paley" },
+      { name: "Micah Rosenbloom", role: "Co-Founder & Managing Partner" }
+    ],
+    timeline: [
+      { year: "2009", event: "David Frankel, Eric Paley, and Micah Rosenbloom found Founder Collective in Cambridge, MA." },
+      { year: "2010", event: "Leads a seed investment in Uber, one of the firm's earliest bets." },
+      { year: "2016", event: "Closes a $75 million third fund; portfolio company The Trade Desk goes public." },
+      { year: "2018", event: "Amazon acquires PillPack, an early Founder Collective investment, for roughly $1 billion." },
+      { year: "2019", event: "Uber goes public." },
+      { year: "2023", event: "Closes its fifth and largest fund at $95 million." }
+    ],
+    holdings: [
+      { name: "Uber", ticker: "UBER", historicalPrice: null, price: 72.46 },
+      { name: "The Trade Desk", ticker: "TTD", historicalPrice: null, price: null }
+    ]
+  },
+  {
+    rank: 39,
+    name: "K9 Ventures",
+    sectors: ["Pre-Seed", "New Technology", "New Markets"],
+    signatureExit: "Twilio's 2016 IPO — Manu Kumar was Twilio's earliest investor, backing the company years before it became a public cloud communications giant",
+    slug: "k9-ventures",
+    website: "https://www.k9ventures.com",
+    short: "K9 Ventures",
+    founded: 2009,
+    hq: "Palo Alto, CA",
+    aum: "$42M+ (current fund)",
+    thesis: "Manu Kumar founded K9 Ventures in 2009 after selling two earlier companies and earning a PhD in Computer Science from Stanford, and the firm is widely credited with coining the term 'Pre-Seed' as its own distinct investment category. Kumar, who calls himself K9's 'Chief Firestarter,' invests 'frighteningly early' — often before a startup has a product, a team, or even a formal company — and by design makes just 4 to 6 investments a year rather than casting a wide net. That discipline made him the earliest investor in Twilio, years before its 2016 IPO, and an early backer of Lyft ahead of its 2019 public debut. K9 has kept its fund size deliberately tiny ever since, running one of the most concentrated portfolios of any firm on this page.",
+    leadership: [
+      { name: "Manu Kumar", role: "Founder & Chief Firestarter", profileSlug: "manu-kumar" }
+    ],
+    timeline: [
+      { year: "2000", event: "Sells his first company, SneakerLabs." },
+      { year: "2009", event: "Founds K9 Ventures, coining the term 'Pre-Seed' as an investment category." },
+      { year: "2010s", event: "Becomes the earliest investor in Twilio." },
+      { year: "2016", event: "Twilio goes public." },
+      { year: "2019", event: "Lyft, another early K9 bet, goes public." }
+    ],
+    holdings: [
+      { name: "Twilio", ticker: "TWLO", historicalPrice: null, price: 206.78 },
+      { name: "Lyft", ticker: "LYFT", historicalPrice: null, price: null }
     ]
   },
 ];
