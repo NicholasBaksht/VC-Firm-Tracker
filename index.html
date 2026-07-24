@@ -5624,12 +5624,28 @@ function renderDashboard() {
 // No invented "check size" or "stage" data - just what's real.
 // ============================================================
 let finderSectors = new Set();
-let finderScale = 'any';
+let finderRaise = 'any';
 let finderStages = new Set();
 let finderRegion = 'any';
 let finderFocus = 'any'; // 'enterprise' | 'consumer' | 'any'
 let finderAI = false;
 
+// Maps a founder's real funding-round ask to the Investment Stage(s)
+// that typically correspond to it - used to match against
+// firmStages (real, already-sourced data), NOT against fund AUM
+// tiers. A founder's own raise amount has nothing to do with how
+// large the FUND is; it corresponds to what stage they're raising
+// at, which is what founders actually mean by this question.
+const RAISE_TO_STAGES = {
+  under500k: ['Pre-Seed'],
+  '500kto1m': ['Pre-Seed', 'Seed'],
+  '1mto3m': ['Seed'],
+  '3mto10m': ['Seed', 'Series A'],
+  '10mto25m': ['Series A'],
+  '25mto50m': ['Series A', 'Series B'],
+  '50mto100m': ['Series B', 'Growth'],
+  '100mplus': ['Growth', 'Late Stage']
+};
 // Scores every firm 0-100 against the founder's answers, using a
 // transparent weighted formula built entirely from real data
 // already computed elsewhere on the page - firmStages, sectors,
