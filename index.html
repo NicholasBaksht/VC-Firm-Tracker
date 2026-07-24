@@ -2492,8 +2492,178 @@
     padding: 5px 10px;
     text-decoration: none;
   }
-  .fr-tier-firm-chip:hover { border-color: var(--gold); }
+.fr-tier-firm-chip:hover { border-color: var(--gold); }
   .fr-tier-firm-chip span { color: var(--gold); margin-left: 4px; }
+
+  /* ---------- SHORTLIST BUILDER ---------- */
+  .sl-empty-state {
+    color: var(--ink-dim);
+    font-style: italic;
+    max-width: 480px;
+    margin-top: 20px;
+  }
+  .sl-stats-bar {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 32px;
+    background: var(--surface);
+    border: 1px solid var(--hairline);
+    border-radius: 8px;
+    padding: 22px 26px;
+    margin: 20px 0 10px;
+  }
+  .sl-stat-value {
+    font-family: var(--serif);
+    font-weight: 600;
+    font-size: 24px;
+    color: var(--ink);
+  }
+  .sl-stat-label {
+    font-family: var(--mono);
+    font-size: 11px;
+    color: var(--ink-dim);
+    margin-top: 3px;
+  }
+  .sl-export-buttons {
+    margin-left: auto;
+    display: flex;
+    gap: 10px;
+  }
+  .sl-export-btn {
+    font-family: var(--sans);
+    font-size: 13px;
+    font-weight: 600;
+    color: var(--ink);
+    background: var(--surface-raised);
+    border: 1px solid var(--hairline);
+    border-radius: 6px;
+    padding: 9px 16px;
+    cursor: pointer;
+    transition: border-color 0.15s ease;
+  }
+  .sl-export-btn:hover { border-color: var(--gold); color: var(--gold-bright); }
+  .sl-limit-note {
+    font-size: 12px;
+    color: var(--ink-dim);
+    margin-bottom: 24px;
+  }
+
+  .sl-cards-list {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+  }
+  .sl-card {
+    background: var(--surface);
+    border: 1px solid var(--hairline);
+    border-radius: 8px;
+    padding: 22px 24px;
+  }
+  .sl-card-header {
+    display: flex;
+    align-items: flex-start;
+    gap: 14px;
+    margin-bottom: 18px;
+  }
+  .sl-card-name {
+    font-family: var(--serif);
+    font-weight: 600;
+    font-size: 18px;
+  }
+  .sl-card-name a { color: var(--ink); text-decoration: none; }
+  .sl-card-name a:hover { color: var(--gold); }
+  .sl-card-meta {
+    font-family: var(--mono);
+    font-size: 11.5px;
+    color: var(--ink-dim);
+    margin-top: 3px;
+  }
+  .sl-card-match {
+    font-family: var(--mono);
+    font-size: 12px;
+    color: var(--gold-bright);
+    background: rgba(201,162,39,0.1);
+    border-radius: 12px;
+    padding: 5px 12px;
+    margin-left: auto;
+    flex-shrink: 0;
+  }
+  .sl-remove-btn {
+    background: none;
+    border: 1px solid var(--hairline);
+    border-radius: 50%;
+    color: var(--ink-dim);
+    width: 26px;
+    height: 26px;
+    font-size: 12px;
+    cursor: pointer;
+    flex-shrink: 0;
+    transition: border-color 0.15s ease, color 0.15s ease;
+  }
+  .sl-remove-btn:hover { border-color: #f87171; color: #f87171; }
+
+  .sl-field-row { margin-bottom: 14px; }
+  .sl-field-label {
+    font-family: var(--mono);
+    font-size: 10.5px;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+    color: var(--ink-dim);
+    margin-bottom: 6px;
+  }
+  .sl-chip-row {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+  }
+  .sl-chip {
+    font-family: var(--sans);
+    font-size: 12.5px;
+    color: var(--ink-dim);
+    background: var(--surface-raised);
+    border: 1px solid var(--hairline);
+    border-radius: 14px;
+    padding: 5px 13px;
+    cursor: pointer;
+    transition: border-color 0.15s ease, color 0.15s ease;
+  }
+  .sl-chip:hover { border-color: var(--gold); }
+  .sl-chip.active {
+    background: var(--gold);
+    color: var(--bg);
+    border-color: var(--gold);
+    font-weight: 600;
+  }
+  .sl-chip.sl-priority-high.active { background: #f87171; border-color: #f87171; }
+  .sl-chip.sl-priority-medium.active { background: var(--gold); border-color: var(--gold); }
+  .sl-chip.sl-priority-low.active { background: var(--ink-dim); border-color: var(--ink-dim); }
+  .sl-notes {
+    width: 100%;
+    min-height: 64px;
+    background: var(--surface-raised);
+    border: 1px solid var(--hairline);
+    border-radius: 6px;
+    color: var(--ink);
+    font-family: var(--sans);
+    font-size: 13px;
+    padding: 10px 12px;
+    resize: vertical;
+  }
+  .sl-notes:focus { outline: none; border-color: var(--gold); }
+
+  /* Print / "Export PDF" styles - hides everything except the
+     shortlist content when the browser's print dialog is used,
+     since window.print() -> Save as PDF is the real export path
+     for a static site with no PDF library loaded. */
+  @media print {
+    .byline-bar, .site-nav, .ticker-outer, .detail-back,
+    .sl-remove-btn, .sl-export-buttons, .sl-chip:not(.active),
+    #siteFooter { display: none !important; }
+    body { background: white; color: black; }
+    .sl-card, .sl-stats-bar { border-color: #ccc; break-inside: avoid; }
+    .sl-stat-value, .sl-card-name a { color: black; }
+  }
 
   /* ---------- PARTNER PROFILE PAGE ---------- */
   .partner-title {
