@@ -5921,6 +5921,47 @@ function saveShortlistToStorage(set) {
   }
 }
 
+// ============================================================
+// SHORTLIST DETAILS — extends the existing star/save toggle above
+// with the real per-firm CRM fields a founder tracks while
+// fundraising: notes, priority, and outreach status. Stored under
+// a separate localStorage key so the original getShortlist()/
+// toggleShortlist() behavior (used by the simple ★ Saved button on
+// every firm page) is never touched or put at risk - this is pure
+// addition, not a rework of working code.
+// ============================================================
+const SHORTLIST_DETAILS_KEY = 'powerboard_shortlist_details';
+const SHORTLIST_STATUSES = ['Not Contacted', 'Warm Intro', 'Meeting Scheduled', 'Passed'];
+const SHORTLIST_PRIORITIES = ['High', 'Medium', 'Low'];
+
+function getShortlistDetails() {
+  try {
+    const raw = localStorage.getItem(SHORTLIST_DETAILS_KEY);
+    return raw ? JSON.parse(raw) : {};
+  } catch (e) {
+    return {};
+  }
+}
+
+function saveShortlistDetails(details) {
+  try {
+    localStorage.setItem(SHORTLIST_DETAILS_KEY, JSON.stringify(details));
+  } catch (e) {
+    // localStorage unavailable - fail quietly, same as the shortlist itself
+  }
+}
+
+function getShortlistEntry(slug) {
+  const details = getShortlistDetails();
+  return details[slug] || { notes: '', priority: 'Medium', status: 'Not Contacted', addedAt: null };
+}
+
+function updateShortlistEntry(slug, updates) {
+  const details = getShortlistDetails();
+  details[slug] = Object.assign({}, getShortlistEntry(slug), updates);
+  saveShortlistDetails(details);
+}
+
 // Toggles a firm in/out of the shortlist, enforcing the free-tier
 // limit. Removing a firm always works, regardless of the limit.
 // Adding a new firm past the limit is blocked, and the caller is
@@ -5930,6 +5971,9 @@ function toggleShortlist(slug) {
   if (current.has(slug)) {
     current.delete(slug);
     saveShortlistToStorage(current);
+    const details = getShortlistDetails();
+    delete details[slug];
+    saveShortlistDetails(details);
     return { shortlist: current, limitReached: false };
   }
   if (current.size >= SHORTLIST_FREE_LIMIT) {
@@ -5937,19 +5981,10 @@ function toggleShortlist(slug) {
   }
   current.add(slug);
   saveShortlistToStorage(current);
+  updateShortlistEntry(slug, { addedAt: new Date().toISOString() });
   return { shortlist: current, limitReached: false };
 }
-function parseAumNumber(aumStr) {
-  const bMatch = aumStr.match(/\$(\d+\.?\d*)B/);
-  if (bMatch) return parseFloat(bMatch[1]);
-  // Handles fund sizes stated in millions (e.g. "$200M+"), converting
-  // to the same billions-denominated scale everything else uses -
-  // without this, any millions-denominated firm would silently
-  // parse as 0 and land in the wrong tier once tiers below $1B exist.
-  const mMatch = aumStr.match(/\$(\d+\.?\d*)M/);
-  if (mMatch) return parseFloat(mMatch[1]) / 1000;
-  return 0;
-}
+
 // Parses a firm's AUM string (e.g. "$58B+") into a plain number for
 // tier comparisons. Falls back to 0 if the format is unexpected.
 
