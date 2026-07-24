@@ -7075,6 +7075,31 @@ function getTypicalCheckRange(firm) {
   return `${RAISE_BUCKET_ORDER[minIdx].label.split('–')[0].replace('Under ', '')} – ${RAISE_BUCKET_ORDER[maxIdx].label.split('–').pop()}`;
 }
 
+// Numeric companion to getTypicalCheckRange above, used only for
+// averaging across a shortlist (the Shortlist Builder's "Average
+// Check" stat). Returns the midpoint, in $M, of the same real
+// stage-derived range - never a per-firm number shown on its own,
+// since it's an estimate, not a reported figure.
+const CHECK_BUCKET_BOUNDS_M = [
+  [0, 0.5], [0.5, 1], [1, 3], [3, 10], [10, 25], [25, 50], [50, 100], [100, 150]
+];
+function getTypicalCheckMidpointM(firm) {
+  const stages = firmStages[firm.slug] || [];
+  if (stages.length === 0) return null;
+  const matchingIndices = RAISE_BUCKET_ORDER
+    .map((b, i) => RAISE_TO_STAGES[b.key].some(s => stages.includes(s)) ? i : -1)
+    .filter(i => i !== -1);
+  if (matchingIndices.length === 0) return null;
+  const minIdx = Math.min(...matchingIndices);
+  const maxIdx = Math.max(...matchingIndices);
+  return (CHECK_BUCKET_BOUNDS_M[minIdx][0] + CHECK_BUCKET_BOUNDS_M[maxIdx][1]) / 2;
+}
+function formatCheckM(m) {
+  if (m === null) return 'N/A';
+  if (m < 1) return '$' + Math.round(m * 1000) + 'K';
+  return '$' + (m % 1 === 0 ? m : m.toFixed(1)) + 'M';
+}
+
 // A distinct, slightly more premium-toned label scale for the
 // report's Executive Summary, kept separate from the per-card
 // getMatchQualityLabel() above so existing usages elsewhere are
