@@ -6476,6 +6476,58 @@ function renderPricing() {
   });
 }
 
+// Builds a searchable directory of every partner profile on the
+// site - real people already profiled on their firm's detail page,
+// just made directly searchable without clicking into a firm card
+// first. The search input is built once and left alone on
+// re-render (only the results grid updates), so focus and cursor
+// position are never lost while typing.
+function renderPeople() {
+  document.getElementById('peopleView').innerHTML = `
+    <a href="#" class="detail-back">← Back to all firms</a>
+    <div class="dashboard-title">People</div>
+    <div class="people-intro">
+      <p>Every partner profiled on this page, in one searchable place. Search by name, firm, or title — no need to click into a firm card first.</p>
+    </div>
+    <div class="people-search-wrap">
+      <input type="text" id="peopleSearchInput" class="search-input" placeholder="Search by name, firm, or title...">
+    </div>
+    <div class="people-count" id="peopleCount"></div>
+    <div class="people-grid" id="peopleGrid"></div>
+  `;
+
+  document.getElementById('peopleSearchInput').value = peopleSearchTerm;
+  document.getElementById('peopleSearchInput').addEventListener('input', (e) => {
+    peopleSearchTerm = e.target.value;
+    renderPeopleResults();
+  });
+
+  renderPeopleResults();
+}
+
+function renderPeopleResults() {
+  const allPeople = Object.keys(partnerProfiles).map(slug => ({ slug, ...partnerProfiles[slug] }));
+  const term = peopleSearchTerm.trim().toLowerCase();
+  const filtered = term === '' ? allPeople : allPeople.filter(p =>
+    p.name.toLowerCase().includes(term) ||
+    p.firm.toLowerCase().includes(term) ||
+    p.title.toLowerCase().includes(term)
+  );
+  filtered.sort((a, b) => a.name.localeCompare(b.name));
+
+  document.getElementById('peopleCount').textContent = `${filtered.length} of ${allPeople.length} profiles`;
+
+  document.getElementById('peopleGrid').innerHTML = filtered.length > 0
+    ? filtered.map(p => `
+      <a href="#partner/${p.slug}" class="person-card">
+        <div class="person-card-name">${p.name}</div>
+        <div class="person-card-title">${p.title}</div>
+        <div class="person-card-firm">${p.firm}</div>
+      </a>
+    `).join('')
+    : `<div class="people-empty">No profiles match "${peopleSearchTerm}".</div>`;
+}
+
 function renderFindInvestors() {
   const allSectors = [...new Set(firms.flatMap(f => f.sectors))].sort();
   const allStages = ['Pre-Seed', 'Seed', 'Series A', 'Series B', 'Growth', 'Late Stage'];
