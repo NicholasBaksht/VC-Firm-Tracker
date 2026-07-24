@@ -5694,20 +5694,20 @@ function computeFinderMatches() {
       reasons.push({ label: 'Stage fit', passed: null, points: stagePts, maxPoints: 20, detail: 'Not specified' });
     }
 
-    // Fund Scale / Check Size proxy - 15 points max
-    let scalePts;
-    if (finderScale !== 'any') {
-      const num = parseAumNumber(firm.aum);
-      const tierMatch =
-        (finderScale === 'mega' && num >= 50) ||
-        (finderScale === 'large' && num >= 20 && num < 50) ||
-        (finderScale === 'mid' && num < 20);
-      scalePts = tierMatch ? 15 : 0;
-      reasons.push({ label: 'Writes checks in your range', passed: tierMatch, points: scalePts, maxPoints: 15,
-        detail: tierMatch ? `${firm.aum} matches your funding preference` : `${firm.aum} is outside your preferred range` });
+ // Funding Round Ask - 15 points max. Matched against real
+    // investment stage data (the same firmStages used above),
+    // since a founder's raise amount corresponds to a funding
+    // stage, not a fund's AUM tier.
+    let raisePts;
+    if (finderRaise !== 'any') {
+      const targetStages = RAISE_TO_STAGES[finderRaise] || [];
+      const raiseMatch = stages.some(s => targetStages.includes(s));
+      raisePts = raiseMatch ? 15 : 0;
+      reasons.push({ label: 'Invests at your funding stage', passed: raiseMatch, points: raisePts, maxPoints: 15,
+        detail: raiseMatch ? `Active at the stage that typically matches this raise size` : `Not typically active at the stage this raise size implies` });
     } else {
-      scalePts = 7.5;
-      reasons.push({ label: 'Check size fit', passed: null, points: scalePts, maxPoints: 15, detail: 'Not specified' });
+      raisePts = 7.5;
+      reasons.push({ label: 'Funding stage fit', passed: null, points: raisePts, maxPoints: 15, detail: 'Not specified' });
     }
 
     // Geographic Region - 15 points max
