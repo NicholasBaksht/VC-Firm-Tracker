@@ -4726,14 +4726,23 @@ function parseAumNumber(aumStr) {
 
 
 // Returns a plain-language fund scale label for a firm, using the
-// same tiers as the AUM filter and Find Investors questionnaire -
-// so the label a founder sees always matches how the site actually
-// filters and scores that firm elsewhere.
+// same tiers as the AUM filter chips below - so the label a
+// founder sees always matches how the site actually filters that
+// firm elsewhere. (The Find Investors questionnaire asks about the
+// founder's own funding ask, matched against real investment
+// stage data instead - a genuinely different question, so it's
+// intentionally not tied to these 8 fund-scale tiers. See
+// computeFinderMatches for that logic.)
 function getScaleLabel(firm) {
   const num = parseAumNumber(firm.aum);
   if (num >= 50) return 'Mega Fund ($50B+)';
   if (num >= 20) return 'Large Fund ($20B–$50B)';
-  return 'Mid-Size Fund (Under $20B)';
+  if (num >= 10) return 'Mid-Size Fund ($10B–$20B)';
+  if (num >= 5) return 'Below $10B';
+  if (num >= 0.5) return 'Below $5B';
+  if (num >= 0.2) return '$200M–$500M';
+  if (num >= 0.1) return '$100M–$200M';
+  return 'Under $100M';
 }
 
 function matchesAumTier(firm) {
@@ -4743,7 +4752,9 @@ function matchesAumTier(firm) {
   if (activeAumTier === 'midsize') return num >= 10 && num < 20;
   if (activeAumTier === 'below10') return num >= 5 && num < 10;
   if (activeAumTier === 'below5') return num >= 0.5 && num < 5;
-  if (activeAumTier === 'micro') return num < 0.5;
+  if (activeAumTier === 'range200to500') return num >= 0.2 && num < 0.5;
+  if (activeAumTier === 'range100to200') return num >= 0.1 && num < 0.2;
+  if (activeAumTier === 'under100') return num < 0.1;
   return true; // 'all'
 }
 
