@@ -5369,6 +5369,43 @@ const firms = [
     ]
   },
 ];
+
+// Turns a company name into a URL-safe slug for the #company/
+// route (e.g. "Square (Block)" -> "square-block").
+function slugifyCompany(name) {
+  return name.toLowerCase().replace(/[^a-z0-9]+/g, '-').replace(/^-+|-+$/g, '');
+}
+
+// Reverse-index: for a given company name, finds every tracked firm
+// that holds it as a public portfolio company. This is the core of
+// Portfolio Explorer - a straight lookup against the same real
+// holdings data already used everywhere else on the site, nothing
+// new or invented. Also surfaces any firm's signatureExit text that
+// specifically names this company, since that's real sourced
+// narrative already on the page - not a fabricated per-company
+// "IPO" or "valuation" field, which this site has no real data for.
+function getCompanyHolders(companyName) {
+  const holders = firms
+    .filter(f => f.holdings.some(h => h.name === companyName))
+    .map(f => ({ firm: f, holding: f.holdings.find(h => h.name === companyName) }));
+
+  const stories = firms
+    .filter(f => f.signatureExit.includes(companyName))
+    .map(f => ({ firm: f, text: f.signatureExit }));
+
+  return { holders, stories };
+}
+
+// Returns every unique company name tracked across all firms'
+// holdings, alphabetized, for the Portfolio Explorer list view.
+function getAllTrackedCompanies() {
+  const seen = new Map();
+  firms.forEach(f => f.holdings.forEach(h => {
+    if (!seen.has(h.name)) seen.set(h.name, h);
+  }));
+  return [...seen.entries()].map(([name, holding]) => ({ name, holding })).sort((a, b) => a.name.localeCompare(b.name));
+}
+
 // Renders the "Live Top 5" widget in the hero - the same real
 // firms array used everywhere else on the site, just showing the
 // top 5 by AUM (firms are already ordered by rank, so this is
