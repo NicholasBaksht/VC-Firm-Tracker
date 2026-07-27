@@ -2964,7 +2964,156 @@
       padding: 10px 16px;
       display: inline-block;
     }
-    .compare-check { padding: 6px 0; }
+  .compare-check { padding: 6px 0; }
+  }
+
+  /* ---------- POWER SCORE™ METHODOLOGY SECTION ---------- */
+  .power-score-block {
+    margin: 32px 0 40px;
+  }
+  .power-score-eyebrow {
+    font-family: var(--mono);
+    font-size: 11px;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: var(--gold);
+    margin: 40px 0 14px;
+  }
+  .power-measure-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 16px;
+    margin: 20px 0 8px;
+  }
+  .power-measure-card {
+    background: var(--surface);
+    border: 1px solid var(--hairline);
+    border-radius: 6px;
+    padding: 22px 20px;
+    transition: border-color 0.2s ease, transform 0.2s ease;
+  }
+  .power-measure-card:hover {
+    border-color: var(--gold);
+    transform: translateY(-2px);
+  }
+  .power-measure-title {
+    font-family: var(--serif);
+    font-weight: 600;
+    font-size: 16.5px;
+    color: var(--ink);
+    margin-bottom: 8px;
+  }
+  .power-measure-desc {
+    font-size: 13.5px;
+    line-height: 1.55;
+    color: var(--ink-dim);
+  }
+  .power-measure-footnote {
+    font-size: 13px;
+    line-height: 1.6;
+    color: var(--ink-dim);
+    font-style: italic;
+    margin-top: 18px;
+    max-width: 680px;
+  }
+  .power-scale-list {
+    display: flex;
+    flex-direction: column;
+    margin: 20px 0 8px;
+    border: 1px solid var(--hairline);
+    border-radius: 6px;
+    overflow: hidden;
+  }
+  .power-scale-row {
+    display: grid;
+    grid-template-columns: 110px 140px 1fr;
+    align-items: center;
+    gap: 16px;
+    padding: 14px 20px;
+    background: var(--surface);
+    border-bottom: 1px solid var(--hairline);
+  }
+  .power-scale-row:last-child { border-bottom: none; }
+  .power-scale-range {
+    font-family: var(--mono);
+    font-size: 13px;
+    color: var(--gold-bright);
+    font-weight: 600;
+  }
+  .power-scale-tier {
+    font-family: var(--serif);
+    font-weight: 600;
+    font-size: 15.5px;
+    color: var(--ink);
+  }
+  .power-scale-desc {
+    font-size: 13px;
+    line-height: 1.5;
+    color: var(--ink-dim);
+  }
+  @media (max-width: 640px) {
+    .power-scale-row { grid-template-columns: 1fr; gap: 4px; }
+  }
+  .power-callout {
+    margin: 28px 0;
+    padding: 22px 24px;
+    border: 1px dashed var(--gold);
+    border-radius: 4px;
+    background: linear-gradient(135deg, rgba(201,162,39,0.06), transparent);
+  }
+  .power-callout-label {
+    font-family: var(--mono);
+    font-size: 10.5px;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: var(--gold-bright);
+    margin-bottom: 10px;
+  }
+  .power-callout p {
+    margin: 0 0 10px;
+    max-width: none;
+  }
+  .power-callout p:last-child { margin-bottom: 0; }
+  .power-philosophy {
+    margin: 40px 0 8px;
+    padding: 36px 32px;
+    background: linear-gradient(135deg, rgba(201,162,39,0.08), rgba(201,162,39,0.01));
+    border: 1px solid var(--gold);
+    border-radius: 6px;
+    text-align: center;
+  }
+  .power-philosophy-label {
+    font-family: var(--mono);
+    font-size: 11px;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    color: var(--gold);
+    margin-bottom: 20px;
+  }
+  .power-philosophy-quote {
+    font-family: var(--serif);
+    font-size: 22px;
+    font-weight: 500;
+    line-height: 1.5;
+    color: var(--ink);
+    max-width: 720px;
+    margin: 0 auto;
+  }
+  .power-philosophy-quote .q-question {
+    color: var(--gold-bright);
+    font-style: italic;
+  }
+  .power-philosophy-sub {
+    font-size: 15px;
+    line-height: 1.7;
+    color: var(--ink-dim);
+    max-width: 680px;
+    margin: 22px auto 0;
+  }
+  @media (max-width: 640px) {
+    .power-philosophy { padding: 28px 20px; }
+    .power-philosophy-quote { font-size: 18px; }
+    
 </style>
 </head>
 <body>
