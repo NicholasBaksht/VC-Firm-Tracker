@@ -1,0 +1,600 @@
+/* ============================================================
+   DASHBOARD.CSS
+   Every data-visualization block used on the Analytics Dashboard
+   and on individual firm detail pages: the AUM bar chart and
+   performance leaderboard, the Investment Performance stat grid,
+   the Investment Philosophy Scorecard, the Geographic Investment
+   Heatmap, the VC Genome bar chart, the "Why This VC" callout,
+   the Similar Firms grid, and the "By the Numbers" analytics
+   section (stat boxes, sector bar chart, signature exits list).
+   ============================================================ */
+  /* ---------- ANALYTICS DASHBOARD ---------- */
+  .dashboard-link {
+    display: inline-block;
+    font-family: var(--mono);
+    font-size: 13px;
+    color: var(--gold);
+    text-decoration: none;
+    border: 1px solid var(--hairline);
+    border-radius: 20px;
+    padding: 8px 16px;
+    margin-bottom: 24px;
+    transition: border-color 0.15s ease, color 0.15s ease;
+  }
+  .dashboard-link:hover {
+    border-color: var(--gold);
+    color: var(--gold-bright);
+  }
+  .dashboard-title {
+    font-family: var(--serif);
+    font-weight: 600;
+    font-size: 34px;
+    margin: 24px 0 8px;
+  }
+  .dashboard-sub {
+    font-size: 14px;
+    color: var(--ink-dim);
+    margin: 0 0 32px;
+    max-width: 620px;
+  }
+  .dashboard-section {
+    margin-bottom: 48px;
+  }
+  .aum-bar-row {
+    display: grid;
+    grid-template-columns: 190px 1fr 90px;
+    align-items: center;
+    gap: 14px;
+    padding: 9px 0;
+  }
+  .aum-bar-name {
+    font-size: 13.5px;
+    color: var(--ink);
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+  .aum-bar-track {
+    background: var(--surface);
+    border-radius: 3px;
+    height: 14px;
+    overflow: hidden;
+  }
+  .aum-bar-fill {
+    background: linear-gradient(90deg, var(--gold), var(--gold-bright));
+    height: 100%;
+    border-radius: 3px;
+  }
+  .aum-bar-value {
+    font-family: var(--mono);
+    font-size: 12.5px;
+    color: var(--ink-dim);
+    text-align: right;
+  }
+  .leaderboard-row {
+    display: grid;
+    grid-template-columns: 30px 1fr auto auto;
+    align-items: center;
+    gap: 14px;
+    padding: 12px 0;
+    border-top: 1px solid var(--hairline);
+  }
+  .leaderboard-row:last-child { border-bottom: 1px solid var(--hairline); }
+  .leaderboard-rank {
+    font-family: var(--mono);
+    font-size: 12px;
+    color: var(--ink-dim);
+  }
+  .leaderboard-name {
+    font-size: 14px;
+    color: var(--ink);
+  }
+  .leaderboard-name .ticker {
+    font-family: var(--mono);
+    font-size: 11px;
+    color: var(--gold);
+    margin-left: 6px;
+  }
+  .leaderboard-note {
+    font-family: var(--mono);
+    font-size: 12px;
+    color: var(--ink-dim);
+  }
+  @media (max-width: 560px) {
+    .aum-bar-row { grid-template-columns: 100px 1fr 70px; }
+    .leaderboard-row { grid-template-columns: 24px 1fr auto; }
+  }
+
+ /* ---------- INVESTMENT PERFORMANCE DASHBOARD ---------- */
+  .performance-dashboard {
+    margin: 32px 0;
+    padding: 28px 26px;
+    background: var(--surface);
+    border: 1px solid var(--hairline);
+    border-radius: 6px;
+  }
+  .performance-dashboard-label {
+    font-family: var(--mono);
+    font-size: 11px;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: var(--gold);
+    margin-bottom: 4px;
+  }
+  .performance-dashboard-sub {
+    font-size: 13px;
+    color: var(--ink-dim);
+    margin-bottom: 20px;
+  }
+  .perf-stat-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+    gap: 14px;
+  }
+  .perf-stat-card {
+    background: var(--surface-raised);
+    border: 1px solid var(--hairline);
+    border-radius: 6px;
+    padding: 16px 16px 14px;
+    opacity: 0;
+    transform: translateY(6px);
+    animation: perfCardIn 0.4s ease forwards;
+    transition: border-color 0.2s ease, transform 0.2s ease;
+  }
+  .perf-stat-card:hover {
+    border-color: var(--gold);
+    transform: translateY(-2px);
+  }
+  
+  .perf-stat-value {
+    font-family: var(--mono);
+    font-size: 24px;
+    font-weight: 600;
+    color: var(--gold-bright);
+    line-height: 1.15;
+    word-break: break-word;
+  }
+  .perf-stat-value.text-value {
+    font-size: 16px;
+    font-family: var(--sans);
+    color: var(--ink);
+  }
+  .perf-stat-label {
+    font-family: var(--mono);
+    font-size: 10.5px;
+    letter-spacing: 0.05em;
+    text-transform: uppercase;
+    color: var(--ink-dim);
+    margin-top: 6px;
+  }
+.performance-dashboard-note {
+    font-family: var(--mono);
+    font-size: 11px;
+    color: var(--hairline);
+    margin-top: 18px;
+  }
+
+  /* ---------- INVESTMENT PHILOSOPHY SCORECARD ---------- */
+  .philosophy-scorecard {
+    margin: 32px 0;
+    padding: 28px 26px;
+    background: var(--surface);
+    border: 1px solid var(--hairline);
+    border-radius: 6px;
+  }
+  .philosophy-scorecard-label {
+    font-family: var(--mono);
+    font-size: 11px;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: var(--gold);
+    margin-bottom: 4px;
+  }
+  .philosophy-scorecard-sub {
+    font-size: 13px;
+    color: var(--ink-dim);
+    margin-bottom: 24px;
+  }
+  .philosophy-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    gap: 18px 32px;
+  }
+  .phil-row-header {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    margin-bottom: 7px;
+  }
+  .phil-icon {
+    font-size: 15px;
+    line-height: 1;
+  }
+  .phil-label {
+    font-family: var(--sans);
+    font-size: 13.5px;
+    color: var(--ink);
+    font-weight: 500;
+    flex: 1;
+  }
+  .phil-stars {
+    font-family: var(--mono);
+    font-size: 12px;
+    color: var(--gold);
+    letter-spacing: 1px;
+  }
+  .phil-bar-track {
+    height: 6px;
+    background: rgba(255,255,255,0.07);
+    border-radius: 3px;
+    overflow: hidden;
+  }
+  .phil-bar-fill {
+    height: 100%;
+    background: linear-gradient(90deg, var(--gold), var(--gold-bright));
+    border-radius: 3px;
+    transform-origin: left;
+    transform: scaleX(0);
+    animation: philBarFill 0.7s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+  }
+
+
+  /* ---------- GEOGRAPHIC INVESTMENT HEATMAP ---------- */
+  .geo-heatmap {
+    margin: 32px 0;
+    padding: 28px 26px;
+    background: var(--surface);
+    border: 1px solid var(--hairline);
+    border-radius: 6px;
+  }
+  .geo-heatmap-label {
+    font-family: var(--mono);
+    font-size: 11px;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: var(--gold);
+    margin-bottom: 4px;
+  }
+  .geo-heatmap-sub {
+    font-size: 13px;
+    color: var(--ink-dim);
+    margin-bottom: 22px;
+  }
+  .geo-row {
+    margin-bottom: 16px;
+  }
+  .geo-row:last-child { margin-bottom: 0; }
+  .geo-row-header {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    margin-bottom: 6px;
+  }
+  .geo-flag {
+    font-size: 15px;
+    line-height: 1;
+  }
+  .geo-region-name {
+    font-family: var(--sans);
+    font-size: 13.5px;
+    color: var(--ink);
+    font-weight: 500;
+    flex: 1;
+  }
+  .geo-tier-label {
+    font-family: var(--mono);
+    font-size: 10.5px;
+    letter-spacing: 0.05em;
+    text-transform: uppercase;
+    color: var(--gold);
+  }
+  .geo-row.secondary .geo-tier-label { color: var(--ink-dim); }
+  .geo-bar-track {
+    height: 8px;
+    background: rgba(255,255,255,0.07);
+    border-radius: 4px;
+    overflow: hidden;
+  }
+  .geo-bar-fill {
+    height: 100%;
+    border-radius: 4px;
+    transform-origin: left;
+    transform: scaleX(0);
+    animation: geoBarFill 0.7s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+  }
+  .geo-row.primary .geo-bar-fill {
+    background: linear-gradient(90deg, var(--gold), var(--gold-bright));
+  }
+  .geo-row.secondary .geo-bar-fill {
+    background: linear-gradient(90deg, rgba(201,162,39,0.5), rgba(201,162,39,0.3));
+  }
+
+  .geo-heatmap-note {
+    font-family: var(--mono);
+    font-size: 11px;
+    color: var(--hairline);
+    margin-top: 18px;
+  }
+
+  /* ---------- VC GENOME ---------- */
+  .genome-panel {
+    margin: 32px 0;
+    padding: 28px 26px;
+    background: var(--surface);
+    border: 1px solid var(--gold);
+    border-radius: 6px;
+    box-shadow: 0 0 0 1px rgba(201,162,39,0.08), 0 12px 28px rgba(0,0,0,0.35);
+  }
+  .genome-panel-label {
+    font-family: var(--mono);
+    font-size: 11px;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: var(--gold);
+    margin-bottom: 4px;
+  }
+  .genome-panel-sub {
+    font-size: 13px;
+    color: var(--ink-dim);
+    margin-bottom: 28px;
+  }
+  .genome-strip {
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-between;
+    gap: 10px;
+    height: 150px;
+    padding: 0 4px;
+    margin-bottom: 10px;
+  }
+  .genome-bar-col {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    flex: 1;
+    height: 100%;
+    justify-content: flex-end;
+  }
+  .genome-bar-value {
+    font-family: var(--mono);
+    font-size: 11px;
+    color: var(--ink-dim);
+    margin-bottom: 6px;
+  }
+  .genome-bar-track {
+    width: 100%;
+    max-width: 34px;
+    height: 100%;
+    display: flex;
+    align-items: flex-end;
+    background: rgba(255,255,255,0.04);
+    border-radius: 4px;
+    overflow: hidden;
+  }
+  .genome-bar-fill {
+    width: 100%;
+    border-radius: 4px;
+    transform-origin: bottom;
+    transform: scaleY(0);
+    animation: genomeBarGrow 0.8s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+  }
+  
+  .genome-bar-label {
+    font-family: var(--mono);
+    font-size: 9.5px;
+    letter-spacing: 0.02em;
+    text-transform: uppercase;
+    color: var(--ink-dim);
+    text-align: center;
+    margin-top: 8px;
+    line-height: 1.3;
+  }
+  .genome-strongest {
+    font-family: var(--mono);
+    font-size: 12px;
+    color: var(--ink);
+    padding-top: 18px;
+    border-top: 1px solid var(--hairline);
+  }
+ .genome-strongest strong { color: var(--gold-bright); }
+  @media (max-width: 640px) {
+    .genome-strip { gap: 5px; height: 120px; }
+    .genome-bar-label { font-size: 8px; }
+  }
+
+  /* ---------- WHY THIS VC ---------- */
+  .why-this-vc {
+    margin: 32px 0;
+    padding: 28px 26px;
+    background: linear-gradient(135deg, rgba(201,162,39,0.07), transparent);
+    border: 1px solid var(--gold);
+    border-radius: 6px;
+  }
+  .why-this-vc-title {
+    font-family: var(--serif);
+    font-size: 22px;
+    font-weight: 600;
+    color: var(--ink);
+    margin-bottom: 16px;
+  }
+  .why-this-vc-list {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+  }
+  .why-this-vc-item {
+    display: flex;
+    gap: 10px;
+    align-items: flex-start;
+    font-size: 14.5px;
+    line-height: 1.55;
+    color: var(--ink);
+  }
+.why-this-vc-bullet {
+    color: var(--gold-bright);
+    font-size: 18px;
+    line-height: 1.3;
+    flex-shrink: 0;
+  }
+
+  /* ---------- SIMILAR FIRMS ---------- */
+  .similar-firms {
+    margin: 32px 0;
+  }
+  .similar-firms-label {
+    font-family: var(--mono);
+    font-size: 11px;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: var(--gold);
+    margin-bottom: 4px;
+  }
+  .similar-firms-sub {
+    font-size: 13px;
+    color: var(--ink-dim);
+    margin-bottom: 16px;
+  }
+  .similar-firms-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 14px;
+  }
+  .similar-firm-card {
+    display: block;
+    background: var(--surface);
+    border: 1px solid var(--hairline);
+    border-radius: 6px;
+    padding: 16px 18px;
+    text-decoration: none;
+    cursor: pointer;
+    transition: border-color 0.2s ease, transform 0.2s ease;
+  }
+  .similar-firm-card:hover {
+    border-color: var(--gold);
+    transform: translateY(-2px);
+  }
+  .similar-firm-name {
+    font-family: var(--sans);
+    font-weight: 600;
+    font-size: 15px;
+    color: var(--ink);
+    margin-bottom: 4px;
+  }
+  .similar-firm-aum {
+    font-family: var(--mono);
+    font-size: 12px;
+    color: var(--gold);
+    margin-bottom: 8px;
+  }
+  .similar-firm-match {
+    font-family: var(--mono);
+    font-size: 11px;
+    color: var(--ink-dim);
+  }
+
+  /* ---------- ANALYTICS ---------- */
+  .analytics {
+    padding: 40px 0 8px;
+  }
+  .analytics h2 {
+    font-family: var(--serif);
+    font-weight: 600;
+    font-size: 22px;
+    margin: 0 0 8px;
+  }
+  .analytics .sub {
+    font-size: 14px;
+    color: var(--ink-dim);
+    margin: 0 0 28px;
+    max-width: 640px;
+  }
+  .stat-row {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+    gap: 14px;
+    margin-bottom: 40px;
+  }
+  .stat-box {
+    background: var(--surface);
+    border: 1px solid var(--hairline);
+    border-radius: 3px;
+    padding: 18px 20px;
+  }
+  .stat-box .num {
+    font-family: var(--mono);
+    font-size: 26px;
+    color: var(--gold-bright);
+  }
+  .stat-box .lbl {
+    font-family: var(--mono);
+    font-size: 10.5px;
+    color: var(--ink-dim);
+    letter-spacing: 0.05em;
+    text-transform: uppercase;
+    margin-top: 4px;
+  }
+  .analytics-subhead {
+    font-family: var(--mono);
+    font-size: 11px;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: var(--gold);
+    margin: 0 0 16px;
+  }
+  .sector-row {
+    display: grid;
+    grid-template-columns: 160px 1fr auto;
+    align-items: center;
+    gap: 12px;
+    padding: 7px 0;
+  }
+  .sector-name {
+    font-size: 13px;
+    color: var(--ink);
+  }
+  .sector-bar-track {
+    background: var(--surface);
+    border-radius: 3px;
+    height: 8px;
+    overflow: hidden;
+  }
+  .sector-bar-fill {
+    background: var(--gold);
+    height: 100%;
+    border-radius: 3px;
+  }
+  .sector-count {
+    font-family: var(--mono);
+    font-size: 12px;
+    color: var(--ink-dim);
+    width: 20px;
+    text-align: right;
+  }
+  .exits-list {
+    margin-top: 40px;
+  }
+  .exit-row {
+    padding: 12px 0;
+    border-top: 1px solid var(--hairline);
+    display: grid;
+    grid-template-columns: 200px 1fr;
+    gap: 16px;
+  }
+  .exit-row:last-child { border-bottom: 1px solid var(--hairline); }
+  .exit-firm {
+    font-size: 13.5px;
+    font-weight: 500;
+    color: var(--ink);
+  }
+  .exit-detail {
+    font-size: 13.5px;
+    color: var(--ink-dim);
+    line-height: 1.5;
+  }
+  @media (max-width: 560px) {
+    .sector-row { grid-template-columns: 110px 1fr auto; }
+    .exit-row { grid-template-columns: 1fr; gap: 4px; }
+  }
