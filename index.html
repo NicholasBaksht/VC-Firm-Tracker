@@ -8187,21 +8187,30 @@ function matchesSearch(firm) {
 // Recomputed live, so it stays accurate as more firms/data get added.
 function computePowerScore(firm) {
   const maxHoldings = Math.max(...firms.map(f => f.holdings.length));
-  const maxAUM = Math.max(...firms.map(f => {
-    const m = f.aum.match(/\$(\d+)B/);
-    return m ? parseInt(m[1]) : 0;
-  }));
+  const maxAUM = Math.max(...firms.map(f => parseAumNumber(f.aum)));
   const currentYear = new Date().getFullYear();
-  const maxYearsActive = Math.max(...firms.map(f => currentYear - f.founded));
 
-  const breadthScore = (firm.holdings.length / maxHoldings) * 100;
+  // Portfolio Breadth - square-root curve rather than a straight ratio, so a
+  // firm doesn't need to match the single most-tracked-holdings firm on this
+  // page to earn real credit for verified exits it does have.
+  const breadthRatio = maxHoldings > 0 ? firm.holdings.length / maxHoldings : 0;
+  const breadthScore = Math.sqrt(breadthRatio) * 100;
 
-  const aumMatch = firm.aum.match(/\$(\d+)B/);
-  const firmAUM = aumMatch ? parseInt(aumMatch[1]) : 0;
-  const aumScore = (firmAUM / maxAUM) * 100;
+  // Capital Scale - logarithmic, since AUM on this page spans from tens of
+  // millions to $90B+. A linear ratio against the largest fund tracked would
+  // flatten every firm below the top handful toward zero; log10 compresses
+  // that four-order-of-magnitude spread into a fair curve. Uses the same
+  // parseAumNumber() helper as the AUM filter chips, so it correctly reads
+  // both "$XXB" and "$XXXM" formatted AUM strings.
+  const firmAUM = parseAumNumber(firm.aum);
+  const aumScore = maxAUM > 0 ? (Math.log10(firmAUM + 1) / Math.log10(maxAUM + 1)) * 100 : 0;
 
+  // Track Record - capped at 25 years of full credit rather than scaled
+  // against the single oldest firm tracked (Bessemer, 1911), so an
+  // established, decades-old firm isn't penalized for not predating modern
+  // venture capital itself.
   const yearsActive = currentYear - firm.founded;
-  const longevityScore = (yearsActive / maxYearsActive) * 100;
+  const longevityScore = Math.min(yearsActive / 25, 1) * 100;
 
   const pricedHoldings = firm.holdings.filter(h => h.historicalPrice !== null && h.price !== null);
   let performanceScore = 50; // neutral baseline - no verified data yet
