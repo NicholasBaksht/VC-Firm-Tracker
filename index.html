@@ -8185,10 +8185,6 @@ function matchesSearch(firm) {
 //                              with no verified data yet get a neutral 50,
 //                              never penalized for missing data)
 // Recomputed live, so it stays accurate as more firms/data get added.
-function computePowerScore(firm) {
-  const maxHoldings = Math.max(...firms.map(f => f.holdings.length));
-  const maxAUM = Math.max(...firms.map(f => parseAumNumber(f.aum)));
-  const currentYear = new Date().getFullYear();
 
 function computePowerScore(firm) {
   const maxHoldings = Math.max(...firms.map(f => f.holdings.length));
