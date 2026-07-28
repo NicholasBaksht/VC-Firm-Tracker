@@ -2519,7 +2519,8 @@ const firmStages = {
    "peakspan-capital": ["Series A", "Series B", "Growth"],
    "inovia-capital": ["Pre-Seed", "Seed", "Series A", "Series B", "Growth", "Late Stage"],
      "crosslink-capital": ["Pre-Seed", "Seed", "Series A"],
-   "bold-capital-partners": ["Seed", "Series A"]
+   "bold-capital-partners": ["Seed", "Series A"],
+   "altos-ventures": ["Seed", "Series A"]
 };
 
 // ============================================================
@@ -3157,6 +3158,33 @@ const firms = [
       { year: "2026", event: "Closes its largest raise yet, $1.3 billion across Fund VI and Early Growth Fund III, pushing total AUM to roughly $10 billion." }
     ],
     holdings: []
+  },
+   {
+    rank: 22,
+    name: "Altos Ventures",
+    sectors: ["Consumer", "Enterprise Software", "Marketplaces", "Fintech"],
+    signatureExit: "Coupang's 2021 NYSE IPO — Altos was an early backer of the South Korean ecommerce company, which priced at an implied valuation of $62.1 billion",
+    slug: "altos-ventures",
+    website: "https://altos.vc",
+    short: "Altos Ventures",
+    founded: 1996,
+    hq: "Menlo Park, CA",
+    aum: "$10B+ (RIA regulatory AUM)",
+    thesis: "Altos Ventures was founded in 1996 by Han Kim, Ho Nam, and Anthony Lee, three Stanford MBA classmates who began managing their first fund the same year through an introduction from a professor. The firm's public materials describe a deliberately contrarian, patient philosophy — favoring durable businesses with strong unit economics over trend-driven sectors, and staying involved with portfolio companies for more than a decade after the first check. That patience produced two of venture capital's largest single-firm outcomes: Altos held roughly 25% of Roblox at its 2021 IPO, a stake reported to be worth more than $8 billion, and was an early backer of Coupang, the South Korean ecommerce company that priced its own 2021 IPO at an implied $62.1 billion valuation.",
+    leadership: [
+      { name: "Han Kim", role: "Co-Founder & Managing Director" },
+      { name: "Ho Nam", role: "Co-Founder & Managing Director" },
+      { name: "Anthony Lee", role: "Co-Founder & Managing Director" }
+    ],
+    timeline: [
+      { year: "1996", event: "Han Kim, Ho Nam, and Anthony Lee found Altos Ventures in Menlo Park." },
+      { year: "2007", event: "Altos' relationship with Roblox begins." },
+      { year: "2021", event: "Both Roblox and Coupang go public; Altos' Roblox stake alone is reported worth more than $8 billion at listing." },
+      { year: "2026", event: "Firm surpasses $10 billion in regulatory assets under management." }
+    ],
+    holdings: [
+      { name: "Coupang", ticker: "CPNG", historicalPrice: null, price: null }
+    ]
   },
   {
     rank: 21,
