@@ -3714,6 +3714,33 @@ const firms = [
       { name: "Duolingo", ticker: "DUOL", historicalPrice: null, price: null }
     ]
   },
+   {
+    rank: 35,
+    name: "Maveron",
+    sectors: ["Consumer", "Ecommerce", "Fintech", "Healthcare", "Education"],
+    signatureExit: "Zulily's 2013 Nasdaq IPO — Maveron led the ecommerce company's Series A with roughly $5 million and held a 22% stake worth more than $1 billion at IPO, on a $4.6 billion valuation",
+    slug: "maveron",
+    website: "https://www.maveron.com",
+    short: "Maveron",
+    founded: 1998,
+    hq: "Seattle, WA",
+    aum: "$1.3B (as of 2020)",
+    thesis: "Maveron was founded in 1998 by Dan Levitan, a former investment banker who took Starbucks public in 1992, and Howard Schultz, the Starbucks CEO he met on that deal. The firm has stayed unusually disciplined about a single idea ever since: investing only in consumer-facing brands and technology, never enterprise or infrastructure. That focus produced one of the largest single outcomes in Seattle venture history — Levitan led Zulily's roughly $5 million Series A in 2009, and Maveron's 22% stake was worth more than $1 billion when the ecommerce company went public on the Nasdaq in 2013 at a $4.6 billion valuation, alongside the same-year IPO of sandwich chain Potbelly.",
+    leadership: [
+      { name: "Dan Levitan", role: "Co-Founder & General Partner" },
+      { name: "Jason Stoffer", role: "General Partner" },
+      { name: "David Wu", role: "General Partner" }
+    ],
+    timeline: [
+      { year: "1998", event: "Dan Levitan and Howard Schultz found Maveron in Seattle." },
+      { year: "2009", event: "Leads Zulily's approximately $5 million Series A round." },
+      { year: "2013", event: "Zulily goes public on the Nasdaq at a $4.6 billion valuation; Potbelly also goes public the same year." },
+      { year: "2020", event: "Firm's assets under management stand at $1.3 billion." }
+    ],
+    holdings: [
+      { name: "Allbirds", ticker: "BIRD", historicalPrice: null, price: null }
+    ]
+  },
     {
     rank: 36,
     name: "RTP Global",
