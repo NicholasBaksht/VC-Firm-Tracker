@@ -37,10 +37,7 @@ function renderFeaturedFirm() {
 function renderScaleBar() {
   const totalFirms = firms.length;
   const uniqueTickers = new Set(firms.flatMap(f => f.holdings.map(h => h.ticker))).size;
-  const combinedAUM = firms.reduce((sum, f) => {
-    const m = f.aum.match(/\$(\d+)B/);
-    return m ? sum + parseInt(m[1]) : sum;
-  }, 0);
+  const combinedAUM = Math.round(firms.reduce((sum, f) => sum + parseAumNumber(f.aum), 0));
 
   document.getElementById('scaleBar').innerHTML = `
     <span class="scale-num">${totalFirms}</span> VC Firms
