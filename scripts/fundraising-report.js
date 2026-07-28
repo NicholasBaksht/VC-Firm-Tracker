@@ -164,7 +164,7 @@ function renderFundraisingReport() {
         </div>
 
         <div class="fr-card-stats-grid">
-          <div class="fr-card-stat"><div class="fr-card-stat-label">Power Score</div><div class="fr-card-stat-value">${computePowerScore(firm)}/100</div></div>
+<div class="fr-card-stat"><div class="fr-card-stat-label">Power Score™</div><div class="fr-card-stat-value">${computePowerScore(firm)}/100</div></div>
           <div class="fr-card-stat"><div class="fr-card-stat-label">Fund Size</div><div class="fr-card-stat-value">${firm.aum}</div></div>
           <div class="fr-card-stat"><div class="fr-card-stat-label">Typical Check Range</div><div class="fr-card-stat-value">${getTypicalCheckRange(firm)}</div></div>
           <div class="fr-card-stat"><div class="fr-card-stat-label">Stage Fit</div><div class="fr-card-stat-value">${stageOverlap.length > 0 ? stageOverlap.join(', ') : (stages.length > 0 ? stages.join(', ') : 'Not on file')}</div></div>
