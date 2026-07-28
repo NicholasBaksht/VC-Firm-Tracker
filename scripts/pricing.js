@@ -22,7 +22,7 @@ function renderPricing() {
           <li>Search &amp; advanced filters</li>
           <li>Compare up to 3 firms side-by-side</li>
           <li>Find My Investors match scoring</li>
-          <li>Power Score &amp; Analytics Dashboard</li>
+      <li>Power Score™ &amp; Analytics Dashboard</li>
           <li>Save up to 3 firms to your shortlist</li>
         </ul>
         <div class="pricing-cta current">Your Current Plan</div>
