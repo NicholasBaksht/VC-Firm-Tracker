@@ -2514,7 +2514,8 @@ const firmStages = {
        "lux-capital": ["Seed", "Series A", "Growth"],
   "dcvc": ["Seed", "Series A", "Growth"],
    "rtp-global": ["Seed", "Series A", "Series B"],
-    "amplify-partners": ["Seed", "Series A", "Series B"]
+    "amplify-partners": ["Seed", "Series A", "Series B"],
+         "wing-vc": ["Seed", "Series A", "Series B"]
 };
 
 // ============================================================
