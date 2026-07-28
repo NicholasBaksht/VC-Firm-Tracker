@@ -2491,6 +2491,41 @@ sources: [
       { label: "TechCrunch — Amplify Partners", url: "https://techcrunch.com/2018/09/18/amplify-partners-locks-in-200-million-to-transform-technical-founders-into-people-who-can-actually-lead-a-startup/" }
     ]
   },
+"teymour-boutros-ghali": {
+    name: "Teymour Boutros-Ghali",
+    firm: "BOLD Capital Partners",
+    firmSlug: "bold-capital-partners",
+    title: "Co-Founder & Managing Partner",
+    joinedYear: 2015,
+    education: ["BA, Electrical Engineering, Cambridge University", "PhD, Plasma Physics, MIT", "SM, Management, MIT Sloan School of Management"],
+    previousExperience: [
+      "General Partner, Monitor Ventures",
+      "Senior Executive, Time Warner (operations and investments)",
+      "CEO, AllBusiness (acquired by NBC)",
+      "CEO, Zowie Intertainment (acquired by LEGO)",
+      "CEO, Thrive Online (acquired by AOL)",
+      "Consultant, Boston Consulting Group"
+    ],
+    investmentFocus: ["AI", "Healthcare", "Longevity", "Biotechnology", "Deep Tech"],
+    notableInvestments: [
+      { name: "Insilico Medicine", ticker: "3696.HK" },
+      { name: "Colossal", ticker: null },
+      { name: "Near Space Labs", ticker: null }
+    ],
+    boardSeats: [],
+    ipoCount: 1,
+    majorExits: 3,
+    careerTimeline: [
+      { year: "2005", event: "Serves as General Partner at Monitor Ventures before co-founding BOLD." },
+      { year: "2015", event: "Co-founds BOLD Capital Partners with Peter Diamandis." },
+      { year: "2025", event: "Portfolio company Insilico Medicine completes its Hong Kong IPO, raising HKD 2.277 billion." }
+    ],
+    biography: "Teymour Boutros-Ghali brought an unusually operational background to venture investing when he co-founded BOLD Capital Partners with Peter Diamandis in 2015. After a Cambridge electrical engineering degree, a PhD in plasma physics and a management degree from MIT, and time at Boston Consulting Group, he spent years as a senior Time Warner executive before leading three companies to acquisitions himself — AllBusiness (sold to NBC), Zowie Intertainment (acquired by LEGO), and Thrive Online (sold to AOL) — then served as a General Partner at Monitor Ventures before starting BOLD. That mix of deep technical training and repeated hands-on company-building experience underpins BOLD's 'convergence' thesis, which treats longevity, synthetic biology, AI, and robotics as a single connected investment category rather than separate bets. The firm's clearest recent proof point is Insilico Medicine, one of BOLD's portfolio companies, which completed its Hong Kong Stock Exchange listing in December 2025.",
+    sources: [
+      { label: "BOLD Capital Partners", url: "https://boldcapitalpartners.com" },
+      { label: "Wikipedia — Teymour Boutros-Ghali", url: "https://en.wikipedia.org/wiki/Teymour_Boutros-Ghali" }
+    ]
+  },
 };
 
 // ============================================================
@@ -4069,8 +4104,8 @@ const firms = [
     aum: "~$500M (across its main fund and dedicated vehicles, per third-party reporting)",
     thesis: "BOLD Capital Partners was founded in 2015 by Peter Diamandis, the space and longevity entrepreneur behind XPRIZE and Singularity University, alongside Teymour Boutros-Ghali, Neal Bhadkamkar, and Emilio Diez Barroso. The firm is best understood as a convergence investor rather than a category-siloed one: its own language centers on technologies at the intersection of the physical, digital, virtual, and biological worlds, with especially heavy emphasis on longevity, synthetic biology, AI, and robotics. That framing shows up directly in its portfolio, which includes two companies that went public via Hong Kong exchange listings — Insilico Medicine and Deep Longevity — alongside continued early-stage bets in advanced robotics and construction technology.",
     leadership: [
-      { name: "Peter Diamandis", role: "Co-Founder & Partner" },
-      { name: "Teymour Boutros-Ghali", role: "Co-Founder & Managing Partner" },
+  { name: "Peter Diamandis", role: "Co-Founder & Partner" },
+      { name: "Teymour Boutros-Ghali", role: "Co-Founder & Managing Partner", profileSlug: "teymour-boutros-ghali" },
       { name: "Neal Bhadkamkar", role: "General Partner" },
       { name: "Emilio Diez Barroso", role: "General Partner" }
     ],
