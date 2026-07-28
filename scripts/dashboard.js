@@ -548,7 +548,7 @@ function renderDashboard() {
   document.getElementById('dashboardView').innerHTML = `
     <a href="#" class="detail-back" id="backFromDashboard">← Back to all firms</a>
     <div class="dashboard-title">Analytics Dashboard</div>
-    <p class="dashboard-sub">Two real views into the data already on this page: how the 13 tracked firms stack up by assets managed, and how their public portfolio companies have actually performed since January 2, 2025.</p>
+<p class="dashboard-sub">Two real views into the data already on this page: how the ${firms.length} tracked firms stack up by assets managed, and how their public portfolio companies have actually performed since January 2, 2025.</p>
 
     <div class="dashboard-section">
       <div class="analytics-subhead">Firms Ranked by AUM</div>
