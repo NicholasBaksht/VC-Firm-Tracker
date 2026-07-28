@@ -2518,7 +2518,8 @@ const firmStages = {
          "wing-vc": ["Seed", "Series A", "Series B"],
    "peakspan-capital": ["Series A", "Series B", "Growth"],
    "inovia-capital": ["Pre-Seed", "Seed", "Series A", "Series B", "Growth", "Late Stage"],
-     "crosslink-capital": ["Pre-Seed", "Seed", "Series A"]
+     "crosslink-capital": ["Pre-Seed", "Seed", "Series A"],
+   "bold-capital-partners": ["Seed", "Series A"]
 };
 
 // ============================================================
@@ -3853,6 +3854,31 @@ const firms = [
     holdings: [
       { name: "HubSpot", ticker: "HUBS", historicalPrice: null, price: null }
     ]
+  },
+   {
+    rank: 40,
+    name: "BOLD Capital Partners",
+    sectors: ["AI", "Healthcare", "Robotics", "Climate"],
+    signatureExit: "No single dollar-verified signature exit — BOLD's clearest proof points are two portfolio companies that reached the public markets via Hong Kong listings: Insilico Medicine (HKEX: 3696) and Deep Longevity (SEHK: 0575)",
+    slug: "bold-capital-partners",
+    website: "https://boldcapitalpartners.com",
+    short: "BOLD Capital",
+    founded: 2015,
+    hq: "Santa Monica, CA",
+    aum: "~$500M (across its main fund and dedicated vehicles, per third-party reporting)",
+    thesis: "BOLD Capital Partners was founded in 2015 by Peter Diamandis, the space and longevity entrepreneur behind XPRIZE and Singularity University, alongside Teymour Boutros-Ghali, Neal Bhadkamkar, and Emilio Diez Barroso. The firm is best understood as a convergence investor rather than a category-siloed one: its own language centers on technologies at the intersection of the physical, digital, virtual, and biological worlds, with especially heavy emphasis on longevity, synthetic biology, AI, and robotics. That framing shows up directly in its portfolio, which includes two companies that went public via Hong Kong exchange listings — Insilico Medicine and Deep Longevity — alongside continued early-stage bets in advanced robotics and construction technology.",
+    leadership: [
+      { name: "Peter Diamandis", role: "Co-Founder & Partner" },
+      { name: "Teymour Boutros-Ghali", role: "Co-Founder & Managing Partner" },
+      { name: "Neal Bhadkamkar", role: "General Partner" },
+      { name: "Emilio Diez Barroso", role: "General Partner" }
+    ],
+    timeline: [
+      { year: "2015", event: "Peter Diamandis and Teymour Boutros-Ghali co-found BOLD Capital Partners in Santa Monica." },
+      { year: "2019", event: "Portfolio company Insilico Medicine and Deep Longevity begin building toward eventual Hong Kong exchange listings." },
+      { year: "2024", event: "Insilico Medicine and Deep Longevity both complete public listings on the Hong Kong Stock Exchange." }
+    ],
+    holdings: []
   },
   {
     rank: 40,
