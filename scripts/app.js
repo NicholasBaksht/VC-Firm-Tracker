@@ -140,23 +140,7 @@ document.getElementById('portfolioView').style.display = 'none';
     document.getElementById('companyView').style.display = 'block';
     renderCompanyProfile(companyMatch[1]);
     window.scrollTo(0, 0);
-  } else if (partnerMatch && partnerProfiles[partnerMatch[1]]) {
-    document.getElementById('partnerView').style.display = 'block';
-    renderPartnerProfile(partnerMatch[1]);
-    window.scrollTo(0, 0);
-  } else if (slug === 'pricing') {
-    document.getElementById('pricingView').style.display = 'block';
-    renderPricing();
-    window.scrollTo(0, 0);
-  } else if (slug === 'people') {
-    document.getElementById('peopleView').style.display = 'block';
-    renderPeople();
-    window.scrollTo(0, 0);
-  } else if (partnerMatch && partnerProfiles[partnerMatch[1]]) {
-    document.getElementById('dashboardView').style.display = 'block';
-    renderDashboard();
-    window.scrollTo(0, 0);
-  } else if (partnerMatch && partnerProfiles[partnerMatch[1]]) {
+} else if (partnerMatch && partnerProfiles[partnerMatch[1]]) {
     document.getElementById('partnerView').style.display = 'block';
     renderPartnerProfile(partnerMatch[1]);
     window.scrollTo(0, 0);
