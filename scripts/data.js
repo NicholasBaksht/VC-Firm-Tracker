@@ -2544,7 +2544,8 @@ const firmPerformance = {
   "union-square-ventures": { totalPortfolio: 130 },
   "first-round-capital": { totalPortfolio: 500 },
 "ivp": { totalPortfolio: 400, ipoExits: 110 },
-  "true-ventures": { totalPortfolio: 390, unicorns: 8, ipoExits: 5, acquisitions: 130 }
+  "true-ventures": { totalPortfolio: 390, unicorns: 8, ipoExits: 5, acquisitions: 130 },
+   "eclipse-ventures": ["Seed", "Series A", "Series B", "Growth"]
 };
 
 const firmGeography = {
@@ -3132,6 +3133,30 @@ const firms = [
       { name: "DocuSign", ticker: "DOCU", historicalPrice: null, price: null },
       { name: "Twilio", ticker: "TWLO", historicalPrice: null, price: 206.78 }
     ]
+  },
+   {
+    rank: 21,
+    name: "Eclipse Ventures",
+    sectors: ["Robotics", "AI Infrastructure", "Manufacturing", "Defense", "Climate"],
+    signatureExit: "No single dollar-verified signature exit — Eclipse instead builds a defense-heavy 'connected industrial economy' of companies that share infrastructure and talent, including True Anomaly (autonomous spacecraft), Blue Water Autonomy (autonomous Navy vessels), and VulcanForms (supplying more than 15 Department of Defense programs including the F-35 and Patriot systems)",
+    slug: "eclipse-ventures",
+    website: "https://eclipse.capital",
+    short: "Eclipse Ventures",
+    founded: 2015,
+    hq: "Palo Alto, CA",
+    aum: "$10B+ (following $1.3B Fund VI + Early Growth Fund III close, April 2026)",
+    thesis: "Eclipse Ventures was founded in 2015 on the belief that the most consequential companies of the next decade would be built in physical industries — manufacturing, energy, defense, and supply chains — not software alone. The firm describes itself not as a traditional portfolio but as a connected industrial economy: companies it backs share infrastructure, talent networks, and hard-won operational insight with each other, and Eclipse itself co-founds and incubates companies from scratch rather than only writing checks into existing startups. In April 2026 the firm closed its largest fundraise yet, $1.3 billion across a $720 million Fund VI and a $591 million Early Growth Fund III, pushing total assets under management to roughly $10 billion across an 11-year history.",
+    leadership: [
+      { name: "Lior Susan", role: "Founder & CEO" },
+      { name: "Greg Reichow", role: "Partner" }
+    ],
+    timeline: [
+      { year: "2015", event: "Lior Susan founds Eclipse Ventures in Palo Alto." },
+      { year: "2021", event: "Closes Fund IV at $500 million and its first dedicated Early Growth Fund at $510 million." },
+      { year: "2023", event: "Closes $1.23 billion across Fund V and Early Growth Fund II, pushing total capital under management to $4 billion." },
+      { year: "2026", event: "Closes its largest raise yet, $1.3 billion across Fund VI and Early Growth Fund III, pushing total AUM to roughly $10 billion." }
+    ],
+    holdings: []
   },
   {
     rank: 21,
