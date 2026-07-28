@@ -2526,6 +2526,37 @@ sources: [
       { label: "Wikipedia — Teymour Boutros-Ghali", url: "https://en.wikipedia.org/wiki/Teymour_Boutros-Ghali" }
     ]
   },
+"matt-melymuka": {
+    name: "Matt Melymuka",
+    firm: "PeakSpan Capital",
+    firmSlug: "peakspan-capital",
+    title: "Co-Founder & Managing Partner",
+    joinedYear: 2015,
+    education: ["B.S., Finance, Georgetown University (cum laude)"],
+    previousExperience: [
+      "Technology Investment Banker, Piper Jaffray (Technology, Media & Telecom group)",
+      "Investor, Investor Growth Capital (B2B software investment team)",
+      "Investor, Greycroft Partners' Growth Fund"
+    ],
+    investmentFocus: ["Applied AI", "B2B Software", "Go-to-Market Technology", "Hospitality Technology"],
+    notableInvestments: [
+      { name: "Ecwid", ticker: null }
+    ],
+    boardSeats: ["Letterhead"],
+    ipoCount: 0,
+    majorExits: 1,
+    careerTimeline: [
+      { year: "2011", event: "Joins Investor Growth Capital's B2B software investment team, where he meets future PeakSpan co-founders Phil Dur and Brian Mulvey." },
+      { year: "2015", event: "Co-founds PeakSpan Capital with Phil Dur and Brian Mulvey." },
+      { year: "2021", event: "PeakSpan portfolio company Ecwid is acquired by Lightspeed Commerce for approximately $500 million." },
+      { year: "2022", event: "Named to Crain's New York Business '40 Under 40' list." },
+      { year: "2024", event: "Named to GrowthCap's Top 40 Under 40 Growth Investors list, a recognition repeated in 2025." }
+    ],
+    biography: "Matt Melymuka has spent his entire career on growth-stage software investing, starting as a technology investment banker on Piper Jaffray's Technology, Media & Telecom team before moving to Investor Growth Capital's B2B software investment team — where he met Phil Dur and Brian Mulvey, the two colleagues with whom he'd later found PeakSpan Capital in 2015. After refining their shared investment approach together at Investor Growth Capital and then Greycroft Partners' Growth Fund, the three co-founded PeakSpan around a specific bet: that applied AI B2B software companies scaling from roughly $3 million to $50 million in ARR needed a specialist partner, not a generalist growth fund. Melymuka has worked with more than 30 growth-stage software companies over 15-plus years at the firm, has been named to both Crain's and GrowthCap's 40 Under 40 lists, and leads PeakSpan's efforts in go-to-market and hospitality technology.",
+    sources: [
+      { label: "PeakSpan Capital", url: "https://www.peakspancapital.com/investment-team/matt-melymuka" }
+    ]
+  },
 };
 
 // ============================================================
@@ -3769,9 +3800,9 @@ const firms = [
     aum: "$2.6B",
     thesis: "PeakSpan Capital was founded in 2015 to target what it calls the hardest stage of company building — not the earliest inception risk, but scaling a proven B2B software company from roughly $3 million to $50 million in annual recurring revenue. The firm's own materials emphasize operational support, exit preparedness, and domain specialization across twelve defined categories, from human capital management to next-gen security, rather than broad venture branding. Its inaugural $150 million fund closed in January 2016, followed by a $265 million Fund II in December 2018 and an oversubscribed $567 million Fund III in January 2022 — the same year the firm's exit of ecommerce platform Ecwid, acquired by Lightspeed Commerce for $500 million, became one of its signature outcomes.",
     leadership: [
-      { name: "Phil Dur", role: "Co-Founder & Managing Partner" },
+   { name: "Phil Dur", role: "Co-Founder & Managing Partner" },
       { name: "Brian Mulvey", role: "Co-Founder & Managing Partner" },
-      { name: "Matt Melymuka", role: "Co-Founder & Partner" }
+      { name: "Matt Melymuka", role: "Co-Founder & Managing Partner", profileSlug: "matt-melymuka" }
     ],
     timeline: [
       { year: "2015", event: "Phil Dur, Brian Mulvey, and Matt Melymuka found PeakSpan Capital." },
