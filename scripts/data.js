@@ -3630,6 +3630,34 @@ const firms = [
       { name: "Ginkgo Bioworks", ticker: "DNA", historicalPrice: null, price: null }
     ]
   },
+   {
+    rank: 37,
+    name: "Amplify Partners",
+    sectors: ["AI", "Developer Tools", "Cybersecurity", "Enterprise Software", "Cloud Infrastructure"],
+    signatureExit: "Datadog's 2019 Nasdaq IPO — Amplify was one of the company's first institutional investors, more than a decade before the observability platform reached a market capitalization of roughly $93 billion by July 2026",
+    slug: "amplify-partners",
+    website: "https://www.amplifypartners.com",
+    short: "Amplify Partners",
+    founded: 2012,
+    hq: "Menlo Park, CA",
+    aum: "$900M (Fund 6, Fund 6 Select & Amplify Bio, June 2025)",
+    thesis: "Amplify Partners was founded in 2012 with an unusually specific identity: it calls itself the first investor built for technical founders, not software founders broadly. The firm made its name as one of the earliest institutional backers of Datadog and Fastly more than a decade ago, when technical founders running B2B infrastructure companies were still considered unconventional bets, and it has kept that thesis through waves of developer tools, data infrastructure, and AI/ML platform investing. In June 2025 Amplify closed $900 million across three vehicles — a $400 million core Fund 6, a $300 million Fund 6 Select for follow-on support, and a new $200 million Amplify Bio fund marking its first dedicated push into digital biology.",
+    leadership: [
+      { name: "Mike Dauber", role: "General Partner" },
+      { name: "Sunil Dhaliwal", role: "General Partner" },
+      { name: "Sarah Catanzaro", role: "General Partner" },
+      { name: "Lenny Pruss", role: "General Partner" }
+    ],
+    timeline: [
+      { year: "2012", event: "Amplify Partners is founded, built specifically around backing technical founders." },
+      { year: "2019", event: "Portfolio company Datadog goes public on the Nasdaq at $27 per share." },
+      { year: "2022", event: "Closes its prior pair of funds, continuing to back developer tools and infrastructure founders." },
+      { year: "2025", event: "Closes $900 million across Fund 6, Fund 6 Select, and its first dedicated Amplify Bio fund." }
+    ],
+    holdings: [
+      { name: "Datadog", ticker: "DDOG", historicalPrice: 143.63, price: 255.00 }
+    ]
+  },
   {
     rank: 37,
     name: "Madrona Venture Group",
