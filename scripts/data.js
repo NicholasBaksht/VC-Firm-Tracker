@@ -3310,6 +3310,32 @@ const firms = [
       { name: "Snowflake", ticker: "SNOW", historicalPrice: null, price: null }
     ]
   },
+   {
+    rank: 27,
+    name: "Crosslink Capital",
+    sectors: ["AI", "Enterprise Software", "Consumer Internet", "Fintech", "Cloud Infrastructure"],
+    signatureExit: "No single signature exit with a verified public dollar figure — Crosslink's track record instead runs through Alpha, its invite-only network of more than 2,000 founders, CEOs, and investors co-founded by General Partner Eric Chin in 2005, now in its third decade of connecting the firm's portfolio to the wider venture ecosystem",
+    slug: "crosslink-capital",
+    website: "https://www.crosslinkcapital.com",
+    short: "Crosslink Capital",
+    founded: 1989,
+    hq: "Menlo Park, CA",
+    aum: "$4.6B+",
+    thesis: "Crosslink Capital was founded in 1989 and has spent 35 years investing in early-stage founders from pre-seed and seed through Series A, across enterprise, consumer, and vertical technology. The firm's clearest differentiator is Alpha, an invite-only network of more than 2,000 founders, CEOs, investors, and operators that General Partner Eric Chin co-founded in 2005 — now running more than forty annual events and functioning as a genuine deal-sourcing and founder-support engine rather than a marketing label. Crosslink closed its tenth flagship fund, Crosslink Ventures X, at $350 million in April 2024, the same size as its prior fund from January 2021, and now manages more than $4.6 billion.",
+    leadership: [
+      { name: "Michael Stark", role: "Partner & Founder" },
+      { name: "Eric Chin", role: "General Partner & Alpha Founder" },
+      { name: "Matt Bigge", role: "Partner" },
+      { name: "Phil Boyer", role: "Partner" }
+    ],
+    timeline: [
+      { year: "1989", event: "Michael Stark founds Crosslink Capital in Menlo Park." },
+      { year: "2005", event: "General Partner Eric Chin co-founds Alpha, the firm's invite-only founder and investor network." },
+      { year: "2021", event: "Closes its ninth flagship fund at $350 million in January." },
+      { year: "2024", event: "Closes its tenth flagship fund, Crosslink Ventures X, at $350 million, marking the firm's 35th year." }
+    ],
+    holdings: []
+  },
   {
     rank: 27,
     name: "CRV",
