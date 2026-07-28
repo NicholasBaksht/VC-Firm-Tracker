@@ -3659,6 +3659,32 @@ const firms = [
       { name: "Datadog", ticker: "DDOG", historicalPrice: 143.63, price: 255.00 }
     ]
   },
+   {
+    rank: 38,
+    name: "Wing Venture Capital",
+    sectors: ["AI", "Data Infrastructure", "Enterprise Software", "Cybersecurity", "Developer Tools"],
+    signatureExit: "Snowflake's 2020 NYSE IPO — Wing was a first-check investor in the data cloud company, which priced at $120 per share and closed its first trading day valued at over $70 billion",
+    slug: "wing-vc",
+    website: "https://wing.vc",
+    short: "Wing VC",
+    founded: 2013,
+    hq: "Palo Alto, CA",
+    aum: "$600M (Wing Four, 2023)",
+    thesis: "Wing Venture Capital was founded in 2013 and has sharpened over time from a classic enterprise-investing heritage into what it now calls an AI-first technology stack firm. The firm's team bios read unusually specifically for a generalist-sized fund — AI infrastructure, AI applications, security, bio times data, and autonomous software — and its public materials frame the mission around AI, data, autonomous applications, and product-led growth rather than enterprise software broadly. Wing was a first-check investor in Snowflake years before its 2020 IPO, and closed Wing Four, a $600 million early-stage fund, in July 2023.",
+    leadership: [
+      { name: "Gaurav Garg", role: "Founding Partner" },
+      { name: "Peter Wagner", role: "Founding Partner" },
+      { name: "Sara Choi", role: "Partner" }
+    ],
+    timeline: [
+      { year: "2013", event: "Gaurav Garg and Peter Wagner found Wing Venture Capital in Palo Alto." },
+      { year: "2020", event: "Raises a $450 million third fund and publicly highlights Snowflake, Cohesity, and Gong; Snowflake goes public in September." },
+      { year: "2023", event: "Closes Wing Four, a $600 million early-stage fund, in July." }
+    ],
+    holdings: [
+      { name: "Snowflake", ticker: "SNOW", historicalPrice: 157.51, price: 250.00 }
+    ]
+  },
   {
     rank: 37,
     name: "Madrona Venture Group",
