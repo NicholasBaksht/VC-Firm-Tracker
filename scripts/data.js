@@ -2512,8 +2512,9 @@ const firmStages = {
  "madrona": ["Seed", "Series A", "Growth"],
   "floodgate": ["Pre-Seed", "Seed"],
        "lux-capital": ["Seed", "Series A", "Growth"],
-  "dcvc": ["Seed", "Series A", "Growth"]
-   "rtp-global": ["Seed", "Series A", "Series B"]
+  "dcvc": ["Seed", "Series A", "Growth"],
+   "rtp-global": ["Seed", "Series A", "Series B"],
+    "amplify-partners": ["Seed", "Series A", "Series B"]
 };
 
 // ============================================================
