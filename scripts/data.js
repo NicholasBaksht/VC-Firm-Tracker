@@ -2557,6 +2557,43 @@ sources: [
       { label: "PeakSpan Capital", url: "https://www.peakspancapital.com/investment-team/matt-melymuka" }
     ]
   },
+"gaurav-garg": {
+    name: "Gaurav Garg",
+    firm: "Wing Venture Capital",
+    firmSlug: "wing-vc",
+    title: "Founding Partner",
+    joinedYear: 2013,
+    education: ["BS & MS, Electrical Engineering, Washington University in St. Louis", "BS, Computer Science, Washington University in St. Louis"],
+    previousExperience: [
+      "Engineering roles, SynOptics and Bay Networks",
+      "Founder & SVP of Product Management, Redback Networks (IPO 1999)",
+      "Partner, Sequoia Capital (2001-2012)"
+    ],
+    investmentFocus: ["AI", "Data Infrastructure", "Enterprise Software", "Cybersecurity", "Developer Tools"],
+    notableInvestments: [
+      { name: "Snowflake", ticker: "SNOW" },
+      { name: "Ruckus Wireless", ticker: null },
+      { name: "FireEye", ticker: null },
+      { name: "MobileIron", ticker: null }
+    ],
+    boardSeats: ["Ruckus Wireless", "FireEye", "MobileIron", "Cohesity"],
+    ipoCount: 6,
+    majorExits: 2,
+    careerTimeline: [
+      { year: "1996", event: "Founds Redback Networks after early engineering roles at SynOptics and Bay Networks." },
+      { year: "1999", event: "Redback Networks completes its IPO." },
+      { year: "2001", event: "Joins Sequoia Capital as a partner." },
+      { year: "2002", event: "Founds Ruckus Wireless, which he builds toward IPO over the following decade." },
+      { year: "2012", event: "Ruckus Wireless and FireEye both go public; Garg's decade at Sequoia ends." },
+      { year: "2013", event: "Co-founds Wing Venture Capital with Peter Wagner." },
+      { year: "2020", event: "Portfolio company Snowflake goes public, later valued at over $70 billion on its first trading day." }
+    ],
+    biography: "Gaurav Garg brought a rare founder-to-investor path to Wing Venture Capital when he co-founded the firm with Peter Wagner in 2013. After early engineering roles at SynOptics and Bay Networks, he founded Redback Networks in 1996 and took it public in 1999, then spent 2001 to 2012 as a partner at Sequoia Capital, where he helped build FireEye and Jasper from early stages and served on boards for more than ten years each. In between, he founded Ruckus Wireless in 2002 and guided it to its own 2012 IPO — giving him operating experience building two public companies from scratch, not just investing in others. That builder's instinct shows up directly in Wing's long-duration, company-building posture with founders, and in its highest-profile bet: Wing was a first-check investor in Snowflake years before its 2020 IPO, which valued the data cloud company at over $70 billion on its first day of trading.",
+    sources: [
+      { label: "Wing Venture Capital", url: "https://www.wing.vc/people/gaurav-garg" },
+      { label: "Wing Launch Announcement", url: "https://www.wing.vc/content/wing-launches-with-new-111-million-venture-fund" }
+    ]
+  },
 };
 
 // ============================================================
@@ -4024,7 +4061,7 @@ const firms = [
     aum: "$600M (Wing Four, 2023)",
     thesis: "Wing Venture Capital was founded in 2013 and has sharpened over time from a classic enterprise-investing heritage into what it now calls an AI-first technology stack firm. The firm's team bios read unusually specifically for a generalist-sized fund — AI infrastructure, AI applications, security, bio times data, and autonomous software — and its public materials frame the mission around AI, data, autonomous applications, and product-led growth rather than enterprise software broadly. Wing was a first-check investor in Snowflake years before its 2020 IPO, and closed Wing Four, a $600 million early-stage fund, in July 2023.",
     leadership: [
-      { name: "Gaurav Garg", role: "Founding Partner" },
+    { name: "Gaurav Garg", role: "Founding Partner", profileSlug: "gaurav-garg" },
       { name: "Peter Wagner", role: "Founding Partner" },
       { name: "Sara Choi", role: "Partner" }
     ],
