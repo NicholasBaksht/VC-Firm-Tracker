@@ -4,10 +4,6 @@
    Kept in its own file given how central this metric is to the
    site, even though it's a single function.
    ============================================================ */
-// Builds the small colored badge showing return since Jan 2, 2025,
-// for any holding that has a real historicalPrice on file. Holdings
-// without one yet (historicalPrice: null) show a neutral "—" badge
-// instead of guessing.
 // Computes the Power Score: a transparent, formula-based rating out
 // of 100 built entirely from real data already on this page - no
 // opinions, no hidden inputs. Four measurable factors:
