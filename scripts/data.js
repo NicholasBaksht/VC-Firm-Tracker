@@ -2515,8 +2515,9 @@ const firmStages = {
   "dcvc": ["Seed", "Series A", "Growth"],
    "rtp-global": ["Seed", "Series A", "Series B"],
     "amplify-partners": ["Seed", "Series A", "Series B"],
-         "wing-vc": ["Seed", "Series A", "Series B"]
-   "peakspan-capital": ["Series A", "Series B", "Growth"]
+         "wing-vc": ["Seed", "Series A", "Series B"],
+   "peakspan-capital": ["Series A", "Series B", "Growth"],
+   "inovia-capital": ["Pre-Seed", "Seed", "Series A", "Series B", "Growth", "Late Stage"]
 };
 
 // ============================================================
@@ -3571,6 +3572,34 @@ const firms = [
       { year: "2022", event: "Closes Fund III at $567 million, growing AUM toward $1.4 billion." }
     ],
     holdings: []
+  },
+   {
+    rank: 36,
+    name: "Inovia Capital",
+    sectors: ["AI", "Cybersecurity", "Digital Health", "Fintech", "Infrastructure"],
+    signatureExit: "Lightspeed Commerce's 2019 dual listing on the NYSE and TSX — Inovia was Lightspeed's first Canadian investor and helped lead a 2017 buyout that kept the Montreal point-of-sale company from a foreign takeover ahead of its IPO",
+    slug: "inovia-capital",
+    website: "https://www.inovia.vc",
+    short: "Inovia",
+    founded: 2007,
+    hq: "Montreal, Quebec, Canada",
+    aum: "$2.5B+",
+    thesis: "Inovia Capital was founded in Montreal in 2007 and has built itself into a full-stack venture platform spanning pre-seed through pre-IPO — a stage range wider than most firms attempt, backed up by a Continuity Fund specifically built to keep supporting winners all the way to public markets. Its clearest proof point is Lightspeed Commerce: Inovia was the point-of-sale company's first Canadian investor, helped lead a 2017 buyout to keep it Canadian-owned rather than see a foreign firm force a sale, and stayed in through its 2019 dual listing on the NYSE and TSX. The firm has since grown past $2.5 billion under management across offices in Montreal, Toronto, Calgary, San Francisco, London, and Abu Dhabi.",
+    leadership: [
+      { name: "Chris Arsenault", role: "Partner & Co-Founder" },
+      { name: "Dennis Kavelman", role: "Partner" },
+      { name: "Patrick Pichette", role: "Partner" }
+    ],
+    timeline: [
+      { year: "2007", event: "Chris Arsenault co-founds Inovia Capital in Montreal." },
+      { year: "2017", event: "Leads a buyout of Accel Partners' stake in Lightspeed alongside the Caisse, keeping the company Canadian-owned." },
+      { year: "2019", event: "Lightspeed Commerce goes public on both the NYSE and TSX." },
+      { year: "2021", event: "Raises a $450 million second growth fund and a $416 million CAD continuation fund, pushing total capital under management past $1.9 billion." },
+      { year: "2026", event: "Firm surpasses $2.5 billion under management across six global offices." }
+    ],
+    holdings: [
+      { name: "Lightspeed Commerce", ticker: "LSPD", historicalPrice: 15.74, price: 11.68 }
+    ]
   },
   {
     rank: 35,
