@@ -2995,6 +2995,33 @@ const firms = [
       { name: "Robinhood", ticker: "HOOD", historicalPrice: null, price: 99.96 }
     ]
   },
+   {
+    rank: 16,
+    name: "Intel Capital",
+    sectors: ["AI", "Cloud Infrastructure", "Cybersecurity", "5G", "Robotics"],
+    signatureExit: "No single signature exit — Intel Capital's scale is cumulative: since 1991 it has invested $12.9 billion across more than 1,582 companies worldwide, with 692 reaching an IPO or acquisition, including current public holding Joby Aviation",
+    slug: "intel-capital",
+    website: "https://www.intelcapital.com",
+    short: "Intel Capital",
+    founded: 1991,
+    hq: "Santa Clara, CA",
+    aum: "$12.9B invested since 1991 (cumulative capital deployed)",
+    thesis: "Intel Capital was founded in 1991 as, by its own description, the first corporate venture capital firm, and it has spent more than three decades investing globally around Intel's core compute and connectivity platforms. The firm organizes its current portfolio into four groups — Cloud, Devices, Frontier, and Silicon — reflecting genuinely broad technical reach across AI infrastructure, edge systems, cybersecurity, 5G, and semiconductor tooling, not just software. Since 1991, Intel Capital has invested $12.9 billion across more than 1,582 companies worldwide, with 692 of them reaching a public listing or acquisition, giving it one of the largest cumulative track records of any strategic investor in technology.",
+    leadership: [
+      { name: "Anthony Lin", role: "Head of Intel Capital & Corporate Vice President" },
+      { name: "Mark Rostick", role: "Vice President & Senior Managing Director" },
+      { name: "Srini Ananth", role: "Managing Director" }
+    ],
+    timeline: [
+      { year: "1991", event: "Intel founds Intel Capital as one of the first corporate venture capital arms." },
+      { year: "2017", event: "Total invested capital passes $12.2 billion across 1,500 companies." },
+      { year: "2021", event: "Portfolio companies SentinelOne, Enovix, Matterport, Spire, and Science 37 all go public." },
+      { year: "2026", event: "Cumulative invested capital reaches $12.9 billion across more than 1,582 companies, with 692 IPO or M&A outcomes." }
+    ],
+    holdings: [
+      { name: "Joby Aviation", ticker: "JOBY", historicalPrice: 8.09, price: 7.24 }
+    ]
+  },
   {
     rank: 16,
     name: "Index Ventures",
