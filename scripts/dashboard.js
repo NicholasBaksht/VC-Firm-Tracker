@@ -575,10 +575,7 @@ function renderAnalytics() {
   const totalFirms = firms.length;
   const totalHoldings = firms.reduce((sum, f) => sum + f.holdings.length, 0);
 
-  const combinedAUM = firms.reduce((sum, f) => {
-    const match = f.aum.match(/\$(\d+)B/);
-    return match ? sum + parseInt(match[1]) : sum;
-  }, 0);
+ const combinedAUM = Math.round(firms.reduce((sum, f) => sum + parseAumNumber(f.aum), 0));
 
   const oldestFirm = firms.reduce((a, b) => (a.founded < b.founded ? a : b));
   const newestFirm = firms.reduce((a, b) => (a.founded > b.founded ? a : b));
