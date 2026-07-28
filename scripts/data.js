@@ -2521,7 +2521,8 @@ const firmStages = {
      "crosslink-capital": ["Pre-Seed", "Seed", "Series A"],
    "bold-capital-partners": ["Seed", "Series A"],
    "altos-ventures": ["Seed", "Series A"],
-   "maveron": ["Seed", "Series A"]
+   "maveron": ["Seed", "Series A"],
+   "intel-capital": ["Seed", "Series A", "Series B", "Growth"]
 };
 
 // ============================================================
