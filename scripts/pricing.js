@@ -18,7 +18,7 @@ function renderPricing() {
         <div class="pricing-tier-name">Free</div>
         <div class="pricing-tier-price"><span class="amount">$0</span> / forever</div>
         <ul class="pricing-feature-list">
-          <li>Browse all 13 tracked VC firms</li>
+    <li>Browse all ${firms.length} tracked VC firms</li>
           <li>Search &amp; advanced filters</li>
           <li>Compare up to 3 firms side-by-side</li>
           <li>Find My Investors match scoring</li>
