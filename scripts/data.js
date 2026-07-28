@@ -3622,8 +3622,8 @@ const firms = [
       { year: "2000", event: "Matt McIlwain joins the firm as a Managing Director." },
       { year: "2014", event: "Launches Madrona Venture Labs, an in-house startup studio." },
       { year: "2018", event: "Fund VII closes and the firm says it manages nearly $1.6 billion; portfolio company Smartsheet goes public." },
-      { year: "2022", event: "Raises $690 million across Fund 9 and Acceleration Fund 3." },
-      { year: "2025", event: "Madrona marks 30 years of investing out of Seattle." }
+     { year: "2022", event: "Raises $690 million across Fund 9 and Acceleration Fund 3." },
+      { year: "2025", event: "Closes its largest fundraise yet, $770 million across Fund X and Acceleration Fund IV, marking the firm's 30th year." }
     ],
     holdings: [
       { name: "Redfin", ticker: "RDFN", historicalPrice: null, price: null },
