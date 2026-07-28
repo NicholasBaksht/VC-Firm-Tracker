@@ -2517,7 +2517,8 @@ const firmStages = {
     "amplify-partners": ["Seed", "Series A", "Series B"],
          "wing-vc": ["Seed", "Series A", "Series B"],
    "peakspan-capital": ["Series A", "Series B", "Growth"],
-   "inovia-capital": ["Pre-Seed", "Seed", "Series A", "Series B", "Growth", "Late Stage"]
+   "inovia-capital": ["Pre-Seed", "Seed", "Series A", "Series B", "Growth", "Late Stage"],
+     "crosslink-capital": ["Pre-Seed", "Seed", "Series A"]
 };
 
 // ============================================================
