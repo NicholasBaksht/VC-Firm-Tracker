@@ -2594,6 +2594,43 @@ sources: [
       { label: "Wing Launch Announcement", url: "https://www.wing.vc/content/wing-launches-with-new-111-million-venture-fund" }
     ]
   },
+"lior-susan": {
+    name: "Lior Susan",
+    firm: "Eclipse Ventures",
+    firmSlug: "eclipse-ventures",
+    title: "Founder, Managing Partner & CEO",
+    joinedYear: 2015,
+    education: [],
+    previousExperience: [
+      "Co-Founder, Intucell (software-defined networking, acquired by Cisco for $475M in 2012)",
+      "Founder & General Partner, Lab IX — Flextronics' hardware investment platform",
+      "Special Forces reservist, Israel Defense Forces"
+    ],
+    investmentFocus: ["Manufacturing", "Logistics", "Energy", "Defense", "Industrial AI"],
+    notableInvestments: [
+      { name: "Enovix", ticker: "ENVX" },
+      { name: "Bright Machines", ticker: null },
+      { name: "Cerebras", ticker: null },
+      { name: "Augury", ticker: null }
+    ],
+    boardSeats: ["Bright Machines", "Cerebras", "Augury", "Ursa Major"],
+    ipoCount: 1,
+    majorExits: 1,
+    careerTimeline: [
+      { year: "2008", event: "Co-founds Intucell with his brother, building a software-defined networking company for global telecom networks." },
+      { year: "2012", event: "Cisco acquires Intucell for $475 million." },
+      { year: "2012", event: "Joins Flex as Founder & General Partner of Lab IX, its hardware investment platform, investing across energy storage, additive manufacturing, and robotics." },
+      { year: "2015", event: "Founds Eclipse Ventures in Palo Alto to back founders rebuilding physical industries." },
+      { year: "2020", event: "Eclipse invests in Enovix; Eclipse partner Greg Reichow joins its board." },
+      { year: "2021", event: "Enovix becomes a public company via business combination." },
+      { year: "2026", event: "Eclipse closes $1.3 billion across Fund VI and Early Growth Fund III, bringing total AUM to roughly $10 billion." }
+    ],
+    biography: "Lior Susan's path to venture capital runs through a kibbutz in Israel and an elite Special Forces unit, not a university — by his own account, he arrived in Silicon Valley in his mid-20s with no formal education and no experience working for anyone else. In 2008 he joined his brother to build Intucell, a software-defined networking startup for telecom networks, and sold it to Cisco for $475 million four years later. He then spent three years at Flex, the global manufacturing company, leading its Lab IX hardware investment platform and getting an inside view of the operational inefficiencies choking legacy physical industries — manufacturing, logistics, energy. That experience became the direct thesis behind Eclipse Ventures, which he founded in 2015 on the belief that rebuilding those industries, not just software-enabling them, would define the next generation of consequential companies. Eclipse's 2020 investment in battery maker Enovix, which went public the following year, remains one of the clearest proof points of that thesis.",
+    sources: [
+      { label: "Eclipse Ventures", url: "https://eclipse.capital/team/lior-susan/" },
+      { label: "Heidrick & Struggles Interview", url: "https://www.heidrick.com/en/insights/podcasts/e189_traits-successful-venture-capital-leader-lior-susan" }
+    ]
+  },
 };
 
 // ============================================================
@@ -3345,7 +3382,7 @@ const firms = [
     aum: "$10B+ (following $1.3B Fund VI + Early Growth Fund III close, April 2026)",
     thesis: "Eclipse Ventures was founded in 2015 on the belief that the most consequential companies of the next decade would be built in physical industries — manufacturing, energy, defense, and supply chains — not software alone. The firm describes itself not as a traditional portfolio but as a connected industrial economy: companies it backs share infrastructure, talent networks, and hard-won operational insight with each other, and Eclipse itself co-founds and incubates companies from scratch rather than only writing checks into existing startups. In April 2026 the firm closed its largest fundraise yet, $1.3 billion across a $720 million Fund VI and a $591 million Early Growth Fund III, pushing total assets under management to roughly $10 billion across an 11-year history.",
     leadership: [
-      { name: "Lior Susan", role: "Founder & CEO" },
+     { name: "Lior Susan", role: "Founder & CEO", profileSlug: "lior-susan" },
       { name: "Greg Reichow", role: "Partner" }
     ],
     timeline: [
