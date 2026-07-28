@@ -2516,6 +2516,7 @@ const firmStages = {
    "rtp-global": ["Seed", "Series A", "Series B"],
     "amplify-partners": ["Seed", "Series A", "Series B"],
          "wing-vc": ["Seed", "Series A", "Series B"]
+   "peakspan-capital": ["Series A", "Series B", "Growth"]
 };
 
 // ============================================================
@@ -3543,6 +3544,33 @@ const firms = [
       { name: "Veeva Systems", ticker: "VEEV", historicalPrice: null, price: null },
       { name: "Box", ticker: "BOX", historicalPrice: null, price: null }
     ]
+  },
+    {
+    rank: 35,
+    name: "PeakSpan Capital",
+    sectors: ["AI", "Enterprise Software", "Vertical SaaS", "Fintech", "Ecommerce Infrastructure"],
+    signatureExit: "Ecwid's 2021 acquisition by Lightspeed Commerce for $500 million — PeakSpan invested in the ecommerce platform in March 2020 and exited the following year",
+    slug: "peakspan-capital",
+    website: "https://www.peakspancapital.com",
+    short: "PeakSpan",
+    founded: 2015,
+    hq: "New York, NY",
+    aum: "$2.6B",
+    thesis: "PeakSpan Capital was founded in 2015 to target what it calls the hardest stage of company building — not the earliest inception risk, but scaling a proven B2B software company from roughly $3 million to $50 million in annual recurring revenue. The firm's own materials emphasize operational support, exit preparedness, and domain specialization across twelve defined categories, from human capital management to next-gen security, rather than broad venture branding. Its inaugural $150 million fund closed in January 2016, followed by a $265 million Fund II in December 2018 and an oversubscribed $567 million Fund III in January 2022 — the same year the firm's exit of ecommerce platform Ecwid, acquired by Lightspeed Commerce for $500 million, became one of its signature outcomes.",
+    leadership: [
+      { name: "Phil Dur", role: "Co-Founder & Managing Partner" },
+      { name: "Brian Mulvey", role: "Co-Founder & Managing Partner" },
+      { name: "Matt Melymuka", role: "Co-Founder & Partner" }
+    ],
+    timeline: [
+      { year: "2015", event: "Phil Dur, Brian Mulvey, and Matt Melymuka found PeakSpan Capital." },
+      { year: "2016", event: "Closes its inaugural $150 million fund." },
+      { year: "2018", event: "Closes Fund II at $265 million." },
+      { year: "2020", event: "Invests in ecommerce platform Ecwid in March." },
+      { year: "2021", event: "Ecwid is acquired by Lightspeed Commerce for $500 million in June." },
+      { year: "2022", event: "Closes Fund III at $567 million, growing AUM toward $1.4 billion." }
+    ],
+    holdings: []
   },
   {
     rank: 35,
