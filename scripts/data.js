@@ -2666,6 +2666,41 @@ sources: [
       { label: "Réseau Capital", url: "https://reseaucapital.com/en/speakers/chris-arsenault/" }
     ]
   },
+"matt-bigge": {
+    name: "Matt Bigge",
+    firm: "Crosslink Capital",
+    firmSlug: "crosslink-capital",
+    title: "Partner",
+    joinedYear: 2016,
+    education: ["BS, International Relations, Georgetown University", "MBA, Harvard Business School"],
+    previousExperience: [
+      "Infantry Officer, U.S. Army, 10th Mountain Division (Airborne & Ranger qualified)",
+      "Co-Founder & President, MILCOM Technologies",
+      "CEO & Co-Founder, Strategic Social Holdings (acquired by Constellis Group)",
+      "Venture Partner, Paladin Capital Group"
+    ],
+    investmentFocus: ["Cybersecurity", "Enterprise Infrastructure", "Digital Transformation", "National Security Tech"],
+    notableInvestments: [
+      { name: "ArcSight", ticker: null },
+      { name: "CloudShield", ticker: null },
+      { name: "Narus", ticker: null },
+      { name: "MeshNetworks", ticker: null }
+    ],
+    boardSeats: ["Silicon Valley Defense Group"],
+    ipoCount: 0,
+    majorExits: 4,
+    careerTimeline: [
+      { year: "1992", event: "Serves as an Infantry Officer in the U.S. Army's 10th Mountain Division after graduating Georgetown." },
+      { year: "1997", event: "Co-founds MILCOM Technologies, ultimately leading the commercialization of more than $2 billion in defense-focused R&D into ten product companies." },
+      { year: "2012", event: "Becomes a Venture Partner at Paladin Capital Group, investing in enterprise and industrial infrastructure security." },
+      { year: "2016", event: "Joins Crosslink Capital as Partner, focused on enterprise and industrial IT infrastructure, security, and what the firm calls 'plausible science fiction.'" }
+    ],
+    biography: "Matt Bigge's path to Crosslink Capital runs through the U.S. Army's 10th Mountain Division, where he served as an Airborne- and Ranger-qualified Infantry officer after graduating Georgetown, before earning his MBA at Harvard Business School. He co-founded MILCOM Technologies in 1997, spending years commercializing more than $2 billion of defense-focused R&D into ten separate product companies — work that led to a track record backing companies like ArcSight (acquired by HP), CloudShield (acquired by SAIC), and Narus (acquired by Boeing). After serving as CEO of Strategic Social Holdings and a Venture Partner at Paladin Capital, he joined Crosslink in 2016 with a two-decade relationship to the firm's team already in place — he'd worked with Crosslink partner Eric Chin years earlier at MILCOM. That military-to-venture pipeline is now a defining part of Crosslink's brand: Bigge pulls the firm's cybersecurity and national-security-adjacent investing into what Crosslink calls 'plausible science fiction,' broadening it well past a conventional enterprise SaaS identity.",
+    sources: [
+      { label: "Crosslink Capital", url: "https://www.crosslinkcapital.com/team/matt-bigge/" },
+      { label: "Silicon Valley Defense Group", url: "https://www.siliconvalleydefense.org/our-team-1/matt-bigge" }
+    ]
+  },
 };
 
 // ============================================================
@@ -3646,9 +3681,9 @@ const firms = [
     aum: "$4.6B+",
     thesis: "Crosslink Capital was founded in 1989 and has spent 35 years investing in early-stage founders from pre-seed and seed through Series A, across enterprise, consumer, and vertical technology. The firm's clearest differentiator is Alpha, an invite-only network of more than 2,000 founders, CEOs, investors, and operators that General Partner Eric Chin co-founded in 2005 — now running more than forty annual events and functioning as a genuine deal-sourcing and founder-support engine rather than a marketing label. Crosslink closed its tenth flagship fund, Crosslink Ventures X, at $350 million in April 2024, the same size as its prior fund from January 2021, and now manages more than $4.6 billion.",
     leadership: [
-      { name: "Michael Stark", role: "Partner & Founder" },
+   { name: "Michael Stark", role: "Partner & Founder" },
       { name: "Eric Chin", role: "General Partner & Alpha Founder" },
-      { name: "Matt Bigge", role: "Partner" },
+      { name: "Matt Bigge", role: "Partner", profileSlug: "matt-bigge" },
       { name: "Phil Boyer", role: "Partner" }
     ],
     timeline: [
