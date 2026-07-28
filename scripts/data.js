@@ -2548,7 +2548,8 @@ const firmPerformance = {
   "first-round-capital": { totalPortfolio: 500 },
 "ivp": { totalPortfolio: 400, ipoExits: 110 },
   "true-ventures": { totalPortfolio: 390, unicorns: 8, ipoExits: 5, acquisitions: 130 },
-   "eclipse-ventures": ["Seed", "Series A", "Series B", "Growth"]
+   "eclipse-ventures": ["Seed", "Series A", "Series B", "Growth"],
+   "qualcomm-ventures": ["Seed", "Series A", "Series B", "Growth"]
 };
 
 const firmGeography = {
@@ -3709,6 +3710,33 @@ const firms = [
     ],
     holdings: [
       { name: "Lightspeed Commerce", ticker: "LSPD", historicalPrice: 15.74, price: 11.68 }
+    ]
+  },
+   {
+    rank: 37,
+    name: "Qualcomm Ventures",
+    sectors: ["AI", "5G", "Automotive", "IoT", "Cybersecurity"],
+    signatureExit: "Ring's 2018 acquisition by Amazon for more than $1 billion — Qualcomm Ventures was an early backer of the connected-home company",
+    slug: "qualcomm-ventures",
+    website: "https://www.qualcommventures.com",
+    short: "Qualcomm Ventures",
+    founded: 2000,
+    hq: "San Diego, CA",
+    aum: "$2B+ (150+ active portfolio companies, per NVCA 2026)",
+    thesis: "Qualcomm Ventures was founded in November 2000 with an initial $500 million commitment from its parent company, built specifically to promote the growth of the global wireless ecosystem. Its investment focus has stayed tied to that mission ever since — 5G, AI, automotive, IoT, XR, and enterprise and cloud technologies enabled by mobile and connected compute — while its global footprint across San Diego, San Francisco, Israel, Europe, China, India, and Korea gives portfolio companies real commercialization reach beyond typical Silicon Valley strategics. The firm has had seven portfolio exits worth more than $1 billion each, including Fitbit, Cruise Automation, Waze, and Ring, and now manages more than $2 billion in assets across 150-plus active companies.",
+    leadership: [
+      { name: "Quinn Li", role: "SVP & Global Head of Qualcomm Ventures" }
+    ],
+    timeline: [
+      { year: "2000", event: "Qualcomm Ventures is founded with an initial $500 million commitment from Qualcomm Incorporated." },
+      { year: "2015", event: "Portfolio companies Fitbit and ThunderSoft both go public." },
+      { year: "2018", event: "Ring, a connected-home portfolio company, is acquired by Amazon for more than $1 billion." },
+      { year: "2019", event: "Zoom and Cloudflare go public; the firm launches a $200 million 5G Ecosystem fund." },
+      { year: "2021", event: "SentinelOne, Enovix, Matterport, Spire, and Science 37 all go public." },
+      { year: "2026", event: "Firm manages more than $2 billion across 150-plus active portfolio companies in seven regions." }
+    ],
+    holdings: [
+      { name: "SentinelOne", ticker: "S", historicalPrice: 22.57, price: 18.55 }
     ]
   },
   {
