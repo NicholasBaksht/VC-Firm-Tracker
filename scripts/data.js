@@ -2701,6 +2701,40 @@ sources: [
       { label: "Silicon Valley Defense Group", url: "https://www.siliconvalleydefense.org/our-team-1/matt-bigge" }
     ]
   },
+"dan-levitan": {
+    name: "Dan Levitan",
+    firm: "Maveron",
+    firmSlug: "maveron",
+    title: "Co-Founder & General Partner",
+    joinedYear: 1998,
+    education: ["BA, Duke University", "MBA, Harvard Business School"],
+    previousExperience: [
+      "Managing Director, Consumer Group, Schroder Wertheim & Co. (led Starbucks' 1992 IPO)"
+    ],
+    investmentFocus: ["Consumer", "Commerce", "Health & Wellness", "Fintech"],
+    notableInvestments: [
+      { name: "Zulily", ticker: null },
+      { name: "Allbirds", ticker: "BIRD" },
+      { name: "Potbelly", ticker: "PBPB" },
+      { name: "Trupanion", ticker: "TRUP" }
+    ],
+    boardSeats: ["Allbirds", "Trupanion", "Pacaso", "Two Chairs"],
+    ipoCount: 4,
+    majorExits: 0,
+    careerTimeline: [
+      { year: "1992", event: "Leads Starbucks' IPO as a Schroder Wertheim & Co. investment banker, forming a relationship with CEO Howard Schultz." },
+      { year: "1998", event: "Co-founds Maveron with Howard Schultz in Seattle." },
+      { year: "2009", event: "Leads Zulily's approximately $5 million Series A round." },
+      { year: "2013", event: "Zulily and Potbelly both go public; Maveron's 22% Zulily stake is worth more than $1 billion at IPO." },
+      { year: "2014", event: "Named to the Forbes Midas List of top venture investors." },
+      { year: "2021", event: "Portfolio company Allbirds goes public on the Nasdaq." }
+    ],
+    biography: "Dan Levitan spent 15 years as a consumer-focused investment banker before co-founding Maveron, leading Starbucks' 1992 IPO as a managing director at Schroder Wertheim & Co. — the deal that formed his relationship with CEO Howard Schultz. The two co-founded Maveron together in 1998, built around a single conviction that has defined the firm ever since: invest only in consumer-facing brands and technology, never enterprise. Levitan's clearest proof point came in 2009, when he led a roughly $5 million Series A round in Zulily; by the time the ecommerce company went public in 2013 at a $4.6 billion valuation, Maveron's 22% stake was worth more than $1 billion. He was named to the Forbes Midas List in 2014, has sat on the boards of Allbirds, Trupanion, Pacaso, and Two Chairs, and remains the firm's most public face more than 25 years after co-founding it.",
+    sources: [
+      { label: "Maveron", url: "https://www.maveron.com" },
+      { label: "Wikipedia — Dan Levitan", url: "https://en.wikipedia.org/wiki/Dan_Levitan" }
+    ]
+  },
 };
 
 // ============================================================
@@ -4057,7 +4091,7 @@ const firms = [
     aum: "$1.3B (as of 2020)",
     thesis: "Maveron was founded in 1998 by Dan Levitan, a former investment banker who took Starbucks public in 1992, and Howard Schultz, the Starbucks CEO he met on that deal. The firm has stayed unusually disciplined about a single idea ever since: investing only in consumer-facing brands and technology, never enterprise or infrastructure. That focus produced one of the largest single outcomes in Seattle venture history — Levitan led Zulily's roughly $5 million Series A in 2009, and Maveron's 22% stake was worth more than $1 billion when the ecommerce company went public on the Nasdaq in 2013 at a $4.6 billion valuation, alongside the same-year IPO of sandwich chain Potbelly.",
     leadership: [
-      { name: "Dan Levitan", role: "Co-Founder & General Partner" },
+   { name: "Dan Levitan", role: "Co-Founder & General Partner", profileSlug: "dan-levitan" },
       { name: "Jason Stoffer", role: "General Partner" },
       { name: "David Wu", role: "General Partner" }
     ],
