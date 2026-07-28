@@ -2631,6 +2631,41 @@ sources: [
       { label: "Heidrick & Struggles Interview", url: "https://www.heidrick.com/en/insights/podcasts/e189_traits-successful-venture-capital-leader-lior-susan" }
     ]
   },
+"chris-arsenault": {
+    name: "Chris Arsenault",
+    firm: "Inovia Capital",
+    firmSlug: "inovia-capital",
+    title: "Co-Founder & General Partner",
+    joinedYear: 2007,
+    education: [],
+    previousExperience: [
+      "Founder & CEO, SIT Solutions Internet Technilogic (SIT Europe sold to Ubizen, 1999)",
+      "Co-Founder, Copernic Technologies and Wanted Technologies",
+      "Investment Director & Entrepreneur in Residence, Telesystem Group",
+      "Partner, MSBi Capital (renamed Inovia Capital)"
+    ],
+    investmentFocus: ["Enterprise Software", "Commerce", "AI", "Growth-Stage Company Building"],
+    notableInvestments: [
+      { name: "Lightspeed Commerce", ticker: "LSPD" },
+      { name: "AppDirect", ticker: null },
+      { name: "Sonder", ticker: null }
+    ],
+    boardSeats: ["AppDirect", "Lightspeed Commerce", "Poka"],
+    ipoCount: 1,
+    majorExits: 2,
+    careerTimeline: [
+      { year: "1993", event: "Founds SIT Solutions Internet Technilogic; its European division is later sold to Ubizen in 1999." },
+      { year: "1999", event: "Joins the Telesystem Group as Investment Director & Entrepreneur in Residence, helping spin out subsidiaries of Teleglobe and Microcell." },
+      { year: "2002", event: "Joins MSBi Capital as Partner, focused on the technology sector." },
+      { year: "2007", event: "Co-founds Inovia Capital, building the firm out from MSBi's original platform." },
+      { year: "2019", event: "Lightspeed Commerce, a company Arsenault has long supported as a board member, goes public on the NYSE and TSX." }
+    ],
+    biography: "Chris Arsenault arrived at Inovia Capital's founding in 2007 with more than a decade of operating experience already behind him, not a traditional finance background. He founded SIT Solutions in 1993, sold its European division to Ubizen in 1999, then spent years helping build Copernic Technologies and Wanted Technologies while also working inside the Telesystem Group, where he helped spin subsidiaries out of telecom giants Teleglobe and Microcell. He joined MSBi Capital in 2002 as its technology-focused partner, and when the firm relaunched as Inovia Capital in 2007, Arsenault became a co-founder shaping its culture and long-term platform strategy. That operator-first background is part of why Inovia frames itself as institution-building rather than opportunistic dealmaking — Arsenault has stayed closely involved with Lightspeed Commerce since its earliest days, sitting on its board through its 2019 IPO, alongside continued board seats at AppDirect and Poka.",
+    sources: [
+      { label: "Inovia Capital", url: "https://www.inovia.vc/team/chris-arsenault/" },
+      { label: "Réseau Capital", url: "https://reseaucapital.com/en/speakers/chris-arsenault/" }
+    ]
+  },
 };
 
 // ============================================================
@@ -3901,7 +3936,7 @@ const firms = [
     aum: "$2.5B+",
     thesis: "Inovia Capital was founded in Montreal in 2007 and has built itself into a full-stack venture platform spanning pre-seed through pre-IPO — a stage range wider than most firms attempt, backed up by a Continuity Fund specifically built to keep supporting winners all the way to public markets. Its clearest proof point is Lightspeed Commerce: Inovia was the point-of-sale company's first Canadian investor, helped lead a 2017 buyout to keep it Canadian-owned rather than see a foreign firm force a sale, and stayed in through its 2019 dual listing on the NYSE and TSX. The firm has since grown past $2.5 billion under management across offices in Montreal, Toronto, Calgary, San Francisco, London, and Abu Dhabi.",
     leadership: [
-      { name: "Chris Arsenault", role: "Partner & Co-Founder" },
+ { name: "Chris Arsenault", role: "Partner & Co-Founder", profileSlug: "chris-arsenault" },
       { name: "Dennis Kavelman", role: "Partner" },
       { name: "Patrick Pichette", role: "Partner" }
     ],
