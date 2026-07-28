@@ -3610,9 +3610,8 @@ const firms = [
     website: "https://www.madrona.com",
     short: "Madrona",
     founded: 1995,
-    hq: "Seattle, WA",
-    aum: "$690M (Fund 9 + Acceleration Fund 3, 2022)",
-    thesis: "Madrona Venture Group was founded in Seattle in 1995 by Tom Alberg, Paul Goodrich, Gerald Grinstein, and William Ruckelshaus, and built its identity around day-one partnerships it then holds for decades. The firm's own materials lean on Smartsheet, Redfin, Impinj, and Apptio as case studies in patient company formation rather than quick flips — a framing that fits a firm where more than 90% of investments were once concentrated in the Pacific Northwest. Madrona said it managed nearly $1.6 billion when Fund VII closed in 2018, and raised $690 million across Fund 9 and Acceleration Fund 3 in 2022, now focused on AI and intelligent applications, cloud and data infrastructure, developer tools, enterprise software, and marketplaces.",
+  aum: "$770M (Fund X + Acceleration Fund IV, 2025)",
+    thesis: "Madrona Venture Group was founded in Seattle in 1995 by Tom Alberg, Paul Goodrich, Gerald Grinstein, and William Ruckelshaus, and built its identity around day-one partnerships it then holds for decades. The firm's own materials lean on Smartsheet, Redfin, Impinj, and Apptio as case studies in patient company formation rather than quick flips — a framing that fits a firm where more than 90% of investments were once concentrated in the Pacific Northwest. Madrona said it managed nearly $1.6 billion when Fund VII closed in 2018, and closed its largest fundraise yet — $770 million across Fund X and Acceleration Fund IV — in January 2025 to mark the firm's 30th year, now focused on applied AI, developer tools, cloud infrastructure, and AI-enabled biology.",
     leadership: [
       { name: "Matt McIlwain", role: "Managing Director", profileSlug: "matt-mcilwain" },
       { name: "Tom Alberg", role: "Co-Founder (1995)" },
