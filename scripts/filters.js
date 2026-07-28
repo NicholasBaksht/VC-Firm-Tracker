@@ -102,3 +102,13 @@ document.getElementById('aumFilterChips').addEventListener('click', (e) => {
   activeAumTier = e.target.dataset.aum;
   renderFirms();
 });
+
+// Founding Era chips - single-select, same pattern as the AUM
+// tier chips above.
+document.getElementById('filterChips').addEventListener('click', (e) => {
+  if (!e.target.classList.contains('chip')) return;
+  document.querySelectorAll('#filterChips .chip').forEach(c => c.classList.remove('active'));
+  e.target.classList.add('active');
+  activeFilter = e.target.dataset.filter;
+  renderFirms();
+});
