@@ -3573,6 +3573,33 @@ const firms = [
       { name: "Duolingo", ticker: "DUOL", historicalPrice: null, price: null }
     ]
   },
+    {
+    rank: 36,
+    name: "RTP Global",
+    sectors: ["AI", "Enterprise Software", "Fintech", "Developer Tools", "Climate"],
+    signatureExit: "Datadog's 2019 Nasdaq IPO — RTP Global was an early Series A-through-D investor in the observability platform, which priced at $27 per share and had grown to a market capitalization of roughly $93 billion by July 2026",
+    slug: "rtp-global",
+    website: "https://rtp.vc",
+    short: "RTP Global",
+    founded: 2000,
+    hq: "New York, NY",
+    aum: "$1B (latest fund, 2023)",
+    thesis: "RTP Global was founded in 2000 by Leonid Boguslavsky, who sold his prior technology company and put the proceeds — along with most of his personal wealth — into starting the firm, then kept reinvesting gains into each subsequent fund rather than relying heavily on outside limited partners. That owner-operator structure shows up in how RTP invests: the firm emphasizes fast decisions, early conviction at seed and Series A, and unusually long holding periods, backing founders across five hubs in New York, London, Bangalore, Paris, and Dubai. RTP has backed more than 100 founders since 2000, with Datadog among its best-known outcomes, and closed its latest flagship fund at $1 billion in 2023.",
+    leadership: [
+      { name: "Leonid Boguslavsky", role: "Partner & Founder" },
+      { name: "Galina Chifina", role: "CEO & Partner" },
+      { name: "Thomas Cuvelier", role: "Partner, US & Europe" }
+    ],
+    timeline: [
+      { year: "2000", event: "Leonid Boguslavsky founds RTP Global, seeding it with proceeds from his prior company sale." },
+      { year: "2019", event: "Portfolio company Datadog goes public on the Nasdaq at $27 per share." },
+      { year: "2023", event: "Closes its latest flagship fund at $1 billion." },
+      { year: "2026", event: "Firm operates across five hubs — New York, London, Bangalore, Paris, and Dubai." }
+    ],
+    holdings: [
+      { name: "Datadog", ticker: "DDOG", historicalPrice: 143.63, price: 255.00 }
+    ]
+  },
   {
     rank: 36,
     name: "Felicis",
