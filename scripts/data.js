@@ -4401,6 +4401,12 @@ const firms = [
       { year: "2022", event: "Nik Milanović launches The Fintech Fund, building on the community from This Week in Fintech." },
       { year: "2024", event: "Closes The Fintech Fund's $10 million Fund II in September." }
     ],
-    holdings: []
+holdings: []
   },
 ];
+
+// Ranks are derived from array position, not hand-typed, so the array
+// itself stays the single source of truth: insert a firm into the
+// correct AUM-sorted slot and every rank recalculates automatically.
+// Never hand-edit a `rank:` field on an individual firm object again.
+firms.forEach((f, i) => { f.rank = i + 1; });
