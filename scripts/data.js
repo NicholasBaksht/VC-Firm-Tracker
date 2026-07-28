@@ -2458,6 +2458,39 @@ sources: [
       { label: "RTP Global", url: "https://rtp.vc" }
     ]
   },
+"sunil-dhaliwal": {
+    name: "Sunil Dhaliwal",
+    firm: "Amplify Partners",
+    firmSlug: "amplify-partners",
+    title: "Founder & General Partner",
+    joinedYear: 2012,
+    education: ["B.S., Finance & International Business, Georgetown University"],
+    previousExperience: [
+      "Technology Investment Banking, Alex. Brown & Sons",
+      "General Partner, Battery Ventures (14+ years)"
+    ],
+    investmentFocus: ["AI", "Developer Tools", "Data Infrastructure", "Cybersecurity", "Enterprise Software"],
+    notableInvestments: [
+      { name: "Datadog", ticker: "DDOG" },
+      { name: "Fastly", ticker: "FSLY" },
+      { name: "Splunk", ticker: null }
+    ],
+    boardSeats: ["Runway"],
+    ipoCount: 3,
+    majorExits: 0,
+    careerTimeline: [
+      { year: "1996", event: "Graduates from Georgetown University and joins Alex. Brown & Sons in technology investment banking." },
+      { year: "1998", event: "Joins Battery Ventures, where he spends more than 14 years backing early-stage infrastructure companies including Splunk." },
+      { year: "2012", event: "Leaves Battery to found Amplify Partners, closing a $40 million debut fund after 18 months of fundraising." },
+      { year: "2019", event: "Portfolio companies Datadog and Fastly both go public." },
+      { year: "2025", event: "Closes $900 million across Fund 6, Fund 6 Select, and Amplify's first dedicated biology fund." }
+    ],
+    biography: "Sunil Dhaliwal has spent more than 25 years investing in technical infrastructure, starting at Battery Ventures in 1998 after two years in technology banking at Alex. Brown & Sons following his 1996 Georgetown graduation. At Battery he spent over 14 years backing early-stage companies through multiple market cycles, including a formative early bet on Splunk, before leaving in 2012 to found Amplify Partners on a single conviction: that technical founders deserved an investor who understood their problem space as deeply as they did. His first fund raised just $40 million after 18 months of on-and-off fundraising; Amplify has since grown into a $900 million platform whose portfolio includes Datadog and Fastly, both public since 2019. Dhaliwal has said his instinct for backing builders in unfashionable technical corners traces back to watching his own father leave a corporate engineering job to start a company when Dhaliwal was still in grade school.",
+    sources: [
+      { label: "Amplify Partners", url: "https://www.amplifypartners.com/team/sunil-dhaliwal" },
+      { label: "TechCrunch — Amplify Partners", url: "https://techcrunch.com/2018/09/18/amplify-partners-locks-in-200-million-to-transform-technical-founders-into-people-who-can-actually-lead-a-startup/" }
+    ]
+  },
 };
 
 // ============================================================
@@ -3898,7 +3931,7 @@ const firms = [
     thesis: "Amplify Partners was founded in 2012 with an unusually specific identity: it calls itself the first investor built for technical founders, not software founders broadly. The firm made its name as one of the earliest institutional backers of Datadog and Fastly more than a decade ago, when technical founders running B2B infrastructure companies were still considered unconventional bets, and it has kept that thesis through waves of developer tools, data infrastructure, and AI/ML platform investing. In June 2025 Amplify closed $900 million across three vehicles — a $400 million core Fund 6, a $300 million Fund 6 Select for follow-on support, and a new $200 million Amplify Bio fund marking its first dedicated push into digital biology.",
     leadership: [
       { name: "Mike Dauber", role: "General Partner" },
-      { name: "Sunil Dhaliwal", role: "General Partner" },
+      { name: "Sunil Dhaliwal", role: "Founder & General Partner", profileSlug: "sunil-dhaliwal" },
       { name: "Sarah Catanzaro", role: "General Partner" },
       { name: "Lenny Pruss", role: "General Partner" }
     ],
