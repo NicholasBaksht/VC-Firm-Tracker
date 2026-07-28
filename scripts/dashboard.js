@@ -509,14 +509,10 @@ function renderSimilarFirms(firm) {
 // leaderboard built from every holding that has real historical
 // price data on file (see historicalPrice field on each holding).
 function renderDashboard() {
-  const maxAUM = Math.max(...firms.map(f => {
-    const m = f.aum.match(/\$(\d+)B/);
-    return m ? parseInt(m[1]) : 0;
-  }));
+  const maxAUM = Math.max(...firms.map(f => parseAumNumber(f.aum)));
 
   const aumRows = firms.map(f => {
-    const m = f.aum.match(/\$(\d+)B/);
-    const val = m ? parseInt(m[1]) : 0;
+    const val = parseAumNumber(f.aum);
     return `
       <div class="aum-bar-row">
         <div class="aum-bar-name">${f.short}</div>
