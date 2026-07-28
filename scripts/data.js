@@ -2520,7 +2520,8 @@ const firmStages = {
    "inovia-capital": ["Pre-Seed", "Seed", "Series A", "Series B", "Growth", "Late Stage"],
      "crosslink-capital": ["Pre-Seed", "Seed", "Series A"],
    "bold-capital-partners": ["Seed", "Series A"],
-   "altos-ventures": ["Seed", "Series A"]
+   "altos-ventures": ["Seed", "Series A"],
+   "maveron": ["Seed", "Series A"]
 };
 
 // ============================================================
