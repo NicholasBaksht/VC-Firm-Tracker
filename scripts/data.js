@@ -2427,6 +2427,37 @@ sources: [
       { label: "DCVC", url: "https://www.dcvc.com" }
     ]
   }
+   "leonid-boguslavsky": {
+    name: "Leonid Boguslavsky",
+    firm: "RTP Global",
+    firmSlug: "rtp-global",
+    title: "Founder & Partner",
+    joinedYear: 2000,
+    education: [],
+    previousExperience: [
+      "Entrepreneur and internet investor prior to founding RTP Global; funded the firm largely from reinvested proceeds of earlier ventures"
+    ],
+    investmentFocus: ["AI", "SaaS", "DevOps", "Fintech", "Global Consumer Internet"],
+    notableInvestments: [
+      { name: "Datadog", ticker: "DDOG" },
+      { name: "Delivery Hero", ticker: null },
+      { name: "Cred", ticker: null }
+    ],
+    boardSeats: [],
+    ipoCount: 1,
+    majorExits: 0,
+    careerTimeline: [
+      { year: "2000", event: "Founds RTP Global, funding the firm largely from proceeds of his own prior ventures rather than traditional outside LP capital." },
+      { year: "2011", event: "Supports RTP's U.S. expansion through RTP Ventures in New York." },
+      { year: "2012", event: "RTP backs Datadog's Series A round." },
+      { year: "2018", event: "The firm, previously known as ru-Net, formally rebrands as RTP Global." },
+      { year: "2023", event: "RTP announces Fund IV at $1 billion." }
+    ],
+    biography: "Leonid Boguslavsky founded RTP Global in 2000 after building wealth as an entrepreneur and internet investor, and funded the firm's early activity largely by reinvesting his own prior gains rather than raising extensively from outside limited partners — an unusual structure that still shapes how RTP operates today. That self-funded, founder-capitalized model gives the firm an unusually long time horizon and a reputation for fast decision-making, since it isn't bound by the same fundraising cycles as a traditional LP-backed fund. Boguslavsky's highest-profile bet came in 2012, when RTP backed Datadog's Series A round years before the observability company's 2019 Nasdaq IPO, and the firm has since built a global footprint spanning New York, London, Paris, and Bengaluru while staying close to his original founder-led model.",
+    sources: [
+      { label: "RTP Global", url: "https://rtp.vc" }
+    ]
+  },
 };
 
 // ============================================================
@@ -3810,7 +3841,7 @@ const firms = [
     aum: "$1B (latest fund, 2023)",
     thesis: "RTP Global was founded in 2000 by Leonid Boguslavsky, who sold his prior technology company and put the proceeds — along with most of his personal wealth — into starting the firm, then kept reinvesting gains into each subsequent fund rather than relying heavily on outside limited partners. That owner-operator structure shows up in how RTP invests: the firm emphasizes fast decisions, early conviction at seed and Series A, and unusually long holding periods, backing founders across five hubs in New York, London, Bangalore, Paris, and Dubai. RTP has backed more than 100 founders since 2000, with Datadog among its best-known outcomes, and closed its latest flagship fund at $1 billion in 2023.",
     leadership: [
-      { name: "Leonid Boguslavsky", role: "Partner & Founder" },
+    { name: "Leonid Boguslavsky", role: "Partner & Founder", profileSlug: "leonid-boguslavsky" },
       { name: "Galina Chifina", role: "CEO & Partner" },
       { name: "Thomas Cuvelier", role: "Partner, US & Europe" }
     ],
