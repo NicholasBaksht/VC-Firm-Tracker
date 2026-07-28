@@ -2513,6 +2513,7 @@ const firmStages = {
   "floodgate": ["Pre-Seed", "Seed"],
        "lux-capital": ["Seed", "Series A", "Growth"],
   "dcvc": ["Seed", "Series A", "Growth"]
+   "rtp-global": ["Seed", "Series A", "Series B"]
 };
 
 // ============================================================
