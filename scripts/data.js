@@ -3452,6 +3452,31 @@ sources: [
       { label: "Granite Asia", url: "https://www.graniteasia.com/who-we-are?p=jenny-lee" }
     ]
   },
+   "rajan-anandan": {
+    name: "Rajan Anandan",
+    firm: "Peak XV Partners",
+    firmSlug: "peak-xv-partners",
+    title: "Managing Director",
+    joinedYear: null,
+    education: [],
+    previousExperience: [
+      "Led Google in India and Southeast Asia",
+      "McKinsey & Company"
+    ],
+    investmentFocus: ["Seed", "Early-Stage", "Founder-Market Fit", "India & Global Software/Internet"],
+    notableInvestments: [],
+    boardSeats: [],
+    ipoCount: 0,
+    majorExits: 0,
+    careerTimeline: [
+      { year: "2000s", event: "Joins McKinsey & Company after college." },
+      { year: "2010s", event: "Leads Google's business across India and Southeast Asia." }
+    ],
+    biography: "Rajan Anandan's value proposition at Peak XV Partners is founder judgment rather than a narrow sector label. Before joining the firm, he led Google's business across India and Southeast Asia after joining McKinsey & Company out of college. His current profile at Peak XV emphasizes resilience, curiosity, and founder-market fit — themes that fit the firm's long-running reputation for backing ambitious first-generation company builders across South Asia — and he also advises early-stage investments and mentors founders through Surge, Peak XV's accelerator program.",
+    sources: [
+      { label: "Peak XV Team", url: "https://www.peakxv.com/team/rajan-anandan" }
+    ]
+  },
 };
 
 // ============================================================
@@ -3567,7 +3592,8 @@ const firmStages = {
    "molten-ventures": ["Series A", "Series B", "Growth", "Late Stage"],
    "softbank-vision-fund": ["Series B", "Growth", "Late Stage"],
    "dst-global": ["Growth", "Late Stage"],
-   "ggv-capital": ["Seed", "Series A", "Series B", "Growth"]
+   "ggv-capital": ["Seed", "Series A", "Series B", "Growth"],
+   "peak-xv-partners": ["Seed", "Series A", "Series B", "Growth"]
 };
 
 // ============================================================
@@ -4292,6 +4318,35 @@ const firms = [
     ],
     holdings: [
       { name: "Coupang", ticker: "CPNG", historicalPrice: null, price: null }
+    ]
+  },
+   {
+    rank: 23,
+    name: "Peak XV Partners",
+    sectors: ["AI", "Fintech", "Enterprise Software", "Consumer", "Cloud"],
+    signatureExit: "Freshworks, which Reuters reported was targeting nearly $9.6 billion ahead of its IPO and which was valued at $12.2 billion on debut-day trading",
+    slug: "peak-xv-partners",
+    website: "https://www.peakxv.com",
+    short: "Peak XV",
+    founded: 2006,
+    hq: "Bengaluru, India",
+    aum: "$10B+ (current); predecessor franchise reported $9.2B raised across 13 funds at 2023 rebrand",
+    thesis: "Peak XV Partners traces its origins to 2006 as Sequoia Capital India, rebranding to Peak XV in 2023 after Sequoia's India/Southeast Asia business formally separated from the global Sequoia franchise. The firm is best understood as a region-building institution rather than just a fund complex: its current messaging emphasizes 'global maxima,' trying to persuade founders in India and Southeast Asia to benchmark against the world's best companies rather than merely regional peers. That is continuous with the old Sequoia India/SEA ethos, but the 2023 rebrand and current global posture also reflect a deliberate attempt to decouple geography from ambition — reinforced by Freshworks, the firm's clearest signature exit, which Reuters reported was targeting nearly $9.6 billion ahead of its IPO before debuting at a $12.2 billion valuation.",
+    leadership: [
+      { name: "Rajan Anandan", role: "Managing Director", profileSlug: "rajan-anandan" },
+      { name: "Sakshi Chopra", role: "Managing Director", profileSlug: "sakshi-chopra" },
+      { name: "Rohit Agarwal", role: "Managing Director" }
+    ],
+    timeline: [
+      { year: "2006", event: "Franchise begins as Sequoia Capital India." },
+      { year: "2010", event: "Sakshi Chopra joins Sequoia India." },
+      { year: "2018", event: "Sequoia India closes Fund VI and highlights multiple exits." },
+      { year: "2021", event: "Freshworks goes public, debuting at a $12.2 billion valuation." },
+      { year: "2023", event: "Rebrands as Peak XV Partners after reporting $9.2 billion raised across 13 funds." },
+      { year: "2026", event: "Current materials cite $10B+ AUM and 36 IPOs across five countries." }
+    ],
+    holdings: [
+      { name: "Freshworks", ticker: "FRSH", historicalPrice: 14.62, price: 10.27 }
     ]
   },
   {
