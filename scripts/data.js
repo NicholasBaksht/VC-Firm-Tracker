@@ -2903,6 +2903,36 @@ sources: [
       { label: "Salesforce Ventures People", url: "https://salesforceventures.com/people/" }
     ]
   },
+"laela-sturdy": {
+    name: "Laela Sturdy",
+    firm: "CapitalG",
+    firmSlug: "capitalg",
+    title: "Managing Partner",
+    joinedYear: 2013,
+    education: [],
+    previousExperience: [
+      "Led emerging businesses at Google",
+      "Leadership roles on YouTube and Google Search"
+    ],
+    investmentFocus: ["AI", "Enterprise Infrastructure", "Data & Analytics", "Fintech"],
+    notableInvestments: [
+      { name: "Duolingo", ticker: "DUOL" },
+      { name: "UiPath", ticker: "PATH" },
+      { name: "Stripe", ticker: null }
+    ],
+    boardSeats: ["Duolingo"],
+    ipoCount: 2,
+    majorExits: 0,
+    careerTimeline: [
+      { year: "2013", event: "Joins CapitalG shortly after its founding, coming from leadership roles on YouTube and Google Search." },
+      { year: "2015", event: "Leads CapitalG's investment in Duolingo." },
+      { year: "2021", event: "Duolingo goes public on the Nasdaq." }
+    ],
+    biography: "Laela Sturdy joined CapitalG shortly after Alphabet founded the growth fund in 2013, bringing years of internal Google leadership experience — she had led the company's emerging businesses group and held senior roles on both YouTube and Google Search. That internal operating background is central to CapitalG's pitch to founders: its investors aren't just financiers, they're people who've run large-scale consumer and enterprise products at Google itself. Sturdy has become one of the firm's most visible Managing Partners, with Duolingo standing as her clearest public outcome — she backed the language-learning company years before its 2021 Nasdaq IPO and continues to sit on its board.",
+    sources: [
+      { label: "CapitalG Team", url: "https://capitalg.com/team/" }
+    ]
+  },
 };
 
 // ============================================================
@@ -3001,7 +3031,8 @@ const firmStages = {
    "intel-capital": ["Seed", "Series A", "Series B", "Growth"],
    "salesforce-ventures": ["Seed", "Series A", "Series B", "Growth", "Late Stage"],
    "qualcomm-ventures": ["Seed", "Series A", "Series B", "Growth"],
-      "cisco-investments": ["Seed", "Series A", "Series B", "Growth"]
+      "cisco-investments": ["Seed", "Series A", "Series B", "Growth"],
+         "capitalg": ["Series A", "Series B", "Growth", "Late Stage"]
 };
 
 // ============================================================
@@ -3782,6 +3813,35 @@ const firms = [
     holdings: [
       { name: "Netflix", ticker: "NFLX", historicalPrice: null, price: 68.20 },
       { name: "Coinbase", ticker: "COIN", historicalPrice: 257.21, price: 161.00 }
+    ]
+  },
+   {
+    rank: 24,
+    name: "CapitalG",
+    sectors: ["AI", "Enterprise Software", "Cybersecurity", "Fintech"],
+    signatureExit: "Looker's 2020 acquisition by Google for $2.6 billion — announced in June 2019 and completed the following February, with CapitalG's Gene Frantz counting it among his major outcomes",
+    slug: "capitalg",
+    website: "https://capitalg.com",
+    short: "CapitalG",
+    founded: 2013,
+    hq: "San Francisco, CA",
+    aum: "$7B",
+    thesis: "CapitalG is Alphabet's independent growth fund, founded in 2013 to share Google's own growth expertise — commercial pipeline building, hiring, and go-to-market advisory — with scaling companies, not just write checks. Unlike most corporate venture arms, it publishes classic fund metrics openly: $7 billion in assets under management, typical check sizes of $50 to $200 million, and a track record of 16 IPOs and 11 M&A exits, which puts it closer to a dedicated growth-equity franchise than a scouting arm. Its portfolio includes category-defining names like Stripe, Airbnb, CrowdStrike, and Databricks, with Looker's $2.6 billion acquisition by Google itself standing as its most direct proof of strategic value.",
+    leadership: [
+      { name: "Laela Sturdy", role: "Managing Partner", profileSlug: "laela-sturdy" },
+      { name: "Gene Frantz", role: "General Partner" },
+      { name: "Alex Nichols", role: "General Partner" }
+    ],
+    timeline: [
+      { year: "2013", event: "Alphabet founds CapitalG as its independent growth fund." },
+      { year: "2019", event: "Google agrees to acquire portfolio company Looker for $2.6 billion in June." },
+      { year: "2020", event: "The Looker acquisition completes in February." },
+      { year: "2021", event: "Portfolio company Duolingo goes public on the Nasdaq." }
+    ],
+    holdings: [
+      { name: "Duolingo", ticker: "DUOL", historicalPrice: null, price: 132.82 },
+      { name: "UiPath", ticker: "PATH", historicalPrice: null, price: null },
+      { name: "Zscaler", ticker: "ZS", historicalPrice: null, price: null }
     ]
   },
   {
