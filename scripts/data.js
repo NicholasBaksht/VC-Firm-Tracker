@@ -3032,7 +3032,8 @@ const firmStages = {
    "salesforce-ventures": ["Seed", "Series A", "Series B", "Growth", "Late Stage"],
    "qualcomm-ventures": ["Seed", "Series A", "Series B", "Growth"],
       "cisco-investments": ["Seed", "Series A", "Series B", "Growth"],
-         "capitalg": ["Series A", "Series B", "Growth", "Late Stage"]
+         "capitalg": ["Series A", "Series B", "Growth", "Late Stage"],
+         "samsung-next": ["Pre-Seed", "Seed", "Series A", "Series B"]
 };
 
 // ============================================================
@@ -5198,6 +5199,30 @@ const firms = [
       { year: "2016", event: "Raises $11 million for M25's second fund." },
       { year: "2019", event: "Raises $31.8 million for M25's third fund alongside partner Mike Asem." },
       { year: "2025", event: "Closes M25's largest fund yet, $36.5 million Fund IV, on the firm's 10th anniversary." }
+    ],
+    holdings: []
+  },
+   {
+    rank: 63,
+    name: "Samsung NEXT",
+    sectors: ["AI", "Fintech", "Healthcare", "Cloud Infrastructure"],
+    signatureExit: "No single dollar-verified signature exit — Samsung NEXT's scale is cumulative instead: more than 230 investments and 330+ companies backed since inception, run by a 38-person team spanning Silicon Valley, Los Angeles, New York, Tel Aviv, and Seoul",
+    slug: "samsung-next",
+    website: "https://www.samsungnext.com",
+    short: "Samsung NEXT",
+    founded: 2012,
+    hq: "Mountain View, CA",
+    aum: "Not disclosed ($150M NEXT Fund, 2017; undisclosed AI-focused Q Fund, 2018)",
+    thesis: "Samsung NEXT is Samsung's startup investing and ecosystem-building arm, founded in 2012 with a mission unusually broad for a corporate investor: it invests, acquires, and partners with companies to unlock value across Samsung's entire ecosystem, not just a single product line. That breadth shows up directly in its portfolio architecture, spanning AI, fintech, healthtech, infrastructure, media tech, and blockchain, backed by a team of 38 people — 20 investors, 12 in operational roles, and a six-person platform team dedicated to helping portfolio companies connect with Samsung's global network of engineers and designers. Rather than one marquee outcome, the firm's real track record is cumulative: more than 230 investments and 330-plus companies backed since inception.",
+    leadership: [
+      { name: "David Lee", role: "Head of Samsung NEXT", profileSlug: "david-lee-samsung-next" },
+      { name: "Brendon Kim", role: "Head of Investments" }
+    ],
+    timeline: [
+      { year: "2012", event: "Samsung founds Samsung NEXT (originally Samsung Global Innovation Center)." },
+      { year: "2017", event: "Announces a $150 million NEXT Fund to support early-stage startups." },
+      { year: "2018", event: "Launches the Q Fund, a dedicated AI-focused vehicle, without disclosing its size." },
+      { year: "2026", event: "Firm's cumulative track record passes 230 investments and 330 companies backed." }
     ],
     holdings: []
   },
