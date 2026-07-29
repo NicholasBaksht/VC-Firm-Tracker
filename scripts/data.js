@@ -3425,6 +3425,33 @@ sources: [
       { label: "Wikipedia — DST Global", url: "https://en.wikipedia.org/wiki/DST_Global" }
     ]
   },
+   "jenny-lee": {
+    name: "Jenny Lee",
+    firm: "GGV Capital",
+    firmSlug: "ggv-capital",
+    title: "Senior Managing Partner (now Granite Asia)",
+    joinedYear: 2005,
+    education: ["Cornell University", "Kellogg School of Management"],
+    previousExperience: [
+      "Early career, Morgan Stanley",
+      "Early career, JAFCO Asia"
+    ],
+    investmentFocus: ["Edtech", "Fintech", "Consumer Internet", "APAC Scale Investing"],
+    notableInvestments: [
+      { name: "Grab", ticker: null }
+    ],
+    boardSeats: [],
+    ipoCount: 0,
+    majorExits: 0,
+    careerTimeline: [
+      { year: "2005", event: "Establishes GGV's Shanghai office as one of the architects of the firm's Asia strategy." },
+      { year: "2024", event: "Continues to lead the Asia franchise as it rebrands to Granite Asia following the GGV split." }
+    ],
+    biography: "Jenny Lee is the single most important person for understanding GGV Capital's Asia strategy. After early career roles at Morgan Stanley and JAFCO Asia, she joined GGV's senior leadership in 2005 and established its Shanghai office, helping turn a transpacific venture firm into one of the few franchises with durable credibility across Southeast Asia, China, and India. Her record includes Grab and other APAC champions, and she now anchors Granite Asia's post-split identity as the successor to GGV's Asia business.",
+    sources: [
+      { label: "Granite Asia", url: "https://www.graniteasia.com/who-we-are?p=jenny-lee" }
+    ]
+  },
 };
 
 // ============================================================
@@ -3539,7 +3566,8 @@ const firmStages = {
    "northzone": ["Seed", "Series A", "Series B", "Growth"],
    "molten-ventures": ["Series A", "Series B", "Growth", "Late Stage"],
    "softbank-vision-fund": ["Series B", "Growth", "Late Stage"],
-   "dst-global": ["Growth", "Late Stage"]
+   "dst-global": ["Growth", "Late Stage"],
+   "ggv-capital": ["Seed", "Series A", "Series B", "Growth"]
 };
 
 // ============================================================
@@ -4294,6 +4322,37 @@ const firms = [
     holdings: [
       { name: "Uber", ticker: "UBER", historicalPrice: null, price: 72.46 },
       { name: "Snap", ticker: "SNAP", historicalPrice: null, price: 4.53 }
+    ]
+  },
+   {
+    rank: 22,
+    name: "GGV Capital",
+    sectors: ["AI", "Fintech", "Enterprise Software", "Consumer Internet"],
+    signatureExit: "Airbnb's 2020 IPO, which valued the company at just over $100 billion — GGV is widely documented as a portfolio investor in Airbnb",
+    slug: "ggv-capital",
+    website: "https://www.ggvc.com",
+    short: "GGV Capital",
+    founded: 2000,
+    hq: "Silicon Valley, CA",
+    aum: "$9.2B (legacy AUM, 2020, before 2024 split)",
+    thesis: "GGV Capital, founded in 2000 as Granite Global Ventures, was one of the earliest firms to build genuinely dual-strength practices across the U.S. and Asia rather than simply scouting one market from the other. That transpacific model produced differentiated dealflow for years — Jenny Lee established the Shanghai office in 2005, and the firm's AUM reached $9.2 billion by 2020 — but became harder to sustain as outbound-investment scrutiny and geopolitical fragmentation intensified. The firm's split into Notable Capital (U.S.) and Granite Asia on March 29, 2024, should be read not as an operational footnote but as the resolution of a strategic contradiction: the same cross-border model that once created edge later became a governance constraint, following Airbnb's 2020 IPO at just over $100 billion as the legacy franchise's signature outcome.",
+    leadership: [
+      { name: "Jenny Lee", role: "Senior Managing Partner (now Granite Asia)", profileSlug: "jenny-lee" },
+      { name: "Jeff Richards", role: "Managing Partner (now Notable Capital)", profileSlug: "jeff-richards" },
+      { name: "Hans Tung", role: "Managing Partner" },
+      { name: "Jixun Foo", role: "Managing Partner" }
+    ],
+    timeline: [
+      { year: "2000", event: "Founded as Granite Global Ventures." },
+      { year: "2001", event: "First fund closes at $161 million." },
+      { year: "2005", event: "Jenny Lee establishes the Shanghai office." },
+      { year: "2020", event: "Total AUM reaches $9.2 billion; Airbnb goes public at just over $100 billion." },
+      { year: "2024", event: "GGV splits into Granite Asia and Notable Capital on March 29." }
+    ],
+    holdings: [
+      { name: "Airbnb", ticker: "ABNB", historicalPrice: null, price: 141.10 },
+      { name: "Affirm", ticker: "AFRM", historicalPrice: null, price: 64.71 },
+      { name: "XPeng", ticker: "XPEV", historicalPrice: null, price: null }
     ]
   },
   {
