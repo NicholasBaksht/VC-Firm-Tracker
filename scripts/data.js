@@ -3283,7 +3283,8 @@ const firmStages = {
    "porsche-ventures": ["Seed", "Series A", "Series B"],
    "bmw-i-ventures": ["Seed", "Series A", "Series B", "Growth"],
    "sky-vc": ["Seed", "Series A", "Series B"],
-   "citi-ventures": ["Seed", "Series A", "Series B", "Growth", "Late Stage"]
+   "citi-ventures": ["Seed", "Series A", "Series B", "Growth", "Late Stage"],
+   "balderton-capital": ["Seed", "Series A", "Series B", "Growth"]
 };
 
 // ============================================================
@@ -4238,6 +4239,37 @@ const firms = [
       { year: "2024", event: "Closes its tenth flagship fund, Crosslink Ventures X, at $350 million, marking the firm's 35th year." }
     ],
     holdings: []
+  },
+   {
+    rank: 27,
+    name: "Balderton Capital",
+    sectors: ["AI", "Fintech", "Enterprise Software", "Cybersecurity", "Healthcare"],
+    signatureExit: "MySQL's 2008 acquisition by Sun Microsystems for approximately $1 billion — an early proof point for European open-source software investing",
+    slug: "balderton-capital",
+    website: "https://www.balderton.com",
+    short: "Balderton",
+    founded: 2000,
+    hq: "London, UK",
+    aum: "$7B+ (raised across eight funds; $1.3B new early/growth funds, 2024)",
+    thesis: "Balderton Capital has stayed tightly focused on European-founded technology companies since 2000, building enough follow-on capacity over 25 years to avoid outsourcing the growth-stage relationship to U.S. crossover funds. The firm explicitly supports founders from Seed to IPO through separate early and growth vehicles, backed by structured platform support across talent, marketing, finance, legal, and ESG. Its 2024 raise of $1.3 billion in new early and growth capital confirmed continued LP appetite for a Europe-only franchise at real scale, more than two decades after MySQL's $1 billion acquisition by Sun Microsystems gave the firm one of European venture's first landmark exits.",
+    leadership: [
+      { name: "Bernard Liautaud", role: "Managing Partner", profileSlug: "bernard-liautaud" },
+      { name: "Suranga Chandratillake", role: "General Partner", profileSlug: "suranga-chandratillake" },
+      { name: "Daniel Waterhouse", role: "General Partner" },
+      { name: "Rana Yared", role: "General Partner" }
+    ],
+    timeline: [
+      { year: "2000", event: "Balderton Capital is founded in London." },
+      { year: "2008", event: "Portfolio company MySQL is acquired by Sun Microsystems for approximately $1 billion." },
+      { year: "2014", event: "Suranga Chandratillake joins as General Partner." },
+      { year: "2021", event: "Raises a $600 million early-stage fund." },
+      { year: "2024", event: "Announces $1.3 billion in new early and growth funds." },
+      { year: "2025", event: "Marks the firm's 25-year history." }
+    ],
+    holdings: [
+      { name: "SOPHiA Genetics", ticker: "SOPH", historicalPrice: null, price: null },
+      { name: "Flywire", ticker: "FLYW", historicalPrice: null, price: null }
+    ]
   },
    {
     rank: 29,
