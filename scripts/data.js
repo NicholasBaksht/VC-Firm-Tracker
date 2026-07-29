@@ -3143,6 +3143,40 @@ sources: [
       { label: "JetBlue Press Release", url: "https://news.jetblue.com/latest-news/press-release-details/2021/JetBlue-Promotes-Amy-Burr-to-President-JetBlue-Technology-Ventures-07-01-2021/default.aspx" }
     ]
   },
+"arvind-purushotham": {
+    name: "Arvind Purushotham",
+    firm: "Citi Ventures",
+    firmSlug: "citi-ventures",
+    title: "Global Head of Citi Ventures",
+    joinedYear: 2011,
+    education: ["BSEE, Indian Institute of Technology, Madras", "MSEE, Case Western Reserve University", "MBA (Distinction), Harvard Business School"],
+    previousExperience: [
+      "Design Engineer & Program Manager, Intel Corporation (Pentium & Mobile Pentium II)",
+      "Managing Director, Menlo Ventures (nearly a decade)"
+    ],
+    investmentFocus: ["Financial Services", "Cybersecurity", "Enterprise Infrastructure"],
+    notableInvestments: [
+      { name: "Betterment", ticker: null },
+      { name: "Tanium", ticker: null },
+      { name: "Pindrop", ticker: null },
+      { name: "Silver Tail Systems", ticker: null }
+    ],
+    boardSeats: [],
+    ipoCount: 0,
+    majorExits: 1,
+    careerTimeline: [
+      { year: "1995", event: "Joins Intel as a design engineer working on Pentium chip designs, later promoted to program manager for Mobile Pentium II." },
+      { year: "1999", event: "Leaves Intel to pursue his MBA at Harvard Business School." },
+      { year: "2001", event: "Joins Menlo Ventures as Managing Director, spending nearly a decade investing and serving on boards." },
+      { year: "2011", event: "Joins Citi Ventures in January as Managing Director to help build its strategic venture investing program." },
+      { year: "2020", event: "Helps launch the Citi Impact Fund, backing women and minority entrepreneurs." }
+    ],
+    biography: "Arvind Purushotham's path into venture capital started in electrical engineering, not finance: after a BSEE from IIT Madras and an MSEE from Case Western Reserve, he spent four years at Intel designing Pentium chips before earning his Harvard MBA and joining Menlo Ventures, where he spent nearly a decade as a Managing Director backing companies like Cavium Networks and nCircle Network Security. He joined Citi Ventures in January 2011 to help build its strategic venture investing program from the ground up, drawn by the realization that large banks needed exactly the kind of front-end and back-end technology overhaul that venture-backed startups were building. Under his leadership the group has invested in more than 120 companies including Betterment, Tanium, Pindrop, and Persado, with Silver Tail Systems' acquisition by EMC among its clearest realized outcomes, and in 2020 he helped launch the Citi Impact Fund, a dedicated vehicle for backing women and minority entrepreneurs across sustainability and financial inclusion.",
+    sources: [
+      { label: "Citi Ventures Bio", url: "https://www.citi.com/ventures/bio/arvind-purushotham.html" },
+      { label: "Global Venturing Powerlist 2023", url: "https://globalventuring.com/corporate/corporate-venturer/powerlist-2023-arvind-purushotham/" }
+    ]
+  },
 };
 
 // ============================================================
@@ -3248,7 +3282,8 @@ const firmStages = {
    "dell-technologies-capital": ["Seed", "Series A", "Series B"],
    "porsche-ventures": ["Seed", "Series A", "Series B"],
    "bmw-i-ventures": ["Seed", "Series A", "Series B", "Growth"],
-   "sky-vc": ["Seed", "Series A", "Series B"]
+   "sky-vc": ["Seed", "Series A", "Series B"],
+   "citi-ventures": ["Seed", "Series A", "Series B", "Growth", "Late Stage"]
 };
 
 // ============================================================
@@ -5580,6 +5615,32 @@ const firms = [
     holdings: [
       { name: "Joby Aviation", ticker: "JOBY", historicalPrice: 8.09, price: 7.24 }
     ]
+  },
+   {
+    rank: 66,
+    name: "Citi Ventures",
+    sectors: ["Fintech", "AI", "Enterprise Software", "Cybersecurity"],
+    signatureExit: "No single dollar-verified signature exit — Arvind Purushotham's tenure has included Silver Tail Systems' acquisition by EMC among more than 120 investments, with the broader firm marking its 15th year at more than 200 investments and roughly 30 exits",
+    slug: "citi-ventures",
+    website: "https://www.citi.com/ventures",
+    short: "Citi Ventures",
+    founded: 2010,
+    hq: "San Francisco, CA",
+    aum: "Not disclosed (150+ investments since launch; 200+ and ~30 exits at 15-year mark)",
+    thesis: "Citi Ventures has operated since 2010 as an investing and commercialization catalyst for Citi's own businesses and clients, a mandate that matters more inside a regulated global bank than at most corporate VCs — finding technology that can genuinely move Citi's own business, not just generate financial returns. Under Arvind Purushotham, who joined as Managing Director in January 2011 to help build the strategic venture investing program, the firm spans Seed through Series F and beyond across fintech, payments, enterprise software, cloud infrastructure, and cybersecurity. In 2020 the group launched the Citi Impact Fund, a dedicated vehicle backing women and minority entrepreneurs across sustainability, workforce development, and financial inclusion, and by its 15th year the firm had invested in and partnered with more than 200 startups.",
+    leadership: [
+      { name: "Arvind Purushotham", role: "Global Head of Citi Ventures", profileSlug: "arvind-purushotham" },
+      { name: "Andrew Murray", role: "Investing Leader" },
+      { name: "Jeff Flynn", role: "Investing Leader" }
+    ],
+    timeline: [
+      { year: "2010", event: "Citi launches Citi Ventures." },
+      { year: "2011", event: "Arvind Purushotham joins as Managing Director in January to help build the strategic venture investing program." },
+      { year: "2020", event: "Launches the Citi Impact Fund, dedicated to backing women and minority entrepreneurs." },
+      { year: "2022", event: "Jeff Flynn joins, leading coverage across lending, proptech, commerce, and payments." },
+      { year: "2025", event: "Marks 15 years with more than 200 investments and roughly 30 exits since launch." }
+    ],
+    holdings: []
   },
   {
     rank: 64,
