@@ -5388,8 +5388,7 @@ const firms = [
       { year: "2025", event: "Closes its largest fundraise yet, $770 million across Fund X and Acceleration Fund IV, marking the firm's 30th year." }
     ],
     holdings: [
-      { name: "Redfin", ticker: "RDFN", historicalPrice: null, price: null },
-      { name: "Impinj", ticker: "PI", historicalPrice: null, price: null }
+    { name: "Impinj", ticker: "PI", historicalPrice: null, price: null }
     ]
   },
   {
