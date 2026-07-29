@@ -3314,6 +3314,35 @@ sources: [
       { label: "Cherry Ventures About", url: "https://cherry.vc/about" }
     ]
   },
+   "par-jorgen-parson": {
+    name: "Pär-Jörgen Pärson",
+    firm: "Northzone",
+    firmSlug: "northzone",
+    title: "Partner",
+    joinedYear: 2004,
+    education: [],
+    previousExperience: [
+      "Longtime venture investor prior to Northzone"
+    ],
+    investmentFocus: ["Climate", "Health", "Consumer", "AI"],
+    notableInvestments: [
+      { name: "Spotify", ticker: "SPOT" },
+      { name: "fuboTV", ticker: "FUBO" },
+      { name: "iZettle", ticker: null },
+      { name: "Avito", ticker: null }
+    ],
+    boardSeats: ["fuboTV"],
+    ipoCount: 2,
+    majorExits: 0,
+    careerTimeline: [
+      { year: "2004", event: "Joins Northzone as Partner." },
+      { year: "2018", event: "Spotify, one of his best-known investments, completes its direct listing." }
+    ],
+    biography: "Pär-Jörgen Pärson is the canonical franchise investor at Northzone: with the firm since 2004, he was early enough to matter in the Spotify era and remains active in newer waves like climate and AI investing today. That breadth is an important reason Northzone still feels current rather than nostalgic decades into its history. His track record spans Spotify, iZettle, Avito, fuboTV, Spring Health, and Tandem Health, and he continues to serve on the board of fuboTV.",
+    sources: [
+      { label: "Northzone Team", url: "https://northzone.com/team/par-jorgen-parson" }
+    ]
+  },
 };
 
 // ============================================================
@@ -3424,7 +3453,8 @@ const firmStages = {
    "balderton-capital": ["Seed", "Series A", "Series B", "Growth"],
    "atomico": ["Seed", "Series A", "Series B", "Growth"],
    "localglobe": ["Pre-Seed", "Seed"],
-   "cherry-ventures": ["Seed", "Series A", "Series B", "Growth"]
+   "cherry-ventures": ["Seed", "Series A", "Series B", "Growth"],
+   "northzone": ["Seed", "Series A", "Series B", "Growth"]
 };
 
 // ============================================================
@@ -4644,6 +4674,36 @@ const firms = [
     holdings: [
       { name: "Lyft", ticker: "LYFT", historicalPrice: null, price: null },
       { name: "Couchbase", ticker: "BASE", historicalPrice: null, price: null }
+    ]
+  },
+   {
+    rank: 34,
+    name: "Northzone",
+    sectors: ["AI", "Fintech", "Healthcare", "Enterprise Software", "Climate", "Consumer"],
+    signatureExit: "Spotify's 2018 direct listing, which ended its first day of trading at a valuation of about $26.5 billion",
+    slug: "northzone",
+    website: "https://northzone.com",
+    short: "Northzone",
+    founded: 1996,
+    hq: "London, UK",
+    aum: "$3.1B+ (current), latest fundraise €1B (2022)",
+    thesis: "Northzone has operated since 1996, giving it a rare through-line from the pre-mobile era to today's AI investing cycle while staying relevant across seed, Series A, and growth stages — the firm explicitly markets itself as 'Seed to Growth.' That long-cycle consistency has translated into a multi-office, multi-theme platform: consumer and fintech legacy on one side, newer AI, climate, infrastructure, and health investments on the other. Spotify's 2018 direct listing, which closed its first trading day at a roughly $26.5 billion valuation, remains the firm's signature outcome, and its 2022 €1 billion raise is evidence that LPs view Northzone as far more than a 'Spotify-era' brand.",
+    leadership: [
+      { name: "Pär-Jörgen Pärson", role: "Partner", profileSlug: "par-jorgen-parson" },
+      { name: "Michiel Kotting", role: "Partner", profileSlug: "michiel-kotting" },
+      { name: "Jessica Schultz", role: "Partner" },
+      { name: "Wendy Xiao", role: "Partner" }
+    ],
+    timeline: [
+      { year: "1996", event: "Northzone is founded." },
+      { year: "2004", event: "Pär-Jörgen Pärson joins the firm." },
+      { year: "2018", event: "Spotify completes its direct listing, closing day one at a roughly $26.5 billion valuation." },
+      { year: "2022", event: "Raises €1 billion in its latest fundraise." },
+      { year: "2026", event: "Firm reports $3.1B+ in current AUM." }
+    ],
+    holdings: [
+      { name: "Spotify", ticker: "SPOT", historicalPrice: null, price: 482.66 },
+      { name: "fuboTV", ticker: "FUBO", historicalPrice: null, price: null }
     ]
   },
   {
