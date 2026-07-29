@@ -3112,6 +3112,37 @@ sources: [
       { label: "Xometry IPO Note", url: "https://www.bmwiventures.com/news/xometry-ipo" }
     ]
   },
+"amy-burr": {
+    name: "Amy Burr",
+    firm: "SKY VC",
+    firmSlug: "sky-vc",
+    title: "CEO",
+    joinedYear: 2018,
+    education: [],
+    previousExperience: [
+      "Original Founder, Virgin America (strategy, corporate programs, commercial & revenue development)",
+      "Led Virgin America's merger integration with Alaska Airlines"
+    ],
+    investmentFocus: ["Travel", "Hospitality", "Transportation", "Aviation"],
+    notableInvestments: [
+      { name: "Joby Aviation", ticker: "JOBY" }
+    ],
+    boardSeats: [],
+    ipoCount: 1,
+    majorExits: 0,
+    careerTimeline: [
+      { year: "2004", event: "Serves as an original founder of Virgin America, working across strategy and commercial development." },
+      { year: "2016-2018", event: "Leads Virgin America's merger integration with Alaska Airlines before joining JetBlue Technology Ventures." },
+      { year: "2018", event: "Joins JetBlue Technology Ventures as Managing Director of Operations and Partnerships." },
+      { year: "2021", event: "Promoted to President following Bonny Simi's departure to Joby Aviation; Joby goes public in August." },
+      { year: "2025", event: "Becomes CEO of SKY VC following the firm's transition from JetBlue Technology Ventures." }
+    ],
+    biography: "Amy Burr has spent more than 25 years at the intersection of aviation and technology, starting as an original founder of Virgin America in 2004, where she worked across strategy, corporate programs, and commercial development before leading the airline's merger integration with Alaska Airlines. She joined JetBlue Technology Ventures in 2018 as Managing Director of Operations and Partnerships, building the operational foundation that supported the fund's portfolio companies, and was promoted to President in 2021 after founding president Bonny Simi left to join portfolio company Joby Aviation directly following its public listing — a transition Simi has called a model for succession planning in corporate venture capital. Burr has since guided the fund's evolution from a wholly-owned JetBlue subsidiary into SKY VC, an independent fund under SKY Leasing, now leading its strategic vision as CEO across travel, hospitality, and transportation investing.",
+    sources: [
+      { label: "SKY VC Team", url: "https://www.sky-vc.com/team" },
+      { label: "JetBlue Press Release", url: "https://news.jetblue.com/latest-news/press-release-details/2021/JetBlue-Promotes-Amy-Burr-to-President-JetBlue-Technology-Ventures-07-01-2021/default.aspx" }
+    ]
+  },
 };
 
 // ============================================================
@@ -3216,7 +3247,8 @@ const firmStages = {
    "m12": ["Seed", "Series A", "Series B"],
    "dell-technologies-capital": ["Seed", "Series A", "Series B"],
    "porsche-ventures": ["Seed", "Series A", "Series B"],
-   "bmw-i-ventures": ["Seed", "Series A", "Series B", "Growth"]
+   "bmw-i-ventures": ["Seed", "Series A", "Series B", "Growth"],
+   "sky-vc": ["Seed", "Series A", "Series B"]
 };
 
 // ============================================================
@@ -5520,6 +5552,33 @@ const firms = [
     ],
     holdings: [
       { name: "TaskUs", ticker: "TASK", historicalPrice: null, price: 5.52 }
+    ]
+  },
+   {
+    rank: 65,
+    name: "SKY VC",
+    sectors: ["Mobility", "Climate", "Enterprise Software"],
+    signatureExit: "Joby Aviation's August 2021 public listing — JetBlue Technology Ventures (now SKY VC) was an early backer of the electric air taxi company, and its former president Bonny Simi left the fund to join Joby directly as Head of People and Operations",
+    slug: "sky-vc",
+    website: "https://sky-vc.com",
+    short: "SKY VC",
+    founded: 2016,
+    hq: "San Francisco, CA",
+    aum: "Not disclosed (50+ portfolio companies)",
+    thesis: "SKY VC was founded in 2016 as JetBlue Technology Ventures, JetBlue's wholly-owned corporate venture subsidiary, before becoming part of SKY Leasing and rebranding in May 2025. Unlike broad software-focused corporate VCs, the firm is intensely vertical — organized entirely around the future of travel, hospitality, and transportation, with a team that blends venture investing experience with real airline operating knowledge. That combination produced its clearest outcome: an early bet on Joby Aviation, the electric air taxi company, whose August 2021 public listing was significant enough that the fund's own founding president, Bonny Simi, left to join Joby directly. SKY VC has invested in more than 50 companies since inception.",
+    leadership: [
+      { name: "Amy Burr", role: "CEO", profileSlug: "amy-burr" },
+      { name: "Arielle Ring", role: "President" }
+    ],
+    timeline: [
+      { year: "2016", event: "JetBlue launches JetBlue Technology Ventures in Silicon Valley, led by founding president Bonny Simi." },
+      { year: "2018", event: "Amy Burr joins as Managing Director of Operations and Partnerships." },
+      { year: "2020", event: "Bonny Simi departs to join portfolio company Joby Aviation as Head of People and Operations." },
+      { year: "2021", event: "Amy Burr is promoted to President; Joby Aviation goes public in August." },
+      { year: "2025", event: "The fund becomes part of SKY Leasing and rebrands from JetBlue Technology Ventures to SKY VC." }
+    ],
+    holdings: [
+      { name: "Joby Aviation", ticker: "JOBY", historicalPrice: 8.09, price: 7.24 }
     ]
   },
   {
