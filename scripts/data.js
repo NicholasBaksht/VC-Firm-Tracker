@@ -3177,6 +3177,30 @@ sources: [
       { label: "Global Venturing Powerlist 2023", url: "https://globalventuring.com/corporate/corporate-venturer/powerlist-2023-arvind-purushotham/" }
     ]
   },
+   "bernard-liautaud": {
+    name: "Bernard Liautaud",
+    firm: "Balderton Capital",
+    firmSlug: "balderton-capital",
+    title: "Managing Partner",
+    joinedYear: 2008,
+    education: [],
+    previousExperience: [
+      "Founder & CEO, Business Objects (15 years)"
+    ],
+    investmentFocus: ["Enterprise Software", "AI", "Data Infrastructure"],
+    notableInvestments: [],
+    boardSeats: [],
+    ipoCount: 0,
+    majorExits: 0,
+    careerTimeline: [
+      { year: "2008", event: "Joins Balderton Capital after 15 years founding and running Business Objects." },
+      { year: "2016", event: "Named Managing Partner of Balderton Capital." }
+    ],
+    biography: "Bernard Liautaud gives Balderton a level of founder-operator credibility that few European venture firms can match, having founded and run Business Objects — one of Europe's first genuinely global enterprise software companies — for 15 years before joining Balderton in 2008. That history is central to why the firm has stayed comfortable backing technically ambitious, category-defining software businesses rather than chasing consumer growth stories alone. He was named Managing Partner in 2016 and has anchored Balderton's enterprise and AI investing ever since, drawing directly on his own experience building and scaling a category-leading software company from Europe.",
+    sources: [
+      { label: "Balderton Capital Team", url: "https://www.balderton.com/team/bernard-liautaud/" }
+    ]
+  },
 };
 
 // ============================================================
