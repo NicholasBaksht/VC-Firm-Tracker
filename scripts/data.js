@@ -4696,8 +4696,7 @@ const firms = [
       { year: "2025", event: "HashiCorp, one of the firm's signature IPO outcomes, is acquired by IBM and taken private." }
     ],
     holdings: [
-      { name: "Confluent", ticker: "CFLT", historicalPrice: null, price: null },
-      { name: "GitLab", ticker: "GTLB", historicalPrice: null, price: null }
+    { name: "GitLab", ticker: "GTLB", historicalPrice: null, price: null }
     ]
   },
   {
