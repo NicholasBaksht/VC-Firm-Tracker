@@ -3232,6 +3232,32 @@ sources: [
       { label: "Atomico Team", url: "https://atomico.com/team/niklas-zennstrom" }
     ]
   },
+   "ben-blume": {
+    name: "Ben Blume",
+    firm: "Atomico",
+    firmSlug: "atomico",
+    title: "Partner",
+    joinedYear: 2021,
+    education: [],
+    previousExperience: [],
+    investmentFocus: ["AI", "Enterprise Software", "Industrial Tech", "Healthcare"],
+    notableInvestments: [
+      { name: "Spacemaker", ticker: null },
+      { name: "Onna", ticker: null },
+      { name: "Automation Hero", ticker: null }
+    ],
+    boardSeats: [],
+    ipoCount: 0,
+    majorExits: 0,
+    careerTimeline: [
+      { year: "2017", event: "Leads Atomico's Series A investment in Spacemaker as an investor at the firm." },
+      { year: "2021", event: "Promoted to Partner at Atomico." }
+    ],
+    biography: "Ben Blume exemplifies Atomico's newer applied-AI posture, having led the firm's Series A investment in Spacemaker before later backing Onna and Automation Hero and being promoted to Partner in 2021. His focus on automation in core enterprise functions and real-world verticals reflects exactly where European technical depth can translate into durable software moats — an area of the portfolio that has grown alongside Atomico's original consumer and enterprise scale-up thesis.",
+    sources: [
+      { label: "Atomico Insights", url: "https://atomico.com/insights/home-grown-talent-our-newest-partner-ben-blume-and-two-new-principals" }
+    ]
+  },
 };
 
 // ============================================================
