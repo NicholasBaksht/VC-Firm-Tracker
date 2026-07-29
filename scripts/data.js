@@ -3343,6 +3343,31 @@ sources: [
       { label: "Northzone Team", url: "https://northzone.com/team/par-jorgen-parson" }
     ]
   },
+   "ben-wilkinson": {
+    name: "Ben Wilkinson",
+    firm: "Molten Ventures",
+    firmSlug: "molten-ventures",
+    title: "Chief Executive Officer",
+    joinedYear: 2016,
+    education: [],
+    previousExperience: [
+      "Chief Financial Officer, Molten Ventures / Draper Esprit"
+    ],
+    investmentFocus: ["Portfolio Construction", "Public-Market Discipline", "Venture Scaling"],
+    notableInvestments: [],
+    boardSeats: [],
+    ipoCount: 0,
+    majorExits: 0,
+    careerTimeline: [
+      { year: "2016", event: "Joins the group as CFO." },
+      { year: "2019", event: "Joins the board." },
+      { year: "2024", event: "Becomes Chief Executive Officer in October." }
+    ],
+    biography: "Ben Wilkinson's rise from CFO to CEO is unusually important because Molten Ventures' listed structure makes capital discipline part of the investment story, not just a back-office function. He joined the group as CFO in 2016, joined the board in 2019, and was named CEO in October 2024. His appointment signals that the firm's next phase is as much about portfolio monetization and platform scalability — the operational discipline required of a publicly listed venture vehicle — as about pure origination.",
+    sources: [
+      { label: "Molten Ventures People", url: "https://www.moltenventures.com/people/partnership/ben-wilkinson" }
+    ]
+  },
 };
 
 // ============================================================
@@ -3454,7 +3479,8 @@ const firmStages = {
    "atomico": ["Seed", "Series A", "Series B", "Growth"],
    "localglobe": ["Pre-Seed", "Seed"],
    "cherry-ventures": ["Seed", "Series A", "Series B", "Growth"],
-   "northzone": ["Seed", "Series A", "Series B", "Growth"]
+   "northzone": ["Seed", "Series A", "Series B", "Growth"],
+   "molten-ventures": ["Series A", "Series B", "Growth", "Late Stage"]
 };
 
 // ============================================================
@@ -4734,6 +4760,36 @@ const firms = [
       { name: "Zoom", ticker: "ZM", historicalPrice: null, price: null },
       { name: "Veeva Systems", ticker: "VEEV", historicalPrice: null, price: null },
       { name: "Box", ticker: "BOX", historicalPrice: null, price: null }
+    ]
+  },
+   {
+    rank: 35,
+    name: "Molten Ventures",
+    sectors: ["Enterprise Software", "Fintech", "Deep Tech", "Healthcare", "Climate"],
+    signatureExit: "UiPath, which Molten highlights at a $35.8 billion closing price post-IPO",
+    slug: "molten-ventures",
+    website: "https://www.moltenventures.com",
+    short: "Molten Ventures",
+    founded: 2006,
+    hq: "London, UK",
+    aum: "£1.525B gross portfolio value / £1.324B net assets (as of March 31, 2026)",
+    thesis: "Molten Ventures is structurally different from a typical venture firm: it's a publicly listed venture platform, originally founded in 2006 as Esprit Capital and later known as Draper Esprit before its 2021 rebrand. That listed structure means gross portfolio value and net assets are more meaningful than a generic 'AUM' figure, and the firm's liquidity model, secondaries capability, and listed-company disclosure cadence make it closer to a hybrid of venture manager and permanent-capital vehicle than a traditional closed-end fund. The current strategy is clearly thematic — enterprise, deep tech, healthtech, and climate-adjacent industrial technologies — backing founders 'from Series A and beyond,' with UiPath's post-IPO run to a $35.8 billion valuation as its highlighted signature outcome.",
+    leadership: [
+      { name: "Ben Wilkinson", role: "Chief Executive Officer", profileSlug: "ben-wilkinson" },
+      { name: "Nicola McClafferty", role: "Partner", profileSlug: "nicola-mcclafferty" },
+      { name: "Franco Danesi", role: "Senior Partner" },
+      { name: "Inga Deakin", role: "Partner" }
+    ],
+    timeline: [
+      { year: "2006", event: "Founded as Esprit Capital." },
+      { year: "2016", event: "IPOs on the London Stock Exchange as Draper Esprit." },
+      { year: "2021", event: "Moves to the main market and rebrands as Molten Ventures." },
+      { year: "2023", event: "Acquires Forward Partners." },
+      { year: "2024", event: "Ben Wilkinson, previously CFO, becomes CEO in October." },
+      { year: "2026", event: "Reports £1.525 billion gross portfolio value as of March 31." }
+    ],
+    holdings: [
+      { name: "UiPath", ticker: "PATH", historicalPrice: null, price: null }
     ]
   },
     {
