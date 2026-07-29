@@ -3593,7 +3593,9 @@ const firmStages = {
    "softbank-vision-fund": ["Series B", "Growth", "Late Stage"],
    "dst-global": ["Growth", "Late Stage"],
    "ggv-capital": ["Seed", "Series A", "Series B", "Growth"],
-   "peak-xv-partners": ["Seed", "Series A", "Series B", "Growth"]
+   "peak-xv-partners": ["Seed", "Series A", "Series B", "Growth"],
+    "eclipse-ventures": ["Seed", "Series A", "Series B", "Growth"],
+  "qualcomm-ventures": ["Seed", "Series A", "Series B", "Growth"]
 };
 
 // ============================================================
@@ -3618,9 +3620,7 @@ const firmPerformance = {
   "union-square-ventures": { totalPortfolio: 130 },
   "first-round-capital": { totalPortfolio: 500 },
 "ivp": { totalPortfolio: 400, ipoExits: 110 },
-  "true-ventures": { totalPortfolio: 390, unicorns: 8, ipoExits: 5, acquisitions: 130 },
-   "eclipse-ventures": ["Seed", "Series A", "Series B", "Growth"],
-   "qualcomm-ventures": ["Seed", "Series A", "Series B", "Growth"]
+  "true-ventures": { totalPortfolio: 390, unicorns: 8, ipoExits: 5, acquisitions: 130 }
 };
 
 const firmGeography = {
