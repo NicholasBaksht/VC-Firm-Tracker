@@ -2735,6 +2735,41 @@ sources: [
       { label: "Wikipedia — Dan Levitan", url: "https://en.wikipedia.org/wiki/Dan_Levitan" }
     ]
   },
+"ho-nam": {
+    name: "Ho Nam",
+    firm: "Altos Ventures",
+    firmSlug: "altos-ventures",
+    title: "Co-Founder & Managing Director",
+    joinedYear: 1996,
+    education: ["BS, Engineering (minor, Philosophy, Politics & Economics), Harvey Mudd College", "MBA, Stanford Graduate School of Business"],
+    previousExperience: [
+      "Associate Consultant, Bain & Company",
+      "Associate, Trinity Ventures (early investor in Starbucks)",
+      "Sales & Marketing, Silicon Graphics",
+      "Product roles, Octel Communications"
+    ],
+    investmentFocus: ["Enterprise Software", "Consumer Internet", "Durable Founder-Led Businesses"],
+    notableInvestments: [
+      { name: "Coupang", ticker: "CPNG" },
+      { name: "Roblox", ticker: null }
+    ],
+    boardSeats: [],
+    ipoCount: 2,
+    majorExits: 0,
+    careerTimeline: [
+      { year: "1988", event: "Graduates Harvey Mudd College and joins Bain & Company as an Associate Consultant." },
+      { year: "1990", event: "Joins Trinity Ventures as an Associate, an early investor in Starbucks among other companies." },
+      { year: "1994", event: "Completes his Stanford MBA and joins Silicon Graphics in sales and marketing, later moving to Octel Communications." },
+      { year: "1996", event: "Co-founds Altos Ventures with Han Kim and Anthony Lee." },
+      { year: "2007", event: "Altos' relationship with Roblox begins." },
+      { year: "2021", event: "Both Roblox and Coupang go public." }
+    ],
+    biography: "Ho Nam immigrated to the United States from Korea with his family at age nine, and has said that experience of starting over shaped the patient, long-horizon approach he later brought to venture investing. After a Harvey Mudd engineering degree, he began his career at Bain & Company, then moved into venture capital at Trinity Ventures — an early Starbucks investor — before earning his Stanford MBA and spending time at Silicon Graphics and Octel Communications. He co-founded Altos Ventures in 1996 with Han Kim and Anthony Lee, and the firm's defining trait under his leadership has been patience most funds don't attempt: Altos held its Roblox position for well over a decade before the company's 2021 IPO, and its early stake in Coupang was worth an implied $62.1 billion at that company's own 2021 listing. Nam has since become a public voice for what he calls venture capital's spiritual side, writing about kindness, curiosity, and service as core to long-term investing rather than just financial technique.",
+    sources: [
+      { label: "Harvey Mudd College Magazine", url: "https://magazine.hmc.edu/spring-2024/building-success-with-heart/" },
+      { label: "uAspire", url: "https://www.uaspire.org/about/team/ho-nam" }
+    ]
+  },
 };
 
 // ============================================================
@@ -3510,8 +3545,8 @@ const firms = [
     aum: "$10B+ (RIA regulatory AUM)",
     thesis: "Altos Ventures was founded in 1996 by Han Kim, Ho Nam, and Anthony Lee, three Stanford MBA classmates who began managing their first fund the same year through an introduction from a professor. The firm's public materials describe a deliberately contrarian, patient philosophy — favoring durable businesses with strong unit economics over trend-driven sectors, and staying involved with portfolio companies for more than a decade after the first check. That patience produced two of venture capital's largest single-firm outcomes: Altos held roughly 25% of Roblox at its 2021 IPO, a stake reported to be worth more than $8 billion, and was an early backer of Coupang, the South Korean ecommerce company that priced its own 2021 IPO at an implied $62.1 billion valuation.",
     leadership: [
-      { name: "Han Kim", role: "Co-Founder & Managing Director" },
-      { name: "Ho Nam", role: "Co-Founder & Managing Director" },
+  { name: "Han Kim", role: "Co-Founder & Managing Director" },
+      { name: "Ho Nam", role: "Co-Founder & Managing Director", profileSlug: "ho-nam" },
       { name: "Anthony Lee", role: "Co-Founder & Managing Director" }
     ],
     timeline: [
