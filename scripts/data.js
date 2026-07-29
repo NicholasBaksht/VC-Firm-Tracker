@@ -2426,7 +2426,7 @@ sources: [
       { label: "DCVC — Team", url: "https://www.dcvc.com/team/" },
       { label: "DCVC", url: "https://www.dcvc.com" }
     ]
-  }
+  },
    "leonid-boguslavsky": {
     name: "Leonid Boguslavsky",
     firm: "RTP Global",
