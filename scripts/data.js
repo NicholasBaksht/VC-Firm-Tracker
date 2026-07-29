@@ -3201,6 +3201,37 @@ sources: [
       { label: "Balderton Capital Team", url: "https://www.balderton.com/team/bernard-liautaud/" }
     ]
   },
+   "niklas-zennstrom": {
+    name: "Niklas Zennström",
+    firm: "Atomico",
+    firmSlug: "atomico",
+    title: "Founder & CEO",
+    joinedYear: 2006,
+    education: ["Uppsala University"],
+    previousExperience: [
+      "Co-Founder, Skype",
+      "Co-Founder, Kazaa",
+      "Co-Founder, Joltid"
+    ],
+    investmentFocus: ["Enterprise Software", "Consumer Internet", "Global Scale-Ups"],
+    notableInvestments: [
+      { name: "Supercell", ticker: null },
+      { name: "Klarna", ticker: null },
+      { name: "DeepL", ticker: null }
+    ],
+    boardSeats: [],
+    ipoCount: 0,
+    majorExits: 1,
+    careerTimeline: [
+      { year: "2001", event: "Co-founds Skype after earlier co-founding Kazaa and Joltid." },
+      { year: "2006", event: "Founds Atomico in London, built specifically to help European founders scale globally." },
+      { year: "2016", event: "Portfolio company Supercell is sold to Tencent for roughly $8.6 billion." }
+    ],
+    biography: "Niklas Zennström's contribution to Atomico is institutional rather than narrowly thematic: after co-founding Kazaa, Joltid, and Skype, he built Atomico in 2006 as a direct corrective to Europe's historical venture capital gap. The firm's long-running emphasis on helping European founders expand globally is inseparable from Skype's own cross-border story — a product built in Europe that became a genuinely global category leader. That thesis has been repeatedly validated, most visibly through Supercell's roughly $8.6 billion sale to Tencent in 2016, one of the largest outcomes in European venture history, and through continued bets on companies like Klarna and DeepL.",
+    sources: [
+      { label: "Atomico Team", url: "https://atomico.com/team/niklas-zennstrom" }
+    ]
+  },
 };
 
 // ============================================================
@@ -3308,7 +3339,8 @@ const firmStages = {
    "bmw-i-ventures": ["Seed", "Series A", "Series B", "Growth"],
    "sky-vc": ["Seed", "Series A", "Series B"],
    "citi-ventures": ["Seed", "Series A", "Series B", "Growth", "Late Stage"],
-   "balderton-capital": ["Seed", "Series A", "Series B", "Growth"]
+   "balderton-capital": ["Seed", "Series A", "Series B", "Growth"],
+   "atomico": ["Seed", "Series A", "Series B", "Growth"]
 };
 
 // ============================================================
@@ -4755,6 +4787,35 @@ const firms = [
     ],
     holdings: [
       { name: "Datadog", ticker: "DDOG", historicalPrice: 143.63, price: 255.00 }
+    ]
+  },
+   {
+    rank: 36,
+    name: "Atomico",
+    sectors: ["AI", "Enterprise Software", "Fintech", "Healthcare", "Consumer Internet"],
+    signatureExit: "Supercell's 2016 sale to Tencent in a deal valued at roughly $8.6 billion — one of the largest exits in European venture history",
+    slug: "atomico",
+    website: "https://atomico.com",
+    short: "Atomico",
+    founded: 2006,
+    hq: "London, UK",
+    aum: "Firmwide AUM not disclosed; Fund VI reported at ~$1.24B (2024)",
+    thesis: "Atomico was founded in 2006 by Niklas Zennström, who built the firm after Skype specifically to prove Europe could produce global category leaders, not just regional startups. That founder-built, globally ambitious identity still shapes the firm's structure today: a Venture strategy for early conviction and a Growth strategy that keeps Atomico relevant through scaling and public-market preparation. The current partner mix reflects a deliberate barbell between AI-native enterprise automation and scale-stage company building, with Supercell's $8.6 billion sale to Tencent in 2016 standing as one of the largest exits in European venture history.",
+    leadership: [
+      { name: "Niklas Zennström", role: "Founder & CEO", profileSlug: "niklas-zennstrom" },
+      { name: "Ben Blume", role: "Partner", profileSlug: "ben-blume" },
+      { name: "Laura Connell", role: "Partner" }
+    ],
+    timeline: [
+      { year: "2006", event: "Niklas Zennström founds Atomico in London after co-founding Skype." },
+      { year: "2016", event: "Supercell is sold to Tencent in a deal valued at roughly $8.6 billion." },
+      { year: "2021", event: "Ben Blume becomes Partner." },
+      { year: "2022", event: "Laura Connell joins as Partner, growth-stage investing." },
+      { year: "2024", event: "Closes Fund VI at approximately $1.24 billion." },
+      { year: "2025", event: "Portfolio company Hinge Health completes its IPO." }
+    ],
+    holdings: [
+      { name: "Hinge Health", ticker: "HNGE", historicalPrice: null, price: null }
     ]
   },
    {
