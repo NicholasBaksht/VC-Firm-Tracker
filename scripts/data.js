@@ -5361,7 +5361,7 @@ const firms = [
       { year: "2025", event: "Announces $500 million in new funds across Cherry V and a new opportunity fund; firm backs 130+ portfolio companies." }
     ],
     holdings: [
-      { name: "AUTO1 Group", ticker: "AG1", historicalPrice: null, price: null }
+    { name: "AUTO1 Group", ticker: "AG1.DE", historicalPrice: null, price: null }
     ]
   },
   {
