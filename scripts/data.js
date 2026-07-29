@@ -5549,9 +5549,7 @@ const firms = [
       { year: "2019", event: "Twilio acquires SendGrid." },
       { year: "2025", event: "Raises $300 million combined across two new funds, Uncork VIII and Uncork Plus IV." }
     ],
-    holdings: [
-      { name: "Eventbrite", ticker: "EB", historicalPrice: null, price: null }
-    ]
+    holdings: [ ]
   },
   {
     rank: 41,
