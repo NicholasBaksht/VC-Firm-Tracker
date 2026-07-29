@@ -3005,6 +3005,44 @@ sources: [
       { label: "Global Venturing Powerlist 2022", url: "https://globalventuring.com/corporate/gcv-powerlist-2022-13-michelle-gonzalez/" }
     ]
   },
+"scott-darling": {
+    name: "Scott Darling",
+    firm: "Dell Technologies Capital",
+    firmSlug: "dell-technologies-capital",
+    title: "Founding Partner & President",
+    joinedYear: 2012,
+    education: ["BA, Economics & Computer Science, UC Santa Cruz", "MBA, Stanford Graduate School of Business"],
+    previousExperience: [
+      "Product Marketing, High-End Systems, Apple",
+      "Multiple General Manager & Marketing roles, Intel",
+      "Vice President & Managing Director, Intel Capital",
+      "General Partner, Frazier Technology Ventures (12 years)",
+      "President, EMC Corporate Development and Ventures"
+    ],
+    investmentFocus: ["Silicon", "Cybersecurity", "Core Enterprise Software", "Ecommerce & Logistics"],
+    notableInvestments: [
+      { name: "Zscaler", ticker: "ZS" },
+      { name: "DocuSign", ticker: "DOCU" },
+      { name: "MongoDB", ticker: "MDB" },
+      { name: "Nutanix", ticker: null }
+    ],
+    boardSeats: ["Zscaler", "Lightbend", "Exotec", "Datometry", "Noodle.ai", "VAST Data"],
+    ipoCount: 7,
+    majorExits: 0,
+    careerTimeline: [
+      { year: "1981", event: "Graduates UC Santa Cruz with a degree in economics and computer science." },
+      { year: "1988", event: "Completes his MBA at Stanford, after early roles at Apple and two PC industry startups." },
+      { year: "2000", event: "Joins Intel Capital as Vice President and Managing Director, managing teams supporting more than two-thirds of Intel's revenue." },
+      { year: "2012", event: "Founds the venture practice inside EMC that becomes Dell Technologies Capital, leading Zscaler's Series A as its first institutional investor." },
+      { year: "2018", event: "Zscaler goes public; Darling continues to serve on its board." },
+      { year: "2021", event: "Served 11 years on DocuSign's board through its own path to and through the public markets." }
+    ],
+    biography: "Scott Darling has spent more than two decades moving between operating and venture roles at some of the largest technology companies in the world, giving Dell Technologies Capital an unusually deep bench of institutional experience for a corporate venture arm. After early product marketing roles at Apple and a decade rising through Intel — eventually becoming Vice President and Managing Director of Intel Capital, where he oversaw investment teams supporting more than two-thirds of Intel's total revenue — he spent 12 years as a General Partner at Frazier Technology Ventures before EMC recruited him to start its venture practice in 2012. That practice became Dell Technologies Capital after Dell's acquisition of EMC, and Darling has run it as President ever since, describing it as pulling the best of both his Intel Capital and Frazier experience. He led Zscaler's Series A as DTC's first institutional investment and still sits on its board today, alongside a run of other IPO outcomes — DocuSign, JFrog, MongoDB, Nutanix — that have made DTC one of the more consistently productive corporate venture arms in enterprise technology.",
+    sources: [
+      { label: "Dell Technologies Capital Team", url: "https://www.delltechnologiescapital.com/team/scott-darling" },
+      { label: "Global Venturing Powerlist 2025", url: "https://globalventuring.com/corporate/awards/powerlist-2025-scott-darling/" }
+    ]
+  },
 };
 
 // ============================================================
@@ -3106,7 +3144,8 @@ const firmStages = {
       "cisco-investments": ["Seed", "Series A", "Series B", "Growth"],
          "capitalg": ["Series A", "Series B", "Growth", "Late Stage"],
          "samsung-next": ["Pre-Seed", "Seed", "Series A", "Series B"],
-   "m12": ["Seed", "Series A", "Series B"]
+   "m12": ["Seed", "Series A", "Series B"],
+   "dell-technologies-capital": ["Seed", "Series A", "Series B"]
 };
 
 // ============================================================
@@ -4407,6 +4446,36 @@ const firms = [
     ],
     holdings: [
       { name: "SentinelOne", ticker: "S", historicalPrice: 22.57, price: 18.55 }
+    ]
+  },
+   {
+    rank: 38,
+    name: "Dell Technologies Capital",
+    sectors: ["AI", "Cybersecurity", "Data & Analytics", "Enterprise Software"],
+    signatureExit: "JFrog's September 2020 Nasdaq IPO — DTC published a case study celebrating the DevOps company's public debut, part of a run of exits including Arista, DocuSign, MongoDB, Nutanix, SumoLogic, and Zscaler that generated more than $160 billion in combined market value",
+    slug: "dell-technologies-capital",
+    website: "https://www.delltechnologiescapital.com",
+    short: "Dell Technologies Capital",
+    founded: 2012,
+    hq: "Palo Alto, CA",
+    aum: "$1.8B+ invested to date",
+    thesis: "Dell Technologies Capital, or DTC, has operated as Dell's venture team since 2012, when Scott Darling founded the practice inside EMC before Dell's acquisition folded it into Dell Technologies. DTC's model is explicitly hands-on: alongside capital, portfolio companies get pricing analysis, go-to-market support, customer introductions, and direct access to Dell's family of businesses — Dell, Dell EMC, VMware, Pivotal, and SecureWorks. That approach has produced an unusually deep IPO track record for a corporate venture arm: DTC was the first institutional investor in Zscaler, and its 143 investments since 2012 have produced 65 M&A exits and 9 IPOs, including Arista, DocuSign, JFrog, MongoDB, Nutanix, SumoLogic, and Zscaler, together worth more than $160 billion in combined market value.",
+    leadership: [
+      { name: "Scott Darling", role: "Founding Partner & President", profileSlug: "scott-darling" },
+      { name: "Yair Snir", role: "Managing Director" }
+    ],
+    timeline: [
+      { year: "2012", event: "Scott Darling founds DTC's venture practice inside EMC, expanding to Boston and then Israel within its first two years." },
+      { year: "2016", event: "Dell's acquisition of EMC folds the practice into Dell Technologies Capital." },
+      { year: "2018", event: "Zscaler, where DTC was the first institutional investor, goes public in March." },
+      { year: "2020", event: "JFrog goes public on the Nasdaq in September." },
+      { year: "2026", event: "DTC's cumulative track record reaches 143 investments, 65 M&A exits, and 9 IPOs since 2012." }
+    ],
+    holdings: [
+      { name: "Zscaler", ticker: "ZS", historicalPrice: 181.66, price: 167.33 },
+      { name: "JFrog", ticker: "FROG", historicalPrice: null, price: null },
+      { name: "MongoDB", ticker: "MDB", historicalPrice: null, price: null },
+      { name: "DocuSign", ticker: "DOCU", historicalPrice: null, price: 52.91 }
     ]
   },
   {
