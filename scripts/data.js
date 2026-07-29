@@ -2970,6 +2970,41 @@ sources: [
       { label: "Grokipedia — David Lee", url: "https://grokipedia.com/page/David_Lee_(investor)" }
     ]
   },
+"michelle-gonzalez": {
+    name: "Michelle Gonzalez",
+    firm: "M12",
+    firmSlug: "m12",
+    title: "Corporate Vice President & Global Head",
+    joinedYear: 2022,
+    education: ["BA, Business Administration, University of Oklahoma", "JD, Yale Law School"],
+    previousExperience: [
+      "Consultant, McKinsey & Company",
+      "Senior Product & Business Leader, Apple (News, Books & Movies, outside the U.S.)",
+      "Partner, IBM Ventures (AI, blockchain & quantum computing)",
+      "Entrepreneur-in-Residence & Investor, Comcast Ventures (including its Catalyst Fund for underrepresented founders)",
+      "Managing Partner, Area 120 (Google's internal incubator)"
+    ],
+    investmentFocus: ["AI", "Enterprise Software", "Startup Incubation"],
+    notableInvestments: [
+      { name: "TaskUs", ticker: "TASK" },
+      { name: "PandaDoc", ticker: null },
+      { name: "Wallaroo", ticker: null }
+    ],
+    boardSeats: ["Go1", "SpyCloud", "Databook", "TaskUs"],
+    ipoCount: 1,
+    majorExits: 0,
+    careerTimeline: [
+      { year: "2016", event: "Joins IBM Ventures as a Partner, focused on AI, blockchain, and quantum computing partnerships." },
+      { year: "2018", event: "Joins Google as Managing Partner of Area 120, its internal incubator." },
+      { year: "2022", event: "Named Corporate Vice President and Global Head of M12, Microsoft's venture fund." },
+      { year: "2023", event: "Under her leadership, Microsoft marks M12's track record at 100+ companies, 15 unicorns, and 6 IPOs." }
+    ],
+    biography: "Michelle Gonzalez brought an unusually wide-ranging background to M12 when she was named its Corporate Vice President and Global Head in 2022. After starting her career at McKinsey and spending more than seven years as a senior product leader at Apple, she moved into venture and incubation roles at Comcast Ventures — where she also managed capital deployment for its Catalyst Fund supporting Black and Latinx seed-stage founders — and then IBM Ventures, focused on AI, blockchain, and quantum computing partnerships. Immediately before M12 she ran Google's Area 120 internal incubator as Managing Partner, leading a strategic realignment that produced a record number of projects successfully 'spinning in' to become core Google products. That incubation-and-venture combination now defines how she runs M12: she has proactively aligned the fund closer to Microsoft's senior leadership while preserving autonomous investment decisions, and currently sits on the boards of Go1, SpyCloud, Databook, and TaskUs.",
+    sources: [
+      { label: "M12 Team", url: "https://m12.vc/team/michelle-gonzalez/" },
+      { label: "Global Venturing Powerlist 2022", url: "https://globalventuring.com/corporate/gcv-powerlist-2022-13-michelle-gonzalez/" }
+    ]
+  },
 };
 
 // ============================================================
@@ -3070,7 +3105,8 @@ const firmStages = {
    "qualcomm-ventures": ["Seed", "Series A", "Series B", "Growth"],
       "cisco-investments": ["Seed", "Series A", "Series B", "Growth"],
          "capitalg": ["Series A", "Series B", "Growth", "Late Stage"],
-         "samsung-next": ["Pre-Seed", "Seed", "Series A", "Series B"]
+         "samsung-next": ["Pre-Seed", "Seed", "Series A", "Series B"],
+   "m12": ["Seed", "Series A", "Series B"]
 };
 
 // ============================================================
@@ -5262,6 +5298,33 @@ const firms = [
       { year: "2026", event: "Firm's cumulative track record passes 230 investments and 330 companies backed." }
     ],
     holdings: []
+  },
+   {
+    rank: 64,
+    name: "M12",
+    sectors: ["AI", "Enterprise Software", "Cybersecurity"],
+    signatureExit: "Cloudflare's 2019 NYSE IPO, ranked by Dealroom as an M12 portfolio outcome valued at $4.4 billion — sourced from a secondary database rather than Microsoft's own materials, so treated as secondary-verified",
+    slug: "m12",
+    website: "https://m12.vc",
+    short: "M12",
+    founded: 2016,
+    hq: "San Francisco, CA",
+    aum: "Not disclosed (100+ companies backed, including 15 unicorns and 6 IPOs)",
+    thesis: "M12 is Microsoft's venture fund, launched in 2016 as Microsoft Ventures and rebranded to M12 in 2018. Its proposition is explicit about being more than capital: portfolio companies get direct access to Microsoft's distribution, enterprise tooling, and — per the firm's own 'Advantage' materials — dedicated AI compute including supercomputer-scale GPU access for model training. The firm operates as a single evergreen fund capitalized directly off Microsoft's balance sheet, and removed restrictive corporate terms from its term sheets in 2019 specifically to stay founder-aligned rather than strategically entangled. In its first six years, Microsoft said M12 had invested in more than 100 companies, including 15 unicorns and 6 IPOs, focused on AI applications, AI security, AI cloud infrastructure, and deep tech systems.",
+    leadership: [
+      { name: "Michelle Gonzalez", role: "Corporate Vice President & Global Head", profileSlug: "michelle-gonzalez" },
+      { name: "Todd Graham", role: "Investor" }
+    ],
+    timeline: [
+      { year: "2016", event: "Microsoft launches Microsoft Ventures." },
+      { year: "2018", event: "Microsoft Ventures rebrands to M12." },
+      { year: "2019", event: "Removes restrictive corporate terms from its term sheets to stay founder-aligned; portfolio company Cloudflare goes public." },
+      { year: "2022", event: "Michelle Gonzalez joins as Corporate Vice President and Global Head after leading Google's Area 120." },
+      { year: "2023", event: "Microsoft marks M12's six-year track record: 100+ companies backed, 15 unicorns, 6 IPOs." }
+    ],
+    holdings: [
+      { name: "TaskUs", ticker: "TASK", historicalPrice: null, price: 5.52 }
+    ]
   },
   {
     rank: 64,
