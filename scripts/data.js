@@ -3077,6 +3077,41 @@ sources: [
       { label: "Global Venturing Powerlist 2023", url: "https://globalventuring.com/corporate/corporate-venturer/powerlist-2023-ulrich-thiem/" }
     ]
   },
+ "baris-guzel": {
+    name: "Baris Guzel",
+    firm: "BMW i Ventures",
+    firmSlug: "bmw-i-ventures",
+    title: "Partner",
+    joinedYear: 2017,
+    education: ["BS, Industrial Engineering, Istanbul Technical University", "MEM, Duke University", "MBA, UNC Kenan-Flagler Business School (Dean's Fellow)"],
+    previousExperience: [
+      "Venture capital roles in Hamburg, Germany (DAAD scholarship)",
+      "Technology Investment Banking Associate, Deutsche Bank",
+      "Venture Capital Associate, Presidio Partners"
+    ],
+    investmentFocus: ["Mobility", "Manufacturing", "Supply Chain", "Climate"],
+    notableInvestments: [
+      { name: "Xometry", ticker: "XMTR" },
+      { name: "ChargePoint", ticker: "CHPT" },
+      { name: "Tekion", ticker: null },
+      { name: "Zūm", ticker: null }
+    ],
+    boardSeats: ["AMPECO", "Our Next Energy"],
+    ipoCount: 2,
+    majorExits: 1,
+    careerTimeline: [
+      { year: "2015", event: "Leads global expansion of VCIC, the world's largest venture capital competition, as a graduate student at UNC Kenan-Flagler." },
+      { year: "2017", event: "Joins BMW i Ventures in March after roles at Deutsche Bank and Presidio Partners; leads Xometry's Series B as his first investment." },
+      { year: "2019", event: "Leads or co-leads investments in Tekion, AutoFi, and Zūm." },
+      { year: "2020", event: "Mapillary, a portfolio company he led the Series B for, is acquired by Facebook." },
+      { year: "2021", event: "Xometry goes public on the Nasdaq in June; Guzel rings the opening bell with the company's team." }
+    ],
+    biography: "Baris Guzel's path into venture capital started on a manufacturing floor: growing up in Turkey obsessed with cars and technology, he interned conducting Kaizen studies at a car plant while studying industrial engineering at Istanbul Technical University. A DAAD scholarship took him into venture capital in Hamburg, Germany, and after a Duke engineering management degree and an MBA at UNC Kenan-Flagler — where he led VCIC, the world's largest venture capital competition — he worked in technology investment banking at Deutsche Bank before joining BMW i Ventures in 2017. His first investment for the firm was leading Xometry's Series B, and he stayed closely involved through the manufacturing marketplace's 2021 Nasdaq IPO, ringing the bell alongside its team. He has since led or co-led investments in Tekion, AutoFi, Zūm, and Solid Power, and continues to support ChargePoint and other public portfolio companies as they scale.",
+    sources: [
+      { label: "BMW i Ventures Team", url: "https://www.bmwiventures.com/team" },
+      { label: "Xometry IPO Note", url: "https://www.bmwiventures.com/news/xometry-ipo" }
+    ]
+  },
 };
 
 // ============================================================
@@ -3180,7 +3215,8 @@ const firmStages = {
          "samsung-next": ["Pre-Seed", "Seed", "Series A", "Series B"],
    "m12": ["Seed", "Series A", "Series B"],
    "dell-technologies-capital": ["Seed", "Series A", "Series B"],
-   "porsche-ventures": ["Seed", "Series A", "Series B"]
+   "porsche-ventures": ["Seed", "Series A", "Series B"],
+   "bmw-i-ventures": ["Seed", "Series A", "Series B", "Growth"]
 };
 
 // ============================================================
@@ -4596,6 +4632,36 @@ const firms = [
     ],
     holdings: [
       { name: "Datadog", ticker: "DDOG", historicalPrice: 143.63, price: 255.00 }
+    ]
+  },
+   {
+    rank: 37,
+    name: "BMW i Ventures",
+    sectors: ["Mobility", "Climate", "AI"],
+    signatureExit: "Xometry's June 2021 Nasdaq IPO — Partner Baris Guzel led the manufacturing marketplace's Series B in 2017 as his very first BMW i Ventures investment, and rang the Nasdaq bell alongside the company's team at its debut",
+    slug: "bmw-i-ventures",
+    website: "https://www.bmwiventures.com",
+    short: "BMW i Ventures",
+    founded: 2011,
+    hq: "Mountain View, CA",
+    aum: "$1.1B+ (Fund III closed at $300M, April 2026)",
+    thesis: "BMW i Ventures has operated as an investing platform since 2011, moving to an independent fund structure in 2016, and it functions closer to a high-performing independent fund than a typical corporate VC while still leveraging BMW as a strategic partner. The firm repeatedly stresses financial discipline and Silicon Valley speed, backing more than 90 companies across mobility, supply chain, sustainability, manufacturing, and increasingly AI. Its clearest recent proof point is Xometry, the on-demand manufacturing marketplace it backed at Series B in 2017 and which went public on the Nasdaq in June 2021 — one of several public outcomes alongside ChargePoint, which reached a $2.4 billion valuation at its own 2020 public debut. BMW announced a new $300 million Fund III in April 2026, pushing total capital under management above $1.1 billion.",
+    leadership: [
+      { name: "Marcus Behrendt", role: "Managing Partner" },
+      { name: "Kasper Sage", role: "Managing Partner" },
+      { name: "Baris Guzel", role: "Partner", profileSlug: "baris-guzel" }
+    ],
+    timeline: [
+      { year: "2011", event: "BMW establishes what becomes BMW i Ventures as an investing platform." },
+      { year: "2016", event: "The platform moves to an independent fund structure." },
+      { year: "2017", event: "Baris Guzel joins and leads Xometry's Series B as his first investment for the firm." },
+      { year: "2020", event: "ChargePoint reaches a $2.4 billion valuation at its public market debut in September." },
+      { year: "2021", event: "Xometry goes public on the Nasdaq in June." },
+      { year: "2026", event: "BMW closes a new $300 million Fund III in April, pushing total AUM above $1.1 billion." }
+    ],
+    holdings: [
+      { name: "ChargePoint", ticker: "CHPT", historicalPrice: null, price: 5.84 },
+      { name: "Xometry", ticker: "XMTR", historicalPrice: null, price: 50.96 }
     ]
   },
   {
