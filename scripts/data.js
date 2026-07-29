@@ -4902,8 +4902,7 @@ const firms = [
       { year: "2023", event: "Launches a dedicated $250 million 'AI Start' seed fund for AI-first founders." }
     ],
     holdings: [
-      { name: "Lyft", ticker: "LYFT", historicalPrice: null, price: null },
-      { name: "Couchbase", ticker: "BASE", historicalPrice: null, price: null }
+     { name: "Lyft", ticker: "LYFT", historicalPrice: null, price: null }
     ]
   },
    {
