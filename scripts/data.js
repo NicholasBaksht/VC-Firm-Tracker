@@ -2805,6 +2805,42 @@ sources: [
       { label: "Intel Capital", url: "https://www.intelcapital.com/team/anthony-lin/" }
     ]
   },
+"quinn-li": {
+    name: "Quinn Li",
+    firm: "Qualcomm Ventures",
+    firmSlug: "qualcomm-ventures",
+    title: "Senior Vice President & Global Head",
+    joinedYear: 2005,
+    education: ["BS, MS & PhD, Electrical Engineering, Washington University in St. Louis", "MBA, Cornell University"],
+    previousExperience: [
+      "3G Wireless Technology & Standards Engineer, Lucent Technologies",
+      "Wireless Technology Development, Broadcom",
+      "Product Management & Business Development, IBM Systems and Technology Group"
+    ],
+    investmentFocus: ["5G", "AI", "Automotive", "Enterprise & Data Center", "IoT"],
+    notableInvestments: [
+      { name: "Zoom", ticker: "ZM" },
+      { name: "Enovix", ticker: "ENVX" },
+      { name: "Eero", ticker: null },
+      { name: "InvenSense", ticker: null }
+    ],
+    boardSeats: ["Augury", "Celona", "Cohesity", "Cresta", "Netradyne", "R-Zero"],
+    ipoCount: 3,
+    majorExits: 5,
+    careerTimeline: [
+      { year: "1996", event: "Begins his career as an engineer at Lucent Technologies, working on 3G wireless standards development." },
+      { year: "2003", event: "Completes his MBA at Cornell, where he gets his first exposure to venture investing through a student-run VC fund." },
+      { year: "2005", event: "Joins Qualcomm Ventures, calling it his 'dream company' after earlier roles at Broadcom and IBM." },
+      { year: "2018", event: "Portfolio company Ring is acquired by Amazon for more than $1 billion." },
+      { year: "2019", event: "Portfolio companies Zoom and Cloudflare both go public." },
+      { year: "2021", event: "Portfolio companies SentinelOne, Enovix, Matterport, Spire, and Science 37 all go public." }
+    ],
+    biography: "Quinn Li's path to venture capital ran directly through engineering: after earning his PhD in electrical engineering, he spent years working on 3G wireless standards at Lucent Technologies before roles at Broadcom and IBM gave him exposure to product strategy and deal-making. He got his real introduction to venture investing during his Cornell MBA, working as an investment professional for a small, student-run VC fund, and joined Qualcomm Ventures in 2005 calling it his dream company. His investment philosophy is explicit about playing to Qualcomm's own technical edge — he's said the firm invests where its parent company's scale and industry position give it 'unfair knowledge' that generalist VCs don't have. That approach has produced more than a dozen exits, including A123 Systems, Eero, Enovix, InvenSense, Pensando, and Zoom, and Li now oversees Qualcomm's global venture portfolio of more than 150 active companies across seven regions.",
+    sources: [
+      { label: "Qualcomm Ventures", url: "https://www.qualcommventures.com/team/quinn-li/" },
+      { label: "Corporate Venturing Insider", url: "https://medium.com/@corporateventuringinsider/qualcomm-ventures-quinn-li-levering-an-unfair-advantage-c18a04516f9e" }
+    ]
+  },
 };
 
 // ============================================================
@@ -4103,7 +4139,7 @@ const firms = [
     aum: "$2B+ (150+ active portfolio companies, per NVCA 2026)",
     thesis: "Qualcomm Ventures was founded in November 2000 with an initial $500 million commitment from its parent company, built specifically to promote the growth of the global wireless ecosystem. Its investment focus has stayed tied to that mission ever since — 5G, AI, automotive, IoT, XR, and enterprise and cloud technologies enabled by mobile and connected compute — while its global footprint across San Diego, San Francisco, Israel, Europe, China, India, and Korea gives portfolio companies real commercialization reach beyond typical Silicon Valley strategics. The firm has had seven portfolio exits worth more than $1 billion each, including Fitbit, Cruise Automation, Waze, and Ring, and now manages more than $2 billion in assets across 150-plus active companies.",
     leadership: [
-      { name: "Quinn Li", role: "SVP & Global Head of Qualcomm Ventures" }
+{ name: "Quinn Li", role: "SVP & Global Head of Qualcomm Ventures", profileSlug: "quinn-li" }
     ],
     timeline: [
       { year: "2000", event: "Qualcomm Ventures is founded with an initial $500 million commitment from Qualcomm Incorporated." },
