@@ -3632,7 +3632,6 @@ const firmGeography = {
 
 const firms = [
   {
-   {
     rank: 1,
     name: "SoftBank Vision Fund",
     sectors: ["AI", "Enterprise Software", "Consumer Internet", "Logistics"],
