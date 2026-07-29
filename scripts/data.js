@@ -3145,7 +3145,8 @@ const firmStages = {
          "capitalg": ["Series A", "Series B", "Growth", "Late Stage"],
          "samsung-next": ["Pre-Seed", "Seed", "Series A", "Series B"],
    "m12": ["Seed", "Series A", "Series B"],
-   "dell-technologies-capital": ["Seed", "Series A", "Series B"]
+   "dell-technologies-capital": ["Seed", "Series A", "Series B"],
+   "porsche-ventures": ["Seed", "Series A", "Series B"]
 };
 
 // ============================================================
@@ -4753,6 +4754,32 @@ const firms = [
       { year: "2015", event: "Peter Diamandis and Teymour Boutros-Ghali co-found BOLD Capital Partners in Santa Monica." },
       { year: "2019", event: "Portfolio company Insilico Medicine and Deep Longevity begin building toward eventual Hong Kong exchange listings." },
       { year: "2024", event: "Insilico Medicine and Deep Longevity both complete public listings on the Hong Kong Stock Exchange." }
+    ],
+    holdings: []
+  },
+   {
+    rank: 41,
+    name: "Porsche Ventures",
+    sectors: ["Mobility", "Climate", "Enterprise Software"],
+    signatureExit: "No single dollar-verified signature exit — confirmed outcomes include Fleetonomy's 2020 sale to digital infrastructure company Via and Greyp Bikes' 2021 acquisition by Porsche itself, though neither transaction's value was publicly disclosed",
+    slug: "porsche-ventures",
+    website: "https://porsche.ventures",
+    short: "Porsche Ventures",
+    founded: 2016,
+    hq: "Stuttgart, Germany",
+    aum: "Up to €250M allocated (2023 announcement)",
+    thesis: "Porsche Ventures has operated since 2016 as one of the clearest examples of strategic industrial value-add among corporate venture arms, built around commercialization help, supply-chain access, and the broader Porsche/VW ecosystem rather than capital alone. Under Managing Director Ulrich Thiem, who took over in 2019 after joining Porsche's legal department in 2011, the firm runs two tailored investment portfolios — one close to Porsche's core auto-tech business investing mainly at Series B, the other spanning intelligent enterprise and sustainability more broadly. In April 2023 Porsche earmarked up to €250 million for new and existing venture investments, operating from a distributed team across Stuttgart, Berlin, Palo Alto, Los Angeles, and Tel Aviv.",
+    leadership: [
+      { name: "Ulrich Thiem", role: "Managing Director", profileSlug: "ulrich-thiem" },
+      { name: "Patrick Huke", role: "Head of Porsche Ventures Europe" }
+    ],
+    timeline: [
+      { year: "2011", event: "Ulrich Thiem joins Porsche, initially in its legal department." },
+      { year: "2016", event: "Porsche establishes Porsche Ventures, headquartered in Stuttgart." },
+      { year: "2019", event: "Thiem becomes Managing Director of Porsche Ventures." },
+      { year: "2020", event: "Portfolio company Fleetonomy, an Israeli smart fleet mobility firm, is sold to Via." },
+      { year: "2021", event: "Portfolio company Greyp Bikes, an ebike manufacturer, is acquired by Porsche itself." },
+      { year: "2023", event: "Porsche earmarks up to €250 million for new and existing venture investments." }
     ],
     holdings: []
   },
