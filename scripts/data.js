@@ -3396,6 +3396,35 @@ sources: [
       { label: "Vision Fund Team", url: "https://visionfund.com/team/alex-clavel" }
     ]
   },
+   "yuri-milner": {
+    name: "Yuri Milner",
+    firm: "DST Global",
+    firmSlug: "dst-global",
+    title: "Founder",
+    joinedYear: 2009,
+    education: [],
+    previousExperience: [
+      "Built Digital Sky Technologies, which later became Mail.ru Group / VK"
+    ],
+    investmentFocus: ["Consumer Internet", "Social Platforms", "Global Growth Equity"],
+    notableInvestments: [
+      { name: "Meta Platforms", ticker: "META" },
+      { name: "Alibaba", ticker: "BABA" },
+      { name: "Spotify", ticker: "SPOT" }
+    ],
+    boardSeats: [],
+    ipoCount: 3,
+    majorExits: 0,
+    careerTimeline: [
+      { year: "2009", event: "Founds DST Global after building Digital Sky Technologies, later Mail.ru Group." },
+      { year: "2012", event: "Facebook, one of his best-known early crossover investments, goes public at a $104 billion valuation." }
+    ],
+    biography: "Yuri Milner's importance in venture history is less about operational platform building and more about capital formation: he helped normalize large private late-stage rounds for internet leaders before that market was institutionally mature. Before founding DST Global in 2009, he built Digital Sky Technologies, which later became Mail.ru Group and then VK. DST's enduring mystique comes from that original playbook — writing outsized, high-conviction checks into companies like Facebook, Alibaba, Twitter, and Spotify years before they went public, with Facebook's $104 billion 2012 IPO standing as the clearest proof of that early conviction.",
+    sources: [
+      { label: "DST Global", url: "https://dst-global.com" },
+      { label: "Wikipedia — DST Global", url: "https://en.wikipedia.org/wiki/DST_Global" }
+    ]
+  },
 };
 
 // ============================================================
@@ -3509,7 +3538,8 @@ const firmStages = {
    "cherry-ventures": ["Seed", "Series A", "Series B", "Growth"],
    "northzone": ["Seed", "Series A", "Series B", "Growth"],
    "molten-ventures": ["Series A", "Series B", "Growth", "Late Stage"],
-   "softbank-vision-fund": ["Series B", "Growth", "Late Stage"]
+   "softbank-vision-fund": ["Series B", "Growth", "Late Stage"],
+   "dst-global": ["Growth", "Late Stage"]
 };
 
 // ============================================================
@@ -6077,6 +6107,37 @@ const firms = [
       { year: "2025", event: "Marks 15 years with more than 200 investments and roughly 30 exits since launch." }
     ],
     holdings: []
+  },
+   {
+    rank: 67,
+    name: "DST Global",
+    sectors: ["Consumer Internet", "Fintech", "AI"],
+    signatureExit: "Facebook's 2012 IPO, which valued the company at $104 billion — DST was one of the best-known early crossover investors into Facebook",
+    slug: "dst-global",
+    website: "https://dst-global.com",
+    short: "DST Global",
+    founded: 2009,
+    hq: "Cayman Islands (registered office; no single operating HQ disclosed)",
+    aum: "Not publicly disclosed; DST Global IV reported closing at just over $1B (2014)",
+    thesis: "DST Global's distinctiveness is concentration plus timing. Founded by Yuri Milner in 2009, the firm was built to invest into already-obvious but not-yet-publicly-liquid internet winners, becoming famous for writing large checks into companies like Facebook, Alibaba, Twitter, and Spotify before many institutional investors were comfortable with that strategy. The firm's official site remains notably sparse, which is itself a signal: DST still behaves more like a private compounder than a brand-heavy platform venture franchise, and continued to back growth-stage technology as recently as 2023's Reka AI financing.",
+    leadership: [
+      { name: "Yuri Milner", role: "Founder", profileSlug: "yuri-milner" },
+      { name: "Saurabh Gupta", role: "Co-Founder" },
+      { name: "John Lindfors", role: "Co-Founder" },
+      { name: "Rahul Mehta", role: "Co-Founder" }
+    ],
+    timeline: [
+      { year: "2009", event: "Yuri Milner founds DST Global." },
+      { year: "2012", event: "Facebook goes public at a $104 billion valuation." },
+      { year: "2014", event: "DST Global IV closes at just over $1 billion, per Reuters." },
+      { year: "2021", event: "Reuters identifies DST as an active backer of growth-stage tech including Clubhouse and CloudWalk." },
+      { year: "2023", event: "DST participates in AI company Reka's financing." }
+    ],
+    holdings: [
+      { name: "Meta Platforms", ticker: "META", historicalPrice: null, price: 593.87 },
+      { name: "Alibaba", ticker: "BABA", historicalPrice: null, price: 115.00 },
+      { name: "Spotify", ticker: "SPOT", historicalPrice: null, price: 482.66 }
+    ]
   },
   {
     rank: 64,
