@@ -2872,6 +2872,37 @@ sources: [
       { label: "Cisco Investments Team", url: "https://www.ciscoinvestments.com/team" }
     ]
   },
+"john-somorjai": {
+    name: "John Somorjai",
+    firm: "Salesforce Ventures",
+    firmSlug: "salesforce-ventures",
+    title: "President",
+    joinedYear: 2009,
+    education: [],
+    previousExperience: [
+      "Corporate Development & M&A roles at Salesforce prior to founding Salesforce Ventures"
+    ],
+    investmentFocus: ["AI", "Enterprise Software", "Cloud Infrastructure", "Fintech"],
+    notableInvestments: [
+      { name: "Snowflake", ticker: "SNOW" },
+      { name: "DocuSign", ticker: "DOCU" },
+      { name: "Zoom", ticker: "ZM" },
+      { name: "Databricks", ticker: null },
+      { name: "Vlocity", ticker: null }
+    ],
+    boardSeats: [],
+    ipoCount: 4,
+    majorExits: 1,
+    careerTimeline: [
+      { year: "2009", event: "Helps found Salesforce Ventures, becoming its President." },
+      { year: "2020", event: "Vlocity, one of his notable investments, is acquired by parent company Salesforce for $1.33 billion." },
+      { year: "2024", event: "Salesforce Ventures marks 15 years under his leadership, having deployed more than $6 billion across 630+ startups." }
+    ],
+    biography: "John Somorjai helped found Salesforce Ventures in 2009 and has run it as President ever since, building it into one of the largest and most active corporate venture platforms in enterprise software. His official bio credits him with involvement in a broad set of the firm's highest-profile bets, including Auth0, Databricks, DocuSign, nCino, Snowflake, Vlocity, and Zoom — a mix spanning identity, data infrastructure, e-signature, banking software, and communications. The clearest and most unusual proof point among them is Vlocity: Salesforce Ventures backed the industry-cloud software company as an outside investor, and Salesforce itself later acquired it for $1.33 billion in February 2020, a rare case of a corporate VC's portfolio company being absorbed directly by its own parent.",
+    sources: [
+      { label: "Salesforce Ventures People", url: "https://salesforceventures.com/people/" }
+    ]
+  },
 };
 
 // ============================================================
@@ -2967,7 +2998,8 @@ const firmStages = {
    "bold-capital-partners": ["Seed", "Series A"],
    "altos-ventures": ["Seed", "Series A"],
    "maveron": ["Seed", "Series A"],
-   "intel-capital": ["Seed", "Series A", "Series B", "Growth"]
+   "intel-capital": ["Seed", "Series A", "Series B", "Growth"],
+   "salesforce-ventures": ["Seed", "Series A", "Series B", "Growth", "Late Stage"]
 };
 
 // ============================================================
@@ -3777,6 +3809,35 @@ const firms = [
     holdings: [
       { name: "Uber", ticker: "UBER", historicalPrice: null, price: 72.46 },
       { name: "Roku", ticker: "ROKU", historicalPrice: null, price: null }
+    ]
+  },
+   {
+    rank: 25,
+    name: "Salesforce Ventures",
+    sectors: ["AI", "Enterprise Software", "Fintech", "Cybersecurity"],
+    signatureExit: "Vlocity's February 2020 acquisition by Salesforce itself for $1.33 billion — an unusually direct proof point, since Salesforce Ventures backed the industry-cloud software company before its own parent acquired it",
+    slug: "salesforce-ventures",
+    website: "https://salesforceventures.com",
+    short: "Salesforce Ventures",
+    founded: 2009,
+    hq: "San Francisco, CA",
+    aum: "$6B+ deployed capital",
+    thesis: "Salesforce Ventures was founded in 2009 as Salesforce's venture platform, and its official framing is explicit about what it sells beyond capital: patient investing paired with privileged access to Salesforce's customers, partners, and product expertise. That platform capability isn't just marketing — the firm says its dedicated platform team has helped hundreds of portfolio companies with community building, brand amplification, and customer introductions. Salesforce Ventures has invested in more than 630 startups and deployed over $6 billion, supporting more than 200 IPOs and acquisitions, with a $1 billion commitment specifically earmarked for AI founders as of its 15-year retrospective.",
+    leadership: [
+      { name: "Paul Drews", role: "Managing Partner" },
+      { name: "John Somorjai", role: "President", profileSlug: "john-somorjai" },
+      { name: "Ken Asada", role: "Partner & Head of Japan" }
+    ],
+    timeline: [
+      { year: "2009", event: "Salesforce founds Salesforce Ventures as its dedicated venture platform." },
+      { year: "2020", event: "Salesforce acquires Vlocity, a Salesforce Ventures portfolio company, for $1.33 billion in February." },
+      { year: "2021", event: "Salesforce Ventures makes a $75 million private placement in monday.com concurrent with its June IPO." },
+      { year: "2024", event: "Marks 15 years with more than 630 startup investments, $6 billion+ deployed, and a $1 billion AI-founder commitment." }
+    ],
+    holdings: [
+      { name: "DocuSign", ticker: "DOCU", historicalPrice: null, price: 52.91 },
+      { name: "monday.com", ticker: "MNDY", historicalPrice: null, price: null },
+      { name: "nCino", ticker: "NCNO", historicalPrice: null, price: null }
     ]
   },
     {
