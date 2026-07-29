@@ -3258,6 +3258,38 @@ sources: [
       { label: "Atomico Insights", url: "https://atomico.com/insights/home-grown-talent-our-newest-partner-ben-blume-and-two-new-principals" }
     ]
   },
+   "saul-klein": {
+    name: "Saul Klein",
+    firm: "LocalGlobe",
+    firmSlug: "localglobe",
+    title: "Co-Founder & Managing Partner",
+    joinedYear: 2003,
+    education: [],
+    previousExperience: [
+      "General Partner, Index Ventures",
+      "Co-Founder & Original CEO, Lovefilm",
+      "Original Skype executive team",
+      "Chief Privacy Officer, Microsoft (following Firefly's sale)",
+      "UK's first Technology Business Ambassador to Israel"
+    ],
+    investmentFocus: ["Pre-Seed", "Seed", "Consumer Internet", "Marketplaces", "Ecosystem Building"],
+    notableInvestments: [
+      { name: "Lovefilm", ticker: null },
+      { name: "Platoon", ticker: null }
+    ],
+    boardSeats: [],
+    ipoCount: 0,
+    majorExits: 0,
+    careerTimeline: [
+      { year: "2003", event: "Co-founds LocalGlobe with his father, Robin Klein." },
+      { year: "2022", event: "Phoenix Court, the family of funds built around LocalGlobe, announces a $500 million first close." },
+      { year: "2023", event: "Publicly discusses the ambition to help European companies scale all the way to megacap status." }
+    ],
+    biography: "Saul Klein is one of the architects of the modern European startup ecosystem rather than just a conventional General Partner. His career spans operating, policy, angel formation, and venture institution building: he was part of Skype's original executive team, co-founded and served as original CEO of Lovefilm, became the UK's first Technology Business Ambassador to Israel, and served as Chief Privacy Officer at Microsoft following Firefly's sale, before becoming a General Partner at Index Ventures. That range of experience helps explain why LocalGlobe has always felt more like a civic platform than a pure finance product, and why he co-founded it with his father Robin Klein in 2003 as a deliberately ecosystem-first vehicle.",
+    sources: [
+      { label: "Phoenix Court Team", url: "https://www.phoenixcourt.vc/phoenix-court-team/saul-klein" }
+    ]
+  },
 };
 
 // ============================================================
@@ -3366,7 +3398,8 @@ const firmStages = {
    "sky-vc": ["Seed", "Series A", "Series B"],
    "citi-ventures": ["Seed", "Series A", "Series B", "Growth", "Late Stage"],
    "balderton-capital": ["Seed", "Series A", "Series B", "Growth"],
-   "atomico": ["Seed", "Series A", "Series B", "Growth"]
+   "atomico": ["Seed", "Series A", "Series B", "Growth"],
+   "localglobe": ["Pre-Seed", "Seed"]
 };
 
 // ============================================================
@@ -5092,6 +5125,35 @@ const firms = [
       { year: "2023", event: "Porsche earmarks up to €250 million for new and existing venture investments." }
     ],
     holdings: []
+  },
+   {
+    rank: 42,
+    name: "LocalGlobe",
+    sectors: ["Fintech", "Consumer", "Marketplaces", "Enterprise Software", "Climate"],
+    signatureExit: "Wise's 2021 direct listing on the London Stock Exchange, valuing the fintech company at about $11 billion",
+    slug: "localglobe",
+    website: "https://www.phoenixcourt.vc/localglobe",
+    short: "LocalGlobe",
+    founded: 2003,
+    hq: "London, UK",
+    aum: "No standalone AUM disclosed; Phoenix Court family reported $500M first close (2022)",
+    thesis: "LocalGlobe was co-founded by Robin and Saul Klein and has evolved into something closer to an urban operating system for London and European early-stage company formation than a standalone seed fund. As the pre-seed and seed vehicle inside the broader Phoenix Court family — alongside sister vehicles Latitude, Solar, and Basecamp — it benefits from unusually strong recycling of operator knowledge, angel networks, and neighborhood density rather than simply advertising founder support as a slogan. That ecosystem-design approach produced Wise, whose 2021 direct listing on the London Stock Exchange valued the fintech company at about $11 billion, one of the clearest proof points of London's fintech maturity.",
+    leadership: [
+      { name: "Saul Klein", role: "Co-Founder & Managing Partner", profileSlug: "saul-klein" },
+      { name: "Robin Klein", role: "Co-Founder", profileSlug: "robin-klein" },
+      { name: "Remus Brett", role: "General Partner" },
+      { name: "Paul Bishop", role: "General Partner" }
+    ],
+    timeline: [
+      { year: "2003", event: "Robin and Saul Klein co-found LocalGlobe in London." },
+      { year: "2021", event: "Wise completes a direct listing on the London Stock Exchange at an $11 billion valuation." },
+      { year: "2022", event: "Phoenix Court announces a $500 million first close across LocalGlobe, Latitude, Solar, and Basecamp." },
+      { year: "2023", event: "Saul Klein publicly discusses the family's ambition to help European companies scale to megacap status." }
+    ],
+    holdings: [
+      { name: "Wise", ticker: "WISE", historicalPrice: null, price: null },
+      { name: "Robinhood", ticker: "HOOD", historicalPrice: null, price: 99.96 }
+    ]
   },
   {
     rank: 40,
