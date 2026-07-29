@@ -3641,7 +3641,7 @@ const firms = [
     short: "SoftBank Vision Fund",
     founded: 2017,
     hq: "London, UK",
-    aum: "$175B in platform assets at SoftBank Investment Advisers (2022); Vision Fund 1 launched at $100B",
+   aum: "$175B (platform assets, 2022)",
     thesis: "SoftBank Vision Fund remains the clearest example of venture capital run at platform scale, having launched Vision Fund 1 at $100 billion in 2017. Its current messaging has become far more coherent than the early 'invest in everything transformed by AI' caricature: the firm is now organized around a full-stack AI ecosystem of hardware, infrastructure, and applications, with CEO Alex Clavel's leadership stressing discipline, monetization, and cash-runway quality across the portfolio. That shift matters because it shows the platform institutionalizing what was previously perceived as founder-led opportunism under Masayoshi Son, while still concentrating unusually large checks into category leaders — DoorDash's $71.2 billion IPO valuation stands as SVF1's best fully-exited outcome, with a $7.3 billion gain.",
     leadership: [
       { name: "Alex Clavel", role: "CEO", profileSlug: "alex-clavel" },
