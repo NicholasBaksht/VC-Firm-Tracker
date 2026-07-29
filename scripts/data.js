@@ -2841,6 +2841,37 @@ sources: [
       { label: "Corporate Venturing Insider", url: "https://medium.com/@corporateventuringinsider/qualcomm-ventures-quinn-li-levering-an-unfair-advantage-c18a04516f9e" }
     ]
   },
+"noah-yago": {
+    name: "Noah Yago",
+    firm: "Cisco Investments",
+    firmSlug: "cisco-investments",
+    title: "Vice President",
+    joinedYear: 2017,
+    education: [],
+    previousExperience: [
+      "Investor, Triangle Peak Partners",
+      "Venture roles, JVP (Jerusalem Venture Partners)",
+      "Venture roles, Veronis Suhler Stevenson"
+    ],
+    investmentFocus: ["Enterprise Software", "AI", "Data Infrastructure"],
+    notableInvestments: [
+      { name: "HashiCorp", ticker: null },
+      { name: "DataRobot", ticker: null },
+      { name: "Dremio", ticker: null },
+      { name: "AlphaSense", ticker: null }
+    ],
+    boardSeats: [],
+    ipoCount: 1,
+    majorExits: 0,
+    careerTimeline: [
+      { year: "2017", event: "Joins Cisco Investments from Triangle Peak Partners, after earlier venture roles at JVP and Veronis Suhler Stevenson." },
+      { year: "2021", event: "Portfolio company HashiCorp, one of his led investments, goes public on the Nasdaq." }
+    ],
+    biography: "Noah Yago joined Cisco Investments in 2017 after venture roles at Triangle Peak Partners, JVP, and Veronis Suhler Stevenson, bringing a background spanning both financial and strategic investing before moving fully into Cisco's corporate venture platform. He has led investments in HashiCorp, DataRobot, Dremio, and AlphaSense, with HashiCorp's December 2021 IPO — at a roughly $14 billion valuation — standing as the clearest public proof point of his sourcing. His focus sits at the intersection of enterprise software, data infrastructure, and AI, the same categories Cisco Investments has doubled down on since launching its dedicated $1 billion AI fund in 2024.",
+    sources: [
+      { label: "Cisco Investments Team", url: "https://www.ciscoinvestments.com/team" }
+    ]
+  },
 };
 
 // ============================================================
@@ -3833,6 +3864,34 @@ const firms = [
       { year: "2024", event: "Closes its tenth flagship fund, Crosslink Ventures X, at $350 million, marking the firm's 35th year." }
     ],
     holdings: []
+  },
+   {
+    rank: 29,
+    name: "Cisco Investments",
+    sectors: ["AI", "Cybersecurity", "Cloud Infrastructure", "Enterprise Software"],
+    signatureExit: "HashiCorp's December 2021 Nasdaq IPO at a roughly $14 billion valuation — Cisco's 2021 year-in-review named it alongside Confluent and GitLab as portfolio IPO milestones; HashiCorp was later taken private in IBM's February 2025 acquisition",
+    slug: "cisco-investments",
+    website: "https://www.ciscoinvestments.com",
+    short: "Cisco Investments",
+    founded: 1993,
+    hq: "San Jose, CA",
+    aum: "$1B AI Fund (2024); historically ~$250-300M deployed annually",
+    thesis: "Cisco Investments has operated as Cisco's corporate venture arm since 1993, and its own language is direct about what sets it apart: investing is 'part of the company, and it's strategic,' meaning capital comes bundled with access to Cisco's infrastructure, go-to-market channels, and enterprise customer relationships. That strategy sharpened further in June 2024 with the launch of a dedicated $1 billion AI fund focused on secure and trustworthy AI, adding names like Cohere and Scale AI to a portfolio that already spanned networking, observability, and security. The clearest proof of the model's payoff came in Cisco's 2021 year-in-review, which named HashiCorp, Confluent, and GitLab together as portfolio companies that went public that year.",
+    leadership: [
+      { name: "Derek Idemoto", role: "Senior Vice President" },
+      { name: "Noah Yago", role: "Vice President", profileSlug: "noah-yago" }
+    ],
+    timeline: [
+      { year: "1993", event: "Cisco founds Cisco Investments as one of the earliest corporate venture arms in technology." },
+      { year: "2018", event: "Cisco publicly discloses it invests roughly $250-300 million annually across direct and fund investments." },
+      { year: "2021", event: "Portfolio companies HashiCorp, Confluent, and GitLab all go public." },
+      { year: "2024", event: "Launches a dedicated $1 billion AI fund focused on secure and trustworthy AI." },
+      { year: "2025", event: "HashiCorp, one of the firm's signature IPO outcomes, is acquired by IBM and taken private." }
+    ],
+    holdings: [
+      { name: "Confluent", ticker: "CFLT", historicalPrice: null, price: null },
+      { name: "GitLab", ticker: "GTLB", historicalPrice: null, price: null }
+    ]
   },
   {
     rank: 27,
