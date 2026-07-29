@@ -3290,6 +3290,30 @@ sources: [
       { label: "Phoenix Court Team", url: "https://www.phoenixcourt.vc/phoenix-court-team/saul-klein" }
     ]
   },
+   "filip-dames": {
+    name: "Filip Dames",
+    firm: "Cherry Ventures",
+    firmSlug: "cherry-ventures",
+    title: "Founding Partner",
+    joinedYear: 2012,
+    education: [],
+    previousExperience: [
+      "Founder, digital marketplace for art and collectibles",
+      "Founding team member, Zalando (product, business development & international expansion)"
+    ],
+    investmentFocus: ["Seed", "Product-Led Startups", "Consumer & Marketplace-First Companies"],
+    notableInvestments: [],
+    boardSeats: [],
+    ipoCount: 0,
+    majorExits: 0,
+    careerTimeline: [
+      { year: "2012", event: "Co-founds Cherry Ventures with Christian Meermann after working on Zalando's founding team." }
+    ],
+    biography: "Filip Dames is the clearest embodiment of Cherry Ventures' original thesis that Europe needed founders-turned-investors who understood the mechanics of blitzscaling from the inside. Before co-founding Cherry in 2012, he founded a digital marketplace for art and collectibles and joined Zalando's founding team, working across product, business development, and international expansion during the company's earliest and most explosive growth years. That Zalando background remains central to the firm's credibility among first-time operators building across fragmented European markets.",
+    sources: [
+      { label: "Cherry Ventures About", url: "https://cherry.vc/about" }
+    ]
+  },
 };
 
 // ============================================================
@@ -3399,7 +3423,8 @@ const firmStages = {
    "citi-ventures": ["Seed", "Series A", "Series B", "Growth", "Late Stage"],
    "balderton-capital": ["Seed", "Series A", "Series B", "Growth"],
    "atomico": ["Seed", "Series A", "Series B", "Growth"],
-   "localglobe": ["Pre-Seed", "Seed"]
+   "localglobe": ["Pre-Seed", "Seed"],
+   "cherry-ventures": ["Seed", "Series A", "Series B", "Growth"]
 };
 
 // ============================================================
@@ -4988,6 +5013,34 @@ const firms = [
     ],
     holdings: [
       { name: "Snowflake", ticker: "SNOW", historicalPrice: 157.51, price: 250.00 }
+    ]
+  },
+   {
+    rank: 39,
+    name: "Cherry Ventures",
+    sectors: ["AI", "Enterprise Software", "Fintech", "Climate", "Healthcare"],
+    signatureExit: "AUTO1 Group's 2021 Frankfurt debut, which implied a market value of around €10.6 billion on day one",
+    slug: "cherry-ventures",
+    website: "https://www.cherry.vc",
+    short: "Cherry Ventures",
+    founded: 2012,
+    hq: "Berlin, Germany",
+    aum: "$500M (new funds announced 2025: Cherry V + opportunity fund)",
+    thesis: "Cherry Ventures was founded in 2012 by Filip Dames and Christian Meermann, both out of Zalando, and turned 'operator DNA' from a slogan into an organizational design principle. Its later partner bench added Spotify and Atomico experience, and the firm now openly argues that Europe's next trillion-dollar company could emerge from a wider set of domains than classic SaaS alone, including AI infrastructure, energy, and deep tech. The firm's 2025 fundraise — $500 million across its flagship early-stage fund and a new opportunity fund — was strategically designed to preserve Cherry's seed identity while adding enough later-stage capital to avoid losing influence once its companies scale, following AUTO1 Group's roughly €10.6 billion Frankfurt debut in 2021.",
+    leadership: [
+      { name: "Filip Dames", role: "Founding Partner", profileSlug: "filip-dames" },
+      { name: "Christian Meermann", role: "Founding Partner", profileSlug: "christian-meermann" },
+      { name: "Sophia Bendz", role: "Partner" },
+      { name: "Dinika Mahtani", role: "Partner" }
+    ],
+    timeline: [
+      { year: "2012", event: "Filip Dames and Christian Meermann co-found Cherry Ventures in Berlin, both coming out of Zalando." },
+      { year: "2020", event: "Sophia Bendz joins as Partner." },
+      { year: "2021", event: "AUTO1 Group debuts in Frankfurt at an implied €10.6 billion valuation." },
+      { year: "2025", event: "Announces $500 million in new funds across Cherry V and a new opportunity fund; firm backs 130+ portfolio companies." }
+    ],
+    holdings: [
+      { name: "AUTO1 Group", ticker: "AG1", historicalPrice: null, price: null }
     ]
   },
   {
