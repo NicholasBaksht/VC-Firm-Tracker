@@ -2933,6 +2933,43 @@ sources: [
       { label: "CapitalG Team", url: "https://capitalg.com/team/" }
     ]
   },
+"david-lee-samsung-next": {
+    name: "David Lee",
+    firm: "Samsung NEXT",
+    firmSlug: "samsung-next",
+    title: "Head of Samsung NEXT & EVP, Samsung Electronics",
+    joinedYear: 2018,
+    education: ["BA, Johns Hopkins University", "MS, Electrical Engineering, Stanford University (NSF Graduate Fellow)", "JD, New York University School of Law"],
+    previousExperience: [
+      "Corporate Attorney, technology law firms",
+      "Business Development, StumbleUpon (acquired by eBay)",
+      "Founding member, Google New Business Development team",
+      "Investor, Baseline Ventures",
+      "Co-Founder, SV Angel (backed Airbnb, Twitter, Dropbox, Pinterest, Stripe, DoorDash, Snap, Instacart)",
+      "Co-Founder & Chairman, Refactor Capital"
+    ],
+    investmentFocus: ["AI", "Healthtech", "Frontier Technology", "SaaS"],
+    notableInvestments: [
+      { name: "Airbnb", ticker: "ABNB" },
+      { name: "DoorDash", ticker: "DASH" },
+      { name: "Stripe", ticker: null },
+      { name: "Instacart", ticker: "CART" }
+    ],
+    boardSeats: [],
+    ipoCount: 3,
+    majorExits: 0,
+    careerTimeline: [
+      { year: "2007", event: "StumbleUpon, where he worked in business development, is acquired by eBay." },
+      { year: "2009", event: "Becomes a founding member of Google's New Business Development team, then joins Baseline Ventures." },
+      { year: "2009", event: "Co-founds SV Angel, backing Airbnb, Twitter, Dropbox, Pinterest, Snap, Stripe, DoorDash, and Instacart at seed stage." },
+      { year: "2018", event: "Co-founds and chairs Refactor Capital, a seed fund focused on health and biology, and joins Samsung as Head of Samsung NEXT." }
+    ],
+    biography: "David Lee's path to running Samsung NEXT ran through corporate law, Google, and some of Silicon Valley's most consequential seed bets. After a Stanford electrical engineering degree and an NYU law degree, he worked as a corporate attorney before moving into business development at StumbleUpon and then joining Google's New Business Development team at its founding. He co-founded SV Angel in 2009, where seed checks into Airbnb, Twitter, Dropbox, Pinterest, Snap, Stripe, DoorDash, and Instacart built one of the most recognizable angel track records of that era. A stage-four lymphoma diagnosis in the 1990s shaped a lasting focus on health and wellness investing, which led him to co-found and chair Refactor Capital, a seed fund dedicated to health and biology, before taking the helm at Samsung NEXT. He now runs Samsung's global startup investing arm despite not speaking Korean, bringing a distinctly Western venture sensibility to one of Asia's largest corporate investors.",
+    sources: [
+      { label: "Samsung NEXT Team", url: "https://www.samsungnext.com/team/" },
+      { label: "Grokipedia — David Lee", url: "https://grokipedia.com/page/David_Lee_(investor)" }
+    ]
+  },
 };
 
 // ============================================================
