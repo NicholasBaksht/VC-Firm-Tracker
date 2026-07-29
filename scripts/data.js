@@ -2770,6 +2770,41 @@ sources: [
       { label: "uAspire", url: "https://www.uaspire.org/about/team/ho-nam" }
     ]
   },
+"anthony-lin": {
+    name: "Anthony Lin",
+    firm: "Intel Capital",
+    firmSlug: "intel-capital",
+    title: "Managing Partner & Head of Intel Capital",
+    joinedYear: 2008,
+    education: ["BA, Economics, University of California, Berkeley"],
+    previousExperience: [
+      "Corporate Finance, M&A & Private Equity roles, Banc of America Securities",
+      "Corporate Finance, ASAT",
+      "Corporate Finance, Merrill Lynch",
+      "Corporate Finance, PaineWebber"
+    ],
+    investmentFocus: ["AI", "Cloud", "Silicon", "Frontier Technology"],
+    notableInvestments: [
+      { name: "SambaNova Systems", ticker: null },
+      { name: "Syntiant", ticker: null },
+      { name: "Articul8", ticker: null }
+    ],
+    boardSeats: ["SambaNova Systems", "Syntiant Corp", "Articul8.AI", "RealSense"],
+    ipoCount: 0,
+    majorExits: 0,
+    careerTimeline: [
+      { year: "1996", event: "Begins a 12-year career in corporate finance, M&A, and private equity at Banc of America Securities, ASAT, Merrill Lynch, and PaineWebber." },
+      { year: "2008", event: "Joins Intel, initially leading mergers, acquisitions, and international investing." },
+      { year: "2020", event: "Named interim head of Intel Capital following Wendell Brooks' departure." },
+      { year: "2021", event: "Appointed permanent Managing Partner and Head of Intel Capital." },
+      { year: "2022", event: "Launches a $1 billion investment fund with Intel Foundry Services to build out the fab-technology innovation ecosystem." }
+    ],
+    biography: "Anthony Lin spent 12 years in corporate finance, M&A, and private equity — at Banc of America Securities, ASAT, Merrill Lynch, and PaineWebber — before joining Intel in 2008, initially overseeing the company's own mergers, acquisitions, and international equity investments. He moved into Intel Capital and was named interim head in 2020 after Wendell Brooks' departure, taking the role permanently in February 2021. As a voting member of Intel Capital's investment committee, Lin now oversees all of the unit's equity investment activity, organized around four domains he's helped define — Cloud, Devices, Frontier, and Silicon — with 2023 alone seeing more than $350 million deployed across 30 new investments spanning AI infrastructure, robotics, and translation technology. He currently sits on the boards of SambaNova Systems, Syntiant, Articul8.AI, and RealSense.",
+    sources: [
+      { label: "Intel Newsroom", url: "https://newsroom.intel.com/biography/anthony-lin" },
+      { label: "Intel Capital", url: "https://www.intelcapital.com/team/anthony-lin/" }
+    ]
+  },
 };
 
 // ============================================================
@@ -3352,7 +3387,7 @@ const firms = [
     aum: "$12.9B invested since 1991 (cumulative capital deployed)",
     thesis: "Intel Capital was founded in 1991 as, by its own description, the first corporate venture capital firm, and it has spent more than three decades investing globally around Intel's core compute and connectivity platforms. The firm organizes its current portfolio into four groups — Cloud, Devices, Frontier, and Silicon — reflecting genuinely broad technical reach across AI infrastructure, edge systems, cybersecurity, 5G, and semiconductor tooling, not just software. Since 1991, Intel Capital has invested $12.9 billion across more than 1,582 companies worldwide, with 692 of them reaching a public listing or acquisition, giving it one of the largest cumulative track records of any strategic investor in technology.",
     leadership: [
-      { name: "Anthony Lin", role: "Head of Intel Capital & Corporate Vice President" },
+   { name: "Anthony Lin", role: "Head of Intel Capital & Corporate Vice President", profileSlug: "anthony-lin" },
       { name: "Mark Rostick", role: "Vice President & Senior Managing Director" },
       { name: "Srini Ananth", role: "Managing Director" }
     ],
