@@ -3368,6 +3368,34 @@ sources: [
       { label: "Molten Ventures People", url: "https://www.moltenventures.com/people/partnership/ben-wilkinson" }
     ]
   },
+   "alex-clavel": {
+    name: "Alex Clavel",
+    firm: "SoftBank Vision Fund",
+    firmSlug: "softbank-vision-fund",
+    title: "CEO",
+    joinedYear: 2015,
+    education: ["East Asian Studies, Princeton University"],
+    previousExperience: [
+      "Nearly 20 years in investment banking, Morgan Stanley (New York, Hong Kong, Shanghai, Tokyo)",
+      "CEO, SoftBank Group International"
+    ],
+    investmentFocus: ["Platform Strategy", "AI", "Portfolio Monetization", "Capital Markets"],
+    notableInvestments: [
+      { name: "DoorDash", ticker: "DASH" }
+    ],
+    boardSeats: [],
+    ipoCount: 1,
+    majorExits: 1,
+    careerTimeline: [
+      { year: "2015", event: "Joins SoftBank after nearly 20 years in investment banking at Morgan Stanley." },
+      { year: "2020", event: "DoorDash, a portfolio company, goes public at a $71.2 billion valuation." },
+      { year: "2025", event: "Reports DoorDash as SVF1's best-performing fully exited asset, with a $7.3 billion gain." }
+    ],
+    biography: "Alex Clavel's role has been to impose process and portfolio discipline on a franchise once defined almost entirely by Masayoshi Son's personal appetite for scale. After a Princeton degree in East Asian Studies and nearly 20 years in investment banking at Morgan Stanley across New York, Hong Kong, Shanghai, and Tokyo, he joined SoftBank in 2015 and later served as CEO of SoftBank Group International before taking the helm of the Vision Funds. His 2025 annual-report message is especially telling: it frames SoftBank less as a vision-only investor and more as a large, cycle-aware asset manager for AI-era category leaders, citing DoorDash's $71.2 billion IPO and $7.3 billion realized gain as proof of that discipline paying off.",
+    sources: [
+      { label: "Vision Fund Team", url: "https://visionfund.com/team/alex-clavel" }
+    ]
+  },
 };
 
 // ============================================================
@@ -3480,7 +3508,8 @@ const firmStages = {
    "localglobe": ["Pre-Seed", "Seed"],
    "cherry-ventures": ["Seed", "Series A", "Series B", "Growth"],
    "northzone": ["Seed", "Series A", "Series B", "Growth"],
-   "molten-ventures": ["Series A", "Series B", "Growth", "Late Stage"]
+   "molten-ventures": ["Series A", "Series B", "Growth", "Late Stage"],
+   "softbank-vision-fund": ["Series B", "Growth", "Late Stage"]
 };
 
 // ============================================================
@@ -3519,6 +3548,39 @@ const firmGeography = {
 
 const firms = [
   {
+   {
+    rank: 1,
+    name: "SoftBank Vision Fund",
+    sectors: ["AI", "Enterprise Software", "Consumer Internet", "Logistics"],
+    signatureExit: "DoorDash's 2020 IPO, which implied a fully diluted valuation of $71.2 billion — CEO Alex Clavel later called it SVF1's best-performing asset, with a $7.3 billion gain on full exit",
+    slug: "softbank-vision-fund",
+    website: "https://visionfund.com",
+    short: "SoftBank Vision Fund",
+    founded: 2017,
+    hq: "London, UK",
+    aum: "$175B in platform assets at SoftBank Investment Advisers (2022); Vision Fund 1 launched at $100B",
+    thesis: "SoftBank Vision Fund remains the clearest example of venture capital run at platform scale, having launched Vision Fund 1 at $100 billion in 2017. Its current messaging has become far more coherent than the early 'invest in everything transformed by AI' caricature: the firm is now organized around a full-stack AI ecosystem of hardware, infrastructure, and applications, with CEO Alex Clavel's leadership stressing discipline, monetization, and cash-runway quality across the portfolio. That shift matters because it shows the platform institutionalizing what was previously perceived as founder-led opportunism under Masayoshi Son, while still concentrating unusually large checks into category leaders — DoorDash's $71.2 billion IPO valuation stands as SVF1's best fully-exited outcome, with a $7.3 billion gain.",
+    leadership: [
+      { name: "Alex Clavel", role: "CEO", profileSlug: "alex-clavel" },
+      { name: "Sumer Juneja", role: "Managing Partner, EMEA/India", profileSlug: "sumer-juneja" },
+      { name: "Vikas J. Parekh", role: "Managing Partner" },
+      { name: "Kentaro Matsui", role: "Managing Partner, Asia" }
+    ],
+    timeline: [
+      { year: "2017", event: "SoftBank launches Vision Fund 1 at $100 billion." },
+      { year: "2018", event: "Masayoshi Son's annual report describes a strategy of targeting category leaders or near-leaders." },
+      { year: "2020", event: "DoorDash goes public at a fully diluted valuation of $71.2 billion." },
+      { year: "2022", event: "SoftBank reports $175 billion in platform assets and $56 billion of commitments to Vision Fund 2." },
+      { year: "2025", event: "Alex Clavel reports DoorDash as SVF1's best-performing fully exited asset, with a $7.3 billion gain." }
+    ],
+    holdings: [
+      { name: "DoorDash", ticker: "DASH", historicalPrice: 170.65, price: 175.00 },
+      { name: "Uber", ticker: "UBER", historicalPrice: null, price: 65.94 },
+      { name: "Coupang", ticker: "CPNG", historicalPrice: null, price: null },
+      { name: "Arm", ticker: "ARM", historicalPrice: null, price: null }
+    ]
+  },
+   {
     rank: 1,
     name: "Andreessen Horowitz",
     sectors: ["AI", "Crypto", "Fintech", "Consumer"],
