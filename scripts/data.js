@@ -2999,7 +2999,9 @@ const firmStages = {
    "altos-ventures": ["Seed", "Series A"],
    "maveron": ["Seed", "Series A"],
    "intel-capital": ["Seed", "Series A", "Series B", "Growth"],
-   "salesforce-ventures": ["Seed", "Series A", "Series B", "Growth", "Late Stage"]
+   "salesforce-ventures": ["Seed", "Series A", "Series B", "Growth", "Late Stage"],
+   "qualcomm-ventures": ["Seed", "Series A", "Series B", "Growth"],
+      "cisco-investments": ["Seed", "Series A", "Series B", "Growth"]
 };
 
 // ============================================================
