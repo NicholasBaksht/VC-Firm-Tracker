@@ -3043,6 +3043,40 @@ sources: [
       { label: "Global Venturing Powerlist 2025", url: "https://globalventuring.com/corporate/awards/powerlist-2025-scott-darling/" }
     ]
   },
+"ulrich-thiem": {
+    name: "Ulrich Thiem",
+    firm: "Porsche Ventures",
+    firmSlug: "porsche-ventures",
+    title: "Managing Director",
+    joinedYear: 2019,
+    education: ["PhD, Law, Universität Osnabrück"],
+    previousExperience: [
+      "Corporate Lawyer, CMS (Frankfurt)",
+      "Legal Department, Porsche AG",
+      "Director, Corporate Affairs & Investments, Porsche AG"
+    ],
+    investmentFocus: ["Auto Tech", "Intelligent Enterprise", "Sustainability", "Mobility"],
+    notableInvestments: [
+      { name: "Fleetonomy", ticker: null },
+      { name: "Greyp Bikes", ticker: null },
+      { name: "Cresta", ticker: null }
+    ],
+    boardSeats: [],
+    ipoCount: 0,
+    majorExits: 2,
+    careerTimeline: [
+      { year: "2011", event: "Joins Porsche AG's legal department after working as a corporate lawyer at CMS in Frankfurt." },
+      { year: "2016", event: "Porsche establishes Porsche Ventures; Thiem moves into corporate affairs and investments." },
+      { year: "2019", event: "Becomes Managing Director of Porsche Ventures." },
+      { year: "2020", event: "Oversees the sale of portfolio company Fleetonomy to Via." },
+      { year: "2021", event: "Oversees Porsche's own acquisition of portfolio company Greyp Bikes." }
+    ],
+    biography: "Ulrich Thiem came to Porsche Ventures through law, not finance — a PhD in law from Universität Osnabrück and a stint as a corporate lawyer at CMS in Frankfurt before joining Porsche's legal department in 2011. That legal and corporate-affairs background shaped how he built out Porsche Ventures after taking over as Managing Director in 2019, three years after the unit's founding: a strategic investor focused on customer experience, mobility, and digital lifestyles, with a growing emphasis on AI and future technology. Under his leadership the firm has run a lean team — around 17 people managing roughly 35 active investments — while still producing real outcomes, including the 2020 sale of Israeli fleet mobility company Fleetonomy to Via and Porsche's own 2021 acquisition of ebike maker Greyp Bikes, a portfolio company Porsche liked enough to buy outright.",
+    sources: [
+      { label: "Global Venturing Powerlist 2022", url: "https://globalventuring.com/corporate/gcv-powerlist-2022-ulrich-thiem/" },
+      { label: "Global Venturing Powerlist 2023", url: "https://globalventuring.com/corporate/corporate-venturer/powerlist-2023-ulrich-thiem/" }
+    ]
+  },
 };
 
 // ============================================================
