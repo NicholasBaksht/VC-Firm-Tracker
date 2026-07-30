@@ -3946,6 +3946,40 @@ sources: [
       { label: "Barclays — Barclays UK Ventures", url: "https://home.barclays/news/2019/2/barclays-uk-ventures--developing-business-models-for-the-future-/" }
     ]
   },
+   "sudhir-sethi": {
+    name: "Sudhir Sethi",
+    firm: "Chiratae Ventures",
+    firmSlug: "chiratae-ventures",
+    title: "Founder & Chairman",
+    joinedYear: 2006,
+    education: ["Engineering degree, Electronics & Telecommunications", "MBA, Faculty of Management Studies, University of Delhi"],
+    previousExperience: [
+      "12 years at Wipro before moving into venture capital"
+    ],
+    investmentFocus: ["Consumer Internet", "Deep Tech", "Fintech", "Enterprise Software", "Healthcare"],
+    notableInvestments: [
+      { name: "Flipkart", ticker: null },
+      { name: "Lenskart", ticker: null },
+      { name: "PolicyBazaar", ticker: null },
+      { name: "FirstCry", ticker: null }
+    ],
+    boardSeats: [],
+    ipoCount: 5,
+    majorExits: 18,
+    careerTimeline: [
+      { year: "1994", event: "Leaves Wipro after 12 years to move into venture capital." },
+      { year: "2001", event: "Recognized by Red Herring as one of India's leading venture capitalists." },
+      { year: "2006", event: "Founds IDG Ventures India with TC Meenakshisundaram." },
+      { year: "2007", event: "Backs Flipkart at an early stage." },
+      { year: "2018", event: "Leads the firm's rebrand from IDG Ventures India to Chiratae Ventures after IDG's global dissolution." },
+      { year: "2021", event: "PolicyBazaar goes public, one of five IPOs Chiratae has backed." }
+    ],
+    biography: "Sudhir Sethi spent 12 years at Wipro before venture capital pulled him away from routine corporate life, and he founded what became Chiratae Ventures in 2006 with TC Meenakshisundaram, initially as the Indian arm of IDG Ventures. The defining test of his leadership came when IDG dissolved as a global conglomerate mid-way through the firm's second fundraise — rather than fold, Sethi rebuilt the firm entirely around domestic Indian capital, betting that local investors would back Indian entrepreneurs with more conviction than foreign LPs ever could. That bet built one of India's most consequential venture portfolios: early stakes in Flipkart, Myntra, Lenskart, and PolicyBazaar, five portfolio IPOs, and $1.3 billion under management across seven funds. Sethi sits on Chiratae's Global Advisory Board alongside Ratan Tata and continues to serve on India's National Venture Capital Association executive committee.",
+    sources: [
+      { label: "Chiratae Ventures Team", url: "https://www.chiratae.com/team/" },
+      { label: "Wikipedia — Chiratae Ventures", url: "https://en.wikipedia.org/wiki/Chiratae_Ventures" }
+    ]
+  },
 };
 
 // ============================================================
@@ -4079,7 +4113,8 @@ const firmStages = {
    "comcast-ventures": ["Pre-Seed", "Seed", "Series A", "Series B", "Growth"],
    "rakuten-capital": ["Seed", "Series A", "Series B", "Growth"],
    "toyota-ventures": ["Seed", "Series A", "Series B"],
-   "barclays-uk-ventures": ["Seed", "Series A", "Growth"]
+   "barclays-uk-ventures": ["Seed", "Series A", "Growth"],
+   "chiratae-ventures": ["Seed", "Series A", "Series B", "Growth"]
 };
 
 // ============================================================
@@ -5930,6 +5965,31 @@ const firms = [
     holdings: [
       { name: "AUTO1 Group", ticker: "AG1.DE", historicalPrice: null, price: null }
     ]
+  },
+   {
+    rank: 58,
+    name: "Chiratae Ventures",
+    sectors: ["Consumer Internet", "Fintech", "Healthcare", "Deep Tech"],
+    signatureExit: "PolicyBazaar's 2021 IPO on the NSE and BSE — Chiratae was an early backer of the Indian insurance aggregator, one of five IPOs the firm has taken portfolio companies through",
+    slug: "chiratae-ventures",
+    website: "https://www.chiratae.com",
+    short: "Chiratae",
+    founded: 2006,
+    hq: "Bengaluru, India",
+    aum: "$1.3B (across seven funds)",
+    thesis: "Chiratae Ventures was founded in 2006 by Sudhir Sethi and TC Meenakshisundaram as IDG Ventures India, rebranding in 2018 to reflect its evolution into an independent Indian institution rather than a foreign firm's regional arm. Sethi's own account of the founding is telling: the firm's first fund was anchored by $150 million from Patrick McGovern's IDG and Bruno Raschle's Adveq, but when IDG dissolved globally mid-fundraise for Fund II, Chiratae rebuilt entirely around domestic Indian capital rather than folding — a bet on the conviction that Indian investors would back Indian entrepreneurs more durably than foreign LPs. That bet paid off: the firm now manages $1.3 billion across seven funds, has made more than 135 investments with 60 exits including five IPOs (FirstCry, Lenskart, Newgen, PolicyBazaar, and Yatra), and has backed eight unicorns including Flipkart, Myntra, and Lenskart.",
+    leadership: [
+      { name: "Sudhir Sethi", role: "Founder & Chairman", profileSlug: "sudhir-sethi" },
+      { name: "TC Meenakshisundaram", role: "Founder & Vice Chairman" }
+    ],
+    timeline: [
+      { year: "2006", event: "Sudhir Sethi and TC Meenakshisundaram found IDG Ventures India in Bengaluru, anchored by $150 million from IDG and Adveq." },
+      { year: "2007", event: "Backs Flipkart at an early stage, one of the firm's defining investments." },
+      { year: "2018", event: "Rebrands from IDG Ventures India to Chiratae Ventures following IDG's global dissolution." },
+      { year: "2021", event: "PolicyBazaar goes public on the NSE and BSE." },
+      { year: "2024", event: "Firm AUM reaches $1.3 billion across seven funds, with 135+ investments and 60 exits." }
+    ],
+    holdings: []
   },
    {
     rank: 36,
