@@ -3922,6 +3922,30 @@ sources: [
       { label: "Global Venturing Powerlist 2025", url: "https://globalventuring.com/corporate/awards/powerlist-2025-jim-adler/" }
     ]
   },
+   "ben-davey": {
+    name: "Ben Davey",
+    firm: "Barclays UK Ventures",
+    firmSlug: "barclays-uk-ventures",
+    title: "CEO",
+    joinedYear: 2019,
+    education: [],
+    previousExperience: [
+      "Group Head of Strategy, Barclays",
+      "Mergers & Acquisitions specialist"
+    ],
+    investmentFocus: ["Fintech", "Internal Venture Building", "Digital Banking Infrastructure"],
+    notableInvestments: [],
+    boardSeats: [],
+    ipoCount: 0,
+    majorExits: 0,
+    careerTimeline: [
+      { year: "2019", event: "Becomes CEO of Barclays UK Ventures, after serving as Barclays' Group Head of Strategy." }
+    ],
+    biography: "Ben Davey moved from mergers and acquisitions into Barclays' internal strategy function before taking the CEO role at Barclays UK Ventures, and his approach reflects that dealmaking background applied to venture building rather than pure corporate investing. He's described the unit's model explicitly as trying to replicate a startup mentality inside a large bank — a multidisciplinary team where developers, data scientists, and M&A professionals work alongside each other, with roughly half the team holding direct investment experience and 15 founders or co-founders on staff. Under his leadership, the unit explores new business models through a mix of organic build-out, commercial partnerships, and venture investments, rather than functioning as a conventional corporate VC writing checks into companies it never actively builds.",
+    sources: [
+      { label: "Barclays — Barclays UK Ventures", url: "https://home.barclays/news/2019/2/barclays-uk-ventures--developing-business-models-for-the-future-/" }
+    ]
+  },
 };
 
 // ============================================================
