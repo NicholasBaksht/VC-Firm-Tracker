@@ -3644,6 +3644,36 @@ sources: [
       { label: "Americas Quarterly", url: "https://www.americasquarterly.org/article/still-betting-big-argentine-venture-capitalists-hernan-kazah-and-nicolas-szekasy/" }
     ]
   },
+   "bill-ford": {
+    name: "Bill Ford",
+    firm: "General Atlantic",
+    firmSlug: "general-atlantic",
+    title: "Chairman & CEO",
+    joinedYear: 1991,
+    education: ["Amherst College"],
+    previousExperience: [],
+    investmentFocus: ["Growth Equity", "Technology", "Financial Services", "Global Expansion"],
+    notableInvestments: [
+      { name: "ByteDance", ticker: null },
+      { name: "Slack", ticker: null },
+      { name: "Alibaba", ticker: "BABA" }
+    ],
+    boardSeats: ["BlackRock", "ByteDance"],
+    ipoCount: 1,
+    majorExits: 0,
+    careerTimeline: [
+      { year: "1991", event: "Joins General Atlantic." },
+      { year: "2007", event: "Becomes CEO of General Atlantic." },
+      { year: "2019", event: "Portfolio company Slack completes its NYSE direct listing." },
+      { year: "2021", event: "Appointed Chairman of General Atlantic, adding the title to his CEO role." },
+      { year: "2025", event: "Under his leadership, firm AUM reaches approximately $126 billion." }
+    ],
+    biography: "Bill Ford has spent more than three decades at General Atlantic, joining in 1991 and becoming CEO in 2007 before adding the Chairman title in 2021. Under his leadership the firm has expanded from a small family office serving founder Charles F. Feeney into a $126 billion global growth investor spanning 20 countries, broadening its platform well beyond traditional growth equity into credit, climate, and sustainable infrastructure strategies. Ford has overseen the firm's highest-profile bets in this era, including ByteDance, Slack, and Alibaba, and currently sits on the boards of BlackRock and ByteDance, giving him a rare vantage point across both public financial markets and one of the world's largest private technology companies.",
+    sources: [
+      { label: "General Atlantic — Bill Ford", url: "https://www.generalatlantic.com/people/william-ford/" },
+      { label: "World Economic Forum", url: "https://www.weforum.org/people/william-ford/" }
+    ]
+  },
 };
 
 // ============================================================
@@ -3767,7 +3797,8 @@ const firmStages = {
    "dragoneer-investment-group": ["Series B", "Growth", "Late Stage"],
    "b-capital-group": ["Series B", "Series C", "Growth", "Late Stage"],
    "y-combinator": ["Pre-Seed", "Seed"],
-   "kaszek-ventures": ["Seed", "Series A", "Series B", "Growth"]
+   "kaszek-ventures": ["Seed", "Series A", "Series B", "Growth"],
+   "general-atlantic": ["Growth", "Late Stage"]
 };
 
 // ============================================================
@@ -3833,6 +3864,35 @@ const firms = [
       { name: "Uber", ticker: "UBER", historicalPrice: null, price: 65.94 },
       { name: "Coupang", ticker: "CPNG", historicalPrice: null, price: null },
       { name: "Arm", ticker: "ARM", historicalPrice: null, price: null }
+    ]
+  },
+   {
+    rank: 2,
+    name: "General Atlantic",
+    sectors: ["Consumer Internet", "Fintech", "Healthcare", "Enterprise Software"],
+    signatureExit: "Slack's 2019 NYSE direct listing at an approximately $19.5 billion valuation — one of several landmark growth-equity outcomes for the firm",
+    slug: "general-atlantic",
+    website: "https://www.generalatlantic.com",
+    short: "General Atlantic",
+    founded: 1980,
+    hq: "New York, NY",
+    aum: "$126B",
+    thesis: "General Atlantic was founded in 1980 as the captive investment team for Atlantic Philanthropies, the foundation of Duty Free Shoppers co-founder Charles F. Feeney, and functioned as his sole family office for more than a decade before taking on outside capital partners. That origin as patient, philanthropically-minded capital rather than a fee-driven fund is still central to the firm's identity: General Atlantic pioneered the growth equity asset class itself, and under Chairman and CEO Bill Ford — who joined in 1991 and became CEO in 2007 — it has invested more than $60 billion across 830-plus companies including ByteDance, Airbnb, and Slack. The firm now manages approximately $126 billion across growth equity, credit, climate, and sustainable infrastructure strategies, ranking 13th globally among the world's largest private equity firms.",
+    leadership: [
+      { name: "Bill Ford", role: "Chairman & CEO", profileSlug: "bill-ford" },
+      { name: "Gabriel Caillaux", role: "Co-President" },
+      { name: "Martín Escobari", role: "Co-President" }
+    ],
+    timeline: [
+      { year: "1980", event: "Charles F. Feeney establishes General Atlantic as his direct investment entity, funded solely by his own capital." },
+      { year: "1991", event: "Bill Ford joins the firm; General Atlantic begins accepting outside capital partners as Feeney gives away his fortune." },
+      { year: "2007", event: "Bill Ford becomes CEO." },
+      { year: "2019", event: "Portfolio company Slack completes its NYSE direct listing at approximately $19.5 billion." },
+      { year: "2021", event: "Bill Ford is appointed Chairman." },
+      { year: "2025", event: "AUM reaches approximately $126 billion; firm ranks 13th on Private Equity International's PEI 300." }
+    ],
+    holdings: [
+      { name: "Alibaba", ticker: "BABA", historicalPrice: null, price: 115.00 }
     ]
   },
    {
