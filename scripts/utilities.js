@@ -14,7 +14,12 @@ function slugifyCompany(name) {
 // Parses a firm's AUM string (e.g. "$58B+") into a plain number for
 // tier comparisons. Falls back to 0 if the format is unexpected.
 function parseAumNumber(aumStr) {
-  const bMatch = aumStr.match(/\$(\d+\.?\d*)B/);
+ // Accepts $, £, or € - Molten Ventures reports in pounds and Porsche
+  // Ventures in euros, and without this they'd parse as 0 and land in
+  // the wrong fund-size tier (and at the bottom of the rankings).
+  // Currencies are treated as equivalent rather than FX-converted, which
+  // is consistent with AUM already being an approximate figure here.
+  const bMatch = aumStr.match(/[$£€](\d+\.?\d*)B/);
   if (bMatch) return parseFloat(bMatch[1]);
   // Handles fund sizes stated in millions (e.g. "$200M+"), converting
   // to the same billions-denominated scale everything else uses -
