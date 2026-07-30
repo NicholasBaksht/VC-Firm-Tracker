@@ -3610,6 +3610,40 @@ sources: [
       { label: "TechCrunch", url: "https://techcrunch.com/?p=2383301" }
     ]
   },
+   "hernan-kazah": {
+    name: "Hernán Kazah",
+    firm: "Kaszek Ventures",
+    firmSlug: "kaszek-ventures",
+    title: "Co-Founder & Managing Partner",
+    joinedYear: 2011,
+    education: [],
+    previousExperience: [
+      "Finance Analyst, United Nations Development Program",
+      "Finance Analyst, Ministry of Economy of Argentina",
+      "Brand Manager, Procter & Gamble",
+      "Co-Founder & COO/CFO, MercadoLibre (12 years)"
+    ],
+    investmentFocus: ["Fintech", "Marketplaces", "Ecommerce", "Latin America"],
+    notableInvestments: [
+      { name: "Nubank", ticker: "NU" },
+      { name: "QuintoAndar", ticker: null },
+      { name: "Kavak", ticker: null }
+    ],
+    boardSeats: [],
+    ipoCount: 1,
+    majorExits: 0,
+    careerTimeline: [
+      { year: "1999", event: "Co-founds MercadoLibre, Latin America's largest ecommerce and fintech company, from scratch." },
+      { year: "2007", event: "Serves as COO as MercadoLibre completes its Nasdaq IPO." },
+      { year: "2011", event: "Leaves MercadoLibre with Nicolás Szekasy to found Kaszek Ventures." },
+      { year: "2021", event: "Nubank, one of Kaszek's earliest fintech bets, goes public on the NYSE." }
+    ],
+    biography: "Hernán Kazah spent 12 years building MercadoLibre from scratch as a co-founder and COO before its 2007 Nasdaq IPO, giving him a genuinely rare credential when he and Nicolás Szekasy founded Kaszek Ventures in 2011: he'd already built the exact kind of category-defining Latin American technology company he was now trying to back in others. That operating experience shaped Kaszek's founder-first approach from day one — offering hands-on strategic guidance and local network access, not just capital, at a time when institutional venture capital had largely written off the region. His early conviction in Nubank, when it was still just founder David Vélez and a slide deck, became one of the clearest validations of that thesis once the Brazilian neobank went public in 2021.",
+    sources: [
+      { label: "AS/COA", url: "https://www.as-coa.org/speakers/hernan-kazah" },
+      { label: "Americas Quarterly", url: "https://www.americasquarterly.org/article/still-betting-big-argentine-venture-capitalists-hernan-kazah-and-nicolas-szekasy/" }
+    ]
+  },
 };
 
 // ============================================================
@@ -3732,7 +3766,8 @@ const firmStages = {
    "arch-venture-partners": ["Seed", "Series A", "Growth"],
    "dragoneer-investment-group": ["Series B", "Growth", "Late Stage"],
    "b-capital-group": ["Series B", "Series C", "Growth", "Late Stage"],
-   "y-combinator": ["Pre-Seed", "Seed"]
+   "y-combinator": ["Pre-Seed", "Seed"],
+   "kaszek-ventures": ["Seed", "Series A", "Series B", "Growth"]
 };
 
 // ============================================================
@@ -5412,6 +5447,34 @@ const firms = [
     ],
     holdings: [
       { name: "Datadog", ticker: "DDOG", historicalPrice: 143.63, price: 255.00 }
+    ]
+  },
+   {
+    rank: 55,
+    name: "Kaszek Ventures",
+    sectors: ["Fintech", "Ecommerce", "Marketplaces", "Enterprise Software"],
+    signatureExit: "Nubank's 2021 NYSE IPO — Kaszek was an early backer of the Brazilian neobank, which reached a market capitalization of roughly $67 billion by 2026",
+    slug: "kaszek-ventures",
+    website: "https://www.kaszek.com",
+    short: "Kaszek",
+    founded: 2011,
+    hq: "Buenos Aires, Argentina",
+    aum: "$2B+ raised across seven funds",
+    thesis: "Kaszek Ventures was founded in 2011 by Hernán Kazah and Nicolás Szekasy, two former MercadoLibre executives who left the company after Szekasy led its 2007 Nasdaq IPO as CFO. The firm's name is literally a combination of their two surnames, and their pitch to Latin American founders is built on a rare credibility: they'd already built and taken public the region's largest technology company before backing anyone else's. That track record helped Kaszek become the largest early-stage venture firm in Latin America, raising more than $2 billion across seven funds since its $95 million debut vehicle, and backing more than 120 startups including Nubank, QuintoAndar, Kavak, Creditas, and Bitso — nine of which have reached unicorn status.",
+    leadership: [
+      { name: "Hernán Kazah", role: "Co-Founder & Managing Partner", profileSlug: "hernan-kazah" },
+      { name: "Nicolás Szekasy", role: "Co-Founder & Managing Partner" },
+      { name: "Nicolas Berman", role: "Partner" }
+    ],
+    timeline: [
+      { year: "2007", event: "Nicolás Szekasy leads MercadoLibre's Nasdaq IPO as CFO." },
+      { year: "2011", event: "Hernán Kazah and Nicolás Szekasy leave MercadoLibre to found Kaszek Ventures, raising a $95 million debut fund." },
+      { year: "2019", event: "Closes Fund IV at $375 million alongside a first $225 million Opportunity Fund." },
+      { year: "2021", event: "Raises $1 billion across Fund V ($475 million) and Opportunity Fund II ($525 million); Nubank goes public on the NYSE." },
+      { year: "2025", event: "Total capital raised across seven funds surpasses $2 billion." }
+    ],
+    holdings: [
+      { name: "Nubank", ticker: "NU", historicalPrice: null, price: 14.68 }
     ]
   },
    {
