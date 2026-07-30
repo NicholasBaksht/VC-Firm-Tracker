@@ -7004,8 +7004,3 @@ holdings: []
   },
 ];
 
-// Ranks are derived from array position, not hand-typed, so the array
-// itself stays the single source of truth: insert a firm into the
-// correct AUM-sorted slot and every rank recalculates automatically.
-// Never hand-edit a `rank:` field on an individual firm object again.
-firms.forEach((f, i) => { f.rank = i + 1; });
