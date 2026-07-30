@@ -3674,6 +3674,36 @@ sources: [
       { label: "World Economic Forum", url: "https://www.weforum.org/people/william-ford/" }
     ]
   },
+   "maha-ibrahim": {
+    name: "Maha Ibrahim",
+    firm: "Canaan Partners",
+    firmSlug: "canaan-partners",
+    title: "General Partner",
+    joinedYear: 2000,
+    education: ["BA, Economics, Stanford University", "MA, Sociology, Stanford University", "PhD, Economics, MIT"],
+    previousExperience: [
+      "Vice President of Business Development & Internet Operations, Qwest",
+      "Consultant, Boston Consulting Group",
+      "Management Consultant, PricewaterhouseCoopers"
+    ],
+    investmentFocus: ["Ecommerce", "Enterprise & Cloud", "Social Gaming"],
+    notableInvestments: [
+      { name: "The RealReal", ticker: "REAL" }
+    ],
+    boardSeats: ["The RealReal"],
+    ipoCount: 1,
+    majorExits: 0,
+    careerTimeline: [
+      { year: "2000", event: "Joins Canaan Partners as General Partner after roles at Qwest, Boston Consulting Group, and PricewaterhouseCoopers." },
+      { year: "2011", event: "Becomes the first investor in The RealReal, sitting on the company's board." },
+      { year: "2018", event: "Co-founds All Raise, the nonprofit focused on diversity in venture capital." },
+      { year: "2019", event: "The RealReal goes public on the Nasdaq." }
+    ],
+    biography: "Maha Ibrahim has spent more than two decades at Canaan Partners, joining as a General Partner in 2000 after a career spanning Qwest, Boston Consulting Group, and PricewaterhouseCoopers, and building a reputation for spotting technology trends early — she was among the first investors to recognize the potential of social gaming. Her clearest and most personal proof point is The RealReal: she was the company's first investor, stayed on its board through years of growth, and remained through its 2019 Nasdaq IPO. She's also a founding member of All Raise, the nonprofit dedicated to increasing the number of women in venture capital and startup leadership, reflecting a career-long focus on funding and elevating female entrepreneurs.",
+    sources: [
+      { label: "Canaan — Maha Ibrahim", url: "https://www.canaan.com/team/maha-ibrahim" }
+    ]
+  },
 };
 
 // ============================================================
@@ -3798,7 +3828,8 @@ const firmStages = {
    "b-capital-group": ["Series B", "Series C", "Growth", "Late Stage"],
    "y-combinator": ["Pre-Seed", "Seed"],
    "kaszek-ventures": ["Seed", "Series A", "Series B", "Growth"],
-   "general-atlantic": ["Growth", "Late Stage"]
+   "general-atlantic": ["Growth", "Late Stage"],
+   "canaan-partners": ["Seed", "Series A", "Growth"]
 };
 
 // ============================================================
@@ -5453,6 +5484,35 @@ const firms = [
       { name: "Etsy", ticker: "ETSY", historicalPrice: null, price: 84.10 },
       { name: "Coinbase", ticker: "COIN", historicalPrice: 257.21, price: 161.00 },
       { name: "Duolingo", ticker: "DUOL", historicalPrice: null, price: null }
+    ]
+  },
+   {
+    rank: 53,
+    name: "Canaan Partners",
+    sectors: ["Enterprise Software", "Fintech", "Consumer Internet", "Healthcare"],
+    signatureExit: "The RealReal's 2019 Nasdaq IPO — Maha Ibrahim was the company's first investor and sat on its board through the listing",
+    slug: "canaan-partners",
+    website: "https://www.canaan.com",
+    short: "Canaan Partners",
+    founded: 1987,
+    hq: "Menlo Park, CA",
+    aum: "$7B (following $850M Fund XIII)",
+    thesis: "Canaan Partners originated from a 1987 management buyout of GE Capital's venture unit, led by Harry Rein and Eric Young, and has maintained a deliberate 60/40 split between technology and healthcare investing ever since — a genuinely unusual balance for a firm approaching four decades of continuous operation. The firm runs its investment process with unusual transparency: every partner scores every deal on a public 1-4 scale, reflecting a stated culture of 'high performance, low ego.' That structure has produced a broad early-stage track record spanning Instacart, LendingClub, The RealReal, and Dexcom, and Canaan closed its thirteenth flagship fund at $850 million, pushing total assets under management to roughly $7 billion.",
+    leadership: [
+      { name: "Maha Ibrahim", role: "General Partner", profileSlug: "maha-ibrahim" },
+      { name: "Wende Hutton", role: "General Partner" },
+      { name: "Eric Young", role: "Partner & Co-Founder" }
+    ],
+    timeline: [
+      { year: "1987", event: "Harry Rein and Eric Young found Canaan Partners via a management buyout of GE Capital's venture unit." },
+      { year: "2014", event: "Portfolio company LendingClub goes public on the NYSE." },
+      { year: "2019", event: "The RealReal, where Maha Ibrahim was the first investor, goes public on the Nasdaq." },
+      { year: "2023", event: "Total AUM reaches $6.8 billion as of April." },
+      { year: "2024", event: "Closes its thirteenth flagship fund, Fund XIII, at $850 million." }
+    ],
+    holdings: [
+      { name: "The RealReal", ticker: "REAL", historicalPrice: null, price: null },
+      { name: "LendingClub", ticker: "LC", historicalPrice: null, price: 19.21 }
     ]
   },
    {
