@@ -63,3 +63,13 @@ function buildReturnBadge(h) {
   const sign = pct >= 0 ? '+' : '';
   return `<span class="return-badge ${cls}">${sign}${pct.toFixed(1)}% since Jan '25</span>`;
 }
+// ---------- RANKINGS ORDER ----------
+// Sort every firm by real AUM, highest to lowest, then derive rank from
+// that sorted position. Doing this in code rather than relying on where
+// a firm object physically sits in data.js means the rankings can never
+// drift out of order - and a newly added firm can be pasted ANYWHERE in
+// the array and still land in its correct slot automatically. Firms with
+// no disclosed AUM parse to 0 and collect at the bottom, which is the
+// honest place for them.
+firms.sort((a, b) => parseAumNumber(b.aum) - parseAumNumber(a.aum));
+firms.forEach((f, i) => { f.rank = i + 1; });
