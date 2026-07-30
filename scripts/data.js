@@ -3738,6 +3738,38 @@ sources: [
       { label: "Asia Tech Daily", url: "https://asiatechdaily.com/sean-osullivan-founder-and-managing-partner-of-sosv/" }
     ]
   },
+   "jay-hoag": {
+    name: "Jay Hoag",
+    firm: "TCV",
+    firmSlug: "tcv",
+    title: "Founding General Partner",
+    joinedYear: 1995,
+    education: [],
+    previousExperience: [
+      "Managing Director, Chancellor Capital Management (12+ years)"
+    ],
+    investmentFocus: ["Consumer Internet", "Streaming & Media", "Crossover Investing"],
+    notableInvestments: [
+      { name: "Netflix", ticker: "NFLX" },
+      { name: "Facebook", ticker: "META" },
+      { name: "Zillow", ticker: null }
+    ],
+    boardSeats: ["Netflix (Chairman)", "Zillow"],
+    ipoCount: 6,
+    majorExits: 0,
+    careerTimeline: [
+      { year: "1995", event: "Co-founds Technology Crossover Ventures with Rick Kimball after 12+ years at Chancellor Capital Management." },
+      { year: "1999", event: "Joins Netflix's board of directors." },
+      { year: "2002", event: "Netflix goes public on the Nasdaq, with TCV owning roughly 43% pre-IPO." },
+      { year: "2012", event: "Personally leads TCV's $260 million investment in Facebook ahead of its IPO." },
+      { year: "2026", event: "Continues to serve as Chairman of Netflix's board, more than 25 years after joining." }
+    ],
+    biography: "Jay Hoag has been a technology investor for more than 40 years, spending 12 years as a Managing Director at Chancellor Capital Management before co-founding Technology Crossover Ventures with Rick Kimball in 1995 — inventing the 'crossover' model of investing in both private and public technology companies from a single fund. His defining relationship is with Netflix: he joined the company's board in 1999, back when TCV owned roughly 43% of the pre-IPO company, and has stayed on as Chairman through Netflix's growth into a company worth more than $400 billion. He personally led TCV's $260 million investment in Facebook ahead of its 2012 IPO, doubling the position within months, and continues to chair TCV's Investment Committee more than three decades after founding the firm.",
+    sources: [
+      { label: "TCV — Jay Hoag", url: "https://www.tcv.com/team/jay-hoag" },
+      { label: "Forbes Profile", url: "https://www.forbes.com/profile/jay-hoag/" }
+    ]
+  },
 };
 
 // ============================================================
@@ -3864,7 +3896,8 @@ const firmStages = {
    "kaszek-ventures": ["Seed", "Series A", "Series B", "Growth"],
    "general-atlantic": ["Growth", "Late Stage"],
    "canaan-partners": ["Seed", "Series A", "Growth"],
-   "sosv": ["Pre-Seed", "Seed", "Series A"]
+   "sosv": ["Pre-Seed", "Seed", "Series A"],
+    "tcv": ["Series B", "Series C", "Growth", "Late Stage"]
 };
 
 // ============================================================
@@ -4195,6 +4228,37 @@ const firms = [
     holdings: [
       { name: "Robinhood", ticker: "HOOD", historicalPrice: null, price: 99.96 },
       { name: "Workday", ticker: "WDAY", historicalPrice: null, price: 144.78 }
+    ]
+  },
+   {
+    rank: 9,
+    name: "TCV",
+    sectors: ["Consumer Internet", "SaaS", "Fintech", "Media"],
+    signatureExit: "Netflix's 2002 Nasdaq IPO — TCV owned roughly 43% of the company pre-IPO and co-founder Jay Hoag has served on Netflix's board since 1999, watching it grow into a company worth more than $400 billion",
+    slug: "tcv",
+    website: "https://www.tcv.com",
+    short: "TCV",
+    founded: 1995,
+    hq: "Menlo Park, CA",
+    aum: "~$24B raised since inception",
+    thesis: "TCV was founded in 1995 by Jay Hoag and Rick Kimball as the original crossover investor — the first firm to invest in both public and private technology companies from the same fund, a structure the 'Crossover' in its original name (Technology Crossover Ventures) still reflects. That willingness to follow winners across the private-to-public transition, rather than exiting at IPO, is what produced Jay Hoag's three-decade board seat at Netflix, which he joined in 1999 when TCV owned roughly 43% of the company pre-IPO. The firm has since invested more than $17 billion across 350-plus technology companies worldwide, supporting more than 145 IPOs and strategic acquisitions including Facebook, Airbnb, Spotify, Zillow, and Expedia, and now manages approximately $24 billion.",
+    leadership: [
+      { name: "Jay Hoag", role: "Founding General Partner", profileSlug: "jay-hoag" },
+      { name: "Richard Kimball", role: "Founding General Partner" },
+      { name: "Neil Tolaney", role: "General Partner" }
+    ],
+    timeline: [
+      { year: "1995", event: "Jay Hoag and Rick Kimball found Technology Crossover Ventures in Menlo Park." },
+      { year: "1999", event: "Jay Hoag joins Netflix's board of directors." },
+      { year: "2002", event: "Netflix goes public on the Nasdaq, with TCV owning roughly 43% pre-IPO." },
+      { year: "2012", event: "Invests $260 million in Facebook ahead of its IPO, doubling the investment within months." },
+      { year: "2018", event: "Portfolio company Spotify completes its direct listing." },
+      { year: "2026", event: "Total capital raised since inception reaches approximately $24 billion." }
+    ],
+    holdings: [
+      { name: "Netflix", ticker: "NFLX", historicalPrice: null, price: 72.39 },
+      { name: "Spotify", ticker: "SPOT", historicalPrice: null, price: 482.66 },
+      { name: "Airbnb", ticker: "ABNB", historicalPrice: null, price: 141.10 }
     ]
   },
   {
