@@ -3477,6 +3477,38 @@ sources: [
       { label: "Peak XV Team", url: "https://www.peakxv.com/team/rajan-anandan" }
     ]
   },
+   "robert-nelsen": {
+    name: "Robert Nelsen",
+    firm: "ARCH Venture Partners",
+    firmSlug: "arch-venture-partners",
+    title: "Co-Founder & Managing Director",
+    joinedYear: 1986,
+    education: ["BS, Economics & Biology, University of Puget Sound", "MBA, University of Chicago"],
+    previousExperience: [],
+    investmentFocus: ["Biotech", "Genomics", "AI-Driven Drug Discovery", "Cellular Rejuvenation"],
+    notableInvestments: [
+      { name: "Illumina", ticker: "ILMN" },
+      { name: "Beam Therapeutics", ticker: "BEAM" },
+      { name: "Karuna Therapeutics", ticker: null },
+      { name: "Denali Therapeutics", ticker: "DNLI" }
+    ],
+    boardSeats: ["Vir Biotechnology", "Sana Biotechnology", "Lyell Immunopharma", "insitro", "Prime Medicine"],
+    ipoCount: 8,
+    majorExits: 3,
+    careerTimeline: [
+      { year: "1986", event: "Co-founds ARCH Venture Partners at its founding." },
+      { year: "1992", event: "Makes his first biotech investment, in Aviron, developer of the nasal-spray flu vaccine." },
+      { year: "2000", event: "Provides the first seed funding for Illumina, later a genomic sequencing leader." },
+      { year: "2019", event: "Array BioPharma, one of his investments, is acquired by Pfizer for $10.6 billion." },
+      { year: "2023", event: "Karuna Therapeutics is acquired by Bristol Myers Squibb for $14 billion in December." },
+      { year: "2024", event: "Backs three major biotech rounds: Xaira Therapeutics ($1B round, $2.15B valuation), Metsera, and Mirador Therapeutics." }
+    ],
+    biography: "Robert Nelsen co-founded ARCH Venture Partners at its founding in 1986 and has spent nearly four decades since sourcing, financing, and building biotechnology companies from the earliest possible stage — often co-founding them directly alongside the scientists whose research they're built on. His track record is genuinely rare in venture capital: more than 150 companies financed, over 50 reaching billion-dollar valuations, including early seed funding for Illumina, which became one of the most consequential genomics companies in the world. His exits include Bristol Myers Squibb's $14 billion acquisition of Karuna Therapeutics in 2023 and Pfizer's $10.6 billion purchase of Array BioPharma in 2019, and he remains one of the most active biotech investors in the industry, backing three separate billion-dollar-plus rounds in 2024 alone.",
+    sources: [
+      { label: "ARCH Venture Partners Team", url: "https://www.archventure.com/team/robert-nelsen/" },
+      { label: "Forbes Profile", url: "https://www.forbes.com/profile/robert-nelsen/" }
+    ]
+  },
 };
 
 // ============================================================
@@ -3595,7 +3627,8 @@ const firmStages = {
    "ggv-capital": ["Seed", "Series A", "Series B", "Growth"],
    "peak-xv-partners": ["Seed", "Series A", "Series B", "Growth"],
     "eclipse-ventures": ["Seed", "Series A", "Series B", "Growth"],
-  "qualcomm-ventures": ["Seed", "Series A", "Series B", "Growth"]
+  "qualcomm-ventures": ["Seed", "Series A", "Series B", "Growth"],
+   "arch-venture-partners": ["Seed", "Series A", "Growth"]
 };
 
 // ============================================================
@@ -4067,6 +4100,35 @@ const firms = [
       { name: "Wayfair", ticker: "W", historicalPrice: null, price: null },
       { name: "Nutanix", ticker: "NTNX", historicalPrice: null, price: null },
       { name: "Guidewire", ticker: "GWRE", historicalPrice: null, price: null }
+    ]
+  },
+   {
+    rank: 15,
+    name: "ARCH Venture Partners",
+    sectors: ["Biotech", "Healthcare", "AI", "Deep Tech"],
+    signatureExit: "Karuna Therapeutics' December 2023 acquisition by Bristol Myers Squibb for $14 billion — one of Robert Nelsen's earliest bets at the firm",
+    slug: "arch-venture-partners",
+    website: "https://www.archventure.com",
+    short: "ARCH Venture",
+    founded: 1986,
+    hq: "Chicago, IL",
+    aum: "$12B (following $3B+ Fund XIII, September 2024)",
+    thesis: "ARCH Venture Partners was founded in 1986 by Steven Lazarus, Clinton Bybee, Keith Crandell, and Robert Nelsen, originating from a collaboration between the University of Chicago and Argonne National Laboratory built specifically to commercialize academic research. Nearly 40 years later, that model hasn't changed: ARCH still co-founds companies directly alongside scientists and researchers rather than simply writing checks into existing startups, concentrating almost entirely on early-stage life sciences, physical sciences, and increasingly AI-driven biology. That founder-embedded approach has produced more than 50 companies that reached billion-dollar valuations, including Illumina, Beam Therapeutics, and Karuna Therapeutics, and the firm closed its thirteenth flagship fund at more than $3 billion in September 2024, pushing total assets under management to roughly $12 billion.",
+    leadership: [
+      { name: "Robert Nelsen", role: "Co-Founder & Managing Director", profileSlug: "robert-nelsen" },
+      { name: "Keith Crandell", role: "Co-Founder & Managing Director" },
+      { name: "Kristina Burow", role: "Managing Director" }
+    ],
+    timeline: [
+      { year: "1986", event: "Steven Lazarus, Clinton Bybee, Keith Crandell, and Robert Nelsen found ARCH Venture Partners in Chicago." },
+      { year: "2000", event: "Portfolio company Illumina, one of Nelsen's earliest seed investments, goes public." },
+      { year: "2022", event: "Closes Fund XII at $2.975 billion in June." },
+      { year: "2023", event: "Karuna Therapeutics, an ARCH portfolio company, is acquired by Bristol Myers Squibb for $14 billion in December." },
+      { year: "2024", event: "Closes its thirteenth flagship fund, Fund XIII, at more than $3 billion in September, marking the firm's 38th year." },
+      { year: "2026", event: "Portfolio reaches 279 companies with more than 50 billion-dollar outcomes; total AUM reaches roughly $12 billion." }
+    ],
+    holdings: [
+      { name: "Illumina", ticker: "ILMN", historicalPrice: null, price: null }
     ]
   },
   {
