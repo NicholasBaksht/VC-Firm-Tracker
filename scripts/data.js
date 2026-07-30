@@ -3804,6 +3804,41 @@ sources: [
       { label: "The Marque", url: "https://www.themarque.com/profile/nenad-marovac" }
     ]
   },
+   "roy-bahat": {
+    name: "Roy Bahat",
+    firm: "Bloomberg Beta",
+    firmSlug: "bloomberg-beta",
+    title: "Head & Partner",
+    joinedYear: 2013,
+    education: ["Harvard College (Rhodes Scholar)"],
+    previousExperience: [
+      "President, IGN Entertainment (5 years)",
+      "Chairman, OUYA",
+      "Board Member, Revision3 (through its acquisition by Discovery)",
+      "Board Member, Flixster (through its purchase by Warner Bros.)"
+    ],
+    investmentFocus: ["Machine Intelligence", "Future of Work", "Enterprise Software"],
+    notableInvestments: [
+      { name: "Replit", ticker: null },
+      { name: "Flexport", ticker: null },
+      { name: "MasterClass", ticker: null },
+      { name: "Weights & Biases", ticker: null }
+    ],
+    boardSeats: [],
+    ipoCount: 0,
+    majorExits: 0,
+    careerTimeline: [
+      { year: "2000s", event: "Leads IGN Entertainment for five years as its president, prior to Bloomberg Beta." },
+      { year: "2012", event: "Becomes chairman of OUYA, the Kickstarter-backed game console startup." },
+      { year: "2013", event: "Launches Bloomberg Beta with an initial $75 million fund from Bloomberg L.P." },
+      { year: "2022", event: "Bloomberg Beta closes its fourth fund and first opportunity fund, both at $75 million." }
+    ],
+    biography: "Roy Bahat came to venture capital from media and gaming operations, not finance — a Harvard-educated Rhodes Scholar who spent five years running IGN Entertainment before chairing OUYA, the crowdfunded game console startup. He launched Bloomberg Beta in 2013 with a distinctly unconventional structure for a corporate-backed fund: full transparency, with the firm's entire operating manual published openly on GitHub, and a flat decision-making model where any of the firm's three partners can independently approve a deal. Bahat has been explicit that he measures success less by raw financial return and more by founder outcomes — he cites 93 founders who've become millionaires from Bloomberg Beta's backing as his proudest metric — and under his leadership the firm has grown from a single $75 million fund to $450 million while staying capitalized entirely by Bloomberg L.P.",
+    sources: [
+      { label: "Bloomberg Beta", url: "https://www.bloombergbeta.com" },
+      { label: "Newcomer", url: "https://www.newcomer.co/p/my-conversation-with-roy-bahat-as" }
+    ]
+  },
 };
 
 // ============================================================
@@ -3932,7 +3967,8 @@ const firmStages = {
    "canaan-partners": ["Seed", "Series A", "Growth"],
    "sosv": ["Pre-Seed", "Seed", "Series A"],
     "tcv": ["Series B", "Series C", "Growth", "Late Stage"],
-   "dn-capital": ["Seed", "Series A", "Series B"]
+   "dn-capital": ["Seed", "Series A", "Series B"],
+   "bloomberg-beta": ["Pre-Seed", "Seed"]
 };
 
 // ============================================================
@@ -6060,6 +6096,32 @@ const firms = [
       { year: "2015", event: "Peter Diamandis and Teymour Boutros-Ghali co-found BOLD Capital Partners in Santa Monica." },
       { year: "2019", event: "Portfolio company Insilico Medicine and Deep Longevity begin building toward eventual Hong Kong exchange listings." },
       { year: "2024", event: "Insilico Medicine and Deep Longevity both complete public listings on the Hong Kong Stock Exchange." }
+    ],
+    holdings: []
+  },
+   {
+    rank: 41,
+    name: "Bloomberg Beta",
+    sectors: ["AI", "Enterprise Software", "Fintech", "Future of Work"],
+    signatureExit: "No public exits yet — the firm instead measures itself by founder outcomes: head Roy Bahat cites 93 founders who've become millionaires from Bloomberg Beta-backed companies as the metric he's proudest of, ahead of raw returns",
+    slug: "bloomberg-beta",
+    website: "https://www.bloombergbeta.com",
+    short: "Bloomberg Beta",
+    founded: 2013,
+    hq: "San Francisco, CA",
+    aum: "$450M",
+    thesis: "Bloomberg Beta launched in June 2013 with $75 million from Bloomberg L.P. as its sole limited partner, and has raised four more $75 million funds since, plus a matching $75 million opportunity fund, for $450 million total — all still capitalized entirely by Bloomberg. The firm runs an unusually transparent, unconventional model for a corporate-backed fund: any of its three equal partners can independently say yes to a deal, and its full operating manual has been public on GitHub since inception. Focused on machine intelligence and the future of work, the firm has made roughly 367 investments in companies including Replit, Flexport, LaunchDarkly, MasterClass, Netlify, and Weights & Biases, and was once ranked the #2 AI investor globally by CB Insights.",
+    leadership: [
+      { name: "Roy Bahat", role: "Head & Partner", profileSlug: "roy-bahat" },
+      { name: "Karin Klein", role: "Partner" },
+      { name: "James Cham", role: "Partner" }
+    ],
+    timeline: [
+      { year: "2013", event: "Roy Bahat launches Bloomberg Beta in June with an initial $75 million fund from Bloomberg L.P." },
+      { year: "2016", event: "Closes a second $75 million fund." },
+      { year: "2019", event: "Closes a third $75 million fund." },
+      { year: "2022", event: "Closes a fourth $75 million fund alongside its first $75 million opportunity fund, bringing total AUM to $450 million." },
+      { year: "2025", event: "Bahat discusses the firm's fifth $75 million fund, citing 93 founders who've become millionaires from its investments." }
     ],
     holdings: []
   },
