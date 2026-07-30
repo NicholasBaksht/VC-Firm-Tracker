@@ -3704,6 +3704,40 @@ sources: [
       { label: "Canaan — Maha Ibrahim", url: "https://www.canaan.com/team/maha-ibrahim" }
     ]
   },
+   "sean-osullivan": {
+    name: "Sean O'Sullivan",
+    firm: "SOSV",
+    firmSlug: "sosv",
+    title: "Founder & Managing General Partner",
+    joinedYear: 1995,
+    education: [],
+    previousExperience: [
+      "Founder, MapInfo (street mapping technology, IPO 1994)",
+      "Founder, Carma Technology"
+    ],
+    investmentFocus: ["Deep Tech", "Hardware", "Biotech", "Climate"],
+    notableInvestments: [
+      { name: "Formlabs", ticker: null },
+      { name: "BitMEX", ticker: null },
+      { name: "Memphis Meats", ticker: null }
+    ],
+    boardSeats: [],
+    ipoCount: 1,
+    majorExits: 0,
+    careerTimeline: [
+      { year: "1985", event: "Founds MapInfo, inventing street mapping technology for personal computers." },
+      { year: "1994", event: "MapInfo goes public." },
+      { year: "1995", event: "Founds SOSV as a personal 'super angel' investment vehicle." },
+      { year: "2009", event: "Launches Chinaccelerator, the first software accelerator in China." },
+      { year: "2012", event: "Co-founds HAX with Cyril Ebersweiler, SOSV's hardware-focused accelerator." },
+      { year: "2020", event: "SOSV ranks as the world's most active seed and early-stage investor in Q2, per Crunchbase data." }
+    ],
+    biography: "Sean O'Sullivan founded MapInfo in 1985, inventing street mapping technology for personal computers and taking the company public in 1994 — the exit that funded his second act as an investor. He founded SOSV in 1995 initially as a personal 'super angel' vehicle, investing his own money into two dozen companies before beginning to institutionalize the firm in 2007. His defining insight was that hardware and biotech founders couldn't be served by the same software-centric accelerator model that worked for internet startups, which led him to co-found HAX in 2012 and launch IndieBio in 2014 — vertical accelerators with genuine lab and fabrication infrastructure built in-house. That model made SOSV, by his own account, the world's most active investor across the US, Asia, and Europe combined in Q2 2020, a distinction few generalist venture firms could match.",
+    sources: [
+      { label: "SOSV — Sean O'Sullivan", url: "https://sosv.com/team/sean-osullivan/" },
+      { label: "Asia Tech Daily", url: "https://asiatechdaily.com/sean-osullivan-founder-and-managing-partner-of-sosv/" }
+    ]
+  },
 };
 
 // ============================================================
@@ -3829,7 +3863,8 @@ const firmStages = {
    "y-combinator": ["Pre-Seed", "Seed"],
    "kaszek-ventures": ["Seed", "Series A", "Series B", "Growth"],
    "general-atlantic": ["Growth", "Late Stage"],
-   "canaan-partners": ["Seed", "Series A", "Growth"]
+   "canaan-partners": ["Seed", "Series A", "Growth"],
+   "sosv": ["Pre-Seed", "Seed", "Series A"]
 };
 
 // ============================================================
@@ -5596,6 +5631,32 @@ const firms = [
     holdings: [
       { name: "Nubank", ticker: "NU", historicalPrice: null, price: 14.68 }
     ]
+  },
+   {
+    rank: 56,
+    name: "SOSV",
+    sectors: ["Deep Tech", "Biotech", "Climate", "Hardware"],
+    signatureExit: "No single dollar-verified signature exit — SOSV instead measures itself by cumulative deep-tech scale: more than 1,000 portfolio companies since inception, with in-house wet labs and hardware fabrication facilities built at a cost of tens of millions of dollars across its HAX and IndieBio programs",
+    slug: "sosv",
+    website: "https://sosv.com",
+    short: "SOSV",
+    founded: 1995,
+    hq: "Princeton, NJ",
+    aum: "$1.5B (as of 2023)",
+    thesis: "SOSV was founded in 1995 by Sean O'Sullivan, whose first startup, MapInfo, went public the year before, and it has evolved from a personal 'super angel' investment vehicle into one of the world's most structurally distinctive deep-tech investors. Rather than simply writing checks, SOSV built genuine physical infrastructure — tens of thousands of square feet of wet labs, machine shops, and fabrication facilities across HAX (hardware, since 2012) and IndieBio (life sciences, since 2014) — positioning itself as the 'First Check in Deep Tech' for founders whose ideas require real lab access before they can even prove feasibility. That vertical-accelerator model, run by 10 general partners across offices spanning San Francisco, New York, Newark, Cork, Pune, and Shenzhen, has made SOSV one of the most active deep-tech investors globally, closing its most recent Sustainable Economies Fund at $306 million in April 2024.",
+    leadership: [
+      { name: "Sean O'Sullivan", role: "Founder & Managing General Partner", profileSlug: "sean-osullivan" },
+      { name: "Stephen McCann", role: "General Partner & CFO" }
+    ],
+    timeline: [
+      { year: "1994", event: "Sean O'Sullivan's first startup, MapInfo, goes public." },
+      { year: "1995", event: "O'Sullivan founds SOSV as a personal investment vehicle." },
+      { year: "2007", event: "Begins transitioning SOSV from a personal vehicle into an institutional organization." },
+      { year: "2012", event: "Launches HAX, its hardware-focused accelerator, in Shenzhen." },
+      { year: "2014", event: "Launches IndieBio, its life sciences accelerator." },
+      { year: "2024", event: "Closes its most recent fund, the Sustainable Economies Fund, at $306 million in April." }
+    ],
+    holdings: []
   },
    {
     rank: 36,
