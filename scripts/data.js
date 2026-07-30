@@ -4054,7 +4054,8 @@ const firmStages = {
    "bloomberg-beta": ["Pre-Seed", "Seed"],
    "comcast-ventures": ["Pre-Seed", "Seed", "Series A", "Series B", "Growth"],
    "rakuten-capital": ["Seed", "Series A", "Series B", "Growth"],
-   "toyota-ventures": ["Seed", "Series A", "Series B"]
+   "toyota-ventures": ["Seed", "Series A", "Series B"],
+   "barclays-uk-ventures": ["Seed", "Series A", "Growth"]
 };
 
 // ============================================================
@@ -7031,6 +7032,29 @@ const firms = [
       { year: "2020", event: "Launches the Citi Impact Fund, dedicated to backing women and minority entrepreneurs." },
       { year: "2022", event: "Jeff Flynn joins, leading coverage across lending, proptech, commerce, and payments." },
       { year: "2025", event: "Marks 15 years with more than 200 investments and roughly 30 exits since launch." }
+    ],
+    holdings: []
+  },
+   {
+    rank: 69,
+    name: "Barclays UK Ventures",
+    sectors: ["Fintech", "Cybersecurity", "Data & AI"],
+    signatureExit: "No disclosed public exit — Barclays UK Ventures instead operates as an internal build-and-invest studio, having made 145 investments and incubated ventures directly rather than only writing outside checks",
+    slug: "barclays-uk-ventures",
+    website: "https://home.barclays",
+    short: "Barclays UK Ventures",
+    founded: 2018,
+    hq: "London, UK",
+    aum: "Not disclosed (145 investments to date)",
+    thesis: "Barclays UK Ventures was founded in 2018 to bring a genuine startup operating model inside a 330-year-old bank, combining developers, designers, data scientists, and M&A professionals under CEO Ben Davey, a former Barclays Group Head of Strategy. The unit's own description of itself is unusually candid about its hybrid structure — roughly half the team can code, roughly half have investment experience, and the group includes 15 founders and co-founders — reflecting a deliberate choice to build and incubate new business models directly, not just fund external startups. That build-alongside-invest approach sits within Barclays' broader fintech ecosystem, which also includes Rise, the bank's global fintech engagement platform and co-working network launched in 2017.",
+    leadership: [
+      { name: "Ben Davey", role: "CEO", profileSlug: "ben-davey" }
+    ],
+    timeline: [
+      { year: "2017", event: "Barclays launches Rise London, its flagship fintech co-working and engagement hub in Shoreditch." },
+      { year: "2018", event: "Barclays establishes Barclays UK Ventures as an internal build-and-invest unit." },
+      { year: "2019", event: "Ben Davey, formerly Barclays' Group Head of Strategy, becomes CEO of Barclays UK Ventures." },
+      { year: "2024", event: "Cumulative investment count reaches 145, spanning human capital, B2B media, and financial software." }
     ],
     holdings: []
   },
