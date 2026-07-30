@@ -3547,6 +3547,35 @@ sources: [
       { label: "Milken Institute", url: "https://milkeninstitute.org/events/global-conference-2023/speakers/marc-stad" }
     ]
   },
+   "eduardo-saverin": {
+    name: "Eduardo Saverin",
+    firm: "B Capital Group",
+    firmSlug: "b-capital-group",
+    title: "Co-Founder & Co-CEO",
+    joinedYear: 2015,
+    education: ["Harvard University"],
+    previousExperience: [
+      "Co-Founder, Facebook"
+    ],
+    investmentFocus: ["Southeast Asia & India", "Enterprise Software", "Fintech", "Cross-Border Technology"],
+    notableInvestments: [
+      { name: "Ninja Van", ticker: null }
+    ],
+    boardSeats: [],
+    ipoCount: 0,
+    majorExits: 0,
+    careerTimeline: [
+      { year: "2004", event: "Co-founds Facebook while a student at Harvard University." },
+      { year: "2012", event: "Meets Raj Ganguly in Singapore through mutual Harvard connections." },
+      { year: "2015", event: "Co-founds B Capital Group with Raj Ganguly and Howard Morgan." },
+      { year: "2016", event: "B Capital raises more than $143.6 million in its first fund, after already backing Ninja Van and Evidation Health." }
+    ],
+    biography: "Eduardo Saverin's public identity is inseparable from Facebook, which he co-founded as a Harvard student in 2004, but his second act at B Capital Group has been built around a distinctly different bet: that the next generation of transformative technology companies would emerge from cross-border, multinational markets rather than Silicon Valley alone. He met co-founder Raj Ganguly in Singapore in 2012 through mutual Harvard acquaintances, and the two built B Capital in 2015 with that international lens baked in from day one — Saverin, based in Singapore, has focused especially on investments across Southeast Asia and India, while Ganguly has overseen more of the firm's day-to-day operations from Los Angeles.",
+    sources: [
+      { label: "B Capital About", url: "https://b.capital/about/" },
+      { label: "Wikipedia — B Capital", url: "https://en.wikipedia.org/wiki/B_Capital" }
+    ]
+  },
 };
 
 // ============================================================
@@ -3667,7 +3696,8 @@ const firmStages = {
     "eclipse-ventures": ["Seed", "Series A", "Series B", "Growth"],
   "qualcomm-ventures": ["Seed", "Series A", "Series B", "Growth"],
    "arch-venture-partners": ["Seed", "Series A", "Growth"],
-   "dragoneer-investment-group": ["Series B", "Growth", "Late Stage"]
+   "dragoneer-investment-group": ["Series B", "Growth", "Late Stage"],
+   "b-capital-group": ["Series B", "Series C", "Growth", "Late Stage"]
 };
 
 // ============================================================
@@ -4199,6 +4229,32 @@ const firms = [
     holdings: [
       { name: "Illumina", ticker: "ILMN", historicalPrice: null, price: null }
     ]
+  },
+   {
+    rank: 16,
+    name: "B Capital Group",
+    sectors: ["Enterprise Software", "Fintech", "Healthcare", "Climate"],
+    signatureExit: "Leading a 2026 investor consortium with CalPERS to acquire Russell Investments, a nearly century-old asset manager overseeing more than $400 billion — a rare case of a venture-founded firm taking control of a legacy financial institution",
+    slug: "b-capital-group",
+    website: "https://b.capital",
+    short: "B Capital",
+    founded: 2015,
+    hq: "Manhattan Beach, CA",
+    aum: "$9.0B (2026)",
+    thesis: "B Capital Group was founded in 2015 by Facebook co-founder Eduardo Saverin, former Bain Capital investor Raj Ganguly, and ARPANET pioneer Howard Morgan, built from inception around a genuinely multinational approach rather than a U.S. firm that later expanded abroad. Its defining structural feature is a strategic partnership with Boston Consulting Group, giving portfolio companies direct access to BCG's consulting expertise and global client relationships whenever founders want it. That platform has scaled from a $360 million first fund in 2018 to $9 billion under management today, and the firm's ambitions have grown correspondingly — leading a 2026 investor consortium with CalPERS to acquire Russell Investments, a legacy asset manager overseeing more than $400 billion, shows B Capital moving well beyond traditional venture-stage investing.",
+    leadership: [
+      { name: "Eduardo Saverin", role: "Co-Founder & Co-CEO", profileSlug: "eduardo-saverin" },
+      { name: "Raj Ganguly", role: "Co-Founder & Co-CEO", profileSlug: "raj-ganguly" },
+      { name: "Howard Morgan", role: "Co-Founder & Chairman" }
+    ],
+    timeline: [
+      { year: "2015", event: "Eduardo Saverin, Raj Ganguly, and Howard Morgan found B Capital Group." },
+      { year: "2018", event: "Closes its first fund at $360 million." },
+      { year: "2019", event: "Closes a second fund, growing total AUM to $1.44 billion." },
+      { year: "2021", event: "Closes an $820 million second growth fund." },
+      { year: "2026", event: "Firm AUM reaches $9.0 billion; leads a CalPERS-backed consortium to acquire Russell Investments." }
+    ],
+    holdings: []
   },
   {
     rank: 15,
