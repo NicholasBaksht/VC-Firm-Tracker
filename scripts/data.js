@@ -3863,6 +3863,31 @@ sources: [
       { label: "Wikipedia — Comcast Ventures", url: "https://en.wikipedia.org/wiki/Comcast_Ventures" }
     ]
   },
+ "saemin-ahn": {
+    name: "Saemin Ahn",
+    firm: "Rakuten Capital",
+    firmSlug: "rakuten-capital",
+    title: "Founding & Managing Partner",
+    joinedYear: 2013,
+    education: [],
+    previousExperience: [],
+    investmentFocus: ["Machine Learning & AI", "New Energy", "Robotics", "Aerospace", "Mobility"],
+    notableInvestments: [
+      { name: "Lyft", ticker: "LYFT" }
+    ],
+    boardSeats: [],
+    ipoCount: 1,
+    majorExits: 0,
+    careerTimeline: [
+      { year: "2013", event: "Founds Rakuten Ventures, later Rakuten Capital." },
+      { year: "2015", event: "Leads Rakuten's $300 million investment in Lyft's Series E, part of a $530 million round." },
+      { year: "2019", event: "Lyft goes public on the Nasdaq." }
+    ],
+    biography: "Saemin Ahn founded Rakuten Ventures — now Rakuten Capital — in 2013, and has run its international investment strategy from Singapore ever since, taking positions across machine learning, new energy, robotics, and aerospace on behalf of one of Japan's largest internet conglomerates. His clearest and boldest move came in 2015, when he led Rakuten's $300 million commitment to Lyft's $530 million Series E, buying an 11.9% stake in the ride-sharing company years before it went public. That willingness to write outsized, conviction-driven checks into American consumer technology — unusual for a Japanese ecommerce company at the time — has defined Rakuten Capital's identity as a genuinely global corporate investor rather than a firm limited to backing Rakuten's own strategic interests.",
+    sources: [
+      { label: "Rakuten Capital", url: "https://capital.rakuten.com/" }
+    ]
+  },
 };
 
 // ============================================================
@@ -3993,7 +4018,8 @@ const firmStages = {
     "tcv": ["Series B", "Series C", "Growth", "Late Stage"],
    "dn-capital": ["Seed", "Series A", "Series B"],
    "bloomberg-beta": ["Pre-Seed", "Seed"],
-   "comcast-ventures": ["Pre-Seed", "Seed", "Series A", "Series B", "Growth"]
+   "comcast-ventures": ["Pre-Seed", "Seed", "Series A", "Series B", "Growth"],
+   "rakuten-capital": ["Seed", "Series A", "Series B", "Growth"]
 };
 
 // ============================================================
@@ -6176,6 +6202,32 @@ const firms = [
     ],
     holdings: [
       { name: "Sprinklr", ticker: "CXM", historicalPrice: null, price: null }
+    ]
+  },
+   {
+    rank: 43,
+    name: "Rakuten Capital",
+    sectors: ["Consumer Internet", "Fintech", "Mobility", "Marketplaces"],
+    signatureExit: "Lyft's 2019 Nasdaq IPO — Rakuten led the ride-sharing company's $530 million Series E in March 2015, investing $300 million for an 11.9% stake at the time",
+    slug: "rakuten-capital",
+    website: "https://capital.rakuten.com",
+    short: "Rakuten Capital",
+    founded: 2013,
+    hq: "Tokyo, Japan",
+    aum: "Not disclosed (70+ portfolio companies globally)",
+    thesis: "Rakuten Capital, launched in 2013 as Rakuten Ventures before its rebrand, is the corporate venture arm of Rakuten Group, the Tokyo-based internet services company behind Japan's largest ecommerce marketplace and a sprawling 70-plus-service ecosystem spanning fintech, travel, and mobile. The firm's largest and boldest single bet came in March 2015, when it led Lyft's $530 million Series E with a $300 million commitment for an 11.9% stake — a striking move for a Japanese ecommerce company betting big on American ride-sharing years before the category matured. Under Managing Partner Saemin Ahn, who runs the firm's international investment arm from Singapore, Rakuten Capital has since invested in more than 70 companies worldwide including Pinterest, Careem, Carousell, and Upstart.",
+    leadership: [
+      { name: "Saemin Ahn", role: "Founding & Managing Partner", profileSlug: "saemin-ahn" }
+    ],
+    timeline: [
+      { year: "2013", event: "Saemin Ahn founds Rakuten Ventures." },
+      { year: "2015", event: "Leads Lyft's $530 million Series E in March, investing $300 million for an 11.9% stake." },
+      { year: "2019", event: "Lyft goes public on the Nasdaq." },
+      { year: "2014", event: "Firm formally launches its current corporate venture structure under Rakuten Group." },
+      { year: "2026", event: "Now operating as Rakuten Capital, having invested in more than 70 companies worldwide." }
+    ],
+    holdings: [
+      { name: "Lyft", ticker: "LYFT", historicalPrice: null, price: 15.45 }
     ]
   },
    {
