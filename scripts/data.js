@@ -17,15 +17,15 @@
 // ============================================================
 const newsItems = [
   {
-    date: "July 22, 2026",
+    date: "July 30, 2026",
     tag: "This week",
+    text: '<strong>Blue Origin raised $10 billion in its first-ever outside funding round</strong>, at a $130 billion pre-money valuation — the first time Jeff Bezos has taken outside capital in the rocket company\'s 26-year history. <strong>Coatue Management</strong> (see below) led with a $4 billion commitment, alongside $2 billion from Bezos personally and $4 billion more from other institutional investors. The round comes weeks after rival SpaceX\'s own record-setting Nasdaq debut in June.'
+  },
+  {
+    date: "July 22, 2026",
+    tag: "Last week",
     text: '<strong>Glow emerged from stealth with a $180 million Series A</strong> at a $1.2 billion valuation, building AI-era endpoint security software. The round was led by Sequoia Capital, with <strong>Redpoint Ventures</strong> and <strong>Index Ventures</strong> (see below) among the participating investors — a rare instance of three firms tracked on this page backing the same round.'
   },
-{
-    date: "July 16, 2026",
-    tag: "Last week",
-    text: '<strong>Fireworks AI raised $1.505 billion</strong> — one of the largest single venture rounds of 2026 — at a $17.5 billion valuation. The round was led by Atreides Management, Index Ventures, and TCV, with <strong>Lightspeed Venture Partners</strong> (see below) among the participating investors. Fireworks says it has already crossed $1 billion in annual revenue, a rare milestone for an AI company this size.'
-  }
 ];
 
  
@@ -39,8 +39,8 @@ const newsItems = [
 // there's nothing to keep in sync by hand.
 // ============================================================
 const featuredFirm = {
-  slug: "founders-fund",
-  reason: "SpaceX's blockbuster June 2026 IPO turned Founders Fund's original 2008 stake into an estimated ~80x return — one of the biggest single wins in venture capital history."
+  slug: "tcv",
+  reason: "TCV invented the 'crossover' model of investing in the same company both before and after it goes public — and nowhere has that patience paid off more than at Netflix. Co-founder Jay Hoag joined Netflix's board in 1999, back when TCV owned roughly 43% of the pre-IPO company, and he's chaired the board ever since. Netflix is worth more than $400 billion today."
 };
 
 // ============================================================
