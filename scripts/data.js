@@ -3576,6 +3576,40 @@ sources: [
       { label: "Wikipedia — B Capital", url: "https://en.wikipedia.org/wiki/B_Capital" }
     ]
   },
+   "garry-tan": {
+    name: "Garry Tan",
+    firm: "Y Combinator",
+    firmSlug: "y-combinator",
+    title: "President & CEO",
+    joinedYear: 2011,
+    education: ["BS, Computer Systems Engineering, Stanford University"],
+    previousExperience: [
+      "Early Designer & Engineering Manager, Palantir Technologies",
+      "Co-Founder, Posterous (YC S08, acquired by Twitter)",
+      "Partner, Y Combinator (2011-2015)",
+      "Co-Founder, Initialized Capital"
+    ],
+    investmentFocus: ["AI", "Developer Tools", "Consumer", "Founder-Led Company Building"],
+    notableInvestments: [
+      { name: "Coinbase", ticker: "COIN" },
+      { name: "Instacart", ticker: "CART" },
+      { name: "DoorDash", ticker: "DASH" }
+    ],
+    boardSeats: [],
+    ipoCount: 3,
+    majorExits: 1,
+    careerTimeline: [
+      { year: "2005", event: "Founds and later sells Posterous, a blogging platform acquired by Twitter, through YC's Summer 2008 batch." },
+      { year: "2011", event: "Joins Y Combinator as a partner, building key parts of the founder experience including Bookface and the Demo Day website." },
+      { year: "2011", event: "Co-founds Initialized Capital, which he grows into a firm managing more than $3.2 billion in assets." },
+      { year: "2023", event: "Becomes President and CEO of Y Combinator in January, succeeding Geoff Ralston." }
+    ],
+    biography: "Garry Tan brings a genuinely rare builder-to-investor-to-CEO path to Y Combinator's top job. After early engineering and design work at Palantir — where he designed the company's logo — he co-founded Posterous, a blogging platform that sold to Twitter through YC's own Summer 2008 batch, then became a YC partner himself from 2011 to 2015, building foundational pieces of the founder experience like Bookface. In parallel he co-founded Initialized Capital, growing it into a firm managing more than $3.2 billion before returning to YC as President and CEO in January 2023. He remains one of the most publicly visible leaders in venture capital, maintaining a large YouTube following, continuing to write code and build YC's internal tools himself, and pushing the organization hard into AI-first investing during his tenure.",
+    sources: [
+      { label: "Y Combinator People", url: "https://www.ycombinator.com/people" },
+      { label: "TechCrunch", url: "https://techcrunch.com/?p=2383301" }
+    ]
+  },
 };
 
 // ============================================================
@@ -3697,7 +3731,8 @@ const firmStages = {
   "qualcomm-ventures": ["Seed", "Series A", "Series B", "Growth"],
    "arch-venture-partners": ["Seed", "Series A", "Growth"],
    "dragoneer-investment-group": ["Series B", "Growth", "Late Stage"],
-   "b-capital-group": ["Series B", "Series C", "Growth", "Late Stage"]
+   "b-capital-group": ["Series B", "Series C", "Growth", "Late Stage"],
+   "y-combinator": ["Pre-Seed", "Seed"]
 };
 
 // ============================================================
@@ -6402,6 +6437,40 @@ const firms = [
       { year: "2025", event: "Marks 15 years with more than 200 investments and roughly 30 exits since launch." }
     ],
     holdings: []
+  },
+   {
+    rank: 68,
+    name: "Y Combinator",
+    sectors: ["AI", "SaaS", "Consumer Internet", "Fintech", "Biotech"],
+    signatureExit: "Coinbase's 2021 Nasdaq direct listing at an $85 billion valuation — the most valuable company in YC history at time of listing",
+    slug: "y-combinator",
+    website: "https://www.ycombinator.com",
+    short: "Y Combinator",
+    founded: 2005,
+    hq: "San Francisco, CA",
+    aum: "Not disclosed as traditional AUM ($500K standard check per company; YC Continuity growth fund)",
+    thesis: "Y Combinator was founded in March 2005 in Cambridge, Massachusetts by Paul Graham, Jessica Livingston, Robert Tappan Morris, and Trevor Blackwell, and pioneered the batch-based accelerator model that essentially every startup accelerator since has copied: fixed cohorts, a standardized check, weekly dinners with successful founders, and a demo day culminating each three-month program. The firm has funded more than 5,690 companies since inception, with more than 400 reaching unicorn status and a combined alumni portfolio valuation exceeding $600 billion — including Airbnb, Stripe, Coinbase, DoorDash, Dropbox, Instacart, and Reddit. Under President and CEO Garry Tan, who took over in January 2023, YC has leaned hard into AI, with more than half of each recent batch building AI-first products.",
+    leadership: [
+      { name: "Garry Tan", role: "President & CEO", profileSlug: "garry-tan" },
+      { name: "Jared Friedman", role: "Managing Partner" },
+      { name: "Harj Taggar", role: "Managing Partner" },
+      { name: "Jessica Livingston", role: "Co-Founder" }
+    ],
+    timeline: [
+      { year: "2005", event: "Paul Graham and Jessica Livingston launch Y Combinator in Cambridge, funding its first batch including Reddit." },
+      { year: "2009", event: "Sequoia Capital invests $2 million, enabling YC to consolidate operations in Silicon Valley." },
+      { year: "2014", event: "Sam Altman becomes president, later increasing the standard investment to $150,000 for 7% equity." },
+      { year: "2021", event: "Coinbase direct lists at an $85 billion valuation, YC's most valuable company at the time." },
+      { year: "2023", event: "Garry Tan becomes president and CEO in January, relocating headquarters from Mountain View to San Francisco." },
+      { year: "2026", event: "Cumulative portfolio reaches 5,690+ companies with a combined valuation exceeding $600 billion." }
+    ],
+    holdings: [
+      { name: "Coinbase", ticker: "COIN", historicalPrice: 257.21, price: 167.90 },
+      { name: "DoorDash", ticker: "DASH", historicalPrice: 170.65, price: 175.00 },
+      { name: "Airbnb", ticker: "ABNB", historicalPrice: null, price: 141.10 },
+      { name: "Dropbox", ticker: "DBX", historicalPrice: null, price: 32.06 },
+      { name: "Reddit", ticker: "RDDT", historicalPrice: null, price: 178.44 }
+    ]
   },
    {
     rank: 67,
