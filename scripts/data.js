@@ -3839,6 +3839,30 @@ sources: [
       { label: "Newcomer", url: "https://www.newcomer.co/p/my-conversation-with-roy-bahat-as" }
     ]
   },
+   "allison-goldberg": {
+    name: "Allison Goldberg",
+    firm: "Comcast Ventures",
+    firmSlug: "comcast-ventures",
+    title: "Managing Partner",
+    joinedYear: 2021,
+    education: [],
+    previousExperience: [
+      "Group Managing Director & SVP, Time Warner Investments"
+    ],
+    investmentFocus: ["Consumer Internet", "Enterprise Software", "Media & Advertising Technology"],
+    notableInvestments: [],
+    boardSeats: [],
+    ipoCount: 0,
+    majorExits: 0,
+    careerTimeline: [
+      { year: "2021", event: "Joins Comcast Ventures as Managing Partner in November, after running Time Warner Investments, where she oversaw checks of up to $25 million into private companies." }
+    ],
+    biography: "Allison Goldberg took over as Managing Partner of Comcast Ventures in November 2021, arriving from Time Warner Investments, where she ran the group responsible for checks of up to $25 million into private companies for both strategic and financial return. That background in balancing corporate strategic value with genuine financial investing discipline is central to how she now runs Comcast Ventures — a firm whose entire premise depends on generating real returns while giving portfolio companies genuine access to one of the largest media and telecom platforms in the world.",
+    sources: [
+      { label: "Comcast Ventures Team", url: "https://comcastventures.com/team/" },
+      { label: "Wikipedia — Comcast Ventures", url: "https://en.wikipedia.org/wiki/Comcast_Ventures" }
+    ]
+  },
 };
 
 // ============================================================
@@ -3968,7 +3992,8 @@ const firmStages = {
    "sosv": ["Pre-Seed", "Seed", "Series A"],
     "tcv": ["Series B", "Series C", "Growth", "Late Stage"],
    "dn-capital": ["Seed", "Series A", "Series B"],
-   "bloomberg-beta": ["Pre-Seed", "Seed"]
+   "bloomberg-beta": ["Pre-Seed", "Seed"],
+   "comcast-ventures": ["Pre-Seed", "Seed", "Series A", "Series B", "Growth"]
 };
 
 // ============================================================
@@ -6124,6 +6149,34 @@ const firms = [
       { year: "2025", event: "Bahat discusses the firm's fifth $75 million fund, citing 93 founders who've become millionaires from its investments." }
     ],
     holdings: []
+  },
+   {
+    rank: 42,
+    name: "Comcast Ventures",
+    sectors: ["Consumer Internet", "Enterprise Software", "Media Tech", "Fintech"],
+    signatureExit: "Sprinklr's 2021 NYSE IPO, priced at $16 per share and valuing the customer experience management company at roughly $4 billion",
+    slug: "comcast-ventures",
+    website: "https://comcastventures.com",
+    short: "Comcast Ventures",
+    founded: 1999,
+    hq: "Philadelphia, PA",
+    aum: "$200M",
+    thesis: "Comcast Ventures traces back to 1999 as Comcast Interactive Capital, later merging with NBCUniversal's Peacock Fund in 2011 to form its current structure as Comcast's corporate venture affiliate. The firm's real differentiator is access: portfolio companies get direct exposure to Comcast's scale across media, advertising, and telecom, and the firm has built a genuinely diverse 130-plus-company portfolio spanning consumer, enterprise, and frontier technology. Its Catalyst Fund, launched in 2012 with $20 million dedicated to underrepresented entrepreneurs, later grew into a $200 million fund supporting racial equity, reflecting an unusually long-running institutional commitment to that focus area alongside its core investing activity.",
+    leadership: [
+      { name: "Allison Goldberg", role: "Managing Partner", profileSlug: "allison-goldberg" },
+      { name: "Marc Silberman", role: "Partner" },
+      { name: "Michelle Chang", role: "Partner" }
+    ],
+    timeline: [
+      { year: "1999", event: "Comcast launches Comcast Interactive Capital, its first venture investing arm." },
+      { year: "2011", event: "Comcast and NBCUniversal combine their venture arms into Comcast Ventures." },
+      { year: "2012", event: "Launches the Catalyst Fund, initially $20 million, focused on underrepresented entrepreneurs." },
+      { year: "2021", event: "Portfolio company Sprinklr goes public on the NYSE at a roughly $4 billion valuation." },
+      { year: "2021", event: "Allison Goldberg joins as Managing Partner in November, after running Time Warner Investments." }
+    ],
+    holdings: [
+      { name: "Sprinklr", ticker: "CXM", historicalPrice: null, price: null }
+    ]
   },
    {
     rank: 41,
