@@ -25,7 +25,7 @@ function parseAumNumber(aumStr) {
   // to the same billions-denominated scale everything else uses -
   // without this, any millions-denominated firm would silently
   // parse as 0 and land in the wrong tier once tiers below $1B exist.
-  const mMatch = aumStr.match(/\$(\d+\.?\d*)M/);
+const mMatch = aumStr.match(/[$£€](\d+\.?\d*)M/);
   if (mMatch) return parseFloat(mMatch[1]) / 1000;
   return 0;
 }
