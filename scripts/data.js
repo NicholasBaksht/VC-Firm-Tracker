@@ -3770,6 +3770,40 @@ sources: [
       { label: "Forbes Profile", url: "https://www.forbes.com/profile/jay-hoag/" }
     ]
   },
+   "nenad-marovac": {
+    name: "Nenad Marovac",
+    firm: "DN Capital",
+    firmSlug: "dn-capital",
+    title: "Founder & Managing Partner",
+    joinedYear: 2000,
+    education: ["BSc, Business Administration (cum laude, Distinction in Finance), San Diego State University", "MBA, Harvard Business School"],
+    previousExperience: [
+      "Financial Analyst, Leveraged Buyout Group, Bankers Trust",
+      "Advisor, Treuhandanstalt (East German privatization)",
+      "Partner, Advent International (London, TMT investments)"
+    ],
+    investmentFocus: ["Digital Marketplaces", "SaaS", "Fintech", "Consumer Internet"],
+    notableInvestments: [
+      { name: "AUTO1 Group", ticker: "AG1.DE" },
+      { name: "Shazam", ticker: null },
+      { name: "GoStudent", ticker: null }
+    ],
+    boardSeats: [],
+    ipoCount: 4,
+    majorExits: 5,
+    careerTimeline: [
+      { year: "1991", event: "Moves to Berlin, advising the Treuhandanstalt on privatizing East German state assets during reunification." },
+      { year: "2000", event: "Co-founds DN Capital with Harvard Business School classmate Steve Schlenker after a partnership at Advent International." },
+      { year: "2014", event: "Shazam, one of his select investments, is sold to Apple." },
+      { year: "2018", event: "Becomes Chairman of Invest Europe (formerly EVCA) for 2018/2019." },
+      { year: "2021", event: "AUTO1 Group goes public on the Frankfurt Stock Exchange at approximately €7.9 billion, Germany's largest tech IPO at the time." }
+    ],
+    biography: "Nenad Marovac's path to founding DN Capital ran through post-reunification Berlin, where he advised the Treuhandanstalt on privatizing East German state assets in the early 1990s — an experience that gave him deep, early relationships across Germany's business community, years before DACH became a fashionable venture destination. After a Harvard MBA and a partnership at Advent International, he co-founded DN Capital in 2000 with his Harvard classmate Steve Schlenker, and that German foothold compounded over two decades into a portfolio anchored by category leaders like AUTO1 Group, HomeToGo, and Mister Spex — all of which went public on the Frankfurt Stock Exchange in 2021. AUTO1's roughly €7.9 billion debut, Germany's largest tech IPO at the time, let DN Capital exit 95% of its stake, and Marovac has twice been named to the Forbes Midas List Europe for that track record.",
+    sources: [
+      { label: "DN Capital — Nenad Marovac", url: "https://www.dncapital.com/nenad" },
+      { label: "The Marque", url: "https://www.themarque.com/profile/nenad-marovac" }
+    ]
+  },
 };
 
 // ============================================================
@@ -3897,7 +3931,8 @@ const firmStages = {
    "general-atlantic": ["Growth", "Late Stage"],
    "canaan-partners": ["Seed", "Series A", "Growth"],
    "sosv": ["Pre-Seed", "Seed", "Series A"],
-    "tcv": ["Series B", "Series C", "Growth", "Late Stage"]
+    "tcv": ["Series B", "Series C", "Growth", "Late Stage"],
+   "dn-capital": ["Seed", "Series A", "Series B"]
 };
 
 // ============================================================
@@ -5721,6 +5756,33 @@ const firms = [
       { year: "2024", event: "Closes its most recent fund, the Sustainable Economies Fund, at $306 million in April." }
     ],
     holdings: []
+  },
+   {
+    rank: 57,
+    name: "DN Capital",
+    sectors: ["Fintech", "SaaS", "Consumer Internet", "AI"],
+    signatureExit: "AUTO1 Group's 2021 Frankfurt Stock Exchange IPO at approximately €7.9 billion — Germany's largest tech IPO at the time, with DN Capital exiting 95% of its stake",
+    slug: "dn-capital",
+    website: "https://www.dncapital.com",
+    short: "DN Capital",
+    founded: 2000,
+    hq: "London, UK",
+    aum: "€1B+ (more than $1B)",
+    thesis: "DN Capital was founded in June 2000 by Nenad Marovac and Steve Schlenker, two Harvard Business School classmates who built the firm into a genuinely transatlantic early-stage investor spanning London, Berlin, and Menlo Park. Marovac's own path — born in Croatia, raised in San Diego, advising on East German privatization in Berlin before Advent International and Harvard — gave the firm an unusually early foothold in Germany's DACH technology scene, reflected in a portfolio heavy with category-leading German companies like AUTO1 Group, HomeToGo, and Mister Spex. Four portfolio IPOs have returned more than €400 million to DN Capital, led by AUTO1 Group's 2021 Frankfurt debut at approximately €7.9 billion — Germany's largest tech IPO at the time — and the firm closed its most recent $350 million Fund V that same year.",
+    leadership: [
+      { name: "Nenad Marovac", role: "Founder & Managing Partner", profileSlug: "nenad-marovac" },
+      { name: "Steve Schlenker", role: "Co-Founder & Partner" }
+    ],
+    timeline: [
+      { year: "2000", event: "Nenad Marovac and Steve Schlenker found DN Capital in London." },
+      { year: "2018", event: "Closes a €200 million Fund IV." },
+      { year: "2021", event: "AUTO1 Group, HomeToGo, and Mister Spex all go public in Frankfurt; DN Capital closes a $350 million Fund V." },
+      { year: "2022", event: "GoStudent, another DN Capital portfolio company, reaches a $3.5 billion valuation." },
+      { year: "2024", event: "Partial exit of Remitly delivers €147 million, a 16x multiple on invested capital." }
+    ],
+    holdings: [
+      { name: "AUTO1 Group", ticker: "AG1.DE", historicalPrice: null, price: null }
+    ]
   },
    {
     rank: 36,
