@@ -3509,6 +3509,44 @@ sources: [
       { label: "Forbes Profile", url: "https://www.forbes.com/profile/robert-nelsen/" }
     ]
   },
+   "marc-stad": {
+    name: "Marc Stad",
+    firm: "Dragoneer Investment Group",
+    firmSlug: "dragoneer-investment-group",
+    title: "Founder & Managing Partner",
+    joinedYear: 2012,
+    education: ["AB, Government, Harvard College (magna cum laude)", "MBA, Stanford Graduate School of Business"],
+    previousExperience: [
+      "Consultant, McKinsey & Company",
+      "Investment Professional, TPG Capital",
+      "Associate, Parthenon Capital",
+      "Partner & Portfolio Manager, Investment Group of Santa Barbara",
+      "President & Commissioner, City and County of San Francisco Finance Corporation"
+    ],
+    investmentFocus: ["Growth Equity", "Crossover Investing", "AI", "Enterprise Software", "Consumer Internet"],
+    notableInvestments: [
+      { name: "Airbnb", ticker: "ABNB" },
+      { name: "DoorDash", ticker: "DASH" },
+      { name: "Snowflake", ticker: "SNOW" },
+      { name: "Anthropic", ticker: null },
+      { name: "Roblox", ticker: null }
+    ],
+    boardSeats: [],
+    ipoCount: 5,
+    majorExits: 2,
+    careerTimeline: [
+      { year: "2012", event: "Founds Dragoneer Investment Group after roles at McKinsey, TPG Capital, and the Investment Group of Santa Barbara." },
+      { year: "2016", event: "Leads a $2.6 billion leveraged buyout of AmWINS Group." },
+      { year: "2019", event: "Invests in DoorDash's Series F, ahead of its 2020 IPO at a $55 billion market cap." },
+      { year: "2020", event: "Airbnb, another Dragoneer investment, debuts at approximately $47 billion." },
+      { year: "2025", event: "Co-leads Anthropic's $30 billion funding round." }
+    ],
+    biography: "Marc Stad founded Dragoneer Investment Group in 2012 after a career built on depth over display — stints at McKinsey, TPG Capital, and the Investment Group of Santa Barbara, following a Harvard degree and Stanford MBA. His investing philosophy centers on long-duration capital and concentrated conviction rather than a large volume of smaller bets, a discipline that produced back-to-back landmark outcomes: Dragoneer backed both DoorDash and Airbnb ahead of their 2020 IPOs, and Stad personally led a $2.6 billion leveraged buyout of insurance services company AmWINS in 2016, becoming its largest outside shareholder. He has continued that pattern into the AI era, co-leading Anthropic's $30 billion funding round in 2025, and has been featured on the Forbes Midas List, Fortune's 40 Under 40, and the Recode 100.",
+    sources: [
+      { label: "Forbes Profile", url: "https://www.forbes.com/profile/marc-stad/" },
+      { label: "Milken Institute", url: "https://milkeninstitute.org/events/global-conference-2023/speakers/marc-stad" }
+    ]
+  },
 };
 
 // ============================================================
@@ -3628,7 +3666,8 @@ const firmStages = {
    "peak-xv-partners": ["Seed", "Series A", "Series B", "Growth"],
     "eclipse-ventures": ["Seed", "Series A", "Series B", "Growth"],
   "qualcomm-ventures": ["Seed", "Series A", "Series B", "Growth"],
-   "arch-venture-partners": ["Seed", "Series A", "Growth"]
+   "arch-venture-partners": ["Seed", "Series A", "Growth"],
+   "dragoneer-investment-group": ["Series B", "Growth", "Late Stage"]
 };
 
 // ============================================================
@@ -3871,6 +3910,36 @@ const firms = [
     holdings: [
       { name: "HubSpot", ticker: "HUBS", historicalPrice: null, price: 224.26 },
       { name: "Samsara", ticker: "IOT", historicalPrice: null, price: 38.32 }
+    ]
+  },
+   {
+    rank: 7,
+    name: "Dragoneer Investment Group",
+    sectors: ["Consumer Internet", "SaaS", "Fintech", "AI"],
+    signatureExit: "Airbnb's 2020 Nasdaq IPO, valuing the company at approximately $47 billion on debut — one of two landmark 2020 IPOs Dragoneer backed, alongside DoorDash",
+    slug: "dragoneer-investment-group",
+    website: "https://www.dragoneer.com",
+    short: "Dragoneer",
+    founded: 2012,
+    hq: "San Francisco, CA",
+    aum: "$30B+ (as of late 2025)",
+    thesis: "Dragoneer Investment Group was founded in 2012 by Marc Stad, who built the firm on long-duration, conviction-driven capital rather than the shorter recycling cycles typical of growth equity. That patience has produced a genuinely rare crossover track record: Dragoneer backed both DoorDash and Airbnb ahead of their landmark 2020 IPOs, pioneered using SPACs to take portfolio companies like CCC Information Services and Cvent public, and co-led Anthropic's massive $30 billion funding round. The firm now manages more than $30 billion across public and private technology investments, with a flexible mandate that lets it move fluidly between growth-stage private rounds and public-market positions in the same category-defining companies.",
+    leadership: [
+      { name: "Marc Stad", role: "Founder & Managing Partner", profileSlug: "marc-stad" },
+      { name: "Christian Jensen", role: "Partner" },
+      { name: "Pat Robertson", role: "Partner, Public Markets" }
+    ],
+    timeline: [
+      { year: "2012", event: "Marc Stad founds Dragoneer Investment Group in San Francisco." },
+      { year: "2016", event: "Leads a $2.6 billion leveraged buyout of AmWINS, becoming its largest outside shareholder." },
+      { year: "2019", event: "Invests in DoorDash's Series F ahead of its 2020 IPO." },
+      { year: "2020", event: "Both DoorDash and Airbnb go public; Airbnb debuts at a roughly $47 billion valuation." },
+      { year: "2024", event: "Reported AUM reaches approximately $25 billion." },
+      { year: "2025", event: "Co-leads Anthropic's $30 billion funding round; firm AUM surpasses $30 billion." }
+    ],
+    holdings: [
+      { name: "Airbnb", ticker: "ABNB", historicalPrice: null, price: 141.10 },
+      { name: "DoorDash", ticker: "DASH", historicalPrice: 170.65, price: 175.00 }
     ]
   },
   {
