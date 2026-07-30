@@ -3888,6 +3888,40 @@ sources: [
       { label: "Rakuten Capital", url: "https://capital.rakuten.com/" }
     ]
   },
+   "jim-adler": {
+    name: "Jim Adler",
+    firm: "Toyota Ventures",
+    firmSlug: "toyota-ventures",
+    title: "Founder & General Partner",
+    joinedYear: 2017,
+    education: [],
+    previousExperience: [
+      "VP of Data & Business Development, Toyota Research Institute",
+      "VP of Products & Marketing, Metanautix (acquired by Microsoft)",
+      "VP of Data Systems & Chief Privacy Officer, Intelius (acquired by H.I.G. Capital)",
+      "Founder, VoteHere (cryptographic secure online voting, funded by Cisco and HP)"
+    ],
+    investmentFocus: ["AI", "Robotics", "Autonomous Mobility", "Climate & Frontier Technology"],
+    notableInvestments: [
+      { name: "Nuro", ticker: null },
+      { name: "May Mobility", ticker: null },
+      { name: "Boxbot", ticker: null }
+    ],
+    boardSeats: [],
+    ipoCount: 0,
+    majorExits: 2,
+    careerTimeline: [
+      { year: "2016", event: "Joins Toyota Research Institute as VP of Data and Business Development, after founding VoteHere and operating roles at Metanautix and Intelius." },
+      { year: "2017", event: "Founds Toyota AI Ventures in July, launching with an initial $100 million fund." },
+      { year: "2021", event: "Leads the firm's rebrand to Toyota Ventures, launching dedicated Frontier and Climate funds." },
+      { year: "2024", event: "Announces two additional $150 million funds, pushing total AUM above $800 million." }
+    ],
+    biography: "Jim Adler brought a genuinely unusual mix of entrepreneurial, privacy, and data engineering experience to Toyota when he joined Toyota Research Institute in 2016, having previously founded VoteHere, a cryptographic online voting startup funded by Cisco and HP, and held VP roles at Metanautix (acquired by Microsoft) and Intelius (acquired by H.I.G. Capital). What began as work training Toyota's AI systems on driving data turned into a pitch for a dedicated venture fund, and in July 2017 he became founding managing director of Toyota AI Ventures. He's structured the firm from day one around founders as the primary customer rather than Toyota itself — an intentional choice, he's said, to keep the firm credible with entrepreneurs rather than behaving like a typical strategic investor. Under his leadership Toyota Ventures rebranded in 2021, expanded into climate and frontier technology, and grew assets under management past $800 million by 2024.",
+    sources: [
+      { label: "Toyota Ventures", url: "https://toyota.ventures/" },
+      { label: "Global Venturing Powerlist 2025", url: "https://globalventuring.com/corporate/awards/powerlist-2025-jim-adler/" }
+    ]
+  },
 };
 
 // ============================================================
@@ -4019,7 +4053,8 @@ const firmStages = {
    "dn-capital": ["Seed", "Series A", "Series B"],
    "bloomberg-beta": ["Pre-Seed", "Seed"],
    "comcast-ventures": ["Pre-Seed", "Seed", "Series A", "Series B", "Growth"],
-   "rakuten-capital": ["Seed", "Series A", "Series B", "Growth"]
+   "rakuten-capital": ["Seed", "Series A", "Series B", "Growth"],
+   "toyota-ventures": ["Seed", "Series A", "Series B"]
 };
 
 // ============================================================
@@ -5986,6 +6021,30 @@ const firms = [
     holdings: [
       { name: "Datadog", ticker: "DDOG", historicalPrice: 143.63, price: 255.00 }
     ]
+  },
+   {
+    rank: 39,
+    name: "Toyota Ventures",
+    sectors: ["AI", "Robotics", "Climate", "Enterprise Software"],
+    signatureExit: "No public exit yet — Toyota Ventures' clearest proof point remains Nuro, the self-driving delivery company it backed early, which stays private, alongside continued frontier bets in generative AI, e-fuels, space commercialization, and synthetic biology",
+    slug: "toyota-ventures",
+    website: "https://toyota.ventures",
+    short: "Toyota Ventures",
+    founded: 2017,
+    hq: "Los Altos, CA",
+    aum: "$800M+ (following two additional $150M funds, 2024)",
+    thesis: "Toyota Ventures was founded in July 2017 as Toyota AI Ventures, a subsidiary of Toyota Research Institute, before rebranding to its current name in 2021 alongside the launch of dedicated Frontier and Climate funds. Founder Jim Adler describes the firm's structure as deliberately founder-first, built around three stakeholders — startups, Toyota's corporate partner, and the Toyota Ventures team itself — with founders treated as the primary customer rather than Toyota. That philosophy has held through market cycles: in 2024, while some investors were scaling back, Toyota Ventures raised two additional $150 million funds (Frontier Fund II and Climate Fund II), pushing total assets under management above $800 million and reinforcing bets across generative AI, robotics, e-fuels, and synthetic biology.",
+    leadership: [
+      { name: "Jim Adler", role: "Founder & General Partner", profileSlug: "jim-adler" },
+      { name: "David Sokolic", role: "Partner, Frontier Fund" }
+    ],
+    timeline: [
+      { year: "2017", event: "Jim Adler founds Toyota AI Ventures in July as a subsidiary of Toyota Research Institute, with an initial $100 million fund." },
+      { year: "2019", event: "Launches Fund II at $100 million, pushing AUM past $200 million across 19 startups." },
+      { year: "2021", event: "Rebrands to Toyota Ventures, launching dedicated Frontier and Climate funds with $300 million in new capital." },
+      { year: "2024", event: "Raises Frontier Fund II and Climate Fund II at $150 million each, pushing total AUM above $800 million." }
+    ],
+    holdings: []
   },
    {
     rank: 38,
