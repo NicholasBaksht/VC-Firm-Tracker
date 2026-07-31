@@ -4454,6 +4454,43 @@ sources: [
       { label: "The Org — Hans Kobler", url: "https://theorg.com/org/energy-impact-partners/org-chart/hans-kobler" }
     ]
   },
+   "alberto-yepez": {
+    name: "Alberto Yépez",
+    firm: "Forgepoint Capital",
+    firmSlug: "forgepoint-capital",
+    title: "Co-Founder & Managing Director",
+    joinedYear: 2015,
+    education: [],
+    previousExperience: [
+      "Founder, Chairman & CEO, enCommerce (acquired by Entrust)",
+      "Co-CEO & President, Entrust (acquired by Thoma Bravo)",
+      "Chairman & CEO, Thor Technologies (acquired by Oracle, 2005)",
+      "Entrepreneur in Residence, Warburg Pincus",
+      "Venture Consultant, Bain Capital",
+      "Managing Director, Trident Capital (led cybersecurity investments including AlienVault, Solera Networks, BlueCat Networks, Neohapsis)"
+    ],
+    investmentFocus: ["Cybersecurity", "AI Security", "Infrastructure Software"],
+    notableInvestments: [
+      { name: "Attivo Networks", ticker: null },
+      { name: "Area 1 Security", ticker: null },
+      { name: "BehavioSec", ticker: null }
+    ],
+    boardSeats: ["Constella Intelligence", "CyberCube", "Huntress", "NowSecure", "ReversingLabs", "Uptycs"],
+    ipoCount: 0,
+    majorExits: 9,
+    careerTimeline: [
+      { year: "2005", event: "Thor Technologies, which he led as Chairman and CEO, is acquired by Oracle." },
+      { year: "2008", event: "Joins Trident Capital as a venture partner and Entrepreneur-in-Residence, later becoming Managing Director leading its cybersecurity investments." },
+      { year: "2015", event: "Co-founds Forgepoint Capital with Don Dixon, one of the first venture funds exclusively dedicated to cybersecurity." },
+      { year: "2021", event: "Leads Attivo Networks' investment; the company is later acquired by SentinelOne." },
+      { year: "2022", event: "Area 1, a Forgepoint portfolio company, is acquired by Cloudflare." }
+    ],
+    biography: "Alberto Yépez is widely regarded as one of the pioneers of the cybersecurity industry, having founded and sold enCommerce to Entrust, served as Entrust's Co-CEO and President through its own sale to Thoma Bravo, and led Thor Technologies to an acquisition by Oracle in 2005 — three exits before he ever became a full-time investor. He led cybersecurity investments as Managing Director at Trident Capital, backing companies later acquired by AT&T, Symantec, Madison Dearborn, and Cisco, before co-founding Forgepoint Capital with his Trident colleague Don Dixon in 2015 to build one of the first venture funds exclusively dedicated to cybersecurity. His investments at Forgepoint include Attivo Networks (acquired by SentinelOne), Area 1 (acquired by Cloudflare), and BehavioSec (acquired by LexisNexis Risk Solutions), and he currently sits on the boards of Constella Intelligence, CyberCube, Huntress, NowSecure, ReversingLabs, and Uptycs — recognized by Fortune as one of the top VCs dominating cybersecurity investing.",
+    sources: [
+      { label: "Forgepoint Capital — Alberto Yépez", url: "https://forgepointcap.com/team/alberto-yepez/" },
+      { label: "Aspen Digital", url: "https://www.aspendigital.org/person/alberto-yepez/" }
+    ]
+  },
 };
 
 // ============================================================
@@ -4603,7 +4640,8 @@ const firmStages = {
    "f-prime-capital": ["Seed", "Series A", "Series B", "Growth"],
    "third-rock-ventures": ["Seed", "Series A", "Series B"],
    "lowercarbon-capital": ["Pre-Seed", "Seed", "Series A", "Series B"],
-   "energy-impact-partners": ["Series A", "Series B", "Growth"]
+   "energy-impact-partners": ["Series A", "Series B", "Growth"],
+   "forgepoint-capital": ["Seed", "Series A", "Series B", "Growth"]
 };
 
 // ============================================================
@@ -6892,6 +6930,32 @@ const firms = [
       { year: "2021", event: "Raises $800 million, its first outside capital, in a matter of days in August." },
       { year: "2022", event: "Raises a dedicated $350 million fund for carbon removal startups in April." },
       { year: "2026", event: "Firm AUM reaches approximately $2 billion across more than 100 portfolio companies." }
+    ],
+    holdings: []
+  },
+   {
+    rank: 65,
+    name: "Forgepoint Capital",
+    sectors: ["Cybersecurity", "AI Security", "Infrastructure Software"],
+    signatureExit: "Cloudflare's acquisition of Area 1 Security — one of three Forgepoint exits Co-Founder Alberto Yépez personally led, alongside Attivo Networks (acquired by SentinelOne) and BehavioSec (acquired by LexisNexis Risk Solutions)",
+    slug: "forgepoint-capital",
+    website: "https://forgepointcap.com",
+    short: "Forgepoint Capital",
+    founded: 2015,
+    hq: "San Mateo, CA",
+    aum: "$1B+",
+    thesis: "Forgepoint Capital was founded in 2015 by Alberto Yépez and Don Dixon, two Trident Capital colleagues who had already spent years building and investing in cybersecurity companies together, and set out to create one of the first venture funds exclusively dedicated to the category. That focus produced the largest sector-specific investment team in cybersecurity venture capital, backed by a Global Advisory Council of more than 100 industry leaders spanning former entrepreneurs, government officials, and practicing CISOs, CIOs, and CTOs. The firm's roughly $1 billion under management has funded nearly 80 companies across cybersecurity, AI security, and infrastructure software, producing three unicorns, two IPOs, and more than 35 acquisitions — including Attivo Networks, Area 1, and BehavioSec, all led personally by Yépez.",
+    leadership: [
+      { name: "Alberto Yépez", role: "Co-Founder & Managing Director", profileSlug: "alberto-yepez" },
+      { name: "Don Dixon", role: "Co-Founder & Senior Advisor" },
+      { name: "Damien Henault", role: "Managing Director, Forgepoint Capital International" }
+    ],
+    timeline: [
+      { year: "2015", event: "Alberto Yépez and Don Dixon co-found Forgepoint Capital in San Mateo." },
+      { year: "2021", event: "Completes 22 new financings, adding 10 cyber companies including 1Kosmos, Cyberhaven, and Noname Security." },
+      { year: "2022", event: "Area 1, a portfolio company, is acquired by Cloudflare." },
+      { year: "2023", event: "Attivo Networks, another portfolio company, is acquired by SentinelOne." },
+      { year: "2026", event: "Firm surpasses $1 billion in AUM across nearly 80 portfolio companies, including three unicorns and two IPOs." }
     ],
     holdings: []
   },
