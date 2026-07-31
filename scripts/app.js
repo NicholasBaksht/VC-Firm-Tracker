@@ -44,7 +44,7 @@ function renderScaleBar() {
     <span class="scale-divider">·</span>
     <span class="scale-num">${uniqueTickers}</span> Public Holdings Tracked
     <span class="scale-divider">·</span>
-    <span class="scale-num">$${combinedAUM}B+</span> Combined AUM
+  <span class="scale-num">${formatCombinedAUM(combinedAUM)}</span> Combined AUM
     <span class="scale-divider">·</span>
     Updated Daily
   `;
