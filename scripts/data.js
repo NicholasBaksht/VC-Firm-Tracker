@@ -4133,6 +4133,40 @@ sources: [
       { label: "High-Tech Gründerfonds", url: "https://www.htgf.de" }
     ]
   },
+   "noubar-afeyan": {
+    name: "Noubar Afeyan",
+    firm: "Flagship Pioneering",
+    firmSlug: "flagship-pioneering",
+    title: "Founder & CEO",
+    joinedYear: 2000,
+    education: ["BS, McGill University", "PhD, Biochemical Engineering, MIT"],
+    previousExperience: [
+      "Founder & CEO, PerSeptive Biosystems (grew to $100M annual revenue, acquired by PerkinElmer/Applera)",
+      "SVP & Chief Business Officer, Applera, overseeing the creation of Celera Genomics",
+      "Founding team member & investor, Chemgenics Pharmaceuticals (acquired by Millennium), Color Kinetics (acquired by Philips), Adnexus Therapeutics (acquired by Bristol-Myers Squibb)"
+    ],
+    investmentFocus: ["Biotechnology", "mRNA Medicine", "Life Sciences", "Company Creation"],
+    notableInvestments: [
+      { name: "Moderna", ticker: "MRNA" },
+      { name: "Rubius Therapeutics", ticker: null }
+    ],
+    boardSeats: ["Moderna (Chairman)"],
+    ipoCount: 1,
+    majorExits: 4,
+    careerTimeline: [
+      { year: "1987", event: "Completes his doctoral work in biochemical engineering at MIT." },
+      { year: "1998", event: "PerSeptive Biosystems, which he founded and grew to $100 million in annual revenue, is acquired by PerkinElmer/Applera." },
+      { year: "2000", event: "Founds Flagship Pioneering in Cambridge." },
+      { year: "2010", event: "Co-founds Moderna within Flagship's internal venture creation process." },
+      { year: "2018", event: "Moderna goes public on the Nasdaq in December." },
+      { year: "2025", event: "Awarded the National Medal of Technology and Innovation." }
+    ],
+    biography: "Noubar Afeyan fled the Lebanese Civil War with his family as a teenager, immigrating first to Canada and then the United States, before completing his PhD in biochemical engineering at MIT in 1987. He founded and built PerSeptive Biosystems to $100 million in annual revenue before its acquisition, then founded Flagship Pioneering in 2000 with an unusual model for venture capital: inventing companies internally rather than only funding outside founders. His best-known creation is Moderna, which he co-founded in 2010 and has chaired ever since — a company whose mRNA platform, developed years before anyone anticipated a pandemic, became central to the world's COVID-19 response. Afeyan has helped launch more than 70 public and private life sciences and technology companies over his career and was awarded the National Medal of Technology and Innovation in 2025.",
+    sources: [
+      { label: "Flagship Pioneering", url: "https://www.flagshippioneering.com/people/noubar-afeyan" },
+      { label: "Wikipedia — Noubar Afeyan", url: "https://en.wikipedia.org/wiki/Noubar_Afeyan" }
+    ]
+  },
 };
 
 // ============================================================
@@ -4272,7 +4306,8 @@ const firmStages = {
    "jafco-group": ["Seed", "Series A", "Series B", "Growth", "Late Stage"],
    "gobi-partners": ["Seed", "Series A", "Series B", "Growth"],
    "seedcamp": ["Pre-Seed", "Seed", "Series A", "Series B"],
-   "high-tech-grunderfonds": ["Pre-Seed", "Seed"]
+   "high-tech-grunderfonds": ["Pre-Seed", "Seed"],
+   "flagship-pioneering": ["Seed", "Series A", "Series B", "Growth"]
 };
 
 // ============================================================
@@ -5520,6 +5555,34 @@ const firms = [
     holdings: [
       { name: "Xiaomi", ticker: "1810.HK", historicalPrice: null, price: null },
       { name: "XPeng", ticker: "XPEV", historicalPrice: null, price: null }
+    ]
+  },
+   {
+    rank: 27,
+    name: "Flagship Pioneering",
+    sectors: ["Biotech", "Healthcare", "Climate", "Life Sciences"],
+    signatureExit: "Moderna's December 2018 Nasdaq IPO, which raised approximately $604 million at a roughly $7.5 billion valuation — one of the largest biotech IPOs ever at the time, years before Moderna became a household name during the COVID-19 pandemic",
+    slug: "flagship-pioneering",
+    website: "https://www.flagshippioneering.com",
+    short: "Flagship Pioneering",
+    founded: 2000,
+    hq: "Cambridge, MA",
+    aum: "$3.4B (single fund, 2021); has raised multiple funds since 2000",
+    thesis: "Flagship Pioneering was founded in 2000 by Noubar Afeyan on a model most venture firms don't attempt: rather than only investing in outside startups, Flagship invents companies from scratch internally, pairing entrepreneurially-minded scientists with a structured 'What if?' process that iterates toward genuinely first-in-category bioplatform companies. That approach has produced more than 100 scientific ventures worth over $100 billion in aggregate value, thousands of patents, and more than 50 drugs in clinical development. Its best-known creation is Moderna, which Afeyan co-founded in 2010 and took public on the Nasdaq in December 2018 — years before its mRNA platform became central to the global COVID-19 vaccine response.",
+    leadership: [
+      { name: "Noubar Afeyan", role: "Founder & CEO", profileSlug: "noubar-afeyan" },
+      { name: "Ignacio Martinez", role: "General Partner" },
+      { name: "Geoffrey von Maltzahn", role: "General Partner" }
+    ],
+    timeline: [
+      { year: "2000", event: "Noubar Afeyan founds Flagship Pioneering in Cambridge." },
+      { year: "2010", event: "Afeyan co-founds Moderna within Flagship's venture creation process." },
+      { year: "2018", event: "Moderna goes public on the Nasdaq in December, raising approximately $604 million." },
+      { year: "2020", event: "Moderna's COVID-19 vaccine is authorized by the FDA in December." },
+      { year: "2021", event: "Flagship raises $3.4 billion for a new fund in June, one of the largest biotech venture funds ever raised." }
+    ],
+    holdings: [
+      { name: "Moderna", ticker: "MRNA", historicalPrice: null, price: null }
     ]
   },
    {
