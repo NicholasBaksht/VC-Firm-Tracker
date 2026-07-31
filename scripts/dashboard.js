@@ -589,8 +589,8 @@ function renderAnalytics() {
       <div class="num">${totalHoldings}</div>
       <div class="lbl">Portfolio Companies</div>
     </div>
-    <div class="stat-box">
-      <div class="num">$${combinedAUM}B+</div>
+ <div class="stat-box">
+      <div class="num">${formatCombinedAUM(combinedAUM)}</div>
       <div class="lbl">Combined AUM (approx.)</div>
     </div>
     <div class="stat-box">
