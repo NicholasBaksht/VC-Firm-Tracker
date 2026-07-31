@@ -4631,6 +4631,41 @@ sources: [
       { label: "Insignia Business Review", url: "https://review.insignia.vc/2021/07/13/parallels-and-synergies-between-latin-america-and-southeast-asia-from-eric-acher-founding-managing-partner-of-monashees-brazils-first-venture-capital-firm/" }
     ]
   },
+   "willson-cuaca": {
+    name: "Willson Cuaca",
+    firm: "East Ventures",
+    firmSlug: "east-ventures",
+    title: "Co-Founder & Managing Partner",
+    joinedYear: 2009,
+    education: ["Universitas Bina Nusantara (Binus)"],
+    previousExperience: [
+      "First Cisco Certified Instructor in Indonesia",
+      "Sales & Support, Singapore security firm",
+      "Founder, mobile startup (iPhone & Blackberry apps, 2008)",
+      "Founder, SCOOP (Indonesia's largest digital newsstand)"
+    ],
+    investmentFocus: ["Consumer Internet", "Fintech", "Marketplaces", "Southeast Asia & Indonesia"],
+    notableInvestments: [
+      { name: "Tokopedia", ticker: "GOTO.JK" },
+      { name: "Fore Coffee", ticker: "FORE.JK" },
+      { name: "Traveloka", ticker: null }
+    ],
+    boardSeats: [],
+    ipoCount: 2,
+    majorExits: 3,
+    careerTimeline: [
+      { year: "1997", event: "Begins teaching computer and networking courses during his first year of university." },
+      { year: "1999", event: "Becomes the first Cisco Certified Instructor in Indonesia." },
+      { year: "2008", event: "Founds a mobile startup building iPhone and Blackberry apps, after founding and selling SCOOP, Indonesia's largest digital newsstand." },
+      { year: "2009", event: "Co-founds East Ventures with Batara Eto and Taiga Matsuyama, one of the first venture capital firms in Indonesia." },
+      { year: "2022", event: "Tokopedia, East Ventures' most famous early bet, merges with Gojek and goes public as GoTo on the Indonesia Stock Exchange." }
+    ],
+    biography: "Willson Cuaca's path into venture capital ran through hands-on technology work, not finance — a computer science background that made him Indonesia's first Cisco Certified Instructor before he founded and sold SCOOP, the country's largest digital newsstand, and built an early iPhone and Blackberry app startup. He co-founded East Ventures in 2009 with Batara Eto and Taiga Matsuyama, at a time when, in his own words, 'no one believed in Indonesia's consumer internet potential.' That early conviction produced the region's clearest proof point: East Ventures was the seed investor in Tokopedia, which later merged with Gojek to form GoTo and complete one of Indonesia's largest-ever IPOs in 2022. Cuaca has since built East Ventures into a multi-asset platform spanning seed through growth across more than 300 portfolio companies, and has been named the Most Active Investor in Southeast Asia and Indonesia multiple times by CB Insights and Crunchbase.",
+    sources: [
+      { label: "East Ventures — Willson Cuaca", url: "https://east.vc/team/willson-cuaca" },
+      { label: "Asia Tech Daily", url: "https://asiatechdaily.com/willson-cuaca-east-ventures/" }
+    ]
+  },
 };
 
 // ============================================================
@@ -4785,7 +4820,8 @@ const firmStages = {
    "nfx": ["Pre-Seed", "Seed"],
    "point-nine": ["Pre-Seed", "Seed"],
    "lakestar": ["Series A", "Series B", "Growth", "Late Stage"],
-   "monashees": ["Seed", "Series A", "Series B", "Growth"]
+   "monashees": ["Seed", "Series A", "Series B", "Growth"],
+   "east-ventures": ["Seed", "Series A", "Series B", "Growth"]
 };
 
 // ============================================================
@@ -7210,6 +7246,35 @@ const firms = [
     holdings: [
       { name: "Spotify", ticker: "SPOT", historicalPrice: null, price: 482.66 },
       { name: "SoFi", ticker: "SOFI", historicalPrice: null, price: 16.74 }
+    ]
+  },
+   {
+    rank: 69,
+    name: "East Ventures",
+    sectors: ["Consumer Internet", "Fintech", "Marketplaces", "Logistics"],
+    signatureExit: "Tokopedia, East Ventures' most famous early bet, merged with Gojek to form GoTo and completed one of Indonesia's largest-ever IPOs on the Jakarta exchange in 2022",
+    slug: "east-ventures",
+    website: "https://east.vc",
+    short: "East Ventures",
+    founded: 2009,
+    hq: "Singapore",
+    aum: "Not publicly disclosed (300+ portfolio companies across seed to growth)",
+    thesis: "East Ventures was founded in 2009 by Willson Cuaca, Batara Eto, and Taiga Matsuyama, making it one of the first venture capital firms operating in Indonesia at a time when, in the founders' own words, essentially no one believed in the country's consumer internet potential. That early, uncontested conviction let the firm become the seed investor behind several of Southeast Asia's largest tech companies, most famously Tokopedia, which later merged with Gojek to form GoTo and completed one of Indonesia's largest-ever public listings in 2022. East Ventures has since transformed into a multi-asset platform spanning seed through growth stage across Indonesia, Japan, Singapore, Thailand, Malaysia, Vietnam, and the US, investing in more than 300 companies and repeatedly ranked the most active investor in Southeast Asia by CB Insights, Preqin, and Crunchbase.",
+    leadership: [
+      { name: "Willson Cuaca", role: "Co-Founder & Managing Partner", profileSlug: "willson-cuaca" },
+      { name: "Batara Eto", role: "Co-Founder & Managing Partner" },
+      { name: "Taiga Matsuyama", role: "Co-Founder & Managing Partner" }
+    ],
+    timeline: [
+      { year: "2009", event: "Willson Cuaca, Batara Eto, and Taiga Matsuyama found East Ventures, one of the first VC firms in Indonesia." },
+      { year: "2010", event: "Makes its early seed investment in Tokopedia." },
+      { year: "2020", event: "Launches EV Growth, a growth-stage vehicle, alongside Sinar Mas Digital Ventures and Yahoo Japan Capital." },
+      { year: "2022", event: "Tokopedia merges with Gojek to form GoTo, completing one of Indonesia's largest-ever IPOs." },
+      { year: "2026", event: "Portfolio surpasses 300 companies across seven countries." }
+    ],
+    holdings: [
+      { name: "Tokopedia (GoTo)", ticker: "GOTO.JK", historicalPrice: null, price: null },
+      { name: "Fore Coffee", ticker: "FORE.JK", historicalPrice: null, price: null }
     ]
   },
    {
