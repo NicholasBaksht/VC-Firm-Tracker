@@ -4290,6 +4290,40 @@ sources: [
       { label: "Grokipedia — Sapphire Ventures", url: "https://grokipedia.com/page/Sapphire_Ventures" }
     ]
   },
+   "kirsten-green": {
+    name: "Kirsten Green",
+    firm: "Forerunner Ventures",
+    firmSlug: "forerunner-ventures",
+    title: "Founder & Managing Partner",
+    joinedYear: 2012,
+    education: [],
+    previousExperience: [
+      "Equity Research Analyst, Banc of America Securities (retail sector)"
+    ],
+    investmentFocus: ["Consumer", "Commerce", "Digital Health", "Fintech"],
+    notableInvestments: [
+      { name: "Warby Parker", ticker: "WRBY" },
+      { name: "Chime", ticker: null },
+      { name: "Glossier", ticker: null },
+      { name: "Faire", ticker: null }
+    ],
+    boardSeats: ["Nordstrom", "Glossier", "Ritual", "Faire", "Hims & Hers"],
+    ipoCount: 3,
+    majorExits: 0,
+    careerTimeline: [
+      { year: "2010", event: "Leads Forerunner's early seed check into Warby Parker, before the firm's formal 2012 founding." },
+      { year: "2012", event: "Founds Forerunner Ventures in San Francisco at age 40, after a career as a retail equity research analyst." },
+      { year: "2013", event: "Makes an early investment in Glossier, a year ahead of its official 2014 launch." },
+      { year: "2018", event: "Recognized on Time's 100 Most Influential People list." },
+      { year: "2021", event: "Warby Parker goes public via NYSE direct listing." },
+      { year: "2022", event: "Closes Fund VI at $1 billion." }
+    ],
+    biography: "Kirsten Green spent her early career as a retail equity research analyst at Banc of America Securities, deeply analyzing cohort behavior and unit economics for public retail companies — a rigor she carried directly into venture capital when she founded Forerunner in 2012, entering VC for the first time at age 40. That background gave her an unusually early read on direct-to-consumer commerce, and Forerunner became one of Silicon Valley's most concentrated consumer-focused funds as a result, leading early checks into Warby Parker, Chime, Glossier, Dollar Shave Club, and Faire. She's raised nearly $3 billion in assets under management since founding the firm, been named to Time's 100 Most Influential People and The New York Times' Top 20 Venture Capitalists, and now serves on the boards of Nordstrom, Glossier, Ritual, Faire, and Hims & Hers — a rare bridge between legacy retail and next-generation consumer companies.",
+    sources: [
+      { label: "Forerunner Ventures — Kirsten Green", url: "https://www.forerunnerventures.com/team/kirsten-green" },
+      { label: "Wikipedia — Forerunner Ventures", url: "https://en.wikipedia.org/wiki/Forerunner_Ventures" }
+    ]
+  },
 };
 
 // ============================================================
@@ -4434,7 +4468,8 @@ const firmStages = {
    "qed-investors": ["Seed", "Series A", "Series B", "Growth"],
    "breakthrough-energy-ventures": ["Seed", "Series A", "Series B", "Growth"],
    "orbimed": ["Seed", "Series A", "Series B", "Growth", "Late Stage"],
-   "sapphire-ventures": ["Series A", "Series B", "Growth", "Late Stage"]
+   "sapphire-ventures": ["Series A", "Series B", "Growth", "Late Stage"],
+   "forerunner-ventures": ["Seed", "Series A", "Series B"]
 };
 
 // ============================================================
@@ -6585,6 +6620,35 @@ const firms = [
     ],
     holdings: [
       { name: "CureVac", ticker: "CVAC", historicalPrice: null, price: null }
+    ]
+  },
+   {
+    rank: 62,
+    name: "Forerunner Ventures",
+    sectors: ["Consumer", "Commerce", "Digital Health", "Fintech"],
+    signatureExit: "Warby Parker's 2021 NYSE direct listing — Forerunner led an early seed check into the eyewear company years before its founding as a formal firm, one of the clearest proof points of its consumer-first thesis",
+    slug: "forerunner-ventures",
+    website: "https://www.forerunnerventures.com",
+    short: "Forerunner Ventures",
+    founded: 2012,
+    hq: "San Francisco, CA",
+    aum: "~$3B",
+    thesis: "Forerunner Ventures was founded in 2012 by Kirsten Green, a former retail equity research analyst who applied the same rigorous financial modeling discipline she'd used analyzing public retail companies to early-stage consumer investing. That analytical, deeply consumer-focused lens built one of the first specialized 'modern consumer' venture practices at a time when direct-to-consumer commerce was still a contrarian niche, and it produced an unusually high concentration of breakout wins: Warby Parker, Dollar Shave Club, Glossier, Chime, Faire, and Hims & Hers among them. The firm has raised nearly $3 billion from institutional investors, invested in more than 150 companies while serving as the first institutional backer in roughly two-thirds of its portfolio, and closed its most recent $500 million Fund VII in 2025, a signal of confidence in consumer tech even as the broader category fell out of favor with other investors.",
+    leadership: [
+      { name: "Kirsten Green", role: "Founder & Managing Partner", profileSlug: "kirsten-green" },
+      { name: "Eurie Kim", role: "Partner" },
+      { name: "Brian O'Malley", role: "Partner" }
+    ],
+    timeline: [
+      { year: "2010", event: "Kirsten Green leads an early seed check into Warby Parker, ahead of Forerunner's formal founding." },
+      { year: "2012", event: "Green founds Forerunner Ventures in San Francisco." },
+      { year: "2013", event: "Makes an early investment in Glossier, a year before its official launch." },
+      { year: "2021", event: "Warby Parker goes public via NYSE direct listing." },
+      { year: "2022", event: "Closes Fund VI at $1 billion." },
+      { year: "2025", event: "Closes Fund VII at $500 million, bringing total AUM to nearly $3 billion." }
+    ],
+    holdings: [
+      { name: "Warby Parker", ticker: "WRBY", historicalPrice: null, price: null }
     ]
   },
    {
