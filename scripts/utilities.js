@@ -73,3 +73,13 @@ function buildReturnBadge(h) {
 // honest place for them.
 firms.sort((a, b) => parseAumNumber(b.aum) - parseAumNumber(a.aum));
 firms.forEach((f, i) => { f.rank = i + 1; });
+// Formats a combined-AUM figure (stored in billions, e.g. 1223 for
+// $1223B) as trillions once it crosses the 1000 mark, since "$1223B+"
+// reads worse than "$1.223T+" at this scale. Below $1T, displays in
+// billions as before.
+function formatCombinedAUM(billions) {
+  if (billions >= 1000) {
+    return '$' + (billions / 1000).toFixed(3) + 'T+';
+  }
+  return '$' + billions + 'B+';
+}
