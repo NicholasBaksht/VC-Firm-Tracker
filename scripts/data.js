@@ -4107,6 +4107,32 @@ sources: [
       { label: "Seedcamp Team", url: "https://seedcamp.com/our-team/" }
     ]
   },
+   "alex-von-frankenberg": {
+    name: "Alex von Frankenberg",
+    firm: "High-Tech Gründerfonds",
+    firmSlug: "high-tech-grunderfonds",
+    title: "Co-Founder & Managing Director",
+    joinedYear: 2005,
+    education: [],
+    previousExperience: [],
+    investmentFocus: ["Deep Tech", "Industrial Tech", "Digital Tech", "Life Sciences"],
+    notableInvestments: [
+      { name: "CureVac", ticker: "CVAC" }
+    ],
+    boardSeats: [],
+    ipoCount: 1,
+    majorExits: 0,
+    careerTimeline: [
+      { year: "2005", event: "Co-founds High-Tech Gründerfonds in Bonn, becoming Managing Director." },
+      { year: "2020", event: "Portfolio company CureVac goes public on the Nasdaq during his tenure." },
+      { year: "2026", event: "Continues leading HTGF more than two decades after its founding, with fund volume surpassing €3 billion." }
+    ],
+    biography: "Alex von Frankenberg has led High-Tech Gründerfonds as Managing Director since co-founding it in 2005, running what remains one of the most structurally distinctive venture funds in Europe — a public-private partnership where his investment committee includes not just venture professionals but representatives from the German government, KfW Capital, and corporate limited partners like BASF and Bosch. That hybrid governance model gives HTGF a genuine developmental mandate alongside its commercial one: closing the equity gap for early-stage German technology companies that might otherwise struggle to find seed capital. Under his two-decade leadership, the fund has financed more than 800 startups, achieved nearly 200 exits, and backed CureVac through its 2020 Nasdaq IPO, one of the clearest proof points that patient, mission-driven seed capital can still produce genuinely global outcomes.",
+    sources: [
+      { label: "Altss — HTGF Profile", url: "https://altss.com/profile/high-tech-grunderfonds" },
+      { label: "High-Tech Gründerfonds", url: "https://www.htgf.de" }
+    ]
+  },
 };
 
 // ============================================================
@@ -4245,7 +4271,8 @@ const firmStages = {
    "5y-capital": ["Seed", "Series A", "Series B", "Growth"],
    "jafco-group": ["Seed", "Series A", "Series B", "Growth", "Late Stage"],
    "gobi-partners": ["Seed", "Series A", "Series B", "Growth"],
-   "seedcamp": ["Pre-Seed", "Seed", "Series A", "Series B"]
+   "seedcamp": ["Pre-Seed", "Seed", "Series A", "Series B"],
+   "high-tech-grunderfonds": ["Pre-Seed", "Seed"]
 };
 
 // ============================================================
@@ -6231,6 +6258,32 @@ const firms = [
     holdings: [
       { name: "UiPath", ticker: "PATH", historicalPrice: null, price: 12.19 },
       { name: "Wise", ticker: "WISE", historicalPrice: null, price: null }
+    ]
+  },
+   {
+    rank: 61,
+    name: "High-Tech Gründerfonds",
+    sectors: ["Deep Tech", "Healthcare", "Climate", "Enterprise Software"],
+    signatureExit: "CureVac's August 2020 Nasdaq IPO — HTGF backed the mRNA vaccine developer as a seed-stage investor years before it became a household name during the COVID-19 pandemic",
+    slug: "high-tech-grunderfonds",
+    website: "https://www.htgf.de",
+    short: "HTGF",
+    founded: 2005,
+    hq: "Bonn, Germany",
+    aum: "€1.4B+ (following Fund IV launch)",
+    thesis: "High-Tech Gründerfonds was established in 2005 as a public-private partnership specifically to close Germany's early-stage funding gap, backed by the Federal Ministry for Economic Affairs, KfW Capital, and more than 45 corporate limited partners including BASF and Bosch. That hybrid structure is genuinely unusual among the firms tracked on this page: HTGF's investment committee blends venture professionals with government and corporate representatives, giving the fund both commercial discipline and an explicit developmental mandate to seed German deep tech, industrial tech, climate tech, and life sciences. Since founding, the fund has financed more than 800 startups and achieved nearly 200 exits, with CureVac's 2020 Nasdaq IPO as its most globally recognized outcome, and now manages more than €1.4 billion following its fourth fund.",
+    leadership: [
+      { name: "Alex von Frankenberg", role: "Co-Founder & Managing Director", profileSlug: "alex-von-frankenberg" }
+    ],
+    timeline: [
+      { year: "2005", event: "Alex von Frankenberg co-founds High-Tech Gründerfonds in Bonn as a public-private partnership." },
+      { year: "2011", event: "Closes its second fund, with BASF among the corporate investors." },
+      { year: "2018", event: "Closes its third fund, again backed by BASF and other corporate partners." },
+      { year: "2020", event: "Portfolio company CureVac goes public on the Nasdaq in August." },
+      { year: "2026", event: "Fund volume across all generations surpasses €3 billion, with cumulative AUM above €1.4 billion following Fund IV." }
+    ],
+    holdings: [
+      { name: "CureVac", ticker: "CVAC", historicalPrice: null, price: null }
     ]
   },
    {
