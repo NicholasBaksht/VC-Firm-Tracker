@@ -6141,6 +6141,34 @@ const firms = [
     ],
     holdings: []
   },
+  {
+    rank: 59,
+    name: "Gobi Partners",
+    sectors: ["Consumer Internet", "Fintech", "Mobility", "Enterprise Software"],
+    signatureExit: "Prenetics' 2023 Nasdaq listing via SPAC merger — one of four Gobi-backed companies to reach unicorn status, alongside Carsome, Animoca Brands, and Amber Group",
+    slug: "gobi-partners",
+    website: "https://www.gobi.vc",
+    short: "Gobi Partners",
+    founded: 2002,
+    hq: "Kuala Lumpur, Malaysia",
+    aum: "~$2B",
+    thesis: "Gobi Partners was founded in 2002 by Thomas Tsao, Lawrence Tse, and Wai Kit Lau, three former employees of WI Harper, a San Francisco venture firm, who set out to build a genuinely Pan-Asian investment platform rather than a single-country fund. The firm has survived two regional shocks since founding — the SARS outbreak and the Global Financial Crisis — which Gobi credits for a resilience-first investment philosophy that still shapes its approach today. That philosophy has scaled into one of the most interconnected venture platforms in Asia: 16 offices spanning Greater China, Southeast Asia, Pakistan, and MENA, more than 400 startups backed across 20-plus funds, and four portfolio companies that have reached unicorn status — Carsome, Animoca Brands, Amber Group, and Prenetics — with roughly $2 billion currently under management.",
+    leadership: [
+      { name: "Thomas Tsao", role: "Co-Founder & Chairman", profileSlug: "thomas-tsao" },
+      { name: "Lawrence Tse", role: "Co-Founder" },
+      { name: "Wai Kit Lau", role: "Co-Founder" }
+    ],
+    timeline: [
+      { year: "2002", event: "Thomas Tsao, Lawrence Tse, and Wai Kit Lau found Gobi Partners, formerly of WI Harper." },
+      { year: "2015", event: "Thomas Tsao relocates to Kuala Lumpur, establishing funds with Malaysia's MAVCAP (now Jelawang Capital)." },
+      { year: "2018", event: "Launches the ASEAN SuperSeed Fund with MAVCAP, backing Carsome and Airwallex among others." },
+      { year: "2023", event: "Prenetics completes a Nasdaq listing via SPAC merger, becoming one of Gobi's four unicorn outcomes." },
+      { year: "2024", event: "Firm AUM reaches approximately $1.6-2 billion across 16 locations." }
+    ],
+    holdings: [
+      { name: "Prenetics", ticker: "PRE", historicalPrice: null, price: null }
+    ]
+  },
    {
     rank: 36,
     name: "Atomico",
