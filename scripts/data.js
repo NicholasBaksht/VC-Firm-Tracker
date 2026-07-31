@@ -4491,6 +4491,40 @@ sources: [
       { label: "Aspen Digital", url: "https://www.aspendigital.org/person/alberto-yepez/" }
     ]
   },
+   "james-currier": {
+    name: "James Currier",
+    firm: "NFX",
+    firmSlug: "nfx",
+    title: "Co-Founder & General Partner",
+    joinedYear: 2015,
+    education: [],
+    previousExperience: [
+      "Founder & CEO, Tickle (acquired by Monster)",
+      "Founder & CEO, WonderHill (acquired by Kabam)",
+      "Founder & CEO, Iron Pearl (acquired by PayPal)",
+      "Founder & CEO, Jiff (acquired by Castlight)"
+    ],
+    investmentFocus: ["Network Effects", "Marketplaces", "AI", "Consumer", "SaaS"],
+    notableInvestments: [
+      { name: "Lyft", ticker: "LYFT" },
+      { name: "DoorDash", ticker: "DASH" },
+      { name: "Patreon", ticker: null }
+    ],
+    boardSeats: [],
+    ipoCount: 2,
+    majorExits: 4,
+    careerTimeline: [
+      { year: "1990s-2000s", event: "Founds and exits four companies — Tickle, WonderHill, Iron Pearl, and Jiff — pioneering user-generated content, viral marketing, and A/B testing techniques later adopted industry-wide." },
+      { year: "2015", event: "Co-founds NFX with Pete Flint and Gigi Levy-Weiss." },
+      { year: "2019", event: "Lyft, an early NFX portfolio bet, goes public on the Nasdaq." },
+      { year: "2020", event: "DoorDash, another early NFX bet, goes public." }
+    ],
+    biography: "James Currier is a four-time founder — Tickle, WonderHill, Iron Pearl, and Jiff, all successfully acquired — turned one of Silicon Valley's most cited experts on network effects, having systematically categorized dozens of network-effect types that founders can now deliberately design for rather than stumble into. He co-founded NFX in 2015 with fellow serial entrepreneurs Pete Flint and Gigi Levy-Weiss, the three of whom collectively built ten companies with a combined $10 billion in exits before ever writing an outside investor check together. That operating pedigree shaped NFX's structure: a 45-plus-person platform team, proprietary tools like the Signal fundraising network, and an invite-only 'Guild' community where hundreds of portfolio CEOs share real KPIs and insights. Early NFX bets into Lyft and DoorDash, both public since 2019 and 2020 respectively, remain among the firm's clearest proof points.",
+    sources: [
+      { label: "NFX — James Currier", url: "https://www.nfx.com/team/james-currier" },
+      { label: "KoreaTechDesk", url: "https://koreatechdesk.com/james-currier-nfx-the-investor-you-can-rely-on-for-grand-business-success" }
+    ]
+  },
 };
 
 // ============================================================
@@ -4641,7 +4675,8 @@ const firmStages = {
    "third-rock-ventures": ["Seed", "Series A", "Series B"],
    "lowercarbon-capital": ["Pre-Seed", "Seed", "Series A", "Series B"],
    "energy-impact-partners": ["Series A", "Series B", "Growth"],
-   "forgepoint-capital": ["Seed", "Series A", "Series B", "Growth"]
+   "forgepoint-capital": ["Seed", "Series A", "Series B", "Growth"],
+   "nfx": ["Pre-Seed", "Seed"]
 };
 
 // ============================================================
@@ -6958,6 +6993,36 @@ const firms = [
       { year: "2026", event: "Firm surpasses $1 billion in AUM across nearly 80 portfolio companies, including three unicorns and two IPOs." }
     ],
     holdings: []
+  },
+   {
+    rank: 66,
+    name: "NFX",
+    sectors: ["Marketplaces", "AI", "Consumer", "SaaS", "Fintech"],
+    signatureExit: "Lyft's 2019 Nasdaq IPO — one of NFX's earliest network-effects bets, backed years before the ride-sharing company's public debut, alongside fellow early portfolio company DoorDash",
+    slug: "nfx",
+    website: "https://www.nfx.com",
+    short: "NFX",
+    founded: 2015,
+    hq: "San Francisco, CA",
+    aum: "$1.5B",
+    thesis: "NFX was founded in 2015 by James Currier, Pete Flint, and Gigi Levy-Weiss, three serial entrepreneurs who together had already built ten companies with a combined $10 billion in exits before ever investing together as a fund. That operating background shapes a genuinely distinctive thesis: NFX invests almost exclusively in companies where network effects — not brand, not patents, not switching costs — are the primary source of durable competitive advantage, an idea the firm has spent more than 15 years researching and codifying into named, teachable frameworks. Built as, in the founders' own words, 'the venture firm we wish existed when we were founders,' NFX runs a 45-plus-person platform team, an invite-only 'Guild' community connecting hundreds of portfolio CEOs, and proprietary tools including Signal, a fundraising network with more than 100,000 users, and now manages approximately $1.5 billion after backing nearly 200 companies including Lyft, DoorDash, and Patreon.",
+    leadership: [
+      { name: "James Currier", role: "Co-Founder & General Partner", profileSlug: "james-currier" },
+      { name: "Gigi Levy-Weiss", role: "Co-Founder & General Partner" },
+      { name: "Pete Flint", role: "Co-Founder & General Partner" },
+      { name: "Morgan Beller", role: "General Partner" }
+    ],
+    timeline: [
+      { year: "2015", event: "James Currier, Pete Flint, and Gigi Levy-Weiss found NFX in San Francisco." },
+      { year: "2017", event: "Closes a $150 million fund, growing from an original $10 million start." },
+      { year: "2019", event: "Raises $275 million for its second fund; portfolio company Lyft goes public." },
+      { year: "2021", event: "Closes a $450 million fund in October." },
+      { year: "2024", event: "Closes a $325 million fourth fund, bringing total AUM to approximately $1.5 billion." }
+    ],
+    holdings: [
+      { name: "Lyft", ticker: "LYFT", historicalPrice: null, price: 15.45 },
+      { name: "DoorDash", ticker: "DASH", historicalPrice: 170.65, price: 175.00 }
+    ]
   },
    {
     rank: 36,
