@@ -4229,6 +4229,34 @@ sources: [
       { label: "Breakthrough Energy", url: "https://breakthroughenergy.org" }
     ]
   },
+   "carl-gordon": {
+    name: "Carl Gordon",
+    firm: "OrbiMed",
+    firmSlug: "orbimed",
+    title: "Managing Partner & Head of Private Equity",
+    joinedYear: 1995,
+    education: ["AB, Chemistry & Physics, Harvard University", "PhD, Biology, MIT", "Postdoctoral Fellow, Rockefeller University"],
+    previousExperience: [
+      "Research role, ImClone Systems (1987-1988)"
+    ],
+    investmentFocus: ["Biotechnology", "Pharmaceuticals", "Medical Devices", "Company Formation"],
+    notableInvestments: [],
+    boardSeats: [],
+    ipoCount: 0,
+    majorExits: 0,
+    careerTimeline: [
+      { year: "1987", event: "Graduates Harvard with an AB in Chemistry & Physics, then joins ImClone Systems." },
+      { year: "1993", event: "Completes his PhD in Biology at MIT, followed by a postdoctoral fellowship at Rockefeller University." },
+      { year: "1995", event: "Joins OrbiMed's predecessor firm." },
+      { year: "1998", event: "Becomes a founding General Partner of OrbiMed Advisors following its split from Mehta & Isaly." },
+      { year: "2026", event: "Leads OrbiMed's private equity team as the platform manages approximately $20 billion across public equity, private equity, and credit strategies." }
+    ],
+    biography: "Carl Gordon brings a genuinely rare combination of deep scientific training and two decades of venture leadership to OrbiMed. After a Harvard degree in Chemistry & Physics, a research stint at ImClone Systems, and a PhD in Biology from MIT followed by a Rockefeller University postdoc, he joined OrbiMed's predecessor firm in 1995 and became a founding General Partner when OrbiMed Advisors formally split off in 1998. He now leads OrbiMed's private equity team, one of three arms (alongside public equity and private credit) that let the firm fund healthcare companies from seed through IPO and beyond within a single specialist platform — a structure widely viewed in biotech as a genuine stamp of validation, with many companies specifically seeking OrbiMed's backing to help secure Nasdaq or HKEX listings. Gordon has appeared on the Forbes Midas List multiple times, founded and invested in numerous biotechnology companies, and served on both public and private company boards throughout his career.",
+    sources: [
+      { label: "OrbiMed — Carl Gordon", url: "https://www.orbimed.com/leadership/carl-l-gordon-ph-d-cfa/" },
+      { label: "Wikipedia — OrbiMed", url: "https://en.wikipedia.org/wiki/OrbiMed" }
+    ]
+  },
 };
 
 // ============================================================
@@ -4371,7 +4399,8 @@ const firmStages = {
    "high-tech-grunderfonds": ["Pre-Seed", "Seed"],
    "flagship-pioneering": ["Seed", "Series A", "Series B", "Growth"],
    "qed-investors": ["Seed", "Series A", "Series B", "Growth"],
-   "breakthrough-energy-ventures": ["Seed", "Series A", "Series B", "Growth"]
+   "breakthrough-energy-ventures": ["Seed", "Series A", "Series B", "Growth"],
+   "orbimed": ["Seed", "Series A", "Series B", "Growth", "Late Stage"]
 };
 
 // ============================================================
@@ -4516,7 +4545,7 @@ const firms = [
     short: "Sequoia",
     founded: 1972,
     hq: "Menlo Park, CA",
-    aum: "$90B+",
+    aum: "$56B+",
     thesis: "Founded in 1972 by Don Valentine, a former Fairchild Semiconductor sales executive often called the \"grandfather of Silicon Valley venture capital,\" Sequoia was there for the first wave of the personal computer era, providing early funding to Apple and Atari. Over five decades it has repeated that pattern again and again — Google, PayPal, and Nvidia among them — building a reputation as the industry's steadiest and most consistent winner across multiple technology cycles.",
     leadership: [
       { name: "Don Valentine", role: "Founder (1972)" },
@@ -4850,6 +4879,33 @@ const firms = [
       { name: "Meta Platforms", ticker: "META", historicalPrice: null, price: 646.01 },
       { name: "Etsy", ticker: "ETSY", historicalPrice: null, price: 84.10 }
     ]
+  },
+   {
+    rank: 12,
+    name: "OrbiMed",
+    sectors: ["Biotech", "Pharmaceuticals", "Healthcare", "Diagnostics"],
+    signatureExit: "No single confirmed signature exit — OrbiMed is instead widely regarded in biotech as a 'stamp of validation' and IPO accelerator, with many companies specifically seeking its backing to help secure Nasdaq or HKEX listings",
+    slug: "orbimed",
+    website: "https://www.orbimed.com",
+    short: "OrbiMed",
+    founded: 1989,
+    hq: "New York, NY",
+    aum: "~$20B",
+    thesis: "OrbiMed's roots trace back to 1989, when S.G. Warburg pharmaceutical analysts Viren Mehta and Samuel Isaly founded Mehta & Isaly, a research and money-management firm that made its first venture capital investment in 1993. The firm split in 1998, with Isaly forming OrbiMed Advisors, and it has since grown into one of the world's largest dedicated healthcare investment platforms — a rare structure that spans public equity, private equity/venture, and private credit and royalty financing all within a single healthcare-only specialist group. That breadth lets OrbiMed fund a company from seed through IPO and well beyond using one continuous relationship, and its roughly 150-person investment team, including PhD scientists, MDs, and CFAs, now manages approximately $20 billion across all three strategies.",
+    leadership: [
+      { name: "Sven Borho", role: "Founding Managing Partner, Public Equity" },
+      { name: "Carl Gordon", role: "Managing Partner & Head of Private Equity", profileSlug: "carl-gordon" },
+      { name: "Jonathan Silverstein", role: "Managing Partner" }
+    ],
+    timeline: [
+      { year: "1989", event: "Viren Mehta and Samuel Isaly found Mehta & Isaly." },
+      { year: "1993", event: "The firm makes its first venture capital investment." },
+      { year: "1998", event: "Mehta & Isaly splits; Samuel Isaly forms OrbiMed Advisors." },
+      { year: "2007", event: "OrbiMed expands into Asia, opening offices in Shanghai and Mumbai." },
+      { year: "2018", event: "Samuel Isaly steps down as managing partner following a succession planning process, replaced by a management committee led by Sven Borho, Carl Gordon, and Jonathan Silverstein." },
+      { year: "2025", event: "Closes its Healthcare Royalty & Credit Fund V at $1.86 billion in August, its largest royalty/credit fund close to date." }
+    ],
+    holdings: []
   },
   {
     rank: 12,
