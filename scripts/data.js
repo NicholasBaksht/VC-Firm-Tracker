@@ -4012,6 +4012,32 @@ sources: [
       { label: "The Wire China", url: "https://www.thewirechina.com/2021/07/18/who-is-5y-capital/" }
     ]
   },
+   "shinichi-fuki": {
+    name: "Shinichi Fuki",
+    firm: "JAFCO Group",
+    firmSlug: "jafco-group",
+    title: "President & CEO",
+    joinedYear: null,
+    education: [],
+    previousExperience: [],
+    investmentFocus: ["Venture Investment", "Buyout Investment", "AI", "Space Technology"],
+    notableInvestments: [
+      { name: "Mercari", ticker: "4385.T" },
+      { name: "Cybozu", ticker: "4776.T" }
+    ],
+    boardSeats: [],
+    ipoCount: 0,
+    majorExits: 0,
+    careerTimeline: [
+      { year: "2018", event: "Portfolio company Mercari goes public on the Tokyo Stock Exchange during his tenure leading JAFCO." },
+      { year: "2025", event: "Under his leadership, JAFCO's assets under management reach approximately $6.8 billion, with more than 1,041 cumulative portfolio IPOs." }
+    ],
+    biography: "Shinichi Fuki has led JAFCO Group through more than five decades of the firm's history as President and CEO, overseeing what has become Japan's largest and longest-running independent venture capital institution. Under his leadership, JAFCO has continued to operate its dual venture-and-buyout model, supporting startups from pre-founding stages through IPO while also managing later-stage buyout investments in established small and mid-sized businesses. Fuki has guided the firm through a period of renewed strategic focus on AI, space technology, and nuclear fusion, aligning JAFCO's more recent bets with Japan's broader national technology priorities, while the firm's total capital commitments across domestic and international funds have grown past ¥1 trillion.",
+    sources: [
+      { label: "JAFCO Group", url: "https://www.jafco.co.jp/english/" },
+      { label: "SuperScout", url: "https://superscout.co/investor/jafco-group" }
+    ]
+  },
 };
 
 // ============================================================
@@ -4147,7 +4173,8 @@ const firmStages = {
    "toyota-ventures": ["Seed", "Series A", "Series B"],
    "barclays-uk-ventures": ["Seed", "Series A", "Growth"],
    "chiratae-ventures": ["Seed", "Series A", "Series B", "Growth"],
-   "5y-capital": ["Seed", "Series A", "Series B", "Growth"]
+   "5y-capital": ["Seed", "Series A", "Series B", "Growth"],
+   "jafco-group": ["Seed", "Series A", "Series B", "Growth", "Late Stage"]
 };
 
 // ============================================================
@@ -5395,6 +5422,32 @@ const firms = [
     holdings: [
       { name: "Xiaomi", ticker: "1810.HK", historicalPrice: null, price: null },
       { name: "XPeng", ticker: "XPEV", historicalPrice: null, price: null }
+    ]
+  },
+   {
+    rank: 29,
+    name: "JAFCO Group",
+    sectors: ["Enterprise Software", "Fintech", "Robotics", "Healthcare"],
+    signatureExit: "Mercari's 2018 Tokyo Stock Exchange IPO — one of over 1,041 portfolio IPOs JAFCO has facilitated since its founding, more than any other Japanese venture firm",
+    slug: "jafco-group",
+    website: "https://www.jafco.co.jp",
+    short: "JAFCO",
+    founded: 1973,
+    hq: "Tokyo, Japan",
+    aum: "$6.8B (¥1 trillion, 2025)",
+    thesis: "JAFCO Group was founded in April 1973 as Japan Associated Finance Co., a joint venture between Nomura Securities, Nippon Life Insurance, and Sanwa Bank, at a time when the American concept of venture capital was still largely unknown in Japan. Now considered both the oldest and largest independent venture capital firm in the country, JAFCO operates two distinct strategies — venture investment for startups and buyout investment for revitalizing established small and mid-sized companies — and is itself publicly listed on the Tokyo Stock Exchange, an unusual structure for a firm whose core business is investing in other companies. Since its founding, JAFCO has invested in more than 4,246 companies and helped over 1,041 of them reach IPO, a track record with no real parallel among Japanese venture firms, and now manages roughly $6.8 billion across more than 100 funds.",
+    leadership: [
+      { name: "Shinichi Fuki", role: "President & CEO", profileSlug: "shinichi-fuki" }
+    ],
+    timeline: [
+      { year: "1973", event: "Nomura Securities, Nippon Life Insurance, and Sanwa Bank jointly establish Japan Associated Finance Co. in Tokyo." },
+      { year: "1982", event: "Establishes JAFCO America Ventures, its first international expansion." },
+      { year: "2018", event: "Portfolio company Mercari goes public on the Tokyo Stock Exchange." },
+      { year: "2025", event: "Total assets under management reach approximately $6.8 billion, with cumulative IPOs surpassing 1,041." }
+    ],
+    holdings: [
+      { name: "Mercari", ticker: "4385.T", historicalPrice: null, price: null },
+      { name: "Cybozu", ticker: "4776.T", historicalPrice: null, price: null }
     ]
   },
    {
