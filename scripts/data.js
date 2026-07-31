@@ -4420,6 +4420,40 @@ sources: [
       { label: "ImpactAlpha", url: "https://impactalpha.com/chris-saccas-lowercarbon-capital-raises-800-million-for-climate-tech/" }
     ]
   },
+   "hans-kobler": {
+    name: "Hans Kobler",
+    firm: "Energy Impact Partners",
+    firmSlug: "energy-impact-partners",
+    title: "Founder & Managing Partner",
+    joinedYear: 2015,
+    education: ["Masters, Aerospace Engineering, Technical University of Munich (with distinction)", "MBA, University of Texas at Austin", "MBA program, INSEAD"],
+    previousExperience: [
+      "Consultant, Bain & Company (Boston, Sydney & Munich offices)",
+      "Led Power technology investment effort, General Electric",
+      "Founder & CEO, Digital Power Capital",
+      "Co-Founder, Chairman & CEO, ICx Technologies (led through Nasdaq IPO and strategic sale)"
+    ],
+    investmentFocus: ["Energy Transition", "Grid Technology", "Industrial Cybersecurity", "Smart Infrastructure"],
+    notableInvestments: [
+      { name: "Dragos", ticker: null }
+    ],
+    boardSeats: ["Enchanted Rock"],
+    ipoCount: 1,
+    majorExits: 1,
+    careerTimeline: [
+      { year: "1993", event: "Attends INSEAD's MBA program." },
+      { year: "2000s", event: "Pioneers General Electric's strategic investment model, later leading GE's Power technology investment effort." },
+      { year: "2010s", event: "Founds Digital Power Capital, then co-founds ICx Technologies, leading it as CEO and Chairman through a Nasdaq IPO and later strategic sale." },
+      { year: "2015", event: "Founds Energy Impact Partners in New York." },
+      { year: "2017", event: "EIP partners with industrial cybersecurity company Dragos." },
+      { year: "2025", event: "Accenture acquires a majority stake in Dragos at a $3.2 billion valuation." }
+    ],
+    biography: "Hans Kobler built his career at the intersection of energy, industrial technology, and finance before founding Energy Impact Partners in 2015. After consulting at Bain & Company, he pioneered General Electric's strategic investment model and led its Power technology investment effort, then founded Digital Power Capital and co-founded ICx Technologies, a sensor technology company he led as CEO and Chairman through a successful Nasdaq IPO and eventual strategic sale. That operator-investor combination shaped EIP's distinctive model: a coalition of more than 30 global energy companies invests alongside the fund, giving portfolio companies direct commercial access to utilities and industrial players that might otherwise take years to reach. EIP's 2017 partnership with industrial cybersecurity company Dragos became one of Kobler's clearest recent proof points, once Accenture acquired a majority stake in the company at a $3.2 billion valuation.",
+    sources: [
+      { label: "Energy Impact Partners Team", url: "https://www.energyimpactpartners.com/team/" },
+      { label: "The Org — Hans Kobler", url: "https://theorg.com/org/energy-impact-partners/org-chart/hans-kobler" }
+    ]
+  },
 };
 
 // ============================================================
@@ -4568,7 +4602,8 @@ const firmStages = {
    "forerunner-ventures": ["Seed", "Series A", "Series B"],
    "f-prime-capital": ["Seed", "Series A", "Series B", "Growth"],
    "third-rock-ventures": ["Seed", "Series A", "Series B"],
-   "lowercarbon-capital": ["Pre-Seed", "Seed", "Series A", "Series B"]
+   "lowercarbon-capital": ["Pre-Seed", "Seed", "Series A", "Series B"],
+   "energy-impact-partners": ["Series A", "Series B", "Growth"]
 };
 
 // ============================================================
@@ -5956,6 +5991,32 @@ const firms = [
       { name: "Beam Therapeutics", ticker: "BEAM", historicalPrice: null, price: null },
       { name: "Denali Therapeutics", ticker: "DNLI", historicalPrice: null, price: null }
     ]
+  },
+   {
+    rank: 30,
+    name: "Energy Impact Partners",
+    sectors: ["Energy", "Climate", "Grid Technology", "Cybersecurity"],
+    signatureExit: "Accenture's 2025 acquisition of a majority stake in Dragos at a $3.2 billion valuation — EIP partnered with the industrial cybersecurity company in 2017, when the category was still emerging",
+    slug: "energy-impact-partners",
+    website: "https://www.energyimpactpartners.com",
+    short: "Energy Impact Partners",
+    founded: 2015,
+    hq: "New York, NY",
+    aum: "$4.5B+",
+    thesis: "Energy Impact Partners was founded in 2015 by Hans Kobler, who spent his earlier career at Bain & Company, then GE — where he pioneered the company's strategic investment model — before founding Digital Power Capital and co-founding ICx Technologies, which he led through a Nasdaq IPO and eventual strategic sale. That operator background shaped EIP's most distinctive structural feature: the fund is a collaborative coalition backed by more than 30 global energy and industrial companies, who invest alongside EIP and give portfolio companies direct commercial access to utilities and industrial buyers that might otherwise take years to reach. The firm's 2017 partnership with industrial cybersecurity company Dragos, made when the category was still nascent, became one of its clearest proof points once Accenture acquired a majority stake in the company at a $3.2 billion valuation, and EIP now manages more than $4.5 billion across the energy transition, smart infrastructure, and climate technology.",
+    leadership: [
+      { name: "Hans Kobler", role: "Founder & Managing Partner", profileSlug: "hans-kobler" },
+      { name: "Lindsay Luger", role: "Co-Founder & Partner" },
+      { name: "Joshua Feldman", role: "Co-Founder, Partner, General Counsel & COO" }
+    ],
+    timeline: [
+      { year: "2015", event: "Hans Kobler founds Energy Impact Partners in New York, backed by a coalition of global energy companies." },
+      { year: "2017", event: "EIP partners with industrial cybersecurity company Dragos." },
+      { year: "2023", event: "Firm reports more than $2 billion under management, backed by over 30 global energy companies." },
+      { year: "2025", event: "Accenture acquires a majority stake in Dragos at a $3.2 billion valuation." },
+      { year: "2026", event: "Firm AUM reaches more than $4.5 billion." }
+    ],
+    holdings: []
   },
    {
     rank: 29,
