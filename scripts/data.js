@@ -4167,6 +4167,38 @@ sources: [
       { label: "Wikipedia — Noubar Afeyan", url: "https://en.wikipedia.org/wiki/Noubar_Afeyan" }
     ]
   },
+   "nigel-morris": {
+    name: "Nigel Morris",
+    firm: "QED Investors",
+    firmSlug: "qed-investors",
+    title: "Co-Founder & Managing Partner",
+    joinedYear: 2007,
+    education: [],
+    previousExperience: [
+      "Co-Founder & President, Capital One (led the company's IPO in the 1990s)"
+    ],
+    investmentFocus: ["Fintech", "Neobanking", "Consumer Credit", "Global Financial Services"],
+    notableInvestments: [
+      { name: "Nubank", ticker: "NU" },
+      { name: "SoFi", ticker: "SOFI" },
+      { name: "Klarna", ticker: null },
+      { name: "AvidXchange", ticker: null }
+    ],
+    boardSeats: ["ClearScore (Chairman)", "Mission Lane (Chairman)", "Remitly", "Bitso", "Current"],
+    ipoCount: 2,
+    majorExits: 1,
+    careerTimeline: [
+      { year: "1990s", event: "Co-founds Capital One and leads the company through its IPO." },
+      { year: "2007", event: "Co-founds QED Investors with Frank Rotman." },
+      { year: "2021", event: "Leads QED's early investment into Nubank, sitting on its advisory board through its December NYSE IPO at a $41 billion market cap." },
+      { year: "2024", event: "Named to the Forbes Midas List for the fourth consecutive year, rising 48 spots." }
+    ],
+    biography: "Nigel Morris co-founded Capital One and helped lead the company through its 1990s IPO before deciding fintech founders needed investors who'd actually run a financial services company, not just funded one. He co-founded QED Investors in 2007 with fellow Capital One alum Frank Rotman, and his clearest proof point since has been Nubank: he led QED's early investment in the Brazilian neobank and sat on its advisory board through its December 2021 NYSE IPO at a $41 billion market cap, since grown to $57 billion. He chairs ClearScore and Mission Lane, sits on the boards of Remitly, Bitso, and Current, and has appeared on the Forbes Midas List for four consecutive years, climbing 48 spots in 2024 alone — the second-largest jump of any investor that year.",
+    sources: [
+      { label: "QED Investors — Nigel Morris", url: "https://www.qedinvestors.com/team/nigel-morris" },
+      { label: "BusinessWire", url: "https://www.businesswire.com/news/home/20240606701949/en/" }
+    ]
+  },
 };
 
 // ============================================================
@@ -4307,7 +4339,8 @@ const firmStages = {
    "gobi-partners": ["Seed", "Series A", "Series B", "Growth"],
    "seedcamp": ["Pre-Seed", "Seed", "Series A", "Series B"],
    "high-tech-grunderfonds": ["Pre-Seed", "Seed"],
-   "flagship-pioneering": ["Seed", "Series A", "Series B", "Growth"]
+   "flagship-pioneering": ["Seed", "Series A", "Series B", "Growth"],
+   "qed-investors": ["Seed", "Series A", "Series B", "Growth"]
 };
 
 // ============================================================
@@ -6075,6 +6108,35 @@ const firms = [
       { name: "Etsy", ticker: "ETSY", historicalPrice: null, price: 84.10 },
       { name: "Coinbase", ticker: "COIN", historicalPrice: 257.21, price: 161.00 },
       { name: "Duolingo", ticker: "DUOL", historicalPrice: null, price: null }
+    ]
+  },
+   {
+    rank: 54,
+    name: "QED Investors",
+    sectors: ["Fintech", "Insurance", "Lending", "Banking Infrastructure"],
+    signatureExit: "Credit Karma's December 2020 acquisition by Intuit for $7.1 billion — co-founder Frank Rotman's most notable investment to date",
+    slug: "qed-investors",
+    website: "https://www.qedinvestors.com",
+    short: "QED Investors",
+    founded: 2007,
+    hq: "Alexandria, VA",
+    aum: "$4B (across all funds)",
+    thesis: "QED Investors was founded in 2007 by Nigel Morris and Frank Rotman, who met at Capital One and helped take it public in the 1990s before deciding fintech needed a specialist investor built by former financial-services operators rather than generalist technology investors. That operational lens shows up directly in QED's hands-on model, which leverages decades of credit-risk, lending, and portfolio-management experience to help founders navigate regulatory and unit-economics challenges most VCs can't meaningfully advise on. The firm has backed more than 250 portfolio companies across 27 countries, including 31 unicorns, with Credit Karma's $7.1 billion sale to Intuit and Nubank's 2021 NYSE IPO — where Morris sat on the advisory board — among its clearest signature outcomes.",
+    leadership: [
+      { name: "Nigel Morris", role: "Co-Founder & Managing Partner", profileSlug: "nigel-morris" },
+      { name: "Frank Rotman", role: "Co-Founder & Chief Investment Officer", profileSlug: "frank-rotman" },
+      { name: "Amias Gerety", role: "Partner" }
+    ],
+    timeline: [
+      { year: "1990s", event: "Nigel Morris and Frank Rotman meet at Capital One and help take the company public." },
+      { year: "2007", event: "The two found QED Investors in Alexandria, Virginia." },
+      { year: "2020", event: "Credit Karma, Frank Rotman's most notable investment, is acquired by Intuit for $7.1 billion in December." },
+      { year: "2021", event: "Closes a $1.05 billion oversubscribed raise across Fund VII and a new Growth Fund in September; Nubank goes public in December." },
+      { year: "2024", event: "Both Morris and Rotman are named to the Forbes Midas List for consecutive years." }
+    ],
+    holdings: [
+      { name: "Nubank", ticker: "NU", historicalPrice: null, price: 14.68 },
+      { name: "SoFi", ticker: "SOFI", historicalPrice: null, price: 16.74 }
     ]
   },
    {
