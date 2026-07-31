@@ -4257,6 +4257,39 @@ sources: [
       { label: "Wikipedia — OrbiMed", url: "https://en.wikipedia.org/wiki/OrbiMed" }
     ]
   },
+   "nino-marakovic": {
+    name: "Nino Marakovic",
+    firm: "Sapphire Ventures",
+    firmSlug: "sapphire-ventures",
+    title: "CEO & Partner (Co-Founder)",
+    joinedYear: 2006,
+    education: ["BA, Economics & Psychology, Williams College", "MBA, Stanford Graduate School of Business"],
+    previousExperience: [
+      "Investment Banker, Morgan Stanley, Goldman Sachs & Robertson Stephens",
+      "Partner, Draper Fisher Jurvetson",
+      "Partner, IVF Ventures"
+    ],
+    investmentFocus: ["Enterprise Software", "AI", "SaaS", "Growth-Stage Investing"],
+    notableInvestments: [
+      { name: "MuleSoft", ticker: null },
+      { name: "Braze", ticker: "BRZE" }
+    ],
+    boardSeats: ["ActivTrak", "Adverity"],
+    ipoCount: 5,
+    majorExits: 40,
+    careerTimeline: [
+      { year: "2006", event: "Joins SAP Ventures, later leading the team, after roles at Morgan Stanley, Goldman Sachs, and Draper Fisher Jurvetson." },
+      { year: "2011", event: "Leads SAP Ventures' spinout into an independent VC firm." },
+      { year: "2014", event: "The firm rebrands to Sapphire Ventures." },
+      { year: "2018", event: "MuleSoft, one of the firm's portfolio companies, is acquired by Salesforce for $6.5 billion." },
+      { year: "2021", event: "Relocates with his family to establish Sapphire's Austin office." }
+    ],
+    biography: "Nino Marakovic was born in Croatia and built his early career in investment banking at Morgan Stanley, Goldman Sachs, and Robertson Stephens before moving into venture capital at Draper Fisher Jurvetson. He joined SAP Ventures in 2006, eventually leading the team through its 2011 spinout into an independent venture firm — a deal he personally engineered — and the firm rebranded to Sapphire Ventures in 2014. Over 25 years of investing and operating, Marakovic has backed more than 100 private companies and venture funds and been affiliated with nearly 40 exits between IPOs and M&A, including LinkedIn, Monday.com, Integral Ad Science, OpsRamp, and Braze. Colleagues describe him as an unusually calm, no-nonsense investor who avoids getting caught up in ideology, and he now sits on the boards of ActivTrak and Adverity.",
+    sources: [
+      { label: "Sapphire Ventures — Nino Marakovic", url: "https://sapphireventures.com/team-member/nino-marakovic/" },
+      { label: "Grokipedia — Sapphire Ventures", url: "https://grokipedia.com/page/Sapphire_Ventures" }
+    ]
+  },
 };
 
 // ============================================================
@@ -4400,7 +4433,8 @@ const firmStages = {
    "flagship-pioneering": ["Seed", "Series A", "Series B", "Growth"],
    "qed-investors": ["Seed", "Series A", "Series B", "Growth"],
    "breakthrough-energy-ventures": ["Seed", "Series A", "Series B", "Growth"],
-   "orbimed": ["Seed", "Series A", "Series B", "Growth", "Late Stage"]
+   "orbimed": ["Seed", "Series A", "Series B", "Growth", "Late Stage"],
+   "sapphire-ventures": ["Series A", "Series B", "Growth", "Late Stage"]
 };
 
 // ============================================================
@@ -5074,6 +5108,35 @@ const firms = [
       { name: "Uber", ticker: "UBER", historicalPrice: null, price: 72.46 },
       { name: "GitLab", ticker: "GTLB", historicalPrice: null, price: null },
       { name: "Robinhood", ticker: "HOOD", historicalPrice: null, price: 99.96 }
+    ]
+  },
+   {
+    rank: 17,
+    name: "Sapphire Ventures",
+    sectors: ["Enterprise Software", "SaaS", "AI", "Cybersecurity"],
+    signatureExit: "MuleSoft's 2018 acquisition by Salesforce for $6.5 billion — a portfolio company Sapphire backed from SAP Ventures days through its own independent era",
+    slug: "sapphire-ventures",
+    website: "https://sapphireventures.com",
+    short: "Sapphire Ventures",
+    founded: 1996,
+    hq: "Menlo Park, CA",
+    aum: "$11B+",
+    thesis: "Sapphire Ventures was founded in 1996 as SAP's corporate venture arm, spun out as an independent firm in 2011 under CEO Nino Marakovic's leadership, and rebranded to its current name in 2014. That corporate origin left a lasting structural advantage: unlike most enterprise-focused funds, Sapphire operates both direct investing and a dedicated fund-of-funds strategy, Sapphire Partners, which backs early-stage venture funds across North America, Europe, and Israel alongside direct co-investments. The firm invests primarily at Series B through pre-IPO, writing checks from $5 million to $100 million to support companies staying private longer as they scale toward IPO-ready revenue, and has grown from $1.4 billion under management at spinout to more than $11 billion today across 226-plus portfolio companies, 30-plus public listings, and 50-plus acquisitions.",
+    leadership: [
+      { name: "Nino Marakovic", role: "CEO & Partner (Co-Founder)", profileSlug: "nino-marakovic" },
+      { name: "Jai Das", role: "President & Partner (Co-Founder)" },
+      { name: "Cathy Gao", role: "Partner" }
+    ],
+    timeline: [
+      { year: "1996", event: "SAP launches its venture capital arm." },
+      { year: "2006", event: "Nino Marakovic joins SAP Ventures, later leading the team." },
+      { year: "2011", event: "SAP Ventures spins out as an independent firm, managing $1.4 billion at the time." },
+      { year: "2014", event: "Rebrands to Sapphire Ventures." },
+      { year: "2018", event: "MuleSoft, a portfolio company, is acquired by Salesforce for $6.5 billion; Sapphire raises $1.4 billion for growth investments, pushing AUM north of $4 billion." },
+      { year: "2026", event: "Firm AUM surpasses $11 billion across direct and fund investing strategies." }
+    ],
+    holdings: [
+      { name: "Braze", ticker: "BRZE", historicalPrice: null, price: null }
     ]
   },
    {
