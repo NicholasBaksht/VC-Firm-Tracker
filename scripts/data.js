@@ -4598,6 +4598,39 @@ sources: [
       { label: "Forbes — Lakestar Pivot", url: "https://www.forbes.com/sites/iainmartin/2025/10/23/europe-venture-fund-lakestar-calls-halt-on-new-startup-bets/" }
     ]
   },
+   "eric-acher": {
+    name: "Eric Acher",
+    firm: "monashees",
+    firmSlug: "monashees",
+    title: "Co-Founder & Managing Partner",
+    joinedYear: 2005,
+    education: ["BA, Communications, ESPM", "Diploma, Business Administration, Fundação Getulio Vargas", "MBA, Kellogg School of Management, Northwestern University"],
+    previousExperience: [
+      "Strategy Consultant, McKinsey & Company",
+      "VC & PE Investor, General Atlantic (US & Latin America)"
+    ],
+    investmentFocus: ["Fintech", "Marketplaces", "Logistics", "Edtech", "Latin America"],
+    notableInvestments: [
+      { name: "99", ticker: null },
+      { name: "Rappi", ticker: null },
+      { name: "Elo7", ticker: null },
+      { name: "Loft", ticker: null }
+    ],
+    boardSeats: ["Fazenda Futuro", "Nomad", "Jusbrasil", "Conta Azul", "MindLab"],
+    ipoCount: 0,
+    majorExits: 1,
+    careerTimeline: [
+      { year: "1999", event: "Joins General Atlantic, doing VC and PE investing across the US and Latin America — his self-described 'investment school.'" },
+      { year: "2005", event: "Co-founds monashees with Fabio Igel in São Paulo, starting with a $12 million fund at a time when almost no early-stage VC industry existed in Brazil." },
+      { year: "2018", event: "99, a portfolio company, is acquired by Didi Chuxing for roughly $1 billion." },
+      { year: "2021", event: "Reports monashees has raised 10 funds totaling $1.5 billion, backing 125 companies including 9 unicorns." }
+    ],
+    biography: "Eric Acher co-founded monashees in 2005 during what he calls Brazil's 'tech winter' — a period when essentially no local early-stage venture capital industry existed — after cutting his teeth in strategy consulting at McKinsey and growth investing at General Atlantic across the US and Latin America. He started with just a $12 million fund and no real playbook to follow, building both monashees and much of the broader Latin American VC ecosystem from scratch alongside a handful of other early players. Two decades later, the firm has raised 10 funds totaling $1.5 billion, backed 125 companies including nine unicorns — Rappi, 99, Loggi, MadeiraMadeira, and Loft among them — and Acher has become one of the most recognized voices in Latin American venture capital, frequently drawing comparisons between the region's tech ecosystem and Southeast Asia's.",
+    sources: [
+      { label: "LAVCA — Eric Acher", url: "https://www.lavca.org/team-member/eric-acher/" },
+      { label: "Insignia Business Review", url: "https://review.insignia.vc/2021/07/13/parallels-and-synergies-between-latin-america-and-southeast-asia-from-eric-acher-founding-managing-partner-of-monashees-brazils-first-venture-capital-firm/" }
+    ]
+  },
 };
 
 // ============================================================
@@ -4751,7 +4784,8 @@ const firmStages = {
    "forgepoint-capital": ["Seed", "Series A", "Series B", "Growth"],
    "nfx": ["Pre-Seed", "Seed"],
    "point-nine": ["Pre-Seed", "Seed"],
-   "lakestar": ["Series A", "Series B", "Growth", "Late Stage"]
+   "lakestar": ["Series A", "Series B", "Growth", "Late Stage"],
+   "monashees": ["Seed", "Series A", "Series B", "Growth"]
 };
 
 // ============================================================
@@ -6821,6 +6855,30 @@ const firms = [
       { year: "2012", event: "Launches HAX, its hardware-focused accelerator, in Shenzhen." },
       { year: "2014", event: "Launches IndieBio, its life sciences accelerator." },
       { year: "2024", event: "Closes its most recent fund, the Sustainable Economies Fund, at $306 million in April." }
+    ],
+    holdings: []
+  },
+   {
+    rank: 55,
+    name: "monashees",
+    sectors: ["Fintech", "Marketplaces", "Logistics", "Edtech"],
+    signatureExit: "99's 2018 acquisition by Didi Chuxing for roughly $1 billion — one of the earliest major venture-backed exits to come out of Latin America's ride-hailing sector",
+    slug: "monashees",
+    website: "https://monashees.com",
+    short: "monashees",
+    founded: 2005,
+    hq: "São Paulo, Brazil",
+    aum: "$1.5B (across 10 funds)",
+    thesis: "monashees was founded in 2005 by Eric Acher and Fabio Igel, making it Brazil's first venture capital firm at a time the two describe as the country's 'tech winter' — essentially no local early-stage VC industry existed, and they built both the firm and much of the surrounding ecosystem from scratch, starting with just a $12 million debut fund. Organized around the thesis 'The future is human,' the firm invests sector-agnostically but stays deliberately hands-on, working directly with more than 300 founders across 150-plus companies to help build Latin America's first generation of world-class technology companies from the earliest possible stage. That patient, region-building approach has produced nine unicorns — Rappi, 99, Loggi, MadeiraMadeira, and Loft among them — and grown into $1.5 billion raised across 10 funds since inception.",
+    leadership: [
+      { name: "Eric Acher", role: "Co-Founder & Managing Partner", profileSlug: "eric-acher" },
+      { name: "Fabio Igel", role: "Co-Founder & Managing Partner" }
+    ],
+    timeline: [
+      { year: "2005", event: "Eric Acher and Fabio Igel found monashees in São Paulo, Brazil's first venture capital firm, with a $12 million debut fund." },
+      { year: "2018", event: "99 is acquired by Didi Chuxing for roughly $1 billion." },
+      { year: "2021", event: "Reports having raised 10 funds totaling $1.5 billion, backing 125 companies including 9 unicorns." },
+      { year: "2026", event: "Portfolio community reaches more than 300 founders across 150-plus companies." }
     ],
     holdings: []
   },
