@@ -4038,6 +4038,41 @@ sources: [
       { label: "SuperScout", url: "https://superscout.co/investor/jafco-group" }
     ]
   },
+   "thomas-tsao": {
+    name: "Thomas Tsao",
+    firm: "Gobi Partners",
+    firmSlug: "gobi-partners",
+    title: "Co-Founder & Chairman",
+    joinedYear: 2002,
+    education: ["BA, Economics, Harvard University"],
+    previousExperience: [
+      "Investor, WI Harper",
+      "CEO, DMG (2 years)",
+      "Board Member, Middle East Venture Capital Association"
+    ],
+    investmentFocus: ["Fintech", "Consumer", "Mobility", "TaqwaTech (Muslim Digital Economy)"],
+    notableInvestments: [
+      { name: "Airwallex", ticker: null },
+      { name: "Tuniu", ticker: null },
+      { name: "Carsome", ticker: null },
+      { name: "Prenetics", ticker: "PRE" }
+    ],
+    boardSeats: ["Endeavor Malaysia"],
+    ipoCount: 2,
+    majorExits: 4,
+    careerTimeline: [
+      { year: "2002", event: "Co-founds Gobi Partners with Lawrence Tse and Wai Kit Lau, all previously at WI Harper." },
+      { year: "2006", event: "Founds SEO China, a nonprofit that has since provided more than 200 internships to underserved college students." },
+      { year: "2013", event: "Named to the Forbes List of China's Top VCs, a recognition repeated annually through 2017." },
+      { year: "2015", event: "Relocates to Kuala Lumpur, establishing several funds with Malaysia's MAVCAP." },
+      { year: "2018", event: "Launches Gobi's ASEAN SuperSeed Fund, backing Carsome and Airwallex at early stages." }
+    ],
+    biography: "Thomas Tsao has spent more than 30 years across venture capital, operations, and investment banking, and co-founded Gobi Partners in 2002 with two fellow WI Harper alumni to build one of the earliest genuinely Pan-Asian venture platforms. His early China portfolio includes first-round bets on Airwallex, Teambition (acquired by Alibaba), and Tuniu (Nasdaq IPO), earning him five consecutive years on the Forbes List of China's Top VCs. His 2015 relocation to Kuala Lumpur opened an entirely new chapter for the firm, establishing funds with Malaysia's MAVCAP and expanding Gobi into Southeast Asian companies like Carsome, Funding Societies, and Kumu. He's now building Gobi's TaqwaTech practice, one of the first dedicated venture theses focused on the global Muslim digital economy, and remains active in nonprofit work through SEO China, which he founded in 2006.",
+    sources: [
+      { label: "Gobi Partners Team", url: "https://www.gobi.vc/team/thomas-g-tsao" },
+      { label: "The Org", url: "https://theorg.com/org/gobi-partners/org-chart/thomas-g-tsao" }
+    ]
+  },
 };
 
 // ============================================================
@@ -4174,7 +4209,8 @@ const firmStages = {
    "barclays-uk-ventures": ["Seed", "Series A", "Growth"],
    "chiratae-ventures": ["Seed", "Series A", "Series B", "Growth"],
    "5y-capital": ["Seed", "Series A", "Series B", "Growth"],
-   "jafco-group": ["Seed", "Series A", "Series B", "Growth", "Late Stage"]
+   "jafco-group": ["Seed", "Series A", "Series B", "Growth", "Late Stage"],
+   "gobi-partners": ["Seed", "Series A", "Series B", "Growth"]
 };
 
 // ============================================================
