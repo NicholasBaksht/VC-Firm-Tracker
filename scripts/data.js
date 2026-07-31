@@ -3980,6 +3980,38 @@ sources: [
       { label: "Wikipedia — Chiratae Ventures", url: "https://en.wikipedia.org/wiki/Chiratae_Ventures" }
     ]
   },
+   "richard-liu-5y": {
+    name: "Richard Liu",
+    firm: "5Y Capital",
+    firmSlug: "5y-capital",
+    title: "Founding Partner",
+    joinedYear: 2008,
+    education: ["China Europe International Business School"],
+    previousExperience: [
+      "Investment Professional, Morningside Group"
+    ],
+    investmentFocus: ["Information Technology", "Biotechnology", "Consumer", "Electric Vehicles"],
+    notableInvestments: [
+      { name: "Xiaomi", ticker: "1810.HK" },
+      { name: "XPeng", ticker: "XPEV" },
+      { name: "Kingsoft", ticker: null },
+      { name: "Horizon Robotics", ticker: null }
+    ],
+    boardSeats: [],
+    ipoCount: 4,
+    majorExits: 0,
+    careerTimeline: [
+      { year: "1999", event: "Joins the Morningside Group after attending China Europe International Business School." },
+      { year: "2008", event: "Co-founds Morningside Venture Capital, later 5Y Capital, with Ken Shi." },
+      { year: "2018", event: "Xiaomi, where he was the first institutional investor, goes public in Hong Kong at a roughly 800x return." },
+      { year: "2026", event: "Named to the Forbes Midas List for the eleventh consecutive year, with 5Y Capital managing $6 billion in global capital." }
+    ],
+    biography: "Richard Liu joined the Morningside Group in 1999 after meeting co-founder Ken Shi at business school, and the two spun out their own fund in 2008 under the Morningside name, with the Chan family's blessing and backing as anchor investor. His defining bet came early: Liu was the first institutional investor in Xiaomi, a position that returned a reported 800 times its original investment once the smartphone maker went public in Hong Kong in 2018. He's now spent 11 consecutive years on the Forbes Midas List, with a portfolio spanning information technology, biotechnology, and consumer businesses including Xiaomi, XPeng, Kingsoft, and Horizon Robotics, and 5Y Capital under his leadership now manages $6 billion in global capital.",
+    sources: [
+      { label: "Forbes Profile", url: "https://www.forbes.com/profile/richard-liu/" },
+      { label: "The Wire China", url: "https://www.thewirechina.com/2021/07/18/who-is-5y-capital/" }
+    ]
+  },
 };
 
 // ============================================================
@@ -4114,7 +4146,8 @@ const firmStages = {
    "rakuten-capital": ["Seed", "Series A", "Series B", "Growth"],
    "toyota-ventures": ["Seed", "Series A", "Series B"],
    "barclays-uk-ventures": ["Seed", "Series A", "Growth"],
-   "chiratae-ventures": ["Seed", "Series A", "Series B", "Growth"]
+   "chiratae-ventures": ["Seed", "Series A", "Series B", "Growth"],
+   "5y-capital": ["Seed", "Series A", "Series B", "Growth"]
 };
 
 // ============================================================
@@ -5334,6 +5367,34 @@ const firms = [
     holdings: [
       { name: "SOPHiA Genetics", ticker: "SOPH", historicalPrice: null, price: null },
       { name: "Flywire", ticker: "FLYW", historicalPrice: null, price: null }
+    ]
+  },
+   {
+    rank: 28,
+    name: "5Y Capital",
+    sectors: ["AI", "Consumer Internet", "Enterprise Software", "Deep Tech"],
+    signatureExit: "Xiaomi's 2018 Hong Kong Stock Exchange IPO — 5Y (then Morningside) was Xiaomi's first institutional backer, realizing a reported 800x return on its original investment as the company grew into one worth roughly $170 billion",
+    slug: "5y-capital",
+    website: "https://www.5ycap.com",
+    short: "5Y Capital",
+    founded: 2008,
+    hq: "Shanghai, China",
+    aum: "$6B",
+    thesis: "5Y Capital was founded in 2008 by Richard Liu and Ken Shi, both former Morningside Group investment professionals who spun out their own China-focused technology fund during the global financial crisis, operating under the Morningside name with the blessing of the Chan family, the Hong Kong property dynasty behind Morningside Group. The firm rebranded from Morningside Venture Capital to 5Y Capital in October 2020, taking its new name from Wuyuan Road, the location of its Shanghai headquarters. Its defining outcome came early: 5Y was the first institutional investor in Xiaomi, and by the time the smartphone maker completed its 2018 Hong Kong IPO, that stake had returned a reported 800 times its original investment — one of the largest single venture outcomes in Chinese technology history, alongside a later $30 billion return from Kuaishou's 2021 Nasdaq listing.",
+    leadership: [
+      { name: "Richard Liu", role: "Founding Partner", profileSlug: "richard-liu-5y" },
+      { name: "Ken Shi", role: "Founding Partner" }
+    ],
+    timeline: [
+      { year: "1999", event: "Richard Liu and Ken Shi join the Morningside Group after attending China Europe International Business School together." },
+      { year: "2008", event: "The two spin out Morningside Venture Capital, backed by the Chan family as anchor investor, amid the global financial crisis." },
+      { year: "2018", event: "Xiaomi, the firm's first institutional investment, completes its Hong Kong IPO." },
+      { year: "2020", event: "Rebrands from Morningside Venture Capital to 5Y Capital in October." },
+      { year: "2021", event: "Kuaishou's Nasdaq listing returns a reported $30 billion; Xpeng and Agora also go public the same year." }
+    ],
+    holdings: [
+      { name: "Xiaomi", ticker: "1810.HK", historicalPrice: null, price: null },
+      { name: "XPeng", ticker: "XPEV", historicalPrice: null, price: null }
     ]
   },
    {
