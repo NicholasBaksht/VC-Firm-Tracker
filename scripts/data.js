@@ -4562,6 +4562,42 @@ sources: [
       { label: "Sifted", url: "https://sifted.eu/articles/brunch-with-point-nine-janz" }
     ]
   },
+   "klaus-hommels": {
+    name: "Klaus Hommels",
+    firm: "Lakestar",
+    firmSlug: "lakestar",
+    title: "Founder & Chairman",
+    joinedYear: 2012,
+    education: ["PhD, Finance, University of Fribourg", "MBA, University of Fribourg"],
+    previousExperience: [
+      "Board Member, AOL Germany",
+      "Venture Partner, Benchmark Capital Europe",
+      "Founder, Hommels Holding"
+    ],
+    investmentFocus: ["Fintech", "Deep Tech", "Defense & Dual-Use", "Consumer Internet"],
+    notableInvestments: [
+      { name: "Spotify", ticker: "SPOT" },
+      { name: "Revolut", ticker: null },
+      { name: "Klarna", ticker: null },
+      { name: "Skype", ticker: null }
+    ],
+    boardSeats: ["Spotify"],
+    ipoCount: 1,
+    majorExits: 1,
+    careerTimeline: [
+      { year: "1995", event: "Becomes a board member of AOL Germany after starting his career at Bertelsmann." },
+      { year: "2011", event: "Skype, an early personal investment, is acquired by Microsoft for $8.5 billion." },
+      { year: "2012", event: "Founds Lakestar in Zurich, following a period running his own fund, Hommels Holding." },
+      { year: "2018", event: "Spotify, an early Lakestar-era bet, completes its direct listing." },
+      { year: "2023", event: "Named founding Chairman of the NATO Innovation Fund's Board of Directors." },
+      { year: "2025", event: "Announces Lakestar will stop raising new generalist venture funds, shifting to invest primarily from personal capital." }
+    ],
+    biography: "Klaus Hommels built his reputation on a remarkable run of early bets — Skype, Xing, King, Facebook, Spotify, and Airbnb among them — well before founding Lakestar in Zurich in 2012 following stints at AOL Germany and as a venture partner at Benchmark Capital Europe. He grew Lakestar into one of Europe's largest venture funds, raising more than €2 billion across early-stage and growth vehicles and continuing his pattern of early conviction with Revolut, Klarna, and defense-tech unicorn Helsing. In October 2025, Hommels announced a significant strategic pivot: Lakestar will no longer raise new generalist funds from outside LPs, with his future bets — including a growing focus on European defense and dual-use technology — funded primarily from his own personal capital instead. He currently chairs the NATO Innovation Fund's Geopolitical and Strategic Advisory Council and remains one of the most vocal advocates for European technological sovereignty.",
+    sources: [
+      { label: "Forbes Profile", url: "https://www.forbes.com/profile/klaus-hommels/" },
+      { label: "Forbes — Lakestar Pivot", url: "https://www.forbes.com/sites/iainmartin/2025/10/23/europe-venture-fund-lakestar-calls-halt-on-new-startup-bets/" }
+    ]
+  },
 };
 
 // ============================================================
@@ -4714,7 +4750,8 @@ const firmStages = {
    "energy-impact-partners": ["Series A", "Series B", "Growth"],
    "forgepoint-capital": ["Seed", "Series A", "Series B", "Growth"],
    "nfx": ["Pre-Seed", "Seed"],
-   "point-nine": ["Pre-Seed", "Seed"]
+   "point-nine": ["Pre-Seed", "Seed"],
+   "lakestar": ["Series A", "Series B", "Growth", "Late Stage"]
 };
 
 // ============================================================
@@ -7088,6 +7125,34 @@ const firms = [
       { year: "2022", event: "Zendesk is taken private for $10.2 billion." }
     ],
     holdings: []
+  },
+   {
+    rank: 68,
+    name: "Lakestar",
+    sectors: ["Fintech", "Deep Tech", "Defense & Dual-Use", "Consumer Internet"],
+    signatureExit: "Spotify's 2018 New York Stock Exchange direct listing — one of Klaus Hommels' early European conviction bets, made years before the streaming company reached mainstream household status",
+    slug: "lakestar",
+    website: "https://lakestar.com",
+    short: "Lakestar",
+    founded: 2012,
+    hq: "Zurich, Switzerland",
+    aum: "€2B+ ($2B+)",
+    thesis: "Lakestar was founded in 2012 by Klaus Hommels, a former Benchmark Capital Europe venture partner already famous for early personal bets on Skype, Facebook, and Spotify before the firm even existed. Since raising its first institutional fund in 2013, Lakestar has grown into one of Europe's largest venture platforms, managing more than €2 billion across early-stage and growth vehicles, with offices spanning Zurich, Berlin, London, New York, and Hong Kong. In October 2025, the firm announced a significant strategic shift: rather than raising further generalist funds from outside LPs, Hommels will now invest primarily from his own personal capital going forward, concentrating on doubling down on existing bets like Revolut and defense-technology unicorn Helsing, alongside a dedicated $300 million Resilience Fund launched in July 2026 for European defense and dual-use technology.",
+    leadership: [
+      { name: "Klaus Hommels", role: "Founder & Chairman", profileSlug: "klaus-hommels" }
+    ],
+    timeline: [
+      { year: "2012", event: "Klaus Hommels founds Lakestar in Zurich." },
+      { year: "2013", event: "Raises its first institutional fund, Lakestar I, at €150 million." },
+      { year: "2018", event: "Spotify completes its direct listing on the NYSE." },
+      { year: "2019", event: "Closes a $700-800 million fund." },
+      { year: "2025", event: "Closes a $265 million continuation fund in September; announces in October it will halt new generalist fund fundraising in favor of personal capital." },
+      { year: "2026", event: "Launches a dedicated $300 million Resilience Fund for European defense and dual-use technology in July." }
+    ],
+    holdings: [
+      { name: "Spotify", ticker: "SPOT", historicalPrice: null, price: 482.66 },
+      { name: "SoFi", ticker: "SOFI", historicalPrice: null, price: 16.74 }
+    ]
   },
    {
     rank: 36,
