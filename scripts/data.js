@@ -4357,6 +4357,37 @@ sources: [
       { label: "Beam Therapeutics SEC Filing", url: "https://www.sec.gov/Archives/edgar/data/1745999/000156459020014308/beam-10k_20191231.htm" }
     ]
   },
+   "kevin-starr": {
+    name: "Kevin Starr",
+    firm: "Third Rock Ventures",
+    firmSlug: "third-rock-ventures",
+    title: "Co-Founding Partner",
+    joinedYear: 2007,
+    education: [],
+    previousExperience: [
+      "COO & CFO, Millennium Pharmaceuticals"
+    ],
+    investmentFocus: ["Rare & Orphan Diseases", "Gene Therapy", "Precision Oncology", "Company Creation"],
+    notableInvestments: [
+      { name: "Bluebird Bio", ticker: "BLUE" },
+      { name: "Agios Pharmaceuticals", ticker: "AGIO" },
+      { name: "Foundation Medicine", ticker: null }
+    ],
+    boardSeats: [],
+    ipoCount: 3,
+    majorExits: 1,
+    careerTimeline: [
+      { year: "2006", event: "Meets future co-founders Mark Levin and Robert Tepper at a conference, lamenting the lack of funding for disruptive biotech ideas while all three still work at Millennium Pharmaceuticals." },
+      { year: "2007", event: "Co-founds Third Rock Ventures in Boston, raising a $378 million debut fund within ten weeks." },
+      { year: "2010s", event: "Helps build Bluebird Bio, Agios, and Foundation Medicine from early scientific concepts into category-defining public companies." },
+      { year: "2016", event: "Steps back from active fund leadership to become an advisor for Fund IV, citing a deliberate pause on starting new companies." }
+    ],
+    biography: "Kevin Starr co-founded Third Rock Ventures in 2007 alongside two other former Millennium Pharmaceuticals executives, after the trio grew frustrated watching big pharma and traditional VCs abandon early-stage drug discovery. Rather than simply fund existing startups, they built a genuinely different model: touring academic research facilities, workshopping breakthrough science with scientists for one to three years, then constructing companies from scratch around it — a 'Discover-Launch-Build-Transform' approach that helped create Bluebird Bio, Agios Pharmaceuticals, and Foundation Medicine. Starr focused heavily on ultra-rare and orphan diseases throughout his active years at the firm, and in 2016 he stepped back to an advisory role for Third Rock's fourth fund, a deliberate pause he attributed to the firm's team-oriented, long-term operating model no longer requiring his direct day-to-day involvement in starting new companies.",
+    sources: [
+      { label: "The Org — Kevin Starr", url: "https://theorg.com/org/third-rock-ventures/org-chart/kevin-starr" },
+      { label: "Fortune", url: "https://fortune.com/2015/02/19/third-rock-ventures-giving-birth-to-a-new-generation-of-biotechs/" }
+    ]
+  },
 };
 
 // ============================================================
@@ -4503,7 +4534,8 @@ const firmStages = {
    "orbimed": ["Seed", "Series A", "Series B", "Growth", "Late Stage"],
    "sapphire-ventures": ["Series A", "Series B", "Growth", "Late Stage"],
    "forerunner-ventures": ["Seed", "Series A", "Series B"],
-   "f-prime-capital": ["Seed", "Series A", "Series B", "Growth"]
+   "f-prime-capital": ["Seed", "Series A", "Series B", "Growth"],
+   "third-rock-ventures": ["Seed", "Series A", "Series B"]
 };
 
 // ============================================================
@@ -6712,6 +6744,36 @@ const firms = [
     ],
     holdings: [
       { name: "Warby Parker", ticker: "WRBY", historicalPrice: null, price: null }
+    ]
+  },
+   {
+    rank: 63,
+    name: "Third Rock Ventures",
+    sectors: ["Biotech", "Therapeutics", "Life Sciences"],
+    signatureExit: "Bluebird Bio's public listing — one of the category-defining gene and cell therapy companies Third Rock built from early scientific concept through IPO, alongside Agios Pharmaceuticals and Foundation Medicine",
+    slug: "third-rock-ventures",
+    website: "https://thirdrockventures.com",
+    short: "Third Rock Ventures",
+    founded: 2007,
+    hq: "Boston, MA",
+    aum: "$3.8B (raised since inception)",
+    thesis: "Third Rock Ventures was founded in 2007 by Mark Levin, Kevin Starr, and Robert Tepper, three former Millennium Pharmaceuticals executives who met discussing how big pharma and traditional VCs had abandoned early-stage drug discovery, and decided to build the disruptive-biotech supplier that didn't yet exist. Rather than fund fully-formed startups, Third Rock runs a distinctive 'Discover-Launch-Build-Transform' model: the team tours academic research facilities, workshops breakthrough science with scientists for one to three years, and then constructs companies from scratch around it, defining the structure, vision, and leadership before the company even launches. That company-creation-first approach raised a $378 million debut fund within ten weeks of launching and has since produced more than 60 companies including Bluebird Bio, Agios Pharmaceuticals, Foundation Medicine, Sage Therapeutics, and Editas Medicine, with $3.8 billion raised since inception.",
+    leadership: [
+      { name: "Kevin Starr", role: "Co-Founding Partner", profileSlug: "kevin-starr" },
+      { name: "Robert Tepper", role: "Co-Founding Partner" },
+      { name: "Mark Levin", role: "Co-Founding Partner" }
+    ],
+    timeline: [
+      { year: "2006", event: "Mark Levin, Kevin Starr, and Robert Tepper, all Millennium Pharmaceuticals executives, discuss the funding gap for disruptive biotech startups." },
+      { year: "2007", event: "The three found Third Rock Ventures in Boston, raising a $378 million debut fund." },
+      { year: "2013", event: "Bluebird Bio, one of Third Rock's earliest company-creation successes, goes public." },
+      { year: "2014", event: "Agios Pharmaceuticals and Foundation Medicine, two more Third Rock creations, are established as category leaders in their fields." },
+      { year: "2016", event: "Co-founders Mark Levin and Kevin Starr step back to advisory roles for Fund IV." },
+      { year: "2024", event: "Total capital raised since inception reaches $3.8 billion across more than 60 companies." }
+    ],
+    holdings: [
+      { name: "Bluebird Bio", ticker: "BLUE", historicalPrice: null, price: null },
+      { name: "Agios Pharmaceuticals", ticker: "AGIO", historicalPrice: null, price: null }
     ]
   },
    {
