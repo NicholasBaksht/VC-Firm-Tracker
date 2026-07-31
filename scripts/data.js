@@ -4525,6 +4525,43 @@ sources: [
       { label: "KoreaTechDesk", url: "https://koreatechdesk.com/james-currier-nfx-the-investor-you-can-rely-on-for-grand-business-success" }
     ]
   },
+   "christoph-janz": {
+    name: "Christoph Janz",
+    firm: "Point Nine",
+    firmSlug: "point-nine",
+    title: "Co-Founder & Managing Partner",
+    joinedYear: 2011,
+    education: [],
+    previousExperience: [
+      "Founder, DealPilot (early ecommerce price comparison)",
+      "Founder, PageFlakes"
+    ],
+    investmentFocus: ["B2B SaaS", "Marketplaces", "AI"],
+    notableInvestments: [
+      { name: "Zendesk", ticker: null },
+      { name: "Loom", ticker: null },
+      { name: "Clio", ticker: null },
+      { name: "Delivery Hero", ticker: null }
+    ],
+    boardSeats: [],
+    ipoCount: 1,
+    majorExits: 2,
+    careerTimeline: [
+      { year: "1990s", event: "Starts trading second-hand computers at age 12, never attending university." },
+      { year: "2000s", event: "Founds and exits DealPilot and PageFlakes before moving into angel investing." },
+      { year: "2009", event: "Makes an early angel investment in Zendesk, his first deal, and also invests in legal software company Clio." },
+      { year: "2011", event: "Co-founds Point Nine Capital with Pawel Chudzinski and Kolja Hebenstreit in Berlin." },
+      { year: "2014", event: "Zendesk goes public, closing its first trading day up 49% from its $9 IPO price." },
+      { year: "2017", event: "Invests roughly $1 million in video tool Loom." },
+      { year: "2022", event: "Zendesk is taken private by Hellman & Friedman and Permira for $10.2 billion." },
+      { year: "2023", event: "Loom is acquired by Atlassian for $975 million." }
+    ],
+    biography: "Christoph Janz never attended university, starting out trading second-hand computers at age 12 before founding and exiting several companies including DealPilot and PageFlakes. He made his first-ever angel check into Zendesk, a bet that would eventually see the company go public in 2014 and later get taken private in a $10.2 billion deal led by Hellman & Friedman and Permira in 2022. He co-founded Point Nine Capital with Pawel Chudzinski in 2011, building one of Europe's most focused B2B SaaS specialist funds, and his instinct for early conviction repeated itself in 2017 when he put roughly $1 million into video recording tool Loom — a bet Atlassian validated by acquiring the company for $975 million in 2023. Janz remains one of Point Nine's most publicly visible voices, writing extensively about SaaS fundamentals on the firm's own essays platform.",
+    sources: [
+      { label: "Forbes Profile", url: "https://www.forbes.com/profile/christoph-janz/" },
+      { label: "Sifted", url: "https://sifted.eu/articles/brunch-with-point-nine-janz" }
+    ]
+  },
 };
 
 // ============================================================
@@ -4676,7 +4713,8 @@ const firmStages = {
    "lowercarbon-capital": ["Pre-Seed", "Seed", "Series A", "Series B"],
    "energy-impact-partners": ["Series A", "Series B", "Growth"],
    "forgepoint-capital": ["Seed", "Series A", "Series B", "Growth"],
-   "nfx": ["Pre-Seed", "Seed"]
+   "nfx": ["Pre-Seed", "Seed"],
+   "point-nine": ["Pre-Seed", "Seed"]
 };
 
 // ============================================================
@@ -7023,6 +7061,33 @@ const firms = [
       { name: "Lyft", ticker: "LYFT", historicalPrice: null, price: 15.45 },
       { name: "DoorDash", ticker: "DASH", historicalPrice: 170.65, price: 175.00 }
     ]
+  },
+   {
+    rank: 67,
+    name: "Point Nine",
+    sectors: ["SaaS", "Marketplaces", "AI", "Fintech"],
+    signatureExit: "Zendesk, Christoph Janz's very first angel check, went public in 2014 and was later taken private in a $10.2 billion deal led by Hellman & Friedman and Permira in 2022",
+    slug: "point-nine",
+    website: "https://www.pointnine.com",
+    short: "Point Nine",
+    founded: 2011,
+    hq: "Berlin, Germany",
+    aum: "Not publicly disclosed (Fund III closed at $60M, 2015; multiple funds since)",
+    thesis: "Point Nine grew out of Team Europe Ventures, a SaaS-focused effort Christoph Janz and Pawel Chudzinski began around 2008, before officially rebranding and formalizing as Point Nine Capital in 2011 with co-founder Kolja Hebenstreit. The firm has stayed deliberately narrow and disciplined for more than a decade, making just 10-12 investments per year almost entirely at the seed stage, concentrated in B2B SaaS, marketplaces, and — more recently — AI. That focus produced an unusually high hit rate: more than 65% of Point Nine's seed investments progress to a Series A, and more than ten portfolio companies have reached $100 million or more in annual recurring revenue, including Zendesk, Delivery Hero, Algolia, Contentful, Clio, and Loom, all backed at their earliest stages.",
+    leadership: [
+      { name: "Christoph Janz", role: "Co-Founder & Managing Partner", profileSlug: "christoph-janz" },
+      { name: "Pawel Chudzinski", role: "Co-Founder & Managing Partner" },
+      { name: "Louis Coppey", role: "Partner" }
+    ],
+    timeline: [
+      { year: "2008", event: "Christoph Janz and Pawel Chudzinski begin investing together through Team Europe Ventures." },
+      { year: "2009", event: "Makes an early angel investment in Zendesk." },
+      { year: "2011", event: "Officially rebrands as Point Nine Capital, with Kolja Hebenstreit joining as a co-founder." },
+      { year: "2014", event: "Zendesk goes public." },
+      { year: "2015", event: "Closes Point Nine Capital Fund III at $60 million." },
+      { year: "2022", event: "Zendesk is taken private for $10.2 billion." }
+    ],
+    holdings: []
   },
    {
     rank: 36,
