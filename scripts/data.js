@@ -4073,6 +4073,40 @@ sources: [
       { label: "The Org", url: "https://theorg.com/org/gobi-partners/org-chart/thomas-g-tsao" }
     ]
   },
+   "reshma-sohoni": {
+    name: "Reshma Sohoni",
+    firm: "Seedcamp",
+    firmSlug: "seedcamp",
+    title: "Co-Founder & Managing Partner",
+    joinedYear: 2007,
+    education: ["BS, Engineering & Business, University of Pennsylvania", "MBA, INSEAD"],
+    previousExperience: [
+      "Vodafone",
+      "Jefferies Broadview"
+    ],
+    investmentFocus: ["Fintech", "SaaS", "AI", "US Expansion for European Founders"],
+    notableInvestments: [
+      { name: "Wise", ticker: "WISE" },
+      { name: "UiPath", ticker: "PATH" },
+      { name: "Revolut", ticker: null },
+      { name: "Synthesia", ticker: null }
+    ],
+    boardSeats: [],
+    ipoCount: 1,
+    majorExits: 0,
+    careerTimeline: [
+      { year: "2007", event: "Co-founds Seedcamp with Saul Klein in London, after roles at Vodafone and Jefferies Broadview." },
+      { year: "2019", event: "Leads Seedcamp's first backing of Synthesia in April, years before its $4 billion Series E valuation." },
+      { year: "2021", event: "Awarded an MBE by Queen Elizabeth II for contributions to the British tech ecosystem; UiPath goes public at a $35 billion valuation." },
+      { year: "2025", event: "Returns to the Forbes Midas Seed List for the fourth time." },
+      { year: "2026", event: "Leads Seedcamp's $320 million raise and US expansion in June." }
+    ],
+    biography: "Reshma Sohoni was born in India, raised in the U.S., and studied engineering and business at the University of Pennsylvania before an INSEAD MBA and roles at Vodafone and Jefferies Broadview — a genuinely international path that shaped Seedcamp's identity as a firm built to help European founders think globally from day one. She co-founded the firm with Saul Klein in 2007, and has stayed personally involved with its biggest outcomes ever since: she was Synthesia's first backer in 2019, years before its $4 billion valuation, and Seedcamp's early conviction in Wise, Revolut, and UiPath produced three of Europe's genuine decacorns. She received an MBE from Queen Elizabeth II in 2021 for her contributions to the British tech ecosystem, has advised the U.K. government's Digital Economy Council, and returned to the Forbes Midas Seed List for a fourth time in 2025.",
+    sources: [
+      { label: "Forbes Profile", url: "https://www.forbes.com/profile/reshma-sohoni/" },
+      { label: "Seedcamp Team", url: "https://seedcamp.com/our-team/" }
+    ]
+  },
 };
 
 // ============================================================
@@ -4210,7 +4244,8 @@ const firmStages = {
    "chiratae-ventures": ["Seed", "Series A", "Series B", "Growth"],
    "5y-capital": ["Seed", "Series A", "Series B", "Growth"],
    "jafco-group": ["Seed", "Series A", "Series B", "Growth", "Late Stage"],
-   "gobi-partners": ["Seed", "Series A", "Series B", "Growth"]
+   "gobi-partners": ["Seed", "Series A", "Series B", "Growth"],
+   "seedcamp": ["Pre-Seed", "Seed", "Series A", "Series B"]
 };
 
 // ============================================================
@@ -6167,6 +6202,35 @@ const firms = [
     ],
     holdings: [
       { name: "Prenetics", ticker: "PRE", historicalPrice: null, price: null }
+    ]
+  },
+   {
+    rank: 60,
+    name: "Seedcamp",
+    sectors: ["Fintech", "SaaS", "AI", "Cybersecurity"],
+    signatureExit: "UiPath's April 2021 Nasdaq IPO at a $35 billion valuation — Seedcamp was the process automation company's earliest backer, one of three decacorns (alongside Wise and Revolut) that trace back to its first check",
+    slug: "seedcamp",
+    website: "https://seedcamp.com",
+    short: "Seedcamp",
+    founded: 2007,
+    hq: "London, UK",
+    aum: "$1B+ (following $320M raise, June 2026)",
+    thesis: "Seedcamp was founded in May 2007 by Reshma Sohoni and Saul Klein, launched with backing from 30 European investors and a modest $2.5 million first fund, and has spent nearly two decades establishing itself as Europe's original first-check investor — a title the firm still uses about itself, and one that's hard to dispute given its track record. Seedcamp has been the earliest backer of three genuine decacorns: Wise, Revolut, and UiPath, which went public on the Nasdaq in April 2021 at a $35 billion valuation. In June 2026 the firm closed $320 million in fresh capital — a $220 million Core fund and a $100 million Select fund for following winners through Series B and beyond — expanding its US presence specifically to keep supporting European founders as they go global, and pushing total assets under management past $1 billion.",
+    leadership: [
+      { name: "Reshma Sohoni", role: "Co-Founder & Managing Partner", profileSlug: "reshma-sohoni" },
+      { name: "Carlos Eduardo Espinal", role: "Managing Partner" },
+      { name: "Saul Klein", role: "Co-Founder", profileSlug: "saul-klein" }
+    ],
+    timeline: [
+      { year: "2007", event: "Reshma Sohoni and Saul Klein launch Seedcamp in London with backing from 30 European investors." },
+      { year: "2010", event: "Carlos Espinal joins as Partner." },
+      { year: "2014", event: "Announces a €20 million seed fund." },
+      { year: "2021", event: "UiPath goes public on the Nasdaq in April at a $35 billion valuation." },
+      { year: "2026", event: "Raises $320 million across a Core and Select fund in June, pushing total AUM past $1 billion and expanding the firm's US presence." }
+    ],
+    holdings: [
+      { name: "UiPath", ticker: "PATH", historicalPrice: null, price: 12.19 },
+      { name: "Wise", ticker: "WISE", historicalPrice: null, price: null }
     ]
   },
    {
