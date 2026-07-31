@@ -4324,6 +4324,39 @@ sources: [
       { label: "Wikipedia — Forerunner Ventures", url: "https://en.wikipedia.org/wiki/Forerunner_Ventures" }
     ]
   },
+   "stephen-knight": {
+    name: "Stephen Knight",
+    firm: "F-Prime Capital",
+    firmSlug: "f-prime-capital",
+    title: "President & Senior Managing Partner",
+    joinedYear: 2003,
+    education: ["MD, Yale University School of Medicine", "MBA"],
+    previousExperience: [
+      "Researcher, AT&T Bell Laboratories",
+      "Researcher, National Institutes of Health",
+      "Senior management roles, private & public biotechnology and consulting companies"
+    ],
+    investmentFocus: ["Biotechnology", "Rare Disease", "Gene Therapy", "Company Formation"],
+    notableInvestments: [
+      { name: "Beam Therapeutics", ticker: "BEAM" },
+      { name: "Denali Therapeutics", ticker: "DNLI" },
+      { name: "Blueprint Medicines", ticker: "BPMC" }
+    ],
+    boardSeats: ["Beam Therapeutics", "Iora Health", "Pulmocide"],
+    ipoCount: 4,
+    majorExits: 0,
+    careerTimeline: [
+      { year: "2003", event: "Joins F-Prime Capital, then known as Fidelity Biosciences." },
+      { year: "2017", event: "Co-founds Denali Therapeutics; portfolio company Denali completes its IPO in December." },
+      { year: "2017", event: "Joins Beam Therapeutics' board of directors in June." },
+      { year: "2020", event: "Beam Therapeutics, which he co-founded, completes its Nasdaq IPO." }
+    ],
+    biography: "Stephen Knight brings an unusually technical foundation to biotech investing: an MD from Yale, an MBA, and early research experience at AT&T Bell Laboratories and the NIH, followed by more than 25 years operating inside pharmaceutical and biotechnology companies before joining F-Prime Capital (then Fidelity Biosciences) in 2003. Rather than simply writing checks, he's personally co-founded more than 30 platform biotech companies alongside academic researchers, including Beam Therapeutics and Denali Therapeutics — both of which he helped build from the earliest scientific idea through their respective Nasdaq IPOs. That hands-on, company-creation approach, drawing on Fidelity's resources and a distinctive 'technical-risk-yes, regulatory-risk-no' investment filter, has made him one of the most active builder-investors in healthcare venture capital, with SEC filings across multiple portfolio companies confirming his direct board involvement at each stage.",
+    sources: [
+      { label: "NVCA Member Spotlight", url: "https://nvca.org/member-spotlight-f-prime-capital/" },
+      { label: "Beam Therapeutics SEC Filing", url: "https://www.sec.gov/Archives/edgar/data/1745999/000156459020014308/beam-10k_20191231.htm" }
+    ]
+  },
 };
 
 // ============================================================
@@ -4469,7 +4502,8 @@ const firmStages = {
    "breakthrough-energy-ventures": ["Seed", "Series A", "Series B", "Growth"],
    "orbimed": ["Seed", "Series A", "Series B", "Growth", "Late Stage"],
    "sapphire-ventures": ["Series A", "Series B", "Growth", "Late Stage"],
-   "forerunner-ventures": ["Seed", "Series A", "Series B"]
+   "forerunner-ventures": ["Seed", "Series A", "Series B"],
+   "f-prime-capital": ["Seed", "Series A", "Series B", "Growth"]
 };
 
 // ============================================================
@@ -5827,6 +5861,35 @@ const firms = [
     ],
     holdings: [
       { name: "Moderna", ticker: "MRNA", historicalPrice: null, price: null }
+    ]
+  },
+   {
+    rank: 29,
+    name: "F-Prime Capital",
+    sectors: ["Biotech", "Healthcare", "Enterprise Software", "Fintech"],
+    signatureExit: "Beam Therapeutics' 2020 Nasdaq IPO — President Stephen Knight personally co-founded the gene-editing company and has served on its board since 2017",
+    slug: "f-prime-capital",
+    website: "https://www.fprimecapital.com",
+    short: "F-Prime Capital",
+    founded: 1970,
+    hq: "Cambridge, MA",
+    aum: "$4.8B",
+    thesis: "F-Prime Capital is the venture capital arm of Fidelity Investments, operating for more than 50 years with a structural advantage almost no other firm on this page shares: it invests without any pressure from outside fundraising, letting it back entrepreneurs on a genuinely long time horizon. That freedom has produced an unusually hands-on, company-formation-heavy model — F-Prime has co-created more than 30 companies from scratch, including Beam Therapeutics, Denali Therapeutics, and Innovent Biologics, working directly with academic researchers to spin science into standalone businesses rather than only backing existing startups. The firm invests stage-agnostically across healthcare (therapeutics, medtech, health IT) and technology (enterprise software, fintech, frontier tech), and now manages approximately $4.8 billion across a global portfolio of more than 300 companies.",
+    leadership: [
+      { name: "Stephen Knight", role: "President & Senior Managing Partner", profileSlug: "stephen-knight" },
+      { name: "Carl Byers", role: "Team Member" },
+      { name: "David Jegen", role: "Team Member" }
+    ],
+    timeline: [
+      { year: "2003", event: "Stephen Knight joins F-Prime Capital, then known as Fidelity Biosciences." },
+      { year: "2015", event: "Rebrands from Fidelity Biosciences to F-Prime Capital." },
+      { year: "2017", event: "Co-founds Denali Therapeutics; Denali completes its Nasdaq IPO in December." },
+      { year: "2020", event: "Beam Therapeutics, co-founded by Stephen Knight, completes its Nasdaq IPO." },
+      { year: "2026", event: "AUM reaches approximately $4.8 billion across a portfolio of more than 300 companies worldwide." }
+    ],
+    holdings: [
+      { name: "Beam Therapeutics", ticker: "BEAM", historicalPrice: null, price: null },
+      { name: "Denali Therapeutics", ticker: "DNLI", historicalPrice: null, price: null }
     ]
   },
    {
