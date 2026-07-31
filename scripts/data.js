@@ -4388,6 +4388,38 @@ sources: [
       { label: "Fortune", url: "https://fortune.com/2015/02/19/third-rock-ventures-giving-birth-to-a-new-generation-of-biotechs/" }
     ]
   },
+   "chris-sacca": {
+    name: "Chris Sacca",
+    firm: "Lowercarbon Capital",
+    firmSlug: "lowercarbon-capital",
+    title: "Co-Founder",
+    joinedYear: 2018,
+    education: [],
+    previousExperience: [
+      "Co-Founder, Lowercase Capital (early investor in Uber, Twitter, Instagram, Twilio, Docker, Stripe)"
+    ],
+    investmentFocus: ["Climate", "Carbon Removal", "Energy", "Advanced Manufacturing"],
+    notableInvestments: [
+      { name: "Commonwealth Fusion Systems", ticker: null },
+      { name: "Charm Industrial", ticker: null },
+      { name: "Solugen", ticker: null }
+    ],
+    boardSeats: [],
+    ipoCount: 0,
+    majorExits: 0,
+    careerTimeline: [
+      { year: "2010", event: "Co-founds Lowercase Capital with Crystal Sacca, making early bets on Uber, Twitter, Instagram, Twilio, Docker, and Stripe." },
+      { year: "2017", event: "Steps back from broad-based venture capital, shifting focus toward climate innovation." },
+      { year: "2018", event: "Co-founds Lowercarbon Capital with Crystal Sacca and Clay Dumas." },
+      { year: "2021", event: "Raises $800 million, the firm's first outside capital, in a matter of days." },
+      { year: "2022", event: "Raises a dedicated $350 million fund specifically for carbon removal startups." }
+    ],
+    biography: "Chris Sacca built one of the most successful venture funds in history through Lowercase Capital, the fund he co-founded with his wife Crystal that made early bets on Uber, Twitter, Instagram, Twilio, Docker, and Stripe and vaulted him to the number-two spot on the Forbes Midas List. He stepped back from broad-based tech investing in 2017, and in 2018 the couple co-founded Lowercarbon Capital, applying the same return expectations and pattern-recognition instincts to companies that profitably reduce or remove carbon rather than chasing the next consumer app. Known for blunt, unfiltered messaging about the urgency of the climate crisis, Sacca raised Lowercarbon's first $800 million in outside capital within days in 2021, turning away what he called 'flattering offers' to keep the fund intentionally small, and has since backed more than 100 companies spanning fusion energy, carbon removal, and industrial decarbonization.",
+    sources: [
+      { label: "Lowercarbon Capital — Chris Sacca", url: "https://lowercarbon.com/team/chris-sacca/" },
+      { label: "ImpactAlpha", url: "https://impactalpha.com/chris-saccas-lowercarbon-capital-raises-800-million-for-climate-tech/" }
+    ]
+  },
 };
 
 // ============================================================
@@ -4535,7 +4567,8 @@ const firmStages = {
    "sapphire-ventures": ["Series A", "Series B", "Growth", "Late Stage"],
    "forerunner-ventures": ["Seed", "Series A", "Series B"],
    "f-prime-capital": ["Seed", "Series A", "Series B", "Growth"],
-   "third-rock-ventures": ["Seed", "Series A", "Series B"]
+   "third-rock-ventures": ["Seed", "Series A", "Series B"],
+   "lowercarbon-capital": ["Pre-Seed", "Seed", "Series A", "Series B"]
 };
 
 // ============================================================
@@ -6775,6 +6808,31 @@ const firms = [
       { name: "Bluebird Bio", ticker: "BLUE", historicalPrice: null, price: null },
       { name: "Agios Pharmaceuticals", ticker: "AGIO", historicalPrice: null, price: null }
     ]
+  },
+   {
+    rank: 64,
+    name: "Lowercarbon Capital",
+    sectors: ["Climate", "Carbon Removal", "Energy", "Industrial Technology"],
+    signatureExit: "No confirmed public exit yet — Lowercarbon's flagship bets (Commonwealth Fusion Systems, Charm Industrial, Solugen, Zap Energy) remain private, hard-tech climate companies still working toward commercial deployment",
+    slug: "lowercarbon-capital",
+    website: "https://lowercarbon.com",
+    short: "Lowercarbon Capital",
+    founded: 2018,
+    hq: "Oakland, CA",
+    aum: "~$2B",
+    thesis: "Lowercarbon Capital was founded in 2018 by Chris Sacca, Crystal Sacca, and Clay Dumas, following Chris's earlier career building Lowercase Capital into one of the most successful venture funds in history through early bets on Uber, Twitter, Instagram, and Stripe. Rather than treat climate investing as philanthropy, Lowercarbon applies the same venture-scale return expectations Sacca used chasing consumer tech winners to companies that profitably slash or remove carbon emissions — a deliberately blunt positioning the firm sums up in its own unfiltered mission language. The firm raised its first $800 million in outside capital within days in 2021, added a dedicated $350 million carbon-removal fund in 2022, and now manages roughly $2 billion across more than 100 portfolio companies spanning energy, industrial materials, transportation, and advanced manufacturing.",
+    leadership: [
+      { name: "Chris Sacca", role: "Co-Founder", profileSlug: "chris-sacca" },
+      { name: "Crystal Sacca", role: "Co-Founder" },
+      { name: "Clay Dumas", role: "Co-Founder & Partner" }
+    ],
+    timeline: [
+      { year: "2018", event: "Chris Sacca, Crystal Sacca, and Clay Dumas found Lowercarbon Capital." },
+      { year: "2021", event: "Raises $800 million, its first outside capital, in a matter of days in August." },
+      { year: "2022", event: "Raises a dedicated $350 million fund for carbon removal startups in April." },
+      { year: "2026", event: "Firm AUM reaches approximately $2 billion across more than 100 portfolio companies." }
+    ],
+    holdings: []
   },
    {
     rank: 36,
