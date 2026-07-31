@@ -4199,6 +4199,36 @@ sources: [
       { label: "BusinessWire", url: "https://www.businesswire.com/news/home/20240606701949/en/" }
     ]
   },
+   "carmichael-roberts": {
+    name: "Carmichael Roberts",
+    firm: "Breakthrough Energy Ventures",
+    firmSlug: "breakthrough-energy-ventures",
+    title: "Investment Committee Co-Lead",
+    joinedYear: 2016,
+    education: ["BS, Organic Chemistry, Duke University", "PhD, Organic Chemistry, Duke University"],
+    previousExperience: [
+      "Business Development, GelTex Pharmaceuticals (acquired by Genzyme for $1.3B)",
+      "New Product & Business Development, Dow Chemical (formerly Union Carbide)",
+      "President/CEO or Chairman, multiple materials-innovation ventures",
+      "Co-Founder & Managing Partner, Material Impact"
+    ],
+    investmentFocus: ["Materials Innovation", "Climate Technology", "Industrial & Commercial Applications"],
+    notableInvestments: [],
+    boardSeats: ["Consumer Technology Association", "WGBH", "Massachusetts General Hospital Physicians Organization"],
+    ipoCount: 0,
+    majorExits: 1,
+    careerTimeline: [
+      { year: "1998", event: "Works in business development at GelTex Pharmaceuticals, later acquired by Genzyme for $1.3 billion." },
+      { year: "2010s", event: "Co-founds Material Impact, a fund building technology companies around materials innovation." },
+      { year: "2013", event: "Elected to Duke University's Board of Trustees, later serving as Vice Chairman." },
+      { year: "2016", event: "Joins Breakthrough Energy Ventures as Investment Committee Co-Lead." }
+    ],
+    biography: "Carmichael Roberts brings a materials-science and commercialization background to Breakthrough Energy Ventures that's genuinely distinctive among climate investors. After a Duke PhD in organic chemistry and roles at GelTex Pharmaceuticals — acquired by Genzyme for $1.3 billion — and Dow Chemical, he built a career licensing university technology and commercializing it through targeted Fortune 500 partnerships, an approach he later formalized by co-founding Material Impact. That same licensing-and-commercialization playbook now shapes how he co-leads BEV's investment committee, evaluating climate technologies against the fund's unusually strict bar: real, credible potential to eliminate at least 1% of global emissions. He serves as Vice Chairman of Duke's Board of Trustees and on the boards of the Consumer Technology Association and Massachusetts General Hospital's Physicians Organization.",
+    sources: [
+      { label: "TechCrunch — Carmichael Roberts", url: "https://techcrunch.com/author/carmichael-roberts" },
+      { label: "Breakthrough Energy", url: "https://breakthroughenergy.org" }
+    ]
+  },
 };
 
 // ============================================================
@@ -4340,7 +4370,8 @@ const firmStages = {
    "seedcamp": ["Pre-Seed", "Seed", "Series A", "Series B"],
    "high-tech-grunderfonds": ["Pre-Seed", "Seed"],
    "flagship-pioneering": ["Seed", "Series A", "Series B", "Growth"],
-   "qed-investors": ["Seed", "Series A", "Series B", "Growth"]
+   "qed-investors": ["Seed", "Series A", "Series B", "Growth"],
+   "breakthrough-energy-ventures": ["Seed", "Series A", "Series B", "Growth"]
 };
 
 // ============================================================
@@ -5528,6 +5559,32 @@ const firms = [
       { year: "2005", event: "General Partner Eric Chin co-founds Alpha, the firm's invite-only founder and investor network." },
       { year: "2021", event: "Closes its ninth flagship fund at $350 million in January." },
       { year: "2024", event: "Closes its tenth flagship fund, Crosslink Ventures X, at $350 million, marking the firm's 35th year." }
+    ],
+    holdings: []
+  },
+   {
+    rank: 28,
+    name: "Breakthrough Energy Ventures",
+    sectors: ["Climate", "Energy", "Agriculture", "Industrial Technology"],
+    signatureExit: "No confirmed public exit directly attributable to BEV as an investor — the fund instead measures itself by an unusually specific mandate: every company must have credible potential to eliminate at least 1% of global annual greenhouse-gas emissions",
+    slug: "breakthrough-energy-ventures",
+    website: "https://breakthroughenergy.org/what-we-do/breakthrough-energy-ventures/",
+    short: "Breakthrough Energy Ventures",
+    founded: 2015,
+    hq: "Kirkland, WA",
+    aum: "$3.5B+ committed capital (across three funds)",
+    thesis: "Breakthrough Energy Ventures was founded by Bill Gates in 2015, backed by a roster of billionaire co-investors including Jeff Bezos, Jack Ma, Richard Branson, and Masayoshi Son, and launched with an explicit rejection of typical venture timelines: the fund operates on a 20-year investment horizon, far longer than the standard 10-year fund life, on the theory that hard climate technology genuinely needs that patience to reach commercial scale. Its investment bar is unusually specific for a venture fund — every company must have credible potential to eliminate at least 1% of global annual greenhouse-gas emissions — and its more than 110 portfolio companies span electricity, transportation, manufacturing, buildings, food, and agriculture. BEV has raised more than $3.5 billion in committed capital across three funds since 2016, positioning it as the largest and most institutionally backed climate-focused venture platform in the world.",
+    leadership: [
+      { name: "Carmichael Roberts", role: "Investment Committee Co-Lead", profileSlug: "carmichael-roberts" },
+      { name: "Eric Toone", role: "Investment Committee Co-Lead" },
+      { name: "Rodi Guidero", role: "Executive Director" }
+    ],
+    timeline: [
+      { year: "2015", event: "Bill Gates founds Breakthrough Energy Ventures." },
+      { year: "2016", event: "BEV I closes at $1 billion in December, backed by around 20 billionaire co-investors." },
+      { year: "2021", event: "BEV II closes at $1.25 billion." },
+      { year: "2023", event: "Launches BEV III in July, targeting roughly $1 billion." },
+      { year: "2024", event: "BEV III reaches $839 million, the largest climate fund raised that year; total committed capital across all funds surpasses $3.5 billion." }
     ],
     holdings: []
   },
