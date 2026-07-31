@@ -4666,6 +4666,35 @@ sources: [
       { label: "Asia Tech Daily", url: "https://asiatechdaily.com/willson-cuaca-east-ventures/" }
     ]
   },
+   "philippe-collombel": {
+    name: "Philippe Collombel",
+    firm: "Partech",
+    firmSlug: "partech",
+    title: "Founding & General Partner",
+    joinedYear: 2008,
+    education: ["Master in Science, CentraleSupélec", "MBA, HEC Paris"],
+    previousExperience: [
+      "Electrical Engineer, Cegelec (Nuclear Energy division)",
+      "Investor, Finovelec (led two IPOs: WonderWare and Lannet)",
+      "Founder, Genèse Investissement (France's first seed fund)"
+    ],
+    investmentFocus: ["Fintech", "Deep Tech", "Enterprise Software", "Africa & Europe Scaling"],
+    notableInvestments: [],
+    boardSeats: [],
+    ipoCount: 2,
+    majorExits: 0,
+    careerTimeline: [
+      { year: "1996", event: "Jean-Marc Patouillaud establishes Partech's European office in Paris." },
+      { year: "2000s", event: "Starts Genèse Investissement, France's first seed fund, after leading two IPOs at Finovelec." },
+      { year: "2008", event: "Joins Jean-Marc Patouillaud to complete a management buyout of Partech, making the firm independent." },
+      { year: "2026", event: "Continues to drive investment strategy as Partech manages approximately €2.5 billion across 220-plus companies in 40 countries." }
+    ],
+    biography: "Philippe Collombel began his career as an electrical engineer in the nuclear energy division of Cegelec before moving into venture capital at Finovelec, where he led two landmark IPOs — WonderWare and Lannet. He then started Genèse Investissement, France's first dedicated seed fund, before joining Jean-Marc Patouillaud at Partech to lead a 2008 management buyout that took the firm independent from its original bank ownership. Since then, Collombel has helped transform Partech from a single-region European operation into a genuinely global platform spanning San Francisco, Paris, Berlin, Dakar, Dubai, and Nairobi, and continues to drive the firm's investment strategy as Founding and General Partner, with a particular focus on scaling promising companies across Europe and Africa.",
+    sources: [
+      { label: "Equilar ExecAtlas", url: "https://people.equilar.com/bio/org/partech-partners/4209443" },
+      { label: "EU Tech Future", url: "https://eutechfuture.com/venture-capital/partech-partners-a-deep-dive-into-the-global-tech-investment-powerhouse/" }
+    ]
+  },
 };
 
 // ============================================================
@@ -4821,7 +4850,8 @@ const firmStages = {
    "point-nine": ["Pre-Seed", "Seed"],
    "lakestar": ["Series A", "Series B", "Growth", "Late Stage"],
    "monashees": ["Seed", "Series A", "Series B", "Growth"],
-   "east-ventures": ["Seed", "Series A", "Series B", "Growth"]
+   "east-ventures": ["Seed", "Series A", "Series B", "Growth"],
+   "partech": ["Seed", "Series A", "Series B", "Growth"]
 };
 
 // ============================================================
@@ -6915,6 +6945,32 @@ const firms = [
       { year: "2018", event: "99 is acquired by Didi Chuxing for roughly $1 billion." },
       { year: "2021", event: "Reports having raised 10 funds totaling $1.5 billion, backing 125 companies including 9 unicorns." },
       { year: "2026", event: "Portfolio community reaches more than 300 founders across 150-plus companies." }
+    ],
+    holdings: []
+  },
+   {
+    rank: 56,
+    name: "Partech",
+    sectors: ["Fintech", "Deep Tech", "Enterprise Software", "Energy"],
+    signatureExit: "No single confirmed signature exit — Partech instead measures itself by breadth and duration: 220-plus active portfolio companies across 40 countries and four continents, built over more than four decades since its 1982 founding",
+    slug: "partech",
+    website: "https://partechpartners.com",
+    short: "Partech",
+    founded: 1982,
+    hq: "Paris, France",
+    aum: "€2.5B (~$2.7B)",
+    thesis: "Partech was founded in San Francisco in 1982 as Paribas Technologies, and its European office — established in Paris in 1996 by Jean-Marc Patouillaud — eventually became the firm's center of gravity. In 2008, Patouillaud and Philippe Collombel led a management buyout that took Partech fully independent from its original bank ownership, and the two built it from there into a genuinely global platform with offices spanning San Francisco, Paris, Berlin, Dakar, Dubai, and Nairobi. That geographic reach is unusually deliberate: Partech runs dedicated Africa-focused funds backed by development finance institutions like KfW, the European Investment Bank, and the IFC, alongside its core European and US venture strategies, reflecting a genuine conviction that the next wave of category-defining companies won't come from Silicon Valley and Paris alone. The firm now manages roughly €2.5 billion across 220-plus companies in 40 countries.",
+    leadership: [
+      { name: "Philippe Collombel", role: "Founding & General Partner", profileSlug: "philippe-collombel" },
+      { name: "Jean-Marc Patouillaud", role: "Founding Partner & Senior Advisor" },
+      { name: "Tidjane Deme", role: "General Partner, Africa" }
+    ],
+    timeline: [
+      { year: "1982", event: "Partech is founded in San Francisco as Paribas Technologies." },
+      { year: "1996", event: "Jean-Marc Patouillaud establishes the firm's European office in Paris." },
+      { year: "2008", event: "Patouillaud and Philippe Collombel complete a management buyout, making Partech independent." },
+      { year: "2021", event: "Launches Partech Africa II, backed by DFIs including KfW, the EIB, and the IFC." },
+      { year: "2026", event: "Firm AUM reaches approximately €2.5 billion across 220-plus companies in 40 countries." }
     ],
     holdings: []
   },
