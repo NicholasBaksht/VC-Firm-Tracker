@@ -4695,6 +4695,38 @@ sources: [
       { label: "EU Tech Future", url: "https://eutechfuture.com/venture-capital/partech-partners-a-deep-dive-into-the-global-tech-investment-powerhouse/" }
     ]
   },
+   "maurizio-caio": {
+    name: "Maurizio Caio",
+    firm: "TLcom Capital",
+    firmSlug: "tlcom-capital",
+    title: "Founder & Managing Partner",
+    joinedYear: 1999,
+    education: ["Laurea (summa cum laude), Business Administration, Bocconi University & New York University", "MBA, Stanford Graduate School of Business"],
+    previousExperience: [
+      "Director, Bain & Company (led EMEA Telecom & Technology practice)",
+      "McKinsey & Company (technology & growth strategy, Europe)"
+    ],
+    investmentFocus: ["Fintech", "Agritech", "Edtech", "Sub-Saharan Africa"],
+    notableInvestments: [
+      { name: "Andela", ticker: null },
+      { name: "Twiga Foods", ticker: null },
+      { name: "Pula", ticker: null }
+    ],
+    boardSeats: ["Twiga Foods", "Pula", "Shara", "Ajua", "Littlefish"],
+    ipoCount: 0,
+    majorExits: 2,
+    careerTimeline: [
+      { year: "1999", event: "Founds TLcom Capital after 15 years advising telecom and technology CEOs at Bain & Company and McKinsey." },
+      { year: "2017", event: "Launches the TIDE Africa Fund with $71 million, backing Andela, Twiga Foods, and Kobo360." },
+      { year: "2021", event: "Andela, one of TLcom's earliest African bets, reaches a $1.5 billion valuation, becoming the continent's only non-fintech unicorn at the time." },
+      { year: "2023", event: "Nears the final close of a second fund targeting $150 million." }
+    ],
+    biography: "Maurizio Caio spent 15 years advising CEOs of European and Silicon Valley telecommunications companies at Bain & Company and McKinsey before founding TLcom Capital in 1999, betting early that technology entrepreneurs would prove critical to transforming both established and emerging industries. That conviction eventually crystallized into one of the longest-running Africa-focused technology venture platforms, anchored by the 2017 launch of the TIDE Africa Fund. Caio was an early backer of Andela three years before it became one of Africa's few non-fintech unicorns, and he now represents TLcom on the boards of Twiga Foods, Pula, Shara, Ajua, and Littlefish. He co-chairs the venture capital committee at the Africa Venture Capital Association, teaches business strategy at universities across the continent, and remains one of the most publicly outspoken voices arguing that African tech needs to shift its focus from headline valuations toward real, realized returns.",
+    sources: [
+      { label: "TLcom Capital — Maurizio Caio", url: "https://tlcomcapital.com/maurizio-caio" },
+      { label: "TechCrunch", url: "https://techcrunch.com/2021/11/10/tlcom-capital-managing-partner-maurizio-caio-on-african-unicorns-valuations-and-exits" }
+    ]
+  },
 };
 
 // ============================================================
@@ -4851,7 +4883,8 @@ const firmStages = {
    "lakestar": ["Series A", "Series B", "Growth", "Late Stage"],
    "monashees": ["Seed", "Series A", "Series B", "Growth"],
    "east-ventures": ["Seed", "Series A", "Series B", "Growth"],
-   "partech": ["Seed", "Series A", "Series B", "Growth"]
+   "partech": ["Seed", "Series A", "Series B", "Growth"],
+   "tlcom-capital": ["Pre-Seed", "Seed", "Series A", "Series B"]
 };
 
 // ============================================================
@@ -7689,6 +7722,32 @@ const firms = [
     holdings: [
       { name: "Sprinklr", ticker: "CXM", historicalPrice: null, price: null }
     ]
+  },
+{
+    rank: 44,
+    name: "TLcom Capital",
+    sectors: ["Fintech", "Agritech", "Edtech", "Mobility"],
+    signatureExit: "No confirmed public exit yet — Andela, backed three years before reaching a $1.5 billion valuation in 2021, remains TLcom's clearest proof point as one of Africa's few non-fintech unicorns, though it stays privately held",
+    slug: "tlcom-capital",
+    website: "https://www.tlcomcapital.com",
+    short: "TLcom Capital",
+    founded: 1999,
+    hq: "Nairobi, Kenya",
+    aum: "$300M+ (across all funds)",
+    thesis: "TLcom Capital was founded in 1999 by Maurizio Caio, a former Bain & Company and McKinsey consultant who spent 15 years advising telecom and technology executives before deciding entrepreneurs building African technology companies deserved the same caliber of strategic support. That conviction became concrete with the 2017 launch of the TIDE Africa Fund, and TLcom has since become one of the longest-running and most active Africa-focused technology investors, providing $500,000 to $15 million checks across fintech, agritech, edtech, mobility, and healthcare. The firm counts Andela, Twiga Foods, Pula, uLesson, and Kobo360 among its portfolio, backed by institutional investors including the European Investment Bank and IFC, and expanded its geographic mandate into North Africa in 2022.",
+    leadership: [
+      { name: "Maurizio Caio", role: "Founder & Managing Partner", profileSlug: "maurizio-caio" },
+      { name: "Omobola Johnson", role: "Senior Partner" },
+      { name: "Andreata Muforo", role: "Partner" }
+    ],
+    timeline: [
+      { year: "1999", event: "Maurizio Caio founds TLcom Capital." },
+      { year: "2017", event: "Launches the TIDE Africa Fund with $71 million, backing Andela and Twiga Foods." },
+      { year: "2021", event: "Andela reaches a $1.5 billion valuation." },
+      { year: "2022", event: "Expands the firm's mandate into North Africa, starting with Egypt." },
+      { year: "2023", event: "Nears the final close of a second fund targeting $150 million." }
+    ],
+    holdings: []
   },
    {
     rank: 43,
