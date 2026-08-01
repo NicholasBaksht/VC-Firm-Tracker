@@ -4727,6 +4727,37 @@ sources: [
       { label: "TechCrunch", url: "https://techcrunch.com/2021/11/10/tlcom-capital-managing-partner-maurizio-caio-on-african-unicorns-valuations-and-exits" }
     ]
   },
+   "yoav-leitersdorf": {
+    name: "Yoav Leitersdorf",
+    firm: "YL Ventures",
+    firmSlug: "yl-ventures",
+    title: "Founder & Managing Partner",
+    joinedYear: 2007,
+    education: [],
+    previousExperience: [
+      "Founder, Managing Director & CEO, Movoto"
+    ],
+    investmentFocus: ["Cybersecurity", "AI Security"],
+    notableInvestments: [
+      { name: "Twistlock", ticker: null },
+      { name: "Orca Security", ticker: null },
+      { name: "Cybereason", ticker: null }
+    ],
+    boardSeats: [],
+    ipoCount: 0,
+    majorExits: 5,
+    careerTimeline: [
+      { year: "2007", event: "Founds YL Ventures to help seed-stage Israeli entrepreneurs build global companies." },
+      { year: "2019", event: "Twistlock, a portfolio company, is acquired by Palo Alto Networks for $410 million." },
+      { year: "2022", event: "Closes Fund V at $400 million, the largest seed fund ever raised for cybersecurity." },
+      { year: "2025", event: "Reports total funds under management reaching $800 million." }
+    ],
+    biography: "Yoav Leitersdorf founded YL Ventures in 2007 with a singular, narrow mission: help brilliant seed-stage Israeli entrepreneurs transform their ideas into global companies, before eventually focusing the firm exclusively on cybersecurity. That specialization, paired with a dual Tel Aviv-and-US presence and a network of more than 100 CISOs who advise on deals in exchange for carried interest, has given YL what Leitersdorf calls 'first dibs at every seed deal coming out of Israel.' The firm's track record includes Twistlock, acquired by Palo Alto Networks for $410 million, and Orca Security, one of the category's fastest-growing unicorns, and Leitersdorf closed Fund V at $400 million in 2022 — the largest seed fund ever raised specifically for cybersecurity — pushing the firm's total funds under management to $800 million.",
+    sources: [
+      { label: "YL Ventures — Yoav Leitersdorf", url: "https://www.ylventures.com/people/yoav-andrew-leitersdorf/" },
+      { label: "TechCrunch", url: "https://techcrunch.com/2022/05/11/investors-reward-yl-ventures-for-selling-certain-stakes-when-the-market-was-still-bubbly/" }
+    ]
+  },
 };
 
 // ============================================================
@@ -4884,7 +4915,8 @@ const firmStages = {
    "monashees": ["Seed", "Series A", "Series B", "Growth"],
    "east-ventures": ["Seed", "Series A", "Series B", "Growth"],
    "partech": ["Seed", "Series A", "Series B", "Growth"],
-   "tlcom-capital": ["Pre-Seed", "Seed", "Series A", "Series B"]
+   "tlcom-capital": ["Pre-Seed", "Seed", "Series A", "Series B"],
+   "yl-ventures": ["Seed", "Series A"]
 };
 
 // ============================================================
@@ -7745,6 +7777,31 @@ const firms = [
       { year: "2021", event: "Andela reaches a $1.5 billion valuation." },
       { year: "2022", event: "Expands the firm's mandate into North Africa, starting with Egypt." },
       { year: "2023", event: "Nears the final close of a second fund targeting $150 million." }
+    ],
+    holdings: []
+  },
+{
+    rank: 45,
+    name: "YL Ventures",
+    sectors: ["Cybersecurity", "AI Security"],
+    signatureExit: "Twistlock's 2019 acquisition by Palo Alto Networks for $410 million — Senior Partner Ofer Schreiber was Twistlock's original seed investor",
+    slug: "yl-ventures",
+    website: "https://www.ylventures.com",
+    short: "YL Ventures",
+    founded: 2007,
+    hq: "Tel Aviv, Israel",
+    aum: "$800M",
+    thesis: "YL Ventures was founded in 2007 by Yoav Leitersdorf and has narrowed over time into one of the most specialized seed-stage funds in venture capital: cybersecurity exclusively, sourced almost entirely from Israeli founding teams. The firm's real differentiator is its value-add network — more than 120 chief information security officers advise on deal vetting and market validation in exchange for a share of carried interest, giving YL Ventures what Leitersdorf calls first access to nearly every serious cybersecurity deal coming out of Israel. That model has produced a strong track record of exits including Twistlock, acquired by Palo Alto Networks for $410 million, and continued backing of category leaders like Orca Security and Cybereason, with Fund V closing at $400 million in 2022 — the largest seed fund ever raised specifically for cybersecurity — and total funds managed reaching $800 million.",
+    leadership: [
+      { name: "Yoav Leitersdorf", role: "Founder & Managing Partner", profileSlug: "yoav-leitersdorf" },
+      { name: "Ofer Schreiber", role: "Senior Partner & Head of Israel Office" },
+      { name: "John Brennan", role: "Senior Partner" }
+    ],
+    timeline: [
+      { year: "2007", event: "Yoav Leitersdorf founds YL Ventures." },
+      { year: "2019", event: "Twistlock is acquired by Palo Alto Networks for $410 million." },
+      { year: "2022", event: "Closes Fund V at $400 million, the largest seed fund ever raised for cybersecurity." },
+      { year: "2025", event: "Reports total funds under management reaching $800 million." }
     ],
     holdings: []
   },
