@@ -5819,9 +5819,8 @@ const firms = [
     short: "Peak XV",
     founded: 2006,
     hq: "Bengaluru, India",
-    aum: "$10B+ 
-    thesis: "Peak XV Partners traces its origins to 2006 as Sequoia Capital India, rebranding to Peak XV in 2023 after Sequoia's India/Southeast Asia business formally separated from the global Sequoia franchise. The firm is best understood as a region-building institution rather than just a fund complex: its current messaging emphasizes 'global maxima,' trying to persuade founders in India and Southeast Asia to benchmark against the world's best companies rather than merely regional peers. That is continuous with the old Sequoia India/SEA ethos, but the 2023 rebrand and current global posture also reflect a deliberate attempt to decouple geography from ambition — reinforced by Freshworks, the firm's clearest signature exit, which Reuters reported was targeting nearly $9.6 billion ahead of its IPO before debuting at a $12.2 billion valuation.",
-    leadership: [
+ aum: "$10B+",
+    thesis: "Peak XV Partners traces its origins to 2006 as Sequoia Capital India,
       { name: "Rajan Anandan", role: "Managing Director", profileSlug: "rajan-anandan" },
       { name: "Sakshi Chopra", role: "Managing Director", profileSlug: "sakshi-chopra" },
       { name: "Rohit Agarwal", role: "Managing Director" }
