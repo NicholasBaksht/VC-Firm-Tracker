@@ -4758,6 +4758,41 @@ sources: [
       { label: "TechCrunch", url: "https://techcrunch.com/2022/05/11/investors-reward-yl-ventures-for-selling-certain-stakes-when-the-market-was-still-bubbly/" }
     ]
   },
+   "joshua-posamentier": {
+    name: "Joshua Posamentier",
+    firm: "Congruent Ventures",
+    firmSlug: "congruent-ventures",
+    title: "Co-Founder & Managing Partner",
+    joinedYear: 2017,
+    education: ["BA, Physics, UC Berkeley", "MBA, Columbia Business School", "MBA, UC Berkeley Haas School of Business"],
+    previousExperience: [
+      "Semiconductor & Wireless Chip Engineer, Intel",
+      "Semiconductor Engineer, National Semiconductor",
+      "Semiconductor Engineer, Texas Instruments",
+      "Partner, Prelude Ventures"
+    ],
+    investmentFocus: ["Climate Hardware", "Energy Transition", "Deep Tech"],
+    notableInvestments: [
+      { name: "AMP Robotics", ticker: null },
+      { name: "Fervo Energy", ticker: null },
+      { name: "Parallel Systems", ticker: null }
+    ],
+    boardSeats: [],
+    ipoCount: 0,
+    majorExits: 0,
+    careerTimeline: [
+      { year: "2000s", event: "Builds semiconductors and wireless chips as an engineer at Intel, National Semiconductor, and Texas Instruments, earning more than 50 patents." },
+      { year: "2010s", event: "Moves into climate-focused venture investing as a Partner at Prelude Ventures." },
+      { year: "2017", event: "Co-founds Congruent Ventures with Abe Yokell." },
+      { year: "2021", event: "Closes a $175 million second fund, after originally targeting $125 million." },
+      { year: "2023", event: "Closes a Continuity Fund exceeding $300 million, pushing total AUM past $700 million." }
+    ],
+    biography: "Joshua Posamentier brings a genuinely rare engineering depth to climate investing: a physics degree from UC Berkeley, dual MBAs from Columbia and Berkeley Haas, and years spent building semiconductors and wireless chips at Intel, National Semiconductor, and Texas Instruments, earning more than 50 patents along the way. That hardware background, honed further at climate-focused Prelude Ventures, shapes his specific investing lens at Congruent Ventures, which he co-founded with Abe Yokell in 2017: he focuses on real engineering risk in climate hardware rather than subsidy-dependent business models, evaluating complex physical systems most software-only investors can't meaningfully assess. Congruent has since grown into one of the largest early-stage climate portfolios in venture capital, with more than $1 billion raised across multiple funds and backing from CalSTRS, the Grantham Foundation, and other major institutional climate investors.",
+    sources: [
+      { label: "VC Sheet", url: "https://www.vcsheet.com/who/joshua-posamentier" },
+      { label: "Congruent Ventures Team", url: "https://www.congruentvc.com/team" }
+    ]
+  },
 };
 
 // ============================================================
@@ -4916,7 +4951,8 @@ const firmStages = {
    "east-ventures": ["Seed", "Series A", "Series B", "Growth"],
    "partech": ["Seed", "Series A", "Series B", "Growth"],
    "tlcom-capital": ["Pre-Seed", "Seed", "Series A", "Series B"],
-   "yl-ventures": ["Seed", "Series A"]
+   "yl-ventures": ["Seed", "Series A"],
+   "congruent-ventures": ["Seed", "Series A", "Series B"]
 };
 
 // ============================================================
@@ -7313,6 +7349,31 @@ const firms = [
       { name: "Lyft", ticker: "LYFT", historicalPrice: null, price: 15.45 },
       { name: "DoorDash", ticker: "DASH", historicalPrice: 170.65, price: 175.00 }
     ]
+  },
+   {
+    rank: 67,
+    name: "Congruent Ventures",
+    sectors: ["Climate", "Energy", "Mobility", "Food & Agriculture"],
+    signatureExit: "No confirmed public exit yet — Congruent's flagship bets (AMP Robotics, Fervo Energy, Span.IO, Meati Foods, Parallel Systems) remain private, still working toward commercial scale across climate hardware and energy",
+    slug: "congruent-ventures",
+    website: "https://www.congruentvc.com",
+    short: "Congruent Ventures",
+    founded: 2017,
+    hq: "San Francisco, CA",
+    aum: "$1B+ (across all funds)",
+    thesis: "Congruent Ventures was founded in 2017 by Joshua Posamentier and Abe Yokell, two investors with decades of combined climate tech experience dating back to the first cleantech investing cycle, well before the category regained mainstream institutional appetite. The firm organizes its investing around four specific themes — mobility and urbanization, the energy transition, food and agriculture, and sustainable production — and Posamentier's own semiconductor engineering background gives the team unusually strong technical fluency in evaluating complex climate hardware, not just software wrapped around a sustainability narrative. That specialist positioning helped Congruent grow from a $92 million debut fund into more than $1 billion under management across multiple vehicles, backed by CalSTRS, the Grantham Foundation, and other major institutional climate investors, with a portfolio spanning AMP Robotics, Fervo Energy, Span.IO, Meati Foods, and Parallel Systems.",
+    leadership: [
+      { name: "Joshua Posamentier", role: "Co-Founder & Managing Partner", profileSlug: "joshua-posamentier" },
+      { name: "Abe Yokell", role: "Co-Founder & Managing Partner" },
+      { name: "Tanuj Dutta", role: "General Partner" }
+    ],
+    timeline: [
+      { year: "2017", event: "Joshua Posamentier and Abe Yokell found Congruent Ventures." },
+      { year: "2021", event: "Closes a $175 million second fund." },
+      { year: "2023", event: "Closes a $300 million-plus Continuity Fund, pushing AUM past $700 million." },
+      { year: "2026", event: "Total assets under management surpass $1 billion across 51-plus portfolio companies." }
+    ],
+    holdings: []
   },
    {
     rank: 67,
