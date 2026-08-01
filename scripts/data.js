@@ -4821,6 +4821,42 @@ sources: [
       { label: "Canary", url: "https://www.canary.com.br" }
     ]
   },
+   "amit-anand": {
+    name: "Amit Anand",
+    firm: "Jungle Ventures",
+    firmSlug: "jungle-ventures",
+    title: "Founding Partner & Managing Director",
+    joinedYear: 2012,
+    education: [],
+    previousExperience: [
+      "Sales & Business Development, Progress Software (NASDAQ-listed)",
+      "Executive roles, Elipva (STT Communications-backed, acquired by Hong Kong-listed company)",
+      "Tata Infotech (acquired by TCS for approximately $259 million)",
+      "Founder, Ettamina Studios (Singapore-India animation studio)"
+    ],
+    investmentFocus: ["SaaS", "B2B", "Consumer Tech", "Fintech", "India & Southeast Asia"],
+    notableInvestments: [
+      { name: "Livspace", ticker: null },
+      { name: "Kredivo", ticker: null },
+      { name: "Moglix", ticker: null },
+      { name: "Builder.ai", ticker: null }
+    ],
+    boardSeats: [],
+    ipoCount: 0,
+    majorExits: 3,
+    careerTimeline: [
+      { year: "2006", event: "Founds Ettamina Studios, a Singapore-India animation studio, after earlier executive roles at Progress Software, Elipva, and Tata Infotech." },
+      { year: "2012", event: "Co-founds Jungle Ventures with Anurag Srivastava, launching with a $10 million debut fund." },
+      { year: "2015", event: "Leads the exit of portfolio company Zipdial to Twitter." },
+      { year: "2020", event: "Leads the exit of portfolio company TradeGecko to Intuit." },
+      { year: "2022", event: "Jungle Ventures crosses $1 billion in assets under management, the first independent Singapore-headquartered firm investing across Southeast Asia and India to do so." }
+    ],
+    biography: "Amit Anand has spent 25 years as a pioneer of South and Southeast Asia's venture capital industry, starting in sales and business development at Progress Software before founding Ettamina Studios, a Singapore-India animation studio, in 2006. He co-founded Jungle Ventures in 2012 with a modest $10 million debut fund, growing the firm's assets under management 100-fold over the following decade into the first independent Singapore-headquartered venture firm investing across Southeast Asia and India to cross $1 billion. Anand has personally sourced and mentored the firm's first four unicorns — Moglix, Kredivo, Livspace, and Builder.ai — and led earlier exits including Zipdial's sale to Twitter and TradeGecko's acquisition by Intuit. A Kauffman Fellow and former Vice Chairman of the Business Angels Network of Southeast Asia, he now sits on Singapore's Government Advisory Council on the Ethical Use of Artificial Intelligence and Data.",
+    sources: [
+      { label: "Jungle Ventures — Amit Anand", url: "https://www.jungle.vc/team/amit-anand" },
+      { label: "Forbes Asia", url: "https://www.forbes.com/sites/ardianwibisono/2024/12/04/singapore-based-vc-firm-jungle-ventures-is-on-the-prowl-to-tap-new-frontiers/" }
+    ]
+  },
 };
 
 // ============================================================
@@ -4981,7 +5017,8 @@ const firmStages = {
    "tlcom-capital": ["Pre-Seed", "Seed", "Series A", "Series B"],
    "yl-ventures": ["Seed", "Series A"],
    "congruent-ventures": ["Seed", "Series A", "Series B"],
-   "canary": ["Pre-Seed", "Seed", "Series A"]
+   "canary": ["Pre-Seed", "Seed", "Series A"],
+   "jungle-ventures": ["Seed", "Series A", "Series B", "Growth"]
 };
 
 // ============================================================
@@ -7920,6 +7957,31 @@ const firms = [
     holdings: [
       { name: "Méliuz", ticker: "CASH3.SA", historicalPrice: null, price: null }
     ]
+  },
+   {
+    rank: 48,
+    name: "Jungle Ventures",
+    sectors: ["SaaS", "B2B", "Fintech", "Consumer Tech"],
+    signatureExit: "No single dollar-verified signature exit — Amit Anand has personally led three real exits (Zipdial to Twitter, TradeGecko to Intuit, Travelmob to HomeAway), while the firm's four unicorns (Livspace, Kredivo, Moglix, Builder.ai) remain privately held after Kredivo's 2022 SPAC deal was cancelled",
+    slug: "jungle-ventures",
+    website: "https://www.jungle.vc",
+    short: "Jungle Ventures",
+    founded: 2012,
+    hq: "Singapore",
+    aum: "$1B+",
+    thesis: "Jungle Ventures was founded in 2012 by Amit Anand and Anurag Srivastava with a modest $10 million debut fund, built on a specific cross-border thesis: treating Southeast Asia and India as a single connected market rather than two separate regions, and backing founders building companies durable enough to become category leaders across both. That patient, 'Build to Last' philosophy grew the firm's assets under management roughly 100-fold over a decade, and in 2022 Jungle became the first independent Singapore-headquartered venture firm investing across Southeast Asia and India to cross $1 billion in AUM. The firm's portfolio of 50-plus companies has produced an enterprise value exceeding $12 billion on just $250 million of invested capital, with a loss ratio under 5%, and includes four unicorns — Livspace, Kredivo, Moglix, and Builder.ai — alongside earlier exits like Zipdial (to Twitter) and TradeGecko (to Intuit).",
+    leadership: [
+      { name: "Amit Anand", role: "Founding Partner & Managing Director", profileSlug: "amit-anand" },
+      { name: "Anurag Srivastava", role: "Founding Partner" }
+    ],
+    timeline: [
+      { year: "2012", event: "Amit Anand and Anurag Srivastava found Jungle Ventures with a $10 million debut fund." },
+      { year: "2015", event: "Portfolio company Zipdial is acquired by Twitter." },
+      { year: "2020", event: "Portfolio company TradeGecko is acquired by Intuit." },
+      { year: "2022", event: "Closes a $600 million fund, crossing $1 billion in total AUM — a first for an independent Singapore-headquartered firm in the region." },
+      { year: "2024", event: "Releases its inaugural First Cheque Report, expanding seed investing focus into Thailand and the Philippines." }
+    ],
+    holdings: []
   },
    {
     rank: 43,
