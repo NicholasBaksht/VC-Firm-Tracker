@@ -4857,6 +4857,80 @@ sources: [
       { label: "Forbes Asia", url: "https://www.forbes.com/sites/ardianwibisono/2024/12/04/singapore-based-vc-firm-jungle-ventures-is-on-the-prowl-to-tap-new-frontiers/" }
     ]
   },
+   "garheng-kong": {
+    name: "Garheng Kong",
+    firm: "HealthQuest Capital",
+    firmSlug: "healthquest-capital",
+    title: "Founder & Managing Partner",
+    joinedYear: 2012,
+    education: ["BS, Chemical Engineering, Stanford University", "BS, Biological Sciences, Stanford University", "MD, Duke University", "PhD, Duke University", "MBA, Duke University"],
+    previousExperience: [
+      "GlaxoSmithKline",
+      "McKinsey & Company",
+      "TherOx (medical device startup)",
+      "Investor, Intersouth Partners",
+      "Investor, Sofinnova Investments"
+    ],
+    investmentFocus: ["Medical Devices", "Diagnostics", "Digital Health", "Biopharma"],
+    notableInvestments: [
+      { name: "Castle Biosciences", ticker: "CSTL" },
+      { name: "Pulmonx", ticker: "LUNG" },
+      { name: "Amwell", ticker: "AMWL" }
+    ],
+    boardSeats: ["LabCorp (Lead Independent Director)", "Smith & Nephew", "Xeris Biopharma"],
+    ipoCount: 13,
+    majorExits: 40,
+    careerTimeline: [
+      { year: "2000s", event: "Works at GlaxoSmithKline, McKinsey, and medical device startup TherOx, before moving into venture investing at Intersouth Partners and Sofinnova Investments." },
+      { year: "2012", event: "Founds HealthQuest Capital." },
+      { year: "2013", event: "Closes HealthQuest Fund I at $111 million." },
+      { year: "2022", event: "Closes HealthQuest Fund IV, the firm's largest, at $685 million." },
+      { year: "2025", event: "Named GrowthCap's Healthcare Investor of the Year." }
+    ],
+    biography: "Garheng Kong is a physician, scientist, and engineer by training — a rare triple credential earned through a Stanford dual degree on athletic scholarship followed by an MD, PhD, and MBA from Duke, graduating at the top of his class each time. He spent his early career at GlaxoSmithKline, McKinsey, and medical device startup TherOx before moving into healthcare venture investing at Intersouth Partners and Sofinnova, then founded HealthQuest Capital in 2012 to focus specifically on growth-stage, commercial-stage healthcare companies. Over more than two decades investing, he's been part of 40 IPO and M&A exits, including public listings for Castle Biosciences, Pulmonx, Amwell, and Alimera, and currently serves as Lead Independent Director of LabCorp alongside board seats at Smith & Nephew and Xeris Biopharma. He was named GrowthCap's Healthcare Investor of the Year for 2024, presented in March 2025, capping three consecutive years on their Top 25 Healthcare Investors list.",
+    sources: [
+      { label: "HealthQuest Capital — Garheng Kong", url: "https://www.healthquestcapital.com/people/garheng-kong" },
+      { label: "GrowthCap", url: "https://growthcapadvisory.com/top-healthcare-investor-healthquests-garheng-kong/" }
+    ]
+  },
+   "gili-raanan": {
+    name: "Gili Raanan",
+    firm: "Cyberstarts",
+    firmSlug: "cyberstarts",
+    title: "Founder",
+    joinedYear: 2018,
+    education: [],
+    previousExperience: [
+      "10 years, Israeli Defense Forces Unit 8200 (Presidential Medal & Innovation Award)",
+      "Founder, Sanctum (creator of the first web application firewall, AppShield)",
+      "Founder, nLayers (acquired by EMC)",
+      "VP of Strategy, EMC",
+      "General Partner, Sequoia Capital (nearly 9 years, led Israel investing)"
+    ],
+    investmentFocus: ["Cybersecurity", "Cloud Security", "AI Security"],
+    notableInvestments: [
+      { name: "Wiz", ticker: null },
+      { name: "Armis", ticker: null },
+      { name: "Fireblocks", ticker: null },
+      { name: "Cyera", ticker: null }
+    ],
+    boardSeats: ["Wiz", "Adallom", "Armis"],
+    ipoCount: 0,
+    majorExits: 6,
+    careerTimeline: [
+      { year: "1997", event: "Founds Sanctum, creator of the first web application firewall, AppShield." },
+      { year: "2009", event: "Joins Sequoia Capital as a General Partner, leading its cybersecurity, internet, and mobile investing in Israel." },
+      { year: "2018", event: "Leaves Sequoia after nearly nine years to found Cyberstarts." },
+      { year: "2020", event: "Leads a $6 million seed round in Wiz, partnering with the company on day one." },
+      { year: "2026", event: "Google completes its $32 billion acquisition of Wiz in March, the largest-ever buyout of a venture-backed startup." }
+    ],
+    biography: "Gili Raanan's cybersecurity career began inside Israel's elite Unit 8200 intelligence corps, where he served for a decade and won both the IDF Innovation Award and the Israel Defense Presidential Prize. He founded two security companies — Sanctum, creator of the first web application firewall, and nLayers, later acquired by EMC — before spending nearly nine years as a General Partner at Sequoia Capital leading its Israeli cybersecurity investing, including the earliest bet on Adallom, the company Wiz's founders had built before Wiz itself. He left Sequoia in 2018 to found Cyberstarts, and led Wiz's $6 million seed round in 2020, partnering with the company from day one. That bet became the largest venture-backed exit in history when Google completed its $32 billion acquisition of Wiz in March 2026. Raanan is also widely credited as the inventor of CAPTCHA and holds more than 10 U.S. patents in cybersecurity and application management.",
+    sources: [
+      { label: "Cyberstarts — Gili Raanan", url: "https://www.cyberstarts.com/team/gili-raanan" },
+      { label: "Wikipedia — Gili Raanan", url: "https://en.wikipedia.org/wiki/Gili_Raanan" },
+      { label: "Forbes Profile", url: "https://www.forbes.com/profile/gili-raanan/" }
+    ]
+  },
 };
 
 // ============================================================
@@ -5018,7 +5092,9 @@ const firmStages = {
    "yl-ventures": ["Seed", "Series A"],
    "congruent-ventures": ["Seed", "Series A", "Series B"],
    "canary": ["Pre-Seed", "Seed", "Series A"],
-   "jungle-ventures": ["Seed", "Series A", "Series B", "Growth"]
+   "jungle-ventures": ["Seed", "Series A", "Series B", "Growth"],
+   "healthquest-capital": ["Growth", "Late Stage"],
+   "cyberstarts": ["Seed", "Series A"]
 };
 
 // ============================================================
@@ -7143,6 +7219,35 @@ const firms = [
   },
    {
     rank: 57,
+    name: "HealthQuest Capital",
+    sectors: ["Healthcare", "Medical Devices", "Diagnostics", "Digital Health"],
+    signatureExit: "Castle Biosciences' Nasdaq IPO — one of 13 public listings founder Garheng Kong has been directly involved in, out of 40 total IPO and M&A exits across his healthcare investing career",
+    slug: "healthquest-capital",
+    website: "https://www.healthquestcapital.com",
+    short: "HealthQuest Capital",
+    founded: 2012,
+    hq: "Belmont, CA",
+    aum: "~$1.5B (across four funds)",
+    thesis: "HealthQuest Capital was founded in 2012 by Garheng Kong, a physician, scientist, and engineer by training who spent his early career at GlaxoSmithKline, McKinsey, and a medical device startup before moving into healthcare-focused venture investing. That rare combination of clinical, scientific, and operating credentials shapes the firm's specific investment lens: rather than backing early-stage science, HealthQuest exclusively targets commercial-stage healthcare companies already generating real revenue, spanning medical devices, diagnostics, biopharma, and digital health, and provides growth capital to help them scale toward profitability, IPO, or acquisition. The firm has grown from an $111 million debut fund in 2013 to a $685 million fourth fund in 2022, its largest yet, and Kong has personally been involved in 40 IPO and M&A exits across more than two decades of healthcare investing.",
+    leadership: [
+      { name: "Garheng Kong", role: "Founder & Managing Partner", profileSlug: "garheng-kong" },
+      { name: "Randy Thurman", role: "Founding Partner" },
+      { name: "Sharath Reddy", role: "Partner" }
+    ],
+    timeline: [
+      { year: "2012", event: "Garheng Kong founds HealthQuest Capital." },
+      { year: "2013", event: "Closes HealthQuest Fund I at $111 million." },
+      { year: "2016", event: "Closes HealthQuest Fund II at $228 million." },
+      { year: "2019", event: "Closes HealthQuest Fund III at $447 million." },
+      { year: "2022", event: "Closes HealthQuest Fund IV, its largest to date, at $685 million." }
+    ],
+    holdings: [
+      { name: "Castle Biosciences", ticker: "CSTL", historicalPrice: null, price: null },
+      { name: "Pulmonx", ticker: "LUNG", historicalPrice: null, price: null }
+    ]
+  },
+   {
+    rank: 57,
     name: "DN Capital",
     sectors: ["Fintech", "SaaS", "Consumer Internet", "AI"],
     signatureExit: "AUTO1 Group's 2021 Frankfurt Stock Exchange IPO at approximately €7.9 billion — Germany's largest tech IPO at the time, with DN Capital exiting 95% of its stake",
@@ -7930,6 +8035,32 @@ const firms = [
       { year: "2019", event: "Twistlock is acquired by Palo Alto Networks for $410 million." },
       { year: "2022", event: "Closes Fund V at $400 million, the largest seed fund ever raised for cybersecurity." },
       { year: "2025", event: "Reports total funds under management reaching $800 million." }
+    ],
+    holdings: []
+  },
+   {
+    rank: 46,
+    name: "Cyberstarts",
+    sectors: ["Cybersecurity", "Cloud Security", "AI Security"],
+    signatureExit: "Google's $32 billion acquisition of Wiz, completed March 2026 — the largest-ever buyout of a venture-backed startup, and Cyberstarts partnered with Wiz's founders on day one of the company's existence",
+    slug: "cyberstarts",
+    website: "https://www.cyberstarts.com",
+    short: "Cyberstarts",
+    founded: 2018,
+    hq: "Tel Aviv, Israel",
+    aum: "$720M+ (across five funds)",
+    thesis: "Cyberstarts was founded in 2018 by Gili Raanan, a former Sequoia Capital General Partner and two-time security-company founder, built around a distinctive 'Sunrise' methodology: rather than sourcing deals broadly, Cyberstarts partners with founding teams from day one, drawing on a network of enterprise security executives to identify unaddressed pain points before a product even exists. That model produced the single largest venture-backed exit in history — Cyberstarts partnered with Wiz on day one in 2019, and Google completed its $32 billion acquisition of the cloud security company in March 2026. The firm has raised more than $720 million across five funds and made 28 investments with a combined portfolio valuation exceeding $55 billion, representing more than half of the entire private cybersecurity market's value, though its executive-advisor profit-sharing program drew public scrutiny in 2024 over potential conflicts of interest and was subsequently suspended.",
+    leadership: [
+      { name: "Gili Raanan", role: "Founder", profileSlug: "gili-raanan" },
+      { name: "Lior Simon", role: "General Partner" },
+      { name: "Pete Chronis", role: "General Partner" }
+    ],
+    timeline: [
+      { year: "2018", event: "Gili Raanan founds Cyberstarts after nearly nine years at Sequoia Capital." },
+      { year: "2019", event: "Wiz is founded; Cyberstarts partners with the team on day one." },
+      { year: "2020", event: "Leads Wiz's $6 million seed round." },
+      { year: "2024", event: "Forbes reports on and the firm suspends its controversial CISO profit-sharing advisory program." },
+      { year: "2026", event: "Google completes its $32 billion acquisition of Wiz in March, the largest-ever venture-backed exit." }
     ],
     holdings: []
   },
