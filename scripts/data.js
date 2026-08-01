@@ -4793,6 +4793,34 @@ sources: [
       { label: "Congruent Ventures Team", url: "https://www.congruentvc.com/team" }
     ]
   },
+   "marcos-toledo": {
+    name: "Marcos Toledo",
+    firm: "Canary",
+    firmSlug: "canary",
+    title: "Co-Founder & Managing Partner",
+    joinedYear: 2016,
+    education: [],
+    previousExperience: [],
+    investmentFocus: ["Fintech", "Enterprise Software", "Consumer", "Latin America"],
+    notableInvestments: [
+      { name: "Méliuz", ticker: "CASH3.SA" },
+      { name: "99", ticker: null },
+      { name: "Clara", ticker: null }
+    ],
+    boardSeats: [],
+    ipoCount: 1,
+    majorExits: 11,
+    careerTimeline: [
+      { year: "2016", event: "Co-founds Canary in São Paulo, backing early-stage Brazilian founders." },
+      { year: "2021", event: "Announces a new $100 million Fund III for Latin American startups." },
+      { year: "2024", event: "Reports a founder Net Promoter Score of 94 across the firm's portfolio." }
+    ],
+    biography: "Marcos Toledo co-founded Canary in São Paulo in 2016, building it into one of the most active early-stage investors in Latin America — the firm says it sees more than 90% of venture opportunities across the region and has analyzed more than 6,000 companies to date, investing in over 30% of those that later raised a Series A in Brazil. Under his leadership, Canary has backed 135-plus companies including three unicorns, one IPO, and 11 acquisitions, with Méliuz's public listing and continued involvement in 99 and Clara among its clearest proof points. Toledo has consistently framed Canary's role as more than capital — the firm positions itself as a genuine 'co-founder' to its portfolio companies, providing hands-on support across hiring, technology, business development, and fundraising.",
+    sources: [
+      { label: "LatamList", url: "https://latamlist.com/canary-vc-announces-new-100m-venture-fund/" },
+      { label: "Canary", url: "https://www.canary.com.br" }
+    ]
+  },
 };
 
 // ============================================================
@@ -4952,7 +4980,8 @@ const firmStages = {
    "partech": ["Seed", "Series A", "Series B", "Growth"],
    "tlcom-capital": ["Pre-Seed", "Seed", "Series A", "Series B"],
    "yl-ventures": ["Seed", "Series A"],
-   "congruent-ventures": ["Seed", "Series A", "Series B"]
+   "congruent-ventures": ["Seed", "Series A", "Series B"],
+   "canary": ["Pre-Seed", "Seed", "Series A"]
 };
 
 // ============================================================
@@ -7866,6 +7895,31 @@ const firms = [
       { year: "2025", event: "Reports total funds under management reaching $800 million." }
     ],
     holdings: []
+  },
+   {
+    rank: 47,
+    name: "Canary",
+    sectors: ["Fintech", "Enterprise Software", "Consumer", "Climate"],
+    signatureExit: "Méliuz's IPO on Brazil's B3 exchange — Canary counts the cashback and fintech company among its key portfolio successes, alongside continued backing of 99 and Clara",
+    slug: "canary",
+    website: "https://www.canary.com.br",
+    short: "Canary",
+    founded: 2016,
+    hq: "São Paulo, Brazil",
+    aum: "$175M+ (Fund III alone raised $100M, 2021)",
+    thesis: "Canary was founded in 2016 by Marcos Toledo, building what has become one of the most active early-stage venture firms in Latin America. The firm's own description of its dealflow is striking: it says it sees more than 90% of venture opportunities across the region, has analyzed more than 6,000 companies to date, and has invested in over 30% of those that went on to raise a Series A in Brazil — a level of market penetration few regional funds can match. Canary runs a deliberately hands-on model, acting as what it calls a genuine 'co-founder' to portfolio companies across hiring, technology, business development, and fundraising, and has backed 135-plus companies including three unicorns, one IPO (Méliuz), and 11 acquisitions, with a reported 2024 founder Net Promoter Score of 94.",
+    leadership: [
+      { name: "Marcos Toledo", role: "Co-Founder & Managing Partner", profileSlug: "marcos-toledo" },
+      { name: "Isabel Gallera", role: "Partner" }
+    ],
+    timeline: [
+      { year: "2016", event: "Marcos Toledo co-founds Canary in São Paulo." },
+      { year: "2021", event: "Announces a new $100 million Fund III for Latin American startups." },
+      { year: "2024", event: "Reports a founder Net Promoter Score of 94 and 135-plus portfolio companies, including 3 unicorns, 1 IPO, and 11 acquisitions." }
+    ],
+    holdings: [
+      { name: "Méliuz", ticker: "CASH3.SA", historicalPrice: null, price: null }
+    ]
   },
    {
     rank: 43,
