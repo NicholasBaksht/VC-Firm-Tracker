@@ -194,4 +194,9 @@ const LOCATION_MAP = {
   },
 };
 
-module.exports = { SECTOR_MAP, UNMAPPED_DESCRIPTOR_TAGS, LOCATION_MAP };
+// Works both in Node (the generator script, via require) and in the
+// browser (the live app, via a plain <script> tag) - same taxonomy,
+// zero risk of the two environments drifting out of sync.
+if (typeof module !== 'undefined' && module.exports) {
+  module.exports = { SECTOR_MAP, UNMAPPED_DESCRIPTOR_TAGS, LOCATION_MAP };
+}
