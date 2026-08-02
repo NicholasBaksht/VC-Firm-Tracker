@@ -630,3 +630,139 @@ function renderAnalytics() {
     </div>
   `).join('');
 }
+// ============================================================
+// PEER FIRMS BY CATEGORY / LOCATION / STAGE — a second, distinct
+// form of "similar firms" alongside computeSimilarFirms() above.
+// That function finds statistically similar firms across 8 Genome
+// dimensions; this one finds EXPLICIT shared-criteria peers (same
+// canonical sector, same HQ region, same investment stage) using
+// the exact same taxonomy.js mapping that builds the /companies/,
+// /locations/, and /stages/ static pages - so a firm's peer list
+// here always agrees with which hub pages it actually appears on.
+// ============================================================
+
+// Maps a firm's raw sectors[] tags to canonical category slugs from
+// taxonomy.js, in SECTOR_MAP's declared priority order. A firm can
+// span multiple categories (e.g. "AI Security" -> both ai and
+// cybersecurity); this returns all of them.
+function getFirmCanonicalSectors(firm) {
+  if (typeof SECTOR_MAP === 'undefined') return [];
+  const matched = [];
+  Object.entries(SECTOR_MAP).forEach(([slug, cfg]) => {
+    if ((firm.sectors || []).some(raw => cfg.rawTags.includes(raw))) {
+      matched.push(slug);
+    }
+  });
+  return matched;
+}
+
+function getFirmCanonicalLocation(firm) {
+  if (typeof LOCATION_MAP === 'undefined') return null;
+  const entry = Object.entries(LOCATION_MAP).find(([slug, cfg]) => cfg.rawHQs.includes(firm.hq));
+  return entry ? entry[0] : null;
+}
+
+// Returns up to `count` other firms sharing the firm's PRIMARY
+// canonical sector (the first one matched, in SECTOR_MAP order),
+// sorted by Power Score so the strongest peers show first.
+function computeSectorPeers(firm, count = 4) {
+  const sectors = getFirmCanonicalSectors(firm);
+  if (sectors.length === 0) return { categorySlug: null, categoryLabel: null, peers: [] };
+  const primary = sectors[0];
+  const cfg = SECTOR_MAP[primary];
+  const peers = firms
+    .filter(f => f.slug !== firm.slug && getFirmCanonicalSectors(f).includes(primary))
+    .sort((a, b) => computePowerScore(b) - computePowerScore(a))
+    .slice(0, count);
+  return { categorySlug: primary, categoryLabel: cfg.label, peers };
+}
+
+function computeLocationPeers(firm, count = 4) {
+  const locationSlug = getFirmCanonicalLocation(firm);
+  if (!locationSlug) return { locationSlug: null, locationLabel: null, peers: [] };
+  const cfg = LOCATION_MAP[locationSlug];
+  const peers = firms
+    .filter(f => f.slug !== firm.slug && getFirmCanonicalLocation(f) === locationSlug)
+    .sort((a, b) => computePowerScore(b) - computePowerScore(a))
+    .slice(0, count);
+  return { locationSlug, locationLabel: cfg.label, peers };
+}
+
+function computeStagePeers(firm, count = 4) {
+  const stages = firmStages[firm.slug] || [];
+  if (stages.length === 0) return { stageSlug: null, stageLabel: null, peers: [] };
+  // Use the firm's most specific (least common) stage as the shared
+  // link, preferring earlier-stage tags since those are usually the
+  // more differentiating signal for a firm's identity.
+  const primaryStage = stages[0];
+  const stageSlugMap = { 'Pre-Seed': 'pre-seed', 'Seed': 'seed', 'Series A': 'series-a', 'Series B': 'series-b', 'Growth': 'growth', 'Late Stage': 'late-stage' };
+  const slug = stageSlugMap[primaryStage];
+  if (!slug) return { stageSlug: null, stageLabel: null, peers: [] };
+  const peers = firms
+    .filter(f => f.slug !== firm.slug && (firmStages[f.slug] || []).includes(primaryStage))
+    .sort((a, b) => computePowerScore(b) - computePowerScore(a))
+    .slice(0, count);
+  return { stageSlug: slug, stageLabel: primaryStage, peers };
+}
+
+// Renders the full "Explore Related Firms" section for a firm's
+// detail page - reuses the existing .similar-firm-card styling from
+// computeSimilarFirms()/renderSimilarFirms() above so it looks like
+// a native part of the page, not a bolted-on addition. Each group
+// (category/location/stage) that has real peers gets its own row,
+// with a link back to that group's static hub page - the same page
+// generate-seo-pages.js builds - so browsing flows naturally in
+// both directions between the SPA and the static SEO layer.
+function renderPeerFirmLinks(firm) {
+  const sectorResult = computeSectorPeers(firm);
+  const locationResult = computeLocationPeers(firm);
+  const stageResult = computeStagePeers(firm);
+
+  const groups = [];
+  if (sectorResult.peers.length > 0) {
+    groups.push({
+      label: `More ${sectorResult.categoryLabel} Firms`,
+      hubLink: `companies/${sectorResult.categorySlug}/`,
+      hubLinkText: `See all ${sectorResult.categoryLabel} firms →`,
+      peers: sectorResult.peers,
+    });
+  }
+  if (locationResult.peers.length > 0) {
+    groups.push({
+      label: `More Firms in ${locationResult.locationLabel}`,
+      hubLink: `locations/${locationResult.locationSlug}/`,
+      hubLinkText: `See all ${locationResult.locationLabel} firms →`,
+      peers: locationResult.peers,
+    });
+  }
+  if (stageResult.peers.length > 0) {
+    groups.push({
+      label: `More ${stageResult.stageLabel} Investors`,
+      hubLink: `stages/${stageResult.stageSlug}/`,
+      hubLinkText: `See all ${stageResult.stageLabel} investors →`,
+      peers: stageResult.peers,
+    });
+  }
+
+  if (groups.length === 0) return '';
+
+  const groupsHtml = groups.map(g => `
+    <div class="similar-firms" style="margin-bottom: 28px;">
+      <div class="similar-firms-label">${g.label}</div>
+      <div class="similar-firms-grid">
+        ${g.peers.map(p => `
+          <a href="#${p.slug}" class="similar-firm-card">
+            <div class="similar-firm-name">${p.name}</div>
+            <div class="similar-firm-aum">${p.aum}</div>
+          </a>
+        `).join('')}
+      </div>
+      <a href="${g.hubLink}" class="firm-page-link" style="margin-top: 10px; display: inline-block;">${g.hubLinkText}</a>
+    </div>
+  `).join('');
+
+  return `
+    <div class="detail-subhead">Explore Related Firms</div>
+    ${groupsHtml}
+  `;
+}
