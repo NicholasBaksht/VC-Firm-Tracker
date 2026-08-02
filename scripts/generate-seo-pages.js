@@ -6,6 +6,7 @@
  *   - Every sector category, HQ location, and investment stage
  *   - Every individual firm
  *   - Every individual partner profile
+ *   - Comparison pages for well-known firms sharing a sector
  * ...plus sitemap.xml and robots.txt.
  *
  * This is the mechanism that makes the site "compound as the
@@ -40,12 +41,6 @@ const SITE_ROOT = path.resolve(__dirname, '..');
 const SITE_URL = 'https://thevcpowerboard.com';
 const OUTPUT_DIR = SITE_ROOT;
 
-// ---------- Load real browser scripts into Node, combined into one
-// shared scope so later files can reference earlier files' globals -
-// exactly like loading them via <script> tags in order in the
-// browser. This means computePowerScore here is the SAME code
-// (not a reimplementation) as what runs on the live site, so the
-// two can never silently disagree. ----------
 function loadCombinedScripts(filenames) {
   const combinedCode = filenames
     .map(f => fs.readFileSync(path.join(SITE_ROOT, 'scripts', f), 'utf8'))
@@ -123,9 +118,43 @@ function getFirmCanonicalSectors(firm) {
   });
   return matched;
 }
+function getFirmPrimarySector(firm) {
+  const sectors = getFirmCanonicalSectors(firm);
+  return sectors.length > 0 ? sectors[0] : null;
+}
 function getFirmCanonicalLocation(firm) {
   const entry = Object.entries(LOCATION_MAP).find(([slug, cfg]) => cfg.rawHQs.includes(firm.hq));
   return entry ? entry[0] : null;
+}
+
+// ============================================================
+// COMPARISON PAGE PAIR SELECTION
+// With 146 firms, all pairwise combinations would be 10,000+ pages,
+// almost all nonsensical (nobody searches "$10M seed fund vs $175B
+// mega-fund"). Real "X vs Y" searches happen almost exclusively for
+// well-known firms people are already actively choosing between -
+// so comparison pages are only generated for pairs where BOTH firms
+// are in the top COMPARISON_POOL_SIZE by Power Score AND share the
+// same PRIMARY sector. This keeps every generated comparison
+// genuinely searchable and topically coherent instead of diluting
+// the site with thousands of low-value pages.
+// ============================================================
+const COMPARISON_POOL_SIZE = 20;
+
+function computeComparisonPairs(firms, computePowerScore) {
+  const pool = [...firms].sort((a, b) => computePowerScore(b) - computePowerScore(a)).slice(0, COMPARISON_POOL_SIZE);
+  const pairs = [];
+  for (let i = 0; i < pool.length; i++) {
+    for (let j = i + 1; j < pool.length; j++) {
+      const sectorA = getFirmPrimarySector(pool[i]);
+      const sectorB = getFirmPrimarySector(pool[j]);
+      if (sectorA && sectorA === sectorB) {
+        const [firmA, firmB] = pool[i].slug < pool[j].slug ? [pool[i], pool[j]] : [pool[j], pool[i]];
+        pairs.push({ firmA, firmB, sectorSlug: sectorA });
+      }
+    }
+  }
+  return pairs;
 }
 
 function parseAumBillions(aumStr) {
@@ -146,7 +175,6 @@ function escapeHtml(str) {
 function appHashLink(slug) { return `${SITE_URL}/#${slug}`; }
 function appPartnerHashLink(slug) { return `${SITE_URL}/#partner/${slug}`; }
 
-// ---------- Shared page shell ----------
 function renderPage({ depth, title, description, canonicalPath, ogType, breadcrumbs, h1, bodyHtml, jsonLd, extraJsonLd }) {
   const assetPrefix = '../'.repeat(depth);
   const canonicalUrl = `${SITE_URL}${canonicalPath}`;
@@ -187,6 +215,7 @@ function renderPage({ depth, title, description, canonicalPath, ogType, breadcru
 <link rel="stylesheet" href="${assetPrefix}styles/firm-detail.css">
 <link rel="stylesheet" href="${assetPrefix}styles/partner-profile.css">
 <link rel="stylesheet" href="${assetPrefix}styles/filters.css">
+<link rel="stylesheet" href="${assetPrefix}styles/compare.css">
 <link rel="stylesheet" href="${assetPrefix}styles/responsive.css">
 
 <script type="application/ld+json">${JSON.stringify(breadcrumbJsonLd)}</script>
@@ -285,11 +314,12 @@ function computeFirmPeers(firm, allFirms, firmStages, computePowerScore, count =
   return { primarySector, sectorPeers, locSlug, locationPeers };
 }
 
-function renderFirmPage(firm, allFirms, data) {
+function renderFirmPage(firm, allFirms, data, comparisonsByFirmSlug) {
   const { firmStages, partnerProfiles, computePowerScore } = data;
   const powerScore = computePowerScore(firm);
   const pageUrl = `${SITE_URL}/firms/${firm.slug}/`;
   const { primarySector, sectorPeers, locSlug, locationPeers } = computeFirmPeers(firm, allFirms, firmStages, computePowerScore);
+  const myComparisons = comparisonsByFirmSlug[firm.slug] || [];
 
   const leadershipHtml = (firm.leadership || []).map(l => {
     const hasProfile = l.profileSlug && partnerProfiles[l.profileSlug];
@@ -333,6 +363,14 @@ function renderFirmPage(firm, allFirms, data) {
     description: (firm.thesis || '').slice(0, 300), foundingDate: String(firm.founded || ''), address: firm.hq,
   };
 
+  const comparisonsHtml = myComparisons.length > 0 ? `
+    <div class="seo-related">
+      <h2>Compared To</h2>
+      <div class="seo-related-links">
+        ${myComparisons.map(c => `<a href="../../compare/${c.pairSlug}/">vs ${escapeHtml(c.otherName)}</a>`).join('')}
+      </div>
+    </div>` : '';
+
   const bodyHtml = `
     <h1 class="seo-h1">${escapeHtml(firm.name)}</h1>
     <p class="seo-intro">${escapeHtml(firm.thesis || '')}</p>
@@ -352,6 +390,7 @@ function renderFirmPage(firm, allFirms, data) {
     ${timelineHtml ? `<div class="detail-subhead">Firm Timeline</div><div class="timeline">${timelineHtml}</div>` : ''}
     ${holdingsHtml}
     ${peerSectionHtml}
+    ${comparisonsHtml}
   `;
 
   return renderPage({
@@ -436,6 +475,82 @@ function renderPartnerPage(slug, partner, firmsBySlug) {
   });
 }
 
+// ============================================================
+// COMPARISON PAGES
+// ============================================================
+function renderComparePage(firmA, firmB, sectorSlug, computePowerScore) {
+  const pairSlug = `${firmA.slug}-vs-${firmB.slug}`;
+  const pageUrl = `${SITE_URL}/compare/${pairSlug}/`;
+  const scoreA = computePowerScore(firmA);
+  const scoreB = computePowerScore(firmB);
+  const sectorLabel = SECTOR_MAP[sectorSlug].label;
+
+  const rows = [
+    ['Power Score™', `${scoreA}/100`, `${scoreB}/100`],
+    ['Assets Managed', firmA.aum || '—', firmB.aum || '—'],
+    ['Founded', firmA.founded || '—', firmB.founded || '—'],
+    ['Headquarters', firmA.hq || '—', firmB.hq || '—'],
+    ['Sectors', (firmA.sectors || []).join(', '), (firmB.sectors || []).join(', ')],
+  ];
+
+  const tableRowsHtml = rows.map(([label, a, b]) => `
+    <tr>
+      <td class="row-label">${escapeHtml(label)}</td>
+      <td>${escapeHtml(a)}</td>
+      <td>${escapeHtml(b)}</td>
+    </tr>`).join('');
+
+  const bodyHtml = `
+    <h1 class="seo-h1">${escapeHtml(firmA.name)} vs ${escapeHtml(firmB.name)}</h1>
+    <p class="seo-intro">A side-by-side comparison of two ${escapeHtml(sectorLabel)} investors: ${escapeHtml(firmA.name)} (Power Score ${scoreA}/100) and ${escapeHtml(firmB.name)} (Power Score ${scoreB}/100), both ranked among the most active firms tracked in this category.</p>
+
+    <div class="compare-table-wrap">
+      <table class="compare-table">
+        <thead><tr><th></th><th class="firm-col-name">${escapeHtml(firmA.name)}</th><th class="firm-col-name">${escapeHtml(firmB.name)}</th></tr></thead>
+        <tbody>${tableRowsHtml}</tbody>
+      </table>
+    </div>
+
+    <div class="detail-subhead" style="margin-top: 32px;">${escapeHtml(firmA.name)}</div>
+    <p style="font-size: 14.5px; line-height: 1.6; color: var(--ink-dim); max-width: 680px;">${escapeHtml(firmA.thesis || '')}</p>
+    <a href="../../firms/${firmA.slug}/" class="firm-page-link">View full ${escapeHtml(firmA.name)} profile →</a>
+
+    <div class="detail-subhead" style="margin-top: 28px;">${escapeHtml(firmB.name)}</div>
+    <p style="font-size: 14.5px; line-height: 1.6; color: var(--ink-dim); max-width: 680px;">${escapeHtml(firmB.thesis || '')}</p>
+    <a href="../../firms/${firmB.slug}/" class="firm-page-link">View full ${escapeHtml(firmB.name)} profile →</a>
+
+    <div class="seo-related">
+      <h2>More ${escapeHtml(sectorLabel)} Firms</h2>
+      <a href="../../companies/${sectorSlug}/" class="firm-page-link">See all ${escapeHtml(sectorLabel)} firms →</a>
+    </div>
+  `;
+
+  const comparePageJsonLd = {
+    '@context': 'https://schema.org', '@type': 'WebPage', url: pageUrl,
+    name: `${firmA.name} vs ${firmB.name}`,
+    mentions: [
+      { '@type': 'Organization', name: firmA.name, url: firmA.website },
+      { '@type': 'Organization', name: firmB.name, url: firmB.website },
+    ],
+  };
+
+  return renderPage({
+    depth: 2,
+    title: `${firmA.name} vs ${firmB.name}: Compared | The VC Power Board`,
+    description: `Compare ${firmA.name} and ${firmB.name} — AUM, Power Score, founding year, headquarters, and sector focus, side by side with real sourced data.`,
+    canonicalPath: `/compare/${pairSlug}/`,
+    ogType: 'website',
+    breadcrumbs: [
+      { label: 'Home', href: `../../index.html`, absoluteUrl: `${SITE_URL}/` },
+      { label: 'Compare', href: `../index.html`, absoluteUrl: `${SITE_URL}/compare/` },
+      { label: `${firmA.name} vs ${firmB.name}`, href: '', absoluteUrl: pageUrl },
+    ],
+    h1: `${firmA.name} vs ${firmB.name}`,
+    bodyHtml,
+    jsonLd: comparePageJsonLd,
+  });
+}
+
 function main() {
   const data = loadCombinedScripts(['data.js', 'utilities.js', 'powerscore.js']);
   const { firms, partnerProfiles } = data;
@@ -445,7 +560,6 @@ function main() {
   const { sectorIndex, locationIndex, stageIndex } = buildIndexes(data);
   const allGeneratedUrls = [];
 
-  // ===== SECTOR PAGES =====
   Object.entries(SECTOR_MAP).forEach(([slug, cfg]) => {
     const firmsArr = [...sectorIndex[slug]].sort((a, b) => parseAumBillions(b.aum) - parseAumBillions(a.aum));
     if (firmsArr.length === 0) return;
@@ -475,7 +589,6 @@ function main() {
     allGeneratedUrls.push({ url: `${SITE_URL}/companies/`, priority: '0.9' });
   }
 
-  // ===== LOCATION PAGES =====
   Object.entries(LOCATION_MAP).forEach(([slug, cfg]) => {
     const firmsArr = [...locationIndex[slug]].sort((a, b) => parseAumBillions(b.aum) - parseAumBillions(a.aum));
     if (firmsArr.length === 0) return;
@@ -505,7 +618,6 @@ function main() {
     allGeneratedUrls.push({ url: `${SITE_URL}/locations/`, priority: '0.9' });
   }
 
-  // ===== STAGE PAGES =====
   CANONICAL_STAGES.forEach(({ slug, label }) => {
     const firmsArr = [...stageIndex[slug]].sort((a, b) => parseAumBillions(b.aum) - parseAumBillions(a.aum));
     if (firmsArr.length === 0) return;
@@ -535,9 +647,18 @@ function main() {
     allGeneratedUrls.push({ url: `${SITE_URL}/stages/`, priority: '0.9' });
   }
 
-  // ===== FIRM PAGES =====
+  const comparisonPairs = computeComparisonPairs(firms, data.computePowerScore);
+  const comparisonsByFirmSlug = {};
+  comparisonPairs.forEach(({ firmA, firmB, sectorSlug }) => {
+    const pairSlug = `${firmA.slug}-vs-${firmB.slug}`;
+    if (!comparisonsByFirmSlug[firmA.slug]) comparisonsByFirmSlug[firmA.slug] = [];
+    if (!comparisonsByFirmSlug[firmB.slug]) comparisonsByFirmSlug[firmB.slug] = [];
+    comparisonsByFirmSlug[firmA.slug].push({ pairSlug, otherName: firmB.name });
+    comparisonsByFirmSlug[firmB.slug].push({ pairSlug, otherName: firmA.name });
+  });
+
   firms.forEach(firm => {
-    writeFile(`firms/${firm.slug}/index.html`, renderFirmPage(firm, firms, data));
+    writeFile(`firms/${firm.slug}/index.html`, renderFirmPage(firm, firms, data, comparisonsByFirmSlug));
     allGeneratedUrls.push({ url: `${SITE_URL}/firms/${firm.slug}/`, priority: '0.6' });
   });
   {
@@ -547,7 +668,17 @@ function main() {
     allGeneratedUrls.push({ url: `${SITE_URL}/firms/`, priority: '0.9' });
   }
 
-  // ===== PARTNER PAGES =====
+  comparisonPairs.forEach(({ firmA, firmB, sectorSlug }) => {
+    const pairSlug = `${firmA.slug}-vs-${firmB.slug}`;
+    writeFile(`compare/${pairSlug}/index.html`, renderComparePage(firmA, firmB, sectorSlug, data.computePowerScore));
+    allGeneratedUrls.push({ url: `${SITE_URL}/compare/${pairSlug}/`, priority: '0.5' });
+  });
+  {
+    const bodyHtml = `<h1 class="seo-h1">Venture Capital Firm Comparisons</h1><p class="seo-intro">Side-by-side comparisons of leading venture capital firms within the same sector — real, sourced AUM, Power Score, and founding data.</p><div class="firms">${comparisonPairs.map(({ firmA, firmB }) => `<div class="firm"><div class="firm-name"><a href="${firmA.slug}-vs-${firmB.slug}/" class="firm-link">${escapeHtml(firmA.name)} vs ${escapeHtml(firmB.name)}</a></div></div>`).join('')}</div>`;
+    writeFile('compare/index.html', renderPage({ depth: 1, title: 'Venture Capital Firm Comparisons | The VC Power Board', description: `Browse ${comparisonPairs.length} side-by-side venture capital firm comparisons, ranked and sourced.`, canonicalPath: '/compare/', ogType: 'website', breadcrumbs: [{ label: 'Home', href: '../index.html', absoluteUrl: `${SITE_URL}/` }, { label: 'Compare', href: '', absoluteUrl: `${SITE_URL}/compare/` }], h1: 'Venture Capital Firm Comparisons', bodyHtml, jsonLd: null }));
+    allGeneratedUrls.push({ url: `${SITE_URL}/compare/`, priority: '0.7' });
+  }
+
   Object.entries(partnerProfiles).forEach(([slug, partner]) => {
     writeFile(`people/${slug}/index.html`, renderPartnerPage(slug, partner, firmsBySlug));
     allGeneratedUrls.push({ url: `${SITE_URL}/people/${slug}/`, priority: '0.5' });
@@ -559,7 +690,6 @@ function main() {
     allGeneratedUrls.push({ url: `${SITE_URL}/people/`, priority: '0.8' });
   }
 
-  // ===== SITEMAP + ROBOTS =====
   const sitemapUrls = [{ url: `${SITE_URL}/`, priority: '1.0' }, ...allGeneratedUrls];
   writeFile('sitemap.xml', `<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n${sitemapUrls.map(u => `  <url>\n    <loc>${u.url}</loc>\n    <priority>${u.priority}</priority>\n  </url>`).join('\n')}\n</urlset>`);
   writeFile('robots.txt', `User-agent: *\nAllow: /\n\nSitemap: ${SITE_URL}/sitemap.xml\n`);
@@ -569,6 +699,7 @@ function main() {
   console.log(`   Locations: ${Object.keys(LOCATION_MAP).filter(s => locationIndex[s].size > 0).length} location pages`);
   console.log(`   Stages: ${CANONICAL_STAGES.filter(s => stageIndex[s.slug].size > 0).length} stage pages`);
   console.log(`   Firms: ${firms.length} firm pages`);
+  console.log(`   Comparisons: ${comparisonPairs.length} comparison pages`);
   console.log(`   People: ${Object.keys(partnerProfiles).length} partner pages`);
 }
 
