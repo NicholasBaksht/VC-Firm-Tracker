@@ -3,8 +3,10 @@ name: Generate SEO Pages
 on:
   push:
     branches: [main]
-    paths:
+paths:
       - 'scripts/data.js'
+      - 'scripts/utilities.js'
+      - 'scripts/powerscore.js'
       - 'scripts/taxonomy.js'
       - 'scripts/page-copy.js'
       - 'scripts/generate-seo-pages.js'
