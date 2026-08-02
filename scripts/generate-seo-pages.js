@@ -2,28 +2,31 @@
  * GENERATE-SEO-PAGES.JS
  * ============================================================
  * Reads scripts/data.js fresh every run and generates real, static,
- * independently-indexable HTML pages for every category, location,
- * and investment stage - plus sitemap.xml and robots.txt.
+ * independently-indexable HTML pages for:
+ *   - Every sector category, HQ location, and investment stage
+ *   - Every individual firm
+ *   - Every individual partner profile
+ * ...plus sitemap.xml and robots.txt.
  *
  * This is the mechanism that makes the site "compound as the
- * database grows": add firm #147 to data.js with sectors:["AI"],
- * re-run this script (or let the GitHub Action do it automatically
- * on every push), and it appears on the AI category page, the
- * sitemap, and every related internal link - with zero manual
- * page-building.
+ * database grows": add firm #147 to data.js, re-run this script (or
+ * let the GitHub Action do it automatically on every push), and it
+ * gets its own indexable page, shows up on every relevant category/
+ * location/stage page, and is added to the sitemap - with zero
+ * manual page-building.
+ *
+ * DESIGN NOTE: firm and partner static pages intentionally contain
+ * the full FACTUAL content (thesis, AUM, leadership, timeline,
+ * holdings, biography) with real metadata and structured data - but
+ * NOT the live interactive widgets (price editors, the animated
+ * Genome chart, Power Score breakdown visualizations) that live in
+ * the SPA. Search crawlers don't execute that JS anyway, so
+ * duplicating it here would only be a maintenance burden with no
+ * SEO upside. Each static page links prominently into the full
+ * interactive experience instead.
  *
  * USAGE: node scripts/generate-seo-pages.js
  * Requires zero npm installs - only Node's built-in `fs`/`path`.
- *
- * OUTPUT:
- *   /companies/index.html            <- hub page, links every sector
- *   /companies/<sector-slug>/index.html
- *   /locations/index.html            <- hub page, links every location
- *   /locations/<location-slug>/index.html
- *   /stages/index.html               <- hub page, links every stage
- *   /stages/<stage-slug>/index.html
- *   /sitemap.xml
- *   /robots.txt
  * ============================================================
  */
 
@@ -33,17 +36,23 @@ const path = require('path');
 const { SECTOR_MAP, UNMAPPED_DESCRIPTOR_TAGS, LOCATION_MAP } = require('./taxonomy.js');
 const { SECTOR_COPY, LOCATION_COPY, STAGE_COPY } = require('./page-copy.js');
 
-const SITE_ROOT = path.resolve(__dirname, '..'); // repo root
+const SITE_ROOT = path.resolve(__dirname, '..');
 const SITE_URL = 'https://thevcpowerboard.com';
-const OUTPUT_DIR = SITE_ROOT; // pages get written directly into the repo tree
+const OUTPUT_DIR = SITE_ROOT;
 
-// ---------- Load data.js as real data, not by parsing text ----------
-function loadDataJs() {
-  const dataPath = path.join(SITE_ROOT, 'scripts', 'data.js');
-  const code = fs.readFileSync(dataPath, 'utf8');
+// ---------- Load real browser scripts into Node, combined into one
+// shared scope so later files can reference earlier files' globals -
+// exactly like loading them via <script> tags in order in the
+// browser. This means computePowerScore here is the SAME code
+// (not a reimplementation) as what runs on the live site, so the
+// two can never silently disagree. ----------
+function loadCombinedScripts(filenames) {
+  const combinedCode = filenames
+    .map(f => fs.readFileSync(path.join(SITE_ROOT, 'scripts', f), 'utf8'))
+    .join('\n');
   const wrapped = `
-    ${code}
-    return { firms, partnerProfiles, firmStages, firmPerformance, firmGeography, newsItems, featuredFirm };
+    ${combinedCode}
+    return { firms, partnerProfiles, firmStages, firmPerformance, firmGeography, newsItems, featuredFirm, computePowerScore, parseAumNumber, slugifyCompany, getScaleLabel };
   `;
   const fn = new Function(wrapped);
   return fn();
@@ -60,10 +69,8 @@ const CANONICAL_STAGES = [
 
 function buildIndexes(data) {
   const { firms, firmStages } = data;
-
   const sectorIndex = {};
   Object.keys(SECTOR_MAP).forEach(slug => { sectorIndex[slug] = new Set(); });
-
   const rawTagToCanonical = {};
   Object.entries(SECTOR_MAP).forEach(([slug, cfg]) => {
     cfg.rawTags.forEach(raw => {
@@ -71,57 +78,54 @@ function buildIndexes(data) {
       rawTagToCanonical[raw].push(slug);
     });
   });
-
   const unmappedSeen = new Set();
   firms.forEach(firm => {
     (firm.sectors || []).forEach(raw => {
       const canonicalSlugs = rawTagToCanonical[raw];
-      if (canonicalSlugs) {
-        canonicalSlugs.forEach(slug => sectorIndex[slug].add(firm));
-      } else if (!UNMAPPED_DESCRIPTOR_TAGS.has(raw)) {
-        unmappedSeen.add(raw);
-      }
+      if (canonicalSlugs) canonicalSlugs.forEach(slug => sectorIndex[slug].add(firm));
+      else if (!UNMAPPED_DESCRIPTOR_TAGS.has(raw)) unmappedSeen.add(raw);
     });
   });
-
   if (unmappedSeen.size > 0) {
-    console.warn('\n⚠️  Found sector tags not yet in taxonomy.js SECTOR_MAP or UNMAPPED_DESCRIPTOR_TAGS:');
+    console.warn('\n⚠️  Unmapped sector tags (add to taxonomy.js):');
     unmappedSeen.forEach(t => console.warn(`   - "${t}"`));
-    console.warn('   These firms will still appear via their other sector tags, but won\'t');
-    console.warn('   be counted for this specific tag until you add it to taxonomy.js.\n');
   }
 
   const locationIndex = {};
   Object.keys(LOCATION_MAP).forEach(slug => { locationIndex[slug] = new Set(); });
   const rawHqToCanonical = {};
-  Object.entries(LOCATION_MAP).forEach(([slug, cfg]) => {
-    cfg.rawHQs.forEach(raw => { rawHqToCanonical[raw] = slug; });
-  });
+  Object.entries(LOCATION_MAP).forEach(([slug, cfg]) => { cfg.rawHQs.forEach(raw => { rawHqToCanonical[raw] = slug; }); });
   const unmappedHq = new Set();
   firms.forEach(firm => {
     const slug = rawHqToCanonical[firm.hq];
-    if (slug) {
-      locationIndex[slug].add(firm);
-    } else {
-      unmappedHq.add(firm.hq);
-    }
+    if (slug) locationIndex[slug].add(firm);
+    else unmappedHq.add(firm.hq);
   });
   if (unmappedHq.size > 0) {
-    console.warn('\n⚠️  Found HQ locations not yet in taxonomy.js LOCATION_MAP:');
+    console.warn('\n⚠️  Unmapped HQ locations (add to taxonomy.js):');
     unmappedHq.forEach(h => console.warn(`   - "${h}"`));
-    console.warn('   These firms won\'t appear on a location page until added.\n');
   }
 
   const stageIndex = {};
   CANONICAL_STAGES.forEach(s => { stageIndex[s.slug] = new Set(); });
   firms.forEach(firm => {
     const stages = firmStages[firm.slug] || [];
-    CANONICAL_STAGES.forEach(s => {
-      if (stages.includes(s.rawStage)) stageIndex[s.slug].add(firm);
-    });
+    CANONICAL_STAGES.forEach(s => { if (stages.includes(s.rawStage)) stageIndex[s.slug].add(firm); });
   });
 
   return { sectorIndex, locationIndex, stageIndex };
+}
+
+function getFirmCanonicalSectors(firm) {
+  const matched = [];
+  Object.entries(SECTOR_MAP).forEach(([slug, cfg]) => {
+    if ((firm.sectors || []).some(raw => cfg.rawTags.includes(raw))) matched.push(slug);
+  });
+  return matched;
+}
+function getFirmCanonicalLocation(firm) {
+  const entry = Object.entries(LOCATION_MAP).find(([slug, cfg]) => cfg.rawHQs.includes(firm.hq));
+  return entry ? entry[0] : null;
 }
 
 function parseAumBillions(aumStr) {
@@ -132,43 +136,28 @@ function parseAumBillions(aumStr) {
   if (m) return parseFloat(m[1]) / 1000;
   return 0;
 }
-
 function formatCombinedAum(billions) {
   if (billions >= 1000) return '$' + (billions / 1000).toFixed(2) + 'T+';
   return '$' + billions.toFixed(1) + 'B+';
 }
-
 function escapeHtml(str) {
-  return String(str)
-    .replace(/&/g, '&amp;')
-    .replace(/</g, '&lt;')
-    .replace(/>/g, '&gt;')
-    .replace(/"/g, '&quot;');
+  return String(str).replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;').replace(/"/g, '&quot;');
 }
+function appHashLink(slug) { return `${SITE_URL}/#${slug}`; }
+function appPartnerHashLink(slug) { return `${SITE_URL}/#partner/${slug}`; }
 
-function slugifyForFirmLink(firm) {
-  return `${SITE_URL}/#${firm.slug}`;
-}
-
-function renderPage({ depth, title, description, canonicalPath, ogType, breadcrumbs, h1, introHtml, statsHtml, firmListHtml, relatedHtml, jsonLd }) {
+// ---------- Shared page shell ----------
+function renderPage({ depth, title, description, canonicalPath, ogType, breadcrumbs, h1, bodyHtml, jsonLd, extraJsonLd }) {
   const assetPrefix = '../'.repeat(depth);
   const canonicalUrl = `${SITE_URL}${canonicalPath}`;
-  const breadcrumbHtml = breadcrumbs.map((b, i) => {
-    if (i === breadcrumbs.length - 1) {
-      return `<span aria-current="page">${escapeHtml(b.label)}</span>`;
-    }
-    return `<a href="${b.href}">${escapeHtml(b.label)}</a>`;
-  }).join(' <span class="crumb-sep">/</span> ');
+  const breadcrumbHtml = breadcrumbs.map((b, i) => i === breadcrumbs.length - 1
+    ? `<span aria-current="page">${escapeHtml(b.label)}</span>`
+    : `<a href="${b.href}">${escapeHtml(b.label)}</a>`
+  ).join(' <span class="crumb-sep">/</span> ');
 
   const breadcrumbJsonLd = {
-    '@context': 'https://schema.org',
-    '@type': 'BreadcrumbList',
-    itemListElement: breadcrumbs.map((b, i) => ({
-      '@type': 'ListItem',
-      position: i + 1,
-      name: b.label,
-      item: b.absoluteUrl,
-    })),
+    '@context': 'https://schema.org', '@type': 'BreadcrumbList',
+    itemListElement: breadcrumbs.map((b, i) => ({ '@type': 'ListItem', position: i + 1, name: b.label, item: b.absoluteUrl })),
   };
 
   return `<!DOCTYPE html>
@@ -195,11 +184,14 @@ function renderPage({ depth, title, description, canonicalPath, ogType, breadcru
 
 <link rel="stylesheet" href="${assetPrefix}styles/main.css">
 <link rel="stylesheet" href="${assetPrefix}styles/firm-cards.css">
+<link rel="stylesheet" href="${assetPrefix}styles/firm-detail.css">
+<link rel="stylesheet" href="${assetPrefix}styles/partner-profile.css">
 <link rel="stylesheet" href="${assetPrefix}styles/filters.css">
 <link rel="stylesheet" href="${assetPrefix}styles/responsive.css">
 
 <script type="application/ld+json">${JSON.stringify(breadcrumbJsonLd)}</script>
 ${jsonLd ? `<script type="application/ld+json">${JSON.stringify(jsonLd)}</script>` : ''}
+${extraJsonLd ? `<script type="application/ld+json">${JSON.stringify(extraJsonLd)}</script>` : ''}
 
 <style>
   .seo-breadcrumb { font-family: var(--mono); font-size: 12px; color: var(--ink-dim); padding: 20px 0 0; }
@@ -210,30 +202,25 @@ ${jsonLd ? `<script type="application/ld+json">${JSON.stringify(jsonLd)}</script
   .seo-intro { font-size: 16px; line-height: 1.65; color: var(--ink-dim); max-width: 760px; margin-bottom: 16px; }
   .seo-stats { font-family: var(--mono); font-size: 14px; color: var(--ink); background: var(--surface); border: 1px solid var(--hairline); border-radius: 6px; padding: 16px 20px; margin: 24px 0 40px; display: flex; flex-wrap: wrap; gap: 24px; }
   .seo-stats strong { color: var(--gold-bright); }
-  .seo-related { margin: 56px 0 40px; padding-top: 32px; border-top: 1px solid var(--hairline); }
+  .seo-related { margin: 40px 0; padding-top: 28px; border-top: 1px solid var(--hairline); }
   .seo-related h2 { font-family: var(--serif); font-size: 20px; margin-bottom: 14px; }
   .seo-related-links { display: flex; flex-wrap: wrap; gap: 8px; }
   .seo-related-links a { font-family: var(--mono); font-size: 12.5px; color: var(--ink-dim); background: var(--surface); border: 1px solid var(--hairline); border-radius: 20px; padding: 8px 16px; text-decoration: none; transition: border-color 0.15s ease, color 0.15s ease; }
   .seo-related-links a:hover { border-color: var(--gold); color: var(--gold-bright); }
   .seo-nav-simple { display: flex; justify-content: space-between; align-items: center; padding: 14px 24px; max-width: 1080px; margin: 0 auto; border-bottom: 1px solid var(--hairline); }
   .seo-nav-simple a.brand { font-family: var(--mono); font-size: 15px; font-weight: 500; color: var(--ink); text-decoration: none; }
-  .seo-nav-simple a.back-to-app { font-family: var(--mono); font-size: 13px; color: var(--gold); text-decoration: none; }
+  .seo-cta-button { display: inline-block; font-family: var(--mono); font-size: 14px; font-weight: 600; color: var(--bg); background: var(--gold); text-decoration: none; border-radius: 4px; padding: 13px 26px; margin: 20px 0 8px; transition: background 0.15s ease; }
+  .seo-cta-button:hover { background: var(--gold-bright); }
 </style>
 </head>
 <body>
   <nav class="seo-nav-simple">
     <a class="brand" href="${assetPrefix}index.html">The VC Power Board</a>
-    <a class="back-to-app" href="${SITE_URL}/#">Explore the Full Rankings →</a>
+    <a class="back-to-app" href="${SITE_URL}/#" style="font-family: var(--mono); font-size: 13px; color: var(--gold); text-decoration: none;">Explore the Full Rankings →</a>
   </nav>
   <div class="wrap">
     <div class="seo-breadcrumb">${breadcrumbHtml}</div>
-    <h1 class="seo-h1">${escapeHtml(h1)}</h1>
-    <div class="seo-intro">${introHtml}</div>
-    ${statsHtml}
-    <div class="firms">
-      ${firmListHtml}
-    </div>
-    ${relatedHtml}
+    ${bodyHtml}
   </div>
   <footer style="border-top: 1px solid var(--hairline); padding: 36px 0 60px; margin-top: 40px;">
     <div class="wrap">
@@ -245,42 +232,29 @@ ${jsonLd ? `<script type="application/ld+json">${JSON.stringify(jsonLd)}</script
 }
 
 function renderFirmCard(firm) {
-  const aumDisplay = escapeHtml(firm.aum || '');
   const sectorsDisplay = (firm.sectors || []).slice(0, 4).map(s => `<span class="compare-sector-tag">${escapeHtml(s)}</span>`).join('');
   return `
     <div class="firm">
       <div class="firm-head">
         <div>
           <div class="firm-rank">${escapeHtml(firm.hq || '')}</div>
-          <div class="firm-name"><a href="${slugifyForFirmLink(firm)}" class="firm-link">${escapeHtml(firm.name)}</a></div>
+          <div class="firm-name"><a href="${appHashLink(firm.slug)}" class="firm-link">${escapeHtml(firm.name)}</a></div>
           <div class="firm-meta">Founded ${firm.founded || '—'}</div>
         </div>
-        <div class="firm-aum">
-          <div class="num">${aumDisplay}</div>
-          <div class="lbl">Assets Managed</div>
-        </div>
+        <div class="firm-aum"><div class="num">${escapeHtml(firm.aum || '')}</div><div class="lbl">Assets Managed</div></div>
       </div>
       <div class="firm-thesis">${escapeHtml((firm.signatureExit || '').slice(0, 220))}${(firm.signatureExit || '').length > 220 ? '…' : ''}</div>
       <div style="margin-top: 12px;">${sectorsDisplay}</div>
-      <a href="${slugifyForFirmLink(firm)}" class="firm-page-link">View Full Firm Profile →</a>
+      <a href="${appHashLink(firm.slug)}" class="firm-page-link">View Full Firm Profile →</a>
     </div>`;
 }
 
 function buildItemListJsonLd(firmsArr, pageUrl) {
   return {
-    '@context': 'https://schema.org',
-    '@type': 'ItemList',
-    url: pageUrl,
-    numberOfItems: firmsArr.length,
+    '@context': 'https://schema.org', '@type': 'ItemList', url: pageUrl, numberOfItems: firmsArr.length,
     itemListElement: firmsArr.slice(0, 50).map((firm, i) => ({
-      '@type': 'ListItem',
-      position: i + 1,
-      item: {
-        '@type': 'Organization',
-        name: firm.name,
-        url: slugifyForFirmLink(firm),
-        description: (firm.thesis || '').slice(0, 200),
-      },
+      '@type': 'ListItem', position: i + 1,
+      item: { '@type': 'Organization', name: firm.name, url: appHashLink(firm.slug), description: (firm.thesis || '').slice(0, 200) },
     })),
   };
 }
@@ -291,176 +265,311 @@ function writeFile(relPath, content) {
   fs.writeFileSync(fullPath, content, 'utf8');
 }
 
-function main() {
-  const data = loadDataJs();
-  const { sectorIndex, locationIndex, stageIndex } = buildIndexes(data);
+// ============================================================
+// FIRM PAGES
+// ============================================================
+function computeFirmPeers(firm, allFirms, firmStages, computePowerScore, count = 4) {
+  const sectors = getFirmCanonicalSectors(firm);
+  const primarySector = sectors[0] || null;
+  const sectorPeers = primarySector
+    ? allFirms.filter(f => f.slug !== firm.slug && getFirmCanonicalSectors(f).includes(primarySector))
+        .sort((a, b) => computePowerScore(b) - computePowerScore(a)).slice(0, count)
+    : [];
 
+  const locSlug = getFirmCanonicalLocation(firm);
+  const locationPeers = locSlug
+    ? allFirms.filter(f => f.slug !== firm.slug && getFirmCanonicalLocation(f) === locSlug)
+        .sort((a, b) => computePowerScore(b) - computePowerScore(a)).slice(0, count)
+    : [];
+
+  return { primarySector, sectorPeers, locSlug, locationPeers };
+}
+
+function renderFirmPage(firm, allFirms, data) {
+  const { firmStages, partnerProfiles, computePowerScore } = data;
+  const powerScore = computePowerScore(firm);
+  const pageUrl = `${SITE_URL}/firms/${firm.slug}/`;
+  const { primarySector, sectorPeers, locSlug, locationPeers } = computeFirmPeers(firm, allFirms, firmStages, computePowerScore);
+
+  const leadershipHtml = (firm.leadership || []).map(l => {
+    const hasProfile = l.profileSlug && partnerProfiles[l.profileSlug];
+    return `<div class="leader-card ${hasProfile ? 'has-profile' : ''}">
+      <div class="leader-name">${hasProfile ? `<a href="../../people/${l.profileSlug}/" style="color: inherit; text-decoration: none;">${escapeHtml(l.name)}</a>` : escapeHtml(l.name)}</div>
+      <div class="leader-role">${escapeHtml(l.role)}</div>
+    </div>`;
+  }).join('');
+
+  const timelineHtml = (firm.timeline || []).map(t => `
+    <div class="timeline-item">
+      <div class="timeline-year">${escapeHtml(t.year)}</div>
+      <div class="timeline-event">${escapeHtml(t.event)}</div>
+    </div>`).join('');
+
+  const holdingsHtml = (firm.holdings || []).length > 0 ? `
+    <div class="detail-subhead">Notable Public Portfolio Companies</div>
+    <ul class="partner-list">
+      ${firm.holdings.map(h => `<li>${escapeHtml(h.name)} <span style="font-family: var(--mono); color: var(--gold);">${escapeHtml(h.ticker || '')}</span></li>`).join('')}
+    </ul>` : '';
+
+  const sectorTagsHtml = (firm.sectors || []).map(s => `<span class="compare-sector-tag">${escapeHtml(s)}</span>`).join(' ');
+
+  const peerSectionHtml = (sectorPeers.length > 0 || locationPeers.length > 0) ? `
+    <div class="seo-related">
+      <h2>Explore Related Firms</h2>
+      ${sectorPeers.length > 0 ? `
+        <p style="font-size: 13px; color: var(--ink-dim); margin-bottom: 8px;">More ${SECTOR_MAP[primarySector].label} firms:</p>
+        <div class="seo-related-links">${sectorPeers.map(p => `<a href="../${p.slug}/">${escapeHtml(p.name)}</a>`).join('')}</div>
+        <a href="../../companies/${primarySector}/" class="firm-page-link" style="margin-top: 10px; display: inline-block;">See all ${SECTOR_MAP[primarySector].label} firms →</a>
+      ` : ''}
+      ${locationPeers.length > 0 ? `
+        <p style="font-size: 13px; color: var(--ink-dim); margin: 20px 0 8px;">More firms in ${LOCATION_MAP[locSlug].label}:</p>
+        <div class="seo-related-links">${locationPeers.map(p => `<a href="../${p.slug}/">${escapeHtml(p.name)}</a>`).join('')}</div>
+        <a href="../../locations/${locSlug}/" class="firm-page-link" style="margin-top: 10px; display: inline-block;">See all ${LOCATION_MAP[locSlug].label} firms →</a>
+      ` : ''}
+    </div>` : '';
+
+  const orgJsonLd = {
+    '@context': 'https://schema.org', '@type': 'Organization', name: firm.name, url: firm.website,
+    description: (firm.thesis || '').slice(0, 300), foundingDate: String(firm.founded || ''), address: firm.hq,
+  };
+
+  const bodyHtml = `
+    <h1 class="seo-h1">${escapeHtml(firm.name)}</h1>
+    <p class="seo-intro">${escapeHtml(firm.thesis || '')}</p>
+    <div class="seo-stats">
+      <span><strong>${escapeHtml(firm.aum || '')}</strong> AUM</span>
+      <span><strong>${powerScore}</strong>/100 Power Score™</span>
+      <span><strong>${firm.founded || '—'}</strong> Founded</span>
+      <span><strong>${escapeHtml(firm.hq || '')}</strong></span>
+    </div>
+    <div style="margin-bottom: 28px;">${sectorTagsHtml}</div>
+    <a href="${appHashLink(firm.slug)}" class="seo-cta-button">View Live Interactive Profile →</a>
+
+    <div class="detail-subhead" style="margin-top: 36px;">Signature Exit</div>
+    <p style="font-size: 14.5px; line-height: 1.6; color: var(--ink-dim); max-width: 680px;">${escapeHtml(firm.signatureExit || '')}</p>
+
+    ${leadershipHtml ? `<div class="detail-subhead">Key Partners &amp; Leadership</div><div class="leadership-grid">${leadershipHtml}</div>` : ''}
+    ${timelineHtml ? `<div class="detail-subhead">Firm Timeline</div><div class="timeline">${timelineHtml}</div>` : ''}
+    ${holdingsHtml}
+    ${peerSectionHtml}
+  `;
+
+  return renderPage({
+    depth: 2,
+    title: `${firm.name} — Power Score ${powerScore}/100 | The VC Power Board`,
+    description: `${firm.name}: ${escapeHtml(firm.aum || '')} AUM, founded ${firm.founded || ''}, headquartered in ${firm.hq || ''}. Real, sourced venture capital firm data — Power Score ${powerScore}/100.`,
+    canonicalPath: `/firms/${firm.slug}/`,
+    ogType: 'website',
+    breadcrumbs: [
+      { label: 'Home', href: `../../index.html`, absoluteUrl: `${SITE_URL}/` },
+      { label: 'Firms', href: `../index.html`, absoluteUrl: `${SITE_URL}/firms/` },
+      { label: firm.name, href: '', absoluteUrl: pageUrl },
+    ],
+    h1: firm.name,
+    bodyHtml,
+    jsonLd: orgJsonLd,
+  });
+}
+
+// ============================================================
+// PARTNER PAGES
+// ============================================================
+function renderPartnerPage(slug, partner, firmsBySlug) {
+  const pageUrl = `${SITE_URL}/people/${slug}/`;
+  const firm = firmsBySlug[partner.firmSlug];
+
+  const listSection = (title, arr) => (arr && arr.length > 0)
+    ? `<div class="detail-subhead">${title}</div><ul class="partner-list">${arr.map(x => `<li>${escapeHtml(x)}</li>`).join('')}</ul>`
+    : '';
+
+  const notableInvestmentsHtml = (partner.notableInvestments || []).length > 0 ? `
+    <div class="detail-subhead">Notable Investments</div>
+    <div>${partner.notableInvestments.map(inv => `<span class="partner-investment-chip">${escapeHtml(inv.name)}${inv.ticker ? ` <span class="ticker-tag">${escapeHtml(inv.ticker)}</span>` : ''}</span>`).join('')}</div>
+  ` : '';
+
+  const timelineHtml = (partner.careerTimeline || []).length > 0 ? `
+    <div class="detail-subhead">Career Timeline</div>
+    <div class="timeline">${partner.careerTimeline.map(t => `<div class="timeline-item"><div class="timeline-year">${escapeHtml(t.year)}</div><div class="timeline-event">${escapeHtml(t.event)}</div></div>`).join('')}</div>
+  ` : '';
+
+  const sourcesHtml = (partner.sources || []).length > 0 ? `
+    <div class="detail-subhead">Sources &amp; References</div>
+    <div class="partner-source-list">${partner.sources.map(s => `<a href="${s.url}" target="_blank" rel="noopener noreferrer">${escapeHtml(s.label)} ↗</a>`).join('')}</div>
+  ` : '';
+
+  const personJsonLd = {
+    '@context': 'https://schema.org', '@type': 'Person', name: partner.name, jobTitle: partner.title,
+    description: (partner.biography || '').slice(0, 300),
+    worksFor: firm ? { '@type': 'Organization', name: firm.name, url: firm.website } : undefined,
+  };
+
+  const bodyHtml = `
+    <h1 class="seo-h1">${escapeHtml(partner.name)}</h1>
+    <p class="seo-intro">${escapeHtml(partner.title || '')}${firm ? ` at <a href="../../firms/${firm.slug}/" style="color: var(--gold);">${escapeHtml(firm.name)}</a>` : ''}${partner.joinedYear ? ` · Joined ${partner.joinedYear}` : ''}</p>
+    <a href="${appPartnerHashLink(slug)}" class="seo-cta-button">View Live Interactive Profile →</a>
+
+    <div class="detail-subhead" style="margin-top: 36px;">Biography</div>
+    <p class="partner-bio">${escapeHtml(partner.biography || '')}</p>
+
+    ${listSection('Education', partner.education)}
+    ${listSection('Previous Experience', partner.previousExperience)}
+    ${notableInvestmentsHtml}
+    ${listSection('Board Seats', partner.boardSeats)}
+    ${timelineHtml}
+    ${sourcesHtml}
+  `;
+
+  return renderPage({
+    depth: 2,
+    title: `${partner.name} — ${partner.title || 'Partner'}${firm ? ` at ${firm.name}` : ''} | The VC Power Board`,
+    description: `${partner.name} is ${partner.title || 'a partner'}${firm ? ` at ${firm.name}` : ''}. Real, sourced background, career history, and notable investments.`,
+    canonicalPath: `/people/${slug}/`,
+    ogType: 'profile',
+    breadcrumbs: [
+      { label: 'Home', href: `../../index.html`, absoluteUrl: `${SITE_URL}/` },
+      { label: 'People', href: `../index.html`, absoluteUrl: `${SITE_URL}/people/` },
+      { label: partner.name, href: '', absoluteUrl: pageUrl },
+    ],
+    h1: partner.name,
+    bodyHtml,
+    jsonLd: personJsonLd,
+  });
+}
+
+function main() {
+  const data = loadCombinedScripts(['data.js', 'utilities.js', 'powerscore.js']);
+  const { firms, partnerProfiles } = data;
+  const firmsBySlug = {};
+  firms.forEach(f => { firmsBySlug[f.slug] = f; });
+
+  const { sectorIndex, locationIndex, stageIndex } = buildIndexes(data);
   const allGeneratedUrls = [];
 
+  // ===== SECTOR PAGES =====
   Object.entries(SECTOR_MAP).forEach(([slug, cfg]) => {
     const firmsArr = [...sectorIndex[slug]].sort((a, b) => parseAumBillions(b.aum) - parseAumBillions(a.aum));
     if (firmsArr.length === 0) return;
-
     const combinedAum = firmsArr.reduce((sum, f) => sum + parseAumBillions(f.aum), 0);
     const pageUrl = `${SITE_URL}/companies/${slug}/`;
     const relatedSlugs = Object.keys(SECTOR_MAP).filter(s => s !== slug).slice(0, 6);
-
-    const html = renderPage({
-      depth: 2,
-      title: `Top ${cfg.label} Venture Capital Firms | The VC Power Board`,
-      description: `${firmsArr.length} real, verified venture capital firms investing in ${cfg.description}, ranked by assets under management. Sourced data, updated daily.`,
-      canonicalPath: `/companies/${slug}/`,
-      ogType: 'website',
-      breadcrumbs: [
-        { label: 'Home', href: `../../index.html`, absoluteUrl: `${SITE_URL}/` },
-        { label: 'Companies', href: `../index.html`, absoluteUrl: `${SITE_URL}/companies/` },
-        { label: cfg.label, href: '', absoluteUrl: pageUrl },
-      ],
-      h1: `${cfg.label} Venture Capital Firms`,
-      introHtml: escapeHtml(SECTOR_COPY[slug] || ''),
-      statsHtml: `<div class="seo-stats"><span><strong>${firmsArr.length}</strong> firms tracked</span><span><strong>${formatCombinedAum(combinedAum)}</strong> combined AUM</span></div>`,
-      firmListHtml: firmsArr.map(renderFirmCard).join(''),
-      relatedHtml: `<div class="seo-related"><h2>Related Categories</h2><div class="seo-related-links">${relatedSlugs.map(s => `<a href="../${s}/">${escapeHtml(SECTOR_MAP[s].label)}</a>`).join('')}</div></div>`,
-      jsonLd: buildItemListJsonLd(firmsArr, pageUrl),
-    });
-    writeFile(`companies/${slug}/index.html`, html);
+    const bodyHtml = `
+      <h1 class="seo-h1">${cfg.label} Venture Capital Firms</h1>
+      <p class="seo-intro">${escapeHtml(SECTOR_COPY[slug] || '')}</p>
+      <div class="seo-stats"><span><strong>${firmsArr.length}</strong> firms tracked</span><span><strong>${formatCombinedAum(combinedAum)}</strong> combined AUM</span></div>
+      <div class="firms">${firmsArr.map(renderFirmCard).join('')}</div>
+      <div class="seo-related"><h2>Related Categories</h2><div class="seo-related-links">${relatedSlugs.map(s => `<a href="../${s}/">${escapeHtml(SECTOR_MAP[s].label)}</a>`).join('')}</div></div>
+    `;
+    writeFile(`companies/${slug}/index.html`, renderPage({
+      depth: 2, title: `Top ${cfg.label} Venture Capital Firms | The VC Power Board`,
+      description: `${firmsArr.length} real, verified venture capital firms investing in ${cfg.description}, ranked by assets under management.`,
+      canonicalPath: `/companies/${slug}/`, ogType: 'website',
+      breadcrumbs: [{ label: 'Home', href: `../../index.html`, absoluteUrl: `${SITE_URL}/` }, { label: 'Companies', href: `../index.html`, absoluteUrl: `${SITE_URL}/companies/` }, { label: cfg.label, href: '', absoluteUrl: pageUrl }],
+      h1: `${cfg.label} Venture Capital Firms`, bodyHtml, jsonLd: buildItemListJsonLd(firmsArr, pageUrl),
+    }));
     allGeneratedUrls.push({ url: pageUrl, priority: '0.8' });
   });
-
   {
-    const nonEmptySectors = Object.entries(SECTOR_MAP).filter(([slug]) => sectorIndex[slug].size > 0);
-    const hubHtml = renderPage({
-      depth: 1,
-      title: 'Venture Capital Firms by Category | The VC Power Board',
-      description: 'Browse every venture capital sector tracked on The VC Power Board — AI, fintech, healthcare, climate, cybersecurity, and more — each ranked by real, verified assets under management.',
-      canonicalPath: '/companies/',
-      ogType: 'website',
-      breadcrumbs: [{ label: 'Home', href: '../index.html', absoluteUrl: `${SITE_URL}/` }, { label: 'Companies', href: '', absoluteUrl: `${SITE_URL}/companies/` }],
-      h1: 'Venture Capital Firms by Category',
-      introHtml: 'Every sector below links to a dedicated page ranking the real, verified venture capital firms actively investing in that space — sourced from public filings, firm disclosures, and reputable financial reporting.',
-      statsHtml: '',
-      firmListHtml: nonEmptySectors.map(([slug, cfg]) => `<div class="firm"><div class="firm-name"><a href="${slug}/" class="firm-link">${escapeHtml(cfg.label)}</a></div><div class="firm-meta">${sectorIndex[slug].size} firms tracked</div></div>`).join(''),
-      relatedHtml: '',
-      jsonLd: null,
-    });
-    writeFile('companies/index.html', hubHtml);
+    const nonEmpty = Object.entries(SECTOR_MAP).filter(([slug]) => sectorIndex[slug].size > 0);
+    const bodyHtml = `<h1 class="seo-h1">Venture Capital Firms by Category</h1><p class="seo-intro">Every sector below links to a dedicated page ranking the real, verified venture capital firms actively investing in that space.</p><div class="firms">${nonEmpty.map(([slug, cfg]) => `<div class="firm"><div class="firm-name"><a href="${slug}/" class="firm-link">${escapeHtml(cfg.label)}</a></div><div class="firm-meta">${sectorIndex[slug].size} firms tracked</div></div>`).join('')}</div>`;
+    writeFile('companies/index.html', renderPage({ depth: 1, title: 'Venture Capital Firms by Category | The VC Power Board', description: 'Browse every venture capital sector tracked on The VC Power Board.', canonicalPath: '/companies/', ogType: 'website', breadcrumbs: [{ label: 'Home', href: '../index.html', absoluteUrl: `${SITE_URL}/` }, { label: 'Companies', href: '', absoluteUrl: `${SITE_URL}/companies/` }], h1: 'Venture Capital Firms by Category', bodyHtml, jsonLd: null }));
     allGeneratedUrls.push({ url: `${SITE_URL}/companies/`, priority: '0.9' });
   }
 
+  // ===== LOCATION PAGES =====
   Object.entries(LOCATION_MAP).forEach(([slug, cfg]) => {
     const firmsArr = [...locationIndex[slug]].sort((a, b) => parseAumBillions(b.aum) - parseAumBillions(a.aum));
     if (firmsArr.length === 0) return;
-
     const combinedAum = firmsArr.reduce((sum, f) => sum + parseAumBillions(f.aum), 0);
     const pageUrl = `${SITE_URL}/locations/${slug}/`;
     const relatedSlugs = Object.keys(LOCATION_MAP).filter(s => s !== slug).slice(0, 6);
-
-    const html = renderPage({
-      depth: 2,
-      title: `Top ${cfg.label} Venture Capital Firms | The VC Power Board`,
-      description: `${firmsArr.length} real, verified venture capital firms headquartered in ${cfg.label}, ranked by assets under management. Sourced data, updated daily.`,
-      canonicalPath: `/locations/${slug}/`,
-      ogType: 'website',
-      breadcrumbs: [
-        { label: 'Home', href: `../../index.html`, absoluteUrl: `${SITE_URL}/` },
-        { label: 'Locations', href: `../index.html`, absoluteUrl: `${SITE_URL}/locations/` },
-        { label: cfg.label, href: '', absoluteUrl: pageUrl },
-      ],
-      h1: `${cfg.label} Venture Capital Firms`,
-      introHtml: escapeHtml(LOCATION_COPY[slug] || ''),
-      statsHtml: `<div class="seo-stats"><span><strong>${firmsArr.length}</strong> firms tracked</span><span><strong>${formatCombinedAum(combinedAum)}</strong> combined AUM</span></div>`,
-      firmListHtml: firmsArr.map(renderFirmCard).join(''),
-      relatedHtml: `<div class="seo-related"><h2>Other Locations</h2><div class="seo-related-links">${relatedSlugs.map(s => `<a href="../${s}/">${escapeHtml(LOCATION_MAP[s].label)}</a>`).join('')}</div></div>`,
-      jsonLd: buildItemListJsonLd(firmsArr, pageUrl),
-    });
-    writeFile(`locations/${slug}/index.html`, html);
+    const bodyHtml = `
+      <h1 class="seo-h1">${cfg.label} Venture Capital Firms</h1>
+      <p class="seo-intro">${escapeHtml(LOCATION_COPY[slug] || '')}</p>
+      <div class="seo-stats"><span><strong>${firmsArr.length}</strong> firms tracked</span><span><strong>${formatCombinedAum(combinedAum)}</strong> combined AUM</span></div>
+      <div class="firms">${firmsArr.map(renderFirmCard).join('')}</div>
+      <div class="seo-related"><h2>Other Locations</h2><div class="seo-related-links">${relatedSlugs.map(s => `<a href="../${s}/">${escapeHtml(LOCATION_MAP[s].label)}</a>`).join('')}</div></div>
+    `;
+    writeFile(`locations/${slug}/index.html`, renderPage({
+      depth: 2, title: `Top ${cfg.label} Venture Capital Firms | The VC Power Board`,
+      description: `${firmsArr.length} real, verified venture capital firms headquartered in ${cfg.label}, ranked by assets under management.`,
+      canonicalPath: `/locations/${slug}/`, ogType: 'website',
+      breadcrumbs: [{ label: 'Home', href: `../../index.html`, absoluteUrl: `${SITE_URL}/` }, { label: 'Locations', href: `../index.html`, absoluteUrl: `${SITE_URL}/locations/` }, { label: cfg.label, href: '', absoluteUrl: pageUrl }],
+      h1: `${cfg.label} Venture Capital Firms`, bodyHtml, jsonLd: buildItemListJsonLd(firmsArr, pageUrl),
+    }));
     allGeneratedUrls.push({ url: pageUrl, priority: '0.7' });
   });
-
   {
-    const nonEmptyLocations = Object.entries(LOCATION_MAP).filter(([slug]) => locationIndex[slug].size > 0);
-    const hubHtml = renderPage({
-      depth: 1,
-      title: 'Venture Capital Firms by Location | The VC Power Board',
-      description: 'Browse venture capital firms by headquarters location — Silicon Valley, New York, Boston, Europe, Israel, and more — each ranked by real, verified assets under management.',
-      canonicalPath: '/locations/',
-      ogType: 'website',
-      breadcrumbs: [{ label: 'Home', href: '../index.html', absoluteUrl: `${SITE_URL}/` }, { label: 'Locations', href: '', absoluteUrl: `${SITE_URL}/locations/` }],
-      h1: 'Venture Capital Firms by Location',
-      introHtml: 'Venture capital remains geographically concentrated even in a remote-first era. Browse firms by where they\'re actually headquartered, based on real, verified data.',
-      statsHtml: '',
-      firmListHtml: nonEmptyLocations.map(([slug, cfg]) => `<div class="firm"><div class="firm-name"><a href="${slug}/" class="firm-link">${escapeHtml(cfg.label)}</a></div><div class="firm-meta">${locationIndex[slug].size} firms tracked</div></div>`).join(''),
-      relatedHtml: '',
-      jsonLd: null,
-    });
-    writeFile('locations/index.html', hubHtml);
+    const nonEmpty = Object.entries(LOCATION_MAP).filter(([slug]) => locationIndex[slug].size > 0);
+    const bodyHtml = `<h1 class="seo-h1">Venture Capital Firms by Location</h1><p class="seo-intro">Venture capital remains geographically concentrated even in a remote-first era.</p><div class="firms">${nonEmpty.map(([slug, cfg]) => `<div class="firm"><div class="firm-name"><a href="${slug}/" class="firm-link">${escapeHtml(cfg.label)}</a></div><div class="firm-meta">${locationIndex[slug].size} firms tracked</div></div>`).join('')}</div>`;
+    writeFile('locations/index.html', renderPage({ depth: 1, title: 'Venture Capital Firms by Location | The VC Power Board', description: 'Browse venture capital firms by headquarters location.', canonicalPath: '/locations/', ogType: 'website', breadcrumbs: [{ label: 'Home', href: '../index.html', absoluteUrl: `${SITE_URL}/` }, { label: 'Locations', href: '', absoluteUrl: `${SITE_URL}/locations/` }], h1: 'Venture Capital Firms by Location', bodyHtml, jsonLd: null }));
     allGeneratedUrls.push({ url: `${SITE_URL}/locations/`, priority: '0.9' });
   }
 
+  // ===== STAGE PAGES =====
   CANONICAL_STAGES.forEach(({ slug, label }) => {
     const firmsArr = [...stageIndex[slug]].sort((a, b) => parseAumBillions(b.aum) - parseAumBillions(a.aum));
     if (firmsArr.length === 0) return;
-
     const combinedAum = firmsArr.reduce((sum, f) => sum + parseAumBillions(f.aum), 0);
     const pageUrl = `${SITE_URL}/stages/${slug}/`;
     const relatedSlugs = CANONICAL_STAGES.filter(s => s.slug !== slug).map(s => s.slug).slice(0, 6);
-
-    const html = renderPage({
-      depth: 2,
-      title: `Top ${label} Investors | Venture Capital Firms | The VC Power Board`,
-      description: `${firmsArr.length} real, verified venture capital firms investing at the ${label} stage, ranked by assets under management. Sourced data, updated daily.`,
-      canonicalPath: `/stages/${slug}/`,
-      ogType: 'website',
-      breadcrumbs: [
-        { label: 'Home', href: `../../index.html`, absoluteUrl: `${SITE_URL}/` },
-        { label: 'Stages', href: `../index.html`, absoluteUrl: `${SITE_URL}/stages/` },
-        { label: label, href: '', absoluteUrl: pageUrl },
-      ],
-      h1: `${label} Investors`,
-      introHtml: escapeHtml(STAGE_COPY[slug] || ''),
-      statsHtml: `<div class="seo-stats"><span><strong>${firmsArr.length}</strong> firms tracked</span><span><strong>${formatCombinedAum(combinedAum)}</strong> combined AUM</span></div>`,
-      firmListHtml: firmsArr.map(renderFirmCard).join(''),
-      relatedHtml: `<div class="seo-related"><h2>Other Stages</h2><div class="seo-related-links">${relatedSlugs.map(s => `<a href="../${s}/">${escapeHtml(CANONICAL_STAGES.find(x => x.slug === s).label)}</a>`).join('')}</div></div>`,
-      jsonLd: buildItemListJsonLd(firmsArr, pageUrl),
-    });
-    writeFile(`stages/${slug}/index.html`, html);
+    const bodyHtml = `
+      <h1 class="seo-h1">${label} Investors</h1>
+      <p class="seo-intro">${escapeHtml(STAGE_COPY[slug] || '')}</p>
+      <div class="seo-stats"><span><strong>${firmsArr.length}</strong> firms tracked</span><span><strong>${formatCombinedAum(combinedAum)}</strong> combined AUM</span></div>
+      <div class="firms">${firmsArr.map(renderFirmCard).join('')}</div>
+      <div class="seo-related"><h2>Other Stages</h2><div class="seo-related-links">${relatedSlugs.map(s => `<a href="../${s}/">${escapeHtml(CANONICAL_STAGES.find(x => x.slug === s).label)}</a>`).join('')}</div></div>
+    `;
+    writeFile(`stages/${slug}/index.html`, renderPage({
+      depth: 2, title: `Top ${label} Investors | Venture Capital Firms | The VC Power Board`,
+      description: `${firmsArr.length} real, verified venture capital firms investing at the ${label} stage.`,
+      canonicalPath: `/stages/${slug}/`, ogType: 'website',
+      breadcrumbs: [{ label: 'Home', href: `../../index.html`, absoluteUrl: `${SITE_URL}/` }, { label: 'Stages', href: `../index.html`, absoluteUrl: `${SITE_URL}/stages/` }, { label, href: '', absoluteUrl: pageUrl }],
+      h1: `${label} Investors`, bodyHtml, jsonLd: buildItemListJsonLd(firmsArr, pageUrl),
+    }));
     allGeneratedUrls.push({ url: pageUrl, priority: '0.7' });
   });
-
   {
-    const nonEmptyStages = CANONICAL_STAGES.filter(s => stageIndex[s.slug].size > 0);
-    const hubHtml = renderPage({
-      depth: 1,
-      title: 'Venture Capital Firms by Investment Stage | The VC Power Board',
-      description: 'Browse venture capital firms by investment stage — Pre-Seed, Seed, Series A, Series B, Growth, and Late Stage — each ranked by real, verified assets under management.',
-      canonicalPath: '/stages/',
-      ogType: 'website',
-      breadcrumbs: [{ label: 'Home', href: '../index.html', absoluteUrl: `${SITE_URL}/` }, { label: 'Stages', href: '', absoluteUrl: `${SITE_URL}/stages/` }],
-      h1: 'Venture Capital Firms by Investment Stage',
-      introHtml: 'Different firms specialize in different points of a company\'s life — from pre-seed conviction bets to late-stage growth capital. Browse by the stage that matches where your company actually is.',
-      statsHtml: '',
-      firmListHtml: nonEmptyStages.map(s => `<div class="firm"><div class="firm-name"><a href="${s.slug}/" class="firm-link">${escapeHtml(s.label)}</a></div><div class="firm-meta">${stageIndex[s.slug].size} firms tracked</div></div>`).join(''),
-      relatedHtml: '',
-      jsonLd: null,
-    });
-    writeFile('stages/index.html', hubHtml);
+    const nonEmpty = CANONICAL_STAGES.filter(s => stageIndex[s.slug].size > 0);
+    const bodyHtml = `<h1 class="seo-h1">Venture Capital Firms by Investment Stage</h1><p class="seo-intro">Different firms specialize in different points of a company's life.</p><div class="firms">${nonEmpty.map(s => `<div class="firm"><div class="firm-name"><a href="${s.slug}/" class="firm-link">${escapeHtml(s.label)}</a></div><div class="firm-meta">${stageIndex[s.slug].size} firms tracked</div></div>`).join('')}</div>`;
+    writeFile('stages/index.html', renderPage({ depth: 1, title: 'Venture Capital Firms by Investment Stage | The VC Power Board', description: 'Browse venture capital firms by investment stage.', canonicalPath: '/stages/', ogType: 'website', breadcrumbs: [{ label: 'Home', href: '../index.html', absoluteUrl: `${SITE_URL}/` }, { label: 'Stages', href: '', absoluteUrl: `${SITE_URL}/stages/` }], h1: 'Venture Capital Firms by Investment Stage', bodyHtml, jsonLd: null }));
     allGeneratedUrls.push({ url: `${SITE_URL}/stages/`, priority: '0.9' });
   }
 
-  const sitemapUrls = [{ url: `${SITE_URL}/`, priority: '1.0' }, ...allGeneratedUrls];
-  const sitemapXml = `<?xml version="1.0" encoding="UTF-8"?>
-<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
-${sitemapUrls.map(u => `  <url>\n    <loc>${u.url}</loc>\n    <priority>${u.priority}</priority>\n  </url>`).join('\n')}
-</urlset>`;
-  writeFile('sitemap.xml', sitemapXml);
+  // ===== FIRM PAGES =====
+  firms.forEach(firm => {
+    writeFile(`firms/${firm.slug}/index.html`, renderFirmPage(firm, firms, data));
+    allGeneratedUrls.push({ url: `${SITE_URL}/firms/${firm.slug}/`, priority: '0.6' });
+  });
+  {
+    const sorted = [...firms].sort((a, b) => parseAumBillions(b.aum) - parseAumBillions(a.aum));
+    const bodyHtml = `<h1 class="seo-h1">All Venture Capital Firms</h1><p class="seo-intro">Every firm tracked on The VC Power Board, ranked by assets under management.</p><div class="firms">${sorted.map(f => `<div class="firm"><div class="firm-name"><a href="${f.slug}/" class="firm-link">${escapeHtml(f.name)}</a></div><div class="firm-meta">${escapeHtml(f.aum || '')} · Founded ${f.founded || '—'}</div></div>`).join('')}</div>`;
+    writeFile('firms/index.html', renderPage({ depth: 1, title: 'All Venture Capital Firms | The VC Power Board', description: `Browse all ${firms.length} venture capital firms tracked on The VC Power Board, ranked by assets under management.`, canonicalPath: '/firms/', ogType: 'website', breadcrumbs: [{ label: 'Home', href: '../index.html', absoluteUrl: `${SITE_URL}/` }, { label: 'Firms', href: '', absoluteUrl: `${SITE_URL}/firms/` }], h1: 'All Venture Capital Firms', bodyHtml, jsonLd: buildItemListJsonLd(sorted, `${SITE_URL}/firms/`) }));
+    allGeneratedUrls.push({ url: `${SITE_URL}/firms/`, priority: '0.9' });
+  }
 
-  const robotsTxt = `User-agent: *\nAllow: /\n\nSitemap: ${SITE_URL}/sitemap.xml\n`;
-  writeFile('robots.txt', robotsTxt);
+  // ===== PARTNER PAGES =====
+  Object.entries(partnerProfiles).forEach(([slug, partner]) => {
+    writeFile(`people/${slug}/index.html`, renderPartnerPage(slug, partner, firmsBySlug));
+    allGeneratedUrls.push({ url: `${SITE_URL}/people/${slug}/`, priority: '0.5' });
+  });
+  {
+    const sorted = Object.entries(partnerProfiles).sort((a, b) => a[1].name.localeCompare(b[1].name));
+    const bodyHtml = `<h1 class="seo-h1">All Partner Profiles</h1><p class="seo-intro">Every partner profiled on The VC Power Board, searchable in one place.</p><div class="firms">${sorted.map(([slug, p]) => `<div class="firm"><div class="firm-name"><a href="${slug}/" class="firm-link">${escapeHtml(p.name)}</a></div><div class="firm-meta">${escapeHtml(p.title || '')}${p.firm ? ` at ${escapeHtml(p.firm)}` : ''}</div></div>`).join('')}</div>`;
+    writeFile('people/index.html', renderPage({ depth: 1, title: 'All Partner Profiles | The VC Power Board', description: `Browse all ${sorted.length} venture capital partner profiles tracked on The VC Power Board.`, canonicalPath: '/people/', ogType: 'website', breadcrumbs: [{ label: 'Home', href: '../index.html', absoluteUrl: `${SITE_URL}/` }, { label: 'People', href: '', absoluteUrl: `${SITE_URL}/people/` }], h1: 'All Partner Profiles', bodyHtml, jsonLd: null }));
+    allGeneratedUrls.push({ url: `${SITE_URL}/people/`, priority: '0.8' });
+  }
+
+  // ===== SITEMAP + ROBOTS =====
+  const sitemapUrls = [{ url: `${SITE_URL}/`, priority: '1.0' }, ...allGeneratedUrls];
+  writeFile('sitemap.xml', `<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n${sitemapUrls.map(u => `  <url>\n    <loc>${u.url}</loc>\n    <priority>${u.priority}</priority>\n  </url>`).join('\n')}\n</urlset>`);
+  writeFile('robots.txt', `User-agent: *\nAllow: /\n\nSitemap: ${SITE_URL}/sitemap.xml\n`);
 
   console.log(`\n✅ Generated ${allGeneratedUrls.length} static pages + sitemap.xml + robots.txt`);
   console.log(`   Companies: ${Object.keys(SECTOR_MAP).filter(s => sectorIndex[s].size > 0).length} category pages`);
   console.log(`   Locations: ${Object.keys(LOCATION_MAP).filter(s => locationIndex[s].size > 0).length} location pages`);
   console.log(`   Stages: ${CANONICAL_STAGES.filter(s => stageIndex[s.slug].size > 0).length} stage pages`);
+  console.log(`   Firms: ${firms.length} firm pages`);
+  console.log(`   People: ${Object.keys(partnerProfiles).length} partner pages`);
 }
 
 main();
