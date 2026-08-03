@@ -5095,6 +5095,39 @@ sources: [
       { label: "Wharton FinTech", url: "https://medium.com/wharton-fintech/spotlight-on-the-african-fintech-ecosystem-podcast-with-eghosa-omoigui-founder-and-managing-23d05f1d425c" }
     ]
   },
+   "olumide-soyombo": {
+    name: "Olumide Soyombo",
+    firm: "Voltron Capital",
+    firmSlug: "voltron-capital",
+    title: "Co-Founder",
+    joinedYear: 2021,
+    education: [],
+    previousExperience: [
+      "Co-Founder, LeadPath Nigeria (2014)",
+      "Co-Founder, Bluechip Technologies",
+      "Angel Investor (30+ African startups since 2014, including Paystack, PiggyVest, TeamApt/Moniepoint)"
+    ],
+    investmentFocus: ["Fintech", "Commerce", "Pre-Seed & Seed", "Pan-African"],
+    notableInvestments: [
+      { name: "Mono", ticker: null },
+      { name: "PiggyVest", ticker: null },
+      { name: "TeamApt (Moniepoint)", ticker: null }
+    ],
+    boardSeats: [],
+    ipoCount: 0,
+    majorExits: 1,
+    careerTimeline: [
+      { year: "2014", event: "Co-founds LeadPath Nigeria with Kazeem Tewogbade, a Y Combinator-style accelerator, and begins angel investing." },
+      { year: "2020", event: "Paystack, one of his personal angel investments, is acquired by Stripe." },
+      { year: "2021", event: "Co-founds Voltron Capital with Abe Choi in July." },
+      { year: "2022", event: "Voltron Capital launches its first fund, ultimately investing in 53 startups." }
+    ],
+    biography: "Olumide Soyombo began angel investing in 2014 after co-founding LeadPath Nigeria, a Y Combinator-style accelerator, when he discovered there were no real investors to pitch the startups he was mentoring to. Over the following years he built one of the most recognized personal angel portfolios in African tech, backing more than 30 startups including Mono, PiggyVest, TeamApt (now Moniepoint), and Paystack before Stripe acquired it. He co-founded Voltron Capital with U.S.-based investor Abe Choi in 2021, built specifically to formalize that individual track record into an institutional fund addressing what he's called a severe lack of access to early-stage capital for African founders. Voltron's $20,000-to-$100,000 check sizes target pre-seed and seed startups across Nigeria, Kenya, South Africa, and North Africa, and the firm invested in 53 companies through its first fund alone.",
+    sources: [
+      { label: "Wikipedia — Olumide Soyombo", url: "https://en.wikipedia.org/wiki/Olumide_Soyombo" },
+      { label: "TechCrunch", url: "https://techcrunch.com/2021/07/26/one-of-nigerias-high-profile-angel-investors-is-launching-a-fund-for-african-startups/" }
+    ]
+  },
 };
 
 // ============================================================
@@ -5263,7 +5296,8 @@ const firmStages = {
    "jerusalem-venture-partners": ["Seed", "Series A", "Growth"],
    "helios-investment-partners": ["Series B", "Growth", "Late Stage"],
    "ventures-platform": ["Pre-Seed", "Seed", "Series A"],
-   "echovc-partners": ["Seed", "Series A", "Growth"]
+   "echovc-partners": ["Seed", "Series A", "Growth"],
+   "voltron-capital": ["Pre-Seed", "Seed"]
 };
 
 // ============================================================
@@ -9202,6 +9236,28 @@ const firms = [
       { year: "2011", event: "Eghosa Omoigui founds EchoVC Partners in Lagos." },
       { year: "2019", event: "Participates in Lori Systems' $30 million Series A round in Kenya." },
       { year: "2020s", event: "Launches EchoVC+ in partnership with TPG Growth and the TPG Rise Fund, and EchoVC Pan-Africa Fund I." }
+    ],
+    holdings: []
+  },
+   {
+    rank: 72,
+    name: "Voltron Capital",
+    sectors: ["Fintech", "Healthcare", "Enterprise Software"],
+    signatureExit: "No confirmed fund-level exit yet — Voltron itself launched in 2021, though co-founder Olumide Soyombo's prior personal angel investment in Paystack (acquired by Stripe in 2020) lends the firm real pre-existing credibility",
+    slug: "voltron-capital",
+    website: "https://voltron.africa",
+    short: "Voltron Capital",
+    founded: 2021,
+    hq: "Lagos, Nigeria",
+    aum: "Not publicly disclosed (53 startups backed via Fund I, 2022)",
+    thesis: "Voltron Capital was co-founded in July 2021 by Olumide Soyombo, one of Africa's most prolific angel investors, and Abe Choi, a US-based entrepreneur and investor. Soyombo had already built a personal portfolio of more than 30 African startups — including Paystack, PiggyVest, and Mono — through angel checks since 2014, and Voltron was built specifically to formalize that track record into institutional capital addressing what the founders called a severe lack of access to early-stage funding across the continent. The firm writes $20,000 to $100,000 pre-seed and seed checks focused on Nigeria, Kenya, South Africa, and North Africa, launched its first fund in 2022, and had backed 53 startups through that vehicle alone.",
+    leadership: [
+      { name: "Olumide Soyombo", role: "Co-Founder", profileSlug: "olumide-soyombo" },
+      { name: "Abe Choi", role: "Co-Founder" }
+    ],
+    timeline: [
+      { year: "2021", event: "Olumide Soyombo and Abe Choi co-found Voltron Capital in July." },
+      { year: "2022", event: "Launches its first fund, ultimately backing 53 startups." }
     ],
     holdings: []
   },
