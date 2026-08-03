@@ -4999,6 +4999,38 @@ sources: [
       { label: "JVP — Erel Margalit", url: "https://jvpvc.com/jvp_team/erel-n-margalit-4/" }
     ]
   },
+   "tope-lawani": {
+    name: "Tope Lawani",
+    firm: "Helios Investment Partners",
+    firmSlug: "helios-investment-partners",
+    title: "Co-Founder & Managing Partner",
+    joinedYear: 2004,
+    education: ["BS, Chemical Engineering, MIT", "JD, Harvard Law School", "MBA, Harvard Business School"],
+    previousExperience: [
+      "9 years, Texas Pacific Group (TPG Capital), San Francisco & London (led acquisitions of Burger King, Debenhams, J. Crew)"
+    ],
+    investmentFocus: ["Telecom Infrastructure", "Fintech", "Financial Services", "Growth Equity"],
+    notableInvestments: [
+      { name: "Interswitch", ticker: null },
+      { name: "Helios Towers", ticker: "HTWS.L" },
+      { name: "Equity Bank", ticker: null }
+    ],
+    boardSeats: [],
+    ipoCount: 1,
+    majorExits: 6,
+    careerTimeline: [
+      { year: "1995", event: "Joins Texas Pacific Group, spending nine years leading telecommunications and media investments across the US and Europe." },
+      { year: "2004", event: "Co-founds Helios Investment Partners with Babatunde Soyoye in London." },
+      { year: "2005", event: "Helios founds Africa's first independent telecom tower company, HTN Towers." },
+      { year: "2011", event: "Leads Helios' investment in Interswitch, a Nigerian electronic payments processor." },
+      { year: "2019", event: "Helios Towers completes its listing on the London Stock Exchange." }
+    ],
+    biography: "Tope Lawani grew up in Ibadan, Nigeria, before earning a chemical engineering degree from MIT and a joint JD/MBA from Harvard, then spending nine years at Texas Pacific Group leading telecommunications and media buyouts including Burger King, Debenhams, and J. Crew. He co-founded Helios Investment Partners with Babatunde Soyoye in 2004, initially intending to build businesses directly rather than run a traditional private equity fund — a plan that shifted when OPIC approached Helios to manage the struggling Modern Africa Growth Fund. Lawani and Soyoye stumbled into what became one of Helios' signature bets while researching a Nigerian mobile telecom license: recognizing that unreliable grid electricity made shared tower infrastructure essential across the continent, they founded Africa's first independent tower company. Under his leadership, Helios has grown into the largest Africa-focused private investment firm, generating more than $2 billion in aggregate exit proceeds through listings, dividend recaps, and strategic sales including Interswitch, Helios Towers, Vivo Energy, and Equity Bank.",
+    sources: [
+      { label: "How We Made It In Africa", url: "https://www.howwemadeitinafrica.com/the-nigerian-investor-behind-some-of-africas-biggest-deals/170376/" },
+      { label: "Helios Investment Partners", url: "https://www.heliosinvestment.com/team" }
+    ]
+  },
 };
 
 // ============================================================
@@ -5164,7 +5196,8 @@ const firmStages = {
    "healthquest-capital": ["Growth", "Late Stage"],
    "cyberstarts": ["Seed", "Series A"],
    "pitango-venture-capital": ["Seed", "Series A", "Series B", "Growth"],
-   "jerusalem-venture-partners": ["Seed", "Series A", "Growth"]
+   "jerusalem-venture-partners": ["Seed", "Series A", "Growth"],
+   "helios-investment-partners": ["Series B", "Growth", "Late Stage"]
 };
 
 // ============================================================
@@ -6951,6 +6984,33 @@ const firms = [
     holdings: [
       { name: "CyberArk", ticker: "CYBR", historicalPrice: null, price: null },
       { name: "Cogent Communications", ticker: "CCOI", historicalPrice: null, price: null }
+    ]
+  },
+   {
+    rank: 35,
+    name: "Helios Investment Partners",
+    sectors: ["Fintech", "Enterprise Software", "Climate", "Mobility"],
+    signatureExit: "Helios Towers' 2019 listing on the London Stock Exchange — one of several exits generating more than $2 billion in aggregate proceeds for Helios, alongside major stakes in Interswitch and Equity Bank",
+    slug: "helios-investment-partners",
+    website: "https://www.heliosinvestment.com",
+    short: "Helios",
+    founded: 2004,
+    hq: "London, UK",
+    aum: "$3.6B",
+    thesis: "Helios Investment Partners was founded in 2004 by Tope Lawani and Babatunde Soyoye, both veterans of Texas Pacific Group's telecommunications and media buyout practice, who set out to build an Africa-focused investment platform spanning growth equity, buyouts, and large-scale infrastructure. The firm's defining early bet came almost by accident: while researching a Nigerian telecom license bid, the founders recognized that unreliable grid electricity made independently-owned tower infrastructure essential across Africa, leading them to found the continent's first independent telecom tower company in 2005. That pattern-recognition — spotting infrastructure gaps beneath consumer-facing growth stories — has defined Helios ever since, producing more than $2 billion in aggregate exit proceeds across telecom, fintech, and financial services, and growing the firm into the largest Africa-focused private investment platform with $3.6 billion under management.",
+    leadership: [
+      { name: "Tope Lawani", role: "Co-Founder & Managing Partner", profileSlug: "tope-lawani" },
+      { name: "Babatunde Soyoye", role: "Co-Founder & Managing Partner" }
+    ],
+    timeline: [
+      { year: "2004", event: "Tope Lawani and Babatunde Soyoye found Helios Investment Partners in London." },
+      { year: "2005", event: "Founds HTN Towers, Africa's first independent telecom tower company." },
+      { year: "2011", event: "Invests in Interswitch, a Nigerian electronic payments processor." },
+      { year: "2019", event: "Helios Towers completes its London Stock Exchange listing." },
+      { year: "2020", event: "Combines with Fairfax Africa Holdings to form Helios Fairfax Partners." }
+    ],
+    holdings: [
+      { name: "Helios Towers", ticker: "HTWS.L", historicalPrice: null, price: null }
     ]
   },
    {
