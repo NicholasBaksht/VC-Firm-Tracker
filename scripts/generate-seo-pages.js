@@ -8,26 +8,6 @@
  *   - Every individual partner profile
  *   - Comparison pages for well-known firms sharing a sector
  * ...plus sitemap.xml and robots.txt.
- *
- * This is the mechanism that makes the site "compound as the
- * database grows": add firm #147 to data.js, re-run this script (or
- * let the GitHub Action do it automatically on every push), and it
- * gets its own indexable page, shows up on every relevant category/
- * location/stage page, and is added to the sitemap - with zero
- * manual page-building.
- *
- * DESIGN NOTE: firm and partner static pages intentionally contain
- * the full FACTUAL content (thesis, AUM, leadership, timeline,
- * holdings, biography) with real metadata and structured data - but
- * NOT the live interactive widgets (price editors, the animated
- * Genome chart, Power Score breakdown visualizations) that live in
- * the SPA. Search crawlers don't execute that JS anyway, so
- * duplicating it here would only be a maintenance burden with no
- * SEO upside. Each static page links prominently into the full
- * interactive experience instead.
- *
- * USAGE: node scripts/generate-seo-pages.js
- * Requires zero npm installs - only Node's built-in `fs`/`path`.
  * ============================================================
  */
 
@@ -61,6 +41,12 @@ const CANONICAL_STAGES = [
   { slug: 'growth', label: 'Growth', rawStage: 'Growth' },
   { slug: 'late-stage', label: 'Late Stage', rawStage: 'Late Stage' },
 ];
+
+// Thin-content guard: a landing page with only 1-2 firms and generic
+// intro copy carries little real SEO weight. Below this threshold,
+// the page is simply not generated - the firms still appear
+// everywhere else (their own firm page, sector pages, etc.).
+const MIN_FIRMS_FOR_LOCATION_PAGE = 3;
 
 function buildIndexes(data) {
   const { firms, firmStages } = data;
@@ -127,18 +113,6 @@ function getFirmCanonicalLocation(firm) {
   return entry ? entry[0] : null;
 }
 
-// ============================================================
-// COMPARISON PAGE PAIR SELECTION
-// With 146 firms, all pairwise combinations would be 10,000+ pages,
-// almost all nonsensical (nobody searches "$10M seed fund vs $175B
-// mega-fund"). Real "X vs Y" searches happen almost exclusively for
-// well-known firms people are already actively choosing between -
-// so comparison pages are only generated for pairs where BOTH firms
-// are in the top COMPARISON_POOL_SIZE by Power Score AND share the
-// same PRIMARY sector. This keeps every generated comparison
-// genuinely searchable and topically coherent instead of diluting
-// the site with thousands of low-value pages.
-// ============================================================
 const COMPARISON_POOL_SIZE = 20;
 
 function computeComparisonPairs(firms, computePowerScore) {
@@ -208,6 +182,7 @@ function renderPage({ depth, title, description, canonicalPath, ogType, breadcru
 <meta name="twitter:description" content="${escapeHtml(description)}">
 
 <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,300;9..144,500;9..144,600;9..144,700&family=Inter:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500;600&display=swap" rel="stylesheet">
 
 <link rel="stylesheet" href="${assetPrefix}styles/main.css">
@@ -248,7 +223,7 @@ ${extraJsonLd ? `<script type="application/ld+json">${JSON.stringify(extraJsonLd
     <a class="back-to-app" href="${SITE_URL}/#" style="font-family: var(--mono); font-size: 13px; color: var(--gold); text-decoration: none;">Explore the Full Rankings →</a>
   </nav>
   <div class="wrap">
-    <div class="seo-breadcrumb">${breadcrumbHtml}</div>
+    <nav class="seo-breadcrumb" aria-label="Breadcrumb">${breadcrumbHtml}</nav>
     ${bodyHtml}
   </div>
   <footer style="border-top: 1px solid var(--hairline); padding: 36px 0 60px; margin-top: 40px;">
@@ -294,9 +269,6 @@ function writeFile(relPath, content) {
   fs.writeFileSync(fullPath, content, 'utf8');
 }
 
-// ============================================================
-// FIRM PAGES
-// ============================================================
 function computeFirmPeers(firm, allFirms, firmStages, computePowerScore, count = 4) {
   const sectors = getFirmCanonicalSectors(firm);
   const primarySector = sectors[0] || null;
@@ -305,7 +277,8 @@ function computeFirmPeers(firm, allFirms, firmStages, computePowerScore, count =
         .sort((a, b) => computePowerScore(b) - computePowerScore(a)).slice(0, count)
     : [];
 
-  const locSlug = getFirmCanonicalLocation(firm);
+  const rawLocSlug = getFirmCanonicalLocation(firm);
+  const locSlug = (rawLocSlug && allFirms.filter(f => getFirmCanonicalLocation(f) === rawLocSlug).length >= MIN_FIRMS_FOR_LOCATION_PAGE) ? rawLocSlug : null;
   const locationPeers = locSlug
     ? allFirms.filter(f => f.slug !== firm.slug && getFirmCanonicalLocation(f) === locSlug)
         .sort((a, b) => computePowerScore(b) - computePowerScore(a)).slice(0, count)
@@ -336,7 +309,7 @@ function renderFirmPage(firm, allFirms, data, comparisonsByFirmSlug) {
     </div>`).join('');
 
   const holdingsHtml = (firm.holdings || []).length > 0 ? `
-    <div class="detail-subhead">Notable Public Portfolio Companies</div>
+    <h2 class="detail-subhead">Notable Public Portfolio Companies</h2>
     <ul class="partner-list">
       ${firm.holdings.map(h => `<li>${escapeHtml(h.name)} <span style="font-family: var(--mono); color: var(--gold);">${escapeHtml(h.ticker || '')}</span></li>`).join('')}
     </ul>` : '';
@@ -382,12 +355,13 @@ function renderFirmPage(firm, allFirms, data, comparisonsByFirmSlug) {
     </div>
     <div style="margin-bottom: 28px;">${sectorTagsHtml}</div>
     <a href="${appHashLink(firm.slug)}" class="seo-cta-button">View Live Interactive Profile →</a>
+    ${firm.website ? `<a href="${firm.website}" target="_blank" rel="noopener noreferrer" style="margin-left: 12px; font-family: var(--mono); font-size: 13px; color: var(--gold);">Visit ${escapeHtml(firm.name)}'s Website ↗</a>` : ''}
 
-    <div class="detail-subhead" style="margin-top: 36px;">Signature Exit</div>
+    <h2 class="detail-subhead" style="margin-top: 36px;">Signature Exit</h2>
     <p style="font-size: 14.5px; line-height: 1.6; color: var(--ink-dim); max-width: 680px;">${escapeHtml(firm.signatureExit || '')}</p>
 
-    ${leadershipHtml ? `<div class="detail-subhead">Key Partners &amp; Leadership</div><div class="leadership-grid">${leadershipHtml}</div>` : ''}
-    ${timelineHtml ? `<div class="detail-subhead">Firm Timeline</div><div class="timeline">${timelineHtml}</div>` : ''}
+    ${leadershipHtml ? `<h2 class="detail-subhead">Key Partners &amp; Leadership</h2><div class="leadership-grid">${leadershipHtml}</div>` : ''}
+    ${timelineHtml ? `<h2 class="detail-subhead">Firm Timeline</h2><div class="timeline">${timelineHtml}</div>` : ''}
     ${holdingsHtml}
     ${peerSectionHtml}
     ${comparisonsHtml}
@@ -410,29 +384,35 @@ function renderFirmPage(firm, allFirms, data, comparisonsByFirmSlug) {
   });
 }
 
-// ============================================================
-// PARTNER PAGES
-// ============================================================
-function renderPartnerPage(slug, partner, firmsBySlug) {
+function renderPartnerPage(slug, partner, firmsBySlug, allPartnerEntries) {
   const pageUrl = `${SITE_URL}/people/${slug}/`;
   const firm = firmsBySlug[partner.firmSlug];
 
+  const colleagues = allPartnerEntries.filter(([otherSlug, p]) => otherSlug !== slug && p.firmSlug === partner.firmSlug);
+  const colleaguesHtml = (colleagues.length > 0 && firm) ? `
+    <div class="seo-related">
+      <h2>Other Partners at ${escapeHtml(firm.name)}</h2>
+      <div class="seo-related-links">
+        ${colleagues.map(([cSlug, c]) => `<a href="../${cSlug}/">${escapeHtml(c.name)}</a>`).join('')}
+      </div>
+    </div>` : '';
+
   const listSection = (title, arr) => (arr && arr.length > 0)
-    ? `<div class="detail-subhead">${title}</div><ul class="partner-list">${arr.map(x => `<li>${escapeHtml(x)}</li>`).join('')}</ul>`
+    ? `<h2 class="detail-subhead">${title}</h2><ul class="partner-list">${arr.map(x => `<li>${escapeHtml(x)}</li>`).join('')}</ul>`
     : '';
 
   const notableInvestmentsHtml = (partner.notableInvestments || []).length > 0 ? `
-    <div class="detail-subhead">Notable Investments</div>
+    <h2 class="detail-subhead">Notable Investments</h2>
     <div>${partner.notableInvestments.map(inv => `<span class="partner-investment-chip">${escapeHtml(inv.name)}${inv.ticker ? ` <span class="ticker-tag">${escapeHtml(inv.ticker)}</span>` : ''}</span>`).join('')}</div>
   ` : '';
 
   const timelineHtml = (partner.careerTimeline || []).length > 0 ? `
-    <div class="detail-subhead">Career Timeline</div>
+    <h2 class="detail-subhead">Career Timeline</h2>
     <div class="timeline">${partner.careerTimeline.map(t => `<div class="timeline-item"><div class="timeline-year">${escapeHtml(t.year)}</div><div class="timeline-event">${escapeHtml(t.event)}</div></div>`).join('')}</div>
   ` : '';
 
   const sourcesHtml = (partner.sources || []).length > 0 ? `
-    <div class="detail-subhead">Sources &amp; References</div>
+    <h2 class="detail-subhead">Sources &amp; References</h2>
     <div class="partner-source-list">${partner.sources.map(s => `<a href="${s.url}" target="_blank" rel="noopener noreferrer">${escapeHtml(s.label)} ↗</a>`).join('')}</div>
   ` : '';
 
@@ -447,7 +427,7 @@ function renderPartnerPage(slug, partner, firmsBySlug) {
     <p class="seo-intro">${escapeHtml(partner.title || '')}${firm ? ` at <a href="../../firms/${firm.slug}/" style="color: var(--gold);">${escapeHtml(firm.name)}</a>` : ''}${partner.joinedYear ? ` · Joined ${partner.joinedYear}` : ''}</p>
     <a href="${appPartnerHashLink(slug)}" class="seo-cta-button">View Live Interactive Profile →</a>
 
-    <div class="detail-subhead" style="margin-top: 36px;">Biography</div>
+    <h2 class="detail-subhead" style="margin-top: 36px;">Biography</h2>
     <p class="partner-bio">${escapeHtml(partner.biography || '')}</p>
 
     ${listSection('Education', partner.education)}
@@ -456,6 +436,7 @@ function renderPartnerPage(slug, partner, firmsBySlug) {
     ${listSection('Board Seats', partner.boardSeats)}
     ${timelineHtml}
     ${sourcesHtml}
+    ${colleaguesHtml}
   `;
 
   return renderPage({
@@ -475,9 +456,6 @@ function renderPartnerPage(slug, partner, firmsBySlug) {
   });
 }
 
-// ============================================================
-// COMPARISON PAGES
-// ============================================================
 function renderComparePage(firmA, firmB, sectorSlug, computePowerScore) {
   const pairSlug = `${firmA.slug}-vs-${firmB.slug}`;
   const pageUrl = `${SITE_URL}/compare/${pairSlug}/`;
@@ -506,16 +484,16 @@ function renderComparePage(firmA, firmB, sectorSlug, computePowerScore) {
 
     <div class="compare-table-wrap">
       <table class="compare-table">
-        <thead><tr><th></th><th class="firm-col-name">${escapeHtml(firmA.name)}</th><th class="firm-col-name">${escapeHtml(firmB.name)}</th></tr></thead>
+        <thead><tr><th scope="col"></th><th scope="col" class="firm-col-name">${escapeHtml(firmA.name)}</th><th scope="col" class="firm-col-name">${escapeHtml(firmB.name)}</th></tr></thead>
         <tbody>${tableRowsHtml}</tbody>
       </table>
     </div>
 
-    <div class="detail-subhead" style="margin-top: 32px;">${escapeHtml(firmA.name)}</div>
+    <h2 class="detail-subhead" style="margin-top: 32px;">${escapeHtml(firmA.name)}</h2>
     <p style="font-size: 14.5px; line-height: 1.6; color: var(--ink-dim); max-width: 680px;">${escapeHtml(firmA.thesis || '')}</p>
     <a href="../../firms/${firmA.slug}/" class="firm-page-link">View full ${escapeHtml(firmA.name)} profile →</a>
 
-    <div class="detail-subhead" style="margin-top: 28px;">${escapeHtml(firmB.name)}</div>
+    <h2 class="detail-subhead" style="margin-top: 28px;">${escapeHtml(firmB.name)}</h2>
     <p style="font-size: 14.5px; line-height: 1.6; color: var(--ink-dim); max-width: 680px;">${escapeHtml(firmB.thesis || '')}</p>
     <a href="../../firms/${firmB.slug}/" class="firm-page-link">View full ${escapeHtml(firmB.name)} profile →</a>
 
@@ -591,10 +569,10 @@ function main() {
 
   Object.entries(LOCATION_MAP).forEach(([slug, cfg]) => {
     const firmsArr = [...locationIndex[slug]].sort((a, b) => parseAumBillions(b.aum) - parseAumBillions(a.aum));
-    if (firmsArr.length === 0) return;
+    if (firmsArr.length < MIN_FIRMS_FOR_LOCATION_PAGE) return;
     const combinedAum = firmsArr.reduce((sum, f) => sum + parseAumBillions(f.aum), 0);
     const pageUrl = `${SITE_URL}/locations/${slug}/`;
-    const relatedSlugs = Object.keys(LOCATION_MAP).filter(s => s !== slug).slice(0, 6);
+    const relatedSlugs = Object.keys(LOCATION_MAP).filter(s => s !== slug && locationIndex[s].size >= MIN_FIRMS_FOR_LOCATION_PAGE).slice(0, 6);
     const bodyHtml = `
       <h1 class="seo-h1">${cfg.label} Venture Capital Firms</h1>
       <p class="seo-intro">${escapeHtml(LOCATION_COPY[slug] || '')}</p>
@@ -612,7 +590,7 @@ function main() {
     allGeneratedUrls.push({ url: pageUrl, priority: '0.7' });
   });
   {
-    const nonEmpty = Object.entries(LOCATION_MAP).filter(([slug]) => locationIndex[slug].size > 0);
+    const nonEmpty = Object.entries(LOCATION_MAP).filter(([slug]) => locationIndex[slug].size >= MIN_FIRMS_FOR_LOCATION_PAGE);
     const bodyHtml = `<h1 class="seo-h1">Venture Capital Firms by Location</h1><p class="seo-intro">Venture capital remains geographically concentrated even in a remote-first era.</p><div class="firms">${nonEmpty.map(([slug, cfg]) => `<div class="firm"><div class="firm-name"><a href="${slug}/" class="firm-link">${escapeHtml(cfg.label)}</a></div><div class="firm-meta">${locationIndex[slug].size} firms tracked</div></div>`).join('')}</div>`;
     writeFile('locations/index.html', renderPage({ depth: 1, title: 'Venture Capital Firms by Location | The VC Power Board', description: 'Browse venture capital firms by headquarters location.', canonicalPath: '/locations/', ogType: 'website', breadcrumbs: [{ label: 'Home', href: '../index.html', absoluteUrl: `${SITE_URL}/` }, { label: 'Locations', href: '', absoluteUrl: `${SITE_URL}/locations/` }], h1: 'Venture Capital Firms by Location', bodyHtml, jsonLd: null }));
     allGeneratedUrls.push({ url: `${SITE_URL}/locations/`, priority: '0.9' });
@@ -680,7 +658,7 @@ function main() {
   }
 
   Object.entries(partnerProfiles).forEach(([slug, partner]) => {
-    writeFile(`people/${slug}/index.html`, renderPartnerPage(slug, partner, firmsBySlug));
+    writeFile(`people/${slug}/index.html`, renderPartnerPage(slug, partner, firmsBySlug, Object.entries(partnerProfiles)));
     allGeneratedUrls.push({ url: `${SITE_URL}/people/${slug}/`, priority: '0.5' });
   });
   {
@@ -696,7 +674,7 @@ function main() {
 
   console.log(`\n✅ Generated ${allGeneratedUrls.length} static pages + sitemap.xml + robots.txt`);
   console.log(`   Companies: ${Object.keys(SECTOR_MAP).filter(s => sectorIndex[s].size > 0).length} category pages`);
-  console.log(`   Locations: ${Object.keys(LOCATION_MAP).filter(s => locationIndex[s].size > 0).length} location pages`);
+  console.log(`   Locations: ${Object.keys(LOCATION_MAP).filter(s => locationIndex[s].size >= MIN_FIRMS_FOR_LOCATION_PAGE).length} location pages`);
   console.log(`   Stages: ${CANONICAL_STAGES.filter(s => stageIndex[s.slug].size > 0).length} stage pages`);
   console.log(`   Firms: ${firms.length} firm pages`);
   console.log(`   Comparisons: ${comparisonPairs.length} comparison pages`);
