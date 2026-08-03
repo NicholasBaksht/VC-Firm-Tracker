@@ -4931,6 +4931,40 @@ sources: [
       { label: "Forbes Profile", url: "https://www.forbes.com/profile/gili-raanan/" }
     ]
   },
+   "chemi-peres": {
+    name: "Chemi Peres",
+    firm: "Pitango Venture Capital",
+    firmSlug: "pitango-venture-capital",
+    title: "Co-Founder & Managing General Partner",
+    joinedYear: 1996,
+    education: ["BSc, Tel Aviv University"],
+    previousExperience: [
+      "Israeli Air Force Pilot",
+      "Advisor, Israel Aerospace Industries (IAI Lavi project)",
+      "Business Development, Decision Systems Israel (DSIT)",
+      "Co-Founder, MOFET Israel Technology Fund (1992)"
+    ],
+    investmentFocus: ["Digital Health", "Deep Tech", "Fintech", "Mobility"],
+    notableInvestments: [
+      { name: "Via Transportation", ticker: null },
+      { name: "Taboola", ticker: "TBLA" },
+      { name: "CyberMDX", ticker: null }
+    ],
+    boardSeats: ["Via Transportation", "Taboola", "Radwin", "Venn.city", "Duda"],
+    ipoCount: 1,
+    majorExits: 1,
+    careerTimeline: [
+      { year: "1992", event: "Co-founds the MOFET Israel Technology Fund, one of the first venture funds listed on the Tel Aviv Stock Exchange." },
+      { year: "1996", event: "Joins Rami Kalish at Polaris Venture Capital, forming Polaris Fund II at more than $100 million." },
+      { year: "2001", event: "Polaris rebrands as Pitango Venture Capital." },
+      { year: "2022", event: "Portfolio company CyberMDX is acquired by ForeScout Technologies in February." }
+    ],
+    biography: "Chemi Peres, son of former Israeli President Shimon Peres, built his path to venture capital through the Israeli Air Force and Israel Aerospace Industries before co-founding the MOFET Israel Technology Fund in 1992 — one of the first venture funds listed on the Tel Aviv Stock Exchange. He joined Rami Kalish's Polaris Venture Capital in 1996, and the firm rebranded as Pitango in 2001, growing under his leadership as Managing General Partner into Israel's largest and longest-standing venture capital firm, with more than $3 billion under management across 13 funds and over 250 companies backed. Peres has been especially active in Pitango's health-tech practice and serves on the boards of Via Transportation, Taboola, Radwin, and several other portfolio companies, while also chairing the Peres Center for Peace and Innovation.",
+    sources: [
+      { label: "Wikipedia — Chemi Peres", url: "https://en.wikipedia.org/wiki/Chemi_Peres" },
+      { label: "Pitango Venture Capital", url: "https://www.pitango.com" }
+    ]
+  },
 };
 
 // ============================================================
@@ -5094,7 +5128,8 @@ const firmStages = {
    "canary": ["Pre-Seed", "Seed", "Series A"],
    "jungle-ventures": ["Seed", "Series A", "Series B", "Growth"],
    "healthquest-capital": ["Growth", "Late Stage"],
-   "cyberstarts": ["Seed", "Series A"]
+   "cyberstarts": ["Seed", "Series A"],
+   "pitango-venture-capital": ["Seed", "Series A", "Series B", "Growth"]
 };
 
 // ============================================================
@@ -6767,6 +6802,33 @@ const firms = [
     holdings: [
      { name: "Lyft", ticker: "LYFT", historicalPrice: null, price: null }
     ]
+  },
+   {
+    rank: 33,
+    name: "Pitango Venture Capital",
+    sectors: ["Enterprise Software", "Fintech", "Cybersecurity", "Healthcare", "AI"],
+    signatureExit: "CyberMDX's February 2022 acquisition by ForeScout Technologies — one of more than 85 exits across Pitango's 250-plus portfolio companies since 1993",
+    slug: "pitango-venture-capital",
+    website: "https://www.pitango.com",
+    short: "Pitango",
+    founded: 1993,
+    hq: "Herzliya, Israel",
+    aum: "$3B",
+    thesis: "Pitango Venture Capital was founded in 1993 as Polaris Venture Capital by Rami Kalish, joined three years later by Chemi Peres, and rebranded to its current name in 2001. Now Israel's largest and longest-standing venture capital firm, Pitango operates through three dedicated funds — Pitango First for early-stage bets, Pitango Growth for scaling companies, and Pitango HealthTech for digital health, medical devices, and biotechnology — giving it a genuinely full-lifecycle presence in Israeli tech rare among its peers. The firm has invested in more than 250 companies since founding, with over 85 reaching a public listing or acquisition, and now manages $3 billion across 13 funds.",
+    leadership: [
+      { name: "Chemi Peres", role: "Co-Founder & Managing General Partner", profileSlug: "chemi-peres" },
+      { name: "Rami Kalish", role: "Co-Founder & Managing Partner" },
+      { name: "Aaron Mankovski", role: "Partner" }
+    ],
+    timeline: [
+      { year: "1993", event: "Rami Kalish founds Polaris Venture Capital in Israel." },
+      { year: "1996", event: "Chemi Peres joins, forming Polaris Fund II at more than $100 million." },
+      { year: "2001", event: "Polaris rebrands as Pitango Venture Capital." },
+      { year: "2020", event: "Raises $750 million, its largest vintage to date." },
+      { year: "2022", event: "CyberMDX, a Pitango and OurCrowd-backed startup, is acquired by ForeScout Technologies in February." },
+      { year: "2023", event: "Pitango HealthTech raises $175 million dedicated to Israeli health tech." }
+    ],
+    holdings: []
   },
    {
     rank: 34,
