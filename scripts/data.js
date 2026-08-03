@@ -5128,6 +5128,38 @@ sources: [
       { label: "TechCrunch", url: "https://techcrunch.com/2021/07/26/one-of-nigerias-high-profile-angel-investors-is-launching-a-fund-for-african-startups/" }
     ]
   },
+   "niklas-adalberth": {
+    name: "Niklas Adalberth",
+    firm: "Norrsken22",
+    firmSlug: "norrsken22",
+    title: "Co-Founder",
+    joinedYear: 2022,
+    education: [],
+    previousExperience: [
+      "Co-Founder, Klarna (2005)",
+      "Founder, Norrsken Foundation"
+    ],
+    investmentFocus: ["Fintech", "Edtech", "Healthtech", "Market-Enabling Solutions"],
+    notableInvestments: [
+      { name: "TymeBank", ticker: null },
+      { name: "Autochek", ticker: null },
+      { name: "Smile Identity", ticker: null }
+    ],
+    boardSeats: [],
+    ipoCount: 0,
+    majorExits: 0,
+    careerTimeline: [
+      { year: "2005", event: "Co-founds Klarna, which grows into one of Europe's largest online payment companies." },
+      { year: "2016", event: "Founds the Norrsken Foundation, building Norrsken House co-working hubs for impact entrepreneurs." },
+      { year: "2022", event: "Co-founds Norrsken22 with Hans Otterling in January, based in Kigali, Rwanda." },
+      { year: "2023", event: "Closes Norrsken22's debut African Tech Growth Fund at $205 million in November, above its $200 million target." }
+    ],
+    biography: "Niklas Adalberth co-founded Klarna in 2005 and helped build it into one of Europe's largest online payment companies before turning to impact-focused venture building through the Norrsken Foundation, which he founded in 2016 and which now runs Norrsken House co-working hubs in Stockholm and Kigali for impact entrepreneurs. He co-founded Norrsken22 in January 2022 with Hans Otterling, a partner at Northzone, to address a specific gap he'd identified in African venture capital: an abundance of pre-seed and seed capital but a real shortage of growth-stage funding for companies ready to scale. The fund's $205 million debut close in November 2023 was backed by more than 30 unicorn founders, including Flutterwave's Olugbenga Agboola and Skype's Niklas Zennström, and Norrsken22 has since backed TymeBank, Sabi, Smile Identity, Autochek, and Shara — all still-private growth-stage African companies.",
+    sources: [
+      { label: "TechCrunch", url: "https://techcrunch.com/2023/11/02/norrsken22s-debut-fund-closes-at-205m-to-back-growth-stage-startups-in-africa/" },
+      { label: "Norrsken22", url: "https://www.norrsken22.com" }
+    ]
+  },
 };
 
 // ============================================================
@@ -5297,7 +5329,8 @@ const firmStages = {
    "helios-investment-partners": ["Series B", "Growth", "Late Stage"],
    "ventures-platform": ["Pre-Seed", "Seed", "Series A"],
    "echovc-partners": ["Seed", "Series A", "Growth"],
-   "voltron-capital": ["Pre-Seed", "Seed"]
+   "voltron-capital": ["Pre-Seed", "Seed"],
+   "norrsken22": ["Series A", "Series B"]
 };
 
 // ============================================================
@@ -9258,6 +9291,31 @@ const firms = [
     timeline: [
       { year: "2021", event: "Olumide Soyombo and Abe Choi co-found Voltron Capital in July." },
       { year: "2022", event: "Launches its first fund, ultimately backing 53 startups." }
+    ],
+    holdings: []
+  },
+   {
+    rank: 73,
+    name: "Norrsken22",
+    sectors: ["Fintech", "Healthcare", "Edtech", "Enterprise Software"],
+    signatureExit: "No confirmed exit yet — Norrsken22's five investments (TymeBank, Sabi, Smile Identity, Autochek, Shara) all remain private, still-growing companies since the fund only launched in 2022",
+    slug: "norrsken22",
+    website: "https://www.norrsken22.com",
+    short: "Norrsken22",
+    founded: 2022,
+    hq: "Kigali, Rwanda",
+    aum: "$205M (debut fund, closed November 2023)",
+    thesis: "Norrsken22 was founded in January 2022 by Niklas Adalberth, the Klarna co-founder behind the Norrsken Foundation, and Hans Otterling, a partner at Northzone, built specifically to close a gap the founders identified in African venture capital: real abundance at pre-seed and seed, but a genuine shortage of growth-stage capital for companies ready to scale past Series A. The firm allocates roughly half its capital to new Series A and B deals and the rest to follow-on investment in later rounds, run by a team with decades of combined experience investing across the continent, including Managing Partner Natalie Kolbe, formerly global head of private equity at Actis. Norrsken22 closed its debut $205 million African Tech Growth Fund in November 2023, above its $200 million target, backed by more than 30 unicorn founders including Flutterwave's Olugbenga Agboola and Skype's Niklas Zennström.",
+    leadership: [
+      { name: "Niklas Adalberth", role: "Co-Founder", profileSlug: "niklas-adalberth" },
+      { name: "Hans Otterling", role: "Co-Founder" },
+      { name: "Natalie Kolbe", role: "Managing Partner" },
+      { name: "Lexi Novitske", role: "General Partner" }
+    ],
+    timeline: [
+      { year: "2022", event: "Niklas Adalberth and Hans Otterling found Norrsken22 in Kigali, Rwanda, in January." },
+      { year: "2023", event: "Makes its first five investments: TymeBank, Sabi, Smile Identity, Autochek, and Shara." },
+      { year: "2023", event: "Closes its debut $205 million African Tech Growth Fund in November, above its $200 million target." }
     ],
     holdings: []
   },
