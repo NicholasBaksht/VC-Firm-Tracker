@@ -4965,6 +4965,40 @@ sources: [
       { label: "Pitango Venture Capital", url: "https://www.pitango.com" }
     ]
   },
+   "erel-margalit": {
+    name: "Erel Margalit",
+    firm: "Jerusalem Venture Partners",
+    firmSlug: "jerusalem-venture-partners",
+    title: "Founder & Executive Chairman",
+    joinedYear: 1993,
+    education: ["PhD"],
+    previousExperience: [
+      "Director, Jerusalem Development Authority",
+      "Member of Knesset, Israeli Parliament (2013-2018, Finance & Science and Technology Committees)"
+    ],
+    investmentFocus: ["Cybersecurity", "Vertical AI", "Enterprise Software", "Fintech", "Insurtech"],
+    notableInvestments: [
+      { name: "CyberArk", ticker: "CYBR" },
+      { name: "QlikTech", ticker: "QLIK" },
+      { name: "Cogent Communications", ticker: "CCOI" }
+    ],
+    boardSeats: ["Earnix (Chairman)", "ControlUp (Chairman)", "ThetaRay (Chairman)"],
+    ipoCount: 3,
+    majorExits: 4,
+    careerTimeline: [
+      { year: "1993", event: "Founds Jerusalem Venture Partners, initially operating one of Israel's first government-backed incubators." },
+      { year: "1994", event: "Leads JVP's Series A investment in CyberArk." },
+      { year: "2000", event: "Orchestrates Chromatis Networks' $4.8 billion sale to Lucent Technologies, then the largest sale of an Israeli company." },
+      { year: "2013", event: "Elected to the Knesset, taking a five-year break from active VC leadership." },
+      { year: "2014", event: "CyberArk goes public on the Nasdaq, with JVP holding roughly 47% ownership after a Goldman Sachs-backed secondary transaction." },
+      { year: "2025", event: "CyberArk agrees to a $25 billion acquisition by Palo Alto Networks, announced in July." }
+    ],
+    biography: "Erel Margalit is widely credited as one of the architects of Israel's 'Startup Nation,' founding Jerusalem Venture Partners in 1993 after directing the Jerusalem Development Authority. He led JVP's Series A investment in CyberArk and later increased the firm's stake to roughly 47% through a secondary transaction with Goldman Sachs, positioning the identity security company for its 2014 Nasdaq IPO and, three decades later, a $25 billion acquisition by Palo Alto Networks. Margalit also orchestrated the $4.8 billion sale of Chromatis Networks to Lucent Technologies in 2000, then the largest Israeli tech exit on record, alongside public listings for QlikTech and Cogent Communications. He served in Israel's Knesset from 2013 to 2018 before returning to lead JVP full-time, and was recognized on the Forbes Midas List as, in the words of an Israeli business paper, 'the first venture capitalist with the golden touch.'",
+    sources: [
+      { label: "Wikipedia — Erel Margalit", url: "https://en.wikipedia.org/wiki/Erel_Margalit" },
+      { label: "JVP — Erel Margalit", url: "https://jvpvc.com/jvp_team/erel-n-margalit-4/" }
+    ]
+  },
 };
 
 // ============================================================
@@ -5129,7 +5163,8 @@ const firmStages = {
    "jungle-ventures": ["Seed", "Series A", "Series B", "Growth"],
    "healthquest-capital": ["Growth", "Late Stage"],
    "cyberstarts": ["Seed", "Series A"],
-   "pitango-venture-capital": ["Seed", "Series A", "Series B", "Growth"]
+   "pitango-venture-capital": ["Seed", "Series A", "Series B", "Growth"],
+   "jerusalem-venture-partners": ["Seed", "Series A", "Growth"]
 };
 
 // ============================================================
@@ -6888,6 +6923,34 @@ const firms = [
       { name: "Zoom", ticker: "ZM", historicalPrice: null, price: null },
       { name: "Veeva Systems", ticker: "VEEV", historicalPrice: null, price: null },
       { name: "Box", ticker: "BOX", historicalPrice: null, price: null }
+    ]
+  },
+   {
+    rank: 34,
+    name: "Jerusalem Venture Partners",
+    sectors: ["Cybersecurity", "AI", "Enterprise Software", "Fintech"],
+    signatureExit: "CyberArk's 2014 Nasdaq IPO — JVP was the company's Series A investor and later increased its stake to roughly 47% via a Goldman Sachs-backed secondary transaction; CyberArk agreed to a $25 billion acquisition by Palo Alto Networks in 2025",
+    slug: "jerusalem-venture-partners",
+    website: "https://jvpvc.com",
+    short: "JVP",
+    founded: 1993,
+    hq: "Jerusalem, Israel",
+    aum: "$2.18B",
+    thesis: "Jerusalem Venture Partners was founded in 1993 by Erel Margalit, who had previously directed the Jerusalem Development Authority and brought a distinctly hands-on, ecosystem-building approach to venture capital from day one — JVP initially operated as one of Israel's first government-backed incubators before expanding into a global firm. That combination of capital and operational support, including startup hubs in Jerusalem, Be'er Sheva, and New York, produced one of Israeli tech's most consequential track records: the Series A investment in CyberArk that grew into a roughly 47% ownership stake ahead of its 2014 IPO, and the $4.8 billion sale of Chromatis Networks to Lucent Technologies in 2000, then the largest Israeli tech exit ever recorded. JVP now manages $2.18 billion across 10 funds, having invested in more than 150 companies.",
+    leadership: [
+      { name: "Erel Margalit", role: "Founder & Executive Chairman", profileSlug: "erel-margalit" },
+      { name: "Yoav Tzruya", role: "General Partner" }
+    ],
+    timeline: [
+      { year: "1993", event: "Erel Margalit founds Jerusalem Venture Partners." },
+      { year: "1994", event: "Leads a Series A investment in CyberArk." },
+      { year: "2000", event: "Chromatis Networks is sold to Lucent Technologies for $4.8 billion." },
+      { year: "2014", event: "CyberArk goes public on the Nasdaq." },
+      { year: "2025", event: "CyberArk agrees to a $25 billion acquisition by Palo Alto Networks in July; JVP announces a $290 million investment vehicle with TPG for Earnix." }
+    ],
+    holdings: [
+      { name: "CyberArk", ticker: "CYBR", historicalPrice: null, price: null },
+      { name: "Cogent Communications", ticker: "CCOI", historicalPrice: null, price: null }
     ]
   },
    {
