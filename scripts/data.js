@@ -5063,6 +5063,38 @@ sources: [
       { label: "Ventures Platform", url: "https://www.venturesplatform.com" }
     ]
   },
+   "eghosa-omoigui": {
+    name: "Eghosa Omoigui",
+    firm: "EchoVC Partners",
+    firmSlug: "echovc-partners",
+    title: "Founder & Managing General Partner",
+    joinedYear: 2011,
+    education: ["JD, University of Nigeria & University of Pennsylvania Law School", "MBA, Olin Graduate School of Business, Babson College"],
+    previousExperience: [
+      "Chief of Staff, Intel Treasury (helped oversee an $18B cash platform)",
+      "Chief of Staff to the President, Intel Capital",
+      "Director, Strategic Investments, Consumer Internet & Semantic Technologies, Intel Capital (~10 years total at Intel)"
+    ],
+    investmentFocus: ["Fintech", "Health Services", "Commerce", "Energy", "Sustainable Mobility"],
+    notableInvestments: [
+      { name: "Lori Systems", ticker: null },
+      { name: "Hotels.ng", ticker: null }
+    ],
+    boardSeats: [],
+    ipoCount: 0,
+    majorExits: 0,
+    careerTimeline: [
+      { year: "2000s", event: "Spends nearly a decade at Intel, rising to Director of Strategic Investments at Intel Capital, sourcing early bets on AdMob, Facebook, LinkedIn, and Pandora." },
+      { year: "2011", event: "Founds EchoVC Partners in Lagos." },
+      { year: "2019", event: "Participates in Lori Systems' $30 million Series A alongside Timon Capital and other investors." },
+      { year: "2020s", event: "Launches EchoVC+, an early-growth-stage vehicle built in partnership with TPG Growth and the TPG Rise Fund." }
+    ],
+    biography: "Eghosa Omoigui spent nearly a decade at Intel, rising to Director of Strategic Investments at Intel Capital, where he sourced and developed the investment thesis behind early bets on AdMob, Facebook, LinkedIn, Pandora, and several other companies that became category leaders. He founded EchoVC Partners in Lagos in 2011, built explicitly around backing underrepresented founders and underserved markets — an intentional continuation of the platform-agnostic, geographically expansive sourcing instinct he'd developed inside Intel Capital. That approach has taken EchoVC's investing well beyond Africa into Southeast Asia and Latin America, and the firm has since built a dedicated growth-stage vehicle, EchoVC+, in partnership with TPG Growth and the TPG Rise Fund. Omoigui holds law degrees from the University of Nigeria and the University of Pennsylvania alongside an MBA from Babson College's Olin Graduate School of Business.",
+    sources: [
+      { label: "EchoVC Partners Team", url: "https://www.echovc.com/team" },
+      { label: "Wharton FinTech", url: "https://medium.com/wharton-fintech/spotlight-on-the-african-fintech-ecosystem-podcast-with-eghosa-omoigui-founder-and-managing-23d05f1d425c" }
+    ]
+  },
 };
 
 // ============================================================
@@ -5230,7 +5262,8 @@ const firmStages = {
    "pitango-venture-capital": ["Seed", "Series A", "Series B", "Growth"],
    "jerusalem-venture-partners": ["Seed", "Series A", "Growth"],
    "helios-investment-partners": ["Series B", "Growth", "Late Stage"],
-   "ventures-platform": ["Pre-Seed", "Seed", "Series A"]
+   "ventures-platform": ["Pre-Seed", "Seed", "Series A"],
+   "echovc-partners": ["Seed", "Series A", "Growth"]
 };
 
 // ============================================================
@@ -9146,6 +9179,29 @@ const firms = [
       { year: "2018", event: "Barclays establishes Barclays UK Ventures as an internal build-and-invest unit." },
       { year: "2019", event: "Ben Davey, formerly Barclays' Group Head of Strategy, becomes CEO of Barclays UK Ventures." },
       { year: "2024", event: "Cumulative investment count reaches 145, spanning human capital, B2B media, and financial software." }
+    ],
+    holdings: []
+  },
+   {
+    rank: 71,
+    name: "EchoVC Partners",
+    sectors: ["Fintech", "Healthcare", "Mobility", "Enterprise Software"],
+    signatureExit: "No single dollar-verified signature exit — EchoVC instead measures itself by geographic reach, having expanded from its original African focus into Southeast Asia and Latin America, and by its EchoVC+ growth-stage partnership with TPG Growth and the TPG Rise Fund",
+    slug: "echovc-partners",
+    website: "https://www.echovc.com",
+    short: "EchoVC Partners",
+    founded: 2011,
+    hq: "Lagos, Nigeria",
+    aum: "Not publicly disclosed",
+    thesis: "EchoVC Partners was founded in 2011 by Eghosa Omoigui, who spent nearly a decade at Intel Capital sourcing early bets on companies including AdMob, Facebook, LinkedIn, and Pandora before turning that same platform-agnostic, geographically expansive instinct toward underrepresented founders in underserved markets. Built explicitly around backing diverse founding teams and bold business models across fintech, health services, commerce, energy, and sustainable mobility, the firm has grown from its original African focus into Southeast Asia and Latin America, leading nearly all of its deals and building a dedicated growth-stage vehicle, EchoVC+, in partnership with TPG Growth and the TPG Rise Fund.",
+    leadership: [
+      { name: "Eghosa Omoigui", role: "Founder & Managing General Partner", profileSlug: "eghosa-omoigui" },
+      { name: "Tsendai", role: "Partner" }
+    ],
+    timeline: [
+      { year: "2011", event: "Eghosa Omoigui founds EchoVC Partners in Lagos." },
+      { year: "2019", event: "Participates in Lori Systems' $30 million Series A round in Kenya." },
+      { year: "2020s", event: "Launches EchoVC+ in partnership with TPG Growth and the TPG Rise Fund, and EchoVC Pan-Africa Fund I." }
     ],
     holdings: []
   },
