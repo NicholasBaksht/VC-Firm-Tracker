@@ -5031,6 +5031,38 @@ sources: [
       { label: "Helios Investment Partners", url: "https://www.heliosinvestment.com/team" }
     ]
   },
+   "kola-aina": {
+    name: "Kola Aina",
+    firm: "Ventures Platform",
+    firmSlug: "ventures-platform",
+    title: "Founding Partner",
+    joinedYear: 2016,
+    education: ["BSc, Electronics Engineering Technology, Savannah State University", "MBA, Bowling Green State University"],
+    previousExperience: [
+      "Founder, Emerging Platforms (edtech, enterprise & security products)",
+      "Angel Investor, early backer of Moniepoint"
+    ],
+    investmentFocus: ["Fintech", "Healthtech", "Agritech", "Edtech", "AI"],
+    notableInvestments: [
+      { name: "Paystack", ticker: null },
+      { name: "PiggyVest", ticker: null },
+      { name: "Moniepoint", ticker: null },
+      { name: "Tizeti", ticker: null }
+    ],
+    boardSeats: [],
+    ipoCount: 0,
+    majorExits: 1,
+    careerTimeline: [
+      { year: "2016", event: "Founds Ventures Platform in Abuja in June, after early angel investing in Nigeria's tech ecosystem." },
+      { year: "2020", event: "Paystack, one of Ventures Platform's earliest bets, is acquired by Stripe for approximately $200 million." },
+      { year: "2025", event: "Closes $64 million for Fund II in November, with participation from the IFC, British International Investment, and Nigeria's government-backed iDICE program." }
+    ],
+    biography: "Kola Aina was already an active angel investor in Nigeria's tech ecosystem, backing companies like Moniepoint early, before formalizing his investment activity by founding Ventures Platform in Abuja in 2016. His firm became one of Africa's most active early-stage funds by taking a deliberately contrarian geographic approach — building from Abuja rather than the more crowded Lagos VC scene, and extending into Francophone West African markets that most Anglophone-focused firms overlook. Ventures Platform's clearest proof point came early: it backed Paystack before Stripe acquired the Nigerian payments company for approximately $200 million in 2020, and the firm has since backed more than 90 startups including PiggyVest, Moniepoint, Tizeti, and Thrive Agric. Aina serves on Nigeria's Presidential Committee for Job Creation and Youth Employment and chairs the board of Ventures Park, an innovation campus in Abuja.",
+    sources: [
+      { label: "TechCabal — Kola Aina", url: "https://techcabal.com/2025/09/01/kola-aina/" },
+      { label: "Ventures Platform", url: "https://www.venturesplatform.com" }
+    ]
+  },
 };
 
 // ============================================================
@@ -5197,7 +5229,8 @@ const firmStages = {
    "cyberstarts": ["Seed", "Series A"],
    "pitango-venture-capital": ["Seed", "Series A", "Series B", "Growth"],
    "jerusalem-venture-partners": ["Seed", "Series A", "Growth"],
-   "helios-investment-partners": ["Series B", "Growth", "Late Stage"]
+   "helios-investment-partners": ["Series B", "Growth", "Late Stage"],
+   "ventures-platform": ["Pre-Seed", "Seed", "Series A"]
 };
 
 // ============================================================
@@ -8141,6 +8174,29 @@ const firms = [
       { year: "2019", event: "Closes a third $75 million fund." },
       { year: "2022", event: "Closes a fourth $75 million fund alongside its first $75 million opportunity fund, bringing total AUM to $450 million." },
       { year: "2025", event: "Bahat discusses the firm's fifth $75 million fund, citing 93 founders who've become millionaires from its investments." }
+    ],
+    holdings: []
+  },
+   {
+    rank: 42,
+    name: "Ventures Platform",
+    sectors: ["Fintech", "Healthcare", "Enterprise Software", "AI"],
+    signatureExit: "Paystack's 2020 acquisition by Stripe for approximately $200 million — Ventures Platform was an early institutional investor in the Nigerian payments company, still the largest startup acquisition in Nigerian history at the time",
+    slug: "ventures-platform",
+    website: "https://www.venturesplatform.com",
+    short: "Ventures Platform",
+    founded: 2016,
+    hq: "Abuja, Nigeria",
+    aum: "$64M+ (Fund II first close, November 2025)",
+    thesis: "Ventures Platform was founded by Kola Aina in Abuja in June 2016, after he'd already been actively angel investing across Nigeria's tech scene. The firm's geographic starting point is deliberate: building from Abuja rather than the more saturated Lagos venture ecosystem gave it earlier access to founders in northern Nigeria and, more recently, Francophone West Africa, markets most Anglophone-focused firms overlook entirely. That first-mover instinct produced Paystack, one of the firm's earliest bets and still the most consequential Nigerian startup acquisition on record when Stripe bought it for roughly $200 million in 2020. Ventures Platform has since backed more than 90 startups across fintech, healthtech, agritech, and AI, closing $64 million toward a $75 million target for Fund II in November 2025 with backing from the IFC, British International Investment, and Nigeria's government-backed iDICE program — the first time the Nigerian government has invested directly in a venture fund.",
+    leadership: [
+      { name: "Kola Aina", role: "Founding Partner", profileSlug: "kola-aina" },
+      { name: "Dotun Olowoporoku", role: "Managing Partner" }
+    ],
+    timeline: [
+      { year: "2016", event: "Kola Aina founds Ventures Platform in Abuja." },
+      { year: "2020", event: "Paystack, an early Ventures Platform investment, is acquired by Stripe for approximately $200 million." },
+      { year: "2025", event: "Closes $64 million for Fund II in November, with the Nigerian government investing directly in a VC fund for the first time." }
     ],
     holdings: []
   },
