@@ -5394,6 +5394,41 @@ sources: [
       { label: "Future Africa — About Us", url: "https://www.future.africa/about-us" }
     ]
   },
+   "andrew-carruthers": {
+    name: "Andrew Carruthers",
+    firm: "Novastar Ventures",
+    firmSlug: "novastar-ventures",
+    title: "Co-Founder & Managing Partner",
+    joinedYear: 2014,
+    education: ["BSc, London School of Economics"],
+    previousExperience: [
+      "Chartered Accountant, KPMG",
+      "Fund Manager, launched first fund on the London Stock Exchange (1999), managing 12 funds across Europe, India & China over 15 years",
+      "Emerging markets investor, South Africa (2009)"
+    ],
+    investmentFocus: ["Mass-Market Consumer", "Climate & Energy", "Agriculture", "Healthcare"],
+    notableInvestments: [
+      { name: "Bridge International Academies", ticker: null },
+      { name: "Sanergy", ticker: null },
+      { name: "mPharma", ticker: null }
+    ],
+    boardSeats: [],
+    ipoCount: 0,
+    majorExits: 0,
+    careerTimeline: [
+      { year: "1996", event: "Begins his investment career during the dot-com era." },
+      { year: "1999", event: "Launches his first fund on the London Stock Exchange." },
+      { year: "2009", event: "Begins applying venture capital techniques to emerging markets, starting in South Africa." },
+      { year: "2014", event: "Co-founds Novastar Ventures with Steve Beck, raising the firm's first East Africa Fund." },
+      { year: "2020", event: "Leads the close of Africa Fund II, anchored by the European Investment Bank and British International Investment." },
+      { year: "2026", event: "Closes the Africa People and Planet Fund III at $147 million in early 2026, Novastar's first pan-African vehicle." }
+    ],
+    biography: "Andrew Carruthers built two decades of fund management experience in Europe, India, and China — launching his first fund on the London Stock Exchange in 1999 and managing 12 more over 15 years — before turning his attention to emerging markets in 2009. Born in Lesotho and raised partly in Ethiopia and Kenya, he co-founded Novastar Ventures with Steve Beck in 2014, applying his fund-management discipline to a specific mass-market thesis: that venture capital could profitably serve East and West Africa's largest underserved consumer needs, not just a narrow tech elite. That philosophy backed early bets on Bridge International Academies, Sanergy, mPharma, and SolarNow, and Carruthers has grown Novastar into one of Africa's largest and most established dedicated venture firms, with roughly $260 million under management across three funds, including a new pan-African vehicle that closed at $147 million in early 2026.",
+    sources: [
+      { label: "Novastar Ventures Team", url: "https://www.novastarventures.com/team/" },
+      { label: "The Org — Andrew Carruthers", url: "https://theorg.com/org/novastar-ventures/org-chart/andrew-carruthers" }
+    ]
+  },
 };
 
 // ============================================================
@@ -5571,7 +5606,8 @@ const firmStages = {
    "firstmark-capital": ["Seed", "Series A"],
    "social-capital": ["Seed", "Series A", "Growth"],
    "shield-capital": ["Seed", "Series A"],
-   "future-africa": ["Pre-Seed", "Seed"]
+   "future-africa": ["Pre-Seed", "Seed"],
+   "novastar-ventures": ["Seed", "Series A", "Series B"]
 };
 
 // ============================================================
