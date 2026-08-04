@@ -5232,6 +5232,33 @@ sources: [
       { label: "Entrepreneur — The 100", url: "https://www.entrepreneur.com/en-ae/leadership/the-100-dany-farha-co-founder-and-ceo-beco-capital/484841" }
     ]
   },
+   "sonia-weymuller": {
+    name: "Sonia Weymuller",
+    firm: "VentureSouq",
+    firmSlug: "venturesouq",
+    title: "Co-Founder & General Partner",
+    joinedYear: 2013,
+    education: [],
+    previousExperience: [],
+    investmentFocus: ["Fintech", "Climate Tech", "Enterprise Software"],
+    notableInvestments: [
+      { name: "Tabby", ticker: null },
+      { name: "Substack", ticker: null },
+      { name: "Zoomcar", ticker: null }
+    ],
+    boardSeats: [],
+    ipoCount: 1,
+    majorExits: 9,
+    careerTimeline: [
+      { year: "2013", event: "Co-founds VentureSouq alongside Sonia Gokhale, Suneel Gokhale, and Tammer Qaddumi in Dubai." },
+      { year: "2024", event: "VentureSouq portfolio company Minimum is named to Fast Company's Most Innovative Companies list." }
+    ],
+    biography: "Sonia Weymuller co-founded VentureSouq in Dubai in 2013 alongside Sonia Gokhale, Suneel Gokhale, and Tammer Qaddumi, building one of the earliest institutional venture platforms in the GCC at a time when the region's startup ecosystem was still nascent. The firm has since grown into a genuinely global early-stage investor with a distinctly thematic structure, running dedicated funds focused on fintech and climate tech rather than a single generalist vehicle, and has backed more than 300 companies including nine unicorns spanning Substack, Tabby, and Zoomcar. Weymuller has remained a public voice for VentureSouq's climate tech thesis, speaking on panels alongside other regional investors about the opportunity in decarbonization technology across the Gulf.",
+    sources: [
+      { label: "VentureSouq", url: "https://www.venturesouq.com" },
+      { label: "Unicorn Nest", url: "https://unicorn-nest.com/funds/venturesouq/" }
+    ]
+  },
 };
 
 // ============================================================
@@ -5404,7 +5431,8 @@ const firmStages = {
    "voltron-capital": ["Pre-Seed", "Seed"],
    "norrsken22": ["Series A", "Series B"],
    "shorooq-partners": ["Pre-Seed", "Seed", "Series A"],
-   "beco-capital": ["Pre-Seed", "Seed", "Series A", "Growth"]
+   "beco-capital": ["Pre-Seed", "Seed", "Series A", "Growth"],
+   "venturesouq": ["Seed", "Series A"]
 };
 
 // ============================================================
@@ -9439,6 +9467,30 @@ const firms = [
       { year: "2017", event: "Leads its first regional investment, co-founding and incubating Pure Harvest Smart Farms." },
       { year: "2020", event: "Becomes the first regional fund manager regulated by the Abu Dhabi Global Market." },
       { year: "2023", event: "Launches the Nahda Fund, the Middle East's first tech-focused venture debt fund." }
+    ],
+    holdings: []
+  },
+   {
+    rank: 75,
+    name: "VentureSouq",
+    sectors: ["Fintech", "Climate", "Enterprise Software"],
+    signatureExit: "No single dollar-verified signature exit — VentureSouq's scale is cumulative instead: more than 300 investments, nine unicorns, one IPO, and 26 acquisitions across its portfolio, including Substack, Tabby, and Zoomcar",
+    slug: "venturesouq",
+    website: "https://www.venturesouq.com",
+    short: "VentureSouq",
+    founded: 2013,
+    hq: "Dubai, UAE",
+    aum: "Not publicly disclosed",
+    thesis: "VentureSouq was founded in Dubai in 2013 by Sonia Gokhale, Sonia Weymuller, Suneel Gokhale, and Tammer Qaddumi, building one of the earliest institutional venture platforms in the GCC region. Rather than running a single generalist fund, the firm operates thematically, managing dedicated vehicles focused on fintech and climate tech, and investing globally rather than staying confined to the Gulf despite its regional roots. That structure has produced a genuinely broad portfolio spanning more than 300 companies, including nine unicorns and outcomes like Substack, Tabby, and Zoomcar, with 71 total exits recorded across its history.",
+    leadership: [
+      { name: "Sonia Weymuller", role: "Co-Founder & General Partner", profileSlug: "sonia-weymuller" },
+      { name: "Sonia Gokhale", role: "Co-Founder" },
+      { name: "Suneel Gokhale", role: "Co-Founder" }
+    ],
+    timeline: [
+      { year: "2013", event: "Sonia Gokhale, Sonia Weymuller, Suneel Gokhale, and Tammer Qaddumi found VentureSouq in Dubai." },
+      { year: "2024", event: "Portfolio company Minimum is named to Fast Company's Most Innovative Companies list." },
+      { year: "2026", event: "Cumulative portfolio reaches more than 300 companies, including nine unicorns and 71 total exits." }
     ],
     holdings: []
   },
