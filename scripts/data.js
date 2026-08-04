@@ -5326,6 +5326,39 @@ sources: [
       { label: "All-In Podcast", url: "https://allin.com/about/chamath-palihapitiya" }
     ]
   },
+   "raj-shah": {
+    name: "Raj Shah",
+    firm: "Shield Capital",
+    firmSlug: "shield-capital",
+    title: "Co-Founder & Managing Partner",
+    joinedYear: 2021,
+    education: [],
+    previousExperience: [
+      "F-16 Fighter Pilot, U.S. Air Force",
+      "Director of Strategy, Palo Alto Networks",
+      "Managing Director, Defense Innovation Unit (DIU), U.S. Department of Defense (under both Obama and Trump administrations)"
+    ],
+    investmentFocus: ["AI", "Autonomy", "Cybersecurity", "Space", "Dual-Use Defense Technology"],
+    notableInvestments: [
+      { name: "HawkEye 360", ticker: null }
+    ],
+    boardSeats: [],
+    ipoCount: 0,
+    majorExits: 0,
+    careerTimeline: [
+      { year: "2000s", event: "Serves as an F-16 fighter pilot in the U.S. Air Force." },
+      { year: "2010s", event: "Serves as Director of Strategy at Palo Alto Networks, working at the intersection of commercial cybersecurity and government needs." },
+      { year: "2016", event: "Becomes Managing Director of the Defense Innovation Unit, leading the Pentagon's flagship innovation organization across both the Obama and Trump administrations." },
+      { year: "2015", event: "Begins planning Shield Capital with Philip Bilden, initially focused on cybersecurity seed investments." },
+      { year: "2021", event: "Formally launches Shield Capital with Bilden." },
+      { year: "2022", event: "Closes Fund I oversubscribed at $186 million, 55% above target." }
+    ],
+    biography: "Raj Shah's path to venture capital ran directly through the cockpit and the Pentagon — an F-16 fighter pilot who later became Director of Strategy at Palo Alto Networks before being named Managing Director of the Defense Innovation Unit, the Pentagon's flagship technology innovation organization, serving across both the Obama and Trump administrations. That firsthand experience bridging Silicon Valley product cycles and Pentagon procurement bureaucracy became the direct thesis behind Shield Capital, which he began planning with Philip Bilden in 2015 and formally launched in 2021. Shah has argued publicly that startups able to serve both commercial and national-security customers will structurally outperform single-market competitors, and Shield's oversubscribed $186 million debut fund — closed 55% above target with commitments from endowments, pension funds, and insurance companies — reflects growing institutional conviction in that dual-use thesis.",
+    sources: [
+      { label: "Shield Capital Team", url: "https://shieldcap.com/team" },
+      { label: "Axios", url: "https://www.axios.com/2022/03/16/national-security-focused-vc-firm-raises-125-million" }
+    ]
+  },
 };
 
 // ============================================================
@@ -5501,7 +5534,8 @@ const firmStages = {
    "beco-capital": ["Pre-Seed", "Seed", "Series A", "Growth"],
    "venturesouq": ["Seed", "Series A"],
    "firstmark-capital": ["Seed", "Series A"],
-   "social-capital": ["Seed", "Series A", "Growth"]
+   "social-capital": ["Seed", "Series A", "Growth"],
+   "shield-capital": ["Seed", "Series A"]
 };
 
 // ============================================================
@@ -8090,6 +8124,32 @@ const firms = [
       { year: "2021", event: "Closes a $175 million second fund." },
       { year: "2023", event: "Closes a $300 million-plus Continuity Fund, pushing AUM past $700 million." },
       { year: "2026", event: "Total assets under management surpass $1 billion across 51-plus portfolio companies." }
+    ],
+    holdings: []
+  },
+   {
+    rank: 68,
+    name: "Shield Capital",
+    sectors: ["AI", "Cybersecurity", "Defense Tech", "Deep Tech"],
+    signatureExit: "No confirmed exit yet — Shield's clearest proof point is its oversubscribed $186 million debut fund, closed 55% above target, and its strategic partnership with L3Harris Technologies to pursue dual-use defense and commercial technology investments",
+    slug: "shield-capital",
+    website: "https://shieldcap.com",
+    short: "Shield Capital",
+    founded: 2021,
+    hq: "San Francisco, CA",
+    aum: "$186M (Fund I, closed 2022)",
+    thesis: "Shield Capital was founded by Philip Bilden and Raj Shah, who began planning the firm together in 2015 around cybersecurity seed investments before formally launching it in 2021. Bilden brings more than two decades as a Managing Director at HarbourVest Partners, a private equity firm managing over $100 billion, plus deep U.S. Navy family ties spanning four generations; Shah is a former F-16 fighter pilot who led the Defense Innovation Unit, the Pentagon's flagship technology innovation organization, across both the Obama and Trump administrations. That combination of institutional investing credibility and direct national-security operating experience shapes Shield's specific thesis: back dual-use companies serving both commercial and defense customers in AI, autonomy, cybersecurity, and space, operating in strategic partnership with L3Harris Technologies. The firm's advisory board includes former Defense Secretary Ash Carter and former National Security Advisor H.R. McMaster, and its debut fund closed oversubscribed at $186 million, 55% above target.",
+    leadership: [
+      { name: "Philip Bilden", role: "Co-Founder & Managing Partner" },
+      { name: "Raj Shah", role: "Co-Founder & Managing Partner", profileSlug: "raj-shah" },
+      { name: "Michael Brown", role: "Partner" }
+    ],
+    timeline: [
+      { year: "2015", event: "Philip Bilden and Raj Shah begin planning Shield Capital, initially focused on cybersecurity seed investments." },
+      { year: "2016", event: "Shah becomes Managing Director of the Defense Innovation Unit." },
+      { year: "2021", event: "Formally launches Shield Capital." },
+      { year: "2022", event: "Closes Fund I oversubscribed at $186 million, 55% above target." },
+      { year: "2022", event: "Michael Brown, former Director of the Defense Innovation Unit, joins as Partner." }
     ],
     holdings: []
   },
