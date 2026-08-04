@@ -5359,6 +5359,41 @@ sources: [
       { label: "Axios", url: "https://www.axios.com/2022/03/16/national-security-focused-vc-firm-raises-125-million" }
     ]
   },
+   "iyinoluwa-aboyeji": {
+    name: "Iyinoluwa Aboyeji",
+    firm: "Future Africa",
+    firmSlug: "future-africa",
+    title: "Founder & General Partner",
+    joinedYear: 2019,
+    education: ["BA, Legal Studies, University of Waterloo"],
+    previousExperience: [
+      "Co-Founder, Andela (billion-dollar African engineering talent network)",
+      "Founding CEO, Flutterwave (2016-2018, processed $2B+ across 50M+ transactions)",
+      "Deputy Director-General, Oby Ezekwesili 2019 Presidential Campaign"
+    ],
+    investmentFocus: ["Fintech", "Healthtech", "Edtech", "Climate", "Logistics"],
+    notableInvestments: [
+      { name: "Eden Life", ticker: null },
+      { name: "EmPawa Africa", ticker: null }
+    ],
+    boardSeats: [],
+    ipoCount: 0,
+    majorExits: 0,
+    careerTimeline: [
+      { year: "2014", event: "Co-founds Andela, which grows into Africa's largest engineering organization, backed by the Chan Zuckerberg Initiative, Google Ventures, and SoftBank." },
+      { year: "2016", event: "Co-founds Flutterwave, becoming its founding CEO." },
+      { year: "2018", event: "Steps down as Flutterwave CEO in October, after growing it into one of the fastest-growing payments companies of all time." },
+      { year: "2019", event: "Founds Future Africa in March, formalizing investment activity he'd been planning since 2015." },
+      { year: "2021", event: "Flutterwave reaches unicorn status, raising $170 million at a valuation over $1 billion." },
+      { year: "2022", event: "Co-founds Itana (formerly Talent City), a digital free zone project in Lagos." },
+      { year: "2024", event: "Future Africa's portfolio reaches 100 companies with a collective value exceeding $6 billion." }
+    ],
+    biography: "Iyinoluwa Aboyeji co-founded two of Africa's first true unicorns before he ever became an investor — Andela, the continent's largest engineering talent organization, backed by the Chan Zuckerberg Initiative, Google Ventures, and SoftBank, and Flutterwave, the payments company he led as founding CEO through explosive early growth, processing more than $2 billion across 50 million transactions before stepping down in 2018. He founded Future Africa in March 2019, formalizing investment activity he'd been planning since 2015, built specifically to provide capital, coaching, and community to mission-driven African founders rather than capital alone. Describing himself as a faith-driven investor, Aboyeji has grown Future Africa into Africa's largest seed-stage investment platform, with a portfolio of more than 100 companies collectively valued above $6 billion, while continuing to build directly — co-founding Itana, a digital free zone project in Lagos, in 2022.",
+    sources: [
+      { label: "Wikipedia — Iyinoluwa Aboyeji", url: "https://en.wikipedia.org/wiki/Iyinoluwa_Aboyeji" },
+      { label: "Future Africa — About Us", url: "https://www.future.africa/about-us" }
+    ]
+  },
 };
 
 // ============================================================
@@ -5535,7 +5570,8 @@ const firmStages = {
    "venturesouq": ["Seed", "Series A"],
    "firstmark-capital": ["Seed", "Series A"],
    "social-capital": ["Seed", "Series A", "Growth"],
-   "shield-capital": ["Seed", "Series A"]
+   "shield-capital": ["Seed", "Series A"],
+   "future-africa": ["Pre-Seed", "Seed"]
 };
 
 // ============================================================
@@ -9630,6 +9666,29 @@ const firms = [
       { year: "2022", event: "Niklas Adalberth and Hans Otterling found Norrsken22 in Kigali, Rwanda, in January." },
       { year: "2023", event: "Makes its first five investments: TymeBank, Sabi, Smile Identity, Autochek, and Shara." },
       { year: "2023", event: "Closes its debut $205 million African Tech Growth Fund in November, above its $200 million target." }
+    ],
+    holdings: []
+  },
+   {
+    rank: 76,
+    name: "Future Africa",
+    sectors: ["Fintech", "Healthcare", "Edtech", "Climate"],
+    signatureExit: "No confirmed fund-level exit yet — founder Iyinoluwa Aboyeji's own prior track record co-founding Andela and Flutterwave, both real African unicorns backed by SoftBank and the Chan Zuckerberg Initiative, is the firm's clearest credibility signal",
+    slug: "future-africa",
+    website: "https://www.future.africa",
+    short: "Future Africa",
+    founded: 2019,
+    hq: "Lagos, Nigeria",
+    aum: "Not publicly disclosed (100+ portfolio companies collectively valued above $6B, 2024)",
+    thesis: "Future Africa was founded in March 2019 by Iyinoluwa Aboyeji, who'd already co-founded two of the continent's first genuine unicorns — Andela, backed by the Chan Zuckerberg Initiative, Google Ventures, and SoftBank, and Flutterwave, which he led as founding CEO through explosive early growth before stepping down in 2018. Rather than simply write checks, Future Africa was built around a specific 'capital, coaching, and community' model, providing mission-driven African founders with hands-on support alongside funding, framed by Aboyeji's own description of himself as a faith-driven investor focused on building an African future where prosperity and purpose are within everyone's reach. The firm has grown into Africa's largest seed-stage investment platform, backing more than 100 companies across fintech, healthtech, edtech, and climate technology, with a collective portfolio value exceeding $6 billion as of 2024.",
+    leadership: [
+      { name: "Iyinoluwa Aboyeji", role: "Founder & General Partner", profileSlug: "iyinoluwa-aboyeji" }
+    ],
+    timeline: [
+      { year: "2015", event: "Iyinoluwa Aboyeji begins planning what becomes Future Africa, while still leading Flutterwave." },
+      { year: "2018", event: "Steps down as Flutterwave CEO in October." },
+      { year: "2019", event: "Formally founds Future Africa in March." },
+      { year: "2024", event: "Portfolio reaches 100 companies with a collective value exceeding $6 billion." }
     ],
     holdings: []
   },
