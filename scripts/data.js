@@ -5160,6 +5160,40 @@ sources: [
       { label: "Norrsken22", url: "https://www.norrsken22.com" }
     ]
   },
+   "shane-shin": {
+    name: "Shane Shin",
+    firm: "Shorooq Partners",
+    firmSlug: "shorooq-partners",
+    title: "Co-Founding Partner",
+    joinedYear: 2016,
+    education: ["BA, The Wharton School, University of Pennsylvania (Summa Cum Laude, Joseph Wharton Scholar, Benjamin Franklin Scholar)"],
+    previousExperience: [
+      "Investment Banker, UBS",
+      "Investment Banker, TD Securities",
+      "Investment Banker, Lazard Frères & Co.",
+      "Private Equity, Alpine Investors (San Francisco)",
+      "GlobalFoundries (Mubadala Investment Company subsidiary)"
+    ],
+    investmentFocus: ["Fintech", "AI Infrastructure", "Applied AI", "Logistics"],
+    notableInvestments: [
+      { name: "Tamara", ticker: null },
+      { name: "TruKKer", ticker: null },
+      { name: "NymCard", ticker: null }
+    ],
+    boardSeats: [],
+    ipoCount: 0,
+    majorExits: 0,
+    careerTimeline: [
+      { year: "2017", event: "Leaves Silicon Valley and Mubadala's GlobalFoundries to co-found Shorooq Partners in Abu Dhabi with Mahmoud Adi." },
+      { year: "2017", event: "Leads Shorooq's pre-seed and seed rounds in Pure Harvest, one of the firm's first regional investments." },
+      { year: "2024", event: "Reports the firm meets 4,000-5,000 companies a year and invests in roughly 15." }
+    ],
+    biography: "Shane Shin grew up in South Korea, studied at the Wharton School, and built his early career as an investment banker at UBS, TD Securities, and Lazard Frères before moving into private equity at Alpine Investors and later Mubadala's GlobalFoundries. In 2017, he left Silicon Valley to co-found Shorooq Partners in Abu Dhabi with his close friend Mahmoud Adi, telling colleagues his parents called him 'insane' for leaving an established career to build a venture firm in a region with little existing venture infrastructure. That bet paid off: Shorooq became one of the most active early-stage investors across the Middle East, North Africa, and Pakistan, backing more than 45 companies including Tamara, TruKKer, NymCard, and Pure Harvest, and Shin has described the firm's approach as deliberately hands-on — proactive involvement in portfolio companies rather than passive capital.",
+    sources: [
+      { label: "Entrepreneur Middle East", url: "https://www.entrepreneur.com/en-ae/finance/vc-voices-shane-shin-founding-partner-shorooq/495382" },
+      { label: "Zawya", url: "https://www.zawya.com/en/business/shorooq-partners-in-a-habit-to-back-winning-horses-yfzvh8h0" }
+    ]
+  },
 };
 
 // ============================================================
@@ -5330,7 +5364,8 @@ const firmStages = {
    "ventures-platform": ["Pre-Seed", "Seed", "Series A"],
    "echovc-partners": ["Seed", "Series A", "Growth"],
    "voltron-capital": ["Pre-Seed", "Seed"],
-   "norrsken22": ["Series A", "Series B"]
+   "norrsken22": ["Series A", "Series B"],
+   "shorooq-partners": ["Pre-Seed", "Seed", "Series A"]
 };
 
 // ============================================================
@@ -9316,6 +9351,30 @@ const firms = [
       { year: "2022", event: "Niklas Adalberth and Hans Otterling found Norrsken22 in Kigali, Rwanda, in January." },
       { year: "2023", event: "Makes its first five investments: TymeBank, Sabi, Smile Identity, Autochek, and Shara." },
       { year: "2023", event: "Closes its debut $205 million African Tech Growth Fund in November, above its $200 million target." }
+    ],
+    holdings: []
+  },
+   {
+    rank: 74,
+    name: "Shorooq Partners",
+    sectors: ["Fintech", "Enterprise Software", "Mobility", "AI"],
+    signatureExit: "No confirmed dollar-verified public exit — Shorooq's clearest proof points are its 45-plus portfolio companies, including regional unicorns Tamara and TruKKer, which have generated a reported $1.5 billion-plus in combined equity value while remaining privately held",
+    slug: "shorooq-partners",
+    website: "https://www.shorooq.com",
+    short: "Shorooq Partners",
+    founded: 2016,
+    hq: "Abu Dhabi, UAE",
+    aum: "Not publicly disclosed (45+ portfolio companies, $1.5B+ generated equity value)",
+    thesis: "Shorooq Partners was founded in 2016 by Shane Shin and Mahmoud Adi, who left established careers in Silicon Valley and Mubadala's GlobalFoundries to build one of the Middle East's earliest institutional venture firms, at a time the region had little existing venture infrastructure. The firm became the first regional fund manager to be regulated by the Abu Dhabi Global Market, and has built out a genuinely multi-dimensional platform spanning early-stage venture equity, venture debt through its Nahda Fund, and private credit — an unusually broad capital-structure presence for a firm still focused primarily on Pre-Seed through Series A equity checks. Shorooq's hands-on, actively-involved investing philosophy has backed more than 45 companies including Tamara, TruKKer, NymCard, Sarwa, and Lean Technologies, generating a reported $1.5 billion-plus in combined portfolio equity value.",
+    leadership: [
+      { name: "Shane Shin", role: "Co-Founding Partner", profileSlug: "shane-shin" },
+      { name: "Mahmoud Adi", role: "Co-Founding Partner" }
+    ],
+    timeline: [
+      { year: "2016", event: "Shane Shin and Mahmoud Adi found Shorooq Partners in Abu Dhabi." },
+      { year: "2017", event: "Leads its first regional investment, co-founding and incubating Pure Harvest Smart Farms." },
+      { year: "2020", event: "Becomes the first regional fund manager regulated by the Abu Dhabi Global Market." },
+      { year: "2023", event: "Launches the Nahda Fund, the Middle East's first tech-focused venture debt fund." }
     ],
     holdings: []
   },
