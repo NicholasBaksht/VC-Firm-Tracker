@@ -5259,6 +5259,38 @@ sources: [
       { label: "Unicorn Nest", url: "https://unicorn-nest.com/funds/venturesouq/" }
     ]
   },
+   "rick-heitzmann": {
+    name: "Rick Heitzmann",
+    firm: "FirstMark Capital",
+    firmSlug: "firstmark-capital",
+    title: "Co-Founder & Partner",
+    joinedYear: 2008,
+    education: ["BS, Georgetown University", "MBA, Harvard Business School"],
+    previousExperience: [
+      "Founder, First Advantage (NASDAQ: FADV), sold to First American (NYSE: FAF)"
+    ],
+    investmentFocus: ["Consumer Marketplaces", "Healthcare", "Software", "Gaming"],
+    notableInvestments: [
+      { name: "Pinterest", ticker: "PINS" },
+      { name: "Airbnb", ticker: "ABNB" },
+      { name: "DraftKings", ticker: "DKNG" }
+    ],
+    boardSeats: ["Ro"],
+    ipoCount: 4,
+    majorExits: 2,
+    careerTimeline: [
+      { year: "2000s", event: "Founds First Advantage, growing and selling it to First American." },
+      { year: "2008", event: "Co-founds FirstMark Capital with Amish Jani, spinning out from Pequot Capital Management." },
+      { year: "2010s", event: "Writes Pinterest's seed check and leads early investments in Airbnb, DraftKings, Riot Games, and StubHub." },
+      { year: "2019", event: "Pinterest goes public on the NYSE." },
+      { year: "2020", event: "Airbnb and DraftKings both go public; co-organizes a $360 million SPAC with Amish Jani." }
+    ],
+    biography: "Rick Heitzmann founded First Advantage before selling it to First American, giving him real operating and public-company experience before co-founding FirstMark Capital with Amish Jani in 2008 as a spinoff from Pequot Capital Management. The two built the firm around a specific conviction that New York, not just Silicon Valley, would become a dominant global hub for technology startups — a bet that looked contrarian in 2008 and has since been repeatedly validated. Heitzmann personally wrote Pinterest's seed check years before its 2019 IPO, and led early investments in Airbnb, DraftKings, Riot Games, and StubHub, earning him five consecutive years on the Forbes Midas List. He remains a regular contributor on CNBC discussing tech and IPO markets, and continues to advise founders and executives across FirstMark's portfolio.",
+    sources: [
+      { label: "FirstMark — Rick Heitzmann", url: "https://firstmark.com/team/rick-heitzmann/" },
+      { label: "Wikipedia — FirstMark Capital", url: "https://en.wikipedia.org/wiki/FirstMark_Capital" }
+    ]
+  },
 };
 
 // ============================================================
@@ -5432,7 +5464,8 @@ const firmStages = {
    "norrsken22": ["Series A", "Series B"],
    "shorooq-partners": ["Pre-Seed", "Seed", "Series A"],
    "beco-capital": ["Pre-Seed", "Seed", "Series A", "Growth"],
-   "venturesouq": ["Seed", "Series A"]
+   "venturesouq": ["Seed", "Series A"],
+   "firstmark-capital": ["Seed", "Series A"]
 };
 
 // ============================================================
@@ -6762,6 +6795,37 @@ const firms = [
     holdings: [
       { name: "Xiaomi", ticker: "1810.HK", historicalPrice: null, price: null },
       { name: "XPeng", ticker: "XPEV", historicalPrice: null, price: null }
+    ]
+  },
+   {
+    rank: 28,
+    name: "FirstMark Capital",
+    sectors: ["Enterprise Software", "Consumer", "AI", "Fintech", "Healthcare"],
+    signatureExit: "Pinterest's 2019 NYSE IPO — Co-Founder Rick Heitzmann personally wrote the company's seed check, years before it went public",
+    slug: "firstmark-capital",
+    website: "https://firstmark.com",
+    short: "FirstMark",
+    founded: 2008,
+    hq: "New York, NY",
+    aum: "$3.5B (committed capital)",
+    thesis: "FirstMark Capital was founded in 2008 by Rick Heitzmann and Amish Jani as a spinoff from Pequot Capital Management, built on a conviction that looked genuinely contrarian at the time: that New York, not just Silicon Valley, would become a dominant hub for technology startups. Both founders had operator or growth-investing credibility before founding the firm — Heitzmann built and sold First Advantage, while Jani came from Pequot Ventures — and they've since built one of venture capital's most developed platform and community stacks, including Data Driven NYC, a community with more than 20,000 members, and the widely-cited annual MAD (Machine Learning, AI, and Data) Landscape report, now in its 11th year. That combination of early conviction and founder support produced Pinterest, where Heitzmann wrote the seed check, and Shopify, where Jani personally led the Series A investment through IPO, alongside DraftKings, Airbnb, Riot Games, and StubHub. The firm has raised 10 funds totaling $3.5 billion in committed capital.",
+    leadership: [
+      { name: "Rick Heitzmann", role: "Co-Founder & Partner", profileSlug: "rick-heitzmann" },
+      { name: "Amish Jani", role: "Co-Founder & Partner" },
+      { name: "Matt Turck", role: "Partner" },
+      { name: "Adam Nelson", role: "Partner" }
+    ],
+    timeline: [
+      { year: "2008", event: "Rick Heitzmann and Amish Jani found FirstMark Capital in New York, spinning out from Pequot Capital Management." },
+      { year: "2010s", event: "Backs Pinterest, Shopify, DraftKings, Airbnb, Riot Games, and StubHub at early stages." },
+      { year: "2019", event: "Pinterest goes public on the NYSE." },
+      { year: "2020", event: "Airbnb and DraftKings both go public." },
+      { year: "2024", event: "Firm reports $3.5 billion in committed capital across 10 funds." }
+    ],
+    holdings: [
+      { name: "Pinterest", ticker: "PINS", historicalPrice: null, price: 23.50 },
+      { name: "DraftKings", ticker: "DKNG", historicalPrice: null, price: null },
+      { name: "Airbnb", ticker: "ABNB", historicalPrice: null, price: 141.10 }
     ]
   },
    {
