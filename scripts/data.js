@@ -5194,6 +5194,44 @@ sources: [
       { label: "Zawya", url: "https://www.zawya.com/en/business/shorooq-partners-in-a-habit-to-back-winning-horses-yfzvh8h0" }
     ]
   },
+   "dany-farha": {
+    name: "Dany Farha",
+    firm: "BECO Capital",
+    firmSlug: "beco-capital",
+    title: "Co-Founder & Managing Partner",
+    joinedYear: 2012,
+    education: ["BA, Management Sciences & Finance, University College London"],
+    previousExperience: [
+      "Investment Banker, Lehman Brothers, London",
+      "Founder, business support services company (UAE, 2000-2010)",
+      "Co-Founder, Bayt.com (Arab world's largest job site)",
+      "Co-Founder, Butlers (UAE's largest commercial laundry company)",
+      "Co-Founder, Interact (catering company)",
+      "Seed Investor, GoNabit (acquired by LivingSocial, 2011)"
+    ],
+    investmentFocus: ["Fintech", "Proptech", "Consumer/Retail Tech", "AI/Software"],
+    notableInvestments: [
+      { name: "Careem", ticker: null },
+      { name: "Property Finder", ticker: null },
+      { name: "Kitopi", ticker: null }
+    ],
+    boardSeats: ["Property Finder"],
+    ipoCount: 1,
+    majorExits: 2,
+    careerTimeline: [
+      { year: "1995", event: "Returns to Dubai after working at Lehman Brothers in London, beginning a career as a serial entrepreneur." },
+      { year: "2000", event: "Builds a business support services company over the following decade, alongside co-founding Bayt.com, Butlers, and Interact." },
+      { year: "2011", event: "GoNabit, an early seed investment, is acquired by LivingSocial." },
+      { year: "2012", event: "Co-founds BECO Capital with Abdulaziz Shikh Al Sagha and Yousef Hammad in Dubai." },
+      { year: "2019", event: "Careem, one of BECO's earliest bets, is acquired by Uber for $3.1 billion." },
+      { year: "2025", event: "Closes $370 million across two new funds in September, pushing total AUM beyond $820 million." }
+    ],
+    biography: "Dany Farha built a career as a serial entrepreneur in Dubai for nearly two decades before co-founding BECO Capital — starting at Lehman Brothers in London, then returning to the UAE in 1995 to build and exit a string of companies including Bayt.com, the Arab world's largest job site, Butlers, and Interact. That founder-first background shaped BECO's identity when he co-founded it in 2012 with Abdulaziz Shikh Al Sagha and Yousef Hammad, building what became the longest-serving Dubai-based VC firm investing in the MENA digital sector. Farha personally led BECO's early backing of Careem, the ride-hailing company Uber acquired for $3.1 billion in 2019 — one of two billion-dollar-plus exits in the firm's track record, alongside Property Finder. Under his leadership BECO has grown into the largest non-government early-stage venture firm in the Gulf, managing more than $820 million across five funds spanning Pre-Seed through pre-IPO.",
+    sources: [
+      { label: "Forbes Middle East", url: "https://www.forbesmiddleeast.com/lists/the-middle-easts-top-venture-capitalists-2024/dany-farha/" },
+      { label: "Entrepreneur — The 100", url: "https://www.entrepreneur.com/en-ae/leadership/the-100-dany-farha-co-founder-and-ceo-beco-capital/484841" }
+    ]
+  },
 };
 
 // ============================================================
@@ -5365,7 +5403,8 @@ const firmStages = {
    "echovc-partners": ["Seed", "Series A", "Growth"],
    "voltron-capital": ["Pre-Seed", "Seed"],
    "norrsken22": ["Series A", "Series B"],
-   "shorooq-partners": ["Pre-Seed", "Seed", "Series A"]
+   "shorooq-partners": ["Pre-Seed", "Seed", "Series A"],
+   "beco-capital": ["Pre-Seed", "Seed", "Series A", "Growth"]
 };
 
 // ============================================================
@@ -8120,6 +8159,31 @@ const firms = [
       { year: "2019", event: "Launches Fund II at $100 million, pushing AUM past $200 million across 19 startups." },
       { year: "2021", event: "Rebrands to Toyota Ventures, launching dedicated Frontier and Climate funds with $300 million in new capital." },
       { year: "2024", event: "Raises Frontier Fund II and Climate Fund II at $150 million each, pushing total AUM above $800 million." }
+    ],
+    holdings: []
+  },
+{
+    rank: 39,
+    name: "BECO Capital",
+    sectors: ["Fintech", "Enterprise Software", "Consumer", "AI"],
+    signatureExit: "Careem's 2019 acquisition by Uber for $3.1 billion — BECO was an early backer of the Gulf's dominant ride-hailing company, one of two billion-dollar-plus exits in the firm's track record alongside Property Finder",
+    slug: "beco-capital",
+    website: "https://beco.capital",
+    short: "BECO Capital",
+    founded: 2012,
+    hq: "Dubai, UAE",
+    aum: "$820M+ (across five funds)",
+    thesis: "BECO Capital was founded in 2012 by Dany Farha, Abdulaziz Shikh Al Sagha, and Yousef Hammad, building what became the longest-serving Dubai-based venture capital firm investing in the MENA digital sector at a time when institutional venture capital in the Gulf barely existed. The firm's name references Booster Engine Cut Off — the rocket-launch moment a vessel achieves enough altitude to exit the atmosphere — reflecting its self-described role helping founders escape early-stage gravity. That early conviction produced Careem, which Uber acquired for $3.1 billion in 2019, and BECO has since built a genuinely full-stack platform spanning Pre-Seed through pre-IPO, closing $370 million across two new funds in September 2025 to push total assets under management above $820 million — making it the largest non-government early-stage venture firm in the Gulf.",
+    leadership: [
+      { name: "Dany Farha", role: "Co-Founder & Managing Partner", profileSlug: "dany-farha" },
+      { name: "Abdulaziz Shikh Al Sagha", role: "Co-Founder & Managing Partner" },
+      { name: "Yousef Hammad", role: "Co-Founder & Managing Partner" }
+    ],
+    timeline: [
+      { year: "2012", event: "Dany Farha, Abdulaziz Shikh Al Sagha, and Yousef Hammad found BECO Capital in Dubai." },
+      { year: "2019", event: "Careem, an early BECO investment, is acquired by Uber for $3.1 billion." },
+      { year: "2024", event: "AUM reaches $495 million across four funds." },
+      { year: "2025", event: "Closes $370 million across two new funds in September, pushing AUM beyond $820 million." }
     ],
     holdings: []
   },
