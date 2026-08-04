@@ -5291,6 +5291,41 @@ sources: [
       { label: "Wikipedia — FirstMark Capital", url: "https://en.wikipedia.org/wiki/FirstMark_Capital" }
     ]
   },
+   "chamath-palihapitiya": {
+    name: "Chamath Palihapitiya",
+    firm: "Social Capital",
+    firmSlug: "social-capital",
+    title: "Founder & CEO",
+    joinedYear: 2011,
+    education: ["BASc, Electrical Engineering, University of Waterloo"],
+    previousExperience: [
+      "Youngest Vice President in company history, AOL",
+      "Venture Investor, Mayfield",
+      "VP of User Growth, Platform & Mobile, Facebook (2007-2011, grew platform from 50M to 1B+ users)"
+    ],
+    investmentFocus: ["AI", "Blockchain", "Healthcare", "Space Technology", "Climate"],
+    notableInvestments: [
+      { name: "Slack", ticker: null },
+      { name: "Box", ticker: "BOX" },
+      { name: "Virgin Galactic", ticker: null }
+    ],
+    boardSeats: [],
+    ipoCount: 3,
+    majorExits: 3,
+    careerTimeline: [
+      { year: "2007", event: "Joins Facebook, leading Growth, Platform, and Mobile teams and scaling the platform past one billion users." },
+      { year: "2011", event: "Leaves Facebook to found Social Capital (initially Social+Capital Partnership) with $60 million of his own money." },
+      { year: "2018", event: "Restructures Social Capital into a single-GP family office model, stopping outside capital and becoming the firm's sole investing partner." },
+      { year: "2019", event: "Slack, one of his signature bets, goes public on the NYSE." },
+      { year: "2021", event: "Salesforce acquires Slack for more than $27 billion; co-launches the All-In Podcast." },
+      { year: "2025", event: "Reports Social Capital manages $2.147 billion in his June annual letter." }
+    ],
+    biography: "Chamath Palihapitiya emigrated from Sri Lanka to Canada as a child, growing up in poverty before earning an electrical engineering degree from the University of Waterloo. He became the youngest Vice President in AOL's history, briefly worked as an investor at Mayfield, then joined Facebook in 2007, leading its Growth, Platform, and Mobile teams as the company scaled past a billion users. He left in 2011 to found Social Capital with $60 million of his own capital, backing Slack, Box, Yammer, and Virgin Galactic through its early years as a traditional venture fund. In 2018 he restructured the firm entirely, closing it to outside capital and becoming its sole investing partner — a 'technology Berkshire Hathaway' model funded by his own balance sheet, which he reported at $2.147 billion in his 2025 annual letter. Palihapitiya became one of the most prominent faces of the 2020-2021 SPAC boom, earned the nickname 'SPAC King,' co-hosts the widely-followed All-In Podcast, and was formerly a minority owner of the Golden State Warriors before selling his stake in 2022 for roughly $520 million.",
+    sources: [
+      { label: "Wikipedia — Chamath Palihapitiya", url: "https://en.wikipedia.org/wiki/Chamath_Palihapitiya" },
+      { label: "All-In Podcast", url: "https://allin.com/about/chamath-palihapitiya" }
+    ]
+  },
 };
 
 // ============================================================
@@ -5465,7 +5500,8 @@ const firmStages = {
    "shorooq-partners": ["Pre-Seed", "Seed", "Series A"],
    "beco-capital": ["Pre-Seed", "Seed", "Series A", "Growth"],
    "venturesouq": ["Seed", "Series A"],
-   "firstmark-capital": ["Seed", "Series A"]
+   "firstmark-capital": ["Seed", "Series A"],
+   "social-capital": ["Seed", "Series A", "Growth"]
 };
 
 // ============================================================
@@ -7283,6 +7319,33 @@ const firms = [
     holdings: [
       { name: "CyberArk", ticker: "CYBR", historicalPrice: null, price: null },
       { name: "Cogent Communications", ticker: "CCOI", historicalPrice: null, price: null }
+    ]
+  },
+   {
+    rank: 36,
+    name: "Social Capital",
+    sectors: ["AI", "Healthcare", "Climate", "Enterprise Software"],
+    signatureExit: "Slack's 2019 NYSE IPO under ticker WORK, followed by Salesforce's more than $27 billion acquisition of the company in 2021 — one of Chamath Palihapitiya's earliest and most defining bets",
+    slug: "social-capital",
+    website: "https://www.socialcapital.com",
+    short: "Social Capital",
+    founded: 2011,
+    hq: "Palo Alto, CA",
+    aum: "$2.147B",
+    thesis: "Social Capital was founded in 2011 by Chamath Palihapitiya, who left a senior growth leadership role at Facebook with $60 million of his own capital and a specific ambition: back generational technology and healthcare companies pursuing deeply transformative ideas rather than incremental improvements. The firm's most consequential structural decision came in 2018, when it stopped accepting outside limited partner capital entirely and restructured into a single-GP model funded from Palihapitiya's own balance sheet — a 'technology Berkshire Hathaway' approach he continues to run alone as the firm's sole investing partner. That model has weathered multiple market cycles, backing Slack, Box, Yammer, and Virgin Galactic in its earlier venture-fund era, and more recently AI, blockchain, and climate technology, with Palihapitiya reporting $2.147 billion in assets under management in his 2025 annual letter.",
+    leadership: [
+      { name: "Chamath Palihapitiya", role: "Founder & CEO", profileSlug: "chamath-palihapitiya" }
+    ],
+    timeline: [
+      { year: "2011", event: "Chamath Palihapitiya founds Social Capital (initially Social+Capital Partnership) with $60 million of his own money." },
+      { year: "2015", event: "Assets under management reach $1.1 billion; the firm formally renames to Social Capital." },
+      { year: "2018", event: "Restructures into a single-GP model, closing to outside capital." },
+      { year: "2019", event: "Slack goes public on the NYSE under ticker WORK." },
+      { year: "2021", event: "Salesforce acquires Slack for more than $27 billion." },
+      { year: "2025", event: "Reports $2.147 billion in assets under management in June annual letter." }
+    ],
+    holdings: [
+      { name: "Box", ticker: "BOX", historicalPrice: null, price: null }
     ]
   },
    {
