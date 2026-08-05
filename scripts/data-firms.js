@@ -750,6 +750,33 @@ const firms = [
     ],
     holdings: []
   },
+  {
+    rank: 47,
+    name: "Canvas Prime",
+    sectors: ["Healthcare", "Fintech", "AI"],
+    signatureExit: "Casetext's $650 million all-cash acquisition by Thomson Reuters in 2023 — Rebecca Lynn led the early investment in the AI-powered legal research platform, which gained early access to GPT-4 before its exit",
+    slug: "canvas-prime",
+    website: "https://www.canvas.vc",
+    short: "Canvas Prime",
+    founded: 2013,
+    hq: "Portola Valley, CA",
+    aum: "~$835M (across funds)",
+    thesis: "Canvas Prime, originally Canvas Ventures, was co-founded in 2013 by Rebecca Lynn as a spinout from Morgenthaler Ventures, closing its first fund the same week Lehman Brothers collapsed. Lynn brought a genuinely unusual technical foundation to venture investing — a chemical engineering background including work in a nuclear research reactor, followed by real operating experience scaling NextCard, the first online credit card company, from 30 to 1,300 employees through IPO. That combination of technical rigor and operating pattern-recognition has anchored the firm's Series A and B investing in fintech, healthtech, and AI, producing LendingClub's 2014 IPO (the largest US tech listing that year), Doximity's 2021 public listing, and Casetext's $650 million acquisition by Thomson Reuters in 2023.",
+    leadership: [
+      { name: "Rebecca Lynn", role: "Co-Founder & Managing Director", profileSlug: "rebecca-lynn" }
+    ],
+    timeline: [
+      { year: "2013", event: "Rebecca Lynn co-founds Canvas Ventures as a spinout from Morgenthaler Ventures." },
+      { year: "2014", event: "LendingClub completes its IPO in December, the largest US tech IPO of the year." },
+      { year: "2021", event: "Doximity completes its NYSE IPO." },
+      { year: "2023", event: "Casetext is acquired by Thomson Reuters for $650 million in cash in June." }
+    ],
+    holdings: [
+      { name: "LendingClub", ticker: "LC", historicalPrice: null, price: null },
+      { name: "Doximity", ticker: "DOCS", historicalPrice: null, price: null },
+      { name: "Luminar Technologies", ticker: "LAZR", historicalPrice: null, price: null }
+    ]
+  },
    {
     rank: 43,
     name: "Pear VC",
