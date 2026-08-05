@@ -6551,4 +6551,36 @@ sources: [
       { label: "Science|Business", url: "https://sciencebusiness.net/news/70003/After-$695-M-sale-of-MessageLabs,-founders-form-new-fund-to-invest-IT-companies" }
     ]
   },
+  "hendrik-brandis": {
+    name: "Hendrik Brandis",
+    firm: "Earlybird Venture Capital",
+    firmSlug: "earlybird-venture-capital",
+    title: "Co-Founder & General Partner",
+    joinedYear: 1997,
+    education: ["Dipl.-Ing. (MSc equivalent), Aerospace Engineering", "PhD, Aerospace Engineering"],
+    previousExperience: [
+      "Partner, McKinsey & Company (led small and mid-sized company initiatives; supported the creation of McKinsey New Venture)"
+    ],
+    investmentFocus: ["Deep Tech", "Consumer Internet", "IoT", "Enterprise", "Manufacturing"],
+    notableInvestments: [
+      { name: "Aiven", ticker: null },
+      { name: "Isar Aerospace", ticker: null },
+      { name: "Marvel Fusion", ticker: null }
+    ],
+    boardSeats: ["Marvel Fusion", "Isar Aerospace", "Greenlyte", "Aiven", "Onefootball", "Simscale", "eleQtron"],
+    ipoCount: 3,
+    majorExits: 6,
+    careerTimeline: [
+      { year: "1990s", event: "Leads McKinsey's small and mid-sized company initiatives and helps establish McKinsey New Venture." },
+      { year: "1997", event: "Co-founds Earlybird Venture Capital in Hamburg with Christian Nagel, Roland Manger, and Rolf Mathies." },
+      { year: "2017", event: "Delivery Hero, a portfolio company, completes its IPO." },
+      { year: "2019", event: "TeamViewer completes its IPO." },
+      { year: "2021", event: "Babylon Health completes a SPAC merger at a roughly $4.2 billion valuation; the company later collapses into administration in 2023 after a troubled period as a public company." }
+    ],
+    biography: "Hendrik Brandis brought a genuinely technical foundation to venture capital — a PhD in Aerospace Engineering, followed by years leading McKinsey's small and mid-sized company initiatives — before co-founding Earlybird Venture Capital in Hamburg in 1997 with Christian Nagel, Roland Manger, and Rolf Mathies, making it one of Europe's oldest continuously operating venture firms. His current focus sits at the intersection of deep tech and hard science, with board seats at Marvel Fusion, a fusion energy startup, and Isar Aerospace, a European launch vehicle company, alongside enterprise bets like Aiven and eleQtron. Over nearly three decades, Brandis has helped build Earlybird into one of Europe's most established venture platforms, backing companies through IPOs including Delivery Hero and TeamViewer, and has served as an EVCA board member and Chairman of its Venture Capital Platform Council.",
+    sources: [
+      { label: "Earlybird — Hendrik Brandis", url: "https://earlybird.com/members/dr-hendrik-brandis" },
+      { label: "Equilar ExecAtlas", url: "https://people.equilar.com/bio/org/earlybird-venture-capital/4289605" }
+    ]
+  },
 };
