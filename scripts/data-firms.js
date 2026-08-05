@@ -832,6 +832,36 @@ const firms = [
     ],
     holdings: []
   },
+  {
+    rank: 46,
+    name: "Scale Venture Partners",
+    sectors: ["Enterprise Software", "AI", "Cybersecurity", "Developer Tools"],
+    signatureExit: "Bill.com's NASDAQ IPO in December 2019 — Scale was an early investor and Partner Stacey Bishop led the investment, one of several public listings across HubSpot, DocuSign, JFrog, and Root Insurance",
+    slug: "scale-venture-partners",
+    website: "https://www.scalevp.com",
+    short: "Scale Venture Partners",
+    founded: 2000,
+    hq: "Foster City, CA",
+    aum: "$2.8B",
+    thesis: "Scale Venture Partners began in 2000 as BA Venture Partners, Bank of America's internal venture capital arm, co-founded by Kate Mitchell and Rory O'Driscoll, before spinning out as an independent firm in 2007. That banking-adjacent origin gave the firm an early, genuine focus on enterprise software with real financial discipline, and Scale has since evolved from a traditional B2B SaaS investor into a self-described pioneer of the 'Cognitive Applications' movement, embracing AI, cloud, and data-driven software as core to its current thesis. The firm's Series A and B-focused strategy, paired with a dedicated growth fund and hands-on 'Scaling Platform' support, has produced a genuinely strong IPO track record — HubSpot, DocuSign, Bill.com, JFrog, and Root Insurance all went public after Scale backed them — and the firm now manages $2.8 billion, investing out of a $900 million eighth fund raised in 2022.",
+    leadership: [
+      { name: "Kate Mitchell", role: "Co-Founder & Partner Emeritus", profileSlug: "kate-mitchell" },
+      { name: "Rory O'Driscoll", role: "Co-Founder & Partner" },
+      { name: "Stacey Bishop", role: "Partner" }
+    ],
+    timeline: [
+      { year: "2000", event: "Kate Mitchell and Rory O'Driscoll found BA Venture Partners inside Bank of America." },
+      { year: "2007", event: "Spins out as an independent firm, renamed Scale Venture Partners." },
+      { year: "2019", event: "Bill.com completes its NASDAQ IPO in December." },
+      { year: "2020", event: "JFrog and Root Insurance both complete their IPOs." },
+      { year: "2022", event: "Closes a $900 million eighth fund, pushing total AUM to $2.8 billion." }
+    ],
+    holdings: [
+      { name: "Bill.com", ticker: "BILL", historicalPrice: null, price: null },
+      { name: "JFrog", ticker: "FROG", historicalPrice: null, price: null },
+      { name: "Root Insurance", ticker: "ROOT", historicalPrice: null, price: null }
+    ]
+  },
    {
     rank: 15,
     name: "ARCH Venture Partners",
