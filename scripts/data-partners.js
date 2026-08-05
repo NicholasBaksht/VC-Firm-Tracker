@@ -6455,4 +6455,36 @@ sources: [
       { label: "Electronics360", url: "https://electronics360.globalspec.com/article/18506/applied-ventures-applies-investments-around-the-world" }
     ]
   },
+  "jacqueline-lesage": {
+    name: "Jacqueline LeSage",
+    firm: "Munich Re Ventures",
+    firmSlug: "munich-re-ventures",
+    title: "Founder & Managing General Partner",
+    joinedYear: 2015,
+    education: [],
+    previousExperience: [
+      "Corporate venture capital & strategy, The Hartford (~5 years)"
+    ],
+    investmentFocus: ["Insurtech", "Climate Tech", "Cybersecurity", "IoT"],
+    notableInvestments: [
+      { name: "Next Insurance", ticker: null },
+      { name: "Mnubo", ticker: null },
+      { name: "At-Bay", ticker: null }
+    ],
+    boardSeats: [],
+    ipoCount: 0,
+    majorExits: 12,
+    careerTimeline: [
+      { year: "2010s", event: "Spends roughly five years building corporate venture capital and strategy expertise at The Hartford." },
+      { year: "2015", event: "Founds Munich Re Ventures, backed initially by HSB Fund I." },
+      { year: "2019", event: "Mnubo, an early portfolio company, is acquired by AspenTech." },
+      { year: "2025", event: "Next Insurance, a Munich Re Ventures portfolio company, is acquired by Munich Re itself for $2.6 billion; named to Global Venturing's Powerlist as one of the top 100 corporate venturing professionals." },
+      { year: "2025", event: "Munich Re announces it will wind down the venture unit by mid-2026, shifting portfolio oversight to MEAG, its asset management arm." }
+    ],
+    biography: "Jacqueline LeSage built roughly five years of corporate venture capital and strategy experience at The Hartford before founding Munich Re Ventures in 2015, telling colleagues she knew that if she ever built a CVC program again, she wanted to do it in reinsurance — and that opportunity arrived when Munich Re began exploring its own venture arm. Over a decade, LeSage grew the fund into one of the most sophisticated corporate venture platforms built by a global reinsurer, deploying approximately $1.2 billion across nearly 100 investments and integrating tightly with Munich Re's underwriting, engineering, and distribution capabilities rather than offering portfolio companies capital alone. That approach produced real outcomes: Mnubo's acquisition by AspenTech, and Next Insurance's $2.6 billion acquisition by Munich Re itself in 2025. Despite that track record and the parent company posting record profits, Munich Re announced in late 2025 that it would wind down the venture unit by mid-2026 amid a leadership transition, folding remaining portfolio oversight into its asset management arm, MEAG.",
+    sources: [
+      { label: "Global Venturing Powerlist 2025", url: "https://globalventuring.com/corporate/awards/powerlist-2025-jacqueline-lesage/" },
+      { label: "Global Venturing — Wind-down coverage", url: "https://globalventuring.com/corporate/services/munich-re-winds-down-1-2bn-vc-arm-after-decade-of-investing/" }
+    ]
+  },
 };
