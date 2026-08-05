@@ -4883,6 +4883,30 @@ const firms = [
       { name: "Adesto Technologies", ticker: "IOTS", historicalPrice: null, price: null }
     ]
   },
+  {
+    rank: 24,
+    name: "Munich Re Ventures",
+    sectors: ["Fintech", "Cybersecurity", "Climate", "Enterprise Software"],
+    signatureExit: "Next Insurance's $2.6 billion acquisition by Munich Re itself in 2025 — the largest outcome in the fund's decade-long history, alongside Mnubo's 2019 acquisition by AspenTech",
+    slug: "munich-re-ventures",
+    website: "https://www.munichre.com/ventures",
+    short: "Munich Re Ventures",
+    founded: 2015,
+    hq: "Munich, Germany",
+    aum: "$1.2B (across all funds)",
+    thesis: "Munich Re Ventures was founded in 2015 by Jacqueline LeSage, backed initially by HSB Fund I, as the corporate venture arm of global reinsurer Munich Re. The fund built a genuinely distinctive model among corporate VCs: rather than offering portfolio companies capital alone, it integrated deeply with Munich Re's 150-year underwriting expertise and HSB's engineering and inspection force of more than 1,200 professionals, giving startups real access to reinsurance capacity, balance-sheet partnerships, and distribution channels most standalone VCs can't offer. That model produced real venture-scale outcomes — At-Bay, Augury, and Helium Mobile all reached unicorn status, Mnubo was acquired by AspenTech in 2019, and Next Insurance was acquired by Munich Re itself for $2.6 billion in 2025. Despite a decade of strong performance and the parent company posting record profits, Munich Re announced in late 2025 that it would wind down the venture unit by mid-2026 amid a broader leadership transition, shifting remaining portfolio oversight to its asset management arm, MEAG.",
+    leadership: [
+      { name: "Jacqueline LeSage", role: "Founder & Managing General Partner", profileSlug: "jacqueline-lesage" },
+      { name: "Jennifer Place", role: "Principal" }
+    ],
+    timeline: [
+      { year: "2015", event: "Jacqueline LeSage founds Munich Re Ventures, backed by HSB Fund I." },
+      { year: "2019", event: "Mnubo is acquired by AspenTech." },
+      { year: "2025", event: "Next Insurance is acquired by Munich Re for $2.6 billion." },
+      { year: "2025", event: "Munich Re announces the wind-down of the venture unit by mid-2026, shifting oversight to MEAG." }
+    ],
+    holdings: []
+  },
    {
     rank: 84,
     name: "Gradient Ventures",
