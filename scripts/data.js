@@ -5996,6 +5996,40 @@ sources: [
       { label: "Forbes", url: "https://www.forbes.com/sites/alexkonrad/2019/12/18/theresia-gouw-acrew-capital-raises-250-million-debut-fund/" }
     ]
   },
+   "chris-farmer": {
+    name: "Chris Farmer",
+    firm: "SignalFire",
+    firmSlug: "signalfire",
+    title: "Founder & CEO",
+    joinedYear: 2013,
+    education: [],
+    previousExperience: [
+      "Consultant, Bain & Company (technology buyouts)",
+      "VP, Bessemer Venture Partners (2005-2009, digital media & mobile)",
+      "Venture Partner, General Catalyst (2010-2013, led seed program: Coinbase, Discord, Stripe, Venmo, Zapier)",
+      "Led turnaround of Skybitz (wireless SaaS, acquired by Telular Corporation)"
+    ],
+    investmentFocus: ["Applied AI", "Enterprise Software", "Healthcare", "Cybersecurity"],
+    notableInvestments: [
+      { name: "Grammarly", ticker: null },
+      { name: "Grow Therapy", ticker: null },
+      { name: "Stampli", ticker: null }
+    ],
+    boardSeats: [],
+    ipoCount: 0,
+    majorExits: 0,
+    careerTimeline: [
+      { year: "2009", event: "Leaves Bessemer Venture Partners after four years leading digital media and mobile investments." },
+      { year: "2010", event: "Joins General Catalyst as a Venture Partner, leading its seed investment program and helping establish its California office." },
+      { year: "2013", event: "Founds SignalFire with Ilya Kirnos, built from the ground up as a data-driven, technology-native venture firm." },
+      { year: "2025", event: "Closes over $1 billion in new capital in April, pushing total AUM to approximately $3 billion." }
+    ],
+    biography: "Chris Farmer built his path to venture capital through Bain & Company technology consulting, a stint turning around wireless SaaS company Skybitz, and investing roles at Bessemer Venture Partners and General Catalyst, where he led a seed program that backed Coinbase, Discord, Stripe, Venmo, and Zapier before any of them were obvious winners. He founded SignalFire in 2013 with Ilya Kirnos on a genuinely different premise: build a venture firm the way a technology company builds a product, with an in-house engineering and data science team holding equal standing to investing partners, all sharing carry rather than crediting individual deal partners. That platform, called Beacon AI, tracks more than 650 million people and 80 million organizations to identify talent and market trends years ahead of consensus, and Farmer has personally bootstrapped the model from the start — running corporate advisory projects in SignalFire's early days just to cover AWS bills that exceeded the first fund's management fees. SignalFire has grown into a $3 billion applied-AI-focused firm, closing over $1 billion in new capital in a single raise in April 2025.",
+    sources: [
+      { label: "SignalFire — Chris Farmer", url: "https://www.signalfire.com/team/chris-farmer" },
+      { label: "BusinessWire", url: "https://www.businesswire.com/news/home/20250407594969/en/AI-Native-VC-SignalFire-Raises-Over-$1B-to-Fuel-the-Next-Wave-of-Applied-AI-Startups-Pushing-AUM-to-$3B" }
+    ]
+  },
 };
 
 // ============================================================
@@ -6191,7 +6225,8 @@ const firmStages = {
    "boxgroup": ["Pre-Seed", "Seed", "Series A"],
    "pear-vc": ["Pre-Seed", "Seed", "Series A"],
    "upfront-ventures": ["Series A", "Growth"],
-   "acrew-capital": ["Seed", "Series A"]
+   "acrew-capital": ["Seed", "Series A"],
+   "signalfire": ["Pre-Seed", "Seed", "Series A", "Series B"]
 };
 
 // ============================================================
@@ -6813,6 +6848,30 @@ const firms = [
       { name: "Blend", ticker: "BLND", historicalPrice: null, price: null },
       { name: "Joby Aviation", ticker: "JOBY", historicalPrice: null, price: null }
     ]
+  },
+   {
+    rank: 22,
+    name: "SignalFire",
+    sectors: ["AI", "Enterprise Software", "Cybersecurity", "Healthcare"],
+    signatureExit: "No single dollar-verified SignalFire exit confirmed yet — founder Chris Farmer's prior seed program at General Catalyst backed Coinbase, Discord, Stripe, Venmo, and Zapier, lending real pre-existing credibility to SignalFire's data-driven sourcing model",
+    slug: "signalfire",
+    website: "https://www.signalfire.com",
+    short: "SignalFire",
+    founded: 2013,
+    hq: "San Francisco, CA",
+    aum: "$3B",
+    thesis: "SignalFire was founded in 2013 by Chris Farmer and Ilya Kirnos, built from the ground up on a genuinely unconventional premise: run a venture firm the way a technology company builds a product, with an in-house engineering and data science team holding equal standing to investing partners rather than working in the background. That philosophy produced Beacon AI, a proprietary machine learning platform tracking more than 650 million people and 80 million organizations that has been refined in-house for more than a decade, giving SignalFire differentiated visibility into talent movement and market trends ahead of consensus. Farmer personally bootstrapped the model in its early days, running corporate advisory projects just to cover AWS bills that exceeded the first fund's management fees, and the firm has since become one of the most prominent applied-AI-focused early-stage investors, closing over $1 billion in new capital in a single April 2025 raise to reach approximately $3 billion in AUM.",
+    leadership: [
+      { name: "Chris Farmer", role: "Founder & CEO", profileSlug: "chris-farmer" },
+      { name: "Ilya Kirnos", role: "Founding Partner & CTO" },
+      { name: "Wayne Hu", role: "Partner" }
+    ],
+    timeline: [
+      { year: "2013", event: "Chris Farmer and Ilya Kirnos found SignalFire in San Francisco." },
+      { year: "2016", event: "Walter Kortschak joins after 26 years at Summit Partners, establishing SignalFire's growth-stage practice." },
+      { year: "2025", event: "Closes over $1 billion in new capital in April, pushing AUM to approximately $3 billion." }
+    ],
+    holdings: []
   },
    {
     rank: 40,
