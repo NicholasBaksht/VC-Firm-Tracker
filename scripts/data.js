@@ -5928,6 +5928,40 @@ sources: [
       { label: "Pear VC — Pejman Nozad", url: "https://pear.vc/team/pejman-nozad/" }
     ]
   },
+   "mark-suster": {
+    name: "Mark Suster",
+    firm: "Upfront Ventures",
+    firmSlug: "upfront-ventures",
+    title: "Managing Partner",
+    joinedYear: 2007,
+    education: ["BA, University of California, San Diego", "MBA, University of Chicago"],
+    previousExperience: [
+      "Founder & CEO, BuildOnline (construction collaboration technology, 1999; merged with Citadon in 2006)",
+      "Founder, Koral (content collaboration software, acquired by Salesforce.com, April 2007)",
+      "VP of Product Management, Salesforce.com"
+    ],
+    investmentFocus: ["Enterprise SaaS", "Consumer Internet", "Fintech"],
+    notableInvestments: [
+      { name: "TrueCar", ticker: "TRUE" },
+      { name: "Ring", ticker: null },
+      { name: "Maker Studios", ticker: null }
+    ],
+    boardSeats: [],
+    ipoCount: 1,
+    majorExits: 3,
+    careerTimeline: [
+      { year: "1999", event: "Founds BuildOnline, a construction collaboration technology company, later merging with Citadon in 2006." },
+      { year: "2006", event: "Founds Koral, a content collaboration software business." },
+      { year: "2007", event: "Koral is acquired by Salesforce.com in April; Suster briefly serves as VP of Product Management before joining GRP Partners (now Upfront Ventures) later that year." },
+      { year: "2009", event: "Starts the Launchpad LA accelerator while continuing at Upfront." },
+      { year: "2011", event: "Becomes Managing Partner." }
+    ],
+    biography: "Mark Suster built two enterprise software companies before becoming an investor — BuildOnline, a construction collaboration platform he founded in 1999, and Koral, a content collaboration business that Salesforce.com acquired in 2007, after which he briefly worked inside Salesforce as VP of Product Management. That real operating scar tissue shaped his approach when he joined GRP Partners (later renamed Upfront Ventures) later in 2007, becoming Managing Partner in 2011 and helping transform a firm that began by backing traditional retail chains like Costco and Starbucks into the largest and most established venture capital firm in Los Angeles. Suster also founded the Launchpad LA accelerator in 2009 and became one of the most widely-read voices in venture capital through his Both Sides of the Table blog, known for detailed, practitioner-level writing on term sheets, board dynamics, and fundraising that draws directly on his own founder experience.",
+    sources: [
+      { label: "Wikipedia — Mark Suster", url: "https://en.wikipedia.org/wiki/Mark_Suster" },
+      { label: "Venture Unlocked", url: "https://ventureunlocked.substack.com/p/marksuster" }
+    ]
+  },
 };
 
 // ============================================================
@@ -6121,7 +6155,8 @@ const firmStages = {
    "primary-venture-partners": ["Pre-Seed", "Seed"],
    "lerer-hippeau": ["Seed", "Series A"],
    "boxgroup": ["Pre-Seed", "Seed", "Series A"],
-   "pear-vc": ["Pre-Seed", "Seed", "Series A"]
+   "pear-vc": ["Pre-Seed", "Seed", "Series A"],
+   "upfront-ventures": ["Series A", "Growth"]
 };
 
 // ============================================================
@@ -6882,6 +6917,34 @@ const firms = [
       { name: "DoorDash", ticker: "DASH", historicalPrice: null, price: null },
       { name: "Guardant Health", ticker: "GH", historicalPrice: null, price: null },
       { name: "Dropbox", ticker: "DBX", historicalPrice: null, price: null }
+    ]
+  },
+   {
+    rank: 44,
+    name: "Upfront Ventures",
+    sectors: ["Consumer", "Enterprise Software", "Fintech", "Media"],
+    signatureExit: "Overture's $1.83 billion acquisition by Yahoo in 2003 — an early internet search advertising pioneer the firm's founders backed under its original name, GRP Partners",
+    slug: "upfront-ventures",
+    website: "https://upfront.com",
+    short: "Upfront Ventures",
+    founded: 1996,
+    hq: "Santa Monica, CA",
+    aum: "$1.9B",
+    thesis: "Upfront Ventures was founded in 1996 as GRP Partners in Century City, Los Angeles, by Yves Sisteron, Steven Dietz, and Steve Lebow, initially raising a $200 million fund focused on traditional retail investments including Costco, Starbucks, and Office Depot before pivoting toward technology. Mark Suster, who'd already founded and sold two enterprise software companies (including Koral, acquired by Salesforce), joined in 2007 to build a dedicated internet investment arm, becoming Managing Partner in 2011 and helping lead the firm's 2013 rebrand to Upfront Ventures — a name chosen to reflect transparency with founders and a nod to the entertainment industry's 'upfronts.' That retail-to-tech pivot, combined with genuine roots in Los Angeles rather than a Silicon Valley satellite office, made Upfront the largest and most established venture capital firm in LA, deliberately deploying 40-45% of its capital in Southern California and building the Upfront Summit into the region's flagship tech conference. The firm now manages $1.9 billion and has backed more than 200 companies including TrueCar, Ring, Maker Studios, and Overture.",
+    leadership: [
+      { name: "Yves Sisteron", role: "Founding Partner & Managing Partner", profileSlug: null },
+      { name: "Mark Suster", role: "Managing Partner", profileSlug: "mark-suster" },
+      { name: "Kara Nortman", role: "Managing Partner" }
+    ],
+    timeline: [
+      { year: "1996", event: "Yves Sisteron, Steven Dietz, and Steve Lebow found GRP Partners in Los Angeles, initially backing retail companies." },
+      { year: "2003", event: "Overture, backed under the GRP name, is acquired by Yahoo for $1.83 billion." },
+      { year: "2007", event: "Mark Suster joins to build a dedicated internet investment arm." },
+      { year: "2013", event: "Rebrands to Upfront Ventures and relocates to Santa Monica." },
+      { year: "2021", event: "AUM reaches $1.9 billion." }
+    ],
+    holdings: [
+      { name: "TrueCar", ticker: "TRUE", historicalPrice: null, price: null }
     ]
   },
    {
