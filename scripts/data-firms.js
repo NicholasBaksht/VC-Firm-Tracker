@@ -5084,6 +5084,32 @@ const firms = [
     ],
     holdings: []
   },
+  {
+    rank: 24,
+    name: "OpenView Venture Partners",
+    sectors: ["Enterprise Software", "Fintech", "AI"],
+    signatureExit: "Datadog's independent NASDAQ IPO at a $7.83 billion market cap, and Expensify's NASDAQ IPO in November 2021 at a $1.82 billion market cap — OpenView's two confirmed public listings among more than 60 portfolio companies",
+    slug: "openview-venture-partners",
+    website: "https://openviewpartners.com",
+    short: "OpenView",
+    founded: 2006,
+    hq: "Boston, MA",
+    aum: "$2.4B (across seven funds)",
+    thesis: "OpenView Venture Partners was founded in 2006 by Scott Maxwell, who spent six years institutionalizing Insight Venture Partners' investment process as its COO before recognizing that expansion-stage software companies needed genuine operational expertise, not capital alone, to scale into market leaders. That conviction produced OpenView's distinctive 'Expansion Platform' and 'Executive Network,' providing hands-on support in pricing, packaging, go-to-market strategy, and executive recruitment for portfolio companies that have already found product-market fit. The firm helped pioneer the product-led growth investment thesis in enterprise software, backing companies where the product itself drives customer acquisition and expansion, and has partnered with more than 60 companies including Datadog, Expensify, Calendly, MongoDB, and Notion. OpenView has raised $2.4 billion across seven funds, with 9 unicorns, 2 completed IPOs, and 35 acquisitions across its portfolio history.",
+    leadership: [
+      { name: "Scott Maxwell", role: "Founder & Managing Partner", profileSlug: "scott-maxwell" },
+      { name: "Cynthia Phillips", role: "General Partner" }
+    ],
+    timeline: [
+      { year: "2006", event: "Scott Maxwell founds OpenView Venture Partners in Boston." },
+      { year: "2021", event: "Expensify completes its NASDAQ IPO in November at a $1.82 billion market cap." },
+      { year: "2024", event: "Raises $2.4 billion in total capital across seven funds." },
+      { year: "2025", event: "PartsTech, a portfolio company, is acquired by OEC in February." }
+    ],
+    holdings: [
+      { name: "Datadog", ticker: "DDOG", historicalPrice: null, price: null }
+    ]
+  },
    {
     rank: 84,
     name: "Gradient Ventures",
