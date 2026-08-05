@@ -261,7 +261,8 @@ const firmStages = {
    "acrew-capital": ["Seed", "Series A"],
    "signalfire": ["Pre-Seed", "Seed", "Series A", "Series B"],
    "amazon-alexa-fund": ["Series A", "Series B", "Growth"],
-   "gradient-ventures": ["Pre-Seed", "Seed", "Series A"]
+   "gradient-ventures": ["Pre-Seed", "Seed", "Series A"],
+   "greycroft": ["Seed", "Series A", "Series B", "Growth"]
 };
 
 // ============================================================
