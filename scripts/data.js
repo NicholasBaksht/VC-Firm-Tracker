@@ -5962,6 +5962,40 @@ sources: [
       { label: "Venture Unlocked", url: "https://ventureunlocked.substack.com/p/marksuster" }
     ]
   },
+   "theresia-gouw": {
+    name: "Theresia Gouw",
+    firm: "Acrew Capital",
+    firmSlug: "acrew-capital",
+    title: "Co-Founder & Managing Partner",
+    joinedYear: 2019,
+    education: ["BS, Engineering, Brown University", "MBA, Stanford Graduate School of Business"],
+    previousExperience: [
+      "Management Consultant, Bain & Company",
+      "Founding VP of Business Development & Sales, Release Software",
+      "Managing General Partner, Accel Partners (15 years, first female partner and managing partner)",
+      "Co-Founder, Aspect Ventures (2014)"
+    ],
+    investmentFocus: ["Fintech", "Cybersecurity", "Data & AI", "Healthcare"],
+    notableInvestments: [
+      { name: "Forescout", ticker: "FSCT" },
+      { name: "Imperva", ticker: "IMPV" },
+      { name: "Trulia", ticker: "TRLA" }
+    ],
+    boardSeats: [],
+    ipoCount: 4,
+    majorExits: 8,
+    careerTimeline: [
+      { year: "2000s", event: "Spends 15 years at Accel Partners, becoming the firm's first female partner and managing partner." },
+      { year: "2014", event: "Co-founds Aspect Ventures with Jennifer Fonstad, a rare woman-led venture capital fund in Silicon Valley." },
+      { year: "2019", event: "Aspect Ventures splits; Gouw co-founds Acrew Capital with Lauren Kolodny, Vishal Lugani, Asad Khaliq, and Mark Kraynak in December, closing a $250 million debut fund backed by Melinda Gates." },
+      { year: "2024", event: "Raises $700 million in October, pushing total AUM to $1.7 billion." }
+    ],
+    biography: "Theresia Gouw emigrated from Indonesia as a child, studied engineering at Brown, and earned an MBA from Stanford before spending 15 years at Accel Partners, where she became the firm's first female partner and managing partner during a career that touched real, dollar-verified exits including Forescout, Imperva, Trulia, and HotelTonight's acquisition by Airbnb. She co-founded Aspect Ventures in 2014 with Jennifer Fonstad, and when the two split in 2019 over differing leadership styles, Gouw launched Acrew Capital with four Aspect colleagues, deliberately building it as a 'multigenerational' firm designed to avoid concentrating power at the top the way many venture partnerships do. She has been named to the Forbes Midas List eight times, co-founded All Raise, a nonprofit expanding women's representation in venture capital, and has made diversity of perspective a structural pillar of Acrew's investing thesis rather than a stated goal without teeth.",
+    sources: [
+      { label: "Wikipedia — Theresia Gouw", url: "https://en.wikipedia.org/wiki/Theresia_Gouw" },
+      { label: "Forbes", url: "https://www.forbes.com/sites/alexkonrad/2019/12/18/theresia-gouw-acrew-capital-raises-250-million-debut-fund/" }
+    ]
+  },
 };
 
 // ============================================================
@@ -6156,7 +6190,8 @@ const firmStages = {
    "lerer-hippeau": ["Seed", "Series A"],
    "boxgroup": ["Pre-Seed", "Seed", "Series A"],
    "pear-vc": ["Pre-Seed", "Seed", "Series A"],
-   "upfront-ventures": ["Series A", "Growth"]
+   "upfront-ventures": ["Series A", "Growth"],
+   "acrew-capital": ["Seed", "Series A"]
 };
 
 // ============================================================
@@ -6946,6 +6981,31 @@ const firms = [
     holdings: [
       { name: "TrueCar", ticker: "TRUE", historicalPrice: null, price: null }
     ]
+  },
+   {
+    rank: 45,
+    name: "Acrew Capital",
+    sectors: ["Fintech", "AI", "Cybersecurity", "Healthcare"],
+    signatureExit: "No confirmed exit yet — Acrew itself launched in 2019, though co-founder Theresia Gouw's prior track record includes real, verified exits at Forescout, Imperva, Trulia, and HotelTonight's acquisition by Airbnb, built during her 15 years at Accel and Aspect Ventures",
+    slug: "acrew-capital",
+    website: "https://www.acrewcapital.com",
+    short: "Acrew Capital",
+    founded: 2019,
+    hq: "San Francisco, CA",
+    aum: "$1.7B",
+    thesis: "Acrew Capital was co-founded in December 2019 by Theresia Gouw, Lauren Kolodny, Vishal Lugani, Asad Khaliq, and Mark Kraynak, most of whom had worked together previously at Aspect Ventures before that firm split up over differing leadership styles between its two founders. Gouw, a 15-year veteran of Accel Partners and the firm's first female partner, built Acrew deliberately as a 'multigenerational' firm structured to avoid concentrating power and decision-making at the top the way many venture partnerships do, with any two partners able to push a deal through. That structure, paired with a genuine belief that diversity of perspective is a competitive advantage rather than a checkbox, has produced a portfolio of 142-plus companies including 16 unicorns, anchored by a community of more than 600 operators and executives the firm calls its 'Crew of Leaders.' Acrew closed its $250 million debut fund backed by Melinda Gates and has since grown to $1.7 billion in AUM, raising $700 million in a single close in October 2024.",
+    leadership: [
+      { name: "Theresia Gouw", role: "Co-Founder & Managing Partner", profileSlug: "theresia-gouw" },
+      { name: "Lauren Kolodny", role: "Co-Founder & Managing Partner" },
+      { name: "Vishal Lugani", role: "Co-Founder & Partner" }
+    ],
+    timeline: [
+      { year: "2019", event: "Theresia Gouw, Lauren Kolodny, Vishal Lugani, Asad Khaliq, and Mark Kraynak found Acrew Capital in December, closing a $250 million debut fund." },
+      { year: "2022", event: "Launches the Acrew Diversify Capital Fund, a growth-stage vehicle." },
+      { year: "2024", event: "Raises $700 million in a single close in October, pushing AUM to $1.7 billion." },
+      { year: "2025", event: "Portfolio company Chime prepares for an IPO at a projected $11 billion valuation." }
+    ],
+    holdings: []
   },
    {
     rank: 15,
