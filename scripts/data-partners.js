@@ -6188,4 +6188,37 @@ sources: [
       { label: "Wikipedia — Tige Savage", url: "https://en.wikipedia.org/wiki/Tige_Savage" }
     ]
   },
+  "hunter-walk": {
+    name: "Hunter Walk",
+    firm: "Homebrew",
+    firmSlug: "homebrew",
+    title: "Co-Founder & Partner",
+    joinedYear: 2013,
+    education: ["BA, History, Vassar College", "MBA, Stanford Graduate School of Business"],
+    previousExperience: [
+      "Management Consultant, Deloitte",
+      "Product & Marketing, Linden Lab (Second Life)",
+      "Head of Consumer Product, YouTube / Google (~10 years)"
+    ],
+    investmentFocus: ["Fintech", "Developer Tools", "AI/ML", "Small Business Platforms"],
+    notableInvestments: [
+      { name: "Chime", ticker: "CHYM" },
+      { name: "Cruise", ticker: null },
+      { name: "Gusto", ticker: null }
+    ],
+    boardSeats: [],
+    ipoCount: 1,
+    majorExits: 2,
+    careerTimeline: [
+      { year: "2000s", event: "Works in management consulting at Deloitte, then joins Linden Lab, creators of Second Life." },
+      { year: "2007", event: "Joins Google, eventually leading consumer product for YouTube over nearly a decade." },
+      { year: "2013", event: "Co-founds Homebrew with Satya Patel in San Francisco, closing a $35 million debut fund." },
+      { year: "2025", event: "Chime, one of Homebrew's earliest and most defining bets, completes its Nasdaq IPO in June at an $11.6 billion valuation." }
+    ],
+    biography: "Hunter Walk built nearly a decade of consumer product leadership at Google, most notably heading product for YouTube, after earlier stints at Linden Lab and in management consulting at Deloitte. He co-founded Homebrew in 2013 with fellow Google veteran Satya Patel, built around what they call the 'Bottom Up Economy' thesis — betting on companies that give power back to individuals and small businesses who'd been underserved by incumbents. That conviction, applied deliberately narrow (the firm makes only 8-10 investments a year, working closely with each through Series B), produced one of the earliest and most successful bets in Chime, which completed its Nasdaq IPO in June 2025 at an $11.6 billion valuation after 12 years as a private company. Walk and Patel recently made the unusual decision to stop raising outside capital entirely, moving to a self-funded model called Homebrew Forever after a decade of what they've described as stellar returns across Chime, Plaid, and Gusto.",
+    sources: [
+      { label: "TechCrunch — Hunter Walk", url: "https://techcrunch.com/author/hunter-walk" },
+      { label: "The Takeoff Podcast", url: "https://thetakeoff.substack.com/p/hunter-walk-co-founder-and-partner" }
+    ]
+  },
 };
