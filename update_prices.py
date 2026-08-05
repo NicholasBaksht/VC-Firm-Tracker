@@ -18,7 +18,7 @@ import re
 from datetime import date
 import yfinance as yf
 
-DATA_JS_PATH = "scripts/data.js"
+DATA_JS_PATH = "scripts/data-firms.js"
 
 
 def get_all_tickers():
