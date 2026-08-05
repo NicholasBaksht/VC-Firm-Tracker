@@ -530,7 +530,7 @@ function renderComparePage(firmA, firmB, sectorSlug, computePowerScore) {
 }
 
 function main() {
-  const data = loadCombinedScripts(['data.js', 'utilities.js', 'powerscore.js']);
+const data = loadCombinedScripts(['data-meta.js', 'data-partners.js', 'data-firms.js', 'utilities.js', 'powerscore.js']);
   const { firms, partnerProfiles } = data;
   const firmsBySlug = {};
   firms.forEach(f => { firmsBySlug[f.slug] = f; });
