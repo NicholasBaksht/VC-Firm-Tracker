@@ -262,7 +262,8 @@ const firmStages = {
    "signalfire": ["Pre-Seed", "Seed", "Series A", "Series B"],
    "amazon-alexa-fund": ["Series A", "Series B", "Growth"],
    "gradient-ventures": ["Pre-Seed", "Seed", "Series A"],
-   "greycroft": ["Seed", "Series A", "Series B", "Growth"]
+   "greycroft": ["Seed", "Series A", "Series B", "Growth"],
+   "scale-venture-partners": ["Series A", "Series B", "Growth"]
 };
 
 // ============================================================
