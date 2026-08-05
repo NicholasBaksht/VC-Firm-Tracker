@@ -5460,6 +5460,38 @@ sources: [
       { label: "Empower Africa", url: "https://empowerafrica.com/fatimatou-ousmanou-samba-is-helping-the-african-diaspora-send-money-home-easily-copy/" }
     ]
   },
+   "amar-inamdar": {
+    name: "Amar Inamdar",
+    firm: "KawiSafi Ventures",
+    firmSlug: "kawisafi-ventures",
+    title: "Managing Director",
+    joinedYear: 2017,
+    education: [],
+    previousExperience: [
+      "Managed a global investment portfolio, International Finance Corporation (IFC)",
+      "25+ years of private sector experience building markets and businesses in emerging economies"
+    ],
+    investmentFocus: ["Off-Grid Solar", "Climate Tech", "Renewable Energy Access"],
+    notableInvestments: [
+      { name: "BBOXX", ticker: null },
+      { name: "d.light", ticker: null },
+      { name: "Sistema.bio", ticker: null }
+    ],
+    boardSeats: [],
+    ipoCount: 0,
+    majorExits: 0,
+    careerTimeline: [
+      { year: "1990s", event: "Begins a 25-plus-year career as an investor, scientist, and entrepreneur across East Africa's emerging markets." },
+      { year: "2010s", event: "Manages a global investment portfolio at the International Finance Corporation before joining KawiSafi." },
+      { year: "2017", event: "Becomes Managing Director of KawiSafi Ventures as the fund launches with initial investors." },
+      { year: "2019", event: "Leads KawiSafi to a nearly $70 million close in April, through Acumen's for-profit subsidiary Acumen Capital Partners." }
+    ],
+    biography: "Amar Inamdar built more than 25 years of private sector experience as an investor, scientist, and entrepreneur across East Africa's emerging markets before managing a global investment portfolio at the International Finance Corporation. He became Managing Director of KawiSafi Ventures as the fund launched in 2017, leading it to a nearly $70 million close in 2019 through Acumen Capital Partners — the for-profit investment subsidiary of Acumen, the internationally recognized impact investing nonprofit that created and developed the fund. Inamdar has been outspoken about the need for greater transparency in Africa's energy sector, arguing that differentiated pools of patient, catalytic capital are essential as off-grid solar companies mature from early-stage grants into commercially scalable businesses, and he sits on the boards of several of KawiSafi's portfolio companies.",
+    sources: [
+      { label: "NextBillion", url: "https://nextbillion.net/africa-energy-sector-kawisafi-ventures/" },
+      { label: "KawiSafi Ventures Fund Team", url: "https://www.kawisafi.com/fund" }
+    ]
+  },
 };
 
 // ============================================================
@@ -5639,7 +5671,8 @@ const firmStages = {
    "shield-capital": ["Seed", "Series A"],
    "future-africa": ["Pre-Seed", "Seed"],
    "novastar-ventures": ["Seed", "Series A", "Series B"],
-   "enza-capital": ["Pre-Seed", "Seed", "Series A", "Series B"]
+   "enza-capital": ["Pre-Seed", "Seed", "Series A", "Series B"],
+   "kawisafi-ventures": ["Series A", "Series B", "Growth"]
 };
 
 // ============================================================
@@ -8867,6 +8900,29 @@ const firms = [
       { year: "2019", event: "Mike Mompi co-founds Enza Capital in Nairobi." },
       { year: "2023", event: "Closes Fund II at $58 million total AUM across both funds, and launches the Founder Partner Program." },
       { year: "2026", event: "AUM reaches approximately $78 million." }
+    ],
+    holdings: []
+  },
+   {
+    rank: 78,
+    name: "KawiSafi Ventures",
+    sectors: ["Climate", "Enterprise Software"],
+    signatureExit: "No confirmed exit yet — KawiSafi's portfolio companies (BBOXX, d.light, Sistema.bio, Angaza, InspiraFarms, Redavia Solar) remain private, still-scaling businesses since the fund itself only launched in 2017",
+    slug: "kawisafi-ventures",
+    website: "https://www.kawisafi.com",
+    short: "KawiSafi Ventures",
+    founded: 2017,
+    hq: "Nairobi, Kenya",
+    aum: "$70M",
+    thesis: "KawiSafi Ventures was created and developed by Acumen, the internationally recognized impact investing pioneer, after Acumen spent a decade deploying more than $20 million of patient philanthropic capital across East Africa's off-grid energy ecosystem and recognized the potential to scale that impact through a genuinely commercial, for-profit vehicle. Launched in 2017 and closed at nearly $70 million in 2019 through Acumen's subsidiary Acumen Capital Partners, the fund was backed by an unusually prominent group of anchor investors — the Green Climate Fund, venture capitalist Steve Jurvetson, TED curator Chris Anderson, and the Skoll Foundation. KawiSafi invests growth capital in high-growth, revenue-generating clean energy companies scaling decentralized, off-grid solar solutions across Kenya and Rwanda, aiming to deliver clean energy access to more than 10 million people while displacing over a million tons of carbon dioxide.",
+    leadership: [
+      { name: "Amar Inamdar", role: "Managing Director", profileSlug: "amar-inamdar" },
+      { name: "Michelle Haigh Osorio", role: "Investment Director" }
+    ],
+    timeline: [
+      { year: "2017", event: "KawiSafi Ventures launches with initial investors." },
+      { year: "2019", event: "Closes at nearly $70 million in April through Acumen Capital Partners." },
+      { year: "2024", event: "Portfolio companies have cumulatively impacted more than 200 million lives and averted approximately 48 million tons of CO2 since fund inception." }
     ],
     holdings: []
   },
