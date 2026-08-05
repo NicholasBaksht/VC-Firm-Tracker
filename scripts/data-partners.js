@@ -6748,4 +6748,39 @@ sources: [
       { label: "Tracxn", url: "https://tracxn.com/d/venture-capital/openview" }
     ]
   },
+"brad-feld": {
+    name: "Brad Feld",
+    firm: "Foundry Group",
+    firmSlug: "foundry-group",
+    title: "Co-Founder & Managing Director",
+    joinedYear: 2006,
+    education: ["BS, Management Science, MIT", "MS, Management Science, MIT"],
+    previousExperience: [
+      "Founder, Feld Technologies (custom software, founded in college, sold 1993)",
+      "Co-Founder, Mobius Venture Capital (1996, one of the first internet-focused venture firms)",
+      "Co-Founder, Techstars (global startup accelerator)"
+    ],
+    investmentFocus: ["Enterprise Software", "Consumer Internet", "AI"],
+    notableInvestments: [
+      { name: "Fitbit", ticker: "FIT" },
+      { name: "Zynga", ticker: "ZNGA" },
+      { name: "Gnip", ticker: null }
+    ],
+    boardSeats: ["Path Forward", "Kauffman Fellows", "Defy Ventures"],
+    ipoCount: 1,
+    majorExits: 3,
+    careerTimeline: [
+      { year: "1987", event: "Begins investing in and building technology startups, founding Feld Technologies while still in college." },
+      { year: "1993", event: "Sells Feld Technologies and relocates to Boulder, Colorado, beginning decades of work building the city's startup ecosystem." },
+      { year: "1996", event: "Co-founds Mobius Venture Capital, one of the first venture firms dedicated to internet investments." },
+      { year: "2006", event: "Co-founds Foundry Group with Seth Levine, Ryan McIntyre, and Jason Mendelson, alongside Techstars." },
+      { year: "2019", event: "Fitbit, an early Foundry investment, is acquired by Google for approximately $2.1 billion." },
+      { year: "2024", event: "Foundry Group announces its final fund, Foundry 2022, in January, planning to conclude new investments after deploying it." }
+    ],
+    biography: "Brad Feld began investing in technology startups in 1987, founding Feld Technologies while still in college and selling it in 1993 before relocating to Boulder, Colorado, where he became a foundational figure in building the city's entrepreneurial ecosystem from near-scratch. After co-founding Mobius Venture Capital in 1996 and Techstars, he co-founded Foundry Group in 2006 with Seth Levine, Ryan McIntyre, and Jason Mendelson — four friends who'd worked together at Mobius and shared frustration with founder-unfriendly, opaque VC practices. That 'radical transparency' philosophy, including every partner publishing their personal email address, backed Fitbit (acquired by Google for $2.1 billion), Zynga (IPO'd at a $7 billion valuation), and Gnip (acquired by Twitter) across more than 200 portfolio companies. Feld coined the widely-cited 'Boulder Thesis' in his book Startup Communities, champions a 'Give First' philosophy of mentorship, and has completed 25 marathons toward a goal of finishing one in all 50 states. Foundry Group announced its final fund in January 2024, choosing a deliberate, planned conclusion after nearly two decades of staying intentionally small and partner-driven.",
+    sources: [
+      { label: "Wikipedia — Brad Feld", url: "https://en.wikipedia.org/wiki/Brad_Feld" },
+      { label: "DevCuration — VC Spotlight: Foundry Group", url: "https://devcuration.substack.com/p/vc-spotlight-foundry-group" }
+    ]
+  },
 };
