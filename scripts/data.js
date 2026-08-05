@@ -10812,6 +10812,30 @@ const firms = [
     holdings: []
   },
    {
+    rank: 83,
+    name: "Amazon Alexa Fund",
+    sectors: ["AI", "Consumer", "Enterprise Software"],
+    signatureExit: "No typical financial exit — as a strategic corporate fund, the Alexa Fund's clearest outcome is Ring, an early portfolio company Amazon itself acquired directly in 2018 rather than a third-party buyer or public listing",
+    slug: "amazon-alexa-fund",
+    website: "https://developer.amazon.com/alexa/alexa-startups/alexa-fund",
+    short: "Amazon Alexa Fund",
+    founded: 2015,
+    hq: "Seattle, WA",
+    aum: "$200M",
+    thesis: "The Amazon Alexa Fund launched in 2015 as Amazon's dedicated corporate venture arm for voice technology, led from the start by Paul Bernard, and built on the belief that experiences designed around the human voice would fundamentally change how people use technology. Rather than pursuing pure financial returns, the fund prioritizes strategic value: it typically co-invests alongside traditional VCs rather than leading rounds, connects portfolio companies directly with Amazon's product teams and AWS infrastructure, and helps founders integrate with the Alexa ecosystem reaching hundreds of millions of devices. As Amazon's own AI ambitions have expanded well beyond voice, so has the fund's scope, and in 2025 it announced a broadened mandate covering AI-enabled hardware and smart agents. The fund has invested up to $200 million across more than 140 companies since its founding, including ecobee, TrackR, and Ring, which Amazon itself later acquired directly.",
+    leadership: [
+      { name: "Paul Bernard", role: "Director, Alexa Fund", profileSlug: "paul-bernard" }
+    ],
+    timeline: [
+      { year: "2015", event: "Amazon launches the Alexa Fund in Seattle with an initial $100 million commitment." },
+      { year: "2017", event: "Amazon commits an additional $100 million, bringing the fund to $200 million." },
+      { year: "2018", event: "Ring, an Alexa Fund portfolio company, is acquired directly by Amazon." },
+      { year: "2023", event: "Portfolio reaches more than 130 investments and 21-plus exits." },
+      { year: "2025", event: "Expands its investment mandate into AI-enabled hardware and smart agents." }
+    ],
+    holdings: []
+  },
+   {
     rank: 73,
     name: "Norrsken22",
     sectors: ["Fintech", "Healthcare", "Edtech", "Enterprise Software"],
