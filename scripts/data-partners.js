@@ -6021,4 +6021,37 @@ sources: [
       { label: "f4.fund", url: "https://f4.fund/firms/gradient-ventures" }
     ]
   },
+  "dana-settle": {
+    name: "Dana Settle",
+    firm: "Greycroft",
+    firmSlug: "greycroft",
+    title: "Co-Founder & Managing Partner",
+    joinedYear: 2006,
+    education: ["BA, University of Michigan", "MBA, Harvard Business School"],
+    previousExperience: [
+      "M&A, Goldman Sachs",
+      "Operations, Reuters"
+    ],
+    investmentFocus: ["Consumer Internet", "Fintech", "Enterprise Software"],
+    notableInvestments: [
+      { name: "Venmo", ticker: null },
+      { name: "The RealReal", ticker: "REAL" },
+      { name: "Bird Global", ticker: null }
+    ],
+    boardSeats: [],
+    ipoCount: 1,
+    majorExits: 2,
+    careerTimeline: [
+      { year: "2000s", event: "Works in M&A at Goldman Sachs and operations at Reuters before moving into venture capital." },
+      { year: "2006", event: "Co-founds Greycroft with Alan Patricof and Ian Sigalow." },
+      { year: "2012", event: "Leads Greycroft's early seed investment in Venmo." },
+      { year: "2013", event: "Braintree, which had acquired Venmo, is sold to PayPal for $800 million." },
+      { year: "2019", event: "The RealReal, an early Greycroft investment Settle led, completes its IPO." }
+    ],
+    biography: "Dana Settle moved into venture capital after a career spanning M&A at Goldman Sachs and operations at Reuters, co-founding Greycroft in 2006 alongside veteran VC Alan Patricof and Ian Sigalow. She has been one of the firm's most consistently active investors in consumer payments and marketplaces, personally leading Greycroft's early seed bet on Venmo years before Braintree, which had acquired the payments app, sold to PayPal for $800 million in 2013. Settle also led Greycroft's early investment in The RealReal, the consignment marketplace that completed its own IPO in 2019, and has continued to anchor the firm's growth-stage fintech and marketplace investing as it has grown to more than $3 billion in assets under management.",
+    sources: [
+      { label: "Greycroft — Dana Settle", url: "https://www.greycroft.com/team/dana-settle/" },
+      { label: "Wikipedia — Greycroft", url: "https://en.wikipedia.org/wiki/Greycroft" }
+    ]
+  },
 };
