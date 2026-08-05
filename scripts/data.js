@@ -6030,6 +6030,39 @@ sources: [
       { label: "BusinessWire", url: "https://www.businesswire.com/news/home/20250407594969/en/AI-Native-VC-SignalFire-Raises-Over-$1B-to-Fuel-the-Next-Wave-of-Applied-AI-Startups-Pushing-AUM-to-$3B" }
     ]
   },
+   "paul-bernard": {
+    name: "Paul Bernard",
+    firm: "Amazon Alexa Fund",
+    firmSlug: "amazon-alexa-fund",
+    title: "Director, Alexa Fund",
+    joinedYear: 2015,
+    education: ["BA, Vanderbilt University"],
+    previousExperience: [
+      "Senior positions, Intel",
+      "Amazon Alexa devices team"
+    ],
+    investmentFocus: ["Voice Technology", "AI", "Connected Home", "Ambient Computing"],
+    notableInvestments: [
+      { name: "Ring", ticker: null },
+      { name: "ecobee", ticker: null },
+      { name: "TrackR", ticker: null }
+    ],
+    boardSeats: [],
+    ipoCount: 0,
+    majorExits: 1,
+    careerTimeline: [
+      { year: "2015", event: "Launches and begins leading the Alexa Fund at its founding, with an initial $100 million commitment." },
+      { year: "2017", event: "Amazon commits an additional $100 million to the fund, bringing total capital to $200 million." },
+      { year: "2018", event: "Ring, an early Alexa Fund portfolio company, is acquired directly by Amazon." },
+      { year: "2023", event: "Named to Global Venturing's Powerlist as one of the world's leading corporate venturing professionals." },
+      { year: "2025", event: "Announces the fund's expansion into AI-enabled hardware and smart agents, broadening beyond its original voice-technology focus." }
+    ],
+    biography: "Paul Bernard came to the Alexa Fund from senior roles at Intel and Amazon's own Alexa devices team, and has led the fund since its 2015 launch — making him one of the longest-tenured leaders in corporate venture capital. Operating the fund 'off the balance sheet' with no fixed size constraint, Bernard has grown its footprint from an initial $100 million commitment to roughly $200 million, backing more than 140 companies including ecobee, TrackR, and Ring, the smart doorbell company Amazon itself later acquired directly in 2018. Rather than chasing pure financial exits, Bernard has described the fund's real goal as identifying startups building genuinely new experiences with Alexa or advancing voice technology broadly, and in 2025 he announced the fund's expansion into AI-enabled hardware and smart agents as large language models reshaped what's possible with ambient computing. He has been recognized on Global Venturing's Powerlist of top corporate venturing professionals in both 2023 and 2025.",
+    sources: [
+      { label: "TechCrunch", url: "https://techcrunch.com/2023/01/24/alexa-funds-paul-bernard-talks-openai-whats-catching-his-eye-and-remaining-relevant-as-amazon-restructures" },
+      { label: "Global Venturing Powerlist", url: "https://globalventuring.com/corporate/corporate-venturer/powerlist-2023-paul-bernard/" }
+    ]
+  },
 };
 
 // ============================================================
@@ -6226,7 +6259,8 @@ const firmStages = {
    "pear-vc": ["Pre-Seed", "Seed", "Series A"],
    "upfront-ventures": ["Series A", "Growth"],
    "acrew-capital": ["Seed", "Series A"],
-   "signalfire": ["Pre-Seed", "Seed", "Series A", "Series B"]
+   "signalfire": ["Pre-Seed", "Seed", "Series A", "Series B"],
+   "amazon-alexa-fund": ["Series A", "Series B", "Growth"]
 };
 
 // ============================================================
