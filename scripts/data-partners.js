@@ -6389,4 +6389,36 @@ sources: [
       { label: "NVentures", url: "https://www.nventures.ai/" }
     ]
   },
+  "thomas-dhalluin": {
+    name: "Thomas d'Halluin",
+    firm: "Airbus Ventures",
+    firmSlug: "airbus-ventures",
+    title: "Managing Partner",
+    joinedYear: 2015,
+    education: ["MS, Mechanical Engineering, McGill University / École des Mines"],
+    previousExperience: [
+      "Manufacturing, Procurement & Supply Chain roles, Airbus (Europe & China, including 3 years in Shanghai)",
+      "Chief of Staff to the CFO, Airbus"
+    ],
+    investmentFocus: ["Aerospace", "Deep Tech", "AI/Autonomy", "Climate Tech"],
+    notableInvestments: [
+      { name: "IonQ", ticker: "IONQ" },
+      { name: "Rocket Lab", ticker: "RKLB" },
+      { name: "Astra", ticker: null }
+    ],
+    boardSeats: [],
+    ipoCount: 4,
+    majorExits: 7,
+    careerTimeline: [
+      { year: "2000s", event: "Builds two decades of aerospace industry experience at Airbus, spanning manufacturing, procurement, supply chain, and finance roles across Europe and China." },
+      { year: "2015", event: "Becomes Managing Partner of Airbus Ventures, based in Silicon Valley." },
+      { year: "2016", event: "Named a French-American Foundation Young Leader for the United States." },
+      { year: "2021", event: "IonQ completes its SPAC merger with dMY Technology Group III in April, becoming the world's first publicly traded pure-play quantum computing hardware and software company." }
+    ],
+    biography: "Thomas d'Halluin brings two decades of aerospace industry experience to venture capital, having worked across manufacturing, procurement, supply chain, and finance roles at Airbus in both Europe and China, including three years based in Shanghai, before serving as Chief of Staff to Airbus's CFO. As Managing Partner of Airbus Ventures, he runs the fund as a genuinely hybrid model — maintaining independence from Airbus's corporate structure while raising outside capital, combining real aerospace domain insight with financial discipline. That approach helped make Airbus Ventures a key early investor in IonQ, which completed its SPAC merger in 2021 to become the world's first publicly traded pure-play quantum computing company, with d'Halluin personally affirming the firm's continued support through 'this important next chapter.' He focuses on backing founders tackling foundational hardware problems in space infrastructure and flight performance rather than incremental improvements.",
+    sources: [
+      { label: "Airbus Ventures — Thomas d'Halluin", url: "https://www.airbusventures.vc/team/thomas-d-halluin" },
+      { label: "SEC Filing", url: "https://www.sec.gov/Archives/edgar/data/1824920/000119312521109819/d17191d425.htm" }
+    ]
+  },
 };
