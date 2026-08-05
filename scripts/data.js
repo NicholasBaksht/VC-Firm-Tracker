@@ -5520,6 +5520,41 @@ sources: [
       { label: "CrossBoundary Group", url: "https://crossboundary.com/crossboundary-group/" }
     ]
   },
+   "zachariah-george": {
+    name: "Zachariah George",
+    firm: "Launch Africa Ventures",
+    firmSlug: "launch-africa-ventures",
+    title: "Co-Founder & Managing Partner",
+    joinedYear: 2020,
+    education: [],
+    previousExperience: [
+      "M&A, Lehman Brothers",
+      "M&A, Barclays (nearly a decade on Wall Street)",
+      "Founder, Tech Lab Africa accelerator (with Barclays, later sold to Techstars)",
+      "Co-Founder & Chief Investment Officer, Startupbootcamp AfriTech",
+      "Angel Investor (50+ African startups, including Flutterwave, KudaBank, Mono, Yoco)"
+    ],
+    investmentFocus: ["Fintech", "Healthtech", "Agritech", "Logistics", "Edtech"],
+    notableInvestments: [
+      { name: "Kuda", ticker: null },
+      { name: "Bitmama", ticker: null },
+      { name: "Mano", ticker: null }
+    ],
+    boardSeats: [],
+    ipoCount: 0,
+    majorExits: 0,
+    careerTimeline: [
+      { year: "2010", event: "Moves to South Africa during the World Cup after nearly a decade in Wall Street M&A at Lehman Brothers and Barclays, and stays after spotting a gap in the continent's tech ecosystem." },
+      { year: "2010s", event: "Builds the Tech Lab Africa accelerator with Barclays (later sold to Techstars) and co-founds Startupbootcamp AfriTech, becoming an active angel investor in more than 50 African startups." },
+      { year: "2020", event: "Co-founds Launch Africa Ventures with Janade du Plessis, raising an oversubscribed $36 million debut fund from 238 investors across 40 countries." },
+      { year: "2026", event: "Launch Africa completes 15 new investments in the first half of the year, growing its portfolio past 180 startups across 25 countries." }
+    ],
+    biography: "Zachariah George spent nearly a decade in Wall Street M&A at Lehman Brothers and Barclays before a trip to South Africa for the 2010 World Cup turned into a permanent relocation once he recognized how underdeveloped the continent's tech ecosystem was. He built the Tech Lab Africa accelerator with Barclays, later sold to Techstars, and co-founded Startupbootcamp AfriTech, becoming an active angel investor with stakes in more than 50 African startups including Flutterwave, KudaBank, Mono, and Yoco along the way. Recognizing a persistent funding gap for companies emerging from accelerators at the pre-Series A stage, he co-founded Launch Africa Ventures in 2020 with Janade du Plessis, then head of venture capital at Nedbank, raising an oversubscribed $36 million debut fund from 238 retail and institutional investors across 40 countries — notably without a single development finance institution among them. George has since grown Launch Africa into the continent's most active early-stage VC fund, backing more than 180 startups across 25 countries, and has been featured on the covers of Fast Company, Destiny Man, and Forbes.",
+    sources: [
+      { label: "Disrupt Africa", url: "https://disruptafrica.com/2024/11/26/meet-the-investor-zachariah-george-launch-africa-ventures/" },
+      { label: "Launch Africa Ventures", url: "https://www.launchafrica.vc" }
+    ]
+  },
 };
 
 // ============================================================
@@ -5701,7 +5736,8 @@ const firmStages = {
    "novastar-ventures": ["Seed", "Series A", "Series B"],
    "enza-capital": ["Pre-Seed", "Seed", "Series A", "Series B"],
    "kawisafi-ventures": ["Series A", "Series B", "Growth"],
-   "crossboundary": ["Growth", "Late Stage"]
+   "crossboundary": ["Growth", "Late Stage"],
+   "launch-africa-ventures": ["Seed", "Series A"]
 };
 
 // ============================================================
@@ -8975,6 +9011,29 @@ const firms = [
       { year: "2011", event: "Jake Cusack and Matt Tilleard found CrossBoundary." },
       { year: "2010s", event: "Expands into Sub-Saharan Africa, building out advisory, energy, and mini-grid financing businesses." },
       { year: "2020s", event: "Launches the Mini-Grid Innovation Lab, Africa's first R&D fund focused on mini-grid business model innovation." }
+    ],
+    holdings: []
+  },
+   {
+    rank: 80,
+    name: "Launch Africa Ventures",
+    sectors: ["Fintech", "Healthcare", "Climate", "Edtech"],
+    signatureExit: "No confirmed exit yet — Launch Africa's scale is the story instead: 180-plus startups backed across 25 African countries, funded by 400-plus limited partners, making it the continent's most active early-stage VC fund",
+    slug: "launch-africa-ventures",
+    website: "https://www.launchafrica.vc",
+    short: "Launch Africa Ventures",
+    founded: 2020,
+    hq: "Port Louis, Mauritius",
+    aum: "$64M (across funds; debut fund closed at $36M)",
+    thesis: "Launch Africa Ventures was co-founded in 2020 by Zachariah George, a former Wall Street M&A banker turned prolific African angel investor, and Janade du Plessis, then head of venture capital at Nedbank, after both recognized a persistent funding gap facing startups graduating from accelerators at the pre-seed and pre-Series A stage. The firm's debut fund closed oversubscribed at $36 million within 18 months, drawing from 238 retail and institutional investors across 40 countries — notably without a single development finance institution among them, an unusual capital structure for African venture funds. That high-touch, high-scale approach has made Launch Africa the continent's most active early-stage VC fund, backing more than 180 startups across 25 countries including Kuda, Bitmama, and Mano, supported by a network of more than 400 limited partners.",
+    leadership: [
+      { name: "Zachariah George", role: "Co-Founder & Managing Partner", profileSlug: "zachariah-george" },
+      { name: "Janade du Plessis", role: "Co-Founder & Managing Partner" }
+    ],
+    timeline: [
+      { year: "2020", event: "Zachariah George and Janade du Plessis found Launch Africa Ventures, headquartered in Mauritius." },
+      { year: "2022", event: "Closes its first fund oversubscribed at $36 million in March." },
+      { year: "2026", event: "Completes 15 new investments in the first half of the year, growing its portfolio past 180 startups across 25 countries." }
     ],
     holdings: []
   },
