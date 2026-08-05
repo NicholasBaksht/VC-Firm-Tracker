@@ -7682,6 +7682,33 @@ const firms = [
     ]
   },
    {
+    rank: 37,
+    name: "Nexus Venture Partners",
+    sectors: ["Enterprise Software", "AI", "Fintech", "Consumer"],
+    signatureExit: "Delhivery's 2022 IPO on India's NSE and BSE exchanges — one of Nexus's earliest and largest India-based portfolio bets, backed years before it became India's leading logistics company",
+    slug: "nexus-venture-partners",
+    website: "https://nexusvp.com",
+    short: "Nexus Venture Partners",
+    founded: 2006,
+    hq: "Menlo Park, CA",
+    aum: "$2.6B+",
+    thesis: "Nexus Venture Partners was founded in 2006 by Suvir Sujan, Naren Gupta, and Sandeep Singhal, building one of the first true India-US cross-border venture capital platforms at a time when the two ecosystems were rarely connected by a single institutional investor. The firm runs what it calls a 'one fund, one team' model, with genuinely integrated operating and investing experience across Menlo Park, Mumbai, and Bengaluru, rather than treating India as a satellite market for a US-based fund. That structure has let Nexus back enterprise software and AI companies targeting US markets alongside consumer internet and fintech companies built specifically for India, resulting in a portfolio spanning Postman, Delhivery, Druva, and Unacademy. The firm closed its largest-ever fund at $700 million in 2023 and has grown to approximately $2.6 billion in total assets under management.",
+    leadership: [
+      { name: "Sandeep Singhal", role: "Co-Founder", profileSlug: "sandeep-singhal" },
+      { name: "Suvir Sujan", role: "Co-Founder & Managing Director" }
+    ],
+    timeline: [
+      { year: "2006", event: "Suvir Sujan, Naren Gupta, and Sandeep Singhal found Nexus Venture Partners." },
+      { year: "2021", event: "Sandeep Singhal transitions from General Partner to Senior Advisor after growing AUM to $1.5 billion." },
+      { year: "2022", event: "Delhivery completes its IPO on Indian stock exchanges." },
+      { year: "2023", event: "Closes its largest-ever fund at $700 million." },
+      { year: "2026", event: "Closes Nexus Ventures VIII, an eighth fund with a $700 million corpus focused on AI, enterprise technology, consumer, and fintech." }
+    ],
+    holdings: [
+      { name: "Delhivery", ticker: "DELHIVERY.NS", historicalPrice: null, price: null }
+    ]
+  },
+   {
     rank: 35,
     name: "Helios Investment Partners",
     sectors: ["Fintech", "Enterprise Software", "Climate", "Mobility"],
