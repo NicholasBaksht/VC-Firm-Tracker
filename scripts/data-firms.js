@@ -831,6 +831,31 @@ const firms = [
       { name: "Chime", ticker: "CHYM", historicalPrice: null, price: null }
     ]
   },
+  {
+    rank: 50,
+    name: "Cowboy Ventures",
+    sectors: ["Consumer", "Fintech", "Enterprise Software"],
+    signatureExit: "Dollar Shave Club's approximately $1 billion acquisition by Unilever in 2016 — an early Cowboy Ventures investment, and one of the deals that shaped Aileen Lee's broader 'unicorn' framework",
+    slug: "cowboy-ventures",
+    website: "https://cowboy.vc",
+    short: "Cowboy Ventures",
+    founded: 2012,
+    hq: "Palo Alto, CA",
+    aum: "$260M (Fund IV $140M + Mustang I $120M, 2023)",
+    thesis: "Cowboy Ventures was founded in 2012 by Aileen Lee, who left Kleiner Perkins after 13 years to build one of the first venture firms founded by a woman, with Kleiner itself becoming her anchor investor. A year into running the firm, Lee coined the term 'unicorn' in a widely-cited TechCrunch article analyzing billion-dollar startups, a framework that has since become permanent industry vocabulary — though Lee has been candid that the term captures a point-in-time valuation, not durable success. Cowboy invests almost exclusively at seed, deliberately keeping fund sizes small to target top-quartile returns without requiring portfolio companies to reach outsized valuations, with a genuine, structural commitment to backing diverse and 'included' founders — roughly half of Cowboy's investments have included a female founder. The firm's early conviction in Dollar Shave Club, whose founder Lee praised for having 'such a clear brand voice' despite minimal capital, culminated in Unilever's roughly $1 billion acquisition in 2016.",
+    leadership: [
+      { name: "Aileen Lee", role: "Founder & Managing Partner", profileSlug: "aileen-lee" },
+      { name: "Caroline Duffy", role: "Partner" }
+    ],
+    timeline: [
+      { year: "2012", event: "Aileen Lee founds Cowboy Ventures in Palo Alto." },
+      { year: "2013", event: "Lee coins the term 'unicorn' in a November TechCrunch article." },
+      { year: "2016", event: "Dollar Shave Club is acquired by Unilever for approximately $1 billion." },
+      { year: "2018", event: "Closes Fund III at $95 million." },
+      { year: "2023", event: "Closes $260 million across two new funds: Fund IV ($140M) and Mustang I ($120M)." }
+    ],
+    holdings: []
+  },
    {
     rank: 43,
     name: "Pear VC",
