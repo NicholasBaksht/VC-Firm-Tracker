@@ -5135,6 +5135,35 @@ const firms = [
     ],
     holdings: []
   },
+  {
+    rank: 15,
+    name: "DCM Ventures",
+    sectors: ["Fintech", "Consumer", "Enterprise Software", "AI"],
+    signatureExit: "Musical.ly's acquisition by ByteDance in 2017, later merged into TikTok — an early DCM bet on short-form video years before the category became a cultural phenomenon, alongside seven IPOs since 2019 including Bill.com, Life360, and Sansan",
+    slug: "dcm-ventures",
+    website: "https://www.dcm.com",
+    short: "DCM Ventures",
+    founded: 1996,
+    hq: "Menlo Park, CA",
+    aum: "$4.5B",
+    thesis: "DCM Ventures was founded in 1996 as Doll Capital Management by Dixon Doll, a former Accel Partners investor who'd launched the industry's first telecom-focused fund, and David Chao, whose background spanned Apple Computer and McKinsey & Company. The two shared a genuinely early conviction that transformative technology companies wouldn't stay confined to Silicon Valley, making DCM the first American venture firm to invest in early-stage technology companies in China in 1999, followed by expansion into Japan, South Korea, and Southeast Asia — years before cross-border investing became standard practice. That geographic thesis, paired with an evolution from early bets on semiconductors and communications technology toward consumer internet, fintech, and SaaS, produced Musical.ly (later merged into TikTok), Bill.com, SoFi, Kuaishou, and Hims & Hers Health among more than 700 companies backed. DCM now manages $4.5 billion across ten funds, with seven completed IPOs since 2019 alone and 84 total exits across its history.",
+    leadership: [
+      { name: "David Chao", role: "Co-Founder & General Partner" },
+      { name: "Dixon Doll", role: "Co-Founder & Partner Emeritus", profileSlug: "dixon-doll" },
+      { name: "Jason Krikorian", role: "General Partner" }
+    ],
+    timeline: [
+      { year: "1996", event: "Dixon Doll and David Chao found Doll Capital Management (later DCM Ventures) in Menlo Park." },
+      { year: "1999", event: "Becomes the first Silicon Valley firm to invest in early-stage technology in China." },
+      { year: "2017", event: "Musical.ly is acquired by ByteDance, later merging into TikTok." },
+      { year: "2019", event: "Bill.com completes its NYSE IPO." },
+      { year: "2024", event: "AUM reaches $4.5 billion across ten funds, with seven IPOs since 2019 and 84 total exits." }
+    ],
+    holdings: [
+      { name: "Bill.com", ticker: "BILL", historicalPrice: null, price: null },
+      { name: "SoFi", ticker: "SOFI", historicalPrice: null, price: null }
+    ]
+  },
    {
     rank: 84,
     name: "Gradient Ventures",
