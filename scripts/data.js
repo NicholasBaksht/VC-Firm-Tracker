@@ -7669,6 +7669,37 @@ const firms = [
       { name: "Netflix", ticker: "NFLX", historicalPrice: null, price: null }
     ]
   },
+{
+    rank: 21,
+    name: "RRE Ventures",
+    sectors: ["Enterprise Software", "Fintech", "Consumer", "AI", "Healthcare"],
+    signatureExit: "Braintree's $800 million acquisition by PayPal in October 2013 — RRE was an early investor in the payments company years before its exit",
+    slug: "rre-ventures",
+    website: "https://rre.com",
+    short: "RRE Ventures",
+    founded: 1994,
+    hq: "New York, NY",
+    aum: "$2.5B+ (across 10 funds)",
+    thesis: "RRE Ventures was founded in 1994 by James D. Robinson IV and Stuart Ellman, at a time New York City was, in Robinson's own words, still 'a small town for venture capital' — deals were scarce enough that the founders regularly had to fly to the West Coast to find them, and RRE kept a San Francisco office through the dot-com era before eventually consolidating fully in New York. That early, patient bet on New York as a genuine technology hub has compounded over three decades: RRE has invested in more than 400 companies and served on nearly 50 boards, building one of the city's oldest and largest venture firms with a portfolio spanning fintech, enterprise software, consumer, AI, media, space, and robotics. The firm's data-driven approach to identifying what it calls 'rare founders' produced early bets on Braintree, BuzzFeed, Bark, and BlackSky, and RRE now manages more than $2.5 billion across 10 funds.",
+    leadership: [
+      { name: "James D. Robinson IV", role: "Co-Founder & Managing Partner", profileSlug: "james-robinson-iv" },
+      { name: "Stuart Ellman", role: "Co-Founder & Managing Partner" },
+      { name: "Will Porteous", role: "General Partner & COO" },
+      { name: "Raju Rishi", role: "General Partner" }
+    ],
+    timeline: [
+      { year: "1994", event: "James D. Robinson IV and Stuart Ellman found RRE Ventures in New York." },
+      { year: "2000", event: "Consolidates fully in New York as the dot-com bubble bursts, having kept a San Francisco office through the 1990s." },
+      { year: "2013", event: "Braintree, an early RRE investment, is acquired by PayPal for $800 million." },
+      { year: "2021", event: "BuzzFeed goes public via SPAC merger under ticker BZFD." },
+      { year: "2023", event: "AUM surpasses $2.5 billion across 10 funds and 400-plus portfolio companies." }
+    ],
+    holdings: [
+      { name: "Bark", ticker: "BARK", historicalPrice: null, price: null },
+      { name: "BlackSky", ticker: "BKSY", historicalPrice: null, price: null },
+      { name: "BuzzFeed", ticker: "BZFD", historicalPrice: null, price: null }
+    ]
+  },
    {
     rank: 34,
     name: "Northzone",
