@@ -5007,6 +5007,30 @@ const firms = [
     ],
     holdings: []
   },
+  {
+    rank: 28,
+    name: "Antler",
+    sectors: ["Consumer", "Enterprise Software", "Fintech", "AI"],
+    signatureExit: "No traditional exit yet — Antler's model is building companies from Day Zero rather than harvesting existing ones, and its clearest proof points are two current unicorns: Airalo (eSIM marketplace) and Lovable (Swedish AI coding platform, valued at $6.6 billion)",
+    slug: "antler",
+    website: "https://www.antler.co",
+    short: "Antler",
+    founded: 2017,
+    hq: "Singapore",
+    aum: "$1B",
+    thesis: "Antler was founded in Singapore in 2017 by Magnus Grimeland and Fridtjof Berge, both alumni of Zalora, the Southeast Asian fashion e-commerce platform that became an unlikely training ground for founders including Gojek's Kevin Aluwi and Nadiem Makarim. Antler's defining innovation is its 'Day Zero' model: rather than investing in existing startups, the firm runs structured residency programs that back exceptional individuals before they even have a co-founder, team, or product, providing up to $400,000 in initial capital alongside a global mentor network. That radically early, high-volume approach — drawing more than 120,000 annual applications for roughly 2,000 residency spots across 27 countries — has made Antler the world's most active early-stage venture firm by deal volume, topping PitchBook's Global League Table with 443 deals in 2024. The firm has backed more than 1,800 startups since inception, including unicorns Airalo and Lovable, and manages approximately $1 billion including its $285 million Antler Elevate growth fund for follow-on rounds.",
+    leadership: [
+      { name: "Magnus Grimeland", role: "Founder & CEO", profileSlug: "magnus-grimeland" },
+      { name: "Fridtjof Berge", role: "Co-Founder & Chief Business Officer" }
+    ],
+    timeline: [
+      { year: "2017", event: "Magnus Grimeland and Fridtjof Berge found Antler in Singapore." },
+      { year: "2018", event: "Runs its first residency program in Singapore." },
+      { year: "2020", event: "Launches Antler Elevate, a $285 million growth fund for follow-on investment." },
+      { year: "2024", event: "Tops PitchBook's Most Active Venture Capital Globally league table with 443 deals; Airalo and Lovable both reach unicorn status." }
+    ],
+    holdings: []
+  },
    {
     rank: 84,
     name: "Gradient Ventures",
