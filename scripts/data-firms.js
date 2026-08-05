@@ -856,6 +856,32 @@ const firms = [
     ],
     holdings: []
   },
+  {
+    rank: 51,
+    name: "Zetta Venture Partners",
+    sectors: ["AI", "Enterprise Software", "Developer Tools"],
+    signatureExit: "No confirmed exit yet for Zetta's own portfolio — founder Mark Gorenberg's prior 20-year track record at Hummer Winblad includes real, verified exits at Omniture (Adobe), AdForce (CMGI), NetDynamics (Sun Microsystems), and Scopus Technologies (Siebel)",
+    slug: "zetta-venture-partners",
+    website: "https://www.zettavp.com",
+    short: "Zetta Venture Partners",
+    founded: 2013,
+    hq: "San Francisco, CA",
+    aum: "$365M (across funds)",
+    thesis: "Zetta Venture Partners was founded in 2013 by Mark Gorenberg, after roughly two decades as Managing Director at Hummer Winblad Venture Partners, positioning Zetta as the first venture fund dedicated exclusively to AI-native startups — companies where machine intelligence is the core operating engine, not a feature layered onto an existing SaaS product. Co-founder Jocelyn Goldfein, a former VP of Engineering at VMware and Director of Engineering at Facebook, adds genuine technical operating depth to Gorenberg's investing pattern-recognition, and the firm's technical bench includes multiple PhDs in computational fields who help evaluate deals most generalist investors can't properly assess. Zetta targets three structural layers of the AI stack — applications automating complex human tasks, infrastructure supporting model training and data pipelines, and developer tools accelerating AI-first software construction — typically leading or co-leading pre-seed and seed rounds under $5 million, with $365 million raised across its funds since inception.",
+    leadership: [
+      { name: "Mark Gorenberg", role: "Founder & Managing Director", profileSlug: "mark-gorenberg" },
+      { name: "Jocelyn Goldfein", role: "Managing Director" },
+      { name: "Apoorva Pandhi", role: "Managing Director" }
+    ],
+    timeline: [
+      { year: "2013", event: "Mark Gorenberg founds Zetta Venture Partners, the first fund dedicated exclusively to AI." },
+      { year: "2015", event: "Closes a $100 million first fund." },
+      { year: "2016", event: "Jocelyn Goldfein joins as Managing Director." },
+      { year: "2018", event: "Closes a $165 million second fund." },
+      { year: "2021", event: "Total capital raised reaches $265 million." }
+    ],
+    holdings: []
+  },
    {
     rank: 43,
     name: "Pear VC",
