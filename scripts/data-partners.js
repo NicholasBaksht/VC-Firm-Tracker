@@ -6256,4 +6256,37 @@ sources: [
       { label: "MIT Technology Review", url: "https://alum.mit.edu/slice/helping-startups-become-unicorns-and-women-become-vcs" }
     ]
   },
+  "mark-gorenberg": {
+    name: "Mark Gorenberg",
+    firm: "Zetta Venture Partners",
+    firmSlug: "zetta-venture-partners",
+    title: "Founder & Managing Director",
+    joinedYear: 2013,
+    education: ["BS, MIT (1976)", "MS, Electrical Engineering, University of Minnesota (1979)", "MS, Engineering Management, Stanford University (1984)"],
+    previousExperience: [
+      "Member, original SPARCstation 1 team, Sun Microsystems",
+      "Managing Director, Hummer Winblad Venture Partners (1990-2010, ~20 years)"
+    ],
+    investmentFocus: ["AI", "Machine Learning", "Enterprise Software", "Developer Tools"],
+    notableInvestments: [
+      { name: "Domino Data Lab", ticker: null },
+      { name: "Domo", ticker: "DOMO" },
+      { name: "Omniture", ticker: null }
+    ],
+    boardSeats: ["Domino Data Lab", "Domo", "Eventboard"],
+    ipoCount: 5,
+    majorExits: 8,
+    careerTimeline: [
+      { year: "1976", event: "Earns a BS from MIT, later joining the original SPARCstation 1 team at Sun Microsystems." },
+      { year: "1990", event: "Joins Hummer Winblad Venture Partners shortly after its founding by John Hummer and Ann Winblad, investing out of its first fund." },
+      { year: "2011", event: "Appointed by President Obama to the President's Council of Advisors on Science and Technology (PCAST)." },
+      { year: "2013", event: "Leaves Hummer Winblad after roughly 20 years to found Zetta Venture Partners, the first venture fund dedicated exclusively to AI." },
+      { year: "2015", event: "Closes Zetta's first fund at $100 million." }
+    ],
+    biography: "Mark Gorenberg spent three decades in venture capital before founding Zetta, joining Hummer Winblad Venture Partners in 1990 shortly after its founding and spending roughly 20 years there as Managing Director, serving on the boards of Omniture, AdForce, NetDynamics, and Scopus Technologies through IPOs and acquisitions by Adobe, CMGI, Sun Microsystems, and Siebel respectively. He left in 2013 to found Zetta Venture Partners, deliberately positioning it as the first venture fund investing exclusively in AI-native startups, years before the category became mainstream. Gorenberg brings a genuinely technical foundation to that specialization — he was a member of the original SPARCstation 1 team at Sun Microsystems before moving into venture — and beyond investing, he chairs the MIT Corporation's board of trustees and was appointed by President Obama to the President's Council of Advisors on Science and Technology in 2011.",
+    sources: [
+      { label: "Wikipedia — Mark Gorenberg", url: "https://en.wikipedia.org/wiki/Mark_Gorenberg" },
+      { label: "Zetta Venture Partners — Mark Gorenberg", url: "https://www.zettavp.com/team/mark-gorenberg" }
+    ]
+  },
 };
