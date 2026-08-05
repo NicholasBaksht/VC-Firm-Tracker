@@ -6084,4 +6084,39 @@ sources: [
       { label: "iHeart Podcast", url: "https://www.iheart.com/podcast/356-array-podcast-28107740/episode/rory-odriscoll-founder-of-scale-venture-49892844/" }
     ]
   },
+  "bill-bowes": {
+    name: "Bill Bowes",
+    firm: "U.S. Venture Partners",
+    firmSlug: "us-venture-partners",
+    title: "Co-Founder",
+    joinedYear: 1981,
+    education: ["BA, Economics, Stanford University", "MBA, Harvard University"],
+    previousExperience: [
+      "Investment Banker, Blyth & Co.",
+      "Board Member, Cetus Corporation (1972-1978)",
+      "Board Member, Raychem (1961-late 1970s)",
+      "Founding Shareholder, First Treasurer & Chairman, Amgen"
+    ],
+    investmentFocus: ["Enterprise Software", "Healthcare", "Biotechnology"],
+    notableInvestments: [
+      { name: "Check Point Software", ticker: "CHKP" },
+      { name: "SanDisk", ticker: null },
+      { name: "Ross Stores", ticker: "ROST" }
+    ],
+    boardSeats: [],
+    ipoCount: 5,
+    majorExits: 10,
+    careerTimeline: [
+      { year: "1961", event: "Joins the board of Raychem, serving until the late 1970s." },
+      { year: "1972", event: "Joins the board of Cetus Corporation, a pioneering biotechnology company." },
+      { year: "1980", event: "Becomes founding shareholder, first Treasurer, and Chairman of Amgen." },
+      { year: "1981", event: "Co-founds U.S. Venture Partners with Stuart Moldaw and Robert Sackman." },
+      { year: "2016", event: "Passes away on December 28, leaving behind a legacy as one of Silicon Valley's foundational biotech and venture figures." }
+    ],
+    biography: "Bill Bowes built a career at the very origins of both Silicon Valley venture capital and the modern biotechnology industry, joining the boards of Raychem and Cetus Corporation years before co-founding U.S. Venture Partners in 1981 with Stuart Moldaw and Robert Sackman. His most historically significant contribution came outside USVP entirely: Bowes was a founding shareholder and served as Amgen's first Treasurer and Chairman, helping build what became one of the world's largest biotechnology companies from its earliest days. At USVP, that same conviction in scientific and technical founders helped establish the firm as one of the longest-running and most successful early-stage investors in Silicon Valley history, backing more than 500 companies across four decades with 93-plus completed IPOs, spanning Check Point Software, SanDisk, Ross Stores, and Yammer. Bowes passed away in December 2016, leaving a legacy as one of the foundational figures connecting Silicon Valley's venture capital and biotechnology industries.",
+    sources: [
+      { label: "Wikipedia — Bill Bowes", url: "https://en.wikipedia.org/wiki/Bill_Bowes_(venture_capitalist)" },
+      { label: "Wikipedia — U.S. Venture Partners", url: "https://en.wikipedia.org/wiki/U.S._Venture_Partners" }
+    ]
+  },
 };
