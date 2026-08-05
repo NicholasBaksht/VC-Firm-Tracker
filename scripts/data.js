@@ -5760,6 +5760,38 @@ sources: [
       { label: "Wikipedia — Joe Lonsdale", url: "https://en.wikipedia.org/wiki/Joe_Lonsdale" }
     ]
   },
+   "kevin-colleran": {
+    name: "Kevin Colleran",
+    firm: "Slow Ventures",
+    firmSlug: "slow-ventures",
+    title: "Co-Founder & Managing Director",
+    joinedYear: 2009,
+    education: [],
+    previousExperience: [
+      "One of Facebook's first 10 employees, built its global sales strategy (2005-2011)"
+    ],
+    investmentFocus: ["Consumer", "Crypto", "Social Media", "Fintech"],
+    notableInvestments: [
+      { name: "Coinbase", ticker: "COIN" },
+      { name: "PagerDuty", ticker: "PD" },
+      { name: "BuzzFeed", ticker: "BZFD" }
+    ],
+    boardSeats: [],
+    ipoCount: 3,
+    majorExits: 4,
+    careerTimeline: [
+      { year: "2005", event: "Joins Facebook as one of its first 10 employees, helping build the company's global sales strategy." },
+      { year: "2009", event: "Co-founds Slow Ventures with Dave Morin, initially pooling personal angel investments alongside other early Facebook executives." },
+      { year: "2011", event: "Leaves Facebook and formalizes Slow Ventures into an institutional venture firm, later joined by Sam Lessin as partner." },
+      { year: "2014", event: "Leads an early investment in Coinbase." },
+      { year: "2018", event: "PillPack, a Slow Ventures investment, is acquired by Amazon for $753 million." }
+    ],
+    biography: "Kevin Colleran was one of Facebook's first 10 employees, helping build the company's global sales strategy in its earliest years before leaving in 2011. He co-founded Slow Ventures with fellow early Facebook executive Dave Morin in 2009, initially as an informal way to pool personal angel investments alongside other Facebook alumni, before formalizing it into an institutional venture firm. That founding network of tech operators shaped Slow's distinctive limited-partner base — more than 100 technology founders, CEOs, and executives who commit to actively helping portfolio companies, not just university endowments and foundations. Colleran led Slow's early conviction bet on Coinbase years before its public listing, and the firm's patient, founder-first philosophy produced PillPack, which Amazon acquired for $753 million in 2018, alongside investments in Pinterest, Slack, and Postmates.",
+    sources: [
+      { label: "TechCrunch", url: "https://techcrunch.com/2015/11/02/slow-ventures-get-a-new-partner/" },
+      { label: "Slow Ventures — About", url: "https://slow.co/about/" }
+    ]
+  },
 };
 
 // ============================================================
@@ -5948,7 +5980,8 @@ const firmStages = {
    "500-global": ["Pre-Seed", "Seed", "Series A"],
    "in-q-tel": ["Seed", "Series A", "Growth"],
    "rre-ventures": ["Seed", "Series A", "Series B", "Growth"],
-   "8vc": ["Seed", "Series A", "Series B", "Growth"]
+   "8vc": ["Seed", "Series A", "Series B", "Growth"],
+   "slow-ventures": ["Pre-Seed", "Seed", "Series A"]
 };
 
 // ============================================================
@@ -6569,6 +6602,36 @@ const firms = [
       { name: "Wish", ticker: "WISH", historicalPrice: null, price: null },
       { name: "Blend", ticker: "BLND", historicalPrice: null, price: null },
       { name: "Joby Aviation", ticker: "JOBY", historicalPrice: null, price: null }
+    ]
+  },
+   {
+    rank: 40,
+    name: "Slow Ventures",
+    sectors: ["Consumer", "Fintech", "Enterprise Software", "Crypto", "Healthcare"],
+    signatureExit: "PillPack's $753 million acquisition by Amazon in September 2018 — Kevin Colleran was an early investor in the online pharmacy",
+    slug: "slow-ventures",
+    website: "https://www.slow.co",
+    short: "Slow Ventures",
+    founded: 2009,
+    hq: "San Francisco, CA",
+    aum: "$800M+ deployed (since inception)",
+    thesis: "Slow Ventures began in 2009 when Kevin Colleran and Dave Morin, both early Facebook employees, started informally pooling personal angel investments alongside other Facebook alumni, before formalizing the effort into an institutional venture firm by 2011. That origin shaped a genuinely distinctive limited-partner structure that persists today: more than 100 technology founders, CEOs, and executives, not just endowments and foundations, who actively help source deals and support portfolio companies rather than passively writing checks. The firm's deliberately patient, founder-first philosophy — reflected in its name — has produced early conviction bets across consumer, fintech, crypto, and healthcare, including Coinbase, Robinhood, PillPack, Airtable, and Solana, with more than $800 million deployed since inception across pre-seed through Series A.",
+    leadership: [
+      { name: "Kevin Colleran", role: "Co-Founder & Managing Director", profileSlug: "kevin-colleran" },
+      { name: "Sam Lessin", role: "General Partner" },
+      { name: "Will Quist", role: "Partner" }
+    ],
+    timeline: [
+      { year: "2009", event: "Kevin Colleran and Dave Morin found Slow Ventures, initially pooling personal angel investments." },
+      { year: "2011", event: "Formalizes into an institutional venture firm." },
+      { year: "2015", event: "Sam Lessin joins as partner." },
+      { year: "2018", event: "PillPack is acquired by Amazon for $753 million." },
+      { year: "2020", event: "PagerDuty completes its NYSE IPO." }
+    ],
+    holdings: [
+      { name: "Coinbase", ticker: "COIN", historicalPrice: null, price: null },
+      { name: "PagerDuty", ticker: "PD", historicalPrice: null, price: null },
+      { name: "BuzzFeed", ticker: "BZFD", historicalPrice: null, price: null }
     ]
   },
    {
