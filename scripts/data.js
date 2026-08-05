@@ -5555,6 +5555,37 @@ sources: [
       { label: "Launch Africa Ventures", url: "https://www.launchafrica.vc" }
     ]
   },
+   "kathryn-gould": {
+    name: "Kathryn Gould",
+    firm: "Foundation Capital",
+    firmSlug: "foundation-capital",
+    title: "Co-Founder",
+    joinedYear: 1995,
+    education: [],
+    previousExperience: [
+      "General Partner, Merrill Pickard Anderson & Eyre",
+      "One of the first prominent female venture capitalists in Silicon Valley"
+    ],
+    investmentFocus: ["Enterprise Software", "Fintech", "Consumer Internet"],
+    notableInvestments: [
+      { name: "Netflix", ticker: "NFLX" },
+      { name: "LendingClub", ticker: "LC" }
+    ],
+    boardSeats: [],
+    ipoCount: 26,
+    majorExits: 120,
+    careerTimeline: [
+      { year: "1980s", event: "Builds an early venture career at Merrill Pickard Anderson & Eyre, becoming one of the first prominent women in Silicon Valley venture capital." },
+      { year: "1995", event: "Co-founds Foundation Capital with Bill Elmore and Jim Anderson in Palo Alto, in October." },
+      { year: "1990s", event: "Foundation Capital becomes one of Netflix's original investors, years before its public listing." },
+      { year: "2014", event: "LendingClub, another Foundation-backed company, completes its NYSE IPO." }
+    ],
+    biography: "Kathryn Gould built her venture career at Merrill Pickard Anderson & Eyre, becoming one of the first prominent women in Silicon Valley venture capital at a time when the industry was almost entirely male. She co-founded Foundation Capital with Bill Elmore and Jim Anderson in October 1995, built around a distinctive philosophy the firm still describes as seeking out 'zero-billion-dollar markets' — emerging categories that don't yet exist until a visionary founder creates them. That approach made Foundation one of Netflix's original investors years before its public listing, and the firm has gone on to back more than 400 companies including LendingClub, Chegg, Sunrun, and Uber, with 26 IPOs and more than 80 acquisitions across three decades.",
+    sources: [
+      { label: "Wikipedia — Foundation Capital", url: "https://en.wikipedia.org/wiki/Foundation_Capital" },
+      { label: "Foundation Capital", url: "https://foundationcapital.com" }
+    ]
+  },
 };
 
 // ============================================================
@@ -5737,7 +5768,8 @@ const firmStages = {
    "enza-capital": ["Pre-Seed", "Seed", "Series A", "Series B"],
    "kawisafi-ventures": ["Series A", "Series B", "Growth"],
    "crossboundary": ["Growth", "Late Stage"],
-   "launch-africa-ventures": ["Seed", "Series A"]
+   "launch-africa-ventures": ["Seed", "Series A"],
+   "foundation-capital": ["Seed", "Series A", "Growth"]
 };
 
 // ============================================================
