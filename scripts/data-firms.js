@@ -4907,6 +4907,31 @@ const firms = [
     ],
     holdings: []
   },
+  {
+    rank: 25,
+    name: "Dawn Capital",
+    sectors: ["Enterprise Software", "Fintech", "Cybersecurity", "AI"],
+    signatureExit: "iZettle's $2.2 billion acquisition by PayPal in 2018 and Tink's approximately $2 billion acquisition by Visa in 2021 — together Europe's second and third largest fintech M&A exits ever, with Dawn the only investor in both",
+    slug: "dawn-capital",
+    website: "https://www.dawncapital.com",
+    short: "Dawn Capital",
+    founded: 2007,
+    hq: "London, UK",
+    aum: "$2.0B (total commitments)",
+    thesis: "Dawn Capital was founded in 2006/2007 by Norman Fiore and Haakon Overli, joined early by Josh Bell as founding team, building what has become Europe's leading specialist B2B software investor. The firm concentrates deliberately on four themes — the future of work, data and analytics, security and privacy, and fintech — backing category-defining European software companies from Series A through growth rounds to exit, rather than spreading generalist bets across the continent. That focus produced an extraordinary concentration of outcomes: Dawn was the only investor in both iZettle (acquired by PayPal for $2.2 billion) and Tink (acquired by Visa for approximately $2 billion), Europe's second and third largest fintech M&A exits in history, alongside Mimecast's NASDAQ listing (later taken private by Permira in a $5.8 billion deal). Dawn has backed more than 85 software companies across 14 European countries, including eight unicorns, with $2 billion in total commitments across five flagship funds.",
+    leadership: [
+      { name: "Norman Fiore", role: "Co-Founder & General Partner" },
+      { name: "Haakon Overli", role: "Co-Founder & General Partner" },
+      { name: "Josh Bell", role: "General Partner", profileSlug: "josh-bell" }
+    ],
+    timeline: [
+      { year: "2006", event: "Norman Fiore, Haakon Overli, and Josh Bell found Dawn Capital in London." },
+      { year: "2018", event: "iZettle is acquired by PayPal for $2.2 billion." },
+      { year: "2021", event: "Tink is acquired by Visa for approximately $2 billion; closes $520 million across two funds." },
+      { year: "2022", event: "Mimecast is taken private by Permira in a $5.8 billion transaction." }
+    ],
+    holdings: []
+  },
    {
     rank: 84,
     name: "Gradient Ventures",
