@@ -267,7 +267,8 @@ const firmStages = {
    "us-venture-partners": ["Pre-Seed", "Seed", "Series A", "Series B"],
    "canvas-prime": ["Series A", "Series B"],
    "revolution-ventures": ["Seed", "Series A", "Series B"],
-   "homebrew": ["Pre-Seed", "Seed"]
+   "homebrew": ["Pre-Seed", "Seed"],
+   "cowboy-ventures": ["Seed", "Series A"]
 };
 
 // ============================================================
