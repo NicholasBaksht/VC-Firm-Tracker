@@ -4932,6 +4932,31 @@ const firms = [
     ],
     holdings: []
   },
+  {
+    rank: 26,
+    name: "Notion Capital",
+    sectors: ["Enterprise Software", "Fintech", "AI"],
+    signatureExit: "Currencycloud's acquisition by Visa in 2021 — Notion was an early investor in the cross-border payments platform, one of the firm's clearest proof points alongside continued backing of GoCardless",
+    slug: "notion-capital",
+    website: "https://www.notioncapital.com",
+    short: "Notion Capital",
+    founded: 2008,
+    hq: "London, UK",
+    aum: "$1B+",
+    thesis: "Notion Capital was founded in October 2008 by brothers Ben and Jos White, alongside fellow MessageLabs executives Stephen Chandler, Chris Tottman, and Ian Milbourn, funded with roughly £20 million of their own capital from MessageLabs' $700 million acquisition by Symantec that same month — a deal closed amid the market chaos following Lehman Brothers' collapse. That direct operating pedigree building and selling one of the world's first SaaS companies shapes Notion's entire identity: a firm explicitly built by operators for operators, leading early-stage rounds in European B2B software and staying engaged through growth to help founders scale from $1 million to $100 million in revenue. The firm has backed more than 150 companies including Currencycloud (acquired by Visa), GoCardless, Tradeshift, and Mews, and now manages more than $1 billion in assets.",
+    leadership: [
+      { name: "Stephen Chandler", role: "Managing Partner & Co-Founder", profileSlug: "stephen-chandler" },
+      { name: "Jos White", role: "General Partner & Co-Founder" },
+      { name: "Chris Tottman", role: "General Partner" }
+    ],
+    timeline: [
+      { year: "2008", event: "Ben White, Jos White, Stephen Chandler, Chris Tottman, and Ian Milbourn found Notion Capital in London, funded by proceeds from MessageLabs' sale to Symantec." },
+      { year: "2015", event: "Firm's three funds reach approximately $290 million raised." },
+      { year: "2021", event: "Currencycloud is acquired by Visa." },
+      { year: "2022", event: "Raises Fund V at approximately $320 million." }
+    ],
+    holdings: []
+  },
    {
     rank: 84,
     name: "Gradient Ventures",
