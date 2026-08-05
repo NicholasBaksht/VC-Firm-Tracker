@@ -882,6 +882,29 @@ const firms = [
     ],
     holdings: []
   },
+  {
+    rank: 52,
+    name: "Root Ventures",
+    sectors: ["Deep Tech", "Industrial Tech", "AI"],
+    signatureExit: "No confirmed large exit yet — Root's portfolio, including Particle and Pivot Bio, remains largely private, reflecting the longer development timelines typical of deep tech and hardware-enabled startups",
+    slug: "root-ventures",
+    website: "https://root.vc",
+    short: "Root Ventures",
+    founded: 2013,
+    hq: "San Francisco, CA",
+    aum: "$150M+ (Fund III, closed 2022)",
+    thesis: "Root Ventures was founded in 2013 by Avidan Ross, whose genuinely unusual path — embedded systems engineering, CTO of a $15 billion investment firm, then literally designing industrial robotics for the Food Network's kitchens — shaped a seed fund explicitly built by engineers for engineers. Root specializes in startups where significant technical depth is required to launch, spanning robotics, aerospace, agricultural technology, sensors, and IoT, deliberately favoring system-level innovation that requires specialized knowledge most generalist investors can't properly evaluate. Ross positions the firm less as a financial backer and more as an engineering sherpa, helping founders debug hardware roadmaps and manufacturing decisions directly, and closed Root's third fund at $150 million in 2022.",
+    leadership: [
+      { name: "Avidan Ross", role: "Founding Partner & Managing Partner", profileSlug: "avidan-ross" },
+      { name: "Kane Hsieh", role: "Partner" },
+      { name: "Chrissy Meyer", role: "Partner" }
+    ],
+    timeline: [
+      { year: "2013", event: "Avidan Ross founds Root Ventures in San Francisco." },
+      { year: "2022", event: "Closes Fund III at $150 million." }
+    ],
+    holdings: []
+  },
    {
     rank: 43,
     name: "Pear VC",
