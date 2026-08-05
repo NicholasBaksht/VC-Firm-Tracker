@@ -6153,4 +6153,39 @@ sources: [
       { label: "Wikipedia — Rebecca Lynn", url: "https://en.wikipedia.org/wiki/Rebecca_Lynn_(venture_capitalist)" }
     ]
   },
+  "tige-savage": {
+    name: "Tige Savage",
+    firm: "Revolution Ventures",
+    firmSlug: "revolution-ventures",
+    title: "Co-Founder & Managing Partner",
+    joinedYear: 2005,
+    education: ["BA, University of Michigan"],
+    previousExperience: [
+      "Executive, Riggs National Corporation",
+      "Board Member, Allbritton Communications Company",
+      "EVP, Riggs Capital Partners (1998-2000, technology & media investments)",
+      "VP, Time Warner Ventures (2001-2003, technology & media investments)"
+    ],
+    investmentFocus: ["Consumer Technology", "Enterprise", "Marketplaces"],
+    notableInvestments: [
+      { name: "Booker", ticker: null },
+      { name: "LivingSocial", ticker: null },
+      { name: "Framebridge", ticker: null }
+    ],
+    boardSeats: ["Aiwyn", "ProRata.ai"],
+    ipoCount: 0,
+    majorExits: 10,
+    careerTimeline: [
+      { year: "1998", event: "Manages technology and media sector investments as EVP of Riggs Capital Partners." },
+      { year: "2001", event: "Manages technology and media investments as VP of Time Warner Ventures." },
+      { year: "2005", event: "Co-founds Revolution with Steve Case and Donn Davis in Washington, D.C." },
+      { year: "2013", event: "Leads the close of Revolution Ventures' first institutional fund at $200 million, exceeding its $150 million target." },
+      { year: "2018", event: "Booker, a Revolution Ventures portfolio company, is acquired by Mindbody for $150 million in March." }
+    ],
+    biography: "Tige Savage built nearly three decades of technology and media investing experience across Riggs Capital Partners and Time Warner Ventures before co-founding Revolution with Steve Case and Donn Davis in 2005. He now leads Revolution Ventures, the firm's institutionally-backed early-stage fund, built on the specific conviction that great companies are being systematically overlooked by investors concentrated in Silicon Valley, New York, and Boston. That geographic thesis produced real returns: Savage led or served on the board of numerous exited Revolution companies, including Booker (acquired by Mindbody), Framebridge (acquired by Graham Holdings), and Flexcar (acquired by Avis, the Zipcar predecessor deal), and Revolution Ventures has maintained top-quartile fund performance since inception by deliberately avoiding a strategy dependent on rare outlier bets. Savage has been named one of Washington, D.C.'s '100 Top Tech Titans' by Washingtonian Magazine five times, most recently in 2024.",
+    sources: [
+      { label: "Revolution — Tige Savage", url: "https://www.revolution.com/team-member/tige-savage" },
+      { label: "Wikipedia — Tige Savage", url: "https://en.wikipedia.org/wiki/Tige_Savage" }
+    ]
+  },
 };
