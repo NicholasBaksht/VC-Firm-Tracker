@@ -905,6 +905,31 @@ const firms = [
     ],
     holdings: []
   },
+  {
+    rank: 53,
+    name: "Radical Ventures",
+    sectors: ["AI", "Machine Learning", "Deep Tech"],
+    signatureExit: "Layer 6 AI's acquisition by TD Bank Group in January 2018, roughly 15 months after founding — co-founders Jordan Jacobs and Tomi Poutanen sold the company before turning to build Radical Ventures full-time (deal value undisclosed)",
+    slug: "radical-ventures",
+    website: "https://radical.vc",
+    short: "Radical Ventures",
+    founded: 2017,
+    hq: "Toronto, Canada",
+    aum: "$350M+ (Fund II, $471M CAD, closed 2019)",
+    thesis: "Radical Ventures was founded in 2017 by Jordan Jacobs, Tomi Poutanen, and Maks Volkovs, fresh off selling their AI company Layer 6 to TD Bank Group just 15 months after founding it. That exit, combined with the trio's role co-founding the Vector Institute for Artificial Intelligence alongside deep learning pioneer Geoffrey Hinton, positioned Radical as North America's first dedicated AI-focused venture fund, built specifically to keep Toronto and Montreal's world-class machine learning talent from leaving for Silicon Valley. The firm has recruited an unusually prominent scientific bench — Fei-Fei Li, the Stanford AI pioneer and ImageNet creator, and Daphne Koller both serve as Scientific Partners, mentoring founders through Radical's AI Founders Masterclass alongside Geoffrey Hinton himself. Highly selective despite meeting thousands of AI startups, Radical has invested in only around 60 companies since inception, with $471 million CAD raised for its second fund in 2019.",
+    leadership: [
+      { name: "Jordan Jacobs", role: "Co-Founder & Managing Partner", profileSlug: "jordan-jacobs" },
+      { name: "Tomi Poutanen", role: "Co-Founder & Partner" },
+      { name: "Fei-Fei Li", role: "Scientific Partner" }
+    ],
+    timeline: [
+      { year: "2017", event: "Jordan Jacobs, Tomi Poutanen, and Maks Volkovs found Radical Ventures in Toronto." },
+      { year: "2018", event: "Layer 6 AI, the founders' prior company, is acquired by TD Bank Group in January." },
+      { year: "2019", event: "Closes Fund II at $471 million CAD." },
+      { year: "2023", event: "Fei-Fei Li joins Radical Ventures as a Scientific Partner." }
+    ],
+    holdings: []
+  },
    {
     rank: 43,
     name: "Pear VC",
