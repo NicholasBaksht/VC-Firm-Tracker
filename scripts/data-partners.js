@@ -6815,4 +6815,37 @@ sources: [
       { label: "Crunchbase — Dixon Doll", url: "https://www.crunchbase.com/person/dixon-doll" }
     ]
   },
+"hugo-shong": {
+    name: "Hugo Shong",
+    firm: "IDG Capital",
+    firmSlug: "idg-capital",
+    title: "Founding Chairman",
+    joinedYear: 1993,
+    education: ["BA, Hunan University", "MA, Chinese Academy of Social Sciences", "MS, Boston University College of Communication", "PhD Studies, Fletcher School of Law and Diplomacy"],
+    previousExperience: [
+      "Factory Worker",
+      "Journalist, launched and published 40+ magazines across China and Vietnam (Chinese editions of Cosmopolitan, Harper's Bazaar, National Geographic)"
+    ],
+    investmentFocus: ["Consumer Internet", "AI", "Enterprise Software", "Fintech"],
+    notableInvestments: [
+      { name: "Tencent", ticker: "0700.HK" },
+      { name: "Baidu", ticker: "BIDU" },
+      { name: "Xiaomi", ticker: "1810.HK" }
+    ],
+    boardSeats: [],
+    ipoCount: 15,
+    majorExits: 100,
+    careerTimeline: [
+      { year: "1982", event: "Earns a BA from Hunan University, after working as a factory worker." },
+      { year: "1987", event: "Earns an MS from Boston University's College of Communication, then begins PhD studies at the Fletcher School of Law and Diplomacy." },
+      { year: "1993", event: "Partners with International Data Group founder Patrick McGovern to launch IDG Capital's China operations, the first foreign-backed venture capital firm to enter the country." },
+      { year: "2004", event: "Tencent, an early IDG Capital investment, completes its IPO on the Hong Kong Stock Exchange." },
+      { year: "2017", event: "IDG Capital and China Oceanwide Holdings acquire the firm's own former parent company, International Data Group, and its subsidiaries." }
+    ],
+    biography: "Hugo Shong's path to becoming known as 'the godfather of Chinese venture capital' began as a factory worker, then a journalist who launched more than 40 magazines across China and Vietnam, including Chinese editions of Cosmopolitan and National Geographic. A chance dinner conversation with International Data Group founder Patrick McGovern in the early 1990s led to a legendary pitch — Shong famously argued the size of China's opportunity using a whiteboard comparison to the US population and movie screen count — convincing McGovern to fund what became IDG Capital's China operations in 1993, the first foreign-backed venture capital firm to enter the country. That early, singular access produced a genuinely legendary portfolio: Tencent, Baidu, Xiaomi, Meituan, Pinduoduo, Nio, Ctrip, and SenseTime among more than 1,300 companies backed, with over 100 unicorns and nearly 400 successful exits. In a remarkable turn in 2017, IDG Capital and China Oceanwide Holdings acquired International Data Group itself, the American company that had originally backed Shong's China expansion 24 years earlier.",
+    sources: [
+      { label: "Wikipedia — Hugo Shong", url: "https://en.wikipedia.org/wiki/Hugo_Shong" },
+      { label: "Boston University — Hugo Shong Profile", url: "https://www.bu.edu/articles/2014/hugo-shong-the-producer/" }
+    ]
+  },
 };
