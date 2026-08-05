@@ -805,6 +805,32 @@ const firms = [
       { name: "Sweetgreen", ticker: "SG", historicalPrice: null, price: null }
     ]
   },
+  {
+    rank: 49,
+    name: "Homebrew",
+    sectors: ["Fintech", "Developer Tools", "AI"],
+    signatureExit: "Chime's Nasdaq IPO in June 2025 under ticker CHYM — one of Homebrew's earliest bets, the company priced at $27 a share, popped 37% on debut, and reached an $11.6 billion valuation",
+    slug: "homebrew",
+    website: "https://homebrew.co",
+    short: "Homebrew",
+    founded: 2013,
+    hq: "San Francisco, CA",
+    aum: "$85M (across two funds)",
+    thesis: "Homebrew was co-founded in 2013 by Hunter Walk and Satya Patel, both former Google product leaders who identified a specific gap in early-stage investing: too much seed capital was structured around investor needs rather than founder needs. They built Homebrew around what they call the 'Bottom Up Economy' thesis, deliberately keeping the firm small — just the two partners making 8-10 investments a year, then working closely with each company through Series B rather than spreading thin across many bets. That concentrated, founder-first model produced early conviction in Chime, Plaid, and Gusto years before any of them were obvious winners, and in a genuinely unusual move, Walk and Patel recently stopped accepting outside limited partner capital entirely, transitioning to a self-funded model called Homebrew Forever after a decade of strong returns.",
+    leadership: [
+      { name: "Hunter Walk", role: "Co-Founder & Partner", profileSlug: "hunter-walk" },
+      { name: "Satya Patel", role: "Co-Founder & Partner" }
+    ],
+    timeline: [
+      { year: "2013", event: "Hunter Walk and Satya Patel found Homebrew in San Francisco, closing a $35 million debut fund." },
+      { year: "2015", event: "Closes a $50 million second fund." },
+      { year: "2025", event: "Chime completes its Nasdaq IPO in June under ticker CHYM at an $11.6 billion valuation." },
+      { year: "2025", event: "Announces Homebrew Forever, transitioning away from outside LP capital to a self-funded investing model." }
+    ],
+    holdings: [
+      { name: "Chime", ticker: "CHYM", historicalPrice: null, price: null }
+    ]
+  },
    {
     rank: 43,
     name: "Pear VC",
