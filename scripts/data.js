@@ -5687,6 +5687,41 @@ sources: [
       { label: "Boss Hunting", url: "https://www.bosshunting.com.au/hustle/in-q-tel-cia-venture-capital-firm" }
     ]
   },
+   "james-robinson-iv": {
+    name: "James D. Robinson IV",
+    firm: "RRE Ventures",
+    firmSlug: "rre-ventures",
+    title: "Co-Founder & Managing Partner",
+    joinedYear: 1994,
+    education: ["BA, Computer Science & Business Administration, Antioch College", "MBA, Harvard Business School (1992)"],
+    previousExperience: [
+      "JP Morgan & Co. (global risk-management systems, then investment banking)",
+      "H&Q Venture Capital, San Francisco (software & communications)",
+      "Co-Founder, InterVideo Response (in-stadium touchscreen ordering, with Stuart Ellman)",
+      "Founder, IV Systems (Unix-based applications, founded during college)"
+    ],
+    investmentFocus: ["Enterprise Software", "Fintech", "AI"],
+    notableInvestments: [
+      { name: "BuzzFeed", ticker: "BZFD" },
+      { name: "Bark", ticker: "BARK" },
+      { name: "BlackSky", ticker: "BKSY" }
+    ],
+    boardSeats: ["Bark (NYSE: BARK)", "Empire State Realty Trust", "Partnership Fund for New York City"],
+    ipoCount: 3,
+    majorExits: 4,
+    careerTimeline: [
+      { year: "1982", event: "Spends six months driving a NYC taxi overnight shift while at Antioch College." },
+      { year: "1992", event: "Earns an MBA from Harvard Business School." },
+      { year: "1994", event: "Co-founds RRE Ventures with Stuart Ellman, after first co-founding an in-stadium touchscreen ordering startup together that proved about a decade too early." },
+      { year: "2013", event: "Braintree, an early RRE investment, is acquired by PayPal for $800 million." },
+      { year: "2021", event: "BuzzFeed, a longtime RRE portfolio company, goes public via SPAC merger." }
+    ],
+    biography: "James D. Robinson IV built an unusually varied path into venture capital — a JP Morgan risk-management analyst and investment banker, then a software and communications investor at H&Q Venture Capital in San Francisco, having already founded a Unix applications company during college and spent a summer driving a New York City taxi overnight shift. In 1994, he co-founded RRE Ventures with Stuart Ellman, after the two had first tried building an in-stadium touchscreen ordering startup together that proved roughly a decade ahead of its time. Over more than three decades since, Robinson has invested in more than 60 companies and served on nearly 50 boards, building RRE into one of New York's oldest and largest venture capital firms with a portfolio spanning fintech, enterprise software, media, space, and robotics. He remains a senior advisor to the Chamber of Digital Commerce and sits on the boards of Empire State Realty Trust and the Partnership Fund for New York City.",
+    sources: [
+      { label: "RRE Ventures — Jim Robinson", url: "https://rre.com/team/jim-robinson" },
+      { label: "Institutional Investor", url: "https://www.institutionalinvestor.com/article/2bsxtrq555krtftscxn9c/corner-office/the-fintech-finance-40-james-d-robinson-iii-and-james-d-robinson-iv" }
+    ]
+  },
 };
 
 // ============================================================
@@ -5873,7 +5908,8 @@ const firmStages = {
    "foundation-capital": ["Seed", "Series A", "Growth"],
    "nexus-venture-partners": ["Seed", "Series A"],
    "500-global": ["Pre-Seed", "Seed", "Series A"],
-   "in-q-tel": ["Seed", "Series A", "Growth"]
+   "in-q-tel": ["Seed", "Series A", "Growth"],
+   "rre-ventures": ["Seed", "Series A", "Series B", "Growth"]
 };
 
 // ============================================================
