@@ -4809,6 +4809,28 @@ const firms = [
     ],
     holdings: []
   },
+  {
+    rank: 85,
+    name: "NVentures",
+    sectors: ["AI", "Deep Tech", "Industrial Tech"],
+    signatureExit: "No traditional exit framework applies — as a strategic corporate fund investing directly off NVIDIA's balance sheet, NVentures measures success through ecosystem growth rather than fund-style liquidity events; its portfolio includes 22 unicorns and 2 completed IPOs",
+    slug: "nventures",
+    website: "https://www.nventures.ai",
+    short: "NVentures",
+    founded: 2021,
+    hq: "Santa Clara, CA",
+    aum: "Not publicly disclosed (invests directly off NVIDIA's balance sheet; reported $872M+ in investments over a single nine-month period in 2023)",
+    thesis: "NVentures is NVIDIA's corporate venture capital arm, led by Mohamed Siddeek, a former SoftBank Group, KKR, and Morgan Stanley investor who joined in 2021. Unlike traditional venture funds, NVentures invests directly off NVIDIA's own balance sheet with an explicit strategic mandate: back companies that use and depend on NVIDIA's accelerated computing technology, deepening the ecosystem around its GPUs and AI platforms rather than purely optimizing for financial return. That strategy has made NVIDIA one of the most active large-scale AI investors in the world, participating in 35 deals in 2023 alone, a nearly sixfold increase from the prior year, spanning AI infrastructure, robotics, digital biology, applied AI, and frontier compute. NVentures' portfolio has grown to 81 companies including 22 unicorns and 2 completed IPOs, with 44 new investments in the most recent 12-month period alone.",
+    leadership: [
+      { name: "Mohamed Siddeek", role: "Head of NVentures", profileSlug: "mohamed-siddeek" }
+    ],
+    timeline: [
+      { year: "2021", event: "NVIDIA formally establishes NVentures in Santa Clara, with Mohamed Siddeek as head." },
+      { year: "2023", event: "Participates in 35 deals, a nearly sixfold increase from the prior year, becoming one of the most active large-scale AI investors globally." },
+      { year: "2026", event: "Portfolio reaches 81 companies with 22 unicorns and 2 IPOs." }
+    ],
+    holdings: []
+  },
    {
     rank: 84,
     name: "Gradient Ventures",
