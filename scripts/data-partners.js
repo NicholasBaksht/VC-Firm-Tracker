@@ -6681,6 +6681,37 @@ sources: [
       { label: "Trinity Ventures — Ajay Chopra", url: "https://www.trinityventures.com/team/ajay-chopra" },
       { label: "Wikipedia — Pinnacle Systems", url: "https://en.wikipedia.org/wiki/Pinnacle_Systems" }
     ]
- 
+  },
+"rob-coneybeer": {
+    name: "Rob Coneybeer",
+    firm: "Shasta Ventures",
+    firmSlug: "shasta-ventures",
+    title: "Co-Founder & Managing Director",
+    joinedYear: 2004,
+    education: ["BS, Mechanical Engineering, University of Virginia", "MS, Mechanical Engineering, Georgia Institute of Technology", "MBA, The Wharton School"],
+    previousExperience: [
+      "Engineer, Astro Space division, Martin Marietta (helped build the first A2100 satellite platform, still in production at Lockheed Martin today)"
+    ],
+    investmentFocus: ["Hardware", "Robotics", "Aerospace", "Automotive", "Consumer Internet"],
+    notableInvestments: [
+      { name: "Nest Labs", ticker: null },
+      { name: "Spire Global", ticker: "SPIR" },
+      { name: "Turo", ticker: null }
+    ],
+    boardSeats: [],
+    ipoCount: 1,
+    majorExits: 2,
+    careerTimeline: [
+      { year: "1990s", event: "Works as an engineer in the Astro Space division of Martin Marietta, helping build the first A2100 satellite platform, which remains in production today." },
+      { year: "2004", event: "Co-founds Shasta Ventures with Tod Francis and Ravi Mohan in Menlo Park." },
+      { year: "2010", event: "Leads Shasta's Series A investment in Nest Labs." },
+      { year: "2013", event: "Publicly declares a major bet on hardware startups, arguing Moore's Law-style improvements were making new categories of hardware possible." },
+      { year: "2014", event: "Nest Labs is acquired by Google for $3.2 billion in January, a roughly 20x return on Shasta's investment that essentially repaid the firm's entire second fund." }
+    ],
+    biography: "Rob Coneybeer built his early career as an aerospace engineer at Martin Marietta, helping build the first A2100 satellite platform still in production at Lockheed Martin today, before co-founding Shasta Ventures in 2004 with Tod Francis and Ravi Mohan. A self-described enthusiast for 'anything with motors' — robots, satellites, race cars — Coneybeer personally led Shasta's Series A investment in Nest Labs, a bet that returned roughly 20x when Google acquired the smart thermostat company for $3.2 billion in 2014, almost single-handedly repaying the firm's entire second fund. That conviction that 'hardware is the new software' has anchored Shasta's investing ever since, and Coneybeer has continued backing companies across robotics, aerospace, and autonomous systems including Spire Global, Fetch Robotics, and Vector Launch, in what he describes as a 23-year career in Silicon Valley venture capital.",
+    sources: [
+      { label: "Robotics Summit & Expo", url: "https://www.roboticssummit.com/speaker/rob-coneybeer/" },
+      { label: "TechCrunch", url: "https://techcrunch.com/2016/06/29/shasta-ventures-is-raising-a-300-million-fifth-fund/" }
+    ]
   },
 };
