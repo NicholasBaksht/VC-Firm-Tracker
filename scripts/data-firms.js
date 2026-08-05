@@ -4831,6 +4831,33 @@ const firms = [
     ],
     holdings: []
   },
+  {
+    rank: 86,
+    name: "Airbus Ventures",
+    sectors: ["Deep Tech", "AI", "Defense Tech", "Climate"],
+    signatureExit: "IonQ's 2021 SPAC merger with dMY Technology Group III, becoming the world's first publicly traded pure-play quantum computing hardware and software company (NYSE: IONQ) — Airbus Ventures was directly named a key IonQ investor",
+    slug: "airbus-ventures",
+    website: "https://www.airbusventures.vc",
+    short: "Airbus Ventures",
+    founded: 2015,
+    hq: "Menlo Park, CA",
+    aum: "$465M (across funds)",
+    thesis: "Airbus Ventures launched in 2015 as a hybrid venture fund backed by Airbus, led by Managing Partner Thomas d'Halluin, who brought two decades of Airbus manufacturing, supply chain, and finance experience to the role after serving as Chief of Staff to the company's CFO. Deliberately structured to maintain independence from Airbus's corporate decision-making while raising outside capital, the fund targets startups transforming 'the way we fly, move, and live' — autonomous vehicles, satellite technology, additive manufacturing, and urban air mobility, backed by genuine aerospace domain expertise most generalist deep tech investors lack. That positioning made Airbus Ventures a key early investor in IonQ, which became the world's first publicly traded pure-play quantum computing company via SPAC merger in 2021, and the firm's 62-company portfolio has since produced 4 IPOs and 7 acquisitions, with $465 million raised across three funds.",
+    leadership: [
+      { name: "Thomas d'Halluin", role: "Managing Partner", profileSlug: "thomas-dhalluin" },
+      { name: "Claas Kohl", role: "Partner" }
+    ],
+    timeline: [
+      { year: "2015", event: "Airbus Ventures launches in Menlo Park." },
+      { year: "2016", event: "Closes its first fund at approximately $65 million." },
+      { year: "2018", event: "Closes Fund II at $100 million." },
+      { year: "2021", event: "IonQ completes its SPAC merger, becoming the first publicly traded pure-play quantum computing company." },
+      { year: "2023", event: "Announces Fund III, targeting approximately $250 million." }
+    ],
+    holdings: [
+      { name: "IonQ", ticker: "IONQ", historicalPrice: null, price: null }
+    ]
+  },
    {
     rank: 84,
     name: "Gradient Ventures",
