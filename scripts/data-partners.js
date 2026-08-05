@@ -6289,4 +6289,36 @@ sources: [
       { label: "Zetta Venture Partners — Mark Gorenberg", url: "https://www.zettavp.com/team/mark-gorenberg" }
     ]
   },
+  "avidan-ross": {
+    name: "Avidan Ross",
+    firm: "Root Ventures",
+    firmSlug: "root-ventures",
+    title: "Founding Partner & Managing Partner",
+    joinedYear: 2013,
+    education: ["BS, Computer Science, Columbia University"],
+    previousExperience: [
+      "Embedded Network Application Developer, Excite@Home",
+      "Chief Technology Officer, CIM Group ($15B investment firm, industrial internet investing)",
+      "Robotics Designer, Food Network (industrial kitchen robotics)"
+    ],
+    investmentFocus: ["Deep Tech", "Robotics", "Hardware", "IoT"],
+    notableInvestments: [
+      { name: "Particle", ticker: null },
+      { name: "Pivot Bio", ticker: null }
+    ],
+    boardSeats: [],
+    ipoCount: 0,
+    majorExits: 0,
+    careerTimeline: [
+      { year: "2000s", event: "Works as an embedded network application developer at Excite@Home before becoming CTO of CIM Group, a $15 billion investment firm, overseeing industrial internet investing." },
+      { year: "2010s", event: "Designs industrial robotics for the Food Network's kitchens." },
+      { year: "2013", event: "Founds Root Ventures in San Francisco, a deep-tech seed fund run by engineers for engineers." },
+      { year: "2022", event: "Closes Fund III at $150 million." }
+    ],
+    biography: "Avidan Ross built a genuinely unusual path into venture capital — an embedded systems engineer at Excite@Home who became CTO of CIM Group, a $15 billion investment firm focused on industrial internet strategy, before literally designing robotics for the Food Network's kitchens. That hands-on engineering credibility, still visible in his hobby of building custom 1,000-degree pizza ovens, shapes Root Ventures' entire identity since he founded it in 2013: a seed fund explicitly run by engineers for engineers, backing startups where significant technical depth is required to launch or where engineers are the primary customer. Ross positions himself less as a financial backer and more as what he calls an engineering sherpa, helping portfolio founders debug hardware roadmaps and navigate early manufacturing decisions most generalist investors can't meaningfully advise on. He closed Root's third fund at $150 million in 2022, backing companies spanning robotics, aerospace, agricultural technology, and IoT.",
+    sources: [
+      { label: "Crunchbase — Avidan Ross", url: "https://www.crunchbase.com/person/avidan-ross" },
+      { label: "Atoms and Bits Interview", url: "https://www.atomsandbits.io/p/interview-with-avidan-ross-founder" }
+    ]
+  },
 };
