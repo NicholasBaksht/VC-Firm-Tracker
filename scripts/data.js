@@ -5722,6 +5722,44 @@ sources: [
       { label: "Institutional Investor", url: "https://www.institutionalinvestor.com/article/2bsxtrq555krtftscxn9c/corner-office/the-fintech-finance-40-james-d-robinson-iii-and-james-d-robinson-iv" }
     ]
   },
+   "joe-lonsdale": {
+    name: "Joe Lonsdale",
+    firm: "8VC",
+    firmSlug: "8vc",
+    title: "Co-Founder & Managing Partner",
+    joinedYear: 2015,
+    education: ["BS, Stanford University"],
+    previousExperience: [
+      "Intern, PayPal",
+      "Early Executive, Clarium Capital (Peter Thiel's hedge fund)",
+      "Co-Founder, Palantir Technologies (2004-2009)",
+      "Co-Founder, Addepar (2009, wealth management platform now overseeing trillions in assets)",
+      "Co-Founder, OpenGov (cloud software for local governments)",
+      "Co-Founder, Formation 8 (2011, VC firm and predecessor to 8VC)"
+    ],
+    investmentFocus: ["AI", "Defense Tech", "Fintech", "Healthcare", "Enterprise Software"],
+    notableInvestments: [
+      { name: "Palantir", ticker: "PLTR" },
+      { name: "Oscar Health", ticker: "OSCR" },
+      { name: "Wish", ticker: "WISH" },
+      { name: "Joby Aviation", ticker: "JOBY" }
+    ],
+    boardSeats: [],
+    ipoCount: 5,
+    majorExits: 6,
+    careerTimeline: [
+      { year: "2004", event: "Co-founds Palantir Technologies alongside Peter Thiel, leaving the company in 2009." },
+      { year: "2009", event: "Co-founds Addepar, a wealth management technology platform." },
+      { year: "2011", event: "Co-founds Formation 8, a venture capital firm." },
+      { year: "2015", event: "Founds 8VC after Formation 8's breakup, with Jake Medwell, Drew Oetting, Alex Kolicich, and Kimmy Scotti." },
+      { year: "2020", event: "Wish, an early 8VC investment, completes its NASDAQ IPO in December at a $14.1 billion valuation; relocates 8VC from San Francisco to Austin." }
+    ],
+    biography: "Joe Lonsdale's path into venture capital ran directly through company-building — a PayPal internship and an early role at Peter Thiel's hedge fund Clarium Capital led him to co-found Palantir Technologies alongside Thiel in 2004, then Addepar in 2009, a wealth management platform that now oversees trillions of dollars in assets. That operating pattern, founding more than a dozen prominent companies before ever becoming a full-time investor, shapes 8VC's entire model: the firm doesn't just write checks, it actively builds companies from scratch through its 8VC Build program, leveraging Lonsdale's direct experience scaling Palantir and Addepar into category leaders. He founded 8VC in 2015 following the breakup of Formation 8, moved the firm from San Francisco to Austin in 2020, and has since become an outspoken advocate for American manufacturing and defense technology, founding the Cicero Institute think tank and co-founding the University of Austin alongside his venture work.",
+    sources: [
+      { label: "8VC — Joe Lonsdale", url: "https://8vc.com/team/joe-lonsdale" },
+      { label: "Wikipedia — Joe Lonsdale", url: "https://en.wikipedia.org/wiki/Joe_Lonsdale" }
+    ]
+  },
 };
 
 // ============================================================
@@ -5909,7 +5947,8 @@ const firmStages = {
    "nexus-venture-partners": ["Seed", "Series A"],
    "500-global": ["Pre-Seed", "Seed", "Series A"],
    "in-q-tel": ["Seed", "Series A", "Growth"],
-   "rre-ventures": ["Seed", "Series A", "Series B", "Growth"]
+   "rre-ventures": ["Seed", "Series A", "Series B", "Growth"],
+   "8vc": ["Seed", "Series A", "Series B", "Growth"]
 };
 
 // ============================================================
@@ -6498,6 +6537,38 @@ const firms = [
       { name: "Wayfair", ticker: "W", historicalPrice: null, price: null },
       { name: "Nutanix", ticker: "NTNX", historicalPrice: null, price: null },
       { name: "Guidewire", ticker: "GWRE", historicalPrice: null, price: null }
+    ]
+  },
+   {
+    rank: 19,
+    name: "8VC",
+    sectors: ["Enterprise Software", "Defense Tech", "Healthcare", "AI", "Industrial Tech"],
+    signatureExit: "Wish's NASDAQ IPO in December 2020 at a $14.1 billion valuation — Joe Lonsdale was an early institutional investor in the e-commerce company",
+    slug: "8vc",
+    website: "https://8vc.com",
+    short: "8VC",
+    founded: 2015,
+    hq: "Austin, TX",
+    aum: "$6B",
+    thesis: "8VC was founded in 2015 by Joe Lonsdale, Jake Medwell, Drew Oetting, Alex Kolicich, and Kimmy Scotti, emerging from the breakup of Formation 8, a prior venture firm Lonsdale had co-founded. Lonsdale's own operating history — co-founding Palantir Technologies and Addepar before ever becoming a full-time investor — shapes the firm's entire model: rather than purely writing checks, 8VC actively builds companies from scratch through its dedicated 8VC Build program, leveraging genuine firsthand experience scaling category-defining technology platforms. The firm relocated from San Francisco to Austin in 2020, positioning itself at the center of an entire wave of technology companies making the same move, and focuses on ambitious, long-term opportunities in defense, healthcare, logistics, and enterprise software that most momentum-driven investors overlook. 8VC now manages $6 billion in committed capital, with a portfolio including Palantir, Oscar Health, Wish, Blend, and Joby Aviation.",
+    leadership: [
+      { name: "Joe Lonsdale", role: "Co-Founder & Managing Partner", profileSlug: "joe-lonsdale" },
+      { name: "Jake Medwell", role: "Co-Founder & Partner" },
+      { name: "Drew Oetting", role: "Co-Founder & Partner" }
+    ],
+    timeline: [
+      { year: "2015", event: "Joe Lonsdale, Jake Medwell, Drew Oetting, Alex Kolicich, and Kimmy Scotti found 8VC after Formation 8's breakup." },
+      { year: "2016", event: "Closes its first flagship venture fund." },
+      { year: "2020", event: "Wish completes its NASDAQ IPO in December at a $14.1 billion valuation; 8VC relocates from San Francisco to Austin." },
+      { year: "2022", event: "Launches the 8VC Build Fund, raising $100 million dedicated to company creation." },
+      { year: "2023", event: "AUM reaches approximately $6 billion." }
+    ],
+    holdings: [
+      { name: "Palantir", ticker: "PLTR", historicalPrice: null, price: null },
+      { name: "Oscar Health", ticker: "OSCR", historicalPrice: null, price: null },
+      { name: "Wish", ticker: "WISH", historicalPrice: null, price: null },
+      { name: "Blend", ticker: "BLND", historicalPrice: null, price: null },
+      { name: "Joby Aviation", ticker: "JOBY", historicalPrice: null, price: null }
     ]
   },
    {
