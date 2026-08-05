@@ -5429,6 +5429,37 @@ sources: [
       { label: "The Org — Andrew Carruthers", url: "https://theorg.com/org/novastar-ventures/org-chart/andrew-carruthers" }
     ]
   },
+   "mike-mompi": {
+    name: "Mike Mompi",
+    firm: "Enza Capital",
+    firmSlug: "enza-capital",
+    title: "Co-Founder & Managing Partner",
+    joinedYear: 2019,
+    education: ["BA, Economics & Communications, University of California, Davis"],
+    previousExperience: [
+      "Co-Founder, London-based fintech startup",
+      "Built ClearlySo, a UK impact investment bank that raised more than $250 million for socially responsible businesses"
+    ],
+    investmentFocus: ["Fintech", "Logistics", "Healthcare", "Human Capital", "Climate Tech"],
+    notableInvestments: [
+      { name: "Djamo", ticker: null },
+      { name: "Turaco", ticker: null },
+      { name: "SeamlessHR", ticker: null }
+    ],
+    boardSeats: [],
+    ipoCount: 0,
+    majorExits: 0,
+    careerTimeline: [
+      { year: "2010s", event: "Co-founds a London-based fintech startup, then helps build ClearlySo, a UK impact investment bank that raises more than $250 million." },
+      { year: "2019", event: "Co-founds Enza Capital in Nairobi, launching an early-stage fund focused on pre-seed and seed African tech startups." },
+      { year: "2023", event: "Closes Fund II, bringing total AUM to $58 million across 48 investments in 31 companies; launches the Founder Partner Program, allocating 10% of the firm's ownership to founders." }
+    ],
+    biography: "Mike Mompi was born to a Ghanaian father and Slovak mother and raised in California, earning degrees in Economics and Communications from UC Davis before a career spanning entrepreneurship, public equity investing, and impact finance across four continents. He co-founded a fintech startup in London and helped build ClearlySo, a UK impact investment bank that raised more than $250 million for socially responsible businesses, before co-founding Enza Capital in Nairobi in 2019. Mompi built the firm around a specific thesis — back technology companies that 'organize the offline, digitize key industries, and redefine African life' — and introduced a genuinely distinctive Founder Partner Program in 2023 that allocates 10% of Enza Capital's own ownership to the founders it backs, aiming to align incentives beyond the traditional investor-founder relationship. Under his leadership, Enza has invested in more than 30 companies across eight African markets, spanning fintech, logistics, healthcare, human capital, and climate-smart sectors.",
+    sources: [
+      { label: "TechCrunch", url: "https://techcrunch.com/2023/09/28/african-vc-firm-enza-capital-launches-founder-partner-program-as-it-closes-funds-at-58m" },
+      { label: "Empower Africa", url: "https://empowerafrica.com/fatimatou-ousmanou-samba-is-helping-the-african-diaspora-send-money-home-easily-copy/" }
+    ]
+  },
 };
 
 // ============================================================
@@ -5607,7 +5638,8 @@ const firmStages = {
    "social-capital": ["Seed", "Series A", "Growth"],
    "shield-capital": ["Seed", "Series A"],
    "future-africa": ["Pre-Seed", "Seed"],
-   "novastar-ventures": ["Seed", "Series A", "Series B"]
+   "novastar-ventures": ["Seed", "Series A", "Series B"],
+   "enza-capital": ["Pre-Seed", "Seed", "Series A", "Series B"]
 };
 
 // ============================================================
@@ -8812,6 +8844,29 @@ const firms = [
       { year: "2014", event: "Andrew Carruthers and Steve Beck found Novastar Ventures, raising the East Africa Fund (Fund I)." },
       { year: "2020", event: "Closes Africa Fund II, anchored by the European Investment Bank and British International Investment." },
       { year: "2026", event: "Closes the Africa People and Planet Fund III at $147 million in early 2026, its first pan-African vehicle." }
+    ],
+    holdings: []
+  },
+   {
+    rank: 77,
+    name: "Enza Capital",
+    sectors: ["Fintech", "Healthcare", "Climate", "Enterprise Software"],
+    signatureExit: "No confirmed exit yet — Enza's portfolio companies have instead attracted strong follow-on validation, including Guidewheel's Greycroft-led Series A and Shara's Index Ventures-led Series A, both companies Enza backed at pre-seed",
+    slug: "enza-capital",
+    website: "https://www.enza.capital",
+    short: "Enza Capital",
+    founded: 2019,
+    hq: "Nairobi, Kenya",
+    aum: "$78M (across two funds)",
+    thesis: "Enza Capital was co-founded by Mike Mompi in Nairobi in 2019, built around a specific thesis: back technology companies that 'organize the offline, digitize key industries, and redefine African life.' The firm operates as a genuinely multi-stage investor, partnering with founders from pre-seed through Series B on a single first check rather than requiring separate relationships at each stage, with typical checks between $250,000 and $5 million. Enza introduced a distinctive Founder Partner Program in 2023 that allocates 10% of the firm's own ownership to the founders in its portfolio, an unusual structural bet on aligning incentives beyond the standard investor-founder relationship. The firm has invested in more than 30 companies across eight African markets, spanning fintech, logistics, healthcare, human capital, and climate-smart sectors, with $78 million under management across two funds.",
+    leadership: [
+      { name: "Mike Mompi", role: "Co-Founder & Managing Partner", profileSlug: "mike-mompi" },
+      { name: "John Lazar", role: "General Partner" }
+    ],
+    timeline: [
+      { year: "2019", event: "Mike Mompi co-founds Enza Capital in Nairobi." },
+      { year: "2023", event: "Closes Fund II at $58 million total AUM across both funds, and launches the Founder Partner Program." },
+      { year: "2026", event: "AUM reaches approximately $78 million." }
     ],
     holdings: []
   },
