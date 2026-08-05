@@ -272,7 +272,8 @@ const firmStages = {
    "zetta-venture-partners": ["Seed", "Series A"],
    "root-ventures": ["Pre-Seed", "Seed"],
    "radical-ventures": ["Pre-Seed", "Seed", "Series A"],
-   "nventures": ["Series A", "Growth", "Late Stage"]
+   "nventures": ["Series A", "Growth", "Late Stage"],
+   "airbus-ventures": ["Seed", "Series A"]
 };
 
 // ============================================================
