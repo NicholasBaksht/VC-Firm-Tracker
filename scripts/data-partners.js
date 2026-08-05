@@ -6487,4 +6487,35 @@ sources: [
       { label: "Global Venturing — Wind-down coverage", url: "https://globalventuring.com/corporate/services/munich-re-winds-down-1-2bn-vc-arm-after-decade-of-investing/" }
     ]
   },
+  "josh-bell": {
+    name: "Josh Bell",
+    firm: "Dawn Capital",
+    firmSlug: "dawn-capital",
+    title: "General Partner",
+    joinedYear: 2006,
+    education: ["BA, Mathematics, Oxford University", "Economics & Game Theory, Cambridge University & Harvard University"],
+    previousExperience: [
+      "5 years, McKinsey & Company (advising Fortune 500 financial institutions)"
+    ],
+    investmentFocus: ["Fintech", "Financial Software"],
+    notableInvestments: [
+      { name: "iZettle", ticker: null },
+      { name: "Tink", ticker: null },
+      { name: "Mimecast", ticker: null }
+    ],
+    boardSeats: [],
+    ipoCount: 1,
+    majorExits: 3,
+    careerTimeline: [
+      { year: "2001", event: "Spends five years at McKinsey & Company advising Fortune 500 financial institutions, after studying maths at Oxford and economics and game theory at Cambridge and Harvard." },
+      { year: "2006", event: "Helps found Dawn Capital at age 28, alongside Norman Fiore and Haakon Overli." },
+      { year: "2018", event: "Leads Dawn's exit from iZettle, acquired by PayPal for $2.2 billion." },
+      { year: "2021", event: "Leads Dawn's exit from Tink, Europe's leading open banking platform, acquired by Visa for approximately $2 billion." }
+    ],
+    biography: "Josh Bell helped found Dawn Capital in 2006 at just 28 years old, after five years at McKinsey advising Fortune 500 financial institutions and earlier studies in mathematics at Oxford and economics and game theory at Cambridge and Harvard. He has personally been the driving force behind Dawn's two largest fintech outcomes: iZettle, acquired by PayPal for $2.2 billion in 2018, and Tink, acquired by Visa for approximately $2 billion in 2021 — together the second and third largest fintech M&A exits in European history, with Dawn the only investor in both. Bell has described neither outcome as a straightforward trajectory, noting both companies navigated periods that felt existential before becoming category-defining exits, and credits real investing skill not to cheerleading during growth but to recognizing difficult periods for what they are and helping founders steer through them.",
+    sources: [
+      { label: "Dawn Capital — Josh Bell", url: "https://www.dawncapital.com/team/josh-bell" },
+      { label: "GlobeNewswire", url: "https://www.globenewswire.com/en/news-release/2021/07/22/2267257/0/en/Dawn-Capital-raises-120-million-for-second-later-stage-fund-Dawn-Opportunities-Fund-II-bringing-total-raised-over-last-12-months-to-520-million.html" }
+    ]
+  },
 };
