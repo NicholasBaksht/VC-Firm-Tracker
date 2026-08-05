@@ -6054,4 +6054,34 @@ sources: [
       { label: "Wikipedia — Greycroft", url: "https://en.wikipedia.org/wiki/Greycroft" }
     ]
   },
+  "kate-mitchell": {
+    name: "Kate Mitchell",
+    firm: "Scale Venture Partners",
+    firmSlug: "scale-venture-partners",
+    title: "Co-Founder & Partner Emeritus",
+    joinedYear: 2000,
+    education: [],
+    previousExperience: [],
+    investmentFocus: ["Enterprise Software", "SaaS", "AI"],
+    notableInvestments: [
+      { name: "HubSpot", ticker: "HUBS" },
+      { name: "DocuSign", ticker: "DOCU" },
+      { name: "Bill.com", ticker: "BILL" }
+    ],
+    boardSeats: ["SVB Financial Group", "Fortive Corporation"],
+    ipoCount: 3,
+    majorExits: 5,
+    careerTimeline: [
+      { year: "2000", event: "Co-founds BA Venture Partners with Rory O'Driscoll, Bank of America's internal venture arm." },
+      { year: "2007", event: "Leads the spinout into an independent firm, renamed Scale Venture Partners." },
+      { year: "2012", event: "Co-authors the IPO section of the JOBS Act, expanding public-market access for emerging growth companies." },
+      { year: "2014", event: "Co-founds VentureForward, an NVCA initiative advancing opportunities for women and underrepresented minorities in venture capital." },
+      { year: "2019", event: "Bill.com, a Scale portfolio company, completes its IPO." }
+    ],
+    biography: "Kate Mitchell co-founded what became Scale Venture Partners in 2000 as BA Venture Partners, Bank of America's internal venture arm, alongside Rory O'Driscoll, before leading its 2007 spinout into an independent firm. Beyond investing, Mitchell has been one of venture capital's most consequential policy voices — she co-authored the IPO section of the 2012 JOBS Act, expanding public-market access for emerging growth companies, and served as chairman of the National Venture Capital Association. Her investment track record includes HubSpot, DocuSign, and Bill.com, all of which went on to complete public listings, and she co-founded VentureForward in 2014, an NVCA initiative focused on advancing women and underrepresented minorities across the venture ecosystem, earning her the NVCA's American Spirit Award in 2021.",
+    sources: [
+      { label: "Scale Venture Partners — Kate Mitchell", url: "https://www.scalevp.com/team/kate-mitchell" },
+      { label: "iHeart Podcast", url: "https://www.iheart.com/podcast/356-array-podcast-28107740/episode/rory-odriscoll-founder-of-scale-venture-49892844/" }
+    ]
+  },
 };
