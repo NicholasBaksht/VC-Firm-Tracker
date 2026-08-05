@@ -6583,4 +6583,37 @@ sources: [
       { label: "Equilar ExecAtlas", url: "https://people.equilar.com/bio/org/earlybird-venture-capital/4289605" }
     ]
   },
+  "fabricio-bloisi": {
+    name: "Fabricio Bloisi",
+    firm: "Prosus Ventures",
+    firmSlug: "prosus-ventures",
+    title: "CEO, Prosus (parent company)",
+    joinedYear: 2023,
+    education: ["BS, Computer Science, State University of Campinas (UNICAMP)", "MBA, Getúlio Vargas Foundation (FGV/EAESP)"],
+    previousExperience: [
+      "Founder & CEO, Movile (mobile technology firm, founded 1998 at age 21)",
+      "Owner & CEO, iFood (bought as a 20-person startup in 2013, grew into Latin America's leading food delivery company)"
+    ],
+    investmentFocus: ["E-commerce Infrastructure", "Fintech", "AI/ML", "Logistics"],
+    notableInvestments: [
+      { name: "iFood", ticker: null },
+      { name: "PayU", ticker: null }
+    ],
+    boardSeats: ["iFood (Chairman)"],
+    ipoCount: 0,
+    majorExits: 1,
+    careerTimeline: [
+      { year: "1998", event: "Founds Movile at age 21, a mobile technology company in Brazil." },
+      { year: "2013", event: "Buys iFood, then a 20-person startup, and begins scaling it into Latin America's leading food delivery platform." },
+      { year: "2013", event: "Prosus (then Naspers) first invests in iFood through Movile, entering food delivery with a $2 million investment." },
+      { year: "2022", event: "Prosus acquires the final 33% stake in iFood, making it a wholly-owned subsidiary." },
+      { year: "2023", event: "Named CEO of Prosus and Naspers, overseeing the group's global technology investment strategy including Prosus Ventures." },
+      { year: "2025", event: "Advolve.AI, a Prosus Ventures portfolio company, is acquired by iFood." }
+    ],
+    biography: "Fabricio Bloisi founded Movile at just 21 years old in 1998, and by 2013 had bought iFood as a 20-person startup, growing it into Latin America's dominant food delivery platform with more than 96 million monthly orders and over 5,000 employees. That same operating pedigree, building a category-defining emerging-markets technology company from near-scratch, led Prosus to name him CEO of the entire group in 2023, overseeing both its portfolio of controlled businesses and Prosus Ventures, its early-stage investment arm backing the next generation of e-commerce, fintech, and AI companies across high-growth markets. Bloisi has been explicit that his food-delivery operating experience directly informs Prosus's broader growth strategy, and under his leadership Prosus Ventures deployed more than $400 million in FY25 across more than 40 new investments.",
+    sources: [
+      { label: "Reuters — Factbox on Fabricio Bloisi", url: "https://www.aol.com/news/factbox-prosus-naspers-ceo-fabricio-112515447.html" },
+      { label: "Prosus Ventures", url: "https://www.prosus.com/prosus-ventures" }
+    ]
+  },
 };
