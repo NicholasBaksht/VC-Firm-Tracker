@@ -7501,6 +7501,34 @@ const firms = [
     ],
     holdings: []
   },
+{
+    rank: 20,
+    name: "Foundation Capital",
+    sectors: ["Fintech", "Enterprise Software", "Consumer", "AI"],
+    signatureExit: "Netflix — Foundation Capital was one of the company's original investors years before it became a public, category-defining media company, one of 26 IPOs across the firm's three-decade history",
+    slug: "foundation-capital",
+    website: "https://foundationcapital.com",
+    short: "Foundation Capital",
+    founded: 1995,
+    hq: "Palo Alto, CA",
+    aum: "$3B+",
+    thesis: "Foundation Capital was founded in October 1995 by Bill Elmore, Kathryn Gould, and Jim Anderson in Palo Alto, built around a distinctive investment philosophy the firm still describes today: seeking out 'zero-billion-dollar markets,' categories that don't yet exist commercially until a visionary founder creates them from nothing. That conviction made Foundation one of Netflix's original investors, and the firm has spent three decades applying the same lens to fintech, enterprise software, and consumer internet, backing LendingClub, Chegg, Sunrun, and Uber among more than 400 total investments. Foundation has been the first institutional investor in more than 70% of its portfolio companies, and the firm's track record now spans 26 IPOs and more than 80 acquisitions.",
+    leadership: [
+      { name: "Kathryn Gould", role: "Co-Founder", profileSlug: "kathryn-gould" },
+      { name: "Bill Elmore", role: "Co-Founder" },
+      { name: "Ashu Garg", role: "General Partner" }
+    ],
+    timeline: [
+      { year: "1995", event: "Bill Elmore, Kathryn Gould, and Jim Anderson found Foundation Capital in Palo Alto." },
+      { year: "1990s", event: "Becomes one of Netflix's original investors." },
+      { year: "2014", event: "LendingClub completes its NYSE IPO." },
+      { year: "2022", event: "Closes its tenth fund at $500 million, with early investments in Solana, Cerebras, and Jasper." },
+      { year: "2024", event: "Raises its eleventh fund at $600 million." }
+    ],
+    holdings: [
+      { name: "Netflix", ticker: "NFLX", historicalPrice: null, price: null }
+    ]
+  },
    {
     rank: 34,
     name: "Northzone",
