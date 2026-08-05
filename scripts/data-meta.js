@@ -263,7 +263,8 @@ const firmStages = {
    "amazon-alexa-fund": ["Series A", "Series B", "Growth"],
    "gradient-ventures": ["Pre-Seed", "Seed", "Series A"],
    "greycroft": ["Seed", "Series A", "Series B", "Growth"],
-   "scale-venture-partners": ["Series A", "Series B", "Growth"]
+   "scale-venture-partners": ["Series A", "Series B", "Growth"],
+   "us-venture-partners": ["Pre-Seed", "Seed", "Series A", "Series B"]
 };
 
 // ============================================================
