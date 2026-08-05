@@ -5031,6 +5031,32 @@ const firms = [
     ],
     holdings: []
   },
+  {
+    rank: 29,
+    name: "Trinity Ventures",
+    sectors: ["Enterprise Software", "Fintech", "Consumer", "AI"],
+    signatureExit: "New Relic's December 2014 NYSE IPO under ticker NEWR — one of several public listings across Trinity's four-decade history, alongside LoopNet's 1999 IPO and Zulily's 2013 IPO",
+    slug: "trinity-ventures",
+    website: "https://www.trinityventures.com",
+    short: "Trinity Ventures",
+    founded: 1986,
+    hq: "Menlo Park, CA",
+    aum: "$1.25B (latest funds)",
+    thesis: "Trinity Ventures was founded in 1986 by Noel Fenton, who'd already served as CEO of two venture-backed companies (Covalent Systems and Acurex) before turning to investing, building a firm around close, hands-on partnership with entrepreneurs. That founder-first philosophy deepened further in 2006 when Ajay Chopra joined as General Partner — having grown Pinnacle Systems literally from his living room into a multibillion-dollar, Emmy award-winning public company — giving Trinity a genuinely rare combination of operating scar tissue and investing discipline. The firm has deliberately maintained a low capital-to-partner ratio across nearly four decades, backing early-stage innovators in cloud, SaaS, fintech, and consumer internet through public listings including LoopNet, New Relic, and Zulily, and now manages approximately $1.25 billion across its most recent funds.",
+    leadership: [
+      { name: "Noel Fenton", role: "Founding Partner" },
+      { name: "Ajay Chopra", role: "General Partner", profileSlug: "ajay-chopra" },
+      { name: "Patricia Nakache", role: "General Partner" }
+    ],
+    timeline: [
+      { year: "1986", event: "Noel Fenton founds Trinity Ventures in Menlo Park." },
+      { year: "1999", event: "LoopNet completes its IPO in May under ticker LOOP." },
+      { year: "2006", event: "Ajay Chopra joins as General Partner." },
+      { year: "2013", event: "Zulily completes its IPO in November under ticker ZU." },
+      { year: "2014", event: "New Relic completes its IPO in December under ticker NEWR." }
+    ],
+    holdings: []
+  },
    {
     rank: 84,
     name: "Gradient Ventures",
