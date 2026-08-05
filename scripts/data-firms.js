@@ -4858,6 +4858,31 @@ const firms = [
       { name: "IonQ", ticker: "IONQ", historicalPrice: null, price: null }
     ]
   },
+  {
+    rank: 87,
+    name: "Applied Ventures",
+    sectors: ["Deep Tech", "AI", "Industrial Tech"],
+    signatureExit: "Enphase Energy's NASDAQ IPO — one of more than a dozen exits Global Head Anand Kamannavar has led, alongside Adesto Technologies' NASDAQ listing and Voltaix's acquisition by Air Liquide",
+    slug: "applied-ventures",
+    website: "https://www.appliedmaterials.com/us/en/applied-ventures.html",
+    short: "Applied Ventures",
+    founded: 2006,
+    hq: "Santa Clara, CA",
+    aum: "$400M+",
+    thesis: "Applied Ventures was founded in 2006 as the corporate venture capital arm of Applied Materials, the global nanomanufacturing technology leader, established to bring strategic venture investing in-house and align it directly with the parent company's innovation roadmap. Under Global Head Anand Kamannavar, who joined the same year, the fund has grown from an initial $25 million annual allocation into a genuinely global, stage-agnostic platform investing $25-50 million per round and up to $100 million annually across semiconductors, advanced materials, AI, and deep tech. The firm reviews roughly 700 applications a year and selects just five or six new investments, backing companies like Metalenz, a Harvard spinout in engineered optics, and PsiQuantum in quantum computing, while Kamannavar has personally led more than a dozen exits including NASDAQ listings for Enphase Energy and Adesto Technologies. Applied Ventures now manages more than $400 million across 90-plus companies in 17 countries.",
+    leadership: [
+      { name: "Anand Kamannavar", role: "Founder & Global Head", profileSlug: "anand-kamannavar" }
+    ],
+    timeline: [
+      { year: "2006", event: "Applied Materials establishes Applied Ventures, with Anand Kamannavar joining the same year." },
+      { year: "2020s", event: "Leads investments including Metalenz, a Harvard spinout in engineered optics, and PsiQuantum in quantum computing." },
+      { year: "2024", event: "Portfolio surpasses 90 companies across 17 countries, with more than $400 million under management." }
+    ],
+    holdings: [
+      { name: "Enphase Energy", ticker: "ENPH", historicalPrice: null, price: null },
+      { name: "Adesto Technologies", ticker: "IOTS", historicalPrice: null, price: null }
+    ]
+  },
    {
     rank: 84,
     name: "Gradient Ventures",
