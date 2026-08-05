@@ -5057,6 +5057,33 @@ const firms = [
     ],
     holdings: []
   },
+  {
+    rank: 30,
+    name: "Shasta Ventures",
+    sectors: ["Enterprise Software", "Cybersecurity", "Deep Tech", "Consumer"],
+    signatureExit: "Nest Labs' $3.2 billion acquisition by Google in January 2014 — Rob Coneybeer personally led Shasta's Series A investment, a roughly 20x return that essentially repaid the firm's entire second fund",
+    slug: "shasta-ventures",
+    website: "https://www.shasta.vc",
+    short: "Shasta Ventures",
+    founded: 2004,
+    hq: "Menlo Park, CA",
+    aum: "$1.3B",
+    thesis: "Shasta Ventures was founded in 2004 by Rob Coneybeer, Tod Francis, and Ravi Mohan, joined the following year by Jason Pressman, built around a specific conviction that early-stage ventures benefit from experienced, genuinely hands-on partners rather than passive capital. The firm's early focus on consumer technology (backing Mint.com as what one founding partner called a 'classic Shasta' bet) expanded significantly after Coneybeer's aerospace engineering background led him to declare a major bet on hardware in 2013, arguing that Moore's Law-style improvements were unlocking entirely new categories of physical products. That conviction produced Shasta's defining outcome: Nest Labs, acquired by Google for $3.2 billion in 2014, a roughly 20x return that essentially repaid the firm's entire second fund on its own. Shasta has since built structured founder-support programs like Shasta Elevate and Ignite, backing more than 100 companies across enterprise SaaS, cybersecurity, hardware, and consumer technology, with approximately $1.3 billion under management.",
+    leadership: [
+      { name: "Rob Coneybeer", role: "Co-Founder & Managing Director", profileSlug: "rob-coneybeer" },
+      { name: "Tod Francis", role: "Co-Founder & Managing Director" },
+      { name: "Jason Pressman", role: "Managing Director" }
+    ],
+    timeline: [
+      { year: "2004", event: "Rob Coneybeer, Tod Francis, and Ravi Mohan found Shasta Ventures in Menlo Park." },
+      { year: "2005", event: "Jason Pressman joins as Managing Director." },
+      { year: "2010", event: "Leads Shasta's Series A investment in Nest Labs." },
+      { year: "2011", event: "Closes Fund III at $265 million." },
+      { year: "2014", event: "Nest Labs is acquired by Google for $3.2 billion; closes Fund IV at $300 million." },
+      { year: "2016", event: "Raises a fifth fund targeting up to $300 million." }
+    ],
+    holdings: []
+  },
    {
     rank: 84,
     name: "Gradient Ventures",
