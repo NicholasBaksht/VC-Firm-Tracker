@@ -269,7 +269,8 @@ const firmStages = {
    "revolution-ventures": ["Seed", "Series A", "Series B"],
    "homebrew": ["Pre-Seed", "Seed"],
    "cowboy-ventures": ["Seed", "Series A"],
-   "zetta-venture-partners": ["Seed", "Series A"]
+   "zetta-venture-partners": ["Seed", "Series A"],
+   "root-ventures": ["Pre-Seed", "Seed"]
 };
 
 // ============================================================
