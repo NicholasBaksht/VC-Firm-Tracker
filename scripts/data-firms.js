@@ -777,6 +777,34 @@ const firms = [
       { name: "Luminar Technologies", ticker: "LAZR", historicalPrice: null, price: null }
     ]
   },
+  {
+    rank: 48,
+    name: "Revolution Ventures",
+    sectors: ["Consumer", "Enterprise Software", "Fintech"],
+    signatureExit: "Booker's $150 million acquisition by Mindbody in March 2018 — Revolution Ventures participated in Booker's Series A and B rounds, one of several exits including FitnessKeeper (acquired by Asics) and OrderUp (acquired by Groupon)",
+    slug: "revolution-ventures",
+    website: "https://www.revolution.com",
+    short: "Revolution Ventures",
+    founded: 2005,
+    hq: "Washington, D.C.",
+    aum: "$400M+ (Revolution Ventures funds specifically)",
+    thesis: "Revolution Ventures is the early-stage investing arm of Revolution LLC, the Washington, D.C. investment firm AOL co-founder Steve Case founded in 2005 with Tige Savage and Donn Davis after leaving the AOL Time Warner board. Revolution Ventures itself launched as an institutional fund in 2013, closing $200 million against a $150 million target, built entirely around Case's 'Rise of the Rest' thesis: that great entrepreneurs are being systematically overlooked because too much venture capital concentrates in Silicon Valley, New York, and Boston. That's a related but distinct vehicle from the separately-tracked Rise of the Rest Seed Fund, a Bezos-backed seed-stage fund the same Revolution team launched in 2017 — Revolution Ventures itself focuses on leading Series A rounds nationwide, typically writing $4-8 million first checks. The fund has produced real, repeated exits including Booker (acquired by Mindbody), FitnessKeeper (acquired by Asics), and OrderUp (acquired by Groupon), maintaining top-quartile performance since inception.",
+    leadership: [
+      { name: "Steve Case", role: "Chairman & Co-Founder" },
+      { name: "Tige Savage", role: "Co-Founder & Managing Partner", profileSlug: "tige-savage" },
+      { name: "Clara Sieg", role: "Investment Partner" }
+    ],
+    timeline: [
+      { year: "2005", event: "Steve Case, Tige Savage, and Donn Davis found Revolution LLC in Washington, D.C." },
+      { year: "2013", event: "Revolution Ventures closes its first institutional fund at $200 million, exceeding its $150 million target." },
+      { year: "2018", event: "Booker is acquired by Mindbody for $150 million in March." },
+      { year: "2021", event: "Sweetgreen, a Revolution portfolio company, completes its IPO." },
+      { year: "2023", event: "Closes a $215 million fund to continue backing transformative early-stage companies." }
+    ],
+    holdings: [
+      { name: "Sweetgreen", ticker: "SG", historicalPrice: null, price: null }
+    ]
+  },
    {
     rank: 43,
     name: "Pear VC",
