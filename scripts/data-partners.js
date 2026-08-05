@@ -6356,4 +6356,37 @@ sources: [
       { label: "The Globe and Mail", url: "https://www.theglobeandmail.com/business/article-radical-ventures-to-launch-350-million-ai-focused-venture-fund/" }
     ]
   },
+  "mohamed-siddeek": {
+    name: "Mohamed Siddeek",
+    firm: "NVentures",
+    firmSlug: "nventures",
+    title: "Head of NVentures",
+    joinedYear: 2021,
+    education: [],
+    previousExperience: [
+      "General Partner, SoftBank Group",
+      "Senior roles, KKR",
+      "Senior roles, Morgan Stanley"
+    ],
+    investmentFocus: ["AI Infrastructure", "Robotics", "Digital Biology", "Applied AI"],
+    notableInvestments: [
+      { name: "Cohere", ticker: null },
+      { name: "Skild AI", ticker: null },
+      { name: "1X", ticker: null }
+    ],
+    boardSeats: [],
+    ipoCount: 2,
+    majorExits: 4,
+    careerTimeline: [
+      { year: "2010s", event: "Builds a career across SoftBank Group, KKR, and Morgan Stanley in senior investment roles." },
+      { year: "2021", event: "Becomes head of NVentures, NVIDIA's corporate venture capital arm." },
+      { year: "2023", event: "Leads NVIDIA to become one of the most active large-scale AI investors, participating in 35 deals, a nearly sixfold increase from the prior year." },
+      { year: "2026", event: "NVentures' portfolio reaches 81 companies including 22 unicorns and 2 IPOs, with 44 new investments in the prior 12 months alone." }
+    ],
+    biography: "Mohamed Siddeek leads NVentures, NVIDIA's corporate venture capital arm, bringing investment experience from SoftBank Group, KKR, and Morgan Stanley to a fund with a genuinely different mandate than traditional venture capital. Rather than optimizing purely for financial returns, Siddeek has been explicit that NVentures prioritizes companies that use and depend on NVIDIA technology, deploying capital directly off NVIDIA's balance sheet to accelerate the broader AI computing ecosystem the company's hardware powers. Under his leadership, NVIDIA has become one of the most active large-scale AI investors in the world, participating in 35 deals in 2023 alone — a nearly sixfold increase from the prior year — spanning AI infrastructure, robotics, digital biology, and frontier compute, with reported investments exceeding $872 million in non-affiliated companies over a single nine-month period.",
+    sources: [
+      { label: "Benzinga", url: "https://www.benzinga.com/government/23/12/36190510/whats-going-on-with-nvidia-stock-tuesday" },
+      { label: "NVentures", url: "https://www.nventures.ai/" }
+    ]
+  },
 };
