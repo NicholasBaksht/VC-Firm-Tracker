@@ -5586,6 +5586,42 @@ sources: [
       { label: "Foundation Capital", url: "https://foundationcapital.com" }
     ]
   },
+   "sandeep-singhal": {
+    name: "Sandeep Singhal",
+    firm: "Nexus Venture Partners",
+    firmSlug: "nexus-venture-partners",
+    title: "Co-Founder",
+    joinedYear: 2006,
+    education: ["BS, Electrical Engineering, Stanford University (Phi Beta Kappa, Tau Beta Pi)", "MBA, The Wharton School (with Distinction, dual major in Finance & Marketing)"],
+    previousExperience: [
+      "McKinsey & Company",
+      "Digital Equipment Corporation",
+      "EDA Systems",
+      "Co-Founder & CEO, Medusind Solutions (healthcare outsourcing)",
+      "Co-Founder & Managing Director, eVentures India (1999, one of India's earliest VC firms)"
+    ],
+    investmentFocus: ["Enterprise Software", "Consumer Internet", "Fintech"],
+    notableInvestments: [
+      { name: "Delhivery", ticker: "DELHIVERY.NS" },
+      { name: "MakeMyTrip", ticker: "MMYT" },
+      { name: "Postman", ticker: null }
+    ],
+    boardSeats: [],
+    ipoCount: 2,
+    majorExits: 4,
+    careerTimeline: [
+      { year: "1987", event: "Graduates from Stanford and joins a VC-backed Bay Area startup, beginning his technology career." },
+      { year: "1999", event: "Co-founds eVentures India, one of the earliest Indian venture capital firms, backing MakeMyTrip among others." },
+      { year: "2006", event: "Co-founds Nexus Venture Partners with Suvir Sujan and Naren Gupta." },
+      { year: "2021", event: "Steps down as General Partner after growing the firm to $1.5 billion in AUM, transitioning to Senior Advisor." },
+      { year: "2022", event: "Delhivery, a Nexus portfolio company, completes its IPO on Indian stock exchanges." }
+    ],
+    biography: "Sandeep Singhal graduated from Stanford in 1987 and joined a venture-backed Bay Area startup before moving through McKinsey, Digital Equipment, and EDA Systems, then co-founding Medusind Solutions, a healthcare outsourcing company. In 1999, alongside his operating career, he co-founded eVentures India, one of the country's earliest venture capital firms, backing MakeMyTrip years before its own public listing. He co-founded Nexus Venture Partners in 2006 with Suvir Sujan and the late Naren Gupta, building what became one of the first true India-US cross-border venture funds, investing in enterprise technology and digital consumer businesses on both sides of the Pacific from offices in Menlo Park, Bengaluru, and Mumbai. Singhal led the firm as General Partner until 2021, growing it to $1.5 billion under management before transitioning to Senior Advisor, and holds an MBA with Distinction from Wharton alongside a Stanford electrical engineering degree.",
+    sources: [
+      { label: "Stanford Seed — Grit & Growth", url: "https://www.gsb.stanford.edu/insights/masterclass-indias-venture-capital-ecosystem" },
+      { label: "Strategic Investment Fund", url: "https://sif.gatesfoundation.org/our-team/sandeep-singhal/" }
+    ]
+  },
 };
 
 // ============================================================
@@ -5769,7 +5805,8 @@ const firmStages = {
    "kawisafi-ventures": ["Series A", "Series B", "Growth"],
    "crossboundary": ["Growth", "Late Stage"],
    "launch-africa-ventures": ["Seed", "Series A"],
-   "foundation-capital": ["Seed", "Series A", "Growth"]
+   "foundation-capital": ["Seed", "Series A", "Growth"],
+   "nexus-venture-partners": ["Seed", "Series A"]
 };
 
 // ============================================================
