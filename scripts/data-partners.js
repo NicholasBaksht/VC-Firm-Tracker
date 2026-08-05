@@ -6119,4 +6119,38 @@ sources: [
       { label: "Wikipedia — U.S. Venture Partners", url: "https://en.wikipedia.org/wiki/U.S._Venture_Partners" }
     ]
   },
+  "rebecca-lynn": {
+    name: "Rebecca Lynn",
+    firm: "Canvas Prime",
+    firmSlug: "canvas-prime",
+    title: "Co-Founder & Managing Director",
+    joinedYear: 2013,
+    education: ["BS, Chemical Engineering, University of Missouri", "JD/MBA, UC Berkeley"],
+    previousExperience: [
+      "New Product Development, Procter & Gamble",
+      "Early Employee & VP Marketing, NextCard (scaled from 30 to 1,300 employees through IPO)",
+      "General Partner, Morgenthaler Ventures (2007-2013)"
+    ],
+    investmentFocus: ["Fintech", "Healthtech", "AI"],
+    notableInvestments: [
+      { name: "LendingClub", ticker: "LC" },
+      { name: "Doximity", ticker: "DOCS" },
+      { name: "Luminar Technologies", ticker: "LAZR" }
+    ],
+    boardSeats: [],
+    ipoCount: 3,
+    majorExits: 9,
+    careerTimeline: [
+      { year: "1998", event: "Moves to Silicon Valley as an early employee of NextCard, the first online credit card company, helping scale it from 30 to 1,300 employees through IPO." },
+      { year: "2007", event: "Begins her venture career at Morgenthaler Ventures, becoming a partner in 2012." },
+      { year: "2013", event: "Co-founds Canvas Ventures, a spinout from Morgenthaler; leads the firm's early-stage investment in LendingClub." },
+      { year: "2014", event: "LendingClub completes its IPO in December, the largest U.S. tech IPO of the year." },
+      { year: "2023", event: "Casetext, an early Canvas investment, is acquired by Thomson Reuters for $650 million in an all-cash deal." }
+    ],
+    biography: "Rebecca Lynn began her career as a chemical engineer, including work in a nuclear research reactor, before moving into product development at Procter & Gamble and then joining NextCard, the first online credit card company, as an early employee, helping scale it from 30 to 1,300 employees through its IPO. She began her venture career at Morgenthaler Ventures in 2007, becoming partner in 2012, before co-founding Canvas Ventures (now Canvas Prime) as a spinout in 2013 — closing her first fund the week Lehman Brothers collapsed. Her early-stage investment in LendingClub became the largest U.S. tech IPO of 2014, and her broader track record includes Doximity, Luminar Technologies, and Casetext, the AI-powered legal research platform Thomson Reuters acquired for $650 million in cash in 2023 after the company gained early access to GPT-4. A five-time Forbes Midas List honoree, Lynn has been recognized as a Senior Deal Maker by the Wall Street Journal and a Top Woman VC by the New York Times.",
+    sources: [
+      { label: "Canvas Prime — Rebecca Lynn", url: "https://www.canvas.vc/team-member/rebecca-lynn" },
+      { label: "Wikipedia — Rebecca Lynn", url: "https://en.wikipedia.org/wiki/Rebecca_Lynn_(venture_capitalist)" }
+    ]
+  },
 };
