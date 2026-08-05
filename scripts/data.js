@@ -5858,6 +5858,40 @@ sources: [
       { label: "SEC S-1 Filing", url: "https://www.sec.gov/Archives/edgar/data/1841948/000119312521041594/d87587ds1.htm" }
     ]
   },
+   "david-tisch": {
+    name: "David Tisch",
+    firm: "BoxGroup",
+    firmSlug: "boxgroup",
+    title: "Co-Founder & Managing Partner",
+    joinedYear: 2007,
+    education: [],
+    previousExperience: [
+      "Co-Founder & CEO, Spring (acquired by ShopRunner, 2016)",
+      "Managing Director, Techstars NYC",
+      "Adjunct Professor, NYU Stern School of Business"
+    ],
+    investmentFocus: ["Consumer Internet", "Marketplaces", "Fintech"],
+    notableInvestments: [
+      { name: "Warby Parker", ticker: "WRBY" },
+      { name: "Plaid", ticker: null },
+      { name: "Ramp", ticker: null }
+    ],
+    boardSeats: [],
+    ipoCount: 0,
+    majorExits: 8,
+    careerTimeline: [
+      { year: "2007", event: "Co-founds BoxGroup with Adam Rothenberg." },
+      { year: "2009", event: "Becomes the first Managing Director of Techstars NYC, helping build it into a cornerstone of the New York tech scene." },
+      { year: "2012", event: "Leaves Techstars to focus on BoxGroup full-time, alongside Adam Rothenberg." },
+      { year: "2013", event: "BoxGroup becomes one of the first investors in Plaid, then a small fintech startup founded by a former Techstars intern." },
+      { year: "2018", event: "Flatiron Health, an early BoxGroup investment, is acquired by Roche for $1.9 billion." }
+    ],
+    biography: "David Tisch, grandson of Loews Corporation co-founder Laurence Tisch, co-founded BoxGroup in 2007 with Adam Rothenberg, running it initially alongside his role as the first Managing Director of Techstars NYC before leaving in 2012 to focus on BoxGroup full-time. The firm built its reputation on catching companies before anyone else believed in them — most famously becoming the first investor in Plaid after its founder turned down a job offer at BoxGroup to start the company instead, and backing Flatiron Health years before Roche acquired it for $1.9 billion in 2018. Tisch has described BoxGroup's core philosophy as being comfortable with genuine early-stage uncertainty — vision and raw product over traction — and has helped grow the firm into one of New York's most prolific seed investors, with more than 600 investments including Warby Parker, Ramp, Airtable, Glossier, and ClassPass.",
+    sources: [
+      { label: "TechCrunch", url: "https://techcrunch.com/2021/08/02/boxgroup-closes-on-255m-across-two-funds/" },
+      { label: "Fortune", url: "https://fortune.com/2025/10/21/david-tisch-boxgroup-venture-capital-tech-nyc-ramp-cursor-early-stage/" }
+    ]
+  },
 };
 
 // ============================================================
@@ -6049,7 +6083,8 @@ const firmStages = {
    "8vc": ["Seed", "Series A", "Series B", "Growth"],
    "slow-ventures": ["Pre-Seed", "Seed", "Series A"],
    "primary-venture-partners": ["Pre-Seed", "Seed"],
-   "lerer-hippeau": ["Seed", "Series A"]
+   "lerer-hippeau": ["Seed", "Series A"],
+   "boxgroup": ["Pre-Seed", "Seed", "Series A"]
 };
 
 // ============================================================
@@ -6756,6 +6791,32 @@ const firms = [
       { name: "Olo", ticker: "OLO", historicalPrice: null, price: null },
       { name: "BuzzFeed", ticker: "BZFD", historicalPrice: null, price: null }
     ]
+  },
+   {
+    rank: 82,
+    name: "BoxGroup",
+    sectors: ["Fintech", "Enterprise Software", "Consumer", "Deep Tech"],
+    signatureExit: "Flatiron Health's $1.9 billion acquisition by Roche in 2018 — BoxGroup was an early investor in the healthcare data company, one of several major exits alongside PillPack, Matterport, and Trello",
+    slug: "boxgroup",
+    website: "https://boxgroup.com",
+    short: "BoxGroup",
+    founded: 2007,
+    hq: "New York, NY",
+    aum: "$550M (across two new funds, as of October 2025)",
+    thesis: "BoxGroup was founded in 2007 by David Tisch, grandson of Loews Corporation co-founder Laurence Tisch, and Adam Rothenberg, both of whom also built Techstars NYC into a cornerstone of the New York startup scene before leaving to focus on BoxGroup full-time in 2012. The firm's small early offices near Union Square became an informal co-working hub for its own portfolio companies, and that proximity produced its most famous bet: Zach Perret turned down a job offer at BoxGroup to found Plaid instead, and BoxGroup became the fintech company's first institutional investor. Comfortable investing on 'more vision than traction,' as Tisch describes it, BoxGroup has made more than 600 investments across fintech, enterprise software, consumer, and deep tech, with major exits including Flatiron Health (acquired by Roche for $1.9 billion), PillPack, Matterport, and Trello, and now manages $550 million across two new funds as of a 2025 raise marking the firm's 16th year.",
+    leadership: [
+      { name: "David Tisch", role: "Co-Founder & Managing Partner", profileSlug: "david-tisch" },
+      { name: "Adam Rothenberg", role: "Co-Founder & General Partner" },
+      { name: "Nimi Katragadda", role: "Partner" }
+    ],
+    timeline: [
+      { year: "2007", event: "David Tisch and Adam Rothenberg found BoxGroup in New York." },
+      { year: "2012", event: "Tisch and Rothenberg leave Techstars to run BoxGroup full-time." },
+      { year: "2013", event: "Becomes the first institutional investor in Plaid." },
+      { year: "2018", event: "Flatiron Health is acquired by Roche for $1.9 billion." },
+      { year: "2025", event: "Closes $550 million across two new funds in October, marking the firm's 16th year." }
+    ],
+    holdings: []
   },
    {
     rank: 15,
