@@ -6649,5 +6649,38 @@ sources: [
       { label: "Fortune", url: "https://fortune.com/2026/05/20/antler-ceo-magnus-grimeland-innovation-global-silicon-valley/" }
     ]
   },
+"ajay-chopra": {
+    name: "Ajay Chopra",
+    firm: "Trinity Ventures",
+    firmSlug: "trinity-ventures",
+    title: "General Partner",
+    joinedYear: 2006,
+    education: ["BS, Electronics & Computer Science, Birla Institute of Technology & Science (BITS), Pilani", "MS, Electronics & Computer Science, Stony Brook University"],
+    previousExperience: [
+      "Systems Architect, Atari Inc. (8-bit computer line)",
+      "Engineering Manager, Mindset Corporation",
+      "Co-Founder, Chairman & CEO, Pinnacle Systems (1986-2005, grew from his living room into a multibillion-dollar public company)"
+    ],
+    investmentFocus: ["Consumer Internet", "Enterprise Software", "Digital Health", "Mobility"],
+    notableInvestments: [
+      { name: "TubeMogul", ticker: null },
+      { name: "Fitstar", ticker: null }
+    ],
+    boardSeats: [],
+    ipoCount: 1,
+    majorExits: 3,
+    careerTimeline: [
+      { year: "1980s", event: "Works as a systems architect at Atari, then an engineering manager at Mindset Corporation." },
+      { year: "1986", event: "Co-founds Pinnacle Systems with Randall Moore and Mirek Jiricka, building it into a global, multibillion-dollar digital video technology company that won an Emmy award and traded on NASDAQ." },
+      { year: "2005", event: "Pinnacle Systems is acquired by Avid Technology after nearly two decades as an independent public company." },
+      { year: "2006", event: "Joins Trinity Ventures as General Partner." },
+      { year: "2016", event: "TubeMogul, a Trinity portfolio company, is acquired by Adobe for approximately $540 million." }
+    ],
+    biography: "Ajay Chopra co-founded Pinnacle Systems in 1986, growing it literally from his own living room into a global, multibillion-dollar digital video technology company that won an Emmy award and traded on NASDAQ for nearly two decades before its acquisition by Avid Technology. That founder's-eye view of the entire company-building journey — from a two-person operation to a public company — shapes his approach at Trinity Ventures, which he joined as General Partner in 2006, describing himself as 'a VC with an entrepreneur's heart' who empathizes directly with the emotional rollercoaster founders face. He has led Trinity's investments across consumer and enterprise applications, autonomy, mobility, and digital health, with notable exits including TubeMogul's roughly $540 million acquisition by Adobe in 2016 and Fitstar's acquisition by Under Armour.",
+    sources: [
+      { label: "Trinity Ventures — Ajay Chopra", url: "https://www.trinityventures.com/team/ajay-chopra" },
+      { label: "Wikipedia — Pinnacle Systems", url: "https://en.wikipedia.org/wiki/Pinnacle_Systems" }
+    ]
+ 
   },
 };
