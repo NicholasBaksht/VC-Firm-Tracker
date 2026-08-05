@@ -6714,4 +6714,38 @@ sources: [
       { label: "TechCrunch", url: "https://techcrunch.com/2016/06/29/shasta-ventures-is-raising-a-300-million-fifth-fund/" }
     ]
   },
+"scott-maxwell": {
+    name: "Scott Maxwell",
+    firm: "OpenView Venture Partners",
+    firmSlug: "openview-venture-partners",
+    title: "Founder & Managing Partner",
+    joinedYear: 2006,
+    education: ["BS & MA, University of California, Davis"],
+    previousExperience: [
+      "Senior VP & Division CFO, Lehman Brothers",
+      "Partner & Managing Director of Corporate Development, Putnam Investments (ran alternative asset management program)",
+      "Chief Operating Officer, Insight Venture Partners (2000-2006, institutionalized its investment process and value-add program)"
+    ],
+    investmentFocus: ["Enterprise Software", "SaaS", "Fintech"],
+    notableInvestments: [
+      { name: "Datadog", ticker: "DDOG" },
+      { name: "Expensify", ticker: "EXFY" },
+      { name: "Calendly", ticker: null }
+    ],
+    boardSeats: [],
+    ipoCount: 2,
+    majorExits: 35,
+    careerTimeline: [
+      { year: "1990s", event: "Works in financial services throughout the decade, including as a Senior VP and division CFO at Lehman Brothers and a Partner at Putnam Investments." },
+      { year: "2000", event: "Joins Insight Venture Partners as Chief Operating Officer, institutionalizing its investment process, outbound program, and value-add capabilities." },
+      { year: "2001", event: "Begins leading deal work at Insight, ultimately investing in eight of its portfolio companies." },
+      { year: "2006", event: "Founds OpenView Venture Partners in Boston, applying his institutionalization playbook to expansion-stage B2B software investing." },
+      { year: "2021", event: "Expensify completes its NASDAQ IPO in November at a $1.82 billion market cap; Datadog, another OpenView investment, is independently listed on NASDAQ at a $7.83 billion market cap." }
+    ],
+    biography: "Scott Maxwell spent the 1990s in financial services, including as a division CFO at Lehman Brothers and a Partner at Putnam Investments running its alternative asset management program, before joining Insight Venture Partners in 2000 as Chief Operating Officer. There he institutionalized the firm's investment process, outbound sourcing program, and value-add capabilities, eventually leading deal work himself across eight portfolio companies. He applied that same institutionalization philosophy when he founded OpenView Venture Partners in 2006, built specifically around the conviction that expansion-stage software companies need genuine operational expertise, not just capital, to scale successfully. Under Maxwell, OpenView built a proprietary 'Expansion Platform' offering hands-on support in pricing, packaging, and go-to-market execution, backing more than 60 companies including Datadog and Expensify through public listings, and the firm has raised $2.4 billion across seven funds since founding.",
+    sources: [
+      { label: "OpenView — Scott Maxwell", url: "https://openviewpartners.com/people/scott-maxwell/" },
+      { label: "Tracxn", url: "https://tracxn.com/d/venture-capital/openview" }
+    ]
+  },
 };
