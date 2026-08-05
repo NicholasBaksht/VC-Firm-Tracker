@@ -6321,4 +6321,39 @@ sources: [
       { label: "Atoms and Bits Interview", url: "https://www.atomsandbits.io/p/interview-with-avidan-ross-founder" }
     ]
   },
+  "jordan-jacobs": {
+    name: "Jordan Jacobs",
+    firm: "Radical Ventures",
+    firmSlug: "radical-ventures",
+    title: "Co-Founder & Managing Partner",
+    joinedYear: 2017,
+    education: [],
+    previousExperience: [
+      "Entertainment Lawyer",
+      "Co-Founder, Milq (cultural content discovery platform, 2011)",
+      "Co-Founder & Co-CEO, Layer 6 AI (2016, acquired by TD Bank Group)",
+      "Chief AI Officer (Business & Strategy), TD Bank Group"
+    ],
+    investmentFocus: ["AI", "Machine Learning", "Deep Learning"],
+    notableInvestments: [
+      { name: "Layer 6 AI", ticker: null },
+      { name: "BenchSci", ticker: null },
+      { name: "Cohere", ticker: null }
+    ],
+    boardSeats: [],
+    ipoCount: 0,
+    majorExits: 1,
+    careerTimeline: [
+      { year: "2011", event: "Co-founds Milq, a cultural content discovery platform, with Tomi Poutanen." },
+      { year: "2016", event: "Co-founds Layer 6 AI as an AI-focused offshoot of Milq, alongside Poutanen and Maks Volkovs." },
+      { year: "2017", event: "Co-founds the Vector Institute for Artificial Intelligence in Toronto with Poutanen and Geoffrey Hinton; co-founds Radical Ventures the same year." },
+      { year: "2018", event: "Layer 6 AI is acquired by TD Bank Group in January, roughly 15 months after founding; joins TD as Chief AI Officer." },
+      { year: "2019", event: "Leaves TD Bank to run Radical Ventures full-time, launching a $471 million CAD fund." }
+    ],
+    biography: "Jordan Jacobs came to AI investing through an unusual path — a former entertainment lawyer who co-founded a cultural content platform called Milq in 2011, then spun out an AI-focused offshoot, Layer 6 AI, in 2016 with fellow Milq co-founder Tomi Poutanen and Maks Volkovs, a student of deep learning pioneer Geoffrey Hinton. TD Bank Group acquired Layer 6 just 15 months after its founding, and Jacobs joined as Chief AI Officer before co-founding the Vector Institute for Artificial Intelligence with Poutanen and Hinton, an initiative that became central to Canada's national AI strategy. He left TD in 2019 to run Radical Ventures full-time, building North America's first dedicated AI-focused venture fund, and has since recruited an unusually prominent scientific bench including Fei-Fei Li and Daphne Koller as Scientific Partners. Jacobs sits on the board of the Canadian Institute for Advanced Research, helped author Canada's national AI strategy, and was named one of Toronto's 50 Most Influential People.",
+    sources: [
+      { label: "Radical Ventures — Jordan Jacobs", url: "https://radical.vc/team/jordan-jacobs/" },
+      { label: "The Globe and Mail", url: "https://www.theglobeandmail.com/business/article-radical-ventures-to-launch-350-million-ai-focused-venture-fund/" }
+    ]
+  },
 };
