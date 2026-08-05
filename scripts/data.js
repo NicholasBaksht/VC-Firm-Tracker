@@ -5654,6 +5654,39 @@ sources: [
       { label: "Global Private Capital Association", url: "https://www.globalprivatecapital.org/team_member/christine-tsai/" }
     ]
   },
+   "gilman-louie": {
+    name: "Gilman Louie",
+    firm: "In-Q-Tel",
+    firmSlug: "in-q-tel",
+    title: "Founding CEO",
+    joinedYear: 1999,
+    education: [],
+    previousExperience: [
+      "Video game designer and developer (co-created Falcon flight simulator)",
+      "CEO, Spectrum Holobyte / MicroProse (video game publisher)"
+    ],
+    investmentFocus: ["AI", "Cybersecurity", "Biotech", "Space Technology", "Frontier Tech"],
+    notableInvestments: [
+      { name: "Palantir", ticker: "PLTR" },
+      { name: "Keyhole (Google Earth)", ticker: null },
+      { name: "Ginkgo Bioworks", ticker: "DNA" }
+    ],
+    boardSeats: [],
+    ipoCount: 2,
+    majorExits: 3,
+    careerTimeline: [
+      { year: "1990s", event: "Builds a career as a video game designer and executive, co-creating the Falcon flight simulator and leading Spectrum Holobyte/MicroProse." },
+      { year: "1999", event: "Named founding CEO of In-Q-Tel, chartered by CIA Director George Tenet to close the technology gap between Silicon Valley and the intelligence community." },
+      { year: "2003", event: "Leads In-Q-Tel's roughly $2 million investment in Palantir, one of the company's only institutional backers in its earliest years." },
+      { year: "2004", event: "In-Q-Tel-backed Keyhole is acquired by Google, later becoming Google Earth." },
+      { year: "2020", event: "Palantir completes its direct listing on the NYSE under ticker PLTR." }
+    ],
+    biography: "Gilman Louie came to venture capital from an unlikely background — a video game industry executive who co-created the Falcon flight simulator and ran Spectrum Holobyte and MicroProse — before being named founding CEO of In-Q-Tel in 1999. Chartered by CIA Director George Tenet after the agency recognized it was falling behind Silicon Valley's pace of innovation, In-Q-Tel represented something unprecedented: a nonprofit venture fund built specifically to connect classified government needs with private-sector technology, rather than building everything in-house through traditional slow-moving procurement. Louie's most consequential bet came in 2003, when In-Q-Tel invested roughly $2 million in a then-unproven data analytics startup called Palantir — for years, In-Q-Tel and the CIA were essentially Palantir's only backers and only customers, providing critical early validation years before its 2020 direct listing at a valuation that eventually surpassed traditional defense contracting giants like Lockheed Martin and Northrop Grumman.",
+    sources: [
+      { label: "Fortune", url: "https://finance.yahoo.com/news/meet-cia-backed-venture-fund-100000286.html" },
+      { label: "Boss Hunting", url: "https://www.bosshunting.com.au/hustle/in-q-tel-cia-venture-capital-firm" }
+    ]
+  },
 };
 
 // ============================================================
@@ -5839,7 +5872,8 @@ const firmStages = {
    "launch-africa-ventures": ["Seed", "Series A"],
    "foundation-capital": ["Seed", "Series A", "Growth"],
    "nexus-venture-partners": ["Seed", "Series A"],
-   "500-global": ["Pre-Seed", "Seed", "Series A"]
+   "500-global": ["Pre-Seed", "Seed", "Series A"],
+   "in-q-tel": ["Seed", "Series A", "Growth"]
 };
 
 // ============================================================
@@ -10157,6 +10191,34 @@ const firms = [
       { year: "2024", event: "Portfolio reaches 100 companies with a collective value exceeding $6 billion." }
     ],
     holdings: []
+  },
+   {
+    rank: 81,
+    name: "In-Q-Tel",
+    sectors: ["AI", "Cybersecurity", "Deep Tech", "Defense Tech"],
+    signatureExit: "Palantir's 2020 NYSE direct listing under ticker PLTR — In-Q-Tel invested roughly $2 million in 2003, when it and the CIA were essentially the company's only backers and only customers, years before Palantir's valuation surpassed traditional defense contracting giants like Lockheed Martin",
+    slug: "in-q-tel",
+    website: "https://www.iqt.org",
+    short: "In-Q-Tel",
+    founded: 1999,
+    hq: "Arlington, VA",
+    aum: "Not publicly disclosed (Fortune estimates at least $1.8B deployed since 1999, based on 26 years of tax filings)",
+    thesis: "In-Q-Tel was chartered by the CIA in February 1999 under Director George Tenet, founded by former Lockheed Martin CEO Norm Augustine and video-game-industry veteran Gilman Louie as founding CEO, built to close a widening gap between Silicon Valley's pace of innovation and the U.S. intelligence community's traditionally slow procurement processes. Structured as a nonprofit rather than a traditional fund, In-Q-Tel invests government and philanthropic-style capital directly into startups building frontier technology — AI, cybersecurity, biotech, and space — with the explicit goal of getting those capabilities into the hands of the CIA and allied intelligence and defense agencies faster than conventional contracting ever could. Over 26 years, the fund has helped launch more than 800 companies, is an investor in 32 of this year's NatSec 100 fastest-growing defense startups (more than any other fund), and produced early, formative bets on Palantir, Keyhole (which became Google Earth), and Ginkgo Bioworks.",
+    leadership: [
+      { name: "Gilman Louie", role: "Founding CEO", profileSlug: "gilman-louie" },
+      { name: "Norm Augustine", role: "Founding Chairman" }
+    ],
+    timeline: [
+      { year: "1999", event: "The CIA charters In-Q-Tel in February, under Director George Tenet." },
+      { year: "2003", event: "Invests roughly $2 million in Palantir, one of the company's only early backers." },
+      { year: "2004", event: "Keyhole, an In-Q-Tel-backed geospatial visualization company, is acquired by Google, later becoming Google Earth." },
+      { year: "2020", event: "Palantir completes its direct listing on the NYSE." },
+      { year: "2021", event: "Ginkgo Bioworks goes public via SPAC merger under ticker DNA." }
+    ],
+    holdings: [
+      { name: "Palantir", ticker: "PLTR", historicalPrice: null, price: null },
+      { name: "Ginkgo Bioworks", ticker: "DNA", historicalPrice: null, price: null }
+    ]
   },
    {
     rank: 74,
