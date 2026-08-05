@@ -2003,6 +2003,38 @@ const firms = [
     ],
     holdings: []
   },
+  {
+    rank: 16,
+    name: "U.S. Venture Partners",
+    sectors: ["Enterprise Software", "Cybersecurity", "Consumer", "Healthcare"],
+    signatureExit: "Yammer's $1.2 billion acquisition by Microsoft in 2012 — USVP was an early investor in the enterprise social networking company, one of 93-plus IPOs and countless acquisitions across the firm's four-decade history",
+    slug: "us-venture-partners",
+    website: "https://www.usvp.com",
+    short: "USVP",
+    founded: 1981,
+    hq: "Menlo Park, CA",
+    aum: "$4.3B+ (invested since inception)",
+    thesis: "U.S. Venture Partners was founded in 1981 by Bill Bowes, Stuart Moldaw, and Robert Sackman, making it one of the earliest true institutional venture firms in Silicon Valley, predating most of the industry's now-legendary names. Bowes brought a uniquely deep biotechnology pedigree from his role as a founding shareholder and first Chairman of Amgen, and that scientific and technical rigor has anchored USVP's investing across four decades since, concentrated in cybersecurity, enterprise software, consumer internet, and IT-enabled healthcare. The firm specializes in leading Series A and B rounds with a genuine domain-expert team of former entrepreneurs, CEOs, and technologists, and has invested more than $4.3 billion across more than 500 companies, with 93-plus completed IPOs including Check Point Software, SanDisk, Ross Stores, Box, and Yammer.",
+    leadership: [
+      { name: "Bill Bowes", role: "Co-Founder", profileSlug: "bill-bowes" },
+      { name: "Stuart Moldaw", role: "Co-Founder" },
+      { name: "Robert Sackman", role: "Co-Founder" },
+      { name: "Jacques Benkoski", role: "General Partner" },
+      { name: "Rick Lewis", role: "General Partner" }
+    ],
+    timeline: [
+      { year: "1981", event: "Bill Bowes, Stuart Moldaw, and Robert Sackman found U.S. Venture Partners in Menlo Park." },
+      { year: "1996", event: "Check Point Software completes its IPO." },
+      { year: "2012", event: "Yammer, an early USVP investment, is acquired by Microsoft for $1.2 billion." },
+      { year: "2015", event: "Box completes its IPO." },
+      { year: "2022", event: "Closes its thirteenth fund, USVP XIII, at $400 million in December." }
+    ],
+    holdings: [
+      { name: "Check Point Software", ticker: "CHKP", historicalPrice: null, price: null },
+      { name: "Ross Stores", ticker: "ROST", historicalPrice: null, price: null },
+      { name: "Box", ticker: "BOX", historicalPrice: null, price: null }
+    ]
+  },
 {
     rank: 20,
     name: "Foundation Capital",
