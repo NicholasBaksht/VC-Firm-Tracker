@@ -4983,6 +4983,30 @@ const firms = [
     ],
     holdings: []
   },
+  {
+    rank: 88,
+    name: "Prosus Ventures",
+    sectors: ["Fintech", "AI", "Enterprise Software", "Consumer"],
+    signatureExit: "Advolve.AI's acquisition by iFood in 2025 — a Prosus Ventures portfolio company acquired by iFood, itself a wholly-owned Prosus subsidiary since 2022 and Latin America's dominant food delivery platform",
+    slug: "prosus-ventures",
+    website: "https://www.prosus.com/prosus-ventures",
+    short: "Prosus Ventures",
+    founded: 2015,
+    hq: "Amsterdam, Netherlands",
+    aum: "$400M+ (deployed in FY25)",
+    thesis: "Prosus Ventures, formerly Naspers Ventures, is the early-stage investing arm of Prosus, one of the world's largest technology investors with roots tracing back to South African media company Naspers. Founded in 2015, the fund focuses deliberately on high-growth emerging markets — Latin America, India, and Southeast Asia — investing in fintech, logistics, edtech, foodtech, and AI services that complement Prosus's broader portfolio of controlled businesses like iFood and PayU. That structural advantage, leveraging Prosus's global operating network and subsidiary integrations rather than capital alone, has helped Prosus Ventures make more than 230 investments to date, deploying over $400 million in FY25 across more than 40 new deals, under the strategic direction of Prosus CEO Fabricio Bloisi, himself the founder who built iFood into Latin America's dominant food delivery platform before Prosus acquired it outright in 2022.",
+    leadership: [
+      { name: "Fabricio Bloisi", role: "CEO, Prosus (parent company)", profileSlug: "fabricio-bloisi" },
+      { name: "Ashutosh Sharma", role: "Head of Investments, India" }
+    ],
+    timeline: [
+      { year: "2015", event: "Prosus Ventures (then Naspers Ventures) is founded in Amsterdam." },
+      { year: "2019", event: "Prosus lists separately from Naspers on Euronext Amsterdam." },
+      { year: "2022", event: "Prosus acquires the final 33% stake in iFood, making it a wholly-owned subsidiary." },
+      { year: "2025", event: "Advolve.AI is acquired by iFood; Prosus Ventures deploys more than $400 million across 40-plus new investments in FY25." }
+    ],
+    holdings: []
+  },
    {
     rank: 84,
     name: "Gradient Ventures",
