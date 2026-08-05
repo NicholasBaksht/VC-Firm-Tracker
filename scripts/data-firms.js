@@ -610,6 +610,35 @@ const firms = [
     ],
     holdings: []
   },
+  {
+    rank: 23,
+    name: "Greycroft",
+    sectors: ["Enterprise Software", "Fintech", "Consumer", "AI"],
+    signatureExit: "Venmo — Greycroft was an early seed investor in the payments app; Braintree, which had acquired Venmo, was sold to PayPal for $800 million in 2013",
+    slug: "greycroft",
+    website: "https://www.greycroft.com",
+    short: "Greycroft",
+    founded: 2006,
+    hq: "New York, NY",
+    aum: "$3B+ (across all funds)",
+    thesis: "Greycroft was founded in 2006 by Alan Patricof — a venture capital pioneer who'd founded the predecessor to Apax Partners decades earlier and was an early investor in both Apple and AOL — alongside Dana Settle and Ian Sigalow, after Patricof left Apax specifically to return to smaller, earlier-stage investing. The firm built its identity around three founding principles: venture capital as a relationship-driven repeat business, fund economics deliberately sized to stay aligned with founders rather than maximizing assets under management, and a separate growth fund to support portfolio companies at every later stage. That early conviction produced Venmo, HuffPost, and Goop among its earliest bets, and Greycroft has grown into a genuinely bicoastal-plus platform with offices in New York, Los Angeles, and the San Francisco Bay Area, closing more than $1 billion across new funds in April 2023 alone and surpassing $3 billion in assets under management since inception.",
+    leadership: [
+      { name: "Alan Patricof", role: "Co-Founder & Chairman" },
+      { name: "Dana Settle", role: "Co-Founder & Managing Partner", profileSlug: "dana-settle" },
+      { name: "Ian Sigalow", role: "Co-Founder & Managing Partner" }
+    ],
+    timeline: [
+      { year: "2006", event: "Alan Patricof, Dana Settle, and Ian Sigalow found Greycroft, raising a $75 million debut fund." },
+      { year: "2012", event: "Leads an early seed investment in Venmo." },
+      { year: "2013", event: "Braintree, which had acquired Venmo, is sold to PayPal for $800 million." },
+      { year: "2019", event: "The RealReal completes its IPO." },
+      { year: "2021", event: "Bird Global completes a SPAC merger at a $2.3 billion valuation in November; the company is later delisted from the NYSE in 2023 after revenue overstatement, and files for Chapter 11 bankruptcy in December 2023." },
+      { year: "2023", event: "Closes more than $1 billion across new funds in April, pushing total AUM past $3 billion." }
+    ],
+    holdings: [
+      { name: "The RealReal", ticker: "REAL", historicalPrice: null, price: null }
+    ]
+  },
    {
     rank: 40,
     name: "Slow Ventures",
