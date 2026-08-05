@@ -278,7 +278,8 @@ const firmStages = {
    "munich-re-ventures": ["Seed", "Series A", "Series B", "Growth"],
    "dawn-capital": ["Series A", "Series B", "Growth"],
    "notion-capital": ["Seed", "Series A", "Series B", "Growth"],
-   "earlybird-venture-capital": ["Seed", "Series A", "Series B", "Growth"]
+   "earlybird-venture-capital": ["Seed", "Series A", "Series B", "Growth"],
+   "prosus-ventures": ["Seed", "Series A", "Growth"]
 };
 
 // ============================================================
