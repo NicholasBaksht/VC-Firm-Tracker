@@ -8791,6 +8791,30 @@ const firms = [
     ],
     holdings: []
   },
+{
+    rank: 43,
+    name: "Novastar Ventures",
+    sectors: ["Consumer", "Climate", "Healthcare", "Enterprise Software"],
+    signatureExit: "No confirmed public exit yet — Novastar's clearest proof points are its early bets on Bridge International Academies, Sanergy, mPharma, and SolarNow, all real, still-growing companies serving East and West Africa's mass-market consumer needs",
+    slug: "novastar-ventures",
+    website: "https://www.novastarventures.com",
+    short: "Novastar Ventures",
+    founded: 2014,
+    hq: "London, UK",
+    aum: "~$260M (across three funds)",
+    thesis: "Novastar Ventures was founded in 2014 by Andrew Carruthers and Steve Beck, applying two decades of traditional fund-management discipline to a deliberately mass-market thesis: that venture capital could profitably serve East and West Africa's largest underserved consumer needs — affordable housing, education, sanitation, healthcare, and energy — rather than chasing a narrow tech elite. That philosophy shaped early bets on Bridge International Academies, Sanergy, mPharma, and SolarNow, growing Novastar into one of Africa's largest and most established dedicated venture capital firms. The firm operates from London, Nairobi, and Lagos, and closed its newest vehicle, the Africa People and Planet Fund III, at $147 million in early 2026 — its first fund to deploy on a genuinely pan-African basis rather than a single regional focus.",
+    leadership: [
+      { name: "Andrew Carruthers", role: "Co-Founder & Managing Partner", profileSlug: "andrew-carruthers" },
+      { name: "Steve Beck", role: "Co-Founder & Managing Partner" },
+      { name: "Niraj Varia", role: "Partner" }
+    ],
+    timeline: [
+      { year: "2014", event: "Andrew Carruthers and Steve Beck found Novastar Ventures, raising the East Africa Fund (Fund I)." },
+      { year: "2020", event: "Closes Africa Fund II, anchored by the European Investment Bank and British International Investment." },
+      { year: "2026", event: "Closes the Africa People and Planet Fund III at $147 million in early 2026, its first pan-African vehicle." }
+    ],
+    holdings: []
+  },
    {
     rank: 47,
     name: "Canary",
