@@ -5792,6 +5792,38 @@ sources: [
       { label: "Slow Ventures — About", url: "https://slow.co/about/" }
     ]
   },
+   "brad-svrluga": {
+    name: "Brad Svrluga",
+    firm: "Primary Venture Partners",
+    firmSlug: "primary-venture-partners",
+    title: "Co-Founder & Managing Partner",
+    joinedYear: 2015,
+    education: ["BA, Economics, Williams College"],
+    previousExperience: [
+      "Strategy Consulting",
+      "Co-Founder, High Peaks Venture Partners (2003, predecessor to Primary)"
+    ],
+    investmentFocus: ["Enterprise Software", "Fintech", "Supply Chain", "Industrial Technology"],
+    notableInvestments: [
+      { name: "Jet.com", ticker: null },
+      { name: "Mirror", ticker: null }
+    ],
+    boardSeats: [],
+    ipoCount: 0,
+    majorExits: 2,
+    careerTimeline: [
+      { year: "2003", event: "Co-founds High Peaks Venture Partners, beginning nearly two decades of NYC-focused early-stage investing." },
+      { year: "2015", event: "Co-founds Primary Venture Partners with Ben Sun, as a successor to High Peaks Ventures." },
+      { year: "2016", event: "Jet.com, an early investment via the predecessor fund, is acquired by Walmart for approximately $3.3 billion." },
+      { year: "2020", event: "Mirror is acquired by Lululemon for $500 million." },
+      { year: "2024", event: "Closes $425 million across two new funds in February, a $275M seed fund and $150M continuation vehicle." }
+    ],
+    biography: "Brad Svrluga began his career in strategy consulting before co-founding High Peaks Venture Partners in 2003, spending more than a decade investing in and around New York's technology ecosystem. He co-founded Primary Venture Partners with Ben Sun in 2015 as High Peaks' successor, built around a specific conviction that took shape after the 2008 financial crisis: a wave of the city's most talented people were shifting from Wall Street and Madison Avenue into startups, and New York needed a seed fund with the scale and NYC-specific expertise to back them properly. That thesis produced early bets on Jet.com, acquired by Walmart for roughly $3.3 billion, and Mirror, acquired by Lululemon for $500 million, and Svrluga has grown Primary into New York's largest early-stage firm by operator headcount, with roughly 50 full-time staff and more than 20 dedicated platform operators supporting portfolio companies on hiring and go-to-market execution.",
+    sources: [
+      { label: "Primary VC Team", url: "https://www.primary.vc/brad-svrluga" },
+      { label: "AlleyWatch", url: "https://www.alleywatch.com/2018/06/inside-the-mind-of-a-nyc-vc-brad-svrluga-of-primary-venture-partners/" }
+    ]
+  },
 };
 
 // ============================================================
@@ -5981,7 +6013,8 @@ const firmStages = {
    "in-q-tel": ["Seed", "Series A", "Growth"],
    "rre-ventures": ["Seed", "Series A", "Series B", "Growth"],
    "8vc": ["Seed", "Series A", "Series B", "Growth"],
-   "slow-ventures": ["Pre-Seed", "Seed", "Series A"]
+   "slow-ventures": ["Pre-Seed", "Seed", "Series A"],
+   "primary-venture-partners": ["Pre-Seed", "Seed"]
 };
 
 // ============================================================
@@ -6633,6 +6666,31 @@ const firms = [
       { name: "PagerDuty", ticker: "PD", historicalPrice: null, price: null },
       { name: "BuzzFeed", ticker: "BZFD", historicalPrice: null, price: null }
     ]
+  },
+   {
+    rank: 41,
+    name: "Primary Venture Partners",
+    sectors: ["Fintech", "Consumer", "Healthcare", "Enterprise Software"],
+    signatureExit: "Jet.com's approximately $3.3 billion acquisition by Walmart in September 2016 — Brad Svrluga was an early investor via the firm's predecessor, High Peaks Ventures",
+    slug: "primary-venture-partners",
+    website: "https://www.primary.vc",
+    short: "Primary Venture Partners",
+    founded: 2015,
+    hq: "New York, NY",
+    aum: "~$1B",
+    thesis: "Primary Venture Partners was founded in 2015 by Brad Svrluga and Ben Sun as a successor to High Peaks Ventures, built around a specific bet that crystallized after the 2008 financial crisis: New York's most talented people were shifting from Wall Street and Madison Avenue into startups, and the city needed a seed fund with genuine scale and hyper-local expertise to back them. The firm has become NYC's largest early-stage firm by operator headcount, with roughly 50 full-time staff and more than 20 dedicated platform operators embedded in portfolio companies on hiring, go-to-market execution, and follow-on fundraising — a deliberately builder-first model rather than a purely capital-first one. That approach produced early bets on Jet.com, acquired by Walmart for roughly $3.3 billion, and Mirror, acquired by Lululemon for $500 million, and Primary now manages approximately $1 billion, closing $425 million across two new funds in early 2024.",
+    leadership: [
+      { name: "Brad Svrluga", role: "Co-Founder & Managing Partner", profileSlug: "brad-svrluga" },
+      { name: "Ben Sun", role: "Co-Founder & General Partner" }
+    ],
+    timeline: [
+      { year: "2015", event: "Brad Svrluga and Ben Sun found Primary Venture Partners, succeeding High Peaks Ventures." },
+      { year: "2016", event: "Jet.com is acquired by Walmart for approximately $3.3 billion." },
+      { year: "2018", event: "Closes a $100 million second fund in June." },
+      { year: "2020", event: "Mirror is acquired by Lululemon for $500 million." },
+      { year: "2024", event: "Closes $425 million across two new funds in February, bringing AUM to approximately $1 billion." }
+    ],
+    holdings: []
   },
    {
     rank: 15,
