@@ -5110,6 +5110,31 @@ const firms = [
       { name: "Datadog", ticker: "DDOG", historicalPrice: null, price: null }
     ]
   },
+  {
+    rank: 25,
+    name: "Foundry Group",
+    sectors: ["Enterprise Software", "Consumer", "AI"],
+    signatureExit: "Fitbit's approximately $2.1 billion acquisition by Google in 2019 — an early Foundry investment, alongside Zynga's IPO at a $7 billion valuation and Gnip's acquisition by Twitter",
+    slug: "foundry-group",
+    website: "https://foundrygroup.com",
+    short: "Foundry Group",
+    founded: 2006,
+    hq: "Boulder, CO",
+    aum: "$1.8B+ (across nine funds since founding)",
+    thesis: "Foundry Group was founded in 2006 in Boulder, Colorado, by four friends who'd worked together at Mobius Venture Capital — Brad Feld, Seth Levine, Ryan McIntyre, and Jason Mendelson — sharing frustration with the opacity and founder-unfriendly terms common across traditional venture capital. They built Foundry around a genuinely radical transparency: every partner's email address follows a simple firstname@foundrygroup.com format, and the firm made a deliberate pact to stay small, partner-driven, and obsessed with craft rather than scaling into an institution. That founder-first philosophy, paired with Feld's parallel work building Techstars and popularizing the 'Boulder Thesis' for building startup ecosystems outside Silicon Valley, backed more than 200 companies including Fitbit, Zynga, and Gnip. In January 2024, the firm announced Foundry 2022 would be its final fund, choosing a deliberate, planned conclusion to new investing after nearly two decades and roughly $1.8 billion raised across nine funds.",
+    leadership: [
+      { name: "Brad Feld", role: "Co-Founder & Managing Director", profileSlug: "brad-feld" },
+      { name: "Seth Levine", role: "Co-Founder & Managing Director" },
+      { name: "Jason Mendelson", role: "Co-Founder & Managing Director" }
+    ],
+    timeline: [
+      { year: "2006", event: "Brad Feld, Seth Levine, Ryan McIntyre, and Jason Mendelson found Foundry Group in Boulder." },
+      { year: "2011", event: "Zynga completes its IPO at a $7 billion valuation." },
+      { year: "2019", event: "Fitbit is acquired by Google for approximately $2.1 billion." },
+      { year: "2024", event: "Announces Foundry 2022 as its final fund in January, planning to conclude new investments." }
+    ],
+    holdings: []
+  },
    {
     rank: 84,
     name: "Gradient Ventures",
