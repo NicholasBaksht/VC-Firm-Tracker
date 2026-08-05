@@ -6421,4 +6421,38 @@ sources: [
       { label: "SEC Filing", url: "https://www.sec.gov/Archives/edgar/data/1824920/000119312521109819/d17191d425.htm" }
     ]
   },
+  "anand-kamannavar": {
+    name: "Anand Kamannavar",
+    firm: "Applied Ventures",
+    firmSlug: "applied-ventures",
+    title: "Founder & Global Head",
+    joinedYear: 2006,
+    education: [],
+    previousExperience: [
+      "Engineering & Business Development, Hewlett-Packard server group (held multiple US patents)",
+      "Co-Founder, Precision Information Systems (financial data & tools for Ameritrade, New York Life, Intuit)",
+      "Atlas Ventures",
+      "Arch Development Partners"
+    ],
+    investmentFocus: ["Semiconductors", "Materials Science", "Deep Tech", "AI"],
+    notableInvestments: [
+      { name: "Enphase Energy", ticker: "ENPH" },
+      { name: "Adesto Technologies", ticker: "IOTS" },
+      { name: "Voltaix", ticker: null }
+    ],
+    boardSeats: [],
+    ipoCount: 2,
+    majorExits: 12,
+    careerTimeline: [
+      { year: "2000s", event: "Works in engineering and business development at Hewlett-Packard's server group, earning multiple US patents; co-founds Precision Information Systems." },
+      { year: "2006", event: "Joins Applied Ventures, focused on semiconductor, energy, materials, and India-based investments." },
+      { year: "2010s", event: "Leads more than a dozen venture investments with successful exits including Enphase Energy and Adesto Technologies, both completing NASDAQ IPOs." },
+      { year: "2020s", event: "Grows Applied Ventures' portfolio to more than 90 companies across 17-18 countries, managing more than $400 million." }
+    ],
+    biography: "Anand Kamannavar built his path to venture capital through hands-on engineering and business development at Hewlett-Packard's server group, where he earned multiple US patents, and co-founding Precision Information Systems, a financial data platform serving Ameritrade, New York Life, and Intuit. After stints at Atlas Ventures and Arch Development Partners, he joined Applied Ventures in 2006, eventually rising to Global Head of Applied Materials' venture capital fund. He has led more than a dozen venture investments with successful exits, including NASDAQ listings for Enphase Energy and Adesto Technologies and Voltaix's acquisition by Air Liquide, and now oversees a more than $400 million portfolio spanning 90-plus companies across 17 countries. Kamannavar has described Applied Ventures as deliberately stage-agnostic and 'very active,' reviewing roughly 700 applications a year and selecting just five or six new investments, with a particular focus on advancing Moore's Law through semiconductor, materials science, and deep tech breakthroughs.",
+    sources: [
+      { label: "Applied Materials — Anand Kamannavar", url: "https://www.appliedmaterials.com/us/en/applied-ventures/av-team/anand-kamannavar.html" },
+      { label: "Electronics360", url: "https://electronics360.globalspec.com/article/18506/applied-ventures-applies-investments-around-the-world" }
+    ]
+  },
 };
