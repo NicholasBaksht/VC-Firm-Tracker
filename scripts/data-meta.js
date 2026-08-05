@@ -285,7 +285,8 @@ const firmStages = {
    "shasta-ventures": ["Seed", "Series A", "Series B"],
    "openview-venture-partners": ["Series A", "Series B", "Growth"],
    "foundry-group": ["Seed", "Series A", "Series B"],
-   "dcm-ventures": ["Seed", "Series A", "Series B", "Series C"]
+   "dcm-ventures": ["Seed", "Series A", "Series B", "Series C"],
+   "idg-capital": ["Series A", "Series B", "Growth", "Late Stage"]
 };
 
 // ============================================================
