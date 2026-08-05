@@ -280,7 +280,8 @@ const firmStages = {
    "notion-capital": ["Seed", "Series A", "Series B", "Growth"],
    "earlybird-venture-capital": ["Seed", "Series A", "Series B", "Growth"],
    "prosus-ventures": ["Seed", "Series A", "Growth"],
-   "antler": ["Pre-Seed", "Seed", "Series A"]
+   "antler": ["Pre-Seed", "Seed", "Series A"],
+   "trinity-ventures": ["Seed", "Series A", "Series B"]
 };
 
 // ============================================================
