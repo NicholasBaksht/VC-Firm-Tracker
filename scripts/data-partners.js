@@ -6518,4 +6518,37 @@ sources: [
       { label: "GlobeNewswire", url: "https://www.globenewswire.com/en/news-release/2021/07/22/2267257/0/en/Dawn-Capital-raises-120-million-for-second-later-stage-fund-Dawn-Opportunities-Fund-II-bringing-total-raised-over-last-12-months-to-520-million.html" }
     ]
   },
+  "stephen-chandler": {
+    name: "Stephen Chandler",
+    firm: "Notion Capital",
+    firmSlug: "notion-capital",
+    title: "Managing Partner & Co-Founder",
+    joinedYear: 2008,
+    education: [],
+    previousExperience: [
+      "Investment Banker, UBS",
+      "Founding Team, Star Internet",
+      "Founding Team & CFO/EMEA GM, MessageLabs"
+    ],
+    investmentFocus: ["SaaS", "Fintech", "Enterprise Software"],
+    notableInvestments: [
+      { name: "Currencycloud", ticker: null },
+      { name: "GoCardless", ticker: null },
+      { name: "Funding Circle", ticker: null }
+    ],
+    boardSeats: [],
+    ipoCount: 1,
+    majorExits: 2,
+    careerTimeline: [
+      { year: "1990s", event: "Works as an investment banker at UBS before joining the founding team of Star Internet, one of the UK's first ISPs." },
+      { year: "2000", event: "Joins the founding team of MessageLabs as CFO and EMEA GM, one of the world's first SaaS companies." },
+      { year: "2008", event: "Leads MessageLabs' $700 million acquisition by Symantec in October, amid the Lehman Brothers collapse; co-founds Notion Capital the same year." },
+      { year: "2021", event: "Currencycloud, an early Notion investment, is acquired by Visa." }
+    ],
+    biography: "Stephen Chandler left investment banking at UBS to join the founding team of Star Internet, one of the UK's first ISPs, before helping build MessageLabs as CFO and EMEA GM over a ten-year journey he's described as full of challenges and friendships. He personally led MessageLabs' $700 million acquisition by Symantec in October 2008, closing the deal amid the terrifying market upheaval following Lehman Brothers' collapse, then immediately co-founded Notion Capital with fellow MessageLabs executives Ben White, Jos White, Chris Tottman, and Ian Milbourn, using roughly £20 million of their own capital from the exit. Chandler has since built Notion into a leading European B2B SaaS investor, applying the operational lessons from a decade of building and selling technology companies directly to backing the next generation of European founders, with a portfolio including Currencycloud (acquired by Visa) and GoCardless.",
+    sources: [
+      { label: "Notion Capital — Stephen Chandler", url: "https://www.notioncapital.com/team/stephen-chandler" },
+      { label: "Science|Business", url: "https://sciencebusiness.net/news/70003/After-$695-M-sale-of-MessageLabs,-founders-form-new-fund-to-invest-IT-companies" }
+    ]
+  },
 };
