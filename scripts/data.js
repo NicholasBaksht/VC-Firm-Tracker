@@ -6063,6 +6063,38 @@ sources: [
       { label: "Global Venturing Powerlist", url: "https://globalventuring.com/corporate/corporate-venturer/powerlist-2023-paul-bernard/" }
     ]
   },
+   "anna-patterson": {
+    name: "Anna Patterson",
+    firm: "Gradient Ventures",
+    firmSlug: "gradient-ventures",
+    title: "Founder & Managing Partner",
+    joinedYear: 2017,
+    education: [],
+    previousExperience: [
+      "Founder, Recall (search engine, acquired by Google)",
+      "Founder, Cuil (search engine)",
+      "VP of Engineering, Google Search Quality"
+    ],
+    investmentFocus: ["AI", "Machine Learning", "Developer Tools", "Enterprise Software"],
+    notableInvestments: [
+      { name: "WRITER", ticker: null },
+      { name: "Lambda AI", ticker: null }
+    ],
+    boardSeats: [],
+    ipoCount: 0,
+    majorExits: 0,
+    careerTimeline: [
+      { year: "2000s", event: "Founds Recall, a search engine later acquired by Google, then founds Cuil, an ambitious rival search engine." },
+      { year: "2010s", event: "Serves as VP of Engineering for Google Search Quality, working directly on the core algorithms behind Google's search product." },
+      { year: "2017", event: "Founds Gradient Ventures as Google's early-stage AI-focused venture fund." },
+      { year: "2025", event: "Gradient Ventures spins out from Google as an independent investment entity in October, no longer operating as a corporate venture arm." }
+    ],
+    biography: "Anna Patterson built a rare technical pedigree in search and AI before turning to venture capital — founding Recall, a search engine acquired by Google, then the ambitious rival search engine Cuil, before returning to Google as VP of Engineering for Search Quality, working directly on the algorithms underlying its core product. She founded Gradient Ventures in 2017 to give Google's AI-focused seed investing a genuinely technical edge, staffing the fund primarily with ex-Google engineers who provide hands-on support on model architecture and data pipelines rather than purely financial guidance. That approach helped Gradient build a portfolio of more than 175 companies including unicorns WRITER and Lambda AI, and in October 2025 the fund reached a new inflection point, spinning out from Google entirely to operate as an independent investment firm better positioned to compete in the rapidly evolving AI venture landscape.",
+    sources: [
+      { label: "Gradient Ventures Team", url: "https://www.gradient.com/team/" },
+      { label: "f4.fund", url: "https://f4.fund/firms/gradient-ventures" }
+    ]
+  },
 };
 
 // ============================================================
@@ -6260,7 +6292,8 @@ const firmStages = {
    "upfront-ventures": ["Series A", "Growth"],
    "acrew-capital": ["Seed", "Series A"],
    "signalfire": ["Pre-Seed", "Seed", "Series A", "Series B"],
-   "amazon-alexa-fund": ["Series A", "Series B", "Growth"]
+   "amazon-alexa-fund": ["Series A", "Series B", "Growth"],
+   "gradient-ventures": ["Pre-Seed", "Seed", "Series A"]
 };
 
 // ============================================================
@@ -10832,6 +10865,31 @@ const firms = [
       { year: "2018", event: "Ring, an Alexa Fund portfolio company, is acquired directly by Amazon." },
       { year: "2023", event: "Portfolio reaches more than 130 investments and 21-plus exits." },
       { year: "2025", event: "Expands its investment mandate into AI-enabled hardware and smart agents." }
+    ],
+    holdings: []
+  },
+   {
+    rank: 84,
+    name: "Gradient Ventures",
+    sectors: ["AI", "Developer Tools", "Enterprise Software", "Fintech"],
+    signatureExit: "No confirmed exit yet — Gradient's clearest proof points are current unicorns WRITER and Lambda AI, both still privately held, within a broader 175-plus company portfolio",
+    slug: "gradient-ventures",
+    website: "https://www.gradient.com",
+    short: "Gradient Ventures",
+    founded: 2017,
+    hq: "Mountain View, CA",
+    aum: "$1B+",
+    thesis: "Gradient Ventures was founded in 2017 by Anna Patterson, a search engine founder and former VP of Engineering for Google Search Quality, as Google's dedicated early-stage AI-focused venture fund. Staffed primarily by ex-Google technical leaders rather than traditional finance-background investors, the fund gives portfolio companies genuinely hands-on support on AI model architecture, data pipelines, and access to Google's internal technical resources, backing AI-first startups often before they've reached product-market fit. In October 2025, Gradient reached a pivotal inflection point, spinning out from Google entirely to operate as an independent investment firm — a structural shift reflecting how competitive and fast-moving the AI venture landscape has become. The fund has backed more than 175 companies including unicorns WRITER and Lambda AI, with more than $1 billion in assets under management.",
+    leadership: [
+      { name: "Anna Patterson", role: "Founder & Managing Partner", profileSlug: "anna-patterson" },
+      { name: "Darian Shirazi", role: "General Partner" },
+      { name: "Zach Bratun-Glennon", role: "General Partner" }
+    ],
+    timeline: [
+      { year: "2017", event: "Anna Patterson founds Gradient Ventures as Google's AI-focused venture fund." },
+      { year: "2019", event: "Darian Shirazi joins as General Partner, after founding and exiting Radius to Kabbage." },
+      { year: "2023", event: "AUM surpasses $1 billion." },
+      { year: "2025", event: "Spins out from Google as an independent entity in October." }
     ],
     holdings: []
   },
