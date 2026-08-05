@@ -5164,6 +5164,35 @@ const firms = [
       { name: "SoFi", ticker: "SOFI", historicalPrice: null, price: null }
     ]
   },
+  {
+    rank: 9,
+    name: "IDG Capital",
+    sectors: ["Consumer", "AI", "Enterprise Software", "Fintech"],
+    signatureExit: "Tencent's 2004 IPO on the Hong Kong Stock Exchange — one of IDG Capital's earliest and most consequential bets, backing a company that grew into one of the world's most valuable technology companies",
+    slug: "idg-capital",
+    website: "https://www.idgcapital.com",
+    short: "IDG Capital",
+    founded: 1992,
+    hq: "Beijing, China",
+    aum: "$23B",
+    thesis: "IDG Capital was established in Boston in 1992 as the venture arm of International Data Group, and became China's first foreign-backed venture capital firm in 1993 when founding chairman Hugo Shong, a former factory worker and journalist, convinced IDG founder Patrick McGovern to fund the country's still-nascent technology sector. That first-mover position, secured before nearly any other institutional capital recognized China's opportunity, produced one of the most consequential venture portfolios in history: Tencent, Baidu, Xiaomi, Meituan, Pinduoduo, Nio, Ctrip, and SenseTime among more than 1,300 companies backed across mainland China, Hong Kong, the United States, and Europe. In a remarkable reversal in 2017, IDG Capital and China Oceanwide Holdings acquired International Data Group itself, the American parent company that had originally financed IDG's expansion into China 24 years earlier. The firm now manages $23 billion, with more than 100 unicorns and nearly 400 successful exits through IPOs and acquisitions.",
+    leadership: [
+      { name: "Hugo Shong", role: "Founding Chairman", profileSlug: "hugo-shong" }
+    ],
+    timeline: [
+      { year: "1992", event: "IDG Capital is established in Boston as the venture arm of International Data Group." },
+      { year: "1993", event: "Hugo Shong partners with Patrick McGovern to launch IDG Capital's China operations, the first foreign-backed VC firm in the country." },
+      { year: "2004", event: "Tencent completes its IPO on the Hong Kong Stock Exchange." },
+      { year: "2005", event: "Baidu completes its NASDAQ IPO." },
+      { year: "2017", event: "IDG Capital and China Oceanwide Holdings acquire International Data Group itself, in January." },
+      { year: "2021", event: "AUM reaches $23 billion." }
+    ],
+    holdings: [
+      { name: "Tencent", ticker: "0700.HK", historicalPrice: null, price: null },
+      { name: "Baidu", ticker: "BIDU", historicalPrice: null, price: null },
+      { name: "Xiaomi", ticker: "1810.HK", historicalPrice: null, price: null }
+    ]
+  },
    {
     rank: 84,
     name: "Gradient Ventures",
