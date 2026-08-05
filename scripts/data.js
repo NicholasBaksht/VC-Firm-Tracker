@@ -5824,6 +5824,40 @@ sources: [
       { label: "AlleyWatch", url: "https://www.alleywatch.com/2018/06/inside-the-mind-of-a-nyc-vc-brad-svrluga-of-primary-venture-partners/" }
     ]
   },
+   "ben-lerer": {
+    name: "Ben Lerer",
+    firm: "Lerer Hippeau",
+    firmSlug: "lerer-hippeau",
+    title: "Co-Founder & Managing Partner",
+    joinedYear: 2010,
+    education: ["BA, Princeton University"],
+    previousExperience: [
+      "Founder, Thrillist (later merged into Group Nine Media)",
+      "CEO, Group Nine Media (parent of NowThis, The Dodo, Thrillist, Seeker, PopSugar)",
+      "Chairman & CEO, Group9 Acquisition Corp. (NASDAQ: GNAC, a SPAC)"
+    ],
+    investmentFocus: ["Consumer", "Fintech", "Enterprise Software"],
+    notableInvestments: [
+      { name: "Warby Parker", ticker: "WRBY" },
+      { name: "Casper", ticker: "CSPR" },
+      { name: "Olo", ticker: "OLO" }
+    ],
+    boardSeats: ["Casper (NYSE: CSPR)"],
+    ipoCount: 6,
+    majorExits: 8,
+    careerTimeline: [
+      { year: "2010", event: "Founds Thrillist, a media company that later merges into Group Nine Media." },
+      { year: "2010", event: "Co-founds Lerer Hippeau with Eric Hippeau, the same year." },
+      { year: "2019", event: "Serves as CEO of Group Nine Media while continuing to lead Lerer Hippeau." },
+      { year: "2020", event: "Casper completes its IPO; sits on its board." },
+      { year: "2021", event: "BuzzFeed goes public via SPAC merger at a $1.5 billion valuation." }
+    ],
+    biography: "Ben Lerer spent more than a decade simultaneously running a high-growth media company — first Thrillist, which he founded, then Group Nine Media after Thrillist's merger — while co-founding and building Lerer Hippeau alongside Eric Hippeau in 2010. That dual operator-investor experience shaped a distinctly hands-on, 'activist' seed investing philosophy: Lerer Hippeau takes meaningful stakes and works directly on branding and strategy with portfolio companies, rather than writing passive checks. Lerer has described his own investment philosophy as deliberately contrarian — he wants Lerer Hippeau's portfolio to include companies whose best-case outcome is a genuine power-law winner, not just a safe, sensible business — and that approach produced early bets on Warby Parker, Casper, Glossier, and Allbirds before any of them were obvious winners. He has grown the firm across nine funds and nearly $1.5 billion in AUM, making it one of New York's most influential early-stage venture firms.",
+    sources: [
+      { label: "GTMnow Podcast", url: "https://gtmnow.com/early-stage-vc-founder-selection-ben-lerer-lerer-hippeau/" },
+      { label: "SEC S-1 Filing", url: "https://www.sec.gov/Archives/edgar/data/1841948/000119312521041594/d87587ds1.htm" }
+    ]
+  },
 };
 
 // ============================================================
@@ -6014,7 +6048,8 @@ const firmStages = {
    "rre-ventures": ["Seed", "Series A", "Series B", "Growth"],
    "8vc": ["Seed", "Series A", "Series B", "Growth"],
    "slow-ventures": ["Pre-Seed", "Seed", "Series A"],
-   "primary-venture-partners": ["Pre-Seed", "Seed"]
+   "primary-venture-partners": ["Pre-Seed", "Seed"],
+   "lerer-hippeau": ["Seed", "Series A"]
 };
 
 // ============================================================
@@ -6691,6 +6726,36 @@ const firms = [
       { year: "2024", event: "Closes $425 million across two new funds in February, bringing AUM to approximately $1 billion." }
     ],
     holdings: []
+  },
+   {
+    rank: 42,
+    name: "Lerer Hippeau",
+    sectors: ["Consumer", "Healthcare", "Fintech", "Enterprise Software"],
+    signatureExit: "BuzzFeed's SPAC merger in December 2021 at a $1.5 billion valuation — Lerer Hippeau was an early backer of the media company, alongside earlier public listings for Warby Parker and Casper",
+    slug: "lerer-hippeau",
+    website: "https://www.lererhippeau.com",
+    short: "Lerer Hippeau",
+    founded: 2010,
+    hq: "New York, NY",
+    aum: "$1.5B (across nine funds)",
+    thesis: "Lerer Hippeau was founded in 2010 by Ben Lerer, who spent more than a decade simultaneously running Thrillist and later Group Nine Media while building the fund, and Eric Hippeau, former CEO of HuffPost. That combination of active media operating experience and deep New York networks shaped a deliberately 'activist' seed investing philosophy: rather than writing passive checks, Lerer Hippeau takes meaningful stakes and works hands-on with founders on branding and go-to-market strategy, having built its early reputation on consumer breakouts like Warby Parker, Casper, Glossier, and Allbirds before any of them were obvious winners. New York's largest seed fund by reputation and track record, Lerer Hippeau has since expanded well beyond consumer into fintech and enterprise software, backing more than 450 companies across nine funds with 12 unicorns, 10 IPOs, and 166 acquisitions, and now manages roughly $1.5 billion.",
+    leadership: [
+      { name: "Ben Lerer", role: "Co-Founder & Managing Partner", profileSlug: "ben-lerer" },
+      { name: "Eric Hippeau", role: "Co-Founder & Managing Partner" },
+      { name: "Joe Medved", role: "Partner & COO" }
+    ],
+    timeline: [
+      { year: "2010", event: "Ben Lerer and Eric Hippeau found Lerer Hippeau in New York." },
+      { year: "2011", event: "Leads an early investment in Warby Parker." },
+      { year: "2020", event: "Casper completes its IPO under ticker CSPR." },
+      { year: "2021", event: "BuzzFeed goes public via SPAC merger at a $1.5 billion valuation." },
+      { year: "2026", event: "Portfolio reaches 456 companies with 12 unicorns and 10 IPOs since founding." }
+    ],
+    holdings: [
+      { name: "Warby Parker", ticker: "WRBY", historicalPrice: null, price: null },
+      { name: "Olo", ticker: "OLO", historicalPrice: null, price: null },
+      { name: "BuzzFeed", ticker: "BZFD", historicalPrice: null, price: null }
+    ]
   },
    {
     rank: 15,
