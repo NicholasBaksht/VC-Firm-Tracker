@@ -5492,6 +5492,34 @@ sources: [
       { label: "KawiSafi Ventures Fund Team", url: "https://www.kawisafi.com/fund" }
     ]
   },
+   "jake-cusack": {
+    name: "Jake Cusack",
+    firm: "CrossBoundary",
+    firmSlug: "crossboundary",
+    title: "Co-Founder & Managing Partner",
+    joinedYear: 2011,
+    education: [],
+    previousExperience: [
+      "Private-sector development work, Iraq and Afghanistan (2010-2012)",
+      "Research on capital access and bankable transactions with Afghan entrepreneurs"
+    ],
+    investmentFocus: ["Energy Infrastructure", "Mini-Grids", "Solar", "Emerging & Frontier Markets"],
+    notableInvestments: [],
+    boardSeats: [],
+    ipoCount: 0,
+    majorExits: 0,
+    careerTimeline: [
+      { year: "2010", event: "Begins private-sector development work in Iraq and Afghanistan alongside Matt Tilleard." },
+      { year: "2011", event: "Co-founds CrossBoundary, initially focused on bottom-up private-sector solutions in conflict-affected states." },
+      { year: "2010s", event: "Expands CrossBoundary into Sub-Saharan Africa, building out its advisory, energy, and mini-grid financing businesses." },
+      { year: "2020s", event: "Announces a strategic partnership with Brown Advisory to expand access to sustainable and inclusive investment opportunities." }
+    ],
+    biography: "Jake Cusack co-founded CrossBoundary in 2011 after spending two years working on private-sector development in Iraq and Afghanistan, where his on-the-ground research with local entrepreneurs convinced him that bottom-up, locally-disciplined capital, not top-down state intervention, was the more sustainable path to development. That conviction shaped CrossBoundary's growth from a small advisory practice into a genuinely diversified investment platform spanning energy infrastructure, mini-grid financing, and direct investment across underserved and frontier markets, with a particular concentration in Sub-Saharan Africa. Cusack has emphasized the firm's deliberate localization over time — CrossBoundary now employs predominantly people from the societies where it invests rather than expatriate staff — and has grown the platform to more than 200 employees across offices including Nairobi and Dubai, while continuing to publish research on capital access and investment facilitation in emerging markets.",
+    sources: [
+      { label: "CrossBoundary — Jake Cusack", url: "https://crossboundary.com/people/jake-cusack/" },
+      { label: "CrossBoundary Group", url: "https://crossboundary.com/crossboundary-group/" }
+    ]
+  },
 };
 
 // ============================================================
@@ -5672,7 +5700,8 @@ const firmStages = {
    "future-africa": ["Pre-Seed", "Seed"],
    "novastar-ventures": ["Seed", "Series A", "Series B"],
    "enza-capital": ["Pre-Seed", "Seed", "Series A", "Series B"],
-   "kawisafi-ventures": ["Series A", "Series B", "Growth"]
+   "kawisafi-ventures": ["Series A", "Series B", "Growth"],
+   "crossboundary": ["Growth", "Late Stage"]
 };
 
 // ============================================================
@@ -8923,6 +8952,29 @@ const firms = [
       { year: "2017", event: "KawiSafi Ventures launches with initial investors." },
       { year: "2019", event: "Closes at nearly $70 million in April through Acumen Capital Partners." },
       { year: "2024", event: "Portfolio companies have cumulatively impacted more than 200 million lives and averted approximately 48 million tons of CO2 since fund inception." }
+    ],
+    holdings: []
+  },
+   {
+    rank: 79,
+    name: "CrossBoundary",
+    sectors: ["Climate", "Enterprise Software"],
+    signatureExit: "No confirmed dollar-verified exit — CrossBoundary's scale is better measured by reach: more than 200 employees across offices including Nairobi and Dubai, and a growing platform spanning energy infrastructure, mini-grid financing, and advisory work across underserved and frontier markets",
+    slug: "crossboundary",
+    website: "https://crossboundary.com",
+    short: "CrossBoundary",
+    founded: 2011,
+    hq: "Nairobi, Kenya",
+    aum: "Not publicly disclosed",
+    thesis: "CrossBoundary was founded in 2011 by Jake Cusack and Matt Tilleard, whose two years of private-sector development work in Iraq and Afghanistan convinced them that locally-disciplined, bottom-up capital, not top-down state intervention, was the more durable path to sustainable growth in conflict-affected and underserved markets. That conviction shaped a genuinely distinctive investment platform, more infrastructure and growth-equity investor than traditional venture fund — CrossBoundary finances mini-grids and commercial-and-industrial solar projects through CrossBoundary Energy, operates Africa's first R&D fund dedicated to mini-grid business model innovation, and runs an advisory practice structuring bankable transactions across frontier markets. The firm has grown to more than 200 employees across offices including Nairobi and Dubai, with a deliberate emphasis on staffing predominantly from the societies where it invests rather than relying on expatriate teams.",
+    leadership: [
+      { name: "Jake Cusack", role: "Co-Founder & Managing Partner", profileSlug: "jake-cusack" },
+      { name: "Matt Tilleard", role: "Co-Founder & Managing Partner" }
+    ],
+    timeline: [
+      { year: "2011", event: "Jake Cusack and Matt Tilleard found CrossBoundary." },
+      { year: "2010s", event: "Expands into Sub-Saharan Africa, building out advisory, energy, and mini-grid financing businesses." },
+      { year: "2020s", event: "Launches the Mini-Grid Innovation Lab, Africa's first R&D fund focused on mini-grid business model innovation." }
     ],
     holdings: []
   },
