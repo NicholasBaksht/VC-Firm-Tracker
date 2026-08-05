@@ -5622,6 +5622,38 @@ sources: [
       { label: "Strategic Investment Fund", url: "https://sif.gatesfoundation.org/our-team/sandeep-singhal/" }
     ]
   },
+   "christine-tsai": {
+    name: "Christine Tsai",
+    firm: "500 Global",
+    firmSlug: "500-global",
+    title: "Co-Founder & CEO",
+    joinedYear: 2010,
+    education: [],
+    previousExperience: [
+      "Product Marketing Manager, Google (2003-2010) — AdSense, Analytics, YouTube APIs, Developer Platform Tools"
+    ],
+    investmentFocus: ["Fintech", "Enterprise Software", "Consumer Internet", "Global Emerging Markets"],
+    notableInvestments: [
+      { name: "Twilio", ticker: "TWLO" },
+      { name: "Credit Karma", ticker: null },
+      { name: "Canva", ticker: null }
+    ],
+    boardSeats: [],
+    ipoCount: 4,
+    majorExits: 6,
+    careerTimeline: [
+      { year: "2003", event: "Joins Google, spending seven years in product marketing across AdSense, Analytics, and YouTube's developer platform." },
+      { year: "2010", event: "Co-founds 500 Startups with Dave McClure in Mountain View, launching a seed accelerator model distinct from Silicon Valley's US-only focus." },
+      { year: "2017", event: "Becomes CEO in July, after Dave McClure resigns following multiple allegations of inappropriate conduct toward female entrepreneurs." },
+      { year: "2021", event: "Rebrands the firm to 500 Global, reflecting its expanded international investment strategy across more than 80 countries." },
+      { year: "2025", event: "Reports the firm has grown to $2.7 billion in AUM and more than 2,600 portfolio companies." }
+    ],
+    biography: "Christine Tsai spent seven years at Google in product marketing roles spanning AdSense, Analytics, and YouTube's developer platform before co-founding 500 Startups with Dave McClure in 2010, built around a deliberately global thesis at a time most Silicon Valley firms invested almost exclusively in US-based founders. She became CEO in July 2017 after McClure resigned following multiple allegations of inappropriate conduct toward female entrepreneurs, steering the firm through that period and rebranding it to 500 Global in 2021 to reflect its genuinely international footprint. Under her leadership, the firm has backed founders across more than 80 countries, grown to $2.7 billion in assets under management and more than 2,600 portfolio companies, and produced 35-plus unicorns including Canva, Credit Karma, Grab, and Twilio.",
+    sources: [
+      { label: "Wikipedia — 500 Global", url: "https://en.wikipedia.org/wiki/500_Global" },
+      { label: "Global Private Capital Association", url: "https://www.globalprivatecapital.org/team_member/christine-tsai/" }
+    ]
+  },
 };
 
 // ============================================================
@@ -5806,7 +5838,8 @@ const firmStages = {
    "crossboundary": ["Growth", "Late Stage"],
    "launch-africa-ventures": ["Seed", "Series A"],
    "foundation-capital": ["Seed", "Series A", "Growth"],
-   "nexus-venture-partners": ["Seed", "Series A"]
+   "nexus-venture-partners": ["Seed", "Series A"],
+   "500-global": ["Pre-Seed", "Seed", "Series A"]
 };
 
 // ============================================================
@@ -7706,6 +7739,33 @@ const firms = [
     ],
     holdings: [
       { name: "Delhivery", ticker: "DELHIVERY.NS", historicalPrice: null, price: null }
+    ]
+  },
+   {
+    rank: 38,
+    name: "500 Global",
+    sectors: ["Fintech", "Enterprise Software", "Consumer"],
+    signatureExit: "Twilio's NYSE IPO under ticker TWLO — one of 500 Global's earliest and most consequential bets, backed years before it became a category-defining cloud communications company",
+    slug: "500-global",
+    website: "https://500.co",
+    short: "500 Global",
+    founded: 2010,
+    hq: "San Francisco, CA",
+    aum: "$2.7B",
+    thesis: "500 Global was founded in 2010 as 500 Startups by Dave McClure and Christine Tsai in Mountain View, building an early-stage venture fund and seed accelerator around a genuinely global thesis when most Silicon Valley firms invested almost exclusively in US-based founders. That international focus, combined with a structured accelerator curriculum and a first cohort of just 12 startups in 2011, grew the firm into one of the most geographically diversified venture platforms in the world. Christine Tsai became CEO in 2017 after McClure resigned following multiple allegations of inappropriate conduct toward female entrepreneurs, and she rebranded the firm to 500 Global in 2021 to reflect its expanded international footprint. The firm has since backed more than 2,600 companies across 80-plus countries, producing 35-plus unicorns including Canva, Credit Karma, Grab, and Twilio, with $2.7 billion currently under management.",
+    leadership: [
+      { name: "Christine Tsai", role: "Co-Founder & CEO", profileSlug: "christine-tsai" },
+      { name: "Courtney Powell", role: "COO & Managing Partner" }
+    ],
+    timeline: [
+      { year: "2010", event: "Dave McClure and Christine Tsai found 500 Startups in Mountain View." },
+      { year: "2011", event: "Admits its first accelerator cohort of 12 startups in February." },
+      { year: "2017", event: "Christine Tsai becomes CEO in July after Dave McClure resigns." },
+      { year: "2021", event: "Rebrands to 500 Global, reflecting its international investment strategy." },
+      { year: "2025", event: "AUM reaches $2.7 billion across more than 2,600 portfolio companies." }
+    ],
+    holdings: [
+      { name: "Twilio", ticker: "TWLO", historicalPrice: null, price: null }
     ]
   },
    {
