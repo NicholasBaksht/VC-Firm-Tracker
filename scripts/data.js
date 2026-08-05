@@ -5892,6 +5892,42 @@ sources: [
       { label: "Fortune", url: "https://fortune.com/2025/10/21/david-tisch-boxgroup-venture-capital-tech-nyc-ramp-cursor-early-stage/" }
     ]
   },
+   "pejman-nozad": {
+    name: "Pejman Nozad",
+    firm: "Pear VC",
+    firmSlug: "pear-vc",
+    title: "Co-Founder & Founding Managing Partner",
+    joinedYear: 2013,
+    education: [],
+    previousExperience: [
+      "Sports Journalist & Radio Host",
+      "Professional Soccer Player",
+      "Rug Salesman, Palo Alto",
+      "Angel Investor (17+ years, early bets on Dropbox, DoorDash, Lending Club, Addepar)"
+    ],
+    investmentFocus: ["Fintech", "AI", "Consumer", "Healthcare"],
+    notableInvestments: [
+      { name: "DoorDash", ticker: "DASH" },
+      { name: "Dropbox", ticker: "DBX" },
+      { name: "Guardant Health", ticker: "GH" },
+      { name: "AppLovin", ticker: "APP" }
+    ],
+    boardSeats: [],
+    ipoCount: 4,
+    majorExits: 5,
+    careerTimeline: [
+      { year: "2000s", event: "Immigrates from Iran and works as a rug salesman in downtown Palo Alto, building relationships with the tech entrepreneurs and investors who frequented the store." },
+      { year: "2010s", event: "Spends 17-plus years as an angel investor, becoming an early backer of Dropbox, Lending Club, and Addepar." },
+      { year: "2013", event: "Co-founds Pejman Mar Ventures with Mar Hershenson in August; convinces her to back DoorDash as one of the firm's first five deals." },
+      { year: "2016", event: "Rebrands the firm to Pear VC." },
+      { year: "2020", event: "DoorDash goes public on the NYSE; Pear's roughly $1.9 million investment is worth more than $440 million." }
+    ],
+    biography: "Pejman Nozad may be tech's most unlikely venture capitalist — an Iranian immigrant who worked as a sports journalist, radio host, and professional soccer player before landing at a rug store in downtown Palo Alto, where he immersed himself in the local tech scene and slowly built a reputation for spotting promising founders. After 17 years as an angel investor backing Dropbox, Lending Club, and Addepar, he convinced Stanford lecturer and three-time founder Mar Hershenson to co-found Pejman Mar Ventures with him in 2013, rebranded as Pear VC in 2016. His conviction produced the firm's defining moment that same founding year: he burst into the office insisting they back a food delivery startup called DoorDash, despite Hershenson's initial skepticism, turning a roughly $1.9 million investment into more than $440 million at the company's 2020 IPO — a nearly 233-times return on Pear's entire first fund from a single bet. Nozad has ranked on the Forbes Midas List every year since 2021, taking the #1 spot on the Midas Seed List in 2024.",
+    sources: [
+      { label: "Forbes", url: "https://www.forbes.com/sites/alexkonrad/2020/12/11/their-venture-fund-was-a-sign-of-a-bubble-then-they-turned-19-million-in-doordash-into-440-million/" },
+      { label: "Pear VC — Pejman Nozad", url: "https://pear.vc/team/pejman-nozad/" }
+    ]
+  },
 };
 
 // ============================================================
@@ -6084,7 +6120,8 @@ const firmStages = {
    "slow-ventures": ["Pre-Seed", "Seed", "Series A"],
    "primary-venture-partners": ["Pre-Seed", "Seed"],
    "lerer-hippeau": ["Seed", "Series A"],
-   "boxgroup": ["Pre-Seed", "Seed", "Series A"]
+   "boxgroup": ["Pre-Seed", "Seed", "Series A"],
+   "pear-vc": ["Pre-Seed", "Seed", "Series A"]
 };
 
 // ============================================================
@@ -6817,6 +6854,35 @@ const firms = [
       { year: "2025", event: "Closes $550 million across two new funds in October, marking the firm's 16th year." }
     ],
     holdings: []
+  },
+   {
+    rank: 43,
+    name: "Pear VC",
+    sectors: ["Fintech", "AI", "Cybersecurity", "Healthcare", "Consumer"],
+    signatureExit: "DoorDash's 2020 NYSE IPO under ticker DASH — Pear's roughly $1.9 million investment, made as one of the firm's first five deals in 2013, was worth more than $440 million at listing, a nearly 233x return on the firm's entire first fund",
+    slug: "pear-vc",
+    website: "https://pear.vc",
+    short: "Pear VC",
+    founded: 2013,
+    hq: "Menlo Park, CA",
+    aum: "$800M (across four funds)",
+    thesis: "Pear VC was founded in August 2013 as Pejman Mar Ventures by Pejman Nozad, an Iranian immigrant and former rug salesman turned angel investor, and Mar Hershenson, a Stanford-trained three-time founder, rebranding to Pear VC in 2016. Nozad's unconventional background shaped a genuinely distinctive sourcing edge from day one — the firm's defining early bet came when Nozad convinced a skeptical Hershenson to back a small food-delivery startup called DoorDash, turning roughly $1.9 million into more than $440 million at the company's 2020 IPO. That instinct for backing founders before consensus forms has defined Pear ever since: the firm invests from formation, sometimes co-founding companies from day zero, and has seeded more than 375 startups including Gusto, Guardant Health, Dropbox, Vanta, and Branch, with $800 million under management across four funds.",
+    leadership: [
+      { name: "Pejman Nozad", role: "Co-Founder & Founding Managing Partner", profileSlug: "pejman-nozad" },
+      { name: "Mar Hershenson", role: "Co-Founder & Founding Managing Partner" }
+    ],
+    timeline: [
+      { year: "2013", event: "Pejman Nozad and Mar Hershenson found Pejman Mar Ventures in August, backing DoorDash as one of their first five deals." },
+      { year: "2016", event: "Rebrands to Pear VC." },
+      { year: "2018", event: "Guardant Health completes its NASDAQ IPO." },
+      { year: "2020", event: "DoorDash goes public on the NYSE under ticker DASH." },
+      { year: "2023", event: "Closes an oversubscribed $432 million Fund IV in May, pushing total AUM to approximately $800 million." }
+    ],
+    holdings: [
+      { name: "DoorDash", ticker: "DASH", historicalPrice: null, price: null },
+      { name: "Guardant Health", ticker: "GH", historicalPrice: null, price: null },
+      { name: "Dropbox", ticker: "DBX", historicalPrice: null, price: null }
+    ]
   },
    {
     rank: 15,
