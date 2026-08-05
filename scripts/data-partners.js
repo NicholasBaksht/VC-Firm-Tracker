@@ -6783,4 +6783,36 @@ sources: [
       { label: "DevCuration — VC Spotlight: Foundry Group", url: "https://devcuration.substack.com/p/vc-spotlight-foundry-group" }
     ]
   },
+"dixon-doll": {
+    name: "Dixon Doll",
+    firm: "DCM Ventures",
+    firmSlug: "dcm-ventures",
+    title: "Co-Founder & Partner Emeritus",
+    joinedYear: 1996,
+    education: ["PhD", "MS, University of Michigan"],
+    previousExperience: [
+      "Partner, Accel Partners (launched the venture industry's first telecom-focused fund)"
+    ],
+    investmentFocus: ["Semiconductors", "Networking", "Communications Technology"],
+    notableInvestments: [
+      { name: "Musical.ly (TikTok)", ticker: null },
+      { name: "Bill.com", ticker: "BILL" },
+      { name: "SoFi", ticker: "SOFI" }
+    ],
+    boardSeats: ["Airlinq"],
+    ipoCount: 7,
+    majorExits: 84,
+    careerTimeline: [
+      { year: "1980s", event: "Works as a Partner at Accel Partners, launching the venture industry's first telecom-focused fund." },
+      { year: "1996", event: "Co-founds Doll Capital Management (later DCM Ventures) with David Chao in Menlo Park." },
+      { year: "1999", event: "Leads DCM to become the first Silicon Valley firm to invest in early-stage technology in China." },
+      { year: "2017", event: "Musical.ly, an early DCM portfolio company, is acquired by ByteDance and later merged into TikTok." },
+      { year: "35+ years", event: "Continues advising and guiding entrepreneurs and investors as Partner Emeritus, following a career spanning more than three and a half decades in venture capital." }
+    ],
+    biography: "Dixon Doll built his early career at Accel Partners, where he launched the venture capital industry's first telecom-focused fund, before co-founding Doll Capital Management with David Chao in 1996 — a firm that later rebranded to DCM Ventures. Doll and Chao made an early, genuinely contrarian bet that technology company creation wouldn't stay confined to Silicon Valley, leading DCM to become the first American venture firm to invest in early-stage technology companies in China in 1999, years before cross-border investing became conventional wisdom. That geographic conviction produced one of the firm's most culturally significant outcomes: Musical.ly, the short-form video app DCM backed early, which ByteDance acquired in 2017 and later merged into what became TikTok. Over more than 35 years in venture capital, Doll has influenced and guided generations of entrepreneurs and investors, and now serves as Partner Emeritus at DCM, which has grown to more than $4.5 billion under management.",
+    sources: [
+      { label: "Wikipedia — DCM Ventures", url: "https://en.wikipedia.org/wiki/DCM_Ventures" },
+      { label: "Crunchbase — Dixon Doll", url: "https://www.crunchbase.com/person/dixon-doll" }
+    ]
+  },
 };
