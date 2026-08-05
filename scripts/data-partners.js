@@ -6221,4 +6221,39 @@ sources: [
       { label: "The Takeoff Podcast", url: "https://thetakeoff.substack.com/p/hunter-walk-co-founder-and-partner" }
     ]
   },
+  "aileen-lee": {
+    name: "Aileen Lee",
+    firm: "Cowboy Ventures",
+    firmSlug: "cowboy-ventures",
+    title: "Founder & Managing Partner",
+    joinedYear: 2012,
+    education: ["BS, MIT Sloan School of Management", "MBA, Harvard Business School"],
+    previousExperience: [
+      "Financial Analyst, Morgan Stanley",
+      "Operating roles, Gap Inc., The North Face, Odwalla",
+      "Founding CEO, RMG Networks (digital out-of-home media, backed by Kleiner Perkins)",
+      "Partner, Kleiner Perkins Caufield & Byers (1999-2012, 13 years)"
+    ],
+    investmentFocus: ["Consumer Internet", "Enterprise Software", "Future of Work"],
+    notableInvestments: [
+      { name: "Dollar Shave Club", ticker: null },
+      { name: "Bloom Energy", ticker: "BE" },
+      { name: "Rent the Runway", ticker: "RENT" }
+    ],
+    boardSeats: [],
+    ipoCount: 2,
+    majorExits: 4,
+    careerTimeline: [
+      { year: "1999", event: "Joins Kleiner Perkins Caufield & Byers after operating roles at Gap Inc. and founding CEO of RMG Networks." },
+      { year: "2012", event: "Leaves Kleiner Perkins after 13 years to found Cowboy Ventures in Palo Alto, with Kleiner as her anchor investor." },
+      { year: "2013", event: "Coins the term 'unicorn' in a November TechCrunch article, 'Welcome to the Unicorn Club,' analyzing billion-dollar startups." },
+      { year: "2016", event: "Dollar Shave Club, an early Cowboy investment, is acquired by Unilever for approximately $1 billion." },
+      { year: "2018", event: "Co-founds All Raise, a nonprofit accelerating success for women across the venture ecosystem." }
+    ],
+    biography: "Aileen Lee spent 13 years at Kleiner Perkins, working hands-on with companies from Series A through IPO including Bloom Energy, Rent the Runway, and Trendyol, after earlier operating roles at Gap Inc. and as founding CEO of RMG Networks. She left in 2012 to found Cowboy Ventures in Palo Alto — one of the first venture firms founded by a woman — and the following year coined the term 'unicorn' in a widely-read TechCrunch article that has since become permanent industry vocabulary, though Lee herself has noted the term's imperfection: 'it's an ephemeral word, a point in time.' Her early conviction in Dollar Shave Club, whose founder she described as having 'such a clear brand voice' despite very little money, culminated in Unilever's roughly $1 billion acquisition in 2016. Lee co-founded All Raise in 2018 to accelerate success for women across venture capital, and has been named to the Forbes Midas List, Fortune's Most Powerful Women, and Time's 100 Most Influential People.",
+    sources: [
+      { label: "Forbes — Aileen Lee", url: "https://www.forbes.com/profile/aileen-lee/" },
+      { label: "MIT Technology Review", url: "https://alum.mit.edu/slice/helping-startups-become-unicorns-and-women-become-vcs" }
+    ]
+  },
 };
