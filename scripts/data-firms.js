@@ -4957,6 +4957,32 @@ const firms = [
     ],
     holdings: []
   },
+  {
+    rank: 27,
+    name: "Earlybird Venture Capital",
+    sectors: ["Fintech", "Deep Tech", "Healthcare", "Consumer", "Industrial Tech"],
+    signatureExit: "TeamViewer's 2019 IPO and Delivery Hero's 2017 IPO — two of Earlybird's clearest public-market outcomes; Babylon Health also completed a roughly $4.2 billion SPAC merger in 2021, though the company later collapsed into administration in 2023",
+    slug: "earlybird-venture-capital",
+    website: "https://earlybird.com",
+    short: "Earlybird",
+    founded: 1997,
+    hq: "Berlin, Germany",
+    aum: "€2B+ (~$2.2B)",
+    thesis: "Earlybird Venture Capital was founded in Hamburg in 1997 by Christian Nagel, Hendrik Brandis, Roland Manger, and Rolf Mathies, making it one of Europe's oldest continuously operating venture capital firms, having weathered the dot-com crash, the 2008 financial crisis, and multiple subsequent market cycles. The firm now operates a genuinely multi-fund structure — Digital West, Digital East (covering Turkey and Central/Eastern Europe), and a dedicated Health fund — giving it deliberately broad geographic and sector reach across fintech, deep tech, healthcare, and industrial technology from seed through growth stage. That 25-plus-year track record has produced deep ties to the German Mittelstand, real visibility into enterprise software and industrial tech spinouts from the DACH region, and a portfolio spanning N26, UiPath, Delivery Hero, TeamViewer, and Isar Aerospace, with more than €2 billion under management.",
+    leadership: [
+      { name: "Christian Nagel", role: "Co-Founder & General Partner" },
+      { name: "Hendrik Brandis", role: "Co-Founder & General Partner", profileSlug: "hendrik-brandis" },
+      { name: "Andre Retterath", role: "General Partner" }
+    ],
+    timeline: [
+      { year: "1997", event: "Christian Nagel, Hendrik Brandis, Roland Manger, and Rolf Mathies found Earlybird in Hamburg." },
+      { year: "1998", event: "Opens a second office in Munich." },
+      { year: "2017", event: "Delivery Hero completes its IPO." },
+      { year: "2019", event: "TeamViewer completes its IPO." },
+      { year: "2021", event: "Babylon Health completes a SPAC merger at approximately $4.2 billion; the company later collapses into administration in 2023." }
+    ],
+    holdings: []
+  },
    {
     rank: 84,
     name: "Gradient Ventures",
