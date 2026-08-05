@@ -6615,5 +6615,39 @@ sources: [
       { label: "Reuters — Factbox on Fabricio Bloisi", url: "https://www.aol.com/news/factbox-prosus-naspers-ceo-fabricio-112515447.html" },
       { label: "Prosus Ventures", url: "https://www.prosus.com/prosus-ventures" }
     ]
+    "magnus-grimeland": {
+    name: "Magnus Grimeland",
+    firm: "Antler",
+    firmSlug: "antler",
+    title: "Founder & CEO",
+    joinedYear: 2017,
+    education: ["BA, Harvard College"],
+    previousExperience: [
+      "Norwegian Naval Special Forces",
+      "Partner, McKinsey & Company",
+      "Co-Founder, Zalora Group (Southeast Asia's first major fashion e-commerce platform, 2013)",
+      "COO, Global Fashion Group (after Rocket Internet consolidated Zalora)"
+    ],
+    investmentFocus: ["Consumer Internet", "Enterprise SaaS", "Fintech", "AI"],
+    notableInvestments: [
+      { name: "Airalo", ticker: null },
+      { name: "Lovable", ticker: null }
+    ],
+    boardSeats: [],
+    ipoCount: 0,
+    majorExits: 0,
+    careerTimeline: [
+      { year: "2013", event: "Co-founds Zalora, Southeast Asia's first major fashion e-commerce platform, after serving in Norway's Naval Special Forces and consulting at McKinsey." },
+      { year: "2016", event: "Becomes COO of Global Fashion Group after Rocket Internet consolidates Zalora into the new entity." },
+      { year: "2017", event: "Founds Antler in Singapore with Fridtjof Berge, pioneering a 'Day Zero' investing model that backs founders before they have a team or product." },
+      { year: "2018", event: "Runs Antler's first residency program in Singapore." },
+      { year: "2024", event: "Antler tops PitchBook's 'Most Active Venture Capital Globally' league table with 443 deals; both Airalo and Lovable reach unicorn status." }
+    ],
+    biography: "Magnus Grimeland's path to founding Antler ran through Norway's Naval Special Forces, McKinsey consulting, and building Zalora, Southeast Asia's first major fashion e-commerce platform, which became a training ground for a remarkable list of future founders — Gojek's Kevin Aluwi and Nadiem Makarim, StashAway's Michele Ferrario, and ShopBack's founding team all passed through Zalora before starting their own companies. That experience convinced Grimeland that talented people were often stuck in roles that didn't fully use their potential, and he founded Antler in Singapore in 2017 with Fridtjof Berge to back exceptional founders from 'Day Zero' — before they even have a team or a product. That model, offering founders up to $400,000 and access to a global mentor network through residency programs, has made Antler the world's most active early-stage venture firm by deal volume according to PitchBook, backing more than 1,800 startups across 27 countries including unicorns Airalo (eSIM marketplace) and Lovable (Swedish AI coding platform, valued at $6.6 billion).",
+    sources: [
+      { label: "Antler — About", url: "https://www.antler.co/about" },
+      { label: "Fortune", url: "https://fortune.com/2026/05/20/antler-ceo-magnus-grimeland-innovation-global-silicon-valley/" }
+    ]
+  },
   },
 };
