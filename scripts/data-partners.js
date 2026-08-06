@@ -6876,4 +6876,36 @@ sources: [
       { label: "Legend Capital LinkedIn", url: "https://www.linkedin.com/company/legend-capital" }
     ]
   },
+"zhang-lei": {
+    name: "Zhang Lei",
+    firm: "Hillhouse Investment Group",
+    firmSlug: "hillhouse-investment-group",
+    title: "Founder, Chairman & CEO",
+    joinedYear: 2005,
+    education: ["BA, Economics, Renmin University of China (1994)", "MBA, Yale School of Management (2002)", "MA, International Relations, Yale University (2002)"],
+    previousExperience: [
+      "Analyst, Yale Investments Office (under Chief Investment Officer David Swensen)"
+    ],
+    investmentFocus: ["Consumer Internet", "AI", "Biotech", "Enterprise Software"],
+    notableInvestments: [
+      { name: "Tencent", ticker: "0700.HK" },
+      { name: "JD.com", ticker: "JD" },
+      { name: "Baidu", ticker: "BIDU" }
+    ],
+    boardSeats: [],
+    ipoCount: 20,
+    majorExits: 50,
+    careerTimeline: [
+      { year: "1994", event: "Earns a bachelor's degree in economics from Renmin University of China on scholarship, after a childhood spent selling noodles, water, and magazines to support his family." },
+      { year: "1999", event: "Takes a class taught by David Swensen, Yale's legendary chief investment officer, who becomes his mentor and later helps him secure Hillhouse's seed capital." },
+      { year: "2002", event: "Earns an MBA and MA in international relations from Yale University." },
+      { year: "2005", event: "Founds Hillhouse Capital in June with $20 million in seed capital from Yale's own endowment, becoming an early investor in Tencent." },
+      { year: "2010", event: "Insists JD.com founder Richard Liu take a $255 million investment instead of the $75 million Liu requested; the stake is worth roughly $3.9 billion four years later at JD.com's IPO." }
+    ],
+    biography: "Zhang Lei grew up in modest circumstances in Henan province, once earning a total profit of 800 yuan selling noodles, water, and magazines to travelers at train stations as a teenager. A scholarship took him to Renmin University and eventually to Yale, where a class taught by legendary Yale endowment chief investment officer David Swensen changed the course of his life — Zhang translated Swensen's book into Chinese, coining new Mandarin terms for 'endowment' and 'fiduciary' along the way, and Swensen became his lasting mentor. Zhang founded Hillhouse in 2005 with $20 million in seed capital directly from Yale's own endowment, building an early, high-conviction stake in Tencent that the firm still holds today. His defining early bet came in 2010, when JD.com founder Richard Liu asked for a $75 million investment to build out logistics infrastructure competitors thought was too expensive — Zhang told him to take $255 million instead, a stake worth roughly $3.9 billion four years later at JD.com's IPO. Zhang has grown Hillhouse into one of Asia's largest investment platforms, managing more than $100 billion, while remaining a trustee of Yale University and Vice Chairman of Renmin University's board.",
+    sources: [
+      { label: "Wikipedia — Zhang Lei", url: "https://en.wikipedia.org/wiki/Zhang_Lei_(investor)" },
+      { label: "The Wire China", url: "https://www.thewirechina.com/2020/09/27/who-is-hillhouse-capital/" }
+    ]
+  },
 };
