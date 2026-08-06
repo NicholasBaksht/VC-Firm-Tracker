@@ -612,6 +612,30 @@ const firms = [
   },
   {
     rank: 23,
+    name: "Sinovation Ventures",
+    sectors: ["AI", "Deep Tech", "Edtech"],
+    signatureExit: "No portfolio company has completed a major international IPO yet — Sinovation instead measures itself through China-market listings for Megvii and 4Paradigm, and founder Kai-Fu Lee's own prior AdMob-adjacent track record from his Google and Microsoft years",
+    slug: "sinovation-ventures",
+    website: "https://www.sinovationventures.com",
+    short: "Sinovation Ventures",
+    founded: 2009,
+    hq: "Beijing, China",
+    aum: "$3B",
+    thesis: "Sinovation Ventures was founded as Innovation Works in September 2009 by Kai-Fu Lee, days after he resigned as President of Google Greater China, bringing an unmatched technical and cross-cultural pedigree spanning speech recognition research at Apple, founding Microsoft Research China, and leading Google's China operations. That background shaped a deliberately hands-on, incubator-like investment model — Sinovation offers portfolio companies deep support in UI/UX design, product development, recruiting, and government relations, not just capital — concentrated specifically on AI, robotics, and deep tech startups years before those categories became mainstream. The firm was one of the first Chinese venture firms to establish a genuine US presence, and now manages $3 billion in dual-currency funds across more than 400 portfolio companies, with Lee continuing to serve as one of the most recognized public voices in global AI discourse.",
+    leadership: [
+      { name: "Kai-Fu Lee", role: "Chairman & CEO", profileSlug: "kai-fu-lee" },
+      { name: "Hua Wang", role: "Co-Founder" }
+    ],
+    timeline: [
+      { year: "2009", event: "Kai-Fu Lee and Hua Wang found Innovation Works in Beijing, days after Lee's Google resignation, with a $115 million debut fund." },
+      { year: "2013", event: "Opens a Silicon Valley office." },
+      { year: "2016", event: "Rebrands to Sinovation Ventures." },
+      { year: "2022", event: "Raises a $203 million Fund V." }
+    ],
+    holdings: []
+  },
+  {
+    rank: 23,
     name: "Greycroft",
     sectors: ["Enterprise Software", "Fintech", "Consumer", "AI"],
     signatureExit: "Venmo — Greycroft was an early seed investor in the payments app; Braintree, which had acquired Venmo, was sold to PayPal for $800 million in 2013",
