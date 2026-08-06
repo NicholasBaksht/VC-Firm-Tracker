@@ -39,6 +39,90 @@ const partnerProfiles = {
       { label: "Wikipedia", url: "https://en.wikipedia.org/wiki/Alfred_Lin" }
     ]
   },
+  "samsung-ventures-lead": {
+    name: "Samsung Venture Investment Corporation",
+    firm: "Samsung Ventures",
+    firmSlug: "samsung-ventures",
+    title: "Corporate Venture Arm",
+    joinedYear: 1999,
+    education: [],
+    previousExperience: [],
+    investmentFocus: ["Semiconductors", "AI", "Robotics", "Cybersecurity"],
+    notableInvestments: [
+      { name: "SentinelOne", ticker: "S" },
+      { name: "Niantic", ticker: null },
+      { name: "Swiggy", ticker: null }
+    ],
+    boardSeats: [],
+    ipoCount: 24,
+    majorExits: 65,
+    careerTimeline: [
+      { year: "1999", event: "Samsung establishes Samsung Venture Investment Corporation in Seoul as its corporate venture arm." },
+      { year: "2021", event: "SentinelOne, a Samsung Ventures portfolio company, completes its NYSE IPO." },
+      { year: "2025", event: "AUM reaches approximately $2.8 billion." }
+    ],
+    biography: "Samsung Venture Investment Corporation was established in 1999 as the corporate venture capital arm of Samsung Electronics, built to identify and back small and medium-sized companies developing breakthrough technologies across semiconductors, telecommunications, software, AI, robotics, and cybersecurity. Rather than offering capital alone, the fund provides portfolio companies with management support, technical resources, and market access drawn from Samsung's global manufacturing and distribution scale — a genuine structural advantage most standalone VCs can't replicate. Over more than 25 years, Samsung Ventures has invested in more than 200 companies across offices spanning South Korea, Silicon Valley, and Europe, producing 10-plus unicorns, 24 IPOs, and 65 acquisitions including SentinelOne, Niantic, and Swiggy, and now manages approximately $2.8 billion.",
+    sources: [
+      { label: "Samsung Ventures", url: "https://www.samsungventure.co.kr/en/company.do" },
+      { label: "Tracxn — Samsung Venture Investment", url: "https://tracxn.com/d/venture-capital/samsung-venture-investment" }
+    ]
+  },
+
+  "al-gore-david-blood": {
+    name: "Al Gore & David Blood",
+    firm: "Generation Investment Management",
+    firmSlug: "generation-investment-management",
+    title: "Chairman & Senior Partner",
+    joinedYear: 2004,
+    education: [],
+    previousExperience: [
+      "45th Vice President of the United States (Al Gore)",
+      "CEO, Goldman Sachs Asset Management (David Blood)"
+    ],
+    investmentFocus: ["Sustainability", "Climate", "Public & Private Equity"],
+    notableInvestments: [],
+    boardSeats: [],
+    ipoCount: 0,
+    majorExits: 0,
+    careerTimeline: [
+      { year: "2001", event: "Al Gore, following his time as US Vice President, begins developing the thesis that would become Generation Investment Management." },
+      { year: "2004", event: "Al Gore and David Blood co-found Generation Investment Management in London in April, alongside five other founding partners." },
+      { year: "2021", event: "Launches Just Climate, a dedicated climate-focused investment business, as an offshoot of Generation." }
+    ],
+    biography: "Al Gore, the 45th Vice President of the United States, and David Blood, former CEO of Goldman Sachs Asset Management, co-founded Generation Investment Management in April 2004 alongside five other founding partners, built around a specific, at-the-time contrarian thesis: that integrating sustainability research into fundamental equity analysis would drive superior long-term returns, not sacrifice them. That conviction predated the current ESG investing boom by nearly two decades, and Generation has since built a global research platform spanning public and private equity strategies, investing worldwide with the explicit goal of making sustainable capitalism the enduring economic model rather than a niche. In 2021 the firm launched Just Climate, a dedicated climate investment business, extending its original thesis into a new standalone platform focused specifically on decarbonization at scale.",
+    sources: [
+      { label: "Wikipedia — Generation Investment Management", url: "https://en.wikipedia.org/wiki/Generation_Investment_Management" }
+    ]
+  },
+
+  "gaorong-founders": {
+    name: "Zhang Zhen",
+    firm: "Gaorong Capital",
+    firmSlug: "gaorong-capital",
+    title: "Co-Founder & Managing Partner",
+    joinedYear: 2014,
+    education: [],
+    previousExperience: [
+      "Investment Professional, IDG Capital"
+    ],
+    investmentFocus: ["Consumer Internet", "Enterprise Software", "Healthcare"],
+    notableInvestments: [
+      { name: "Pinduoduo", ticker: "PDD" },
+      { name: "Kuaishou", ticker: "1024.HK" }
+    ],
+    boardSeats: [],
+    ipoCount: 5,
+    majorExits: 8,
+    careerTimeline: [
+      { year: "2010s", event: "Works as an investment professional at IDG Capital, alongside future co-founders Gao Xiang and Yue Bin." },
+      { year: "2014", event: "Co-founds Banyan Capital (later renamed Gaorong Capital) with Gao Xiang and Yue Bin in Beijing in January." },
+      { year: "2020", event: "AUM reaches approximately $4 billion." }
+    ],
+    biography: "Zhang Zhen worked as an investment professional at IDG Capital, one of China's most established venture firms, alongside future co-founders Gao Xiang and Yue Bin, before the three left together in January 2014 to found their own firm, initially named Banyan Capital and later rebranded to Gaorong Capital (Gaorong Ventures). That shared IDG pedigree gave the trio a genuine head start on sourcing and evaluating Chinese technology deals, and Gaorong has since built a strong track record in consumer internet, enterprise software, and healthcare, backing companies including Pinduoduo and Kuaishou through to public listings. The firm now manages approximately $4 billion, reflecting the broader wave of spinout funds founded by veteran investors from China's earliest generation of institutional VCs.",
+    sources: [
+      { label: "Wikipedia — Gaorong Ventures", url: "https://en.wikipedia.org/wiki/Gaorong_Ventures" }
+    ]
+  },
   "marc-andreessen": {
     name: "Marc Andreessen",
     firm: "Andreessen Horowitz",
