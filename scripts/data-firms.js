@@ -32,6 +32,106 @@ const firms = [
     ]
   },
   {
+    rank: 40,
+    name: "Base10 Partners",
+    sectors: ["Industrial Tech", "Fintech", "Enterprise Software", "AI"],
+    signatureExit: "No confirmed public exit yet — Base10's clearest proof points are current portfolio companies growing rapidly, including Nubank (NYSE: NU) as one of the firm's larger co-investment wins alongside Notion and Figma, both still private",
+    slug: "base10-partners",
+    website: "https://base10.vc",
+    short: "Base10 Partners",
+    founded: 2017,
+    hq: "San Francisco, CA",
+    aum: "$2.6B",
+    thesis: "Base10 Partners was founded in 2017 by Adeyemi 'Ade' Ajao, a multi-country serial founder with African, European, and Latin roots raised in Spain and Nigeria, and TJ Nahigian, built around backing automation technology for the 'Real Economy' — traditional sectors like retail, logistics, healthcare, and construction that most consumer-tech-obsessed investors overlooked. The firm originally called its thesis 'Applied AI for the Real Economy,' a term LPs dismissed as too niche in its early years, until AI became the dominant investing category and validated the original bet. Base10 is recognized as the world's largest Black-led venture capital firm, and commits up to 50% of its carried interest to fund scholarships for students at Historically Black Colleges and Universities through its Advancement Initiative. The firm has made more than 110 investments including Notion, Figma, and Nubank, closing $850 million in 2026 to push total AUM to $2.6 billion.",
+    leadership: [
+      { name: "Adeyemi 'Ade' Ajao", role: "Co-Founder & Managing Partner", profileSlug: "adeyemi-ajao" },
+      { name: "TJ Nahigian", role: "Co-Founder & Managing Partner" }
+    ],
+    timeline: [
+      { year: "2017", event: "Adeyemi Ajao and TJ Nahigian found Base10 Partners in San Francisco." },
+      { year: "2021", event: "Launches a $250 million growth-stage fund." },
+      { year: "2022", event: "Closes Fund III at $460 million, crossing $1 billion in cumulative AUM." },
+      { year: "2026", event: "Closes $850 million in new capital, pushing AUM to $2.6 billion; Ajao joins Motive's board." }
+    ],
+    holdings: [
+      { name: "Nubank", ticker: "NU", historicalPrice: null, price: null }
+    ]
+  },
+  {
+    rank: 77,
+    name: "Village Global",
+    sectors: ["Fintech", "Consumer", "AI", "Healthcare"],
+    signatureExit: "No singular household-name exit — Village Global's model spreads bets widely across 233 companies rather than concentrating on a few outsized wins, producing 9 unicorns and 22 acquisitions cumulatively",
+    slug: "village-global",
+    website: "https://www.villageglobal.com",
+    short: "Village Global",
+    founded: 2017,
+    hq: "San Francisco, CA",
+    aum: "$500M+",
+    thesis: "Village Global was founded in September 2017 by Ben Casnocha, Erik Torenberg, Anne Dwane, and Ross Fubini, chaired by Reid Hoffman, built around a genuinely different structural bet: that a venture firm could distribute deal sourcing and evaluation across a network of successful operators rather than relying solely on a small internal partner team. That network-first model attracted an unusually prominent group of limited partners — Bill Gates, Jeff Bezos, Mark Zuckerberg, Eric Schmidt, and Anne Wojcicki among them — who provide both capital and mentorship access to portfolio founders through more than 400 'Network Leaders.' The firm invests $500,000 to $3 million in pre-seed and seed-stage companies across fintech, consumer, AI, and healthcare, and has backed 233 companies over its history, producing 9 unicorns and 22 acquisitions with more than $500 million in AUM.",
+    leadership: [
+      { name: "Ben Casnocha", role: "Co-Founder & General Partner", profileSlug: "ben-casnocha" },
+      { name: "Erik Torenberg", role: "Co-Founder" },
+      { name: "Anne Dwane", role: "Co-Founder & General Partner" }
+    ],
+    timeline: [
+      { year: "2017", event: "Ben Casnocha, Erik Torenberg, Anne Dwane, and Ross Fubini found Village Global in September, chaired by Reid Hoffman." },
+      { year: "2018", event: "Closes its first fund, backed by Bezos, Gates, and Zuckerberg as LPs." },
+      { year: "2026", event: "Portfolio reaches 233 companies with 9 unicorns and 22 acquisitions." }
+    ],
+    holdings: []
+  },
+  {
+    rank: 60,
+    name: "Tribe Capital",
+    sectors: ["Enterprise Software", "Fintech", "Crypto", "AI"],
+    signatureExit: "No major venture-portfolio exit reported yet — Tribe's clearest public-market event is its own 2021 SPAC, which listed on NASDAQ with $240 million in capital, distinct from a traditional portfolio-company exit",
+    slug: "tribe-capital",
+    website: "https://www.tribecap.co",
+    short: "Tribe Capital",
+    founded: 2018,
+    hq: "Menlo Park, CA",
+    aum: "$1.9B",
+    thesis: "Tribe Capital was founded in July 2018 by Arjun Sethi, Jonathan Hsu, and Ted Maidenberg, all three departing Social Capital together as part of a broader wave of spinouts following Chamath Palihapitiya's restructuring of that firm. Drawing on Hsu's data-science background from Social Capital's internal analytics team, Tribe built a genuinely quantitative approach to venture investing — using proprietary data models to inform diligence while remaining deeply founder-focused rather than purely algorithmic — investing at seed and early Series A in enterprise SaaS, fintech, crypto, and AI-driven businesses. The firm's first investment was in sFOX in 2018, and it sponsored a SPAC that went public on NASDAQ with $240 million in capital in 2021. Tribe has raised multiple funds since founding, including two roughly $450 million vehicles, reaching $1.9 billion in assets under management.",
+    leadership: [
+      { name: "Arjun Sethi", role: "Co-Founder & General Partner", profileSlug: "arjun-sethi" },
+      { name: "Jonathan Hsu", role: "Co-Founder & General Partner" },
+      { name: "Ted Maidenberg", role: "Co-Founder & General Partner" }
+    ],
+    timeline: [
+      { year: "2018", event: "Arjun Sethi, Jonathan Hsu, and Ted Maidenberg found Tribe Capital in July, all departing Social Capital together." },
+      { year: "2018", event: "Makes its first investment in sFOX." },
+      { year: "2020", event: "Closes its first dedicated fund at approximately $450 million." },
+      { year: "2021", event: "Sponsors a SPAC that lists on NASDAQ with $240 million in capital." },
+      { year: "2025", event: "AUM reaches $1.9 billion." }
+    ],
+    holdings: []
+  },
+  {
+    rank: 61,
+    name: "Storm Ventures",
+    sectors: ["Enterprise Software", "Cybersecurity", "AI", "Developer Tools"],
+    signatureExit: "No specific blockbuster exit publicly listed — Storm's track record instead spans more than 200 investments and multiple acquisitions across two-plus decades of early-stage B2B enterprise software investing",
+    slug: "storm-ventures",
+    website: "https://www.stormventures.com",
+    short: "Storm Ventures",
+    founded: 2000,
+    hq: "Palo Alto, CA",
+    aum: "Not publicly disclosed",
+    thesis: "Storm Ventures was founded in 2000 by Ryan Floyd, Tae Hea Nahm, and Sanjay Subhedar in Palo Alto, raising its first fund in the same turbulent year the dot-com bubble began unraveling — timing Floyd has candidly called pure luck, since raising a year later would likely have proven far harder. The firm built a deliberately focused thesis around early-stage B2B enterprise software, cloud infrastructure, cybersecurity, and AI, taking an assertive, broad-network sourcing approach rather than relying on an insular circle of friends-of-friends deals, a pattern Floyd has said limits diversity of dealflow at many venture firms. Over more than two decades, Storm has made more than 200 investments across the United States, India, South Korea, and Europe, backing Workato, Talkdesk, and Pipedrive, and closed its seventh fund in December 2022.",
+    leadership: [
+      { name: "Ryan Floyd", role: "Founding Managing Director", profileSlug: "ryan-floyd" },
+      { name: "Tae Hea Nahm", role: "Founding Partner" },
+      { name: "Sanjay Subhedar", role: "Partner Emeritus" }
+    ],
+    timeline: [
+      { year: "2000", event: "Ryan Floyd, Tae Hea Nahm, and Sanjay Subhedar found Storm Ventures in Palo Alto." },
+      { year: "2019", event: "Closes Fund VI in November." },
+      { year: "2022", event: "Closes Fund VII in December." }
+    ],
+    holdings: []
+  },
+  {
     rank: 43,
     name: "Project A Ventures",
     sectors: ["Fintech", "Defense Tech", "Enterprise Software", "AI"],
