@@ -6971,4 +6971,308 @@ sources: [
       { label: "Octopus Ventures", url: "https://octopusventures.com" }
     ]
   },
+"paul-grossinger": {
+    name: "Paul Grossinger",
+    firm: "Gaingels",
+    firmSlug: "gaingels",
+    title: "Co-Founder",
+    joinedYear: 2014,
+    education: ["BA, Political Science, Johns Hopkins University", "MS, Journalism, Columbia University"],
+    previousExperience: [
+      "Editor & Partner, L&M Media",
+      "Co-Founder, Pervasive Group",
+      "Founder, Blue Jay Syndicate",
+      "General Partner, A-Level Capital"
+    ],
+    investmentFocus: ["Diverse Leadership", "Enterprise SaaS", "Marketplaces", "Fintech"],
+    notableInvestments: [
+      { name: "Databricks", ticker: null },
+      { name: "Weights & Biases", ticker: null },
+      { name: "Remote", ticker: null }
+    ],
+    boardSeats: [],
+    ipoCount: 0,
+    majorExits: 0,
+    careerTimeline: [
+      { year: "2010", event: "Co-founds Pervasive Group, following earlier work as an editor and partner at L&M Media." },
+      { year: "2014", event: "Co-founds Gaingels with David Beatty as an angel group for LGBTQIA+ investors backing LGBTQIA+ founders." },
+      { year: "2018", event: "Gaingels transitions from an angel group into a formal venture investment firm in January." },
+      { year: "2026", event: "Gaingels surpasses $1 billion in AUM across more than 2,500 companies, including 75-plus unicorns." }
+    ],
+    biography: "Paul Grossinger built an early career in media and entrepreneurship, co-founding Pervasive Group and later Blue Jay Syndicate, before co-founding Gaingels with David Beatty in 2014 as a small angel group of LGBTQIA+ investors backing LGBTQIA+ founders. After investing roughly $4 million between 2015 and 2017, Grossinger and Beatty transformed Gaingels into a formal venture investment firm in 2018, broadening its mandate to co-invest alongside established VCs in oversubscribed rounds while championing diverse leadership across the entire venture chain — founders, executives, board members, and check-writers alike. Under his continued leadership as co-founder, Gaingels has deployed more than $1 billion into over 2,500 companies including 75-plus unicorns such as Databricks, Weights & Biases, and Remote, while running programs like the Diversity Term Sheet Rider and an internal board-recruitment advisory to help portfolio companies build more inclusive leadership.",
+    sources: [
+      { label: "Gaingels — Who We Are", url: "https://gaingels.com/about/" },
+      { label: "BBH — Next Gen Summit", url: "https://www.bbh.com/us/en/insights/capital-partners-insights/next-gen-summit-paul-grossinger-gayatri-sarkar-on-entrepreneurship.html" }
+    ]
+  },
+
+  "kai-fu-lee": {
+    name: "Kai-Fu Lee",
+    firm: "Sinovation Ventures",
+    firmSlug: "sinovation-ventures",
+    title: "Chairman & CEO",
+    joinedYear: 2009,
+    education: ["BS, Computer Science, Columbia University", "PhD, Computer Science (Artificial Intelligence), Carnegie Mellon University"],
+    previousExperience: [
+      "Speech Recognition Researcher, Apple (developed Chinese dictation software, 1990-1996)",
+      "Executive, Silicon Graphics (SGI)",
+      "Founding Director, Microsoft Research China (later Microsoft Research Asia, 1998-2005)",
+      "Corporate VP, Microsoft (2002-2005)",
+      "President, Google Greater China (2005-2009)"
+    ],
+    investmentFocus: ["AI", "Robotics", "Edtech"],
+    notableInvestments: [
+      { name: "Megvii", ticker: null },
+      { name: "4Paradigm", ticker: null },
+      { name: "Insilico Medicine", ticker: "3696.HK" }
+    ],
+    boardSeats: [],
+    ipoCount: 3,
+    majorExits: 5,
+    careerTimeline: [
+      { year: "1988", event: "Earns a PhD in computer science from Carnegie Mellon, developing the SPHINX speech recognition system." },
+      { year: "1998", event: "Founds Microsoft Research China, later renamed Microsoft Research Asia, training a generation of AI leaders now at Baidu, Tencent, and Alibaba." },
+      { year: "2005", event: "Becomes President of Google Greater China, launching Google.cn and doubling Google China's market share." },
+      { year: "2009", event: "Resigns from Google in September and founds Innovation Works (later Sinovation Ventures) days later, with a $115 million debut fund." },
+      { year: "2023", event: "Founds 01.AI, a Chinese artificial intelligence company, while continuing to lead Sinovation." }
+    ],
+    biography: "Kai-Fu Lee built one of the most distinguished technical careers in AI before turning to venture capital — a Carnegie Mellon PhD in computer science, speech recognition work at Apple, founding director of Microsoft Research China (later Microsoft Research Asia, which trained a generation of China's top AI leaders), and finally President of Google Greater China. Days after resigning from Google in 2009, he founded Innovation Works, later rebranded Sinovation Ventures, built specifically to identify and nurture Chinese AI entrepreneurs using his unmatched network spanning Silicon Valley and China. Sinovation was one of the first Chinese venture firms to establish a US presence, and Lee has grown it into a leading AI-focused investment platform managing $3 billion across dual-currency funds and more than 400 portfolio companies. He is the author of the bestselling book 'AI Superpowers' and has more than 50 million social media followers as one of the most recognized voices in global AI discourse.",
+    sources: [
+      { label: "Wikipedia — Kai-Fu Lee", url: "https://en.wikipedia.org/wiki/Kai-Fu_Lee" },
+      { label: "Sinovation Ventures — Team", url: "https://www.sinovationventures.com/team" }
+    ]
+  },
+
+  "yaron-valler": {
+    name: "Yaron Valler",
+    firm: "Target Global",
+    firmSlug: "target-global",
+    title: "Founder & CIO",
+    joinedYear: 2015,
+    education: [],
+    previousExperience: [
+      "Chip Design Engineer, Intel (contributed to the second-generation Pentium processor)",
+      "Founded and sold several companies",
+      "Partner, Hasso Plattner Ventures (from 2010, investing in Berlin's early startup ecosystem)"
+    ],
+    investmentFocus: ["Fintech", "Mobility", "Marketplaces", "Travel"],
+    notableInvestments: [
+      { name: "Delivery Hero", ticker: "DHER.DE" },
+      { name: "TravelPerk", ticker: null },
+      { name: "Auto1 Group", ticker: "AG1.DE" }
+    ],
+    boardSeats: [],
+    ipoCount: 2,
+    majorExits: 3,
+    careerTimeline: [
+      { year: "2000s", event: "Works as a chip design engineer at Intel, contributing to the design of the second-generation Pentium processor, before founding and selling several companies." },
+      { year: "2010", event: "Moves to Berlin and joins Hasso Plattner Ventures, investing in the city's still-nascent startup ecosystem." },
+      { year: "2015", event: "Co-founds Target Global with Shmuel Chafets, going international with the fund initially based in Berlin." },
+      { year: "2017", event: "Delivery Hero, an early Target Global bet, completes its IPO on the Frankfurt Stock Exchange." },
+      { year: "2024", event: "TravelPerk, a company Valler led the growth funding for, completes its public debut." }
+    ],
+    biography: "Yaron Valler brings a genuinely technical foundation to venture capital rare among European investors — an Intel engineer who contributed to the design of the second-generation Pentium processor before founding and selling several of his own companies. He moved to Berlin in 2010 to invest in the city's early startup ecosystem through Hasso Plattner Ventures, and co-founded Target Global with longtime partner Shmuel Chafets in 2015, building a pan-European fund with a specific focus on companies targeting trillion-dollar markets in fintech and mobility. That early conviction produced Delivery Hero's 2017 Frankfurt IPO and continued growth-stage support for TravelPerk through its own public debut, and Valler has helped grow Target Global into a firm managing more than €3 billion with a portfolio spanning Revolut, Auto1, and Rapyd.",
+    sources: [
+      { label: "EU-Startups — Shmuel Chafets interview", url: "https://www.eu-startups.com/2019/06/be-very-hungry-and-confident-about-your-business-interview-with-shmuel-chafets-general-partner-at-target-global/" },
+      { label: "Tagesspiegel", url: "https://digitalpresent.tagesspiegel.de/die-einhornjaeger-vom-schinkelplatz" }
+    ]
+  },
+
+  "gary-rieschel": {
+    name: "Gary Rieschel",
+    firm: "Qiming Venture Partners",
+    firmSlug: "qiming-venture-partners",
+    title: "Founding Managing Partner",
+    joinedYear: 2006,
+    education: [],
+    previousExperience: [
+      "Executive, SoftBank"
+    ],
+    investmentFocus: ["Enterprise Software", "AI", "Healthcare"],
+    notableInvestments: [
+      { name: "Xiaomi", ticker: "1810.HK" },
+      { name: "Bilibili", ticker: "BILI" },
+      { name: "Zhihu", ticker: "ZH" }
+    ],
+    boardSeats: [],
+    ipoCount: 15,
+    majorExits: 50,
+    careerTimeline: [
+      { year: "1990s", event: "Builds an investing career at SoftBank before turning to China-focused venture capital." },
+      { year: "2006", event: "Co-founds Qiming Venture Partners with Duane Kuang in Shanghai." },
+      { year: "2017", event: "Co-founds Qiming U.S. with ex-pharma executive Mark McDade, launching the firm's first independent US-based fund." },
+      { year: "2022", event: "Qiming raises $2.4 billion from US institutional investors for its eighth dollar fund." }
+    ],
+    biography: "Gary Rieschel came to China-focused venture capital from SoftBank, co-founding Qiming Venture Partners with Duane Kuang, a former Intel Capital investor, in Shanghai in 2006. The two built one of China's most consistently successful venture firms over the following two decades, backing more than 480 companies with over 70 reaching unicorn status and more than 180 completing IPOs or acquisitions, including Xiaomi, Meituan, Bilibili, and Zhihu. Rieschel later co-founded Qiming U.S. with Mark McDade in 2017, extending the firm's model into an independent US dollar fund, and has remained a Founding Managing Partner across both entities as Qiming grew to $9.5 billion in assets under management — backed by longtime institutional partners including Princeton, Duke, MIT, and NYU.",
+    sources: [
+      { label: "The Wire China — Who is Qiming Venture Partners?", url: "https://www.thewirechina.com/2022/04/10/who-is-qiming-venture-partners/" },
+      { label: "Wikipedia — Qiming Venture Partners", url: "https://en.wikipedia.org/wiki/Qiming_Venture_Partners" }
+    ]
+  },
+
+  "annie-lamont": {
+    name: "Annie Lamont",
+    firm: "Oak HC/FT",
+    firmSlug: "oak-hc-ft",
+    title: "Co-Founder & Managing Partner",
+    joinedYear: 2014,
+    education: ["Stanford University"],
+    previousExperience: [
+      "Managing Partner, Oak Investment Partners (28 years, led healthcare & fintech practices)"
+    ],
+    investmentFocus: ["Healthcare", "Fintech"],
+    notableInvestments: [
+      { name: "Oscar Health", ticker: "OSCR" },
+      { name: "athenahealth", ticker: null },
+      { name: "One Medical", ticker: null }
+    ],
+    boardSeats: ["HCA Healthcare"],
+    ipoCount: 4,
+    majorExits: 8,
+    careerTimeline: [
+      { year: "1986", event: "Begins a 28-year career at Oak Investment Partners, eventually leading its healthcare and fintech practices as Managing Partner." },
+      { year: "2014", event: "Co-founds Oak HC/FT with Andrew Adams and Patricia Kemp in Greenwich, Connecticut." },
+      { year: "2019", event: "Closes an oversubscribed $800 million Fund III, five years after founding." },
+      { year: "2023", event: "Oak HC/FT is named one of the ten best-performing venture capital firms in the world." }
+    ],
+    biography: "Annie Lamont spent 28 years at Oak Investment Partners, rising to Managing Partner and leading its healthcare and fintech practices, before co-founding Oak HC/FT in 2014 with Andrew Adams and Patricia Kemp to apply decades of combined experience exclusively to those two multi-trillion-dollar markets. That singular focus, rare among generalist growth-equity firms, produced early bets on athenahealth, One Medical, Devoted Health, and Oscar Health, and Lamont has been recognized on the Forbes Midas List, Modern Healthcare's 100 Most Influential People in Healthcare, and Institutional Investor's FinTech Finance 40. She serves on the board of HCA Healthcare and previously served on Stanford's Board of Trustees, and was the inaugural recipient of the NVCA's award for Excellence in Healthcare Innovation.",
+    sources: [
+      { label: "Oak HC/FT — Annie Lamont", url: "https://www.oakhcft.com/team-members/annie-lamont" },
+      { label: "AcademyHealth", url: "https://academyhealth.org/about/people/annie-lamont-0" }
+    ]
+  },
+
+  "ciaran-oleary": {
+    name: "Ciarán O'Leary",
+    firm: "BlueYard Capital",
+    firmSlug: "blueyard-capital",
+    title: "General Partner & Co-Founder",
+    joinedYear: 2016,
+    education: ["HHL Leipzig Graduate School of Management"],
+    previousExperience: [
+      "Partner, Earlybird Venture Capital"
+    ],
+    investmentFocus: ["Crypto/Web3", "Deep Tech", "Defense Tech", "Biotechnology"],
+    notableInvestments: [
+      { name: "Protocol Labs (Filecoin)", ticker: null },
+      { name: "Wunderlist", ticker: null },
+      { name: "Peak Games", ticker: null }
+    ],
+    boardSeats: [],
+    ipoCount: 0,
+    majorExits: 2,
+    careerTimeline: [
+      { year: "2010s", event: "Works as a Partner at Earlybird Venture Capital in Berlin, where he meets future BlueYard co-founder Jason Whitmire and backs Wunderlist (acquired by Microsoft) and Peak Games (acquired by Zynga for $1.8 billion)." },
+      { year: "2016", event: "Co-founds BlueYard Capital with Jason Whitmire in Berlin, closing a €111 million debut fund." },
+      { year: "2017", event: "Leads BlueYard's seed investment in Protocol Labs, the company behind Filecoin." },
+      { year: "2019", event: "Raises a €105 million second fund, BlueYard 2." }
+    ],
+    biography: "Ciarán O'Leary is the son of former IDA Ireland chief Barry O'Leary, giving him an unusually direct family-level view of how global technology investment decisions get made. He built his early venture career as a Partner at Earlybird Venture Capital in Berlin, where he backed Wunderlist (later acquired by Microsoft) and Peak Games (sold to Zynga for $1.8 billion) alongside future BlueYard co-founder Jason Whitmire. The two broke off to found BlueYard in 2016, organizing the firm's entire investment thesis around three forces — decentralization of markets, democratization of capabilities, and liberation of data — deliberately backing companies addressing what O'Leary calls civilization-scale problems years before they reach consensus with other investors. That conviction produced BlueYard's seed investment in Protocol Labs, the company behind Filecoin, and the firm's debut fund generated a 76% gross IRR and 3.4x DPI.",
+    sources: [
+      { label: "VC Sheet — Ciarán O'Leary", url: "https://www.vcsheet.com/who/ciaran-o-leary" },
+      { label: "Newcomer", url: "https://www.newcomer.co/p/exclusive-blueyard-capital-returns" }
+    ]
+  },
+
+  "dror-berman": {
+    name: "Dror Berman",
+    firm: "Innovation Endeavors",
+    firmSlug: "innovation-endeavors",
+    title: "Founding Partner",
+    joinedYear: 2010,
+    education: ["BS, Computer Science, Ben-Gurion University", "MBA, Stanford Graduate School of Business"],
+    previousExperience: [
+      "Team Leader, R&D, NICE Systems (NASDAQ: NICE)"
+    ],
+    investmentFocus: ["AI", "Space", "Agriculture", "Biotechnology"],
+    notableInvestments: [
+      { name: "Uber", ticker: null },
+      { name: "SoFi", ticker: "SOFI" },
+      { name: "Astra", ticker: null }
+    ],
+    boardSeats: [],
+    ipoCount: 3,
+    majorExits: 6,
+    careerTimeline: [
+      { year: "2000s", event: "Leads an R&D team at NICE Systems before moving into venture capital." },
+      { year: "2010", event: "Co-founds Innovation Endeavors with Eric Schmidt, Scott Brady, and Rick Scanlon in Palo Alto." },
+      { year: "2019", event: "Announces Innovation Endeavors III, a $333 million fund, developing the firm's 'Super Evolution' thesis." },
+      { year: "2024", event: "Closes Fund V at $630 million, with the firm having invested in 115 companies and 34 exits over 14 years." }
+    ],
+    biography: "Dror Berman led an R&D team at NICE Systems before earning an MBA from Stanford and co-founding Innovation Endeavors with Eric Schmidt in 2010. Berman developed the firm's core 'Super Evolution' thesis — the idea that converging advances in data, computing, and engineering are letting startups re-architect deeply physical industries like agriculture, space, and manufacturing in years rather than decades — and has personally led the firm's investments in Uber, SoFi, Planet, Zymergen, Freenome, and Blue River Technologies, the last of which was acquired by John Deere. He created Curiosity Camp, an invite-only unconference that strips away titles so participants engage by ideas rather than status, and continues to run Innovation Endeavors as a small, deeply technical team investing at the intersection of science and company-building, having grown the firm to $630 million in its fifth fund alone.",
+    sources: [
+      { label: "VC Sheet — Dror Berman", url: "https://www.vcsheet.com/who/dror-berman" },
+      { label: "TechCrunch", url: "https://techcrunch.com/2024/01/25/innovation-endeavors-630m-fund-science-technology/" }
+    ]
+  },
+
+  "tim-draper": {
+    name: "Tim Draper",
+    firm: "Draper Associates",
+    firmSlug: "draper-associates",
+    title: "Founder & Managing Partner",
+    joinedYear: 1985,
+    education: ["BS, Electrical Engineering, Stanford University (1980)", "MBA, Harvard Business School (1984)"],
+    previousExperience: [
+      "Alex. Brown & Sons (brief stint before founding Draper Associates)"
+    ],
+    investmentFocus: ["Crypto/Web3", "AI", "Space", "Fintech"],
+    notableInvestments: [
+      { name: "Tesla", ticker: "TSLA" },
+      { name: "Baidu", ticker: "BIDU" },
+      { name: "Coinbase", ticker: "COIN" }
+    ],
+    boardSeats: [],
+    ipoCount: 8,
+    majorExits: 15,
+    careerTimeline: [
+      { year: "1985", event: "Founds Draper Associates in July, borrowing $6 million from the US Small Business Administration's SBIC program." },
+      { year: "1996", event: "Backs Hotmail, coining the term 'viral marketing' through its now-iconic email footer strategy." },
+      { year: "1997", event: "The firm becomes known as Draper Fisher Jurvetson (DFJ) after John Fisher and Steve Jurvetson join." },
+      { year: "2010", event: "Backs Tesla's Series D through Draper Associates, having already invested via DFJ's Series C in 2006." },
+      { year: "2014", event: "Purchases nearly 30,000 bitcoin for roughly $19 million at a US Marshals auction, becoming one of Bitcoin's most prominent public advocates." }
+    ],
+    biography: "Tim Draper is a fourth-generation venture capitalist — his father Bill Draper and grandfather William H. Draper Jr. were both pioneering Silicon Valley investors — who founded Draper Associates in 1985 after graduating from Stanford with an electrical engineering degree and earning an MBA from Harvard. He grew the firm into Draper Fisher Jurvetson after John Fisher and Steve Jurvetson joined, backing Hotmail (where he pioneered viral marketing), Skype, Baidu, and Tesla, then relaunched the original Draper Associates in 2008 to focus on early-stage and frontier technology. Draper became one of Bitcoin's most visible advocates after purchasing nearly 30,000 bitcoin at a US Marshals auction in 2014, and founded Draper University in 2012, a live-in entrepreneurship bootcamp that has graduated more than 6,000 alumni from 104 countries. The firm now manages roughly $2 billion and has backed more than 60 unicorns since 1985.",
+    sources: [
+      { label: "Draper.vc — Tim Draper", url: "https://www.draper.vc/tim-draper" },
+      { label: "Draper.vc — History", url: "https://www.draper.vc/history" }
+    ]
+  },
+
+  "david-wei": {
+    name: "David Wei",
+    firm: "Vision Knight Capital",
+    firmSlug: "vision-knight-capital",
+    title: "Founding Partner & Chairman",
+    joinedYear: 2011,
+    education: [],
+    previousExperience: [
+      "Corporate Finance Manager, Coopers & Lybrand",
+      "Head of Investment Banking, Orient Securities",
+      "CFO, then CEO, B&Q China (2000-2006, grew it into China's largest home improvement retailer)",
+      "CEO, Alibaba.com (led its 2007 listing on the Hong Kong Stock Exchange)"
+    ],
+    investmentFocus: ["Consumer", "E-Commerce", "Retail Brands"],
+    notableInvestments: [
+      { name: "POP MART", ticker: "1993.HK" },
+      { name: "Anker", ticker: null },
+      { name: "Smoore", ticker: null }
+    ],
+    boardSeats: [],
+    ipoCount: 1,
+    majorExits: 1,
+    careerTimeline: [
+      { year: "2000", event: "Becomes CFO, then CEO, of B&Q China, growing it into the country's largest home improvement retailer." },
+      { year: "2006", event: "Becomes CEO of Alibaba.com." },
+      { year: "2007", event: "Leads Alibaba.com's listing on the Hong Kong Stock Exchange." },
+      { year: "2011", event: "Founds Vision Knight Capital with Daming Zhu in Shanghai." },
+      { year: "2020", event: "POP MART, a company Vision Knight co-founded and invested in, completes its Hong Kong IPO." },
+      { year: "2025", event: "Raises more than $560 million in new funds, pushing total AUM to nearly $2.8 billion." }
+    ],
+    biography: "David Wei built more than two decades of real operating experience in China before turning to venture capital — corporate finance at Coopers & Lybrand, investment banking at Orient Securities, then CFO and later CEO of B&Q China, where he grew the company into the country's largest home improvement retailer. He became CEO of Alibaba.com in 2006 and personally led its 2007 listing on the Hong Kong Stock Exchange, giving him a rare combination of consumer retail and public-markets experience. He founded Vision Knight Capital with Daming Zhu in 2011, applying that operating background to bold growth-stage bets in China's consumer and digital retail sectors, most notably co-founding and backing POP MART, whose 2020 Hong Kong IPO was the largest internet offering in the market that year. Wei has grown Vision Knight into a firm managing nearly $2.8 billion across USD and RMB funds, with a portfolio spanning POP MART, Anker, and Smoore.",
+    sources: [
+      { label: "Vision Knight Capital — About Us", url: "http://www.vkc-partners.com/htmlsen/about.php" },
+      { label: "DealStreetAsia", url: "https://www.dealstreetasia.com/stories/vision-knight-new-funds-465981" }
+    ]
+  },
 };
