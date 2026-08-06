@@ -36,23 +36,35 @@ function renderFeaturedFirm() {
 
 function renderScaleBar() {
   const totalFirms = firms.length;
-  const uniqueTickers = new Set(firms.flatMap(f => f.holdings.map(h => h.ticker))).size;
-  const combinedAUM = Math.round(firms.reduce((sum, f) => sum + parseAumNumber(f.aum), 0));
+  const totalPartners = Object.keys(partnerProfiles).length;
+  const countryCount = new Set(firms.map(f => getCountryFromHQ(f.hq))).size;
+  const avgFoundedYear = Math.round(firms.reduce((sum, f) => sum + f.founded, 0) / totalFirms);
 
-document.getElementById('scaleBar').innerHTML = `
-    <span class="scale-num">${totalFirms}</span> VC Firms
-    <span class="scale-divider">·</span>
-    <span class="scale-num">${uniqueTickers}</span> Public Holdings Tracked
-    <span class="scale-divider">·</span>
-  <span class="scale-num">${formatCombinedAUM(combinedAUM)}</span> Combined AUM
-    <span class="scale-divider">·</span>
-    Updated Daily
+  // firms is already sorted by AUM descending (see utilities.js), so the
+  // largest fund is simply the first entry - no separate max() pass needed.
+  const largestAumFirm = firms[0];
+
+  // Counts how many firms list each sector, then takes the highest count -
+  // the real "most active" sector by firm coverage, not a hardcoded guess.
+  const sectorCounts = {};
+  firms.forEach(f => (f.sectors || []).forEach(s => {
+    sectorCounts[s] = (sectorCounts[s] || 0) + 1;
+  }));
+  const topSectorEntry = Object.entries(sectorCounts).sort((a, b) => b[1] - a[1])[0];
+  const topSector = topSectorEntry ? topSectorEntry[0] : '—';
+
+  document.getElementById('scaleBar').innerHTML = `
+    <div class="stat-card"><span class="stat-card-num">${totalFirms}</span><span class="stat-card-label">Total Firms</span></div>
+    <div class="stat-card"><span class="stat-card-num">${totalPartners}</span><span class="stat-card-label">Partners</span></div>
+    <div class="stat-card"><span class="stat-card-num">${countryCount}</span><span class="stat-card-label">Countries</span></div>
+    <div class="stat-card"><span class="stat-card-num">${avgFoundedYear}</span><span class="stat-card-label">Avg. Founded Year</span></div>
+    <div class="stat-card"><span class="stat-card-num">${largestAumFirm.aum}</span><span class="stat-card-label">Largest AUM — ${largestAumFirm.short}</span></div>
+    <div class="stat-card"><span class="stat-card-num">${topSector}</span><span class="stat-card-label">Most Active Sector</span></div>
   `;
 
   const seeAllLink = document.getElementById('heroSeeAllLink');
   if (seeAllLink) seeAllLink.textContent = `See All ${totalFirms} Firms →`;
 }
-
 function renderHeroTop5() {
   const top5 = firms.slice(0, 5);
   document.getElementById('heroTop5List').innerHTML = top5.map(f => `
