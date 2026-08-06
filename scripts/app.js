@@ -173,11 +173,12 @@ document.getElementById('portfolioView').style.display = 'none';
     document.getElementById('detailView').style.display = 'block';
     renderDetail(firm);
     window.scrollTo(0, 0);
-  } else {
+} else {
     document.getElementById('listView').style.display = 'block';
     renderFirms();
   }
   renderCompareBar();
+  renderComparePartnersBar();
 }
 
 window.addEventListener('hashchange', router);
