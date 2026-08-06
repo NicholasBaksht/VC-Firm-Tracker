@@ -325,7 +325,15 @@ const firmStages = {
       "march-capital": ["Series A", "Series B", "Series C"],
       "airtree-ventures": ["Pre-Seed", "Seed", "Series A", "Series B"],
       "samsung-ventures": ["Series A", "Series B", "Growth"],
-      "gaorong-capital": ["Series A", "Series B", "Growth"]
+      "gaorong-capital": ["Series A", "Series B", "Growth"],
+   "bond-capital": ["Growth", "Late Stage"],
+      "iconiq-growth": ["Series B", "Series C", "Growth"],
+      "deviation-capital": ["Seed", "Series A"],
+      "obvious-ventures": ["Seed", "Series A"],
+      "base10-partners": ["Seed", "Series A", "Series B"],
+      "village-global": ["Pre-Seed", "Seed"],
+      "tribe-capital": ["Seed", "Series A"],
+      "storm-ventures": ["Seed", "Series A"]
 };
 
 // ============================================================
