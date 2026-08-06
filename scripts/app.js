@@ -39,7 +39,7 @@ function renderScaleBar() {
   const uniqueTickers = new Set(firms.flatMap(f => f.holdings.map(h => h.ticker))).size;
   const combinedAUM = Math.round(firms.reduce((sum, f) => sum + parseAumNumber(f.aum), 0));
 
-  document.getElementById('scaleBar').innerHTML = `
+document.getElementById('scaleBar').innerHTML = `
     <span class="scale-num">${totalFirms}</span> VC Firms
     <span class="scale-divider">·</span>
     <span class="scale-num">${uniqueTickers}</span> Public Holdings Tracked
@@ -48,6 +48,9 @@ function renderScaleBar() {
     <span class="scale-divider">·</span>
     Updated Daily
   `;
+
+  const seeAllLink = document.getElementById('heroSeeAllLink');
+  if (seeAllLink) seeAllLink.textContent = `See All ${totalFirms} Firms →`;
 }
 
 function renderHeroTop5() {
