@@ -44,15 +44,16 @@ const REPORT_CONFIGS = {
 
 function renderReportsHub() {
   const cards = Object.entries(REPORT_CONFIGS).map(([slug, cfg]) => {
-    const count = firms.filter(f => (f.sectors || []).includes(cfg.sector)).length;
+    const meta = cfg.type === 'sector'
+      ? `${firms.filter(f => (f.sectors || []).includes(cfg.sector)).length} firms tracked`
+      : `${firms.length} firms tracked`;
     return `
       <a href="#reports/${slug}" class="report-card">
         <div class="report-card-title">${cfg.title}</div>
-        <div class="report-card-meta">${count} firms tracked</div>
+        <div class="report-card-meta">${meta}</div>
       </a>
     `;
   }).join('');
-
   document.getElementById('reportsHubView').innerHTML = `
     <a href="#" class="detail-back">← Back to all firms</a>
     <div class="dashboard-title">VC Industry Reports</div>
