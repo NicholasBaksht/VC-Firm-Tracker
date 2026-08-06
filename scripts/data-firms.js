@@ -90,6 +90,202 @@ const firms = [
     ]
   },
   {
+    rank: 76,
+    name: "Hustle Fund",
+    sectors: ["Fintech", "Healthcare", "Crypto", "Enterprise Software"],
+    signatureExit: "No confirmed exit yet — Hustle Fund's portfolio, including HoneyBook, Nova Credit, and Berbix, remains largely private, though early bets on The Pill Club and Webflow highlight the firm's pattern-recognition at the earliest stages",
+    slug: "hustle-fund",
+    website: "https://hustlefund.vc",
+    short: "Hustle Fund",
+    founded: 2017,
+    hq: "San Francisco, CA",
+    aum: "$125M+ (across multiple funds)",
+    thesis: "Hustle Fund was founded in 2017 by Elizabeth Yin, Eric Bahn, and Shiyan Koh, three longtime friends who'd each spent years around early-stage investing — Yin at 500 Startups, Bahn as a founder and scout — before building a fund specifically for founders who wished they'd had more help at the very beginning, often pre-revenue or even pre-product. The firm invests at unusually high volume, roughly 250 companies per fund, judging founders on execution speed and 'hustle' rather than pedigree, and runs Angel Squad, a program letting individual investors write checks as small as $1,000 into deals from Hustle Fund's own pipeline. That model has backed more than 400 startups, over 30% led by women, across fintech, digital health, web3, and B2B software, with more than $125 million raised across multiple funds since founding.",
+    leadership: [
+      { name: "Elizabeth Yin", role: "Co-Founder & General Partner", profileSlug: "elizabeth-yin" },
+      { name: "Eric Bahn", role: "Co-Founder & General Partner", profileSlug: "eric-bahn" },
+      { name: "Shiyan Koh", role: "Co-Founder & General Partner" }
+    ],
+    timeline: [
+      { year: "2017", event: "Elizabeth Yin, Eric Bahn, and Shiyan Koh found Hustle Fund in San Francisco." },
+      { year: "2018", event: "Closes an $11.5 million debut fund in September." },
+      { year: "2020", event: "Closes a $30 million second fund." },
+      { year: "2020", event: "Launches Angel Squad, democratizing access to startup investing." }
+    ],
+    holdings: []
+  },
+  {
+    rank: 21,
+    name: "Addition",
+    sectors: ["Fintech", "Enterprise Software", "Consumer", "AI"],
+    signatureExit: "dLocal's 2021 NASDAQ IPO under ticker DLO at a $6 billion valuation — Addition's first major public exit, backing the Uruguayan payments company as an early investor",
+    slug: "addition",
+    website: "https://addition.com",
+    short: "Addition",
+    founded: 2020,
+    hq: "New York, NY",
+    aum: "$7B+",
+    thesis: "Addition was founded in 2020 by Lee Fixel, who spent 13 years at Tiger Global Management building its private equity business and global internet portfolio with early bets on Spotify, Uber, and Flipkart before departing in 2019. Fixel structured Addition around a deliberately lean, solo-decision-maker model — he remains the firm's sole publicly known general partner — allowing for fast, data-driven, founder-centric decisions on market-defining software companies across fintech, enterprise SaaS, deep tech, and crypto. That approach produced dLocal's $6 billion IPO in 2021, Addition's first major exit, and Fixel has since backed Snyk, Chainalysis, Hugging Face, Stripe, and Applied Intuition, raising five consecutive funds each exceeding $1.3 billion to reach more than $7 billion in total assets under management.",
+    leadership: [
+      { name: "Lee Fixel", role: "Founder", profileSlug: "lee-fixel" }
+    ],
+    timeline: [
+      { year: "2019", event: "Lee Fixel departs Tiger Global Management after 13 years." },
+      { year: "2020", event: "Founds Addition, raising $1.3 billion for its debut fund." },
+      { year: "2021", event: "dLocal completes its NASDAQ IPO at a $6 billion valuation." },
+      { year: "2022", event: "Closes Addition Four at $1.5 billion." },
+      { year: "2026", event: "Total AUM surpasses $7 billion across five funds." }
+    ],
+    holdings: [
+      { name: "dLocal", ticker: "DLO", historicalPrice: null, price: null }
+    ]
+  },
+  {
+    rank: 55,
+    name: "Almaz Capital",
+    sectors: ["AI", "Deep Tech", "Cybersecurity", "Enterprise Software"],
+    signatureExit: "Yandex's NASDAQ IPO and Xometry's NASDAQ IPO — two of Almaz's clearest public-market outcomes, alongside QIK's acquisition by Skype, Sensity Systems' acquisition by Verizon, and Acumatica's sale to EQT",
+    slug: "almaz-capital",
+    website: "https://almazcapital.com",
+    short: "Almaz Capital",
+    founded: 2008,
+    hq: "Portola Valley, CA",
+    aum: "$300M+ (across three funds)",
+    thesis: "Almaz Capital was founded in 2008 by Alexander Galitsky, a former Soviet defense scientist who built and sold five technology companies — including ELVIS+, which partnered with Sun Microsystems on early Wi-Fi hardware — before turning to venture capital. Backed from inception by Cisco, EBRD, and IFC, the firm was built specifically to bridge Silicon Valley and Central/Eastern European deep tech, targeting AI/ML, IoT, cybersecurity, and enterprise software startups capable of scaling globally from origins in the CIS and Eastern Europe. That bridge-building produced real public and strategic outcomes including Yandex's NASDAQ IPO, Xometry's NASDAQ IPO, QIK's acquisition by Skype, Sensity Systems' acquisition by Verizon, and Acumatica's sale to EQT, with Almaz investing more than $300 million across three funds and 50-plus companies.",
+    leadership: [
+      { name: "Alexander Galitsky", role: "Co-Founder & Managing Partner", profileSlug: "alexander-galitsky" }
+    ],
+    timeline: [
+      { year: "2004", event: "Alexander Galitsky helps establish CSVC, an early China-focused venture vehicle, before founding Almaz." },
+      { year: "2008", event: "Founds Almaz Capital, backed by Cisco, EBRD, and IFC." },
+      { year: "2021", event: "Closes Fund III at $191 million." },
+      { year: "2014", event: "Galitsky's life story becomes the basis for the film 'Startup.'" }
+    ],
+    holdings: []
+  },
+  {
+    rank: 32,
+    name: "Blumberg Capital",
+    sectors: ["AI", "Fintech", "Cybersecurity", "Enterprise Software"],
+    signatureExit: "DoubleVerify's NYSE IPO under ticker DV in April 2021 at a valuation exceeding $3 billion — Blumberg's early 2008 investment delivered a reported 98x return, one of five unicorns and seven IPOs across the firm's portfolio",
+    slug: "blumberg-capital",
+    website: "https://blumbergcapital.com",
+    short: "Blumberg Capital",
+    founded: 1991,
+    hq: "San Francisco, CA",
+    aum: "$750M+ (across five funds)",
+    thesis: "Blumberg Capital was founded in 1991 by David J. Blumberg, who brought a rare combination of operating experience — as one of Check Point Software's first four senior executives — and international investing credentials from T. Rowe Price, Apax Partners, and the Bronfman Family Office. That dual foundation shaped a genuinely hands-on early-stage investing model, leading Seed and Series A rounds in AI, big data, fintech, insurtech, and cybersecurity companies with $500,000 to $5 million checks, and serving as active board members from inception through exit. The firm has backed more than 160 active companies producing five unicorns and seven IPOs, including DoubleVerify's 2021 NYSE listing (a reported 98x return on Blumberg's 2008 investment), Nutanix, and Braze, and now manages more than $750 million with offices spanning San Francisco, Tel Aviv, Miami, and New York.",
+    leadership: [
+      { name: "David J. Blumberg", role: "Founder & Managing Partner", profileSlug: "david-blumberg" }
+    ],
+    timeline: [
+      { year: "1991", event: "David Blumberg founds Blumberg Capital in San Francisco." },
+      { year: "2008", event: "Leads an early investment in DoubleVerify." },
+      { year: "2021", event: "DoubleVerify completes its NYSE IPO in April; closes a $225 million Fund V, oversubscribed." },
+      { year: "2022", event: "Opens an Opportunity Fund for follow-on investment." }
+    ],
+    holdings: [
+      { name: "DoubleVerify", ticker: "DV", historicalPrice: null, price: null }
+    ]
+  },
+  {
+    rank: 45,
+    name: "Venrock",
+    sectors: ["Healthcare", "Enterprise Software", "Consumer", "Deep Tech"],
+    signatureExit: "Apple's December 1980 NASDAQ IPO — Venrock invested $288,000 for roughly 10% equity in 1978, one of more than 112 IPOs across the firm's history, alongside Intel's 1971 IPO and Gilead Sciences",
+    slug: "venrock",
+    website: "https://www.venrock.com",
+    short: "Venrock",
+    founded: 1969,
+    hq: "Palo Alto, CA",
+    aum: "$3B",
+    thesis: "Venrock traces its roots to Laurance Rockefeller, who began seeding early-stage businesses with his family's fortune in the 1930s, formalizing that activity into Venrock Associates in 1969 as one of the very first professional venture capital operations in America. That six-decade head start produced an extraordinary early portfolio — Intel in 1969, Apple in 1978 for $288,000 and roughly 10% equity — and the firm has since built one of the deepest healthcare and technology investing benches in the industry, anchored by partners like Bryan Roberts. Venrock opened to outside investors in 1995 and restructured its partnership model starting in 2007 to equalize carry across all partners regardless of who led a given deal, a structural choice reinforcing genuine collective incentive. The firm has made more than 800 investments across its history, producing 112-plus IPOs, and now manages roughly $3 billion.",
+    leadership: [
+      { name: "Bryan Roberts", role: "Partner", profileSlug: "bryan-roberts" }
+    ],
+    timeline: [
+      { year: "1969", event: "Laurance Rockefeller and his siblings formalize Venrock Associates in August." },
+      { year: "1969", event: "Makes an early investment in Intel Corporation." },
+      { year: "1978", event: "Invests $288,000 in Apple Computer for roughly 10% equity." },
+      { year: "1980", event: "Apple completes its NASDAQ IPO in December." },
+      { year: "1995", event: "Opens to outside investors for the first time." }
+    ],
+    holdings: []
+  },
+  {
+    rank: 34,
+    name: "Abingworth",
+    sectors: ["Healthcare", "Deep Tech"],
+    signatureExit: "Clovis Oncology's NASDAQ IPO under ticker CLVS — one of 73-plus IPOs across Abingworth's 50-year history, alongside Algeta's acquisition by Bayer in 2014 and early pre-biotech-pivot stakes in Apple and Silicon Graphics",
+    slug: "abingworth",
+    website: "https://www.abingworth.com",
+    short: "Abingworth",
+    founded: 1973,
+    hq: "London, UK",
+    aum: "$2B+ (owned by The Carlyle Group since 2022)",
+    thesis: "Abingworth was founded in 1973 by London stockbrokers Peter Dicks and Hon. Anthony Montagu, initially making broader technology investments — including early stakes in Apple and Silicon Graphics — before Dicks led the firm's pivotal shift to dedicated biotechnology investing with a purpose-built biotech arm established in 1987. That five-decade focus on translating cutting-edge science into medicine, spanning seed through clinical co-development across London, Boston, and the San Francisco Bay Area, produced more than 180 portfolio companies, 73-plus completed IPOs, and 46 acquisitions, including Clovis Oncology and Algeta's sale to Bayer. Carlyle acquired Abingworth in August 2022 to bolster its own healthcare investing franchise, and the firm now operates across the full risk-return spectrum from venture capital to buyouts with more than $2 billion under management.",
+    leadership: [
+      { name: "Peter Dicks", role: "Co-Founder & Senior Partner", profileSlug: "peter-dicks" },
+      { name: "Tim Haines", role: "Chairman and Managing Partner" }
+    ],
+    timeline: [
+      { year: "1973", event: "Peter Dicks and Hon. Anthony Montagu found Abingworth in London." },
+      { year: "1987", event: "Establishes a dedicated biotech investment arm." },
+      { year: "2014", event: "Algeta is acquired by Bayer." },
+      { year: "2022", event: "The Carlyle Group acquires Abingworth in August." }
+    ],
+    holdings: []
+  },
+  {
+    rank: 46,
+    name: "Acton Capital",
+    sectors: ["Fintech", "Marketplaces", "Mobility", "Consumer"],
+    signatureExit: "Alando's acquisition by eBay within 100 days of Acton's first investment in 1999, for $43 million — the deal that sparked a wave of German startups and helped establish Berlin as a European tech hub, alongside Zooplus's 2008 IPO and AbeBooks' sale to Amazon",
+    slug: "acton-capital",
+    website: "https://www.actoncapital.com",
+    short: "Acton Capital",
+    founded: 1999,
+    hq: "Munich, Germany",
+    aum: "€400M+ (across six fund generations)",
+    thesis: "Acton Capital was founded in February 1999 by Christoph Braun, Paul-Bernhard Kallen, Jan-Gisbert Schultze, and Frank Seehaus, becoming one of the first venture capital funds in Europe just as the continent's digital economy was beginning. Its very first investment became legendary: signing a deal with three young founders — the Samwer brothers — behind Alando, an online auction platform eBay acquired within 100 days for $43 million, creating eBay Europe's core and sparking an entire generation of German startups. That founding conviction shaped Acton's continued focus on tech-enabled, unit-economics-driven business models across fintech, SaaS, marketplaces, and mobility, backing more than 100 startups to market leadership including Mambu, Zooplus, AbeBooks, and Clio, with more than €400 million invested across six fund generations since founding.",
+    leadership: [
+      { name: "Christoph Braun", role: "Managing Partner", profileSlug: "christoph-braun" },
+      { name: "Paul-Bernhard Kallen", role: "Managing Director" }
+    ],
+    timeline: [
+      { year: "1999", event: "Christoph Braun, Paul-Bernhard Kallen, Jan-Gisbert Schultze, and Frank Seehaus found Acton Capital, signing Alando as their first investment in February." },
+      { year: "1999", event: "Alando is acquired by eBay within 100 days for $43 million." },
+      { year: "2008", event: "Zooplus completes its IPO; AbeBooks is acquired by Amazon." },
+      { year: "2019", event: "Closes Acton V at $215 million in November." }
+    ],
+    holdings: []
+  },
+  {
+    rank: 47,
+    name: "EQT Ventures",
+    sectors: ["Enterprise Software", "Consumer", "Marketplaces", "AI"],
+    signatureExit: "Wolt's $8.1 billion acquisition by DoorDash in November 2021 — Sifted reported this delivered a roughly 200x multiple on EQT Ventures' original 2016 investment, one of the largest returns in European venture history",
+    slug: "eqt-ventures",
+    website: "https://eqtventures.com",
+    short: "EQT Ventures",
+    founded: 2016,
+    hq: "Stockholm, Sweden",
+    aum: "€2.3B+ (across three funds)",
+    thesis: "EQT Ventures launched in 2016 as the dedicated venture capital arm of EQT AB, the Swedish investment manager founded in 1994, bringing serial entrepreneur Hjalmar Winbladh alongside Kees Koolen and Lars Jörnow to build a multi-stage, sector-agnostic fund at a moment Europe's venture ecosystem remained a fraction of Silicon Valley's scale. The firm built a genuinely distinctive sourcing edge through Motherbrain, a proprietary AI platform used to identify and evaluate deals, combined with operational experience from partners with backgrounds at Booking.com, Wrapp, and King. That approach produced EQT Ventures' defining outcome: Wolt, backed from a 2016 seed investment through DoorDash's $8.1 billion acquisition in 2021, a reported 200x return. EQT Ventures has raised three funds totaling more than €2.3 billion, also backing Small Giant Games, Peakon (acquired by Workday), and Sonantic (acquired by Spotify).",
+    leadership: [
+      { name: "Hjalmar Winbladh", role: "Founding Partner (2016-2020)", profileSlug: "hjalmar-winbladh" }
+    ],
+    timeline: [
+      { year: "2016", event: "EQT Ventures launches in May with a €566 million debut fund." },
+      { year: "2016", event: "Leads an early investment in Wolt." },
+      { year: "2019", event: "Closes EQT Ventures II at €660 million in November." },
+      { year: "2020", event: "Hjalmar Winbladh departs the firm in July." },
+      { year: "2021", event: "Wolt is acquired by DoorDash for $8.1 billion." },
+      { year: "2022", event: "Closes EQT Ventures III at €1.1 billion in November." }
+    ],
+    holdings: []
+  },
+  {
     rank: 33,
     name: "Threshold Ventures",
     sectors: ["Enterprise Software", "Fintech", "Healthcare", "Developer Tools"],
