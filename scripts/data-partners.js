@@ -94,7 +94,145 @@ const partnerProfiles = {
       { label: "Wikipedia — Generation Investment Management", url: "https://en.wikipedia.org/wiki/Generation_Investment_Management" }
     ]
   },
+"mary-meeker": {
+    name: "Mary Meeker",
+    firm: "Bond Capital",
+    firmSlug: "bond-capital",
+    title: "Founder & General Partner",
+    joinedYear: 2018,
+    education: ["BA, DePauw University", "MBA, Cornell University (Samuel Curtis Johnson Graduate School of Management)"],
+    previousExperience: [
+      "Stockbroker, Merrill Lynch",
+      "Analyst, Morgan Stanley (technology & internet research)",
+      "Growth Practice Partner, Kleiner Perkins (2010-2019)"
+    ],
+    investmentFocus: ["Enterprise Software", "Consumer", "AI", "Deep Tech"],
+    notableInvestments: [
+      { name: "Canva", ticker: null },
+      { name: "Applied Intuition", ticker: null },
+      { name: "AlphaSense", ticker: null }
+    ],
+    boardSeats: ["Block", "Genies", "OpenEvidence"],
+    ipoCount: 0,
+    majorExits: 0,
+    careerTimeline: [
+      { year: "1995", event: "Publishes the first edition of her annual Internet Trends report while at Morgan Stanley, becoming the technology industry's most anticipated single document for the next two decades." },
+      { year: "2010", event: "Joins Kleiner Perkins, leading its growth investing practice and backing Facebook, Spotify, Airbnb, Uber, Slack, and Plaid." },
+      { year: "2018", event: "Leaves Kleiner Perkins in September, following an internal power struggle over the firm's direction, and founds Bond Capital with Mood Rowghani, Noah Knauf, and Juliet de Baubigny." },
+      { year: "2019", event: "Bond closes its $1.25 billion debut fund in April and makes its first investment, $70 million into Canva, in May." },
+      { year: "2024", event: "Revives the Internet Trends report after a five-year hiatus." }
+    ],
+    biography: "Mary Meeker earned the nickname 'Queen of the Internet' in the 1990s for her Internet Trends reports, published annually from 1995 through 2019, which synthesized hundreds of data points into directionally accurate predictions about where technology was heading — reports so influential that CEOs would rearrange their schedules to read them the day they dropped. She spent nearly a decade leading Kleiner Perkins' growth investing practice, backing Facebook, Spotify, Airbnb, Uber, and Slack, before an internal power struggle led her to leave in September 2018 and found Bond Capital with three fellow Kleiner alumni. Bond has grown into a $5.9 billion growth-equity platform applying Meeker's research-driven, data-first investment discipline to late-stage technology companies, with Canva — backed since 2019 and now valued at $42 billion — as its signature bet, alongside Applied Intuition, Checkr, and AI voice company ElevenLabs.",
+    sources: [
+      { label: "Forbes — Mary Meeker", url: "https://www.forbes.com/profile/mary-meeker/" },
+      { label: "TechCrunch", url: "https://techcrunch.com/2019/04/24/mary-meeker-raises-1-25b-for-bond-her-debut-growth-fund" }
+    ]
+  },
 
+  "divesh-makan": {
+    name: "Divesh Makan",
+    firm: "Iconiq Growth",
+    firmSlug: "iconiq-growth",
+    title: "Co-Founder & Managing Partner",
+    joinedYear: 2013,
+    education: [],
+    previousExperience: [
+      "Wealth Advisor, Morgan Stanley"
+    ],
+    investmentFocus: ["Enterprise Software", "Fintech", "Consumer Internet", "Healthcare IT"],
+    notableInvestments: [
+      { name: "Snowflake", ticker: "SNOW" },
+      { name: "Datadog", ticker: "DDOG" },
+      { name: "GitLab", ticker: "GTLB" }
+    ],
+    boardSeats: [],
+    ipoCount: 3,
+    majorExits: 4,
+    careerTimeline: [
+      { year: "2002", event: "Meets Dave Goldberg and Sheryl Sandberg, forming relationships that shape the next two decades of his career." },
+      { year: "2011", event: "Leaves Morgan Stanley to found Iconiq Capital, managing wealth for Facebook's inner circle including Mark Zuckerberg and Sheryl Sandberg." },
+      { year: "2013", event: "Launches Iconiq Growth with Will Griffith, encouraged by client and mentor Dave Goldberg, deliberately betting on SaaS over consumer technology." },
+      { year: "2015", event: "Leads Iconiq's early investment in Snowflake." },
+      { year: "2020", event: "Snowflake completes its NYSE IPO at a $68 billion valuation." },
+      { year: "2024", event: "Closes Iconiq Growth's seventh fund, its largest ever, at $5.75 billion." }
+    ],
+    biography: "Divesh Makan left Morgan Stanley in 2011 to found Iconiq Capital, building a wealth management practice for Silicon Valley's most prominent tech executives, including early client and eventual mentor Dave Goldberg, the SurveyMonkey CEO whose sudden death in 2015 profoundly shaped Makan's approach to the business. It was Goldberg who encouraged Makan to launch Iconiq Growth in 2013, recruiting Will Griffith from Technology Crossover Ventures to lead it, and the two made a deliberately contrarian call to focus on enterprise SaaS rather than the consumer technology most investors chased at the time. That bet produced Snowflake, Datadog, and GitLab — three of Iconiq's clearest public-market outcomes — and Makan has grown Iconiq Growth into one of Silicon Valley's largest and most private growth funds, managing more than $21 billion deployed across 140-plus companies, with its seventh fund closing at $5.75 billion in 2024, its largest ever.",
+    sources: [
+      { label: "Fortune", url: "https://fortune.com/2024/07/22/iconiq-growth-venture-capital-fund-startups-divesh-makan/" },
+      { label: "Wikipedia — Iconiq Capital", url: "https://en.wikipedia.org/wiki/Iconiq_Capital" }
+    ]
+  },
+
+  "colin-beirne": {
+    name: "Colin Beirne",
+    firm: "Deviation Capital",
+    firmSlug: "deviation-capital",
+    title: "Founding Partner",
+    joinedYear: 2012,
+    education: ["BA (dual), Economics & Law, Jurisprudence and Social Thought, Amherst College"],
+    previousExperience: [
+      "Technology Investment Banker",
+      "Corporate Strategist",
+      "7 years, Two Sigma Investments (business strategy)"
+    ],
+    investmentFocus: ["AI", "Deep Tech", "Life Sciences", "Robotics"],
+    notableInvestments: [
+      { name: "Recursion Pharmaceuticals", ticker: "RXRX" },
+      { name: "WHOOP", ticker: null },
+      { name: "Kalshi", ticker: null }
+    ],
+    boardSeats: [],
+    ipoCount: 1,
+    majorExits: 1,
+    careerTimeline: [
+      { year: "1990s", event: "Interns at Andromedia during the late-'90s dot-com boom, sparking a lasting interest in startups." },
+      { year: "2005", event: "Joins Two Sigma Investments, spending seven years helping shape the quant hedge fund's business strategy." },
+      { year: "2012", event: "Proposes and founds Two Sigma Ventures on Pi Day (March 14) at a Two Sigma strategy offsite." },
+      { year: "2021", event: "Recursion Pharmaceuticals completes its NASDAQ IPO at $18 a share, an initial market cap of roughly $3 billion." },
+      { year: "2026", event: "Leads Two Sigma Ventures' spinout into an independent firm, Deviation Capital, with $2 billion in AUM in May." }
+    ],
+    biography: "Colin Beirne spent seven years at Two Sigma Investments helping shape the quantitative hedge fund's business strategy before proposing, on Pi Day 2012, that the firm launch a venture arm betting on three convictions: New York was becoming a real startup ecosystem, data and advanced computing would drive innovation for decades, and Two Sigma had the technical talent to help. That thesis, effectively a bet on AI before the term became mainstream, produced Recursion Pharmaceuticals' 2021 IPO and stakes in WHOOP, Kalshi, and Etched. After 14 years building Two Sigma Ventures into an operationally mature platform, Beirne led its clean spinout into an independent firm, Deviation Capital, in May 2026, retaining $2 billion in AUM and access to Two Sigma's technical bench while gaining full GP autonomy over fund mechanics and succession.",
+    sources: [
+      { label: "Deviation Capital — Colin Beirne", url: "https://deviation.com/team/colin-beirne" },
+      { label: "citybiz", url: "https://www.citybiz.co/article/841330/deviation-capital-launches-with-2-billion-aum-after-spinout-from-two-sigma-ventures/" }
+    ]
+  },
+
+  "ev-williams": {
+    name: "Ev Williams",
+    firm: "Obvious Ventures",
+    firmSlug: "obvious-ventures",
+    title: "Co-Founder",
+    joinedYear: 2014,
+    education: [],
+    previousExperience: [
+      "Co-Founder, Blogger (acquired by Google)",
+      "Co-Founder & CEO, Twitter",
+      "Founder, Medium"
+    ],
+    investmentFocus: ["Climate", "Healthcare", "Consumer", "Economic Infrastructure"],
+    notableInvestments: [
+      { name: "Beyond Meat", ticker: "BYND" },
+      { name: "Planet Labs", ticker: "PL" },
+      { name: "Recursion Pharmaceuticals", ticker: "RXRX" }
+    ],
+    boardSeats: ["Medium (Chairman)"],
+    ipoCount: 3,
+    majorExits: 3,
+    careerTimeline: [
+      { year: "2003", event: "Co-founds Blogger, which Google acquires the same year." },
+      { year: "2006", event: "Co-founds Twitter, later serving as CEO." },
+      { year: "2012", event: "Founds Medium." },
+      { year: "2014", event: "Co-founds Obvious Ventures with James Joaquin and Vishal Vasishth in December, built around 'world positive' investing." },
+      { year: "2019", event: "Beyond Meat completes its NASDAQ IPO; Obvious holds a 9% stake at the time." },
+      { year: "2021", event: "Planet Labs completes its SPAC merger; Recursion Pharmaceuticals completes its NASDAQ IPO." }
+    ],
+    biography: "Ev Williams co-founded Blogger, sold it to Google, then co-founded Twitter and later founded Medium, building three of the internet's most consequential publishing platforms before turning to venture capital. He co-founded Obvious Ventures in 2014 with James Joaquin and Vishal Vasishth on a specific, non-obvious premise: that companies solving humanity's biggest problems profitably, not through charity, would become the most valuable businesses of the coming decades. That thesis, organized around planetary health, human health, and economic health, produced an early 9% stake in Beyond Meat ahead of its 2019 IPO, a 2015 investment in Planet Labs ahead of its 2021 SPAC listing, and a Series A bet on Recursion Pharmaceuticals. Williams remains Chairman of Medium while continuing to co-lead Obvious, which has playfully closed its five funds at mathematically significant numbers, from $123,456,789 to Euler's number, $271,828,182.",
+    sources: [
+      { label: "Obvious Ventures — Ev Williams", url: "https://obvious.com/team/ev-williams/" },
+      { label: "TechCrunch", url: "https://techcrunch.com/2026/01/26/obvious-ventures-lands-fund-five-with-a-360-degree-view-of-planetary-human-economic-health/" }
+    ]
+  },
   "gaorong-founders": {
     name: "Zhang Zhen",
     firm: "Gaorong Capital",
