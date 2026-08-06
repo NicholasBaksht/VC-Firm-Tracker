@@ -123,8 +123,13 @@ document.getElementById('portfolioView').style.display = 'none';
   document.getElementById('companyView').style.display = 'none';
  document.getElementById('shortlistView').style.display = 'none';
   document.getElementById('worldMapView').style.display = 'none';
+  document.getElementById('comparePartnersView').style.display = 'none';
 
-  if (slug === 'world-map') {
+  if (slug === 'compare-partners') {
+    document.getElementById('comparePartnersView').style.display = 'block';
+    renderPartnerComparison();
+    window.scrollTo(0, 0);
+  } else if (slug === 'world-map') {
     document.getElementById('worldMapView').style.display = 'block';
     renderWorldMap();
     window.scrollTo(0, 0);
