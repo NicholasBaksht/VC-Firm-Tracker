@@ -6383,34 +6383,6 @@ const firms = [
     ]
   },
   {
-    rank: 18,
-    name: "Deerfield Management",
-    sectors: ["Healthcare", "Deep Tech", "AI"],
-    signatureExit: "Aimmune Therapeutics' acquisition by Nestlé for $2.6 billion in 2020 — a Deerfield-backed food allergy treatment company, among more than 200 healthcare and biotech companies the firm has invested in since founding",
-    slug: "deerfield-management",
-    website: "https://www.deerfield.com",
-    short: "Deerfield",
-    founded: 1994,
-    hq: "New York, NY",
-    aum: "$15B",
-    thesis: "Deerfield Management was founded in 1994 by Arnold Snider with $17 million in equity, a former Tiger Management Managing Director whose firm became one of the original 'Tiger Cub' funds spun out of Julian Robertson's legendary hedge fund. Snider built Deerfield around a deliberately singular focus rare among hedge funds of its era: healthcare and biotechnology exclusively, blending public equity investing, private venture and growth investing, and royalty and structured-financing strategies to support companies across the entire healthcare ecosystem. James Flynn, who joined in 2000, took over full leadership when Snider retired in 2005 and has since grown the firm into one of the largest dedicated healthcare investment platforms in the world, operating a genetics-and-orphan-disease-focused Healthcare Innovations Fund and a New York City innovation campus called Cure that nurtures early-stage biotech startups. Deerfield now manages $15 billion across more than 200 active public and private investments spanning therapeutics, medical devices, diagnostics, and digital health.",
-    leadership: [
-      { name: "James Flynn", role: "Managing Partner & CEO" },
-      { name: "Arnold Snider", role: "Founder (Retired 2005; d. 2014)", profileSlug: "arnold-snider" }
-    ],
-    timeline: [
-      { year: "1994", event: "Arnold Snider founds Deerfield Management with $17 million in equity." },
-      { year: "2000", event: "James Flynn joins the firm." },
-      { year: "2005", event: "Snider formally retires, and Flynn takes over full leadership." },
-      { year: "2020", event: "Aimmune Therapeutics, a Deerfield-backed company, is acquired by Nestlé for $2.6 billion." },
-      { year: "2025", event: "Closes more than $600 million for its third dedicated healthcare venture fund in May." }
-    ],
-    holdings: [
-      { name: "Veracyte", ticker: "VCYT", historicalPrice: null, price: null },
-      { name: "Corcept Therapeutics", ticker: "CORT", historicalPrice: null, price: null }
-    ]
-  },
-  {
     rank: 26,
     name: "Octopus Ventures",
     sectors: ["Deep Tech", "Healthcare", "Fintech", "Consumer", "Climate"],
