@@ -6937,4 +6937,38 @@ sources: [
       { label: "Institutional Investor", url: "https://www.institutionalinvestor.com/article/b1d7hrkxb9sfnk/Deerfield-Posts-Another-Double-Digit-Gain-in-2018" }
     ]
   },
+"alex-macpherson": {
+    name: "Alex Macpherson",
+    firm: "Octopus Ventures",
+    firmSlug: "octopus-ventures",
+    title: "Managing Director",
+    joinedYear: 2007,
+    education: [],
+    previousExperience: [
+      "Sold personal and business computers after leaving school",
+      "Worked in a circus",
+      "Derivatives Trader, City of London (11 years)",
+      "Founder & CEO, Katalyst (private investor group, 2000-2007, acquired by Octopus)"
+    ],
+    investmentFocus: ["Deep Tech", "Consumer", "Fintech", "Health"],
+    notableInvestments: [
+      { name: "Depop", ticker: null },
+      { name: "Zoopla", ticker: null },
+      { name: "SwiftKey", ticker: null }
+    ],
+    boardSeats: [],
+    ipoCount: 5,
+    majorExits: 81,
+    careerTimeline: [
+      { year: "1990s", event: "Spends 11 years as a derivatives trader in the City of London, after earlier work selling computers and, briefly, working in a circus." },
+      { year: "2000", event: "Founds Katalyst, a private investor group making early-stage, startup, and expansion-stage investments." },
+      { year: "2007", event: "Leads Katalyst's sale to Octopus in August, joining Octopus Ventures at its formation." },
+      { year: "2021", event: "Depop, a portfolio company, is acquired by Etsy for $1.6 billion." }
+    ],
+    biography: "Alex Macpherson took a genuinely unconventional path into venture capital — selling computers after leaving school, working in a circus, then spending 11 years as a derivatives trader in the City of London before founding his own private investor group, Katalyst, in 2000. He led Katalyst as CEO for seven years, building a track record backing early-stage and expansion-stage companies, until Octopus acquired the business in August 2007, forming what became Octopus Ventures with Macpherson joining as a founding leader. That trading background shaped a distinctive investing philosophy he's described as knowing when 'the first cut is the cheapest' — recognizing early when to cut losses rather than compound them. Under his leadership, Octopus Ventures has grown into one of Europe's most active venture investors, backing more than 380 companies including Zoopla, SwiftKey, Graze.com, and Depop, which Etsy acquired for $1.6 billion in 2021.",
+    sources: [
+      { label: "Seedcamp — Alex Macpherson", url: "https://seedcamp.com/views/alex-macpherson-managing-director-of-octopus-ventures-on-backing-exceptional-founders/" },
+      { label: "Octopus Ventures", url: "https://octopusventures.com" }
+    ]
+  },
 };
