@@ -325,7 +325,6 @@ const firmStages = {
       "march-capital": ["Series A", "Series B", "Series C"],
       "airtree-ventures": ["Pre-Seed", "Seed", "Series A", "Series B"],
       "samsung-ventures": ["Series A", "Series B", "Growth"],
-      "generation-investment-management": ["Growth", "Late Stage"],
       "gaorong-capital": ["Series A", "Series B", "Growth"]
 };
 
