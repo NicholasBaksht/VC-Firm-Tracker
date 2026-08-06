@@ -1,9 +1,8 @@
 name: Generate SEO Pages
-
 on:
   push:
     branches: [main]
-paths:
+    paths:
       - 'scripts/data-meta.js'
       - 'scripts/data-partners.js'
       - 'scripts/data-firms.js'
@@ -13,7 +12,6 @@ paths:
       - 'scripts/page-copy.js'
       - 'scripts/generate-seo-pages.js'
   workflow_dispatch: {}
-
 jobs:
   generate:
     runs-on: ubuntu-latest
@@ -22,19 +20,16 @@ jobs:
     steps:
       - name: Check out the repository
         uses: actions/checkout@v4
-
       - name: Set up Node
         uses: actions/setup-node@v4
         with:
           node-version: '20'
-
       - name: Generate SEO pages
         run: node scripts/generate-seo-pages.js
-
       - name: Commit and push if pages changed
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "github-actions[bot]@users.noreply.github.com"
-git add companies/ locations/ stages/ firms/ people/ compare/ sitemap.xml robots.txt
+          git add companies/ locations/ stages/ firms/ people/ compare/ sitemap.xml robots.txt
           git diff --staged --quiet || git commit -m "Auto-regenerate SEO pages [skip ci]"
           git push
