@@ -5280,6 +5280,30 @@ const firms = [
       { name: "Corcept Therapeutics", ticker: "CORT", historicalPrice: null, price: null }
     ]
   },
+  {
+    rank: 26,
+    name: "Octopus Ventures",
+    sectors: ["Deep Tech", "Healthcare", "Fintech", "Consumer", "Climate"],
+    signatureExit: "Depop's $1.6 billion acquisition by Etsy in 2021 — an early Octopus Ventures backer of the fashion resale marketplace, alongside continued positions in Zoopla and SwiftKey",
+    slug: "octopus-ventures",
+    website: "https://octopusventures.com",
+    short: "Octopus Ventures",
+    founded: 2007,
+    hq: "London, UK",
+    aum: "£2B (~$2.6B)",
+    thesis: "Octopus Ventures formed in August 2007 when Octopus Group, the London holding company founded in 2000 by Simon Rogerson, Chris Hulatt, and Guy Myles, acquired Katalyst, a private investor group run by former City derivatives trader Alex Macpherson. That acquisition gave Octopus a genuine early-stage venture capability layered onto its broader financial services platform, and the firm has since grown into one of Europe's largest and most active VCs, investing from £1 million seed checks through £10 million-plus Series B rounds with the ability to fund companies all the way through IPO. Octopus organizes its investing around five specialist areas — health, fintech, deep tech, consumer, and B2B software — and has backed more than 380 companies since 2008, including Zoopla, SwiftKey, Graze.com, and Depop, which Etsy acquired for $1.6 billion in 2021.",
+    leadership: [
+      { name: "Alex Macpherson", role: "Managing Director", profileSlug: "alex-macpherson" },
+      { name: "Erin Platts", role: "CEO, Octopus Investments" }
+    ],
+    timeline: [
+      { year: "2007", event: "Octopus acquires Katalyst in August, forming Octopus Ventures with Alex Macpherson as a founding leader." },
+      { year: "2008", event: "Begins active early-stage investing, backing Zoopla and SwiftKey among its first cohort." },
+      { year: "2021", event: "Depop is acquired by Etsy for $1.6 billion." },
+      { year: "2025", event: "Erin Platts is appointed CEO of Octopus Investments in September." }
+    ],
+    holdings: []
+  },
    {
     rank: 84,
     name: "Gradient Ventures",
