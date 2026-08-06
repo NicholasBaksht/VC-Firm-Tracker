@@ -115,3 +115,95 @@ function renderSectorReport(reportSlug) {
     <div class="report-firm-list">${topFirmsHTML}</div>
   `;
 }
+// Global VC Landscape - reuses the exact same region-classification
+// and country-extraction logic already built for the World Map
+// (world-map-data.js), just presented as ranked lists instead of an
+// interactive map. Kept as a separate function from the sector
+// template since its shape (regions + countries, not sectors +
+// top firms) is genuinely different, not just a config variation.
+function renderLandscapeReport(cfg) {
+  const regions = getRegionBreakdown(); // from world-map-data.js
+
+  const countryCounts = {};
+  firms.forEach(f => {
+    const country = getCountryFromHQ(f.hq);
+    countryCounts[country] = (countryCounts[country] || 0) + 1;
+  });
+  const topCountries = Object.entries(countryCounts).sort((a, b) => b[1] - a[1]).slice(0, 10);
+
+  const regionRows = regions.map(([region, count]) => `
+    <div class="worldmap-region-row"><span>${region}</span><span class="worldmap-region-count">${count} firm${count === 1 ? '' : 's'}</span></div>
+  `).join('');
+
+  const countryRows = topCountries.map(([country, count], i) => `
+    <div class="report-firm-row" style="cursor: default;">
+      <span class="report-firm-rank">${String(i + 1).padStart(2, '0')}</span>
+      <span class="report-firm-name">${country}</span>
+      <span class="report-firm-aum">${count} firm${count === 1 ? '' : 's'}</span>
+    </div>
+  `).join('');
+
+  document.getElementById('sectorReportView').innerHTML = `
+    <a href="#reports" class="detail-back">← Back to Reports</a>
+    <div class="dashboard-title">${cfg.title}</div>
+    <div class="reports-intro"><p>${cfg.intro}</p></div>
+
+    <div class="worldmap-sidebar-label" style="margin: 0 0 14px;">By Region</div>
+    <div class="worldmap-sidebar" style="margin-bottom: 24px;">${regionRows}</div>
+
+    <div class="worldmap-sidebar-label" style="margin: 24px 0 14px;">Top 10 Countries by Firm Count</div>
+    <div class="report-firm-list">${countryRows}</div>
+
+    <p style="margin-top: 12px;"><a href="#world-map" style="font-family: var(--mono); font-size: 12.5px; color: var(--gold);">View the full interactive World Map →</a></p>
+  `;
+}
+
+// Annual VC Power Board Report - the flagship composite report,
+// combining site-wide totals, the top 10 firms overall, and the
+// top 5 sectors by firm count into a single page. Deliberately
+// reuses computations already proven correct elsewhere (the same
+// stat-card numbers as the homepage, the same region logic as the
+// World Map) rather than introducing new, unverified math.
+function renderAnnualReport(cfg) {
+  const totalFirms = firms.length;
+  const totalPartners = Object.keys(partnerProfiles).length;
+  const combinedAUM = Math.round(firms.reduce((sum, f) => sum + parseAumNumber(f.aum), 0));
+  const countryCount = new Set(firms.map(f => getCountryFromHQ(f.hq))).size;
+
+  const sectorCounts = {};
+  firms.forEach(f => (f.sectors || []).forEach(s => { sectorCounts[s] = (sectorCounts[s] || 0) + 1; }));
+  const topSectors = Object.entries(sectorCounts).sort((a, b) => b[1] - a[1]).slice(0, 5);
+
+  const topFirms = firms.slice().sort((a, b) => parseAumNumber(b.aum) - parseAumNumber(a.aum)).slice(0, 10);
+
+  const topFirmsHTML = topFirms.map((f, i) => `
+    <a href="#${f.slug}" class="report-firm-row">
+      <span class="report-firm-rank">${String(i + 1).padStart(2, '0')}</span>
+      <span class="report-firm-name">${f.name}</span>
+      <span class="report-firm-aum">${f.aum}</span>
+    </a>
+  `).join('');
+
+  const sectorRows = topSectors.map(([sector, count]) => `
+    <div class="worldmap-region-row"><span>${sector}</span><span class="worldmap-region-count">${count} firms</span></div>
+  `).join('');
+
+  document.getElementById('sectorReportView').innerHTML = `
+    <a href="#reports" class="detail-back">← Back to Reports</a>
+    <div class="dashboard-title">${cfg.title}</div>
+    <div class="reports-intro"><p>${cfg.intro}</p></div>
+
+    <div class="scale-bar">
+      <div class="stat-card"><span class="stat-card-num">${totalFirms}</span><span class="stat-card-label">Total Firms</span></div>
+      <div class="stat-card"><span class="stat-card-num">${totalPartners}</span><span class="stat-card-label">Partners</span></div>
+      <div class="stat-card"><span class="stat-card-num">${countryCount}</span><span class="stat-card-label">Countries</span></div>
+      <div class="stat-card"><span class="stat-card-num">${formatCombinedAUM(combinedAUM)}</span><span class="stat-card-label">Combined AUM</span></div>
+    </div>
+
+    <div class="worldmap-sidebar-label" style="margin: 24px 0 14px;">Top 10 Firms by AUM</div>
+    <div class="report-firm-list" style="margin-bottom: 24px;">${topFirmsHTML}</div>
+
+    <div class="worldmap-sidebar-label" style="margin: 24px 0 14px;">Top 5 Sectors by Firm Count</div>
+    <div class="worldmap-sidebar">${sectorRows}</div>
+  `;
+}
