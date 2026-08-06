@@ -121,6 +121,11 @@
     font-size: 11.5px;
     color: var(--gold);
   }
+.company-card-price {
+    font-family: var(--mono);
+    font-size: 11.5px;
+    color: var(--ink-dim);
+  }
   .company-card-return {
     font-family: var(--mono);
     font-size: 11.5px;
