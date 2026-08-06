@@ -31,6 +31,181 @@ const firms = [
       { name: "Arm", ticker: "ARM", historicalPrice: null, price: null }
     ]
   },
+  {
+    rank: 30,
+    name: "Oxford Science Enterprises",
+    sectors: ["Deep Tech", "Healthcare", "Industrial Tech"],
+    signatureExit: "No confirmed exit yet — OSE operates a deliberately patient, evergreen model with no fixed fund life, and its 125-plus Oxford spinout companies remain privately held with a combined value exceeding £1.1 billion",
+    slug: "oxford-science-enterprises",
+    website: "https://www.oxfordscienceenterprises.com",
+    short: "Oxford Science Enterprises",
+    founded: 2015,
+    hq: "Oxford, UK",
+    aum: "$1.45B",
+    thesis: "Oxford Science Enterprises was founded in 2015 by David Norwood, the founder of IP Group who had already built one major university-spinout investment platform, in partnership with the University of Oxford, giving OSE preferred access to deal flow from one of the world's leading research institutions. Unlike a traditional venture fund with fixed timelines, OSE operates as a genuinely evergreen holding company, taking long-term stakes in deep tech, biotech, and advanced materials spinouts with patience over quick exits — a structural choice that led to real leadership turnover in its early years before stabilizing in September 2023 with the appointment of Ed Bussey as CEO and Jack Edmondson as the newly created CIO. Bussey, a three-time successful founder, now leads OSE's mission to commercialize Oxford's world-leading research, having deployed more than £2 billion in total capital since launch across more than 125 spinout companies with a combined value exceeding £1.1 billion.",
+    leadership: [
+      { name: "Ed Bussey", role: "Chief Executive Officer", profileSlug: "ed-bussey" },
+      { name: "David Norwood", role: "Co-Founder & Chairman" },
+      { name: "Jack Edmondson", role: "Chief Investment Officer" }
+    ],
+    timeline: [
+      { year: "2015", event: "David Norwood and the University of Oxford found Oxford Sciences Innovation (later renamed Oxford Science Enterprises)." },
+      { year: "2019", event: "Charles Conn is hired as CEO." },
+      { year: "2020", event: "Alexis Dormandy becomes CEO." },
+      { year: "2023", event: "Ed Bussey is appointed CEO and Jack Edmondson CIO in September, stabilizing leadership." }
+    ],
+    holdings: []
+  },
+  {
+    rank: 78,
+    name: "Impact X Capital",
+    sectors: ["Fintech", "Consumer", "Healthcare"],
+    signatureExit: "No confirmed exit yet — as a young fund with first deals beginning in 2019-2020, Impact X's portfolio of 47 investments remains largely private, with top current valuations reaching $2 billion",
+    slug: "impact-x-capital",
+    website: "https://impactxcapital.com",
+    short: "Impact X Capital",
+    founded: 2018,
+    hq: "London, UK",
+    aum: "£100M (Fund I)",
+    thesis: "Impact X Capital was founded in London in 2018 by Eric D. Collins and Paula Groves, alongside a founding group of Black European and US entrepreneurs, institutional investors, and public figures including Ursula Burns and Lenny Henry, built around a specific market inefficiency: less than 1% of venture funding reaches Black entrepreneurs, and less than 4% reaches women-led teams. Rather than treating that gap as a purely social problem, Impact X frames it as a genuine investment opportunity — a double-bottom-line fund pursuing both financial returns and structural change, backing underrepresented founders across fintech, consumer, and healthtech in the UK, Europe, and the US. The firm has made 47 investments with 8 exits to date, launched an Impact X-Venture Studio with Microsoft to accelerate underrepresented-led startups, and closed a £100 million debut fund with plans for a second vehicle backed by Bank of America and the Visa Foundation.",
+    leadership: [
+      { name: "Eric D. Collins", role: "Co-Founder & CEO", profileSlug: "eric-collins" },
+      { name: "Paula Groves", role: "Co-Founder" }
+    ],
+    timeline: [
+      { year: "2018", event: "Eric D. Collins and Paula Groves found Impact X Capital in London." },
+      { year: "2019", event: "Begins first investments, backed by founding members Ursula Burns and Lenny Henry." },
+      { year: "2024", event: "Launches Impact X-Venture Studio with Microsoft; announces a £100 million target for Fund II, IX Global I." },
+      { year: "2025", event: "Closes the final round of its latest fund in March, backed by Illumen Capital and Basecamp Fund." }
+    ],
+    holdings: []
+  },
+  {
+    rank: 35,
+    name: "Infinity Group",
+    sectors: ["Cybersecurity", "Enterprise Software", "Healthcare"],
+    signatureExit: "Shellcase's acquisition by Tessera and Nanomotion's acquisition by Johnson Electric — two of 75 total exits across Infinity's three-decade history bridging Israeli innovation and Chinese markets",
+    slug: "infinity-group",
+    website: "https://www.infinity-equity.com",
+    short: "Infinity Group",
+    founded: 1993,
+    hq: "Tel Aviv, Israel",
+    aum: "$2B",
+    thesis: "Infinity Group was founded in 1993 by Amir Gal-Or, a former Israeli Air Force pilot and serial entrepreneur, and grew into one of the earliest and most consequential bridges between Israeli deep tech and Chinese capital markets. Gal-Or pioneered that connection directly in 2004, establishing CSVC as the first onshore limited partnership venture capital fund in China, a genuinely first-mover position that predated nearly all Western institutional interest in the country by more than a decade. That two-decade head start, backed by China Development Bank and Clal Industries, has produced real strategic exits including Shellcase (sold to Tessera) and Nanomotion (sold to Johnson Electric), and Infinity has grown into a comprehensive technology investment platform managing $2 billion across 250-plus investments and 75 total exits, with offices spanning Tel Aviv, Beijing, and Shanghai.",
+    leadership: [
+      { name: "Amir Gal-Or", role: "Co-Founder & Managing Partner", profileSlug: "amir-gal-or" }
+    ],
+    timeline: [
+      { year: "1993", event: "Amir Gal-Or founds Infinity Group in Tel Aviv." },
+      { year: "2004", event: "Establishes CSVC, the first onshore limited partnership venture fund in China." },
+      { year: "2006", event: "Launches a $300 million dedicated China fund." },
+      { year: "2017", event: "Gal-Or is awarded the Chinese Government's Friendship Award." }
+    ],
+    holdings: []
+  },
+  {
+    rank: 65,
+    name: "Quest Ventures",
+    sectors: ["Marketplaces", "Fintech", "Consumer"],
+    signatureExit: "No confirmed public exit yet — Carousell, one of Quest's earliest and largest bets, has explored a SPAC listing but remains private, alongside continued growth at ShopBack and 99.co",
+    slug: "quest-ventures",
+    website: "https://www.questventures.com",
+    short: "Quest Ventures",
+    founded: 2011,
+    hq: "Singapore",
+    aum: "Not publicly disclosed (multiple $50-100M funds raised)",
+    thesis: "Quest Ventures was founded in 2011 by James Tan and Wang Yunming, both co-founders of the NASDAQ-listed group-buying platform 55tuan, who launched a venture fund in Beijing specifically to back digital commerce and marketplace platforms across China and Southeast Asia. That founder-operator background shaped Quest's positioning as the 'first institutional investor' in many regional marketplaces, backing Carousell at Series A years before it became a Southeast Asian unicorn, alongside ShopBack and 99.co. The firm has since relocated its primary base to Singapore, becoming the largest anchor tenant at JTC Launchpad, and continues to focus on Seed and Series A investments in digital commerce, fintech, and consumer platforms across Singapore, Malaysia, Vietnam, and Indonesia.",
+    leadership: [
+      { name: "James Tan", role: "Co-Founder & Managing Partner", profileSlug: "james-tan" },
+      { name: "Wang Yunming", role: "Co-Founder" }
+    ],
+    timeline: [
+      { year: "2011", event: "James Tan and Wang Yunming found Quest Ventures (originally QuestVC) in Beijing." },
+      { year: "2013", event: "Leads Carousell's Series A round." },
+      { year: "2015", event: "Invests in ShopBack." },
+      { year: "2022", event: "Carousell explores a SPAC merger, remaining private." }
+    ],
+    holdings: []
+  },
+  {
+    rank: 22,
+    name: "Northern Light Venture Capital",
+    sectors: ["Enterprise Software", "Healthcare", "Consumer", "AI"],
+    signatureExit: "Meituan's 2018 Hong Kong IPO at a roughly $63 billion valuation — an early Northern Light bet, alongside co-founders Feng Deng and Yan Ke's own prior exit: NetScreen Technologies' $4.2 billion acquisition by Juniper Networks",
+    slug: "northern-light-venture-capital",
+    website: "https://www.nlvc.com",
+    short: "Northern Light Venture Capital",
+    founded: 2005,
+    hq: "Menlo Park, CA",
+    aum: "$4.5B",
+    thesis: "Northern Light Venture Capital was founded on January 1, 2005, by Feng Deng, Yan Ke, and Jeffrey Lee, two of whom had just completed one of the most consequential Chinese-founder exits in Silicon Valley history — NetScreen Technologies, an enterprise security company they co-founded that IPO'd on NASDAQ in 2001 before Juniper Networks acquired it for $4.2 billion in 2004. That operating credibility and cross-Pacific network shaped Northern Light's genuinely dual-market model, dual-headquartered in Menlo Park and Beijing/Shanghai, backing companies that leverage China's industrial and human resources to build lasting global businesses across TMT, clean technology, healthcare, and consumer sectors. The firm's roughly 70% Series A, 20% Series B allocation has produced 13 unicorns, 15 IPOs, and 23 acquisitions across more than 300 portfolio companies, including Meituan's 2018 Hong Kong IPO at a roughly $63 billion valuation, and NLVC now manages more than $4.5 billion.",
+    leadership: [
+      { name: "Feng Deng", role: "Co-Founder & Managing Partner", profileSlug: "feng-deng" },
+      { name: "Yan Ke", role: "Co-Founder & Managing Partner" },
+      { name: "Jeffrey Lee", role: "Co-Founder & Partner" }
+    ],
+    timeline: [
+      { year: "2005", event: "Feng Deng, Yan Ke, and Jeffrey Lee found Northern Light Venture Capital on January 1." },
+      { year: "2013", event: "Invests in Aerohive Networks, which IPOs in 2015." },
+      { year: "2018", event: "Meituan completes its Hong Kong IPO at a roughly $63 billion valuation." },
+      { year: "2024", event: "Portfolio company Taimei Technology IPOs on HKEX at a $937 million market cap." }
+    ],
+    holdings: [
+      { name: "Meituan", ticker: "3690.HK", historicalPrice: null, price: null }
+    ]
+  },
+  {
+    rank: 13,
+    name: "Source Code Capital",
+    sectors: ["AI", "Enterprise Software", "Consumer", "Healthcare"],
+    signatureExit: "No single named exit — Source Code's earliest and most consequential bet, ByteDance, remains private and globally dominant, while portfolio companies Meituan, KE Holdings, and Li Auto have all completed IPOs backed by multiple co-investors",
+    slug: "source-code-capital",
+    website: "https://sourcecodecap.com",
+    short: "Source Code Capital",
+    founded: 2014,
+    hq: "Beijing, China",
+    aum: "$7B",
+    thesis: "Source Code Capital was founded in the spring of 2014 by Yi Cao, a Tsinghua computer science graduate and former Sequoia Capital China Vice President, who made an extraordinarily early bet on what became one of the most consequential Chinese technology companies of the era: ByteDance, the parent company of TikTok. Cao built the firm around a specific 'Big 3' thesis — Internet+, AI+, and Global+ — and a genuinely founder-first support system including the Code Class entrepreneur community and Code Brain knowledge-sharing sessions, providing portfolio companies with hands-on support in human capital, public relations, and financial advisory beyond capital alone. That approach has backed more than 300 companies including ByteDance, Meituan, KE Holdings, Li Auto, and RELX Technology, and Source Code now manages approximately $7 billion across dual-currency funds, with Cao repeatedly named to the Forbes Midas List.",
+    leadership: [
+      { name: "Yi Cao", role: "Founder & Managing Partner", profileSlug: "yi-cao" }
+    ],
+    timeline: [
+      { year: "2014", event: "Yi Cao founds Source Code Capital in Beijing in the spring, making an early bet on ByteDance." },
+      { year: "2016", event: "Launches Code Brain, a monthly entrepreneur knowledge-sharing gathering." },
+      { year: "2018", event: "Meituan completes its Hong Kong IPO." },
+      { year: "2020", event: "Raises a $1 billion fund." },
+      { year: "2026", event: "AUM reaches approximately $7 billion across more than 300 portfolio companies." }
+    ],
+    holdings: [
+      { name: "Meituan", ticker: "3690.HK", historicalPrice: null, price: null },
+      { name: "Li Auto", ticker: "LI", historicalPrice: null, price: null }
+    ]
+  },
+  {
+    rank: 23,
+    name: "STIC Investments",
+    sectors: ["Enterprise Software", "Healthcare", "Industrial Tech"],
+    signatureExit: "Jeil Hydraulics' sale to Eaton Corporation in 2012, with STIC's 21% stake selling for approximately $29 million — one of several exits alongside a Golfzon stake sale, reflecting STIC's growth-equity and structured-financing model over traditional tech IPOs",
+    slug: "stic-investments",
+    website: "https://www.sticinvestments.com",
+    short: "STIC Investments",
+    founded: 1999,
+    hq: "Seoul, South Korea",
+    aum: "$6.7B",
+    thesis: "STIC Investments was founded in July 1999 by Y.H. Do, originally as SoftBank Telecom Investment Company, growing over more than two decades into one of South Korea's largest private equity and growth investment platforms. The firm operates across TMT, healthcare, materials, and industrial sectors, blending late-stage growth equity with structured financings and mid-cap buyouts, and rebranded from STIC Partners to STIC Investments in 2014 as part of a shift toward an open-funds model. That growth-equity focus, distinct from typical early-stage venture capital, produced real strategic exits including Jeil Hydraulics' sale to Eaton Corporation and a stake sale in golf simulation company Golfzon, and STIC now manages approximately KRW 7.9 trillion (roughly $6.7 billion) across seven offices spanning Seoul, Busan, Hong Kong, Ho Chi Minh City, Shanghai, and Taipei.",
+    leadership: [
+      { name: "Y.H. Do", role: "Founder & Chairman", profileSlug: "yh-do" },
+      { name: "Byung Won Choi", role: "Chief Executive Officer" },
+      { name: "Dong Guel Kwak", role: "Chief Investment Officer" }
+    ],
+    timeline: [
+      { year: "1999", event: "Y.H. Do founds STIC in Seoul in July." },
+      { year: "2012", event: "Sells its 21% stake in Jeil Hydraulics to Eaton Corporation for approximately $29 million." },
+      { year: "2014", event: "Rebrands from STIC Partners to STIC Investments, shifting to an open-funds model." },
+      { year: "2024", event: "AUM reaches KRW 7.9 trillion (approximately $6.7 billion)." }
+    ],
+    holdings: []
+  },
    {
     rank: 2,
     name: "General Atlantic",
