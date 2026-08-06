@@ -32,6 +32,177 @@ const firms = [
     ]
   },
   {
+    rank: 43,
+    name: "Project A Ventures",
+    sectors: ["Fintech", "Defense Tech", "Enterprise Software", "AI"],
+    signatureExit: "No confirmed public exit yet — Project A's model is operational company-building rather than harvesting, and its clearest current proof point is Trade Republic, now managing €100 billion in customer assets while still privately held",
+    slug: "project-a-ventures",
+    website: "https://www.project-a.com",
+    short: "Project A Ventures",
+    founded: 2012,
+    hq: "Berlin, Germany",
+    aum: "€1.2B",
+    thesis: "Project A Ventures was founded in 2012 by six former Rocket Internet colleagues — including Uwe Horstmann and Florian Heinemann — who wanted to build a genuinely different support model than the pure incubation approach they'd seen at Rocket Internet. Their 'operational VC' model pairs early-stage capital with a team of more than 140 in-house functional experts across software engineering, business intelligence, marketing, and recruiting, exclusively available to portfolio companies rather than offered as generic advisory calls. That model has backed more than 130 startups including Trade Republic (now managing €100 billion in customer assets), WorldRemit, sennder, and Catawiki, and Project A pivoted early into defense and dual-use technology starting in 2022 — becoming an early investor in Stark, a defense drone maker where co-founder Horstmann later became CEO. The firm closed its fifth and largest fund at €325 million in 2025, pushing total AUM to €1.2 billion.",
+    leadership: [
+      { name: "Uwe Horstmann", role: "Co-Founder & General Partner", profileSlug: "uwe-horstmann" },
+      { name: "Florian Heinemann", role: "Co-Founder & General Partner" },
+      { name: "Malin Posern", role: "General Partner" }
+    ],
+    timeline: [
+      { year: "2012", event: "Six former Rocket Internet colleagues found Project A Ventures in Berlin." },
+      { year: "2022", event: "Begins focusing on defense technology, becoming an early investor in Stark." },
+      { year: "2025", event: "Closes its fifth and largest fund at €325 million in June." },
+      { year: "2026", event: "Uwe Horstmann becomes CEO of Stark while remaining active at Project A." }
+    ],
+    holdings: []
+  },
+  {
+    rank: 16,
+    name: "Sofinnova Partners",
+    sectors: ["Healthcare", "Deep Tech"],
+    signatureExit: "Shockwave Medical's acquisition by Johnson & Johnson in 2024 — a cardiovascular device company Sofinnova supported for more than a decade, one of 25 IPOs and 30 acquisitions across the firm's 50-plus year history",
+    slug: "sofinnova-partners",
+    website: "https://sofinnovapartners.com",
+    short: "Sofinnova Partners",
+    founded: 1972,
+    hq: "Paris, France",
+    aum: "€4B+ (~$4.4B)",
+    thesis: "Sofinnova Partners traces its roots to 1972, when Sofinnova S.A. was founded in Paris, later splitting in 1997 into two fully independent firms: the American Sofinnova Investments (now based in Menlo Park) and the Paris-based Sofinnova Partners profiled here. Over more than five decades, Sofinnova has built a genuinely hands-on company-building model across the entire life sciences value chain, from its in-house MD Start medtech accelerator through later-stage growth investing, concentrated specifically on healthcare and sustainability. That patient, science-first approach — led by Chairman Antoine Papiernik, who joined the same year as the 1997 split — has backed more than 500 companies over 50 years, producing 25 IPOs and 30 acquisitions including Shockwave Medical (acquired by Johnson & Johnson), DBV Technologies, and ProQR Therapeutics, with Sofinnova raising €1.2 billion in a single year in 2025 to push total AUM past €4 billion.",
+    leadership: [
+      { name: "Antoine Papiernik", role: "Chairman & Managing Partner", profileSlug: "antoine-papiernik" },
+      { name: "Graziano Seghezzi", role: "Managing Partner" },
+      { name: "Denis Lucquin", role: "Managing Partner Emeritus" }
+    ],
+    timeline: [
+      { year: "1972", event: "Sofinnova S.A. is founded in Paris." },
+      { year: "1997", event: "Splits into two independent firms: Sofinnova Investments (US) and Sofinnova Partners (Paris)." },
+      { year: "2024", event: "Shockwave Medical is acquired by Johnson & Johnson." },
+      { year: "2025", event: "Raises €1.2 billion in a single year, pushing AUM past €4 billion." }
+    ],
+    holdings: []
+  },
+  {
+    rank: 41,
+    name: "March Capital",
+    sectors: ["Enterprise Software", "Cybersecurity", "AI"],
+    signatureExit: "CrowdStrike's 2019 NASDAQ IPO — Jamie Montgomery served as a board observer during CrowdStrike's private growth, one of several exits including ForgeRock and Elastic across March's decade-plus portfolio",
+    slug: "march-capital",
+    website: "https://marchcp.com",
+    short: "March Capital",
+    founded: 2013,
+    hq: "Santa Monica, CA",
+    aum: "$1B+ (across four funds)",
+    thesis: "March Capital was founded in September 2013 by Jamie Montgomery and three fellow tech industry veterans with more than 50 years of combined investing experience, moving into a small Santa Monica office with a specific, then-contrarian thesis: enterprise software, cybersecurity, and India would become central pillars of the innovation economy. Montgomery's prior quarter-century running boutique investment bank Montgomery & Co., plus his founding of The Montgomery Summit — an annual technology conference now drawing more than 1,000 global entrepreneurs and investors — gave the firm an unusually deep network from inception. That combination of banking relationships and sector conviction played a real role in CrowdStrike's growth as a private company, where Montgomery served as board observer ahead of its 2019 NASDAQ IPO, and March closed a $240 million debut fund in 2016, then the largest first-time venture fund launched in Southern California, growing to more than $1 billion across four funds.",
+    leadership: [
+      { name: "Jamie Montgomery", role: "Co-Founder & Managing Partner", profileSlug: "jamie-montgomery" }
+    ],
+    timeline: [
+      { year: "2013", event: "Jamie Montgomery and three co-founders found March Capital in Santa Monica in September." },
+      { year: "2016", event: "Closes a $240 million debut fund, the largest first-time SoCal venture fund at the time." },
+      { year: "2019", event: "CrowdStrike completes its NASDAQ IPO." }
+    ],
+    holdings: [
+      { name: "CrowdStrike", ticker: "CRWD", historicalPrice: null, price: null }
+    ]
+  },
+  {
+    rank: 57,
+    name: "AirTree Ventures",
+    sectors: ["Fintech", "Consumer", "Enterprise Software", "Climate"],
+    signatureExit: "No confirmed public exit yet — AirTree's clearest proof points are current unicorns Canva, Airwallex, and Linktree, all still privately held among the firm's eight billion-dollar-plus portfolio companies",
+    slug: "airtree-ventures",
+    website: "https://www.airtree.vc",
+    short: "AirTree Ventures",
+    founded: 2014,
+    hq: "Sydney, Australia",
+    aum: "$1.2B+ (across all funds)",
+    thesis: "AirTree Ventures was founded in 2014 in Sydney by former Microsoft Vice President Daniel Petre and Craig Blair, built on a specific conviction that Australian and New Zealand founders could build genuinely world-class, globally competitive technology companies rather than regional-only businesses. That belief translated into a willingness to invest unusually early, often pre-product and pre-revenue, backing Canva, Airwallex, and Linktree years before any of them were obvious winners. AirTree has since evolved from a traditional early-stage fund into a network-powered platform offering talent networks, executive forums, and peer communities to founders across fintech, consumer, enterprise software, healthtech, and climate tech, with a portfolio of more than 125 companies that have collectively created over 19,000 jobs, including eight companies valued above $1 billion.",
+    leadership: [
+      { name: "Daniel Petre", role: "Co-Founder & Partner", profileSlug: "daniel-petre" },
+      { name: "Craig Blair", role: "Co-Founder & Partner" }
+    ],
+    timeline: [
+      { year: "2014", event: "Daniel Petre and Craig Blair found AirTree Ventures in Sydney." },
+      { year: "2018", event: "Leads an early investment in Canva." },
+      { year: "2026", event: "Portfolio surpasses 125 companies including eight valued above $1 billion." }
+    ],
+    holdings: []
+  },
+  {
+    rank: 31,
+    name: "Samsung Ventures",
+    sectors: ["AI", "Deep Tech", "Cybersecurity", "Industrial Tech"],
+    signatureExit: "SentinelOne's 2021 NYSE IPO under ticker S — one of 24 IPOs across Samsung Ventures' 25-year history, alongside acquisitions and stakes in Niantic and Swiggy",
+    slug: "samsung-ventures",
+    website: "https://www.samsungventure.co.kr",
+    short: "Samsung Ventures",
+    founded: 1999,
+    hq: "Seoul, South Korea",
+    aum: "$2.8B",
+    thesis: "Samsung Venture Investment Corporation was established in 1999 as the corporate venture capital arm of Samsung Electronics, distinct from the company's separate, more recent Silicon Valley-focused early-stage arm, Samsung NEXT. The fund's core advantage is structural: it can offer portfolio companies not just capital but real access to Samsung's global manufacturing scale, technical resources, and distribution channels across semiconductors, telecommunications, and consumer electronics, positioning them for partnership opportunities most independent VCs can't replicate. Over more than 25 years, Samsung Ventures has invested in more than 200 companies across offices spanning South Korea, Silicon Valley, and Europe, focused on AI, robotics, cybersecurity, and future technologies, producing 10-plus unicorns and 24 IPOs including SentinelOne, and now manages approximately $2.8 billion.",
+    leadership: [
+      { name: "Samsung Venture Investment Corporation", role: "Corporate Venture Arm", profileSlug: "samsung-ventures-lead" }
+    ],
+    timeline: [
+      { year: "1999", event: "Samsung Electronics establishes Samsung Venture Investment Corporation in Seoul." },
+      { year: "2021", event: "SentinelOne completes its NYSE IPO." },
+      { year: "2025", event: "AUM reaches approximately $2.8 billion." }
+    ],
+    holdings: [
+      { name: "SentinelOne", ticker: "S", historicalPrice: null, price: null }
+    ]
+  },
+  {
+    rank: 44,
+    name: "Generation Investment Management",
+    sectors: ["Climate", "Consumer", "Healthcare"],
+    signatureExit: "No traditional VC-style exit — Generation operates primarily as a public and private sustainable equity manager rather than an early-stage venture fund, with Just Climate (launched 2021) as its most direct climate-specific investment vehicle",
+    slug: "generation-investment-management",
+    website: "https://www.generationim.com",
+    short: "Generation Investment Management",
+    founded: 2004,
+    hq: "London, UK",
+    aum: "Not publicly disclosed",
+    thesis: "Generation Investment Management was founded in April 2004 by former US Vice President Al Gore and former Goldman Sachs Asset Management CEO David Blood, alongside five other founding partners, built on a specific and at-the-time genuinely contrarian thesis: that integrating rigorous sustainability research into fundamental equity analysis would drive superior long-term investment returns, not sacrifice them for social good. That conviction predated the current ESG investing boom by nearly two decades, and Generation has built a global research platform spanning public and private equity strategies worldwide, with an explicit mission to make sustainable capitalism the enduring economic model rather than a niche category. In 2021 the firm launched Just Climate, a dedicated climate-focused investment business extending that original thesis into a standalone platform aimed specifically at decarbonization at scale.",
+    leadership: [
+      { name: "Al Gore", role: "Chairman", profileSlug: "al-gore-david-blood" },
+      { name: "David Blood", role: "Senior Partner" },
+      { name: "Colin le Duc", role: "Founding Partner" }
+    ],
+    timeline: [
+      { year: "2001", event: "Al Gore begins developing the thesis behind Generation Investment Management." },
+      { year: "2004", event: "Al Gore and David Blood found Generation Investment Management in London in April." },
+      { year: "2021", event: "Launches Just Climate, a dedicated climate investment business." }
+    ],
+    holdings: []
+  },
+  {
+    rank: 21,
+    name: "Gaorong Capital",
+    sectors: ["Consumer", "Enterprise Software", "Healthcare"],
+    signatureExit: "Pinduoduo's NASDAQ IPO and Kuaishou's Hong Kong IPO — two of the clearest public-market outcomes across Gaorong's decade-plus track record backing Chinese consumer internet companies",
+    slug: "gaorong-capital",
+    website: "https://www.gaorongvc.com",
+    short: "Gaorong Capital",
+    founded: 2014,
+    hq: "Beijing, China",
+    aum: "$4B",
+    thesis: "Gaorong Capital, originally named Banyan Capital, was founded in January 2014 by three former IDG Capital investment professionals — Zhang Zhen, Gao Xiang, and Yue Bin — who left one of China's most established venture firms to build their own platform, part of a broader wave of spinout funds founded by veterans of China's earliest institutional VC generation. That shared IDG pedigree gave the trio genuine credibility and deal-sourcing advantages from day one, and Gaorong has built a strong track record concentrated in Technology, Media, and Telecommunications (TMT), consumer internet, enterprise software, and healthcare, backing companies including Pinduoduo and Kuaishou through to public listings. The firm now manages approximately $4 billion, reflecting the continued strength of China's venture ecosystem despite a more challenging fundraising environment in recent years.",
+    leadership: [
+      { name: "Zhang Zhen", role: "Co-Founder & Managing Partner", profileSlug: "gaorong-founders" },
+      { name: "Gao Xiang", role: "Co-Founder & Managing Partner" },
+      { name: "Yue Bin", role: "Co-Founder & Managing Partner" }
+    ],
+    timeline: [
+      { year: "2014", event: "Zhang Zhen, Gao Xiang, and Yue Bin found Banyan Capital (later Gaorong Capital) in Beijing in January." },
+      { year: "2018", event: "Pinduoduo completes its NASDAQ IPO." },
+      { year: "2020", event: "Kuaishou completes its Hong Kong IPO; AUM reaches approximately $4 billion." }
+    ],
+    holdings: [
+      { name: "Pinduoduo", ticker: "PDD", historicalPrice: null, price: null }
+    ]
+  },
+  {
     rank: 20,
     name: "Atlas Venture",
     sectors: ["Healthcare", "Deep Tech"],
