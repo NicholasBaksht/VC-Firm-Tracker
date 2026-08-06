@@ -930,6 +930,30 @@ const firms = [
     holdings: []
   },
   {
+    rank: 54,
+    name: "BlueYard Capital",
+    sectors: ["Crypto", "Deep Tech", "Defense Tech"],
+    signatureExit: "No public exit — BlueYard's crypto-native thesis means outcomes come as token appreciation rather than IPOs; the firm's clearest proof points are co-founders O'Leary and Whitmire's pre-BlueYard bets on Wunderlist (acquired by Microsoft) and Peak Games (acquired by Zynga for $1.8 billion) while at Earlybird",
+    slug: "blueyard-capital",
+    website: "https://blueyard.com",
+    short: "BlueYard Capital",
+    founded: 2016,
+    hq: "Berlin, Germany",
+    aum: "$500M (across three funds)",
+    thesis: "BlueYard Capital was co-founded in 2016 by Ciarán O'Leary and Jason Whitmire, both former partners at Earlybird Venture Capital where they'd already backed Wunderlist (acquired by Microsoft) and Peak Games (sold to Zynga for $1.8 billion) before breaking off to build their own fund. BlueYard operates as a genuinely equal partnership rather than a traditional hierarchy, organizing its entire investment thesis around three forces its team believes will define the next century — decentralization of markets, democratization of capabilities, and liberation of data — and deliberately backing companies addressing civilization-scale problems years before consensus forms. That early conviction produced a seed investment in Protocol Labs, the company behind Filecoin, and BlueYard's debut €111 million fund generated a 76% gross IRR and 3.4x DPI, with the firm now managing approximately $500 million across three funds spanning crypto, defense technology, and frontier biology.",
+    leadership: [
+      { name: "Ciarán O'Leary", role: "General Partner & Co-Founder", profileSlug: "ciaran-oleary" },
+      { name: "Jason Whitmire", role: "General Partner & Co-Founder" }
+    ],
+    timeline: [
+      { year: "2016", event: "Ciarán O'Leary and Jason Whitmire found BlueYard Capital in Berlin, closing a €111 million debut fund." },
+      { year: "2017", event: "Leads a seed investment in Protocol Labs, the company behind Filecoin." },
+      { year: "2019", event: "Raises a €105 million second fund, BlueYard 2." },
+      { year: "2024", event: "Deploys its third fund at approximately $185 million." }
+    ],
+    holdings: []
+  },
+  {
     rank: 53,
     name: "Radical Ventures",
     sectors: ["AI", "Machine Learning", "Deep Tech"],
