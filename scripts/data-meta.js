@@ -289,7 +289,6 @@ const firmStages = {
    "idg-capital": ["Series A", "Series B", "Growth", "Late Stage"],
    "legend-capital": ["Series A", "Series B", "Series C", "Growth"],
    "hillhouse-investment-group": ["Series A", "Series B", "Growth", "Late Stage"],
-   "deerfield-management": ["Seed", "Series A", "Series B", "Growth"],
    "octopus-ventures": ["Pre-Seed", "Seed", "Series A", "Series B", "Growth"],
    "gaingels": ["Series A", "Series B", "Growth"],
       "sinovation-ventures": ["Seed", "Series A", "Series B"],
