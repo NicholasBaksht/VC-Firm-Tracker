@@ -5335,6 +5335,33 @@ const firms = [
     ]
   },
   {
+    rank: 19,
+    name: "Oak HC/FT",
+    sectors: ["Healthcare", "Fintech"],
+    signatureExit: "No single named IPO exit — Oak HC/FT's clearest proof points are growth-stage backing of Oscar Health (which completed its own 2021 IPO) and athenahealth, both companies the firm helped scale rather than founded",
+    slug: "oak-hc-ft",
+    website: "https://www.oakhcft.com",
+    short: "Oak HC/FT",
+    founded: 2014,
+    hq: "Greenwich, CT",
+    aum: "$5B+",
+    thesis: "Oak HC/FT was co-founded in 2014 by Annie Lamont, Andrew Adams, and Patricia Kemp, all veterans with decades of combined healthcare and fintech investing experience, most notably Lamont's 28 years at Oak Investment Partners leading its healthcare and fintech practices. The firm applies that deep sector expertise exclusively to two complex, multi-trillion-dollar markets undergoing structural digital transformation, providing entrepreneurs with strategic counsel, board-level participation, and access to an extensive network of industry leaders alongside capital. That focused approach helped Oak HC/FT get named one of the ten best-performing venture capital firms in the world in 2023, backing companies including Blend, Ocrolus, ClearCo, Rapyd, and Oscar Health, and the firm now manages more than $5 billion after closing an oversubscribed $800 million Fund III just five years after founding.",
+    leadership: [
+      { name: "Annie Lamont", role: "Co-Founder & Managing Partner", profileSlug: "annie-lamont" },
+      { name: "Andrew Adams", role: "Co-Founder & Managing Partner" },
+      { name: "Patricia Kemp", role: "Co-Founder & Managing Partner" }
+    ],
+    timeline: [
+      { year: "2014", event: "Annie Lamont, Andrew Adams, and Patricia Kemp found Oak HC/FT in Greenwich, CT, in June." },
+      { year: "2019", event: "Closes an oversubscribed $800 million Fund III." },
+      { year: "2021", event: "Oscar Health completes its NYSE IPO." },
+      { year: "2023", event: "Named one of the ten best-performing venture capital firms in the world." }
+    ],
+    holdings: [
+      { name: "Oscar Health", ticker: "OSCR", historicalPrice: null, price: null }
+    ]
+  },
+  {
     rank: 18,
     name: "Deerfield Management",
     sectors: ["Healthcare", "Deep Tech", "AI"],
