@@ -287,7 +287,8 @@ const firmStages = {
    "foundry-group": ["Seed", "Series A", "Series B"],
    "dcm-ventures": ["Seed", "Series A", "Series B", "Series C"],
    "idg-capital": ["Series A", "Series B", "Growth", "Late Stage"],
-   "legend-capital": ["Series A", "Series B", "Series C", "Growth"]
+   "legend-capital": ["Series A", "Series B", "Series C", "Growth"],
+   "hillhouse-investment-group": ["Series A", "Series B", "Growth", "Late Stage"]
 };
 
 // ============================================================
