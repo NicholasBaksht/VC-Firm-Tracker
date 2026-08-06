@@ -5243,6 +5243,32 @@ const firms = [
     holdings: []
   },
   {
+    rank: 31,
+    name: "Vision Knight Capital",
+    sectors: ["Consumer", "Marketplaces"],
+    signatureExit: "POP MART's 2020 Hong Kong IPO at a $1.4 billion market cap — Hong Kong's largest internet offering that year, and Vision Knight was both a co-founder and lead investor in the collectible toy company",
+    slug: "vision-knight-capital",
+    website: "http://www.vkc-partners.com",
+    short: "Vision Knight Capital",
+    founded: 2011,
+    hq: "Shanghai, China",
+    aum: "$2.8B",
+    thesis: "Vision Knight Capital was founded in 2011 by David Wei, who brought a rare combination of retail operating experience and public-markets credibility from more than two decades in China — CFO and later CEO of B&Q China, then CEO of Alibaba.com, where he personally led its 2007 Hong Kong listing — alongside co-founder Daming Zhu. That operating pedigree shaped a specifically bold, growth-stage approach to China's consumer and digital retail sectors, most famously co-founding and leading the investment in POP MART, the collectible toy company whose 2020 Hong Kong IPO was the market's largest internet offering that year. Vision Knight has grown into a firm managing nearly $2.8 billion across USD and RMB funds, raising more than $560 million in new capital in late 2025 to expand into AI infrastructure, cross-border e-commerce, and life sciences.",
+    leadership: [
+      { name: "David Wei", role: "Founding Partner & Chairman", profileSlug: "david-wei" },
+      { name: "Daming Zhu", role: "Co-Founder" }
+    ],
+    timeline: [
+      { year: "2011", event: "David Wei and Daming Zhu found Vision Knight Capital in Shanghai." },
+      { year: "2014", event: "Co-founds and invests in POP MART." },
+      { year: "2020", event: "POP MART completes its Hong Kong IPO at a $1.4 billion market cap." },
+      { year: "2025", event: "Raises more than $560 million in new funds, pushing AUM to nearly $2.8 billion." }
+    ],
+    holdings: [
+      { name: "POP MART", ticker: "1993.HK", historicalPrice: null, price: null }
+    ]
+  },
+  {
     rank: 30,
     name: "Shasta Ventures",
     sectors: ["Enterprise Software", "Cybersecurity", "Deep Tech", "Consumer"],
