@@ -106,6 +106,117 @@ const firms = [
     ]
   },
   {
+    rank: 11,
+    name: "Bond Capital",
+    sectors: ["Enterprise Software", "Consumer", "Deep Tech"],
+    signatureExit: "No confirmed public exit yet for Bond's own portfolio — the firm's clearest proof point remains Canva, backed since 2019 at a $70 million investment and now valued at $42 billion while still privately held",
+    slug: "bond-capital",
+    website: "https://www.bondcap.com",
+    short: "Bond Capital (BOND)",
+    founded: 2018,
+    hq: "San Francisco, CA",
+    aum: "$5.9B",
+    thesis: "Bond Capital was founded in September 2018 when Mary Meeker, the analyst famous for her annual Internet Trends reports, left Kleiner Perkins amid an internal leadership dispute, taking fellow growth-practice partners Mood Rowghani, Noah Knauf, and Juliet de Baubigny with her. The firm applies Meeker's research-driven, data-first investment discipline exclusively to late-stage growth equity, leading large rounds for mature, category-defining technology companies rather than early-stage bets. That approach made Canva Bond's very first investment in May 2019 and remains its signature holding, a $70 million check that helped fuel the design platform's growth to a $42 billion valuation, alongside more recent bets on Applied Intuition, Checkr, and AI voice company ElevenLabs. Bond has raised three funds since founding — $1.25 billion, $2 billion, and $2.5 billion — reaching $5.9 billion in AUM across 176 investments and 51 unicorns.",
+    leadership: [
+      { name: "Mary Meeker", role: "Founder & General Partner", profileSlug: "mary-meeker" },
+      { name: "Mood Rowghani", role: "General Partner" },
+      { name: "Noah Knauf", role: "General Partner" }
+    ],
+    timeline: [
+      { year: "2018", event: "Mary Meeker leaves Kleiner Perkins in September and founds Bond Capital." },
+      { year: "2019", event: "Closes Fund I at $1.25 billion in April; makes its first investment, $70 million into Canva, in May." },
+      { year: "2021", event: "Closes Fund II at $2 billion in March." },
+      { year: "2022", event: "Closes Fund III at $2.5 billion in April." },
+      { year: "2026", event: "AUM reaches $5.9 billion across 176 investments and 51 unicorns." }
+    ],
+    holdings: []
+  },
+  {
+    rank: 10,
+    name: "Iconiq Growth",
+    sectors: ["Enterprise Software", "Fintech", "Consumer", "Healthcare"],
+    signatureExit: "Snowflake's September 2020 NYSE IPO at a $68 billion valuation — Iconiq led its Series D investment in 2015 and held roughly 14% at the time of listing, one of 27 completed IPOs across its portfolio",
+    slug: "iconiq-growth",
+    website: "https://www.iconiqcapital.com",
+    short: "Iconiq Growth",
+    founded: 2013,
+    hq: "San Francisco, CA",
+    aum: "$5.75B (Fund VII, 2024)",
+    thesis: "Iconiq Growth launched in 2013 as the venture arm of Iconiq Capital, the wealth management firm Divesh Makan co-founded in 2011 to serve Silicon Valley's elite — Mark Zuckerberg, Sheryl Sandberg, Jack Dorsey, and Reid Hoffman among its earliest clients. It was Dave Goldberg, the late SurveyMonkey CEO and an important early client, who encouraged Makan to formalize a venture strategy and helped recruit Will Griffith from Technology Crossover Ventures to lead it. Rather than chase the consumer technology most investors favored at the time, Makan and Griffith made a deliberately contrarian bet on enterprise SaaS, a decision that produced Snowflake, Datadog, and GitLab — all now public — and Iconiq Growth has since deployed $21 billion across more than 140 companies, with its seventh fund closing at $5.75 billion in 2024, its largest ever, backed by an advisory council including Zuckerberg, Hoffman, and Mary Barra.",
+    leadership: [
+      { name: "Divesh Makan", role: "Co-Founder & Managing Partner", profileSlug: "divesh-makan" },
+      { name: "Will Griffith", role: "Co-Founder & Managing Partner" },
+      { name: "Matthew Jacobson", role: "Partner" }
+    ],
+    timeline: [
+      { year: "2011", event: "Divesh Makan co-founds Iconiq Capital." },
+      { year: "2013", event: "Launches Iconiq Growth with Will Griffith, encouraged by Dave Goldberg." },
+      { year: "2015", event: "Leads Snowflake's Series D." },
+      { year: "2020", event: "Snowflake completes its NYSE IPO at a $68 billion valuation." },
+      { year: "2024", event: "Closes Fund VII at $5.75 billion, its largest ever." }
+    ],
+    holdings: [
+      { name: "Snowflake", ticker: "SNOW", historicalPrice: null, price: null },
+      { name: "Datadog", ticker: "DDOG", historicalPrice: null, price: null },
+      { name: "GitLab", ticker: "GTLB", historicalPrice: null, price: null }
+    ]
+  },
+  {
+    rank: 59,
+    name: "Deviation Capital",
+    sectors: ["AI", "Deep Tech", "Healthcare", "Enterprise Software"],
+    signatureExit: "Recursion Pharmaceuticals' April 2021 NASDAQ IPO at $18 a share, an initial market cap of roughly $3 billion — a bet made while the firm still operated as Two Sigma Ventures, before its 2026 spinout",
+    slug: "deviation-capital",
+    website: "https://deviation.com",
+    short: "Deviation Capital",
+    founded: 2012,
+    hq: "New York, NY",
+    aum: "$2.0B",
+    thesis: "Deviation Capital was founded as Two Sigma Ventures in 2012, when Colin Beirne proposed launching a venture arm of the quantitative hedge fund Two Sigma on Pi Day, betting that data science and advanced computing would drive innovation for the next 30-plus years — a thesis that predated the current AI investing boom by more than a decade. Operating inside Two Sigma for 14 years let the team apply the parent firm's rigorous quantitative culture to early-stage investing in technical founders building at the intersection of data, software, and computation, producing Recursion Pharmaceuticals' 2021 IPO and stakes in WHOOP, Kalshi, and Etched. In May 2026, the team spun out cleanly into an independent firm, Deviation Capital, retaining $2 billion in AUM and 79 active portfolio companies while gaining full GP autonomy, maintaining a formal ongoing relationship with Two Sigma's technical bench.",
+    leadership: [
+      { name: "Colin Beirne", role: "Founding Partner", profileSlug: "colin-beirne" },
+      { name: "Jonathan Golden", role: "Founding Partner" },
+      { name: "Dusan Perovic", role: "Founding Partner" }
+    ],
+    timeline: [
+      { year: "2012", event: "Colin Beirne founds Two Sigma Ventures on Pi Day at a Two Sigma strategy offsite." },
+      { year: "2021", event: "Recursion Pharmaceuticals completes its NASDAQ IPO." },
+      { year: "2026", event: "Spins out as an independent firm, Deviation Capital, in May with $2 billion in AUM." }
+    ],
+    holdings: [
+      { name: "Recursion Pharmaceuticals", ticker: "RXRX", historicalPrice: null, price: null }
+    ]
+  },
+  {
+    rank: 29,
+    name: "Obvious Ventures",
+    sectors: ["Climate", "Healthcare", "Consumer", "AI"],
+    signatureExit: "Beyond Meat's May 2019 NASDAQ IPO at a roughly $14 billion peak market cap — Obvious held a 9% stake at the time, one of several public outcomes alongside Planet Labs' 2021 SPAC listing and Recursion Pharmaceuticals' NASDAQ IPO",
+    slug: "obvious-ventures",
+    website: "https://obvious.com",
+    short: "Obvious Ventures",
+    founded: 2014,
+    hq: "San Francisco, CA",
+    aum: "$1.6B+ (across five funds)",
+    thesis: "Obvious Ventures was founded in December 2014 by Twitter and Medium co-founder Ev Williams, alongside James Joaquin (former CEO of Xoom and Ofoto) and Vishal Vasishth, built on a genuinely non-obvious premise for the time: that companies solving humanity's biggest problems profitably, not as charity, would become the most valuable businesses of the coming decades. Organizing its investing around three pillars — planetary health, human health, and economic health — Obvious made early bets on Beyond Meat, Planet Labs, and Recursion Pharmaceuticals years before any of them were obvious winners, and has playfully closed its five funds at mathematically meaningful numbers, from $123,456,789 to Euler's number, $271,828,182, to its 2026 fifth fund at $360,360,360. The firm has backed more than 100 companies since founding, reaching $1.6 billion in cumulative AUM.",
+    leadership: [
+      { name: "Ev Williams", role: "Co-Founder", profileSlug: "ev-williams" },
+      { name: "James Joaquin", role: "Co-Founder & Managing Director" },
+      { name: "Vishal Vasishth", role: "Co-Founder & Managing Director" }
+    ],
+    timeline: [
+      { year: "2014", event: "Ev Williams, James Joaquin, and Vishal Vasishth found Obvious Ventures in San Francisco in December." },
+      { year: "2015", event: "Invests in Planet Labs." },
+      { year: "2019", event: "Beyond Meat completes its NASDAQ IPO, with Obvious holding a 9% stake." },
+      { year: "2021", event: "Planet Labs completes its SPAC merger; Recursion Pharmaceuticals completes its NASDAQ IPO." },
+      { year: "2026", event: "Closes Fund V at $360,360,360 in January." }
+    ],
+    holdings: [
+      { name: "Planet Labs", ticker: "PL", historicalPrice: null, price: null },
+      { name: "Recursion Pharmaceuticals", ticker: "RXRX", historicalPrice: null, price: null }
+    ]
+  },
+  {
     rank: 57,
     name: "AirTree Ventures",
     sectors: ["Fintech", "Consumer", "Enterprise Software", "Climate"],
