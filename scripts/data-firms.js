@@ -2912,6 +2912,34 @@ const firms = [
       { name: "Pulmonx", ticker: "LUNG", historicalPrice: null, price: null }
     ]
   },
+  {
+    rank: 58,
+    name: "Target Global",
+    sectors: ["Fintech", "Mobility", "Consumer", "AI"],
+    signatureExit: "Delivery Hero's 2017 IPO on the Frankfurt Stock Exchange, raising approximately €1 billion — an early Target Global bet, alongside Auto1 Group's 2021 Frankfurt IPO",
+    slug: "target-global",
+    website: "https://targetglobal.vc",
+    short: "Target Global",
+    founded: 2015,
+    hq: "Berlin, Germany",
+    aum: "€3B+ (~$3.2B)",
+    thesis: "Target Global was co-founded in 2015 by Yaron Valler and Shmuel Chafets, both veterans of Hasso Plattner Ventures with a 15-year working partnership dating back to Israel's Giza Venture Capital, building a pan-European fund investing from pre-seed through pre-IPO. Worth noting factually: the firm's early capital base included investment from Alexander Frolov Sr. and Roman Abramovich, both later sanctioned by the UK government in November 2022 following Russia's invasion of Ukraine; Target Global has stated both investors divested their positions prior to the sanctions, and the son of one co-founding family member stepped down from the firm at that time. Valler's own background as a former Intel chip engineer gives the firm real technical grounding, and that combination has produced backing for more than 15 unicorns including Revolut, Auto1, Delivery Hero, and TravelPerk, with more than €3 billion under management across offices in London, Berlin, Tel Aviv, and Abu Dhabi.",
+    leadership: [
+      { name: "Yaron Valler", role: "Founder & CIO", profileSlug: "yaron-valler" },
+      { name: "Shmuel Chafets", role: "Founder & Executive Chairman" }
+    ],
+    timeline: [
+      { year: "2012", event: "Predecessor entity founded in Berlin." },
+      { year: "2015", event: "Yaron Valler and Shmuel Chafets co-found Target Global, going international." },
+      { year: "2017", event: "Delivery Hero completes its Frankfurt IPO, raising approximately €1 billion." },
+      { year: "2021", event: "Auto1 Group completes its Frankfurt IPO." },
+      { year: "2022", event: "A co-founding family member's son steps down following UK sanctions on related individuals." }
+    ],
+    holdings: [
+      { name: "Delivery Hero", ticker: "DHER.DE", historicalPrice: null, price: null },
+      { name: "Auto1 Group", ticker: "AG1.DE", historicalPrice: null, price: null }
+    ]
+  },
    {
     rank: 57,
     name: "DN Capital",
