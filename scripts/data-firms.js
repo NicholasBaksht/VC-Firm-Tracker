@@ -90,38 +90,6 @@ const firms = [
     ]
   },
   {
-    rank: 1,
-    name: "Warburg Pincus",
-    sectors: ["Fintech", "Healthcare", "Industrial Tech", "Consumer"],
-    signatureExit: "Samsara's 2021 NYSE IPO under ticker IOT at a roughly $12 billion market cap — Warburg helped fund the logistics/IoT platform early, alongside CrowdStrike's 2019 IPO which raised approximately $6.6 billion",
-    slug: "warburg-pincus",
-    website: "https://warburgpincus.com",
-    short: "Warburg Pincus",
-    founded: 1966,
-    hq: "New York, NY",
-    aum: "$100B+",
-    thesis: "Warburg Pincus was founded in 1966 by Eric Warburg and Lionel Pincus, merging their respective advisory firms into what became one of the pioneers of institutional growth investing, decades before 'growth equity' existed as a defined category. The firm has since grown into a genuinely global platform with offices across the US, Europe, Brazil, China, Southeast Asia, and India, investing across financial services, healthcare, technology, consumer, industrial tech, and energy through large growth-stage rounds and buyouts rather than early-stage venture bets. More than 140 Warburg Pincus companies have listed on public exchanges, raising approximately $30 billion in public markets across 13 exchanges globally, including CrowdStrike, Dexcom, Avalara, and Samsara, and the firm has invested more than $117 billion across over 1,000 companies since founding. Now in just its third generation of firm leadership in nearly 60 years, Warburg Pincus manages more than $100 billion in assets under management across an active portfolio of 225-plus companies.",
-    leadership: [
-      { name: "Jeffrey Perlman", role: "Chief Executive Officer", profileSlug: "jeffrey-perlman" },
-      { name: "Charles 'Chip' Kaye", role: "Co-Chairman" },
-      { name: "Timothy Geithner", role: "Co-Chairman" },
-      { name: "Max Fowinkel", role: "Managing Director, Head of European Technology & Telecom", profileSlug: "max-fowinkel" }
-    ],
-    timeline: [
-      { year: "1966", event: "Eric Warburg and Lionel Pincus found Warburg Pincus in New York." },
-      { year: "2010", event: "A six-year partnership with MEG Energy culminates in its successful IPO." },
-      { year: "2019", event: "CrowdStrike completes its NASDAQ IPO, raising approximately $6.6 billion." },
-      { year: "2021", event: "Samsara completes its NYSE IPO at a roughly $12 billion market cap; Blue Yonder is acquired by Panasonic for approximately $8.5 billion." },
-      { year: "2024", event: "Jeffrey Perlman becomes CEO in September, succeeding Chip Kaye after his 22-year tenure." }
-    ],
-    holdings: [
-      { name: "CrowdStrike", ticker: "CRWD", historicalPrice: null, price: null },
-      { name: "Dexcom", ticker: "DXCM", historicalPrice: null, price: null },
-      { name: "Avalara", ticker: "AVLR", historicalPrice: null, price: null },
-      { name: "Samsara", ticker: "IOT", historicalPrice: null, price: null }
-    ]
-  },
-  {
     rank: 33,
     name: "Threshold Ventures",
     sectors: ["Enterprise Software", "Fintech", "Healthcare", "Developer Tools"],
