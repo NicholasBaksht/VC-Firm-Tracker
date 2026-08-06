@@ -14,6 +14,16 @@ function slugifyCompany(name) {
 // Parses a firm's AUM string (e.g. "$58B+") into a plain number for
 // tier comparisons. Falls back to 0 if the format is unexpected.
 function parseAumNumber(aumStr) {
+  // Explicit override: if a firm's AUM is genuinely undisclosed, that
+  // phrase always wins even when a parenthetical dollar figure appears
+  // afterward for context (e.g. "Not publicly disclosed (Fortune
+  // estimates $1.8B deployed since 1999)"). Without this check, the
+  // regexes below would grab that contextual number and silently rank
+  // the firm as if it were a confirmed current AUM figure - the exact
+  // opposite of the honesty this field is meant to convey. Checked
+  // first, before either regex runs.
+  if (/not (?:publicly )?disclosed/i.test(aumStr)) return 0;
+
  // Accepts $, £, or € - Molten Ventures reports in pounds and Porsche
   // Ventures in euros, and without this they'd parse as 0 and land in
   // the wrong fund-size tier (and at the bottom of the rankings).
@@ -29,7 +39,6 @@ const mMatch = aumStr.match(/[$£€](\d+\.?\d*)M/);
   if (mMatch) return parseFloat(mMatch[1]) / 1000;
   return 0;
 }
-
 // Returns a plain-language fund scale label for a firm, using the
 // same tiers as the AUM filter chips below - so the label a
 // founder sees always matches how the site actually filters that
