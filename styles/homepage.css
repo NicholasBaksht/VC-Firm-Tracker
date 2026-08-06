@@ -5,24 +5,39 @@
    data" disclaimer stamp, and the weekly news feed (featured +
    archive entries).
    ============================================================ */
-  /* ---------- SCALE BAR ---------- */
+/* ---------- SCALE BAR (VC Statistics Dashboard) ---------- */
   .scale-bar {
-    display: flex;
-    flex-wrap: wrap;
-    align-items: center;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
     gap: 10px;
     padding: 18px 0;
     margin-bottom: 8px;
+  }
+  .stat-card {
+    display: flex;
+    flex-direction: column;
+    padding: 14px 16px;
+    border-radius: 4px;
+    background: var(--surface);
+    border: 1px solid var(--hairline);
+  }
+  .stat-card-num {
     font-family: var(--mono);
-    font-size: 13px;
-    color: var(--ink-dim);
-  }
-  .scale-bar .scale-num {
-    color: var(--gold-bright);
+    font-size: 20px;
     font-weight: 600;
+    color: var(--gold-bright);
+    line-height: 1.2;
   }
-  .scale-bar .scale-divider {
-    color: var(--hairline);
+  .stat-card-label {
+    font-family: var(--mono);
+    font-size: 11.5px;
+    color: var(--ink-dim);
+    margin-top: 4px;
+  }
+  @media (max-width: 560px) {
+    .scale-bar {
+      grid-template-columns: repeat(2, 1fr);
+    }
   }
 
   /* ---------- FEATURED FIRM ---------- */
