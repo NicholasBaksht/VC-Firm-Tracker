@@ -5223,6 +5223,35 @@ const firms = [
       { name: "ZTO Express", ticker: "ZTO", historicalPrice: null, price: null }
     ]
   },
+  {
+    rank: 2,
+    name: "Hillhouse Investment Group",
+    sectors: ["Consumer", "AI", "Healthcare", "Enterprise Software"],
+    signatureExit: "JD.com's 2014 NASDAQ IPO — Zhang Lei insisted founder Richard Liu take a $255 million investment in 2010 instead of the $75 million Liu had requested, a stake worth roughly $3.9 billion by the time JD.com went public four years later",
+    slug: "hillhouse-investment-group",
+    website: "https://www.hillhouseinvestment.com",
+    short: "Hillhouse",
+    founded: 2005,
+    hq: "Singapore",
+    aum: "$100B+",
+    thesis: "Hillhouse Investment Group was founded in June 2005 by Zhang Lei, a Yale-trained protégé of legendary endowment chief investment officer David Swensen, who secured $20 million in seed capital directly from Yale's own endowment to launch the firm. Named after Hillhouse Avenue, the New Haven street where Yale's endowment office sits, the firm applied Swensen's long-term, fundamentals-driven value investing philosophy to a market few Western investors understood well: early-2000s China. That patient conviction produced an extraordinary early stake in Tencent that Hillhouse still holds today, and a defining bet on JD.com in 2010, when Zhang insisted founder Richard Liu accept $255 million rather than the $75 million he'd requested, funding the logistics infrastructure that became JD.com's core competitive moat. Hillhouse has since evolved from a China-focused fund into a genuinely global investment platform spanning venture capital, growth equity, and buyouts, managing more than $100 billion across offices in Singapore, Hong Kong, Beijing, and New York.",
+    leadership: [
+      { name: "Zhang Lei", role: "Founder, Chairman & CEO", profileSlug: "zhang-lei" },
+      { name: "Tracy Ma", role: "Partner & COO" }
+    ],
+    timeline: [
+      { year: "2005", event: "Zhang Lei founds Hillhouse Capital in June with $20 million in seed capital from Yale's endowment." },
+      { year: "2004", event: "Makes an early investment in Tencent, before Hillhouse's formal 2005 founding, via Zhang's earlier work with the Yale endowment." },
+      { year: "2010", event: "Invests $255 million in JD.com's logistics build-out." },
+      { year: "2014", event: "JD.com completes its NASDAQ IPO; the 2010 stake is worth roughly $3.9 billion." },
+      { year: "2019", event: "Rebrands operations and establishes a dedicated technology investment platform exceeding $10 billion." }
+    ],
+    holdings: [
+      { name: "Tencent", ticker: "0700.HK", historicalPrice: null, price: null },
+      { name: "JD.com", ticker: "JD", historicalPrice: null, price: null },
+      { name: "Baidu", ticker: "BIDU", historicalPrice: null, price: null }
+    ]
+  },
    {
     rank: 84,
     name: "Gradient Ventures",
