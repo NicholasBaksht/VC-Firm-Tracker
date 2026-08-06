@@ -317,7 +317,6 @@ const firmStages = {
       "quest-ventures": ["Seed", "Series A"],
       "northern-light-venture-capital": ["Series A", "Series B", "Growth"],
       "source-code-capital": ["Series A", "Series B", "Growth", "Late Stage"],
-      "stic-investments": ["Growth", "Late Stage"],
    "atlas-venture": ["Seed", "Series A", "Series B"],
       "august-capital": ["Series A", "Series B", "Growth"],
       "seraphim-space": ["Seed", "Series A", "Growth"],
