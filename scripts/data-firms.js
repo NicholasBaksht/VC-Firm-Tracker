@@ -5678,7 +5678,7 @@ const firms = [
     short: "Shorooq Partners",
     founded: 2016,
     hq: "Abu Dhabi, UAE",
-    aum: "Not publicly disclosed (45+ portfolio companies, $1.5B+ generated equity value)",
+  aum: "Not publicly disclosed (45+ portfolio companies with a combined equity value exceeding $1.5B)",
     thesis: "Shorooq Partners was founded in 2016 by Shane Shin and Mahmoud Adi, who left established careers in Silicon Valley and Mubadala's GlobalFoundries to build one of the Middle East's earliest institutional venture firms, at a time the region had little existing venture infrastructure. The firm became the first regional fund manager to be regulated by the Abu Dhabi Global Market, and has built out a genuinely multi-dimensional platform spanning early-stage venture equity, venture debt through its Nahda Fund, and private credit — an unusually broad capital-structure presence for a firm still focused primarily on Pre-Seed through Series A equity checks. Shorooq's hands-on, actively-involved investing philosophy has backed more than 45 companies including Tamara, TruKKer, NymCard, Sarwa, and Lean Technologies, generating a reported $1.5 billion-plus in combined portfolio equity value.",
     leadership: [
       { name: "Shane Shin", role: "Co-Founding Partner", profileSlug: "shane-shin" },
