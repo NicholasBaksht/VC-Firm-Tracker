@@ -216,7 +216,272 @@ const partnerProfiles = {
       { label: "Mergr", url: "https://mergr.com/investor/warburg-pincus/team/max-fowinkel" }
     ]
   },
+"elizabeth-yin": {
+    name: "Elizabeth Yin",
+    firm: "Hustle Fund",
+    firmSlug: "hustle-fund",
+    title: "Co-Founder & General Partner",
+    joinedYear: 2017,
+    education: ["BS, Electrical Engineering, Stanford University", "MBA, MIT Sloan School of Management"],
+    previousExperience: [
+      "Programmer (teenage, dot-com era)",
+      "Marketing Engineer, National Instruments Japan",
+      "Product Marketing Manager, Google (2007-2008, social APIs including OpenSocial)",
+      "Co-Founder, LaunchBit (B2B ad network)",
+      "Partner, 500 Startups (2014-2017, ran the Mountain View accelerator)"
+    ],
+    investmentFocus: ["Fintech", "Crypto", "Developer Tools", "Diversity"],
+    notableInvestments: [
+      { name: "Nova Credit", ticker: null },
+      { name: "HoneyBook", ticker: null }
+    ],
+    boardSeats: [],
+    ipoCount: 0,
+    majorExits: 0,
+    careerTimeline: [
+      { year: "2007", event: "Joins Google as a Product Marketing Manager, leading marketing for social APIs including OpenSocial." },
+      { year: "2008", event: "Leaves Google to co-found LaunchBit, a B2B ad network." },
+      { year: "2014", event: "Joins 500 Startups as a partner, eventually running its Mountain View accelerator and writing more than 200 investment checks." },
+      { year: "2017", event: "Resigns from 500 Startups in July, citing concerns about the firm's handling of harassment allegations against co-founder Dave McClure; co-founds Hustle Fund with Eric Bahn and Shiyan Koh." },
+      { year: "2018", event: "Closes Hustle Fund's $11.5 million debut fund in September." }
+    ],
+    biography: "Elizabeth Yin started programming as a teenager during the dot-com boom, then worked as a Marketing Engineer at National Instruments Japan and a Product Marketing Manager at Google before co-founding LaunchBit, a B2B ad network. She joined 500 Startups in 2014, eventually running its Mountain View accelerator and writing more than 200 investment checks, before resigning in July 2017 over concerns about the firm's handling of harassment allegations against co-founder Dave McClure. She co-founded Hustle Fund shortly after with longtime friends Eric Bahn and Shiyan Koh, building a pre-seed fund specifically designed to back founders earlier than most firms will — often pre-revenue, sometimes pre-product — with a mission to democratize wealth creation through fast, founder-friendly investment terms. Yin is the author of 'Democratizing Knowledge: How to Build a Startup, Raise Money, Run a VC Firm, and Everything in Between.'",
+    sources: [
+      { label: "Seedlist — Elizabeth Yin", url: "https://seedlist.com/investors/elizabeth-yin.html" },
+      { label: "Wikipedia — Hustle Fund", url: "https://en.wikipedia.org/wiki/Hustle_Fund" }
+    ]
+  },
 
+  "eric-bahn": {
+    name: "Eric Bahn",
+    firm: "Hustle Fund",
+    firmSlug: "hustle-fund",
+    title: "Co-Founder & General Partner",
+    joinedYear: 2017,
+    education: ["MBA, Harvard Business School"],
+    previousExperience: [
+      "Early Employee, Ticketfly",
+      "Founder, Boardlist"
+    ],
+    investmentFocus: ["Enterprise Software", "Fintech", "Crypto", "Diversity"],
+    notableInvestments: [
+      { name: "HoneyBook", ticker: null },
+      { name: "Nova Credit", ticker: null }
+    ],
+    boardSeats: [],
+    ipoCount: 0,
+    majorExits: 0,
+    careerTimeline: [
+      { year: "2010s", event: "Works as an early employee at Ticketfly, then founds Boardlist, before earning an MBA at Harvard." },
+      { year: "2017", event: "Co-founds Hustle Fund with longtime friend Elizabeth Yin and Shiyan Koh in mid-2017." },
+      { year: "2018", event: "Closes Hustle Fund's $11.5 million debut fund." },
+      { year: "2020", event: "Launches Angel Squad, a program letting individuals invest as little as $1,000 in startups from Hustle Fund's pipeline." }
+    ],
+    biography: "Eric Bahn built real operating experience as an early employee at Ticketfly and as founder of Boardlist before co-founding Hustle Fund in 2017 with his longtime friend and Stanford-era colleague Elizabeth Yin, alongside Shiyan Koh. Bahn combines that founder background with a genuinely quantitative, high-volume investing approach — Hustle Fund invests in roughly 250 companies per fund, a strategy some critics call 'spray and pray' but which Bahn defends as the right response to the extreme uncertainty and thin data available at the pre-seed stage. He has helped build Hustle Fund's Angel Squad program, which democratizes access to startup investing by letting individuals write checks as small as $1,000 into deals from the firm's pipeline, and continues to champion backing solo founders and underrepresented entrepreneurs that traditional VC wisdom often passes over.",
+    sources: [
+      { label: "CB Insights — Hustle Fund", url: "https://www.cbinsights.com/investor/hustle-fund" },
+      { label: "Ignite VC Podcast", url: "https://teamignite.vc/blog/ignite-vc-how-hustle-fund-backs-founders" }
+    ]
+  },
+
+  "lee-fixel": {
+    name: "Lee Fixel",
+    firm: "Addition",
+    firmSlug: "addition",
+    title: "Founder",
+    joinedYear: 2020,
+    education: ["BS, Business Administration, Finance & Accounting, Olin Business School, Washington University in St. Louis"],
+    previousExperience: [
+      "Head of Private Equity, Tiger Global Management (2006-2019)"
+    ],
+    investmentFocus: ["Fintech", "Consumer", "Enterprise Software", "AI"],
+    notableInvestments: [
+      { name: "dLocal", ticker: "DLO" },
+      { name: "Stripe", ticker: null },
+      { name: "Peloton", ticker: "PTON" }
+    ],
+    boardSeats: ["Peloton (former)"],
+    ipoCount: 6,
+    majorExits: 10,
+    careerTimeline: [
+      { year: "2006", event: "Joins Tiger Global Management, eventually leading its private equity business and expanding its private investment arm with bets on Spotify and Uber." },
+      { year: "2018", event: "Leads Tiger Global's investment in Flipkart, which sells a stake to Walmart for $3.8 billion in 2023 (a later, separate transaction)." },
+      { year: "2019", event: "Announces his departure from Tiger Global in March, after 13 years, departing formally on June 30." },
+      { year: "2020", event: "Founds Addition, raising $1.3 billion for its debut fund." },
+      { year: "2021", event: "dLocal, an early Addition investment, completes its IPO at a $6 billion valuation — the firm's first major exit." }
+    ],
+    biography: "Lee Fixel spent 13 years at Tiger Global Management, rising to head its private equity business and building its global internet portfolio with early bets on Spotify, Uber, Facebook, and Flipkart, before leaving in 2019 to found his own firm. He launched Addition in 2020 with $1.3 billion in debut capital, operating as the firm's sole publicly known decision-maker to keep the investment process fast and streamlined. That approach produced dLocal's $6 billion IPO in 2021 — Addition's first major public exit — and Fixel has continued backing category-defining companies including Snyk, Chainalysis, Hugging Face, and Applied Intuition, growing Addition to more than $7 billion in assets under management across five funds. He has been repeatedly named to the Forbes Midas List and, with his wife Lauren, is among the largest donors to the Michael J. Fox Foundation for Parkinson's research.",
+    sources: [
+      { label: "Wikipedia — Lee Fixel", url: "https://en.wikipedia.org/wiki/Lee_Fixel" },
+      { label: "Forbes Profile", url: "https://www.forbes.com/profile/lee-fixel/" }
+    ]
+  },
+
+  "alexander-galitsky": {
+    name: "Alexander Galitsky",
+    firm: "Almaz Capital",
+    firmSlug: "almaz-capital",
+    title: "Co-Founder & Managing Partner",
+    joinedYear: 2008,
+    education: ["Moscow Institute of Electronic Technology"],
+    previousExperience: [
+      "Defense scientist, Soviet space industry",
+      "Founder, ELVIS+ (1991, pioneered early Wi-Fi hardware in partnership with Sun Microsystems)",
+      "Founder, four additional technology companies (TrustWorks Systems, EzWIM, ELVIS Telecom, NPC ELVIS)"
+    ],
+    investmentFocus: ["AI/ML", "IoT", "Cybersecurity", "Enterprise Software"],
+    notableInvestments: [
+      { name: "Yandex", ticker: null },
+      { name: "Xometry", ticker: "XMTR" },
+      { name: "Acumatica", ticker: null }
+    ],
+    boardSeats: [],
+    ipoCount: 2,
+    majorExits: 5,
+    careerTimeline: [
+      { year: "1990", event: "Sun Microsystems co-founder Bill Joy visits the USSR looking for technical talent, beginning a partnership that leads Galitsky's team to beat Motorola on early Wi-Fi hardware development." },
+      { year: "1991", event: "Founds ELVIS+ to commercialize Soviet-era technology in the West." },
+      { year: "2004", event: "Helps establish CSVC, the first onshore limited partnership venture fund in China." },
+      { year: "2008", event: "Founds Almaz Capital, backed by Cisco, EBRD, and IFC." },
+      { year: "2014", event: "His life story becomes the basis for the film 'Startup.'" }
+    ],
+    biography: "Alexander Galitsky built his early career as a defense scientist in the Soviet space industry before founding ELVIS+ in 1991 to commercialize Soviet-era technology in the West, partnering with Sun Microsystems co-founder Bill Joy on early Wi-Fi hardware development that beat out competitors including Motorola. He went on to found four more technology companies before turning to venture capital, founding Almaz Capital in 2008 with backing from Cisco, EBRD, and IFC to bridge Silicon Valley and Central/Eastern European technology ecosystems. That bridge-building has produced real outcomes including Yandex's NASDAQ IPO, Xometry's NASDAQ IPO, QIK's acquisition by Skype, Sensity Systems' acquisition by Verizon, and Acumatica's sale to EQT, across more than $300 million invested through three funds. Galitsky's own path from Soviet scientist to Silicon Valley investor became the basis for the 2014 film 'Startup,' and he continues to serve as an advisor to the B612 Foundation, focused on planetary defense from asteroid impacts.",
+    sources: [
+      { label: "Wikipedia — Alexander Galitsky", url: "https://en.wikipedia.org/wiki/Alexander_Galitsky" },
+      { label: "Almaz Capital", url: "https://www.webit.org/en/2014/alexander_galitsky.html" }
+    ]
+  },
+
+  "david-blumberg": {
+    name: "David J. Blumberg",
+    firm: "Blumberg Capital",
+    firmSlug: "blumberg-capital",
+    title: "Founder & Managing Partner",
+    joinedYear: 1991,
+    education: ["AB, Government (cum laude), Harvard College", "MBA, Stanford Graduate School of Business & INSEAD"],
+    previousExperience: [
+      "Senior Executive (one of the first four), Check Point Software Technologies",
+      "International Investments, T. Rowe Price",
+      "International Investments, Apax Partners",
+      "International Investments, Adler & Co. Venture Capital",
+      "International Investments, Bronfman Family Office (Claridge)"
+    ],
+    investmentFocus: ["AI", "Big Data", "Fintech", "Cybersecurity"],
+    notableInvestments: [
+      { name: "DoubleVerify", ticker: "DV" },
+      { name: "Nutanix", ticker: "NTNX" },
+      { name: "Braze", ticker: "BRZE" }
+    ],
+    boardSeats: [],
+    ipoCount: 7,
+    majorExits: 58,
+    careerTimeline: [
+      { year: "1980s", event: "Manages international investments at T. Rowe Price, Apax Partners, Adler & Co., and the Bronfman Family Office, and serves as one of Check Point Software's first four senior executives." },
+      { year: "1991", event: "Founds Blumberg Capital in San Francisco." },
+      { year: "2008", event: "Leads an early investment in DoubleVerify." },
+      { year: "2021", event: "DoubleVerify completes its NYSE IPO in April, raising approximately $400 million at a valuation exceeding $3 billion, a reported 98x return for Blumberg; closes a $225 million Fund V, oversubscribed against a $200 million target." }
+    ],
+    biography: "David Blumberg built a rare combination of operating and international investing experience before founding his own firm — one of the first four senior executives at Check Point Software, followed by international investment roles at T. Rowe Price, Apax Partners, Adler & Co., and the Bronfman Family Office. He founded Blumberg Capital in 1991, building it into an early-stage investor specializing in AI, big data, fintech, and cybersecurity, with a hands-on approach as active board members and advisors from seed through exit. That approach has produced five unicorns and seven IPOs across the firm's history, including DoubleVerify's 2021 NYSE listing, which delivered a reported 98x return after Blumberg's early 2008 investment. Blumberg Capital now manages more than $750 million with offices spanning San Francisco, Tel Aviv, Miami, and New York.",
+    sources: [
+      { label: "Blumberg Capital — David Blumberg", url: "https://blumbergcapital.com/team/david-blumberg/" },
+      { label: "TechCrunch", url: "https://techcrunch.com/2021/09/17/longtime-vc-and-happy-miami-resident-david-blumberg-has-raised-a-new-225-million-fund/" }
+    ]
+  },
+
+  "bryan-roberts": {
+    name: "Bryan Roberts",
+    firm: "Venrock",
+    firmSlug: "venrock",
+    title: "Partner",
+    joinedYear: 2000,
+    education: ["BA, Dartmouth College", "PhD, Chemistry & Chemical Biology, Harvard University"],
+    previousExperience: [],
+    investmentFocus: ["Healthcare IT", "Digital Health", "Biotechnology"],
+    notableInvestments: [
+      { name: "athenahealth", ticker: null },
+      { name: "Illumina", ticker: "ILMN" },
+      { name: "Castlight Health", ticker: null }
+    ],
+    boardSeats: [],
+    ipoCount: 3,
+    majorExits: 6,
+    careerTimeline: [
+      { year: "2000", event: "Joins Venrock as a partner, immediately after earning his PhD in Chemistry & Chemical Biology from Harvard." },
+      { year: "2007", event: "Leads a partner-driven restructuring of Venrock, winnowing down the partner ranks to sharpen the firm's focus." },
+      { year: "2010", event: "Helps establish equal-carry compensation across all Venrock partners, regardless of who led a given investment." },
+      { year: "2018", event: "athenahealth, a long-held Venrock healthcare investment, completes its public journey before eventual acquisition." }
+    ],
+    biography: "Bryan Roberts joined Venrock in 2000 immediately after earning a PhD in Chemistry & Chemical Biology from Harvard, following an undergraduate degree at Dartmouth, bringing genuine scientific depth to healthcare investing. He became a driving force in restructuring Venrock starting in 2007, helping winnow the firm's partner ranks and later establishing an equal-carry compensation structure across all partners regardless of who sourced a given deal — a structural choice meant to incentivize collective success over individual credit. Roberts has anchored Venrock's healthcare practice for more than two decades, backing companies including athenahealth, Illumina, Castlight Health, and Grand Rounds, and remains one of the firm's most senior and long-tenured healthcare investors.",
+    sources: [
+      { label: "Venrock — Bryan Roberts", url: "https://www.venrock.com/teammember/bryan-roberts/" },
+      { label: "Forbes — How Venrock Is Reinventing Itself", url: "https://www.forbes.com/sites/kerryadolan/2013/05/09/how-venrock-is-reinventing-itself/" }
+    ]
+  },
+
+  "peter-dicks": {
+    name: "Peter Dicks",
+    firm: "Abingworth",
+    firmSlug: "abingworth",
+    title: "Co-Founder & Senior Partner",
+    joinedYear: 1973,
+    education: [],
+    previousExperience: [
+      "Stockbroker, London"
+    ],
+    investmentFocus: ["Biotechnology", "Pharmaceuticals"],
+    notableInvestments: [
+      { name: "Clovis Oncology", ticker: "CLVS" },
+      { name: "Cantab Pharmaceuticals", ticker: null }
+    ],
+    boardSeats: [],
+    ipoCount: 3,
+    majorExits: 5,
+    careerTimeline: [
+      { year: "1973", event: "Co-founds Abingworth with fellow London stockbroker Hon. Anthony Montagu." },
+      { year: "1970s-80s", event: "Abingworth makes early investments in Apple and Silicon Graphics, before the firm's biotech pivot." },
+      { year: "1987", event: "Establishes Abingworth's dedicated biotech investment arm, with an early investment in Immunology Ltd, later renamed Cantab Pharmaceuticals." },
+      { year: "2014", event: "Algeta, a portfolio company, is acquired by Bayer." },
+      { year: "2022", event: "Abingworth is acquired by The Carlyle Group in August, after nearly 50 years as an independent firm." }
+    ],
+    biography: "Peter Dicks and fellow London stockbroker Hon. Anthony Montagu founded Abingworth in 1973, initially making broader technology investments — including early stakes in Apple and Silicon Graphics — before Dicks led the firm's pivot to dedicated biotechnology investing with the establishment of its biotech arm in 1987. That pivot built Abingworth into one of the longest-running and most respected transatlantic life sciences investors, backing more than 180 companies across seed through late-stage development with 73-plus completed IPOs and 46 acquisitions, including Clovis Oncology's NASDAQ listing and Algeta's sale to Bayer. Dicks has chaired numerous biotech companies and advised UK health funds throughout his career, helping build Abingworth into a firm managing billions before its 2022 acquisition by The Carlyle Group.",
+    sources: [
+      { label: "Wikipedia — Abingworth", url: "https://en.wikipedia.org/wiki/Abingworth_(company)" },
+      { label: "Abingworth", url: "https://www.abingworth.com/" }
+    ]
+  },
+
+  "christoph-braun": {
+    name: "Christoph Braun",
+    firm: "Acton Capital",
+    firmSlug: "acton-capital",
+    title: "Managing Partner",
+    joinedYear: 1999,
+    education: ["MBA (United States)", "PhD, Ludwig Maximilian University of Munich (LMU)"],
+    previousExperience: [
+      "Strategy Consultant, Frankfurt & San Francisco"
+    ],
+    investmentFocus: ["Fintech", "SaaS", "Marketplaces", "Mobility"],
+    notableInvestments: [
+      { name: "Mambu", ticker: null },
+      { name: "Zooplus", ticker: null },
+      { name: "iwoca", ticker: null }
+    ],
+    boardSeats: ["Mambu"],
+    ipoCount: 2,
+    majorExits: 4,
+    careerTimeline: [
+      { year: "1990s", event: "Studies for an MBA in the US and becomes infected with what he calls the 'startup virus,' before earning a PhD from LMU Munich and working as a strategy consultant in Frankfurt and San Francisco." },
+      { year: "1999", event: "Signs Acton Capital's first investment agreement in February with a young startup called Alando, founded by Oliver, Marc, and Alexander Samwer." },
+      { year: "1999", event: "Alando is acquired by eBay within 100 days for $43 million, sparking a wave of German startups and helping establish Berlin as a startup hub." },
+      { year: "2008", event: "Zooplus completes its IPO; AbeBooks, another Acton investment, is acquired by Amazon." },
+      { year: "2019", event: "Closes Acton V at $215 million." }
+    ],
+    biography: "Christoph Braun caught what he calls the 'startup virus' while earning an MBA in the US, then completed a PhD at LMU Munich and worked as a strategy consultant in Frankfurt and San Francisco before co-founding Acton Capital in 1999. His first deal became legendary in German startup history: in February 1999, he signed an investment agreement with three young, energetic founders — the Samwer brothers — behind Alando, an online auction site that eBay acquired within 100 days for $43 million, creating the core of eBay Europe and sparking an entire wave of German startup activity. Braun has since built Acton into a leading European growth-stage investor, backing more than 100 startups including Mambu, Zooplus (IPO 2008), iwoca, and AlphaSights, with more than €400 million invested across six fund generations since founding.",
+    sources: [
+      { label: "Acton Capital — About", url: "https://medium.com/actoncapital/starting-up-within-the-bubble-42c1f4019f45" },
+      { label: "Wikipedia — Acton Capital", url: "https://en.wikipedia.org/wiki/Acton_Capital" }
+    ]
+  },
   "matt-huang": {
     name: "Matt Huang",
     firm: "Paradigm",
