@@ -117,6 +117,40 @@ const partnerProfiles = {
       { label: "Wikipedia", url: "https://en.wikipedia.org/wiki/Peter_Thiel" }
     ]
   },
+  "bruce-booth": {
+    name: "Bruce Booth",
+    firm: "Atlas Venture",
+    firmSlug: "atlas-venture",
+    title: "Partner",
+    joinedYear: 2005,
+    education: ["BS, Biochemistry (summa cum laude), Penn State University", "DPhil, Molecular Immunology, University of Oxford (British Marshall Scholar)"],
+    previousExperience: [
+      "Consultant, McKinsey & Company (pharmaceutical & biotech R&D productivity, portfolio management)",
+      "Investor, Caxton Health Holdings"
+    ],
+    investmentFocus: ["Biotechnology", "Drug Discovery", "Therapeutics"],
+    notableInvestments: [
+      { name: "Kymera Therapeutics", ticker: "KYMR" },
+      { name: "Nimbus Therapeutics", ticker: null },
+      { name: "AvroBio", ticker: "AVRO" }
+    ],
+    boardSeats: ["Kymera Therapeutics (Chairman)", "Hotspot Therapeutics (Chairman)", "AvroBio (Chairman)"],
+    ipoCount: 6,
+    majorExits: 12,
+    careerTimeline: [
+      { year: "1999", event: "Earns a DPhil in molecular immunology from Oxford University as a British Marshall Scholar, studying HIV and tumor immune response." },
+      { year: "2000s", event: "Works as a consultant at McKinsey & Company and an investor at Caxton Health Holdings before joining venture capital." },
+      { year: "2005", event: "Joins Atlas Venture as a Partner, focusing on capital-efficient models for drug discovery." },
+      { year: "2009", event: "Co-founds and becomes founding CEO of Nimbus Therapeutics." },
+      { year: "2022", event: "Nimbus Therapeutics sells its TYK2 inhibitor program to Takeda for a $4 billion upfront payment in December." },
+      { year: "2025", event: "Vigil Neuroscience, a company he served on the board of, is acquired by Sanofi." }
+    ],
+    biography: "Bruce Booth studied biochemistry at Penn State before earning a DPhil in molecular immunology from Oxford as a British Marshall Scholar, then worked as a McKinsey consultant advising pharmaceutical and biotech clients on R&D productivity before joining Atlas Venture in 2005. He has since co-founded and served as founding CEO of Kymera Therapeutics and Nimbus Therapeutics, the latter selling its TYK2 inhibitor program to Takeda for a $4 billion upfront payment in 2022 — one of biotech venture's largest single-asset licensing deals. Booth has chaired numerous Atlas portfolio companies through IPO and acquisition, including AvroBio's NASDAQ listing and Vigil Neuroscience's acquisition by Sanofi, and has become one of biotech venture's most influential public voices through his LifeSciVC blog, syndicated on Forbes since 2011, where he publishes widely-read annual predictions and analysis on the biotech funding landscape.",
+    sources: [
+      { label: "Atlas Venture — Bruce Booth", url: "https://atlasventure.com/team/bruce-booth-dphil/" },
+      { label: "Penn State University", url: "https://www.psu.edu/news/academics/story/bruce-booth-honored-penn-states-outstanding-science-alumni-award" }
+    ]
+  },
   "josh-stein": {
     name: "Josh Stein",
     firm: "Threshold Ventures",
