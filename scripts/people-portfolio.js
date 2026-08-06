@@ -33,8 +33,8 @@ function getAllTrackedCompanies() {
   }));
   return [...seen.entries()].map(([name, holding]) => ({ name, holding })).sort((a, b) => a.name.localeCompare(b.name));
 }
-
 let peopleSearchTerm = '';
+let comparePartnerSet = new Set();
 
 let portfolioSearchTerm = '';
 
