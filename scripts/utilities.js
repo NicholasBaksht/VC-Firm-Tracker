@@ -58,7 +58,53 @@ function getScaleLabel(firm) {
   if (num >= 0.1) return '$100M–$200M';
   return 'Under $100M';
 }
+// ---------- SUGGESTED FOR YOU ----------
+// Given the firms currently in a user's shortlist, suggests one additional
+// firm they haven't shortlisted yet, based on sector and stage overlap with
+// what's already there. Returns null if the shortlist is empty (nothing to
+// base a suggestion on) or if every overlapping firm is already shortlisted.
+// Shared across the Find Investors results page, the Shortlist page, and
+// Search results, so the suggestion logic - and what counts as "similar" -
+// stays identical everywhere it appears rather than drifting between pages.
+function getSuggestedFirm(shortlistFirms) {
+  if (!shortlistFirms || shortlistFirms.length === 0) return null;
 
+  const shortlistSlugs = new Set(shortlistFirms.map(f => f.slug));
+
+  // Union of every sector represented across the shortlist
+  const shortlistSectors = new Set();
+  shortlistFirms.forEach(f => (f.sectors || []).forEach(s => shortlistSectors.add(s)));
+
+  // Union of every investment stage represented across the shortlist,
+  // pulled from firmStages since that's the source of truth for stage
+  // data rather than duplicating it onto the firm objects themselves.
+  const shortlistStages = new Set();
+  shortlistFirms.forEach(f => {
+    (firmStages[f.slug] || []).forEach(stage => shortlistStages.add(stage));
+  });
+
+  let best = null;
+  let bestScore = 0;
+
+  firms.forEach(candidate => {
+    if (shortlistSlugs.has(candidate.slug)) return; // already shortlisted
+
+    const sectorOverlap = (candidate.sectors || []).filter(s => shortlistSectors.has(s)).length;
+    const stageOverlap = (firmStages[candidate.slug] || []).filter(s => shortlistStages.has(s)).length;
+
+    // Sector overlap weighted higher than stage overlap - two firms sharing
+    // a sector focus are more genuinely "similar" to a founder than two
+    // firms that simply both happen to invest at, say, Series A.
+    const score = (sectorOverlap * 2) + stageOverlap;
+
+    if (score > bestScore) {
+      bestScore = score;
+      best = candidate;
+    }
+  });
+
+  return best; // null if no candidate had any overlap at all
+}
 // Builds the small colored badge showing return since Jan 2, 2025,
 // for any holding that has a real historicalPrice on file. Holdings
 // without one yet (historicalPrice: null) show a neutral "—" badge
