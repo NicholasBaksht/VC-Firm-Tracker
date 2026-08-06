@@ -667,31 +667,6 @@ const firms = [
       { name: "Li Auto", ticker: "LI", historicalPrice: null, price: null }
     ]
   },
-  {
-    rank: 23,
-    name: "STIC Investments",
-    sectors: ["Enterprise Software", "Healthcare", "Industrial Tech"],
-    signatureExit: "Jeil Hydraulics' sale to Eaton Corporation in 2012, with STIC's 21% stake selling for approximately $29 million — one of several exits alongside a Golfzon stake sale, reflecting STIC's growth-equity and structured-financing model over traditional tech IPOs",
-    slug: "stic-investments",
-    website: "https://www.sticinvestments.com",
-    short: "STIC Investments",
-    founded: 1999,
-    hq: "Seoul, South Korea",
-    aum: "$6.7B",
-    thesis: "STIC Investments was founded in July 1999 by Y.H. Do, originally as SoftBank Telecom Investment Company, growing over more than two decades into one of South Korea's largest private equity and growth investment platforms. The firm operates across TMT, healthcare, materials, and industrial sectors, blending late-stage growth equity with structured financings and mid-cap buyouts, and rebranded from STIC Partners to STIC Investments in 2014 as part of a shift toward an open-funds model. That growth-equity focus, distinct from typical early-stage venture capital, produced real strategic exits including Jeil Hydraulics' sale to Eaton Corporation and a stake sale in golf simulation company Golfzon, and STIC now manages approximately KRW 7.9 trillion (roughly $6.7 billion) across seven offices spanning Seoul, Busan, Hong Kong, Ho Chi Minh City, Shanghai, and Taipei.",
-    leadership: [
-      { name: "Y.H. Do", role: "Founder & Chairman", profileSlug: "yh-do" },
-      { name: "Byung Won Choi", role: "Chief Executive Officer" },
-      { name: "Dong Guel Kwak", role: "Chief Investment Officer" }
-    ],
-    timeline: [
-      { year: "1999", event: "Y.H. Do founds STIC in Seoul in July." },
-      { year: "2012", event: "Sells its 21% stake in Jeil Hydraulics to Eaton Corporation for approximately $29 million." },
-      { year: "2014", event: "Rebrands from STIC Partners to STIC Investments, shifting to an open-funds model." },
-      { year: "2024", event: "AUM reaches KRW 7.9 trillion (approximately $6.7 billion)." }
-    ],
-    holdings: []
-  },
    {
     rank: 2,
     name: "General Atlantic",
