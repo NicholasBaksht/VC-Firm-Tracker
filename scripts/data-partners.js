@@ -186,37 +186,6 @@ const partnerProfiles = {
       { label: "Crunchbase News", url: "https://news.crunchbase.com/venture/threshold-formerly-known-as-dfj-targets-250m-for-latest-venture-fund/" }
     ]
   },
-
-  "jeffrey-perlman": {
-    name: "Jeffrey Perlman",
-    firm: "Warburg Pincus",
-    firmSlug: "warburg-pincus",
-    title: "Chief Executive Officer",
-    joinedYear: 2006,
-    education: ["BBA, University of Michigan (Ross School of Business)"],
-    previousExperience: [],
-    investmentFocus: ["Real Estate", "Asia-Pacific Growth Equity", "Financial Services"],
-    notableInvestments: [
-      { name: "ESR Group", ticker: null },
-      { name: "MoMo", ticker: null }
-    ],
-    boardSeats: ["ESR Group (Chairman)", "MoMo", "BW Industrial Development JSC"],
-    ipoCount: 2,
-    majorExits: 3,
-    careerTimeline: [
-      { year: "2006", event: "Joins Warburg Pincus, beginning nearly two decades building the firm's Asia-Pacific franchise." },
-      { year: "2016", event: "Opens Warburg Pincus's Singapore office as part of the firm's Asia expansion." },
-      { year: "2018", event: "Joins the firm's Executive Management Group." },
-      { year: "2023", event: "Named President of Warburg Pincus in July, succeeding Timothy Geithner in that role." },
-      { year: "2024", event: "Named Chief Executive Officer in September, succeeding Chip Kaye, who becomes Co-Chairman alongside Geithner." }
-    ],
-    biography: "Jeffrey Perlman joined Warburg Pincus in 2006 and spent nearly two decades building out the firm's Asia-Pacific real estate and private equity franchise, including opening its Singapore office in 2016. That track record of expanding Warburg's global reach led to his appointment as President in 2023, succeeding former US Treasury Secretary Timothy Geithner in that role, and then Chief Executive Officer in September 2024, succeeding Chip Kaye after his 22-year tenure — only the third generation of leadership in the firm's nearly 60-year history. Perlman currently chairs the board of ESR Group and sits on the boards of MoMo and several other portfolio companies, continuing to oversee Warburg Pincus's global growth equity strategy across a portfolio of more than 225 companies.",
-    sources: [
-      { label: "Warburg Pincus — CEO Announcement", url: "https://warburgpincus.com/2024/07/17/warburg-pincus-names-jeffrey-perlman-chief-executive-officer/" },
-      { label: "Wikipedia — Warburg Pincus", url: "https://en.wikipedia.org/wiki/Warburg_Pincus" }
-    ]
-  },
-
   "max-fowinkel": {
     name: "Max Fowinkel",
     firm: "Warburg Pincus",
