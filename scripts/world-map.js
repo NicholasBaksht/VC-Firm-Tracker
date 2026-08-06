@@ -159,3 +159,47 @@ function buildDotGrid() {
   }
   return dots;
 }
+
+// Simplified continent silhouettes - deliberately not precise country
+// borders (too risky to hand-transcribe accurately, see conversation
+// notes), just recognizable continent-scale shapes so the background
+// reads as an actual map rather than abstract reference dots. Each
+// shape is built from real lat/long points converted through the
+// same projectLatLng() function used for pins, so everything stays
+// correctly aligned no matter how the map is resized.
+function buildContinents() {
+  const continents = {
+    'North America': [
+      [70,-165],[70,-140],[60,-95],[49,-95],[45,-83],[45,-75],[47,-60],
+      [25,-80],[25,-97],[15,-92],[15,-105],[32,-117],[48,-125],[60,-140],[70,-165]
+    ],
+    'South America': [
+      [12,-72],[10,-62],[5,-52],[-5,-35],[-23,-43],[-34,-58],[-55,-68],
+      [-40,-73],[-18,-70],[-5,-81],[5,-77],[12,-72]
+    ],
+    'Europe': [
+      [71,25],[60,30],[55,40],[45,40],[36,28],[38,15],[45,10],
+      [43,3],[51,2],[58,10],[71,25]
+    ],
+    'Africa': [
+      [37,10],[32,32],[12,43],[-2,42],[-26,33],[-35,20],[-20,12],
+      [5,9],[10,-15],[20,-17],[33,-10],[37,10]
+    ],
+    'Asia': [
+      [77,60],[70,140],[55,163],[35,140],[20,110],[8,98],[8,78],
+      [20,68],[35,50],[45,40],[55,40],[60,50],[77,60]
+    ],
+    'Australia': [
+      [-11,142],[-17,146],[-28,153],[-38,147],[-35,137],[-32,115],
+      [-20,113],[-14,127],[-11,142]
+    ]
+  };
+
+  return Object.entries(continents).map(([name, points]) => {
+    const pathPoints = points.map(([lat, lng]) => {
+      const { x, y } = projectLatLng(lat, lng);
+      return `${x},${y * 0.6}`;
+    }).join(' ');
+    return `<polygon points="${pathPoints}" class="worldmap-continent" />`;
+  }).join('');
+}
