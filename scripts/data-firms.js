@@ -586,6 +586,29 @@ const firms = [
       { name: "Joby Aviation", ticker: "JOBY", historicalPrice: null, price: null }
     ]
   },
+  {
+    rank: 20,
+    name: "BDC Capital",
+    sectors: ["Enterprise Software", "AI", "Climate"],
+    signatureExit: "No focus on traditional exits — as Canada's national development bank's venture arm, BDC Capital measures success through co-investment reach; Lightspeed Commerce's 2020 NYSE IPO is among the notable companies it helped fund",
+    slug: "bdc-capital",
+    website: "https://www.bdc.ca/en/bdc-capital/venture-capital",
+    short: "BDC Capital",
+    founded: 1953,
+    hq: "Montreal, Canada",
+    aum: "$3B (across venture and growth funds)",
+    thesis: "BDC Capital is the venture and growth-equity arm of the Business Development Bank of Canada, founded in 1953 as Canada's national development bank before building out a dedicated venture capital function. Positioned as Canada's largest and most active early-stage venture capital investor, BDC Capital co-invests alongside angels and private VCs to support homegrown Canadian technology companies across AI, cleantech, and enterprise software, deliberately providing large co-investment checks specifically designed to encourage more private capital into Canadian deals rather than crowding it out. That patient, government-backed capital model has supported Canadian technology companies for three decades, including Lightspeed Commerce, Coveo, and Borrowell, and BDC Capital now deploys approximately $3 billion across its venture and growth equity funds.",
+    leadership: [
+      { name: "Michael Denham", role: "CEO, BDC" }
+    ],
+    timeline: [
+      { year: "1953", event: "The Business Development Bank of Canada is founded." },
+      { year: "2016", event: "Launches a dedicated $275 million BDC Venture Fund for co-investment." },
+      { year: "2020", event: "Launches BDC Growth ($100M) and BDC Cinetic ($265M) funds; Lightspeed Commerce completes its NYSE IPO." },
+      { year: "2022", event: "Launches dedicated cleantech and connectivity-focused funds." }
+    ],
+    holdings: []
+  },
    {
     rank: 22,
     name: "SignalFire",
