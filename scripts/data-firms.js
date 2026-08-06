@@ -2208,6 +2208,36 @@ const firms = [
     holdings: []
   },
   {
+    rank: 14,
+    name: "Qiming Venture Partners",
+    sectors: ["Enterprise Software", "AI", "Healthcare", "Consumer"],
+    signatureExit: "Xiaomi's 2018 Hong Kong IPO — Qiming was an early seed investor, one of more than 180 completed exits across the firm's portfolio including Bilibili, Zhihu, and Meituan",
+    slug: "qiming-venture-partners",
+    website: "https://www.qimingvc.com",
+    short: "Qiming Venture Partners",
+    founded: 2006,
+    hq: "Shanghai, China",
+    aum: "$9.5B",
+    thesis: "Qiming Venture Partners was founded in 2006 by Gary Rieschel, a former SoftBank executive, and Duane Kuang, a former Intel Capital investor, building one of China's most consistently successful venture platforms over two decades. All four of the firm's current managing partners have been with Qiming since its founding, an unusually stable leadership structure for a firm of its scale, and Qiming specializes in early-stage investing, with 70% of its deals coming at Series A, across technology, internet, and healthcare. That focus has produced an extraordinary track record: more than 480 companies backed, over 70 reaching unicorn status, and more than 180 completing IPOs or acquisitions, including Xiaomi, Meituan, Bilibili, ByteDance, and Zhihu. Qiming expanded into an independent US dollar fund in 2017 and now manages $9.5 billion across 18 USD and RMB funds, backed by longtime institutional partners including Princeton, Duke, MIT, and NYU.",
+    leadership: [
+      { name: "Gary Rieschel", role: "Founding Managing Partner", profileSlug: "gary-rieschel" },
+      { name: "Duane Kuang", role: "Founding Managing Partner" },
+      { name: "Nisa Leung", role: "Managing Partner" }
+    ],
+    timeline: [
+      { year: "2006", event: "Gary Rieschel and Duane Kuang found Qiming Venture Partners in Shanghai." },
+      { year: "2017", event: "Launches Qiming U.S., its first independent US dollar fund." },
+      { year: "2018", event: "Xiaomi completes its Hong Kong IPO." },
+      { year: "2021", event: "Zhihu completes its NYSE IPO." },
+      { year: "2022", event: "Closes funds totaling $3.2 billion; raises $2.4 billion for Fund VIII." }
+    ],
+    holdings: [
+      { name: "Xiaomi", ticker: "1810.HK", historicalPrice: null, price: null },
+      { name: "Bilibili", ticker: "BILI", historicalPrice: null, price: null },
+      { name: "Zhihu", ticker: "ZH", historicalPrice: null, price: null }
+    ]
+  },
+  {
     rank: 16,
     name: "U.S. Venture Partners",
     sectors: ["Enterprise Software", "Cybersecurity", "Consumer", "Healthcare"],
