@@ -121,11 +121,23 @@ function router() {
   document.getElementById('peopleView').style.display = 'none';
 document.getElementById('portfolioView').style.display = 'none';
   document.getElementById('companyView').style.display = 'none';
- document.getElementById('shortlistView').style.display = 'none';
+document.getElementById('shortlistView').style.display = 'none';
   document.getElementById('worldMapView').style.display = 'none';
   document.getElementById('comparePartnersView').style.display = 'none';
+  document.getElementById('reportsHubView').style.display = 'none';
+  document.getElementById('sectorReportView').style.display = 'none';
 
-  if (slug === 'compare-partners') {
+  const reportMatch = slug.match(/^reports\/(.+)$/);
+
+  if (slug === 'reports') {
+    document.getElementById('reportsHubView').style.display = 'block';
+    renderReportsHub();
+    window.scrollTo(0, 0);
+  } else if (reportMatch) {
+    document.getElementById('sectorReportView').style.display = 'block';
+    renderSectorReport(reportMatch[1]);
+    window.scrollTo(0, 0);
+  } else if (slug === 'compare-partners') {
     document.getElementById('comparePartnersView').style.display = 'block';
     renderPartnerComparison();
     window.scrollTo(0, 0);
