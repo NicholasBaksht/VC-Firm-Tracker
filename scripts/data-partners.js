@@ -6908,4 +6908,33 @@ sources: [
       { label: "The Wire China", url: "https://www.thewirechina.com/2020/09/27/who-is-hillhouse-capital/" }
     ]
   },
+"arnold-snider": {
+    name: "Arnold Snider",
+    firm: "Deerfield Management",
+    firmSlug: "deerfield-management",
+    title: "Founder (Retired 2005; d. 2014)",
+    joinedYear: 1994,
+    education: [],
+    previousExperience: [
+      "Pharmaceutical Analyst, Kidder Peabody",
+      "Managing Director, Tiger Management (under Julian Robertson)"
+    ],
+    investmentFocus: ["Healthcare", "Biotechnology", "Pharmaceuticals"],
+    notableInvestments: [],
+    boardSeats: [],
+    ipoCount: 0,
+    majorExits: 0,
+    careerTimeline: [
+      { year: "1980s", event: "Works as a pharmaceutical analyst at Kidder Peabody before becoming a Managing Director at Julian Robertson's Tiger Management." },
+      { year: "1994", event: "Founds Deerfield Management with $17 million in equity, becoming one of the original 'Tiger Cub' funds spun out of Tiger Management." },
+      { year: "2000", event: "James Flynn joins Deerfield, beginning a transition period toward eventual leadership succession." },
+      { year: "2005", event: "Formally retires from Deerfield, handing full leadership to James Flynn." },
+      { year: "2014", event: "Passes away, leaving behind a firm that had grown into one of the largest dedicated healthcare investment platforms in the world." }
+    ],
+    biography: "Arnold Snider built his early career as a pharmaceutical analyst at Kidder Peabody before becoming a Managing Director at Julian Robertson's legendary Tiger Management, giving him both deep sector knowledge in healthcare and rigorous hedge-fund investing discipline. He founded Deerfield Management in 1994 with $17 million in equity, making it one of the original 'Tiger Cub' funds started by former Tiger Management employees, and built it specifically around dedicated healthcare and biotechnology investing at a time few generalist funds concentrated that deeply in one sector. James Flynn joined the firm in 2000, and Snider formally retired in 2005, handing full leadership to Flynn. Snider passed away in 2014, having built the foundation for what has grown into one of the world's largest dedicated healthcare investment firms.",
+    sources: [
+      { label: "Wikipedia — Deerfield Management", url: "https://en.wikipedia.org/wiki/Deerfield_Management" },
+      { label: "Institutional Investor", url: "https://www.institutionalinvestor.com/article/b1d7hrkxb9sfnk/Deerfield-Posts-Another-Double-Digit-Gain-in-2018" }
+    ]
+  },
 };
