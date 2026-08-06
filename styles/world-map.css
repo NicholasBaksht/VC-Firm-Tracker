@@ -158,3 +158,8 @@
   color: var(--ink-dim);
   margin-top: 3px;
 }
+.worldmap-continent {
+  fill: rgba(201,162,39,0.05);
+  stroke: rgba(201,162,39,0.25);
+  stroke-width: 0.15;
+}
