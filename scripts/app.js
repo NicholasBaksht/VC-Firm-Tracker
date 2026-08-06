@@ -124,12 +124,17 @@ document.getElementById('portfolioView').style.display = 'none';
 document.getElementById('shortlistView').style.display = 'none';
   document.getElementById('worldMapView').style.display = 'none';
   document.getElementById('comparePartnersView').style.display = 'none';
-  document.getElementById('reportsHubView').style.display = 'none';
+document.getElementById('reportsHubView').style.display = 'none';
   document.getElementById('sectorReportView').style.display = 'none';
+  document.getElementById('familyTreeView').style.display = 'none';
 
   const reportMatch = slug.match(/^reports\/(.+)$/);
 
-  if (slug === 'reports') {
+  if (slug === 'family-tree') {
+    document.getElementById('familyTreeView').style.display = 'block';
+    renderFamilyTree();
+    window.scrollTo(0, 0);
+  } else if (slug === 'reports') {
     document.getElementById('reportsHubView').style.display = 'block';
     renderReportsHub();
     window.scrollTo(0, 0);
