@@ -77,6 +77,9 @@ function renderSectorReport(reportSlug) {
     return;
   }
 
+  if (cfg.type === 'landscape') return renderLandscapeReport(cfg);
+  if (cfg.type === 'annual') return renderAnnualReport(cfg);
+
   const sectorFirms = firms.filter(f => (f.sectors || []).includes(cfg.sector))
     .slice() // don't mutate the shared firms array
     .sort((a, b) => parseAumNumber(b.aum) - parseAumNumber(a.aum));
