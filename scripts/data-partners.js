@@ -77,6 +77,203 @@ const partnerProfiles = {
       { label: "a16z — Marc Andreessen", url: "https://a16z.com/author/marc-andreessen/" }
     ]
   },
+  "mark-boggett": {
+    name: "Mark Boggett",
+    firm: "Seraphim Space",
+    firmSlug: "seraphim-space",
+    title: "Co-Founder & CEO",
+    joinedYear: 2016,
+    education: ["BA, Accounting & Finance, University of Leeds", "MA, Economics & Finance, University of Leeds"],
+    previousExperience: [
+      "YFM Equity Partners",
+      "Brewin Dolphin",
+      "Williams de Broe"
+    ],
+    investmentFocus: ["Space Technology", "Satellite Data", "Deep Tech"],
+    notableInvestments: [
+      { name: "Spire Global", ticker: "SPIR" },
+      { name: "Arqit", ticker: "ARQQ" },
+      { name: "LeoLabs", ticker: null }
+    ],
+    boardSeats: [],
+    ipoCount: 6,
+    majorExits: 9,
+    careerTimeline: [
+      { year: "2000s", event: "Builds a career in public markets tech investing at YFM Equity Partners, Brewin Dolphin, and Williams de Broe." },
+      { year: "2016", event: "Co-founds Seraphim with James Bruegger and Rob Desborough, launching the world's first venture capital fund dedicated exclusively to SpaceTech." },
+      { year: "2021", event: "Seraphim Space Investment Trust (SSIT) completes its IPO on the London Stock Exchange." },
+      { year: "2026", event: "Seraphim's portfolio and alumni companies have collectively raised more than $12 billion, producing nine unicorns and six IPOs." }
+    ],
+    biography: "Mark Boggett transitioned from public markets tech investing at YFM Equity Partners, Brewin Dolphin, and Williams de Broe into venture capital, co-founding Seraphim in 2016 with James Bruegger and Rob Desborough to launch the world's first VC fund dedicated exclusively to the commercial space sector. That first-mover conviction — betting that satellites would become as foundational to daily life as smartphones — produced a genuinely full-stack platform spanning early-stage venture funds, the Seraphim Space Accelerator (the largest VC-led program in the sector), and Seraphim Space Investment Trust, a growth-stage fund that itself completed a London Stock Exchange IPO in 2021. Under Boggett's leadership, Seraphim has backed more than 145 SpaceTech startups across 33 countries, including Spire Global, Arqit, and LeoLabs, with AUM exceeding $630 million and alumni companies collectively raising more than $12 billion.",
+    sources: [
+      { label: "Seraphim Space — Team", url: "https://seraphim.vc/about/team/" },
+      { label: "Wikipedia — Seraphim Space", url: "https://en.wikipedia.org/wiki/Seraphim_Space" }
+    ]
+  },
+
+  "amy-nauiokas": {
+    name: "Amy Nauiokas",
+    firm: "Anthemis Group",
+    firmSlug: "anthemis-group",
+    title: "Founder & CEO",
+    joinedYear: 2010,
+    education: [],
+    previousExperience: [
+      "Deutsche Bank",
+      "Bear Stearns",
+      "Senior Managing Director, Cantor Fitzgerald (brought its brokerage business online)",
+      "eCommerce Lead, Barclays Capital",
+      "CEO, Barclays Stockbrokers (2006-2008, grew revenue 40%)",
+      "Co-Founder, Nauiokas Park (2008-2010, predecessor to Anthemis)"
+    ],
+    investmentFocus: ["Fintech", "Insurtech", "Embedded Finance"],
+    notableInvestments: [
+      { name: "Betterment", ticker: null },
+      { name: "Zoopla", ticker: null },
+      { name: "Currencycloud", ticker: null }
+    ],
+    boardSeats: [],
+    ipoCount: 0,
+    majorExits: 5,
+    careerTimeline: [
+      { year: "2000s", event: "Rises to Senior Managing Director at Cantor Fitzgerald, bringing its brokerage business online, before moving to Barclays Capital." },
+      { year: "2006", event: "Becomes CEO of Barclays Stockbrokers, Europe's largest e-brokerage, growing its revenue 40%." },
+      { year: "2008", event: "Co-founds Nauiokas Park with Sean Park, a venture firm focused on disruptive financial technologies." },
+      { year: "2010", event: "Nauiokas Park becomes Anthemis Group in the fall." },
+      { year: "2021", event: "Leads Anthemis Digital Acquisitions I Corp, an all-female-led fintech SPAC, to its market debut in November." }
+    ],
+    biography: "Amy Nauiokas built a two-decade Wall Street career spanning Deutsche Bank, Bear Stearns, Cantor Fitzgerald (where she brought its brokerage business online as Senior Managing Director), and Barclays Capital, before becoming CEO of Barclays Stockbrokers in 2006 and growing Europe's largest e-brokerage by 40%. She left in 2008 to co-found Nauiokas Park with Sean Park, a venture firm betting on disruptive financial technology years before 'fintech' was a mainstream term, which became Anthemis Group in 2010. Nauiokas has led Anthemis to become one of the most active fintech and insurtech investors globally, backing more than 150 portfolio companies including Betterment, Zoopla, and Currencycloud, deploying 40% of capital into women- and people of color-backed companies, and led Anthemis Digital Acquisitions I Corp, an all-female-led SPAC, to market in 2021. She was named to Forbes' 50 Over 50 list in 2024.",
+    sources: [
+      { label: "Wikipedia — Amy Nauiokas", url: "https://en.wikipedia.org/wiki/Amy_Nauiokas" },
+      { label: "SEC S-1 Filing", url: "https://www.sec.gov/Archives/edgar/data/1853928/000119312521289843/d79631ds1.htm" }
+    ]
+  },
+
+  "uwe-horstmann": {
+    name: "Uwe Horstmann",
+    firm: "Project A Ventures",
+    firmSlug: "project-a-ventures",
+    title: "Co-Founder & General Partner",
+    joinedYear: 2012,
+    education: ["BS, Entrepreneurship, WHU-Otto Beisheim School of Management", "MS, Business Engineering, University of Stuttgart", "PhD, RWTH Aachen University"],
+    previousExperience: [
+      "Managing Director, Rocket Internet (2009-2011, one of the company's earliest staff members from its 2007 founding)"
+    ],
+    investmentFocus: ["Defense Tech", "Fintech", "Supply Chain Software"],
+    notableInvestments: [
+      { name: "Trade Republic", ticker: null },
+      { name: "Stark", ticker: null },
+      { name: "sennder", ticker: null }
+    ],
+    boardSeats: ["ARX (Aerospace and Defense)", "Dixa"],
+    ipoCount: 0,
+    majorExits: 3,
+    careerTimeline: [
+      { year: "2007", event: "Joins Rocket Internet as one of its earliest staff members, eventually becoming Managing Director." },
+      { year: "2012", event: "Co-founds Project A Ventures with five colleagues, pioneering an 'operational VC' model combining capital with in-house operational support." },
+      { year: "2022", event: "Leads Project A's early shift into defense technology, backing companies including Stark and Quantum Systems." },
+      { year: "2026", event: "Becomes CEO of Stark, a Berlin-based defense drone company Project A backed as one of its earliest investors, while remaining active at Project A." }
+    ],
+    biography: "Uwe Horstmann joined Rocket Internet in 2007 as one of the company's earliest staff members, rising to Managing Director before co-founding Project A Ventures in 2012 with five colleagues to build a genuinely different early-stage model — 'operational VC,' combining financial capital with a team of more than 100 in-house experts across product, growth, data, and recruiting, exclusively available to portfolio companies. That model backed companies including Trade Republic, sennder, and WorldRemit, and Horstmann led Project A's early pivot into defense and dual-use technology starting in 2022, becoming one of the earliest investors in Stark, a Berlin-based defense drone maker. In a striking full-circle move in 2026, Horstmann became Stark's CEO himself while remaining active in Project A's investment activities, illustrating the firm's genuinely hands-on, operator-embedded approach to venture building.",
+    sources: [
+      { label: "Resilience Media", url: "https://resiliencemedia.co/uwe-horstmann-takes-the-reins-as-stark-ceo/" },
+      { label: "Project A — Uwe Horstmann", url: "https://techround.co.uk/interviews/meet-uwe-horstmann-project-a-ventures/" }
+    ]
+  },
+
+  "antoine-papiernik": {
+    name: "Antoine Papiernik",
+    firm: "Sofinnova Partners",
+    firmSlug: "sofinnova-partners",
+    title: "Chairman & Managing Partner",
+    joinedYear: 1997,
+    education: [],
+    previousExperience: [],
+    investmentFocus: ["Biotech", "MedTech", "Digital Medicine", "Industrial Biotech"],
+    notableInvestments: [
+      { name: "Shockwave Medical", ticker: null },
+      { name: "DBV Technologies", ticker: "DBVT" },
+      { name: "ProQR Therapeutics", ticker: "PRQR" }
+    ],
+    boardSeats: [],
+    ipoCount: 8,
+    majorExits: 21,
+    careerTimeline: [
+      { year: "1997", event: "Joins Sofinnova Partners, the Paris-based life sciences investment firm that split from its US counterpart, Sofinnova Investments, that same year." },
+      { year: "2024", event: "Shockwave Medical, a decade-long Sofinnova investment, is acquired by Johnson & Johnson." },
+      { year: "2025", event: "Leads Sofinnova to raise €1.2 billion across its investment platform, pushing total AUM past €4 billion." }
+    ],
+    biography: "Antoine Papiernik has spent nearly three decades at Sofinnova Partners, the Paris-based life sciences investment firm founded in 1972, which split from its American counterpart Sofinnova Investments (now based in Menlo Park) in 1997 — the same year he joined. As Chairman and Managing Partner, Papiernik has helped guide Sofinnova through its evolution into a hands-on company builder across the entire life sciences value chain, from seed-stage incubation through later-stage growth investing in biopharma, medtech, industrial biotech, and digital medicine. Under his leadership, Sofinnova supported Shockwave Medical over more than a decade before Johnson & Johnson's acquisition of the cardiovascular device company, and the firm has backed more than 500 companies over its 50-plus year history, raising €1.2 billion in a single year in 2025 to push total assets under management past €4 billion.",
+    sources: [
+      { label: "Sofinnova Partners", url: "https://sofinnovapartners.com/" },
+      { label: "Caplight — Sofinnova Partners", url: "https://www.caplight.com/investor/sofinnovapartners" }
+    ]
+  },
+
+  "jamie-montgomery": {
+    name: "Jamie Montgomery",
+    firm: "March Capital",
+    firmSlug: "march-capital",
+    title: "Co-Founder & Managing Partner",
+    joinedYear: 2013,
+    education: ["BA, Political Science, University of California, San Diego", "MA, Economics, Pembroke College, University of Cambridge"],
+    previousExperience: [
+      "Founder & CEO, Montgomery & Co. (boutique investment bank, 25+ years)",
+      "Founder, The Montgomery Summit (2004, annual technology conference)"
+    ],
+    investmentFocus: ["Enterprise Software", "Cybersecurity", "AI", "Cloud Infrastructure"],
+    notableInvestments: [
+      { name: "CrowdStrike", ticker: "CRWD" },
+      { name: "ThoughtSpot", ticker: null },
+      { name: "Forter", ticker: null }
+    ],
+    boardSeats: ["ASAPP", "Essential AI", "Forter", "Overjet"],
+    ipoCount: 3,
+    majorExits: 6,
+    careerTimeline: [
+      { year: "2004", event: "Founds The Montgomery Summit, an annual technology conference now drawing more than 1,000 entrepreneurs and investors to Santa Monica." },
+      { year: "2013", event: "Co-founds March Capital in September, moving into a small Santa Monica office with three fellow tech industry veterans." },
+      { year: "2016", event: "Closes a $240 million debut fund, then the largest first-time venture fund launched in Southern California." },
+      { year: "2019", event: "CrowdStrike, where Montgomery served as a board observer, completes its NASDAQ IPO." }
+    ],
+    biography: "Jamie Montgomery spent more than 25 years as founder and CEO of Montgomery & Co., a boutique investment bank that financed hundreds of leading technology companies, before pivoting to venture capital in 2013 to co-found March Capital with three fellow industry veterans. That banking network, combined with The Montgomery Summit, an annual technology conference Montgomery founded in 2004 that now draws more than 1,000 global entrepreneurs and investors to Santa Monica, gave March Capital an unusually deep relationship base from day one. The firm centered its thesis on enterprise, cybersecurity, and AI investing, playing a key role in CrowdStrike's growth as a private company as a board observer before its 2019 IPO, and Montgomery now serves on the boards of ASAPP, Essential AI, Forter, and Overjet, with March Capital managing more than $1 billion across four funds.",
+    sources: [
+      { label: "March Capital — Jamie Montgomery", url: "https://marchcp.com/team_member/jamie-montgomery/" },
+      { label: "March Capital — About", url: "https://marchcp.com/about/" }
+    ]
+  },
+
+  "daniel-petre": {
+    name: "Daniel Petre",
+    firm: "AirTree Ventures",
+    firmSlug: "airtree-ventures",
+    title: "Co-Founder & Partner",
+    joinedYear: 2014,
+    education: [],
+    previousExperience: [
+      "Vice President, Microsoft (Worldwide Information Products Group)"
+    ],
+    investmentFocus: ["Fintech", "Consumer", "Enterprise Software", "Climate Tech"],
+    notableInvestments: [
+      { name: "Canva", ticker: null },
+      { name: "Airwallex", ticker: null },
+      { name: "Linktree", ticker: null }
+    ],
+    boardSeats: [],
+    ipoCount: 0,
+    majorExits: 3,
+    careerTimeline: [
+      { year: "1990s", event: "Serves as a Vice President at Microsoft, becoming one of the most senior Australians in the company's global leadership." },
+      { year: "2014", event: "Co-founds AirTree Ventures with Craig Blair in Sydney, betting Australian and New Zealand founders could build globally competitive technology companies." },
+      { year: "2018", event: "Leads an early investment in Canva, backing the design platform years before it became a global unicorn." },
+      { year: "2026", event: "AirTree's portfolio surpasses 125 companies, including eight valued above $1 billion." }
+    ],
+    biography: "Daniel Petre rose to Vice President at Microsoft during its global expansion before returning to Australia and co-founding AirTree Ventures in 2014 with Craig Blair, built on the conviction that Australian and New Zealand founders could build genuinely world-class technology companies rather than regional also-rans. That early, often pre-product and pre-revenue investing philosophy produced early stakes in Canva, Airwallex, Linktree, and Employment Hero, and AirTree has since evolved from a traditional early-stage fund into a network-powered platform offering talent networks, executive forums, and peer communities to portfolio founders. The firm's more than 125 investments have collectively created over 19,000 jobs, with eight companies reaching billion-dollar valuations, cementing AirTree's position as one of Australia's most influential venture capital firms.",
+    sources: [
+      { label: "AirTree Ventures", url: "https://www.airtree.vc" },
+      { label: "StartupIntros — AirTree Ventures", url: "https://startupintros.com/orgs/airtree-ventures" }
+    ]
+  },
   "peter-thiel": {
     name: "Peter Thiel",
     firm: "Founders Fund",
