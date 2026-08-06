@@ -317,7 +317,18 @@ const firmStages = {
       "quest-ventures": ["Seed", "Series A"],
       "northern-light-venture-capital": ["Series A", "Series B", "Growth"],
       "source-code-capital": ["Series A", "Series B", "Growth", "Late Stage"],
-      "stic-investments": ["Growth", "Late Stage"]
+      "stic-investments": ["Growth", "Late Stage"],
+   "atlas-venture": ["Seed", "Series A", "Series B"],
+      "august-capital": ["Series A", "Series B", "Growth"],
+      "seraphim-space": ["Seed", "Series A", "Growth"],
+      "anthemis-group": ["Pre-Seed", "Seed", "Series A", "Series B"],
+      "project-a-ventures": ["Pre-Seed", "Seed", "Series A"],
+      "sofinnova-partners": ["Seed", "Series A", "Series B", "Growth"],
+      "march-capital": ["Series A", "Series B", "Series C"],
+      "airtree-ventures": ["Pre-Seed", "Seed", "Series A", "Series B"],
+      "samsung-ventures": ["Series A", "Series B", "Growth"],
+      "generation-investment-management": ["Growth", "Late Stage"],
+      "gaorong-capital": ["Series A", "Series B", "Growth"]
 };
 
 // ============================================================
