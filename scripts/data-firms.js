@@ -32,6 +32,110 @@ const firms = [
     ]
   },
   {
+    rank: 20,
+    name: "Atlas Venture",
+    sectors: ["Healthcare", "Deep Tech"],
+    signatureExit: "Akero Therapeutics' $4.7 billion acquisition by Novo Nordisk in 2025, expanding its MASH treatment portfolio — one of Atlas's clearest recent wins, alongside Nimbus Therapeutics' $4 billion TYK2 licensing deal with Takeda",
+    slug: "atlas-venture",
+    website: "https://atlasventure.com",
+    short: "Atlas Venture",
+    founded: 1980,
+    hq: "Cambridge, MA",
+    aum: "$2.7B",
+    thesis: "Atlas Venture was founded in 1980 in Amsterdam by Michiel de Haan as a subsidiary of NMB Bank (now ING Group), initially investing across both life sciences and information technology before a pivotal October 2014 decision to become a biotech-only firm, spinning its tech investing team into a new firm called Accomplice. That singular focus has made Atlas one of the most prolific and enduring biotech venture firms in the world, running a genuinely seed-led venture creation model where the firm actively builds companies from the earliest scientific insight rather than simply funding existing teams. Anchored by Partner Bruce Booth, whose LifeSciVC blog has become required reading across the industry, Atlas has invested in more than 150 life sciences startups since 1990 across immuno-oncology, gene and cell therapy, neuroscience, and anti-infectives, producing real outcomes including Akero Therapeutics' $4.7 billion acquisition by Novo Nordisk and Nimbus Therapeutics' $4 billion TYK2 deal with Takeda, with $2.7 billion under management.",
+    leadership: [
+      { name: "Bruce Booth", role: "Partner", profileSlug: "bruce-booth" },
+      { name: "Jean-Francois Formela", role: "Partner" },
+      { name: "Kevin Bitterman", role: "Partner" }
+    ],
+    timeline: [
+      { year: "1980", event: "Michiel de Haan founds Atlas Venture in Amsterdam as a subsidiary of NMB Bank." },
+      { year: "1993", event: "Begins dedicated biotech investing." },
+      { year: "2014", event: "Shifts to a biotech-only model, spinning its tech team into a new firm, Accomplice, in October." },
+      { year: "2022", event: "Nimbus Therapeutics sells its TYK2 inhibitor program to Takeda for a $4 billion upfront payment." },
+      { year: "2024", event: "Raises its fourteenth fund at $450 million in December." },
+      { year: "2025", event: "Akero Therapeutics is acquired by Novo Nordisk for $4.7 billion." }
+    ],
+    holdings: []
+  },
+  {
+    rank: 42,
+    name: "August Capital",
+    sectors: ["Enterprise Software", "Cybersecurity", "Developer Tools"],
+    signatureExit: "Splunk's NASDAQ IPO under ticker SPLK — an August Capital-era portfolio company; co-founder David Marquardt's pre-firm track record includes an even bigger story: Technology Venture Investors was the sole institutional investor in Microsoft, where Marquardt served on the board for 33 years",
+    slug: "august-capital",
+    website: "https://www.augustcap.com",
+    short: "August Capital",
+    founded: 1995,
+    hq: "Menlo Park, CA",
+    aum: "$2B",
+    thesis: "August Capital was founded in 1995 by David Marquardt and John Johnston, both spinning out of Technology Venture Investors, the firm Marquardt had co-founded in 1980 that became the sole institutional investor in Microsoft — a bet that put Marquardt on Microsoft's board for 33 consecutive years. That extraordinary pattern-recognition carried directly into August Capital's focus on enterprise IT infrastructure, data center technology, systems management, security, storage, and cloud computing, closing a $100 million debut fund and backing companies through every phase of the entrepreneurial process from seed investments to public offerings. The firm's portfolio has included Splunk, Compaq, Adaptec, Zulily, and Grand Junction Networks (acquired by Cisco), and August Capital now manages approximately $2 billion.",
+    leadership: [
+      { name: "David Marquardt", role: "Co-Founder & General Partner", profileSlug: "david-marquardt" },
+      { name: "David Hornik", role: "General Partner" }
+    ],
+    timeline: [
+      { year: "1980", event: "David Marquardt co-founds Technology Venture Investors, becoming Microsoft's sole institutional investor." },
+      { year: "1995", event: "Marquardt and John Johnston found August Capital in Menlo Park, closing a $100 million debut fund." },
+      { year: "2012", event: "Splunk completes its NASDAQ IPO." },
+      { year: "2014", event: "Marquardt steps down from Microsoft's board after 33 years." }
+    ],
+    holdings: [
+      { name: "Splunk", ticker: "SPLK", historicalPrice: null, price: null }
+    ]
+  },
+  {
+    rank: 66,
+    name: "Seraphim Space",
+    sectors: ["Deep Tech", "AI", "Defense Tech"],
+    signatureExit: "Seraphim Space Investment Trust's own IPO on the London Stock Exchange in 2021 — an unusually direct exit for a venture firm, since the growth-stage fund itself went public, alongside nine unicorns and six IPOs across the broader Seraphim portfolio",
+    slug: "seraphim-space",
+    website: "https://seraphim.vc",
+    short: "Seraphim Space",
+    founded: 2016,
+    hq: "London, UK",
+    aum: "$630M+",
+    thesis: "Seraphim Space was founded in 2016 by Mark Boggett, James Bruegger, and Rob Desborough, launching the world's first venture capital fund dedicated exclusively to the commercial space technology sector at a moment satellite technology remained a niche, capital-intensive category most generalist VCs avoided. That singular focus produced a genuinely full-stack platform spanning early-stage venture funds, the Seraphim Space Accelerator (the largest VC-led program in the sector, helping alumni raise more than $830 million), and Seraphim Space Investment Trust, a London Stock Exchange-listed growth-stage vehicle that itself completed an IPO in 2021 — an unusually direct public-market validation for a venture platform. Seraphim has backed more than 145 SpaceTech startups across 33 countries including Spire Global, Arqit, and LeoLabs, with AUM exceeding $630 million and portfolio companies collectively raising more than $12 billion.",
+    leadership: [
+      { name: "Mark Boggett", role: "Co-Founder & CEO", profileSlug: "mark-boggett" },
+      { name: "James Bruegger", role: "Co-Founder & Chief Investment Officer" },
+      { name: "Rob Desborough", role: "Co-Founder & Partner" }
+    ],
+    timeline: [
+      { year: "2016", event: "Mark Boggett, James Bruegger, and Rob Desborough found Seraphim in London, launching the world's first SpaceTech VC fund." },
+      { year: "2021", event: "Seraphim Space Investment Trust completes its IPO on the London Stock Exchange." },
+      { year: "2026", event: "Portfolio and alumni companies have collectively raised more than $12 billion, producing nine unicorns and six IPOs." }
+    ],
+    holdings: [
+      { name: "Spire Global", ticker: "SPIR", historicalPrice: null, price: null },
+      { name: "Arqit", ticker: "ARQQ", historicalPrice: null, price: null }
+    ]
+  },
+  {
+    rank: 56,
+    name: "Anthemis Group",
+    sectors: ["Fintech", "Insurtech"],
+    signatureExit: "Anthemis Digital Acquisitions I Corp's 2021 market debut — an all-female-led fintech SPAC founder Amy Nauiokas led to market, alongside real early-portfolio outcomes at Zoopla and Betterment",
+    slug: "anthemis-group",
+    website: "https://www.anthemis.com",
+    short: "Anthemis Group",
+    founded: 2010,
+    hq: "London, UK",
+    aum: "$1.2B",
+    thesis: "Anthemis Group grew out of Nauiokas Park, a predecessor firm Amy Nauiokas and Sean Park co-founded in 2008 after both left senior roles at Barclays, formally rebranding as Anthemis in the fall of 2010 to catalyze structural change in financial services. Built on three founding principles — authentic collaboration, virtuous cycle outcomes, and diversity and inclusivity — the firm positioned itself as a first-mover investment manager focused exclusively on reinventing financial services for the modern age, years before 'fintech' became a mainstream investment category. That early conviction backed Zoopla, Betterment, Currencycloud, and Seedcamp, and Anthemis has deployed 40% of its capital into companies backed by women or people of color, closing $700 million in new capital in 2021 (split between its ESG-focused SPAC and pre-seed through Series B embedded finance investing) to reach $1.2 billion in AUM.",
+    leadership: [
+      { name: "Amy Nauiokas", role: "Founder & CEO", profileSlug: "amy-nauiokas" },
+      { name: "Sean Park", role: "Founder & CIO" }
+    ],
+    timeline: [
+      { year: "2008", event: "Amy Nauiokas and Sean Park found Nauiokas Park, Anthemis's predecessor firm." },
+      { year: "2010", event: "Nauiokas Park becomes Anthemis Group in the fall." },
+      { year: "2021", event: "Raises $700 million, split between its SPAC and embedded finance investing; Anthemis Digital Acquisitions I Corp completes its market debut in November." },
+      { year: "2023", event: "Undergoes restructuring amid challenging VC market conditions, reducing staff by roughly 28%." }
+    ],
+    holdings: []
+  },
+  {
     rank: 30,
     name: "Oxford Science Enterprises",
     sectors: ["Deep Tech", "Healthcare", "Industrial Tech"],
