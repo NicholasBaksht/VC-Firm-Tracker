@@ -14,13 +14,31 @@
 const REPORT_CONFIGS = {
   'ai-venture-capital': {
     title: 'State of AI Venture Capital',
+    type: 'sector',
     sector: 'AI',
     intro: 'A real, computed snapshot of every firm on this page with AI listed as a sector focus — how many, how much combined capital they manage, and which are the largest by AUM. Not a forecast or an editorial take, just what the tracked data actually shows right now.'
   },
   'healthcare-investors': {
     title: 'Top Healthcare Investors',
+    type: 'sector',
     sector: 'Healthcare',
     intro: 'Every firm on this page investing in healthcare, ranked by real assets under management. Spans everything from dedicated biotech and life sciences funds to generalist firms with a healthcare practice.'
+  },
+  'climate-investing': {
+    title: 'State of Climate Investing',
+    type: 'sector',
+    sector: 'Climate',
+    intro: 'Every firm on this page with a climate or clean-energy investment focus, ranked by real assets under management — from dedicated climate funds to generalist firms with a climate practice.'
+  },
+  'global-vc-landscape': {
+    title: 'Global VC Landscape',
+    type: 'landscape',
+    intro: 'Where the firms tracked on this page are actually headquartered, broken down by region and country. The same real location data that powers the World Map, presented as a ranked breakdown instead.'
+  },
+  'annual-report': {
+    title: 'Annual VC Power Board Report',
+    type: 'annual',
+    intro: 'The full picture: every firm, every sector, every region tracked on this page, combined into one comprehensive snapshot — the same real, computed numbers used everywhere else on the site, brought together in a single report.'
   }
 };
 
