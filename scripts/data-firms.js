@@ -5065,6 +5065,33 @@ const firms = [
   },
   {
     rank: 27,
+    name: "Innovation Endeavors",
+    sectors: ["AI", "Deep Tech", "Climate"],
+    signatureExit: "Blue River Technologies' acquisition by John Deere — one of Dror Berman's earliest and most defining bets, alongside Uber and SoFi both reaching public listings and Astra completing a SPAC merger",
+    slug: "innovation-endeavors",
+    website: "https://www.innovationendeavors.com",
+    short: "Innovation Endeavors",
+    founded: 2010,
+    hq: "Palo Alto, CA",
+    aum: "$1.5B+ (across five funds)",
+    thesis: "Innovation Endeavors was co-founded in 2010 by former Google Chairman and CEO Eric Schmidt and Dror Berman, a former NICE Systems R&D team leader with an MBA from Stanford, building a small, deeply technical early-stage fund investing at the intersection of science and company creation. Berman developed the firm's core 'Super Evolution' thesis — that converging advances in data, computing, and engineering are letting startups re-architect deeply physical industries, from agriculture to space to manufacturing, in years rather than decades — and the firm typically invests $1-15 million, taking active operating roles alongside the companies it backs. That philosophy produced early bets on Uber, SoFi, Planet, Zymergen, Freenome, and Blue River Technologies (later acquired by John Deere), and Innovation Endeavors has invested in 115 companies with 34 exits over 14 years, closing its fifth fund at $630 million in 2024.",
+    leadership: [
+      { name: "Eric Schmidt", role: "Co-Founder & Non-Managing Member" },
+      { name: "Dror Berman", role: "Founding Partner", profileSlug: "dror-berman" },
+      { name: "Scott Brady", role: "Partner" }
+    ],
+    timeline: [
+      { year: "2010", event: "Eric Schmidt, Dror Berman, Scott Brady, and Rick Scanlon found Innovation Endeavors in Palo Alto." },
+      { year: "2019", event: "Launches Innovation Endeavors III, a $333 million fund, formalizing the 'Super Evolution' thesis." },
+      { year: "2021", event: "Portfolio company Astra completes a SPAC merger." },
+      { year: "2024", event: "Closes Fund V at $630 million; reports 115 total investments and 34 exits over 14 years." }
+    ],
+    holdings: [
+      { name: "SoFi", ticker: "SOFI", historicalPrice: null, price: null }
+    ]
+  },
+  {
+    rank: 27,
     name: "Earlybird Venture Capital",
     sectors: ["Fintech", "Deep Tech", "Healthcare", "Consumer", "Industrial Tech"],
     signatureExit: "TeamViewer's 2019 IPO and Delivery Hero's 2017 IPO — two of Earlybird's clearest public-market outcomes; Babylon Health also completed a roughly $4.2 billion SPAC merger in 2021, though the company later collapsed into administration in 2023",
