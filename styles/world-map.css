@@ -1,0 +1,160 @@
+/* ============================================================
+   WORLD-MAP.CSS
+   The World Map page: stats bar, dot-grid canvas with sized pins,
+   region breakdown sidebar, and the clicked-pin firm list below.
+   ============================================================ */
+
+.worldmap-intro {
+  max-width: 640px;
+  margin-bottom: 20px;
+}
+.worldmap-intro p {
+  font-size: 15px;
+  line-height: 1.6;
+  color: var(--ink-dim);
+}
+
+.worldmap-stats {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+  gap: 12px;
+  margin-bottom: 24px;
+}
+.worldmap-stat {
+  background: var(--surface);
+  border: 1px solid var(--hairline);
+  border-radius: 6px;
+  padding: 14px 18px;
+  display: flex;
+  flex-direction: column;
+}
+.worldmap-stat-num {
+  font-family: var(--mono);
+  font-size: 22px;
+  font-weight: 600;
+  color: var(--gold);
+}
+.worldmap-stat-label {
+  font-size: 12px;
+  color: var(--ink-dim);
+  margin-top: 2px;
+}
+
+.worldmap-layout {
+  display: grid;
+  grid-template-columns: 3fr 1fr;
+  gap: 20px;
+  margin-bottom: 20px;
+}
+@media (max-width: 900px) {
+  .worldmap-layout {
+    grid-template-columns: 1fr;
+  }
+}
+
+.worldmap-canvas-wrap {
+  background: var(--surface);
+  border: 1px solid var(--hairline);
+  border-radius: 8px;
+  padding: 12px;
+}
+.worldmap-canvas {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+.worldmap-grid-dot {
+  fill: var(--hairline);
+}
+.worldmap-pin {
+  cursor: pointer;
+}
+.worldmap-pin-circle {
+  fill: var(--gold);
+  fill-opacity: 0.25;
+  stroke: var(--gold);
+  stroke-width: 0.15;
+  transition: fill-opacity 0.15s ease;
+}
+.worldmap-pin:hover .worldmap-pin-circle {
+  fill-opacity: 0.45;
+}
+.worldmap-pin-label {
+  font-family: var(--mono);
+  fill: var(--ink);
+  pointer-events: none;
+}
+
+.worldmap-sidebar {
+  background: var(--surface);
+  border: 1px solid var(--hairline);
+  border-radius: 8px;
+  padding: 16px 18px;
+  height: fit-content;
+}
+.worldmap-sidebar-label {
+  font-family: var(--mono);
+  font-size: 11px;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--gold);
+  margin-bottom: 12px;
+}
+.worldmap-region-row {
+  display: flex;
+  justify-content: space-between;
+  font-size: 13.5px;
+  padding: 7px 0;
+  border-bottom: 1px solid var(--hairline);
+}
+.worldmap-region-row:last-child {
+  border-bottom: none;
+}
+.worldmap-region-count {
+  font-family: var(--mono);
+  color: var(--ink-dim);
+}
+
+.worldmap-selection-empty {
+  color: var(--ink-dim);
+  font-style: italic;
+  padding: 20px 0;
+}
+.worldmap-selection-label {
+  font-family: var(--mono);
+  font-size: 11px;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--gold);
+  margin: 8px 0 14px;
+}
+.worldmap-selection-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  gap: 12px;
+}
+.worldmap-firm-card {
+  display: block;
+  background: var(--surface);
+  border: 1px solid var(--hairline);
+  border-radius: 6px;
+  padding: 14px 16px;
+  text-decoration: none;
+  transition: border-color 0.2s ease, transform 0.2s ease;
+}
+.worldmap-firm-card:hover {
+  border-color: var(--gold);
+  transform: translateY(-2px);
+}
+.worldmap-firm-name {
+  font-family: var(--sans);
+  font-weight: 600;
+  font-size: 14.5px;
+  color: var(--ink);
+}
+.worldmap-firm-aum {
+  font-family: var(--mono);
+  font-size: 11px;
+  color: var(--ink-dim);
+  margin-top: 3px;
+}
