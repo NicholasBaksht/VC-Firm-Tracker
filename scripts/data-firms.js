@@ -5193,6 +5193,36 @@ const firms = [
       { name: "Xiaomi", ticker: "1810.HK", historicalPrice: null, price: null }
     ]
   },
+  {
+    rank: 17,
+    name: "Legend Capital",
+    sectors: ["Enterprise Software", "Healthcare", "Consumer", "AI"],
+    signatureExit: "No single named signature exit — Legend Capital's track record spans more than 70 exits across 600-plus portfolio companies, including public listings for Meituan, NIO, ZTO Express, and CATL",
+    slug: "legend-capital",
+    website: "https://www.legendcapitalco.com",
+    short: "Legend Capital",
+    founded: 2001,
+    hq: "Beijing, China",
+    aum: "$10B+ (across USD and RMB funds)",
+    thesis: "Legend Capital was founded in April 2001 as the venture capital arm of Legend Holdings, the diversified conglomerate that also built Lenovo Group into a global technology company, launching with a $35 million debut fund. That heritage gives Legend Capital a genuinely rare structural advantage among China-focused venture firms: decades-deep relationships with entrepreneurs, government officials, and co-investors built through Legend Holdings' broader industrial operations spanning real estate, financial services, and agriculture, alongside patient, long-horizon capital rare among typical VC funds. The firm has grown into one of China's most established early and growth-stage investors, backing more than 600 companies across technology, healthcare, and consumer sectors, including Meituan, NIO, ZTO Express, and CATL, with more than $10 billion in committed capital across USD and RMB-denominated funds and offices spanning Beijing, Shanghai, Shenzhen, Hong Kong, Seoul, and Singapore.",
+    leadership: [
+      { name: "Richard Li", role: "President", profileSlug: "richard-li-legend" },
+      { name: "Linan Zhu", role: "Chairman" },
+      { name: "Hank Zhou", role: "Co-Chief Investment Officer" }
+    ],
+    timeline: [
+      { year: "2001", event: "Legend Holdings founds Legend Capital in April, with a $35 million debut fund." },
+      { year: "2012", event: "Rebrands to 'Junlian' (君联资本) in Chinese." },
+      { year: "2018", event: "Meituan completes its Hong Kong IPO." },
+      { year: "2023", event: "President Richard Li ranks in the top four on the Forbes China Venture Capital 100 list." },
+      { year: "2024", event: "Portfolio companies Aidite, Yonz Technology, and Qunabox Group all complete public listings." }
+    ],
+    holdings: [
+      { name: "Meituan", ticker: "3690.HK", historicalPrice: null, price: null },
+      { name: "NIO", ticker: "NIO", historicalPrice: null, price: null },
+      { name: "ZTO Express", ticker: "ZTO", historicalPrice: null, price: null }
+    ]
+  },
    {
     rank: 84,
     name: "Gradient Ventures",
