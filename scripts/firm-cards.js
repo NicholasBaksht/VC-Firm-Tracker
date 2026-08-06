@@ -82,7 +82,7 @@ document.addEventListener('input', (e) => {
     buildTicker();
   }
 
-  if (e.target.classList.contains('compare-checkbox')) {
+if (e.target.classList.contains('compare-checkbox')) {
     const slug = e.target.dataset.slug;
     if (e.target.checked) {
       if (compareSet.size >= 3) {
@@ -96,4 +96,19 @@ document.addEventListener('input', (e) => {
     }
  renderCompareBar();
   }
+
+  if (e.target.classList.contains('compare-partner-checkbox')) {
+    const slug = e.target.dataset.slug;
+    if (e.target.checked) {
+      if (comparePartnerSet.size >= 3) {
+        e.target.checked = false;
+        return;
+      }
+      comparePartnerSet.add(slug);
+    } else {
+      comparePartnerSet.delete(slug);
+    }
+    renderComparePartnersBar();
+  }
 });
+
