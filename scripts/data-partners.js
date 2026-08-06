@@ -251,7 +251,268 @@ const partnerProfiles = {
       { label: "Wikipedia — Hustle Fund", url: "https://en.wikipedia.org/wiki/Hustle_Fund" }
     ]
   },
+"hjalmar-winbladh": {
+    name: "Hjalmar Winbladh",
+    firm: "EQT Ventures",
+    firmSlug: "eqt-ventures",
+    title: "Founding Partner (2016-2020)",
+    joinedYear: 2016,
+    education: ["Stockholm University"],
+    previousExperience: [
+      "Founder, Sendit (described as the world's first mobile internet company, acquired by Microsoft in 1999)",
+      "Founder, Rebtel",
+      "Founder, Wrapp",
+      "Serial founder of seven companies"
+    ],
+    investmentFocus: ["Marketplaces", "Consumer Internet", "AI"],
+    notableInvestments: [
+      { name: "Wolt", ticker: null },
+      { name: "Small Giant Games", ticker: null }
+    ],
+    boardSeats: ["Wolt (former)", "Banking Circle (former)", "Peltarion (former)"],
+    ipoCount: 0,
+    majorExits: 3,
+    careerTimeline: [
+      { year: "1999", event: "Sendit, a mobile internet company he founded, is acquired by Microsoft." },
+      { year: "2016", event: "Joins EQT to help establish its venture capital arm, EQT Ventures, at a time Europe's venture ecosystem was still dwarfed by the US." },
+      { year: "2016", event: "Leads EQT Ventures' investment in Wolt, backing founder Miki Kuusi's combination of grit, product focus, and operational discipline." },
+      { year: "2020", event: "Leaves EQT Ventures in July after nearly a decade with the firm, remaining on the boards of Wolt, Banking Circle, and Peltarion." },
+      { year: "2021", event: "Wolt is acquired by DoorDash for $8.1 billion, delivering a reported 200x multiple on EQT Ventures' original 2016 investment." }
+    ],
+    biography: "Hjalmar Winbladh is a seven-time Swedish entrepreneur, having built and managed global technology companies including Sendit — described as the world's first mobile internet company — before Microsoft acquired it in 1999. He joined EQT in 2016 to help establish its venture arm at a moment Europe's venture capital ecosystem remained far smaller than Silicon Valley's, and personally led EQT Ventures' early investment in Wolt, recognizing founder Miki Kuusi's rare combination of grit and product discipline. That conviction paid off spectacularly: Sifted reported DoorDash's $8.1 billion acquisition of Wolt in 2021 delivered a roughly 200x return multiple on EQT Ventures' original stake. Winbladh left EQT Ventures in 2020 to return to his entrepreneurial roots, remaining on the boards of several former portfolio companies.",
+    sources: [
+      { label: "TechCrunch", url: "https://techcrunch.com/2020/07/09/founding-partner-hjalmar-winbladh-is-leaving-eqt-ventures/" },
+      { label: "Wikipedia — EQT Ventures", url: "https://en.wikipedia.org/wiki/EQT_Ventures" }
+    ]
+  },
 
+  "ed-bussey": {
+    name: "Ed Bussey",
+    firm: "Oxford Science Enterprises",
+    firmSlug: "oxford-science-enterprises",
+    title: "Chief Executive Officer",
+    joinedYear: 2023,
+    education: ["BA, Natural Sciences, Emmanuel College, University of Cambridge"],
+    previousExperience: [
+      "Officer, Royal Navy",
+      "National Security Roles, UK Diplomatic Service",
+      "Founder & Global Marketing Director, figleaves.com (2000, named UK Internet Retailer of the Year 2004, sold to N Brown Plc, 2010)",
+      "Founder & CEO, Quill (multi-language e-commerce content platform, sold to Jellyfish, 2020)"
+    ],
+    investmentFocus: ["Deep Tech Commercialization", "Biotech", "Advanced Materials"],
+    notableInvestments: [],
+    boardSeats: [],
+    ipoCount: 0,
+    majorExits: 0,
+    careerTimeline: [
+      { year: "1987", event: "Begins studying Natural Sciences at Emmanuel College, Cambridge, then serves in the Royal Navy and the UK Diplomatic Service in national security roles." },
+      { year: "2000", event: "Founds figleaves.com, later named UK Internet Retailer of the Year in 2004, growing it to more than a million customers across 66 countries before its 2010 sale to N Brown Plc." },
+      { year: "2010s", event: "Founds Quill, a multi-language e-commerce content platform for partners including Google and eBay, selling it to Jellyfish in 2020 after a decade of building." },
+      { year: "2023", event: "Appointed CEO of Oxford Science Enterprises in September, alongside Jack Edmondson as the newly created CIO." }
+    ],
+    biography: "Ed Bussey began his career in the Royal Navy and UK national security roles before becoming a genuine three-time successful founder — figleaves.com, named UK Internet Retailer of the Year in 2004 and sold to N Brown Plc in 2010, and Quill, a multi-language e-commerce content platform he built over a decade before selling to Jellyfish in 2020. That operating track record, plus his Cambridge Natural Sciences background, led Oxford Science Enterprises to appoint him CEO in September 2023, alongside Jack Edmondson as the firm's newly created Chief Investment Officer, following a period of leadership turnover in the fund's early years. Bussey now leads OSE's endowment-style, evergreen investment model, translating University of Oxford scientific research into transformational companies across a portfolio of more than 125 spinouts with a combined value exceeding £1.1 billion.",
+    sources: [
+      { label: "Wikipedia — Ed Bussey", url: "https://en.wikipedia.org/wiki/Ed_Bussey" },
+      { label: "GlobeNewswire — CEO Appointment", url: "https://www.globenewswire.com/news-release/2023/08/31/2734925/0/en/Oxford-Science-Enterprises-Appoints-Ed-Bussey-as-Chief-Executive-Officer.html" }
+    ]
+  },
+
+  "eric-collins": {
+    name: "Eric D. Collins",
+    firm: "Impact X Capital",
+    firmSlug: "impact-x-capital",
+    title: "Co-Founder & CEO",
+    joinedYear: 2018,
+    education: ["Harvard Law School"],
+    previousExperience: [
+      "Executive, Tegic (AOL subsidiary)",
+      "Executive, Nuance Communications / Microsoft",
+      "COO, Mobile Posse / Digital Turbine (2010-2013)",
+      "Chief Revenue & Distribution Officer, SwiftKey / Microsoft (2014-2016)",
+      "COO, Touch Surgery / Medtronic (2016-2018)"
+    ],
+    investmentFocus: ["Fintech", "Consumer", "ESG", "Diversity"],
+    notableInvestments: [],
+    boardSeats: [],
+    ipoCount: 0,
+    majorExits: 0,
+    careerTimeline: [
+      { year: "2002", event: "Enters the tech industry, beginning roles at Tegic (an AOL subsidiary) and later Nuance Communications." },
+      { year: "2014", event: "Becomes Chief Revenue and Distribution Officer at SwiftKey, a predictive text firm later acquired by Microsoft, a role that brings him to London." },
+      { year: "2016", event: "Becomes COO of Touch Surgery, later acquired by Medtronic." },
+      { year: "2018", event: "Co-founds Impact X Capital Partners with Paula Groves and other Black European and US entrepreneurs and investors, backed by founding members including Ursula Burns and Lenny Henry." },
+      { year: "2024", event: "Impact X announces a £100 million target for its second fund, IX Global I, backed by Bank of America and the Visa Foundation." }
+    ],
+    biography: "Eric D. Collins built a two-decade technology career spanning Tegic, Nuance Communications, Mobile Posse, SwiftKey, and Touch Surgery, holding COO and Chief Revenue Officer roles before co-founding Impact X Capital with Paula Groves in 2018. Motivated by the statistic that less than 1% of venture funding reaches Black entrepreneurs and less than 4% reaches women-led teams, Collins built Impact X as a genuinely double-bottom-line fund — pursuing both financial returns and structural change — backing underrepresented founders in fintech, healthtech, and creative media across the UK, Europe, and the US. He served on President Obama's Small Business Administration Council on Underserved Communities, authored the book 'We Don't Need Permission: How Black Business Can Change Our World,' and continues to lead Impact X as CEO while championing minority entrepreneurship across transatlantic networks.",
+    sources: [
+      { label: "Wikipedia — Eric Collins (investor)", url: "https://en.wikipedia.org/wiki/Eric_Collins_(investor)" },
+      { label: "Wikipedia — Impact X", url: "https://en.wikipedia.org/wiki/Impact_X" }
+    ]
+  },
+
+  "amir-gal-or": {
+    name: "Amir Gal-Or",
+    firm: "Infinity Group",
+    firmSlug: "infinity-group",
+    title: "Co-Founder & Managing Partner",
+    joinedYear: 1993,
+    education: ["MBA, Tel Aviv University", "Venture Capital & Private Equity Investments Program, Harvard University"],
+    previousExperience: [
+      "Pilot, Israeli Air Force (including its acrobatic team)",
+      "Founder, TAN (high-grade refractory ceramic oxides)",
+      "Co-Founder, joint venture with Paz Oil Company",
+      "CEO, Israel's Entrepreneurship Development Center (investment arm of the Ministry of Economy)"
+    ],
+    investmentFocus: ["Cybersecurity", "IT", "Healthcare"],
+    notableInvestments: [
+      { name: "Shellcase", ticker: null },
+      { name: "Nanomotion", ticker: null }
+    ],
+    boardSeats: [],
+    ipoCount: 10,
+    majorExits: 75,
+    careerTimeline: [
+      { year: "1993", event: "Co-founds Infinity Group in Tel Aviv." },
+      { year: "2004", event: "Establishes CSVC, the first onshore limited partnership venture capital fund in China, pioneering Israel-China cross-border investing." },
+      { year: "2006", event: "Launches a $300 million China-focused fund." },
+      { year: "2010", event: "Awarded France's Chevalier of the Legion of Honor." },
+      { year: "2017", event: "Awarded the Chinese Government's Friendship Award for contributions to China-Israel business relations." }
+    ],
+    biography: "Amir Gal-Or served as a pilot in the Israeli Air Force's acrobatic team before founding a ceramics company and a joint venture with Paz Oil Company, then leading Israel's Entrepreneurship Development Center within the Ministry of Economy. He co-founded Infinity Group in 1993, and pioneered Israel-China venture investing in 2004 by establishing CSVC, the first onshore limited partnership venture fund in China — a genuinely first-mover position that predates nearly all Western institutional interest in Chinese venture capital. That two-decade head start produced real exits including Shellcase's sale to Tessera and Nanomotion's sale to Johnson Electric, and Gal-Or has grown Infinity into a $2 billion cross-border platform with 250-plus investments and 75 exits, earning France's Legion of Honor and China's Government Friendship Award for his role in Sino-Israeli business relations.",
+    sources: [
+      { label: "Wikipedia — Amir Gal-Or", url: "https://en.wikipedia.org/wiki/Amir_Gal-Or" },
+      { label: "World Economic Forum", url: "https://www.weforum.org/people/amir-gal-or/" }
+    ]
+  },
+
+  "james-tan": {
+    name: "James Tan",
+    firm: "Quest Ventures",
+    firmSlug: "quest-ventures",
+    title: "Co-Founder & Managing Partner",
+    joinedYear: 2011,
+    education: ["MBA, Harvard Business School"],
+    previousExperience: [
+      "Partner, Accel Kuala Lumpur",
+      "Co-Founder, 55tuan (NASDAQ-listed)"
+    ],
+    investmentFocus: ["Marketplaces", "E-commerce", "Fintech"],
+    notableInvestments: [
+      { name: "Carousell", ticker: null },
+      { name: "ShopBack", ticker: null },
+      { name: "99.co", ticker: null }
+    ],
+    boardSeats: [],
+    ipoCount: 1,
+    majorExits: 2,
+    careerTimeline: [
+      { year: "2000s", event: "Co-founds 55tuan, a group-buying platform that lists on NASDAQ, alongside future Quest co-founder Wang Yunming." },
+      { year: "2011", event: "Co-founds Quest Ventures (originally QuestVC) with Wang Yunming in Beijing." },
+      { year: "2013", event: "Leads Quest's Series A investment in Carousell." },
+      { year: "2015", event: "Leads Quest's investment in ShopBack." }
+    ],
+    biography: "James Tan co-founded 55tuan, a NASDAQ-listed group-buying platform, before turning to venture capital and co-founding Quest Ventures in 2011 with fellow 55tuan co-founder Wang Yunming, initially based in Beijing before expanding across Southeast Asia. Tan personally led Quest's early Series A investment in Carousell, a Craigslist-style marketplace, helping scale it from a seed-stage app to a unicorn valuation, and has been described by Vulcan Post as an investor with the 'Midas touch' for his track record spotting regional marketplace winners. Under his leadership, Quest has become one of Southeast Asia's most active early-stage investors, with a portfolio spanning Carousell, ShopBack, and 99.co, positioning itself as the first institutional investor in many of the region's category-defining digital commerce platforms.",
+    sources: [
+      { label: "Wikipedia — Quest Ventures", url: "https://en.wikipedia.org/wiki/Quest_Ventures" }
+    ]
+  },
+
+  "feng-deng": {
+    name: "Feng Deng",
+    firm: "Northern Light Venture Capital",
+    firmSlug: "northern-light-venture-capital",
+    title: "Co-Founder & Managing Partner",
+    joinedYear: 2005,
+    education: ["BS & MS, Electrical Engineering, Tsinghua University", "MS, Computer Engineering, University of Southern California", "MBA, The Wharton School, University of Pennsylvania"],
+    previousExperience: [
+      "Co-Founder, NetScreen Technologies (IPO'd on NASDAQ in 2001, acquired by Juniper Networks for $4.2B in 2004)"
+    ],
+    investmentFocus: ["Enterprise SaaS", "Healthcare IT", "TMT", "Consumer"],
+    notableInvestments: [
+      { name: "Meituan", ticker: "3690.HK" },
+      { name: "Aerohive Networks", ticker: null },
+      { name: "GigaDevice", ticker: null }
+    ],
+    boardSeats: [],
+    ipoCount: 15,
+    majorExits: 23,
+    careerTimeline: [
+      { year: "1990s", event: "Co-founds NetScreen Technologies, an enterprise IT security company." },
+      { year: "2001", event: "Leads NetScreen's IPO on NASDAQ." },
+      { year: "2004", event: "NetScreen is acquired by Juniper Networks for $4.2 billion." },
+      { year: "2005", event: "Co-founds Northern Light Venture Capital with Yan Ke and Jeffrey Lee on January 1." },
+      { year: "2018", event: "Meituan, an early Northern Light bet, completes its Hong Kong IPO." }
+    ],
+    biography: "Feng Deng holds a genuinely rare combination of degrees — dual Tsinghua engineering degrees, a USC master's in computer engineering, and a Wharton MBA — that he applied first as co-founder of NetScreen Technologies, an enterprise security company that completed a NASDAQ IPO in 2001 before Juniper Networks acquired it for $4.2 billion in 2004. He used those proceeds and that operating credibility to co-found Northern Light Venture Capital in 2005 with fellow NetScreen co-founder Yan Ke and Jeffrey Lee, building a cross-border US-China fund that has backed nearly 200 companies, including Meituan, Aerohive Networks, GigaDevice, and Tencent Music. Deng was named Ernst & Young Entrepreneur of the Year in 2002 and CRN Innovator of the Year in 2003, and Northern Light now manages more than $4.5 billion across US-dollar and RMB-denominated funds.",
+    sources: [
+      { label: "Wikipedia — Northern Light Venture Capital", url: "https://en.wikipedia.org/wiki/Northern_Light_Venture_Capital" },
+      { label: "NLVC — Feng Deng", url: "https://www3.nlvc.com/en/team/feng-deng" }
+    ]
+  },
+
+  "yi-cao": {
+    name: "Yi Cao",
+    firm: "Source Code Capital",
+    firmSlug: "source-code-capital",
+    title: "Founder & Managing Partner",
+    joinedYear: 2014,
+    education: ["Computer Science, Tsinghua University"],
+    previousExperience: [
+      "Vice President, Sequoia Capital China"
+    ],
+    investmentFocus: ["AI", "Robotics", "Internet & Consumer", "Healthcare"],
+    notableInvestments: [
+      { name: "ByteDance", ticker: null },
+      { name: "Meituan", ticker: "3690.HK" },
+      { name: "Li Auto", ticker: "LI" }
+    ],
+    boardSeats: [],
+    ipoCount: 6,
+    majorExits: 10,
+    careerTimeline: [
+      { year: "2010s", event: "Works as a Vice President at Sequoia Capital China, gaining early access to China's technology investing ecosystem." },
+      { year: "2014", event: "Founds Source Code Capital in Beijing in the spring, making an early bet on ByteDance." },
+      { year: "2016", event: "Launches 'Code Brain,' a monthly gathering connecting entrepreneurs to improve knowledge sharing and decision-making." },
+      { year: "2018", event: "Meituan completes its Hong Kong IPO." },
+      { year: "2019", event: "Named to the Forbes Midas List in April." }
+    ],
+    biography: "Yi Cao studied computer science at Tsinghua University and worked as a Vice President at Sequoia Capital China before founding Source Code Capital in the spring of 2014, betting early on what became one of the most consequential Chinese technology investments of the decade: ByteDance, the parent company of TikTok. Cao built Source Code around a specific 'Big 3' investment thesis — Internet+, AI+, and Global+ — and a founder-first support model including the Code Class entrepreneur community and Code Brain knowledge-sharing sessions, backing more than 300 companies including Meituan, KE Holdings, Li Auto, and RELX Technology. He has been repeatedly named to the Forbes Midas List, and Source Code now manages approximately $7 billion across dual-currency funds.",
+    sources: [
+      { label: "Wikipedia — Source Code Capital", url: "https://en.wikipedia.org/wiki/Source_Code_Capital" },
+      { label: "Source Code Capital — About", url: "https://sourcecodecap.com/about-en/" }
+    ]
+  },
+
+  "yh-do": {
+    name: "Y.H. Do",
+    firm: "STIC Investments",
+    firmSlug: "stic-investments",
+    title: "Founder & Chairman",
+    joinedYear: 1999,
+    education: ["MBA, KAIST"],
+    previousExperience: [
+      "Telecom Executive, SK Telecom"
+    ],
+    investmentFocus: ["ICT", "Healthcare", "Materials"],
+    notableInvestments: [
+      { name: "Jeil Hydraulics", ticker: null },
+      { name: "Golfzon", ticker: null }
+    ],
+    boardSeats: [],
+    ipoCount: 0,
+    majorExits: 3,
+    careerTimeline: [
+      { year: "1990s", event: "Builds a career as a telecom executive at SK Telecom before moving into private investing." },
+      { year: "1999", event: "Founds STIC (originally SoftBank Telecom Investment Company) in Seoul in July." },
+      { year: "2012", event: "Sells Jeil Hydraulics, in which STIC held a 21% stake, to Eaton Corporation for approximately $29 million." },
+      { year: "2014", event: "Rebrands from STIC Partners to STIC Investments, moving to an open-funds model." },
+      { year: "2024", event: "STIC surpasses KRW 7.9 trillion (approximately $6.7 billion) in assets under management." }
+    ],
+    biography: "Y.H. Do built his early career as a telecom executive at SK Telecom before founding STIC in Seoul in 1999, originally as SoftBank Telecom Investment Company, growing it into one of South Korea's largest private equity and growth investment platforms. Under Do's leadership, STIC has combined late-stage growth equity and structured financing across ICT, healthcare, and materials, backing real outcomes including the sale of Jeil Hydraulics to Eaton Corporation and an exit from Golfzon, while also managing public REIT and CIM funds. The firm rebranded from STIC Partners to STIC Investments in 2014, reflecting a shift toward an open-funds model, and now manages approximately KRW 7.9 trillion (roughly $6.7 billion) across seven offices spanning Seoul, Busan, Hong Kong, Ho Chi Minh City, Shanghai, and Taipei.",
+    sources: [
+      { label: "Wikipedia — STIC Investments", url: "https://en.wikipedia.org/wiki/STIC_Investments" }
+    ]
+  },
   "eric-bahn": {
     name: "Eric Bahn",
     firm: "Hustle Fund",
