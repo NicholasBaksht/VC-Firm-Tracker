@@ -364,30 +364,6 @@ const firms = [
     ]
   },
   {
-    rank: 44,
-    name: "Generation Investment Management",
-    sectors: ["Climate", "Consumer", "Healthcare"],
-    signatureExit: "No traditional VC-style exit — Generation operates primarily as a public and private sustainable equity manager rather than an early-stage venture fund, with Just Climate (launched 2021) as its most direct climate-specific investment vehicle",
-    slug: "generation-investment-management",
-    website: "https://www.generationim.com",
-    short: "Generation Investment Management",
-    founded: 2004,
-    hq: "London, UK",
-    aum: "Not publicly disclosed",
-    thesis: "Generation Investment Management was founded in April 2004 by former US Vice President Al Gore and former Goldman Sachs Asset Management CEO David Blood, alongside five other founding partners, built on a specific and at-the-time genuinely contrarian thesis: that integrating rigorous sustainability research into fundamental equity analysis would drive superior long-term investment returns, not sacrifice them for social good. That conviction predated the current ESG investing boom by nearly two decades, and Generation has built a global research platform spanning public and private equity strategies worldwide, with an explicit mission to make sustainable capitalism the enduring economic model rather than a niche category. In 2021 the firm launched Just Climate, a dedicated climate-focused investment business extending that original thesis into a standalone platform aimed specifically at decarbonization at scale.",
-    leadership: [
-      { name: "Al Gore", role: "Chairman", profileSlug: "al-gore-david-blood" },
-      { name: "David Blood", role: "Senior Partner" },
-      { name: "Colin le Duc", role: "Founding Partner" }
-    ],
-    timeline: [
-      { year: "2001", event: "Al Gore begins developing the thesis behind Generation Investment Management." },
-      { year: "2004", event: "Al Gore and David Blood found Generation Investment Management in London in April." },
-      { year: "2021", event: "Launches Just Climate, a dedicated climate investment business." }
-    ],
-    holdings: []
-  },
-  {
     rank: 21,
     name: "Gaorong Capital",
     sectors: ["Consumer", "Enterprise Software", "Healthcare"],
