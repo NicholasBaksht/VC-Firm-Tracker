@@ -300,7 +300,10 @@ const firmStages = {
       "innovation-endeavors": ["Seed", "Series A", "Series B"],
       "draper-associates": ["Seed", "Series A"],
       "bdc-capital": ["Seed", "Series A", "Series B", "Growth", "Late Stage"],
-      "vision-knight-capital": ["Series A", "Series B", "Series C", "Growth"]
+      "vision-knight-capital": ["Series A", "Series B", "Series C", "Growth"],
+   "threshold-ventures": ["Seed", "Series A", "Series B"],
+      "warburg-pincus": ["Growth", "Late Stage"],
+      "paradigm": ["Seed", "Series A", "Series B", "Growth", "Late Stage"]
 };
 
 // ============================================================
