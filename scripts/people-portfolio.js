@@ -201,10 +201,11 @@ function renderCompanyProfile(companySlug) {
     <div class="company-detail-header">
       <div>
         <span class="company-detail-name">${company.name}</span>
-        <span class="company-detail-ticker">${h.ticker}</span>
-      </div>
-      <div class="company-detail-price-block">
+     <div class="company-detail-price-block">
         <div class="company-detail-price">${priceHTML}</div>
+        ${returnHTML}
+        <a href="https://finance.yahoo.com/quote/${h.ticker}" target="_blank" rel="noopener noreferrer" class="company-detail-yahoo-link">View on Yahoo Finance →</a>
+      </div>
         ${returnHTML}
       </div>
     </div>
