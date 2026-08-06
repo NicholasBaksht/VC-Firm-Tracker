@@ -197,7 +197,130 @@ const partnerProfiles = {
       { label: "citybiz", url: "https://www.citybiz.co/article/841330/deviation-capital-launches-with-2-billion-aum-after-spinout-from-two-sigma-ventures/" }
     ]
   },
+"adeyemi-ajao": {
+    name: "Adeyemi 'Ade' Ajao",
+    firm: "Base10 Partners",
+    firmSlug: "base10-partners",
+    title: "Co-Founder & Managing Partner",
+    joinedYear: 2017,
+    education: [],
+    previousExperience: [
+      "Co-Founder, Tuenti (Spanish social media company, founded in college, acquired by Telefónica for $100 million)",
+      "Founder, Jobandtalent",
+      "Founder, Identified",
+      "Founder, Cabify",
+      "VP of Technology Product Strategy, Workday"
+    ],
+    investmentFocus: ["Automation", "AI", "Fintech", "Real Economy Infrastructure"],
+    notableInvestments: [
+      { name: "Notion", ticker: null },
+      { name: "Figma", ticker: null },
+      { name: "Nubank", ticker: "NU" }
+    ],
+    boardSeats: ["Motive"],
+    ipoCount: 1,
+    majorExits: 2,
+    careerTimeline: [
+      { year: "2000s", event: "Co-founds Tuenti, a Spanish social media company, while still in college, later sold to Telefónica for $100 million." },
+      { year: "2010s", event: "Founds Jobandtalent, Identified, and Cabify, then becomes VP of Technology Product Strategy at Workday." },
+      { year: "2017", event: "Co-founds Base10 Partners with TJ Nahigian in San Francisco." },
+      { year: "2026", event: "Closes $850 million for Base10's latest fund, pushing AUM to $2.6 billion, and joins the board of Motive." }
+    ],
+    biography: "Adeyemi 'Ade' Ajao, who has African, European, and Latin roots and was raised in Spain and Nigeria, built a genuinely rare multi-country founder track record before turning to venture capital — co-founding Tuenti while in college (sold to Telefónica for $100 million), then Jobandtalent, Identified, and Cabify, before joining Workday as VP of Technology Product Strategy. He co-founded Base10 Partners in 2017 with TJ Nahigian, building what Forbes has recognized as the world's largest Black-led VC firm, with an original thesis the two originally called 'Applied AI for the Real Economy' — a term LPs initially dismissed as too niche until AI became mainstream. Base10 commits up to 50% of its carried interest to fund student scholarships at Historically Black Colleges and Universities through its Advancement Initiative, and has grown to $2.6 billion in AUM, backing Notion, Figma, and Nubank among more than 110 investments.",
+    sources: [
+      { label: "PR Newswire", url: "https://www.prnewswire.com/news-releases/base10-partners-hits-2-6b-aum-closes-850m-to-back-the-next-wave-of-real-economy-ai-302797885.html" },
+      { label: "AfroTech via Yahoo Finance", url: "https://finance.yahoo.com/technology/ai/articles/base10-vc-firm-co-founded-151255672.html" }
+    ]
+  },
 
+  "ben-casnocha": {
+    name: "Ben Casnocha",
+    firm: "Village Global",
+    firmSlug: "village-global",
+    title: "Co-Founder & General Partner",
+    joinedYear: 2017,
+    education: [],
+    previousExperience: [
+      "Founder, Comcate Inc. (e-government technology, founded at age 14)",
+      "Chief of Staff to Reid Hoffman, LinkedIn",
+      "Co-Author, 'The Start-Up of You' (with Reid Hoffman, New York Times bestseller)"
+    ],
+    investmentFocus: ["Fintech", "SaaS", "Consumer", "AI", "Health"],
+    notableInvestments: [],
+    boardSeats: [],
+    ipoCount: 0,
+    majorExits: 9,
+    careerTimeline: [
+      { year: "2002", event: "Founds Comcate Inc., an e-government technology firm, at age 14." },
+      { year: "2012", event: "Co-authors 'The Start-Up of You' with Reid Hoffman, a New York Times bestseller applying startup thinking to individual careers." },
+      { year: "2010s", event: "Serves as Chief of Staff to Reid Hoffman at LinkedIn." },
+      { year: "2017", event: "Co-founds Village Global with Erik Torenberg, Anne Dwane, and Ross Fubini in September, chaired by Reid Hoffman." }
+    ],
+    biography: "Ben Casnocha founded his first company, Comcate Inc., at age 14, and went on to co-author 'The Start-Up of You' with Reid Hoffman, a New York Times bestseller that became foundational reading in Silicon Valley career thinking, before serving as Hoffman's Chief of Staff at LinkedIn. He co-founded Village Global in 2017 with Erik Torenberg, Anne Dwane, and Ross Fubini, building a genuinely network-first venture firm chaired by Hoffman and backed as limited partners by Bill Gates, Jeff Bezos, Mark Zuckerberg, and Anne Wojcicki. Rather than a traditional small partner team making all investment decisions, Village Global distributes deal sourcing and evaluation across a network of more than 400 operator-angels called 'Network Leaders,' writing $500,000 to $3 million pre-seed and seed checks. The firm has backed 233 companies over its history, producing 9 unicorns and 22 acquisitions, and manages more than $500 million in AUM.",
+    sources: [
+      { label: "Wikipedia — Ben Casnocha", url: "https://en.wikipedia.org/wiki/Ben_Casnocha" },
+      { label: "Superscout — Village Global", url: "https://superscout.co/investor/village-global" }
+    ]
+  },
+
+  "arjun-sethi": {
+    name: "Arjun Sethi",
+    firm: "Tribe Capital",
+    firmSlug: "tribe-capital",
+    title: "Co-Founder & General Partner",
+    joinedYear: 2018,
+    education: [],
+    previousExperience: [
+      "Partner, Social Capital"
+    ],
+    investmentFocus: ["Enterprise SaaS", "Fintech", "Crypto", "AI"],
+    notableInvestments: [],
+    boardSeats: [],
+    ipoCount: 0,
+    majorExits: 0,
+    careerTimeline: [
+      { year: "2010s", event: "Works as a Partner at Social Capital alongside future co-founders Jonathan Hsu and Ted Maidenberg." },
+      { year: "2018", event: "Co-founds Tribe Capital in July with Hsu and Maidenberg, all three leaving Social Capital together; makes first investment in sFOX." },
+      { year: "2021", event: "Sponsors a SPAC that goes public on NASDAQ with $240 million in capital." },
+      { year: "2025", event: "Tribe Capital's assets under management reach $1.9 billion." }
+    ],
+    biography: "Arjun Sethi built his early venture career as a Partner at Social Capital before co-founding Tribe Capital in July 2018 with fellow Social Capital alumni Jonathan Hsu and Ted Maidenberg, applying Hsu's data-science background to a genuinely quantitative approach to venture investing. The firm's model blends rigorous data-driven diligence with deep founder relationships, backing enduring companies across enterprise SaaS, fintech, and crypto rather than chasing hype cycles, and Sethi has helped grow Tribe into a firm managing $1.9 billion, including a 2021 SPAC that went public on NASDAQ with $240 million in capital. Tribe's model reflects a broader wave of former Social Capital partners building independent, data-native venture platforms after Chamath Palihapitiya restructured that firm in 2018.",
+    sources: [
+      { label: "Wikipedia — Tribe Capital", url: "https://en.wikipedia.org/wiki/Tribe_Capital" },
+      { label: "Wikipedia — Arjun Sethi", url: "https://en.wikipedia.org/wiki/Arjun_Sethi_(entrepreneur)" }
+    ]
+  },
+
+  "ryan-floyd": {
+    name: "Ryan Floyd",
+    firm: "Storm Ventures",
+    firmSlug: "storm-ventures",
+    title: "Founding Managing Director",
+    joinedYear: 2000,
+    education: ["BS & MS, Earth Systems, Stanford University"],
+    previousExperience: [
+      "Sales, a technology company that IPO'd in the late 1990s and was later acquired in the early 2000s"
+    ],
+    investmentFocus: ["Enterprise Software", "Cloud Infrastructure", "Cybersecurity", "SaaS"],
+    notableInvestments: [
+      { name: "Workato", ticker: null },
+      { name: "Talkdesk", ticker: null },
+      { name: "Pipedrive", ticker: null }
+    ],
+    boardSeats: [],
+    ipoCount: 0,
+    majorExits: 5,
+    careerTimeline: [
+      { year: "1990s", event: "Works in sales at a technology company that completes an IPO in the late 1990s before being acquired in the early 2000s." },
+      { year: "2000", event: "Co-founds Storm Ventures with Tae Hea Nahm and Sanjay Subhedar in Palo Alto, raising its first fund the same year the dot-com bubble began unraveling." },
+      { year: "2020s", event: "Continues leading early-stage B2B enterprise software investments, backing Workato, Talkdesk, and Pipedrive." }
+    ],
+    biography: "Ryan Floyd earned degrees in Earth Systems from Stanford before a sales career at a technology company that went public in the late 1990s and was later acquired, giving him direct exposure to a full startup lifecycle before he ever became an investor. He co-founded Storm Ventures in 2000 with Tae Hea Nahm and Sanjay Subhedar, raising the firm's first fund in the same turbulent year the dot-com bubble began collapsing — timing Floyd has called pure luck, since raising a year later would likely have been far harder. Storm has built a deliberately focused thesis in early-stage B2B enterprise software, SaaS, and cybersecurity ever since, avoiding the insular 'network of friends' funding pattern common among some venture firms in favor of a broader, more assertive sourcing approach, and has made more than 200 investments including Workato, Talkdesk, and Pipedrive over 25 years. Floyd remains active in diversity initiatives in tech, including support for Code2040.",
+    sources: [
+      { label: "Storm Ventures — Ryan Floyd", url: "https://www.stormventures.com/team-members/ryan-floyd" },
+      { label: "Heavybit — Venture Confidential Podcast", url: "https://www.heavybit.com/library/podcasts/venture-confidential/ep-13-the-role-of-the-investor-with-ryan-floyd-of-storm" }
+    ]
+  },
   "ev-williams": {
     name: "Ev Williams",
     firm: "Obvious Ventures",
