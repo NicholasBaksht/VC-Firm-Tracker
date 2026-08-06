@@ -60,6 +60,98 @@ const firms = [
       { name: "Alibaba", ticker: "BABA", historicalPrice: null, price: 115.00 }
     ]
   },
+  {
+    rank: 12,
+    name: "Paradigm",
+    sectors: ["Crypto", "AI", "Deep Tech", "Fintech"],
+    signatureExit: "No traditional Paradigm-portfolio IPO exit — the firm's clearest proof points are Fund III bets Zipline (drone delivery, valued at $7.6 billion) and True Anomaly (space defense, valued at $2.2 billion), both still private and rapidly appreciating",
+    slug: "paradigm",
+    website: "https://paradigm.xyz",
+    short: "Paradigm",
+    founded: 2018,
+    hq: "San Francisco, CA",
+    aum: "$12.7B",
+    thesis: "Paradigm was founded in June 2018 by Matt Huang, a former Sequoia Capital partner, and Fred Ehrsam, co-founder of Coinbase, at the bottom of a brutal crypto bear market when cryptocurrency prices had collapsed and most institutional capital had fled the space. That contrarian timing, backed by an initial $750 million from institutional investors including Harvard, Yale, and Stanford in an open-ended fund with no deadline to return capital, established Paradigm's identity as a genuinely research-driven, engineering-heavy investment firm — the team is, in its own words, 'as likely to ship code as to cut checks.' Under Matt Huang and Managing Partner Alana Palmedo, the firm has expanded well beyond its original crypto mandate into AI and robotics, closing a $1.2 billion Fund III in 2026 to back frontier bets including Zipline and True Anomaly, on top of an earlier $2.5 billion flagship crypto fund (2021, then the largest dedicated crypto fund ever raised) and an $850 million early-stage blockchain fund (2024). Paradigm now manages more than $12.7 billion in assets under management.",
+    leadership: [
+      { name: "Matt Huang", role: "Co-Founder & Managing Partner", profileSlug: "matt-huang" },
+      { name: "Fred Ehrsam", role: "Co-Founder & General Partner" },
+      { name: "Alana Palmedo", role: "Managing Partner", profileSlug: "alana-palmedo" }
+    ],
+    timeline: [
+      { year: "2018", event: "Matt Huang and Fred Ehrsam found Paradigm in San Francisco in June, amid a crypto market downturn." },
+      { year: "2018", event: "Raises $750 million from institutional investors including Harvard, Yale, and Stanford in October." },
+      { year: "2021", event: "Closes a $2.5 billion flagship crypto fund in November, then the largest dedicated crypto fund raised." },
+      { year: "2023", event: "Fred Ehrsam steps back from the managing-partner role in October, remaining a co-founder and general partner." },
+      { year: "2024", event: "Raises an $850 million fund for early-stage blockchain startups." },
+      { year: "2026", event: "Closes a $1.2 billion Fund III in July, formally expanding the firm's mandate into AI and robotics." }
+    ],
+    holdings: [
+      { name: "Coinbase", ticker: "COIN", historicalPrice: null, price: null }
+    ]
+  },
+  {
+    rank: 1,
+    name: "Warburg Pincus",
+    sectors: ["Fintech", "Healthcare", "Industrial Tech", "Consumer"],
+    signatureExit: "Samsara's 2021 NYSE IPO under ticker IOT at a roughly $12 billion market cap — Warburg helped fund the logistics/IoT platform early, alongside CrowdStrike's 2019 IPO which raised approximately $6.6 billion",
+    slug: "warburg-pincus",
+    website: "https://warburgpincus.com",
+    short: "Warburg Pincus",
+    founded: 1966,
+    hq: "New York, NY",
+    aum: "$100B+",
+    thesis: "Warburg Pincus was founded in 1966 by Eric Warburg and Lionel Pincus, merging their respective advisory firms into what became one of the pioneers of institutional growth investing, decades before 'growth equity' existed as a defined category. The firm has since grown into a genuinely global platform with offices across the US, Europe, Brazil, China, Southeast Asia, and India, investing across financial services, healthcare, technology, consumer, industrial tech, and energy through large growth-stage rounds and buyouts rather than early-stage venture bets. More than 140 Warburg Pincus companies have listed on public exchanges, raising approximately $30 billion in public markets across 13 exchanges globally, including CrowdStrike, Dexcom, Avalara, and Samsara, and the firm has invested more than $117 billion across over 1,000 companies since founding. Now in just its third generation of firm leadership in nearly 60 years, Warburg Pincus manages more than $100 billion in assets under management across an active portfolio of 225-plus companies.",
+    leadership: [
+      { name: "Jeffrey Perlman", role: "Chief Executive Officer", profileSlug: "jeffrey-perlman" },
+      { name: "Charles 'Chip' Kaye", role: "Co-Chairman" },
+      { name: "Timothy Geithner", role: "Co-Chairman" },
+      { name: "Max Fowinkel", role: "Managing Director, Head of European Technology & Telecom", profileSlug: "max-fowinkel" }
+    ],
+    timeline: [
+      { year: "1966", event: "Eric Warburg and Lionel Pincus found Warburg Pincus in New York." },
+      { year: "2010", event: "A six-year partnership with MEG Energy culminates in its successful IPO." },
+      { year: "2019", event: "CrowdStrike completes its NASDAQ IPO, raising approximately $6.6 billion." },
+      { year: "2021", event: "Samsara completes its NYSE IPO at a roughly $12 billion market cap; Blue Yonder is acquired by Panasonic for approximately $8.5 billion." },
+      { year: "2024", event: "Jeffrey Perlman becomes CEO in September, succeeding Chip Kaye after his 22-year tenure." }
+    ],
+    holdings: [
+      { name: "CrowdStrike", ticker: "CRWD", historicalPrice: null, price: null },
+      { name: "Dexcom", ticker: "DXCM", historicalPrice: null, price: null },
+      { name: "Avalara", ticker: "AVLR", historicalPrice: null, price: null },
+      { name: "Samsara", ticker: "IOT", historicalPrice: null, price: null }
+    ]
+  },
+  {
+    rank: 33,
+    name: "Threshold Ventures",
+    sectors: ["Enterprise Software", "Fintech", "Healthcare", "Developer Tools"],
+    signatureExit: "Livongo's $18.5 billion acquisition by Teladoc Health in October 2020 — Threshold (then DFJ) backed Livongo in its earlier stages, making this one of the firm's largest realized exits",
+    slug: "threshold-ventures",
+    website: "https://threshold.vc",
+    short: "Threshold Ventures",
+    founded: 2019,
+    hq: "Portola Valley, CA",
+    aum: "$450M (Fund IV + Select Fund, closed May 2022)",
+    thesis: "Threshold Ventures emerged in 2019 when longtime Draper Fisher Jurvetson partners Josh Stein and Emily Melton spun the firm out under a new name, reflecting a specific thesis: back founders at 'threshold moments,' the inflection points when new technologies are poised to take off. That DFJ pedigree carried real institutional memory — Stein led Box's first institutional round and sat on its board through IPO, while Melton built a track record in digital health and consumer mobile, including Redfin and Livongo — and Threshold has continued that focus on enterprise software, developer tools, fintech, and healthcare with a deliberately small, founder-centric team. The firm's philosophy that 'time is our most powerful ingredient' emphasizes hands-on mentorship over capital alone, and Threshold's portfolio spans Box, Redfin, Twilio, Doximity, and Remitly, with $450 million closed across its Fund IV and Select Fund in 2022.",
+    leadership: [
+      { name: "Josh Stein", role: "Co-Founder & Managing Partner", profileSlug: "josh-stein" },
+      { name: "Emily Melton", role: "Co-Founder & Managing Partner", profileSlug: "emily-melton" },
+      { name: "Heidi Roizen", role: "Partner" }
+    ],
+    timeline: [
+      { year: "2004", event: "Josh Stein joins DFJ; Emily Melton joins in 2012 after a stint at Mayfield Fund." },
+      { year: "2019", event: "Stein and Melton rebrand DFJ as Threshold Ventures in July." },
+      { year: "2020", event: "Livongo is acquired by Teladoc Health for $18.5 billion." },
+      { year: "2022", event: "Closes Fund IV and an associated Select Fund at $450 million combined in May." },
+      { year: "2022", event: "Emily Melton is elected Chair of the NVCA board of directors." }
+    ],
+    holdings: [
+      { name: "Box", ticker: "BOX", historicalPrice: null, price: null },
+      { name: "Redfin", ticker: "RDFN", historicalPrice: null, price: null },
+      { name: "Twilio", ticker: "TWLO", historicalPrice: null, price: null },
+      { name: "Doximity", ticker: "DOCS", historicalPrice: null, price: null }
+    ]
+  },
    {
     rank: 1,
     name: "Andreessen Horowitz",
