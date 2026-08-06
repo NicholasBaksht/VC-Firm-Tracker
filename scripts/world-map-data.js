@@ -112,3 +112,18 @@ function classifyRegion(hq) {
   if (h.includes('cayman')) return 'Other';
   return 'North America'; // remaining entries are all US states
 }
+// Extracts a real country name from an HQ string for the stats bar's
+// "Countries" count. Handles US states explicitly since HQ strings
+// store them as ", CA" / ", NY" etc rather than spelling out
+// "United States" - everything else falls back to whatever follows
+// the last comma, which covers the rest of the dataset correctly.
+const US_STATE_SUFFIXES = ['CA', 'NY', 'MA', 'WA', 'IL', 'TX', 'CO', 'CT', 'NJ', 'PA', 'MD', 'VT', 'WY', 'VA', 'DC'];
+function getCountryFromHQ(hq) {
+  if (hq.includes('Cayman')) return 'Cayman Islands';
+  if (hq.includes('Washington, D.C.')) return 'United States';
+  if (US_STATE_SUFFIXES.some(st => hq.endsWith(', ' + st))) return 'United States';
+  if (hq === 'Silicon Valley, CA' || hq === 'San Francisco Bay Area, CA') return 'United States';
+  if (hq === 'Singapore') return 'Singapore';
+  const parts = hq.split(',');
+  return parts[parts.length - 1].trim();
+}
