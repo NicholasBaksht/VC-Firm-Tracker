@@ -117,6 +117,202 @@ const partnerProfiles = {
       { label: "Wikipedia", url: "https://en.wikipedia.org/wiki/Peter_Thiel" }
     ]
   },
+  "josh-stein": {
+    name: "Josh Stein",
+    firm: "Threshold Ventures",
+    firmSlug: "threshold-ventures",
+    title: "Co-Founder & Managing Partner",
+    joinedYear: 2019,
+    education: ["BA, Dartmouth College", "MBA, Stanford Graduate School of Business"],
+    previousExperience: [
+      "VP, Telephia (strategic analysis for the nation's largest wireless carrier)",
+      "Co-Founder & Chief Strategy Officer, ViaFone (NYSE: SY)",
+      "Consultant, Boston Consulting Group",
+      "Product Manager, Microsoft",
+      "Partner, Draper Fisher Jurvetson (2004-2019)"
+    ],
+    investmentFocus: ["Enterprise Software", "Developer Tools", "Fintech", "Healthcare"],
+    notableInvestments: [
+      { name: "Box", ticker: "BOX" },
+      { name: "Twilio", ticker: "TWLO" },
+      { name: "Doximity", ticker: "DOCS" }
+    ],
+    boardSeats: ["LaunchDarkly", "Talkdesk", "Databook", "Sanity"],
+    ipoCount: 4,
+    majorExits: 8,
+    careerTimeline: [
+      { year: "2000", event: "Co-founds ViaFone, a wireless enterprise applications provider, later acquired." },
+      { year: "2004", event: "Joins Draper Fisher Jurvetson (DFJ) as a partner, after earlier roles at Microsoft, BCG, and Telephia." },
+      { year: "2013", event: "Named to the Forbes Midas List." },
+      { year: "2015", event: "Named Deloitte VC of the Year." },
+      { year: "2019", event: "Co-founds Threshold Ventures with Emily Melton, rebranding from DFJ." }
+    ],
+    biography: "Josh Stein built a real operating background as co-founder and Chief Strategy Officer of ViaFone before joining Draper Fisher Jurvetson in 2004, where he spent 15 years backing enterprise and consumer technology companies. He led Box's first institutional investment and sat on its board through its NYSE IPO, and backed Redfin, Twilio, and Doximity in their early rounds. In 2019, Stein and longtime colleague Emily Melton rebranded DFJ as Threshold Ventures, continuing the firm's focus on developer tools, enterprise software, and fintech while emphasizing hands-on founder mentorship over capital alone. He currently holds board seats at LaunchDarkly, Talkdesk, and several other portfolio companies, and was named to the Forbes Midas List and named Deloitte's VC of the Year during his DFJ tenure.",
+    sources: [
+      { label: "Threshold — Josh Stein", url: "https://threshold.vc/team/josh-stein/" },
+      { label: "Wikipedia — Josh B. Stein", url: "https://en.wikipedia.org/wiki/Josh_B._Stein" }
+    ]
+  },
+
+  "emily-melton": {
+    name: "Emily Melton",
+    firm: "Threshold Ventures",
+    firmSlug: "threshold-ventures",
+    title: "Co-Founder & Managing Partner",
+    joinedYear: 2019,
+    education: ["BA (Honors), Political Philosophy, Stanford University", "MBA, Stanford Graduate School of Business"],
+    previousExperience: [
+      "Partner, Mayfield Fund",
+      "Principal & Partner, Draper Fisher Jurvetson (2012-2019)"
+    ],
+    investmentFocus: ["Consumer Technology", "Digital Health", "Enterprise Software"],
+    notableInvestments: [
+      { name: "Redfin", ticker: "RDFN" },
+      { name: "Livongo", ticker: null }
+    ],
+    boardSeats: [],
+    ipoCount: 2,
+    majorExits: 3,
+    careerTimeline: [
+      { year: "2012", event: "Joins Draper Fisher Jurvetson (DFJ) as Principal, after an earlier stint at Mayfield Fund." },
+      { year: "2018", event: "Co-founds All Raise, a nonprofit expanding access for women in venture capital and startups." },
+      { year: "2019", event: "Co-founds Threshold Ventures with Josh Stein, rebranding from DFJ." },
+      { year: "2020", event: "Livongo, an early investment, is acquired by Teladoc Health for $18.5 billion." },
+      { year: "2022", event: "Elected Chair of the National Venture Capital Association board of directors for the 2022-23 term." }
+    ],
+    biography: "Emily Melton spent nearly a decade as a Draper Fisher Jurvetson venture partner, leading investments in digital health and consumer mobile startups including Redfin, before co-founding Threshold Ventures with Josh Stein in 2019 to continue backing what she calls founders who are genuine 'agents of change.' Her early conviction in Livongo, a patient-care platform for chronic conditions, culminated in Teladoc Health's $18.5 billion acquisition of the company in 2020 — one of Threshold's largest realized outcomes. Melton co-founded All Raise in 2018, a nonprofit dedicated to improving access to venture capital and startup leadership for women, and was elected Chair of the National Venture Capital Association's board of directors for the 2022-23 term.",
+    sources: [
+      { label: "Threshold — Emily Melton", url: "https://threshold.vc/team/emily-melton/" },
+      { label: "Crunchbase News", url: "https://news.crunchbase.com/venture/threshold-formerly-known-as-dfj-targets-250m-for-latest-venture-fund/" }
+    ]
+  },
+
+  "jeffrey-perlman": {
+    name: "Jeffrey Perlman",
+    firm: "Warburg Pincus",
+    firmSlug: "warburg-pincus",
+    title: "Chief Executive Officer",
+    joinedYear: 2006,
+    education: ["BBA, University of Michigan (Ross School of Business)"],
+    previousExperience: [],
+    investmentFocus: ["Real Estate", "Asia-Pacific Growth Equity", "Financial Services"],
+    notableInvestments: [
+      { name: "ESR Group", ticker: null },
+      { name: "MoMo", ticker: null }
+    ],
+    boardSeats: ["ESR Group (Chairman)", "MoMo", "BW Industrial Development JSC"],
+    ipoCount: 2,
+    majorExits: 3,
+    careerTimeline: [
+      { year: "2006", event: "Joins Warburg Pincus, beginning nearly two decades building the firm's Asia-Pacific franchise." },
+      { year: "2016", event: "Opens Warburg Pincus's Singapore office as part of the firm's Asia expansion." },
+      { year: "2018", event: "Joins the firm's Executive Management Group." },
+      { year: "2023", event: "Named President of Warburg Pincus in July, succeeding Timothy Geithner in that role." },
+      { year: "2024", event: "Named Chief Executive Officer in September, succeeding Chip Kaye, who becomes Co-Chairman alongside Geithner." }
+    ],
+    biography: "Jeffrey Perlman joined Warburg Pincus in 2006 and spent nearly two decades building out the firm's Asia-Pacific real estate and private equity franchise, including opening its Singapore office in 2016. That track record of expanding Warburg's global reach led to his appointment as President in 2023, succeeding former US Treasury Secretary Timothy Geithner in that role, and then Chief Executive Officer in September 2024, succeeding Chip Kaye after his 22-year tenure — only the third generation of leadership in the firm's nearly 60-year history. Perlman currently chairs the board of ESR Group and sits on the boards of MoMo and several other portfolio companies, continuing to oversee Warburg Pincus's global growth equity strategy across a portfolio of more than 225 companies.",
+    sources: [
+      { label: "Warburg Pincus — CEO Announcement", url: "https://warburgpincus.com/2024/07/17/warburg-pincus-names-jeffrey-perlman-chief-executive-officer/" },
+      { label: "Wikipedia — Warburg Pincus", url: "https://en.wikipedia.org/wiki/Warburg_Pincus" }
+    ]
+  },
+
+  "max-fowinkel": {
+    name: "Max Fowinkel",
+    firm: "Warburg Pincus",
+    firmSlug: "warburg-pincus",
+    title: "Managing Director, Head of European Technology & Telecommunications",
+    joinedYear: 2007,
+    education: ["Diploma, Mechanical Engineering & Business Administration, Technische Universität Berlin", "MBA, Harvard Business School"],
+    previousExperience: [
+      "Consultant, McKinsey & Company (financial services, automotive & technology clients across Europe)"
+    ],
+    investmentFocus: ["Enterprise Software", "Telecommunications", "Fintech"],
+    notableInvestments: [
+      { name: "Blue Yonder", ticker: null },
+      { name: "Ionos", ticker: null }
+    ],
+    boardSeats: ["Ionos", "Community Fibre", "Infoniqa"],
+    ipoCount: 0,
+    majorExits: 3,
+    careerTimeline: [
+      { year: "2000s", event: "Works as a consultant at McKinsey & Company, advising European financial services, automotive, and technology clients." },
+      { year: "2007", event: "Joins Warburg Pincus as Managing Director, based initially in London." },
+      { year: "2019", event: "Relocates to Berlin, continuing to lead the firm's European Technology and Telecommunications group." },
+      { year: "2021", event: "Blue Yonder, a supply-chain AI company he helped scale, is acquired by Panasonic for approximately $8.5 billion." }
+    ],
+    biography: "Max Fowinkel combines a genuinely technical foundation — a dual degree in mechanical engineering and business administration from TU Berlin — with a Harvard MBA and consulting experience at McKinsey, before joining Warburg Pincus in 2007 to lead its European Technology and Telecommunications group. He has led investments spanning enterprise software, telecommunications, and fintech across Europe, including PSI Software, Ionos, Network International, and Community Fibre, and helped scale Blue Yonder, a supply-chain AI company, through to its roughly $8.5 billion acquisition by Panasonic in 2021. Fowinkel remains an active voice on European technology investment, speaking at conferences including Handelsblatt's Tech summit on the intersection of industry, investment, and policy.",
+    sources: [
+      { label: "Warburg Pincus — Max Fowinkel", url: "https://warburgpincus.com/team/max-fowinkel/" },
+      { label: "Mergr", url: "https://mergr.com/investor/warburg-pincus/team/max-fowinkel" }
+    ]
+  },
+
+  "matt-huang": {
+    name: "Matt Huang",
+    firm: "Paradigm",
+    firmSlug: "paradigm",
+    title: "Co-Founder & Managing Partner",
+    joinedYear: 2018,
+    education: ["BS, Mathematics, MIT"],
+    previousExperience: [
+      "Founder, Hotspots (mobile startup, acquired by Twitter)",
+      "Partner, Sequoia Capital"
+    ],
+    investmentFocus: ["Crypto/Web3", "AI", "Fintech"],
+    notableInvestments: [
+      { name: "Coinbase", ticker: "COIN" },
+      { name: "Stripe", ticker: null },
+      { name: "Kalshi", ticker: null }
+    ],
+    boardSeats: ["Stripe", "Kalshi"],
+    ipoCount: 1,
+    majorExits: 2,
+    careerTimeline: [
+      { year: "2010s", event: "Founds Hotspots, a mobile startup later acquired by Twitter, before becoming a Partner at Sequoia Capital." },
+      { year: "2018", event: "Leaves Sequoia to co-found Paradigm with Coinbase co-founder Fred Ehrsam in June." },
+      { year: "2021", event: "Coinbase, co-founded by Paradigm co-founder Fred Ehrsam, completes its direct listing at an approximately $86 billion valuation." },
+      { year: "2023", event: "Becomes Paradigm's day-to-day leader as managing partner after Ehrsam steps back from that role in October, remaining a co-founder and general partner." },
+      { year: "2026", event: "Co-authors the announcement of Paradigm's $1.2 billion fourth fund, expanding the firm's mandate into AI and robotics." }
+    ],
+    biography: "Matt Huang built a track record spotting major technology waves early as a Partner at Sequoia Capital, backing companies including ByteDance and Instacart, before leaving in 2018 to co-found Paradigm with Fred Ehrsam, who had co-founded Coinbase. Huang has led Paradigm's expansion from a purely crypto-focused fund into a broader 'technical frontier' mandate spanning AI and robotics, co-founding Tempo, a blockchain payments network built with Stripe, and sitting on the boards of both Stripe and Kalshi, a regulated crypto futures exchange. He became the firm's day-to-day leader in 2023, and Paradigm has grown to more than $12.7 billion in assets under management under his leadership, with Fund III alone closing at $1.2 billion in 2026 to back frontier bets including drone delivery company Zipline and space company True Anomaly.",
+    sources: [
+      { label: "Paradigm — Matt Huang", url: "https://www.paradigm.xyz/team/matt-huang" },
+      { label: "Wikipedia — Paradigm", url: "https://en.wikipedia.org/wiki/Paradigm_(venture_capital_firm)" }
+    ]
+  },
+
+  "alana-palmedo": {
+    name: "Alana Palmedo",
+    firm: "Paradigm",
+    firmSlug: "paradigm",
+    title: "Managing Partner",
+    joinedYear: 2018,
+    education: ["BS, Finance, Pacific Lutheran University", "MBA, MIT Sloan School of Management"],
+    previousExperience: [
+      "Asset Management, Cascade Investments",
+      "Asset Management, Russell Investments"
+    ],
+    investmentFocus: ["Crypto/Web3", "Financial Regulation", "AI", "Robotics"],
+    notableInvestments: [
+      { name: "True Anomaly", ticker: null },
+      { name: "Zipline", ticker: null }
+    ],
+    boardSeats: ["True Anomaly"],
+    ipoCount: 0,
+    majorExits: 0,
+    careerTimeline: [
+      { year: "2010s", event: "Builds nearly two decades of asset management experience at Cascade Investments and Russell Investments." },
+      { year: "2018", event: "Joins Paradigm at its founding as Managing Partner." },
+      { year: "2019", event: "Joins the CFTC's Innovation Advisory Committee, advising on crypto market regulation." },
+      { year: "2026", event: "Co-authors Paradigm's Fund III announcement with Matt Huang, becoming the public voice of the firm's expansion into AI and robotics." }
+    ],
+    biography: "Alana Palmedo brings nearly two decades of institutional asset management experience from Cascade Investments and Russell Investments to Paradigm, which she joined at its 2018 founding as Managing Partner. She has become one of the crypto industry's most credible regulatory voices, serving on the CFTC's Innovation Advisory Committee and advising on market structure and compliance policy as digital assets moved toward mainstream institutional acceptance. Alongside Matt Huang, Palmedo has led Paradigm's expansion beyond crypto into AI and robotics, telling Bloomberg 'there's so much else happening right now that's pretty hard to ignore,' and has backed frontier bets including True Anomaly, a space defense startup, and Zipline, an autonomous drone delivery company.",
+    sources: [
+      { label: "TechCrunch", url: "https://techcrunch.com/2026/07/08/crypto-vc-firm-paradigm-raises-1-2b-to-invest-in-technical-frontier-startups/" },
+      { label: "CoinDesk", url: "https://www.coindesk.com/markets/2026/07/08/crypto-vc-paradigm-launches-usd1-2-billion-ai-fund-as-it-broadens-beyond-digital-assets-bbg" }
+    ]
+  },
   "jeff-horing": {
     name: "Jeff Horing",
     firm: "Insight Partners",
