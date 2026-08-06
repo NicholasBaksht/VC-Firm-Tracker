@@ -6848,4 +6848,32 @@ sources: [
       { label: "Boston University — Hugo Shong Profile", url: "https://www.bu.edu/articles/2014/hugo-shong-the-producer/" }
     ]
   },
+"richard-li-legend": {
+    name: "Richard Li",
+    firm: "Legend Capital",
+    firmSlug: "legend-capital",
+    title: "President",
+    joinedYear: 2001,
+    education: [],
+    previousExperience: [],
+    investmentFocus: ["Enterprise Software", "Healthcare", "AI", "Consumer"],
+    notableInvestments: [
+      { name: "Meituan", ticker: "3690.HK" },
+      { name: "NIO", ticker: "NIO" },
+      { name: "ZTO Express", ticker: "ZTO" }
+    ],
+    boardSeats: [],
+    ipoCount: 10,
+    majorExits: 70,
+    careerTimeline: [
+      { year: "2001", event: "Legend Capital is founded as the venture capital arm of Legend Holdings, the parent company of Lenovo Group." },
+      { year: "2023", event: "Named to the Forbes China Venture Capital 100 list, ranking in the top four." },
+      { year: "2024", event: "Portfolio companies Aidite and Yonz Technology list on China's ChiNext and Shanghai Stock Exchange respectively; Qunabox Group goes public on the Hong Kong Stock Exchange." }
+    ],
+    biography: "Richard Li serves as President of Legend Capital, the venture capital and private equity arm of Legend Holdings, the parent company of Lenovo Group. Legend Capital's unique heritage — spinning out of the same conglomerate that built Lenovo into a global technology company — gives the firm deep relationships with entrepreneurs, government officials, and co-investors across China's innovation ecosystem, spanning enterprise software, healthcare, semiconductors, and consumer technology. Under Li's leadership as President, the firm has grown into one of China's most established and successful investors, backing more than 600 companies including Meituan, NIO, ZTO Express, and CATL, with more than $10 billion in committed capital across USD and RMB-denominated funds. Li was ranked in the top four on the Forbes China Venture Capital 100 list in 2023.",
+    sources: [
+      { label: "Legend Capital — Team", url: "https://www.legendcapitalco.com/c/we.html" },
+      { label: "Legend Capital LinkedIn", url: "https://www.linkedin.com/company/legend-capital" }
+    ]
+  },
 };
