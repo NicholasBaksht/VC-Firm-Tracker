@@ -221,3 +221,89 @@ function renderCompanyProfile(companySlug) {
     <div class="company-holders-grid">${holdersHTML}</div>
   `;
 }
+// Shows/hides the sticky bottom bar for partner comparison - mirrors
+// renderCompareBar() in compare.js exactly, just pointed at
+// partnerProfiles/comparePartnerSet instead of firms/compareSet.
+function renderComparePartnersBar() {
+  const bar = document.getElementById('comparePartnersBar');
+  if (!bar) return;
+  if (comparePartnerSet.size === 0) {
+    bar.style.display = 'none';
+    return;
+  }
+  bar.style.display = 'flex';
+  const chips = [...comparePartnerSet].map(slug => {
+    const p = partnerProfiles[slug];
+    return `<span class="compare-chip">${p.name}</span>`;
+  }).join('');
+  const canCompare = comparePartnerSet.size >= 2;
+  bar.innerHTML = `
+    <div class="compare-bar-chips">
+      <span class="compare-bar-label">Comparing (${comparePartnerSet.size}/3):</span>
+      ${chips}
+    </div>
+    <div class="compare-bar-actions">
+      <button class="compare-btn secondary" id="clearComparePartnersBtn">Clear</button>
+      <button class="compare-btn primary" id="goComparePartnersBtn" ${canCompare ? '' : 'disabled'}>Compare →</button>
+    </div>
+  `;
+  document.getElementById('clearComparePartnersBtn').addEventListener('click', () => {
+    comparePartnerSet.clear();
+    renderComparePartnersBar();
+    renderPeopleResults();
+  });
+  document.getElementById('goComparePartnersBtn').addEventListener('click', () => {
+    if (comparePartnerSet.size >= 2) window.location.hash = 'compare-partners';
+  });
+}
+
+// Renders the side-by-side partner comparison table - mirrors
+// renderComparison() in compare.js exactly, just with partner-shaped
+// rows (title, firm, education, investment focus, etc.) instead of
+// firm-shaped ones.
+function renderPartnerComparison() {
+  const selected = [...comparePartnerSet].map(slug => ({ slug, ...partnerProfiles[slug] }));
+  if (selected.length < 2) {
+    document.getElementById('comparePartnersView').innerHTML = `
+      <a href="#" class="detail-back" id="backFromComparePartners">← Back to all firms</a>
+      <p style="color: var(--ink-dim); font-size: 14px;">Pick at least 2 partners from the People page to compare them.</p>
+    `;
+    document.getElementById('backFromComparePartners').addEventListener('click', (e) => {
+      e.preventDefault();
+      window.location.hash = 'people';
+    });
+    return;
+  }
+
+  const rows = [
+    { label: 'Title', render: p => p.title },
+    { label: 'Firm', render: p => p.firm },
+    { label: 'Joined', render: p => p.joinedYear || '—' },
+    { label: 'Education', render: p => (p.education || []).join(', ') || '—' },
+    { label: 'Investment Focus', render: p => (p.investmentFocus || []).map(s => `<span class="compare-sector-tag">${s}</span>`).join('') },
+    { label: 'Notable Investments', render: p => (p.notableInvestments || []).map(i => i.name).join(', ') || '—' },
+    { label: 'IPOs / Major Exits', render: p => `${p.ipoCount || 0} IPOs · ${p.majorExits || 0} exits` },
+    { label: 'Biography', render: p => p.biography }
+  ];
+  const headerCells = selected.map(p => `<th class="firm-col-name">${p.name}</th>`).join('');
+  const bodyRows = rows.map(row => `
+    <tr>
+      <td class="row-label">${row.label}</td>
+      ${selected.map(p => `<td>${row.render(p)}</td>`).join('')}
+    </tr>
+  `).join('');
+  document.getElementById('comparePartnersView').innerHTML = `
+    <a href="#" class="detail-back" id="backFromComparePartners">← Back to all firms</a>
+    <div class="scroll-hint">← Swipe to see all partners →</div>
+    <div class="compare-table-wrap">
+      <table class="compare-table">
+        <thead><tr><th></th>${headerCells}</tr></thead>
+        <tbody>${bodyRows}</tbody>
+      </table>
+    </div>
+  `;
+  document.getElementById('backFromComparePartners').addEventListener('click', (e) => {
+    e.preventDefault();
+    window.location.hash = 'people';
+  });
+}
