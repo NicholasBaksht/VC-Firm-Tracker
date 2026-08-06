@@ -288,7 +288,8 @@ const firmStages = {
    "dcm-ventures": ["Seed", "Series A", "Series B", "Series C"],
    "idg-capital": ["Series A", "Series B", "Growth", "Late Stage"],
    "legend-capital": ["Series A", "Series B", "Series C", "Growth"],
-   "hillhouse-investment-group": ["Series A", "Series B", "Growth", "Late Stage"]
+   "hillhouse-investment-group": ["Series A", "Series B", "Growth", "Late Stage"],
+   "deerfield-management": ["Seed", "Series A", "Series B", "Growth"]
 };
 
 // ============================================================
