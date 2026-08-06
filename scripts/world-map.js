@@ -77,12 +77,15 @@ function renderWorldMap() {
       <div class="worldmap-canvas-wrap">
         <svg class="worldmap-canvas" viewBox="0 0 100 60" preserveAspectRatio="xMidYMid meet">
           ${buildDotGrid()}
-          ${clusters.map(c => `
+       ${clusters.map(c => {
+            const r = pinRadius(c.count);
+            return `
             <g class="worldmap-pin" data-hq="${encodeURIComponent(c.hq)}" transform="translate(${c.x}, ${c.y * 0.6})">
-              <circle r="${pinRadius(c.count)}" class="worldmap-pin-circle" />
-              <text class="worldmap-pin-label" dy="0.35em" text-anchor="middle">${c.count}</text>
+              <circle r="${r}" class="worldmap-pin-circle" />
+              <text class="worldmap-pin-label" font-size="${r * 0.9}" dy="0.35em" text-anchor="middle">${c.count}</text>
             </g>
-          `).join('')}
+          `;
+          }).join('')}
         </svg>
       </div>
 
