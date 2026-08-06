@@ -5405,6 +5405,31 @@ const firms = [
       { name: "Ginkgo Bioworks", ticker: "DNA", historicalPrice: null, price: null }
     ]
   },
+  {
+    rank: 89,
+    name: "Gaingels",
+    sectors: ["Enterprise Software", "Fintech", "Consumer"],
+    signatureExit: "No single blockbuster exit — Gaingels' model is co-investing alongside lead VCs in oversubscribed rounds rather than leading deals, and its clearest proof point is scale: more than $1 billion deployed into 2,500-plus companies including 75-plus unicorns",
+    slug: "gaingels",
+    website: "https://gaingels.com",
+    short: "Gaingels",
+    founded: 2014,
+    hq: "Burlington, VT",
+    aum: "$900M+",
+    thesis: "Gaingels was founded in 2014 by David Beatty and Paul Grossinger as a small angel group of LGBTQIA+ investors backing LGBTQIA+ founders, at a time there was nowhere else for the community to invest together in its own entrepreneurs. After investing roughly $4 million between 2015 and 2017, the two transformed Gaingels into a formal venture syndicate in 2018, broadening its mandate beyond LGBTQIA+ founders to diverse and underrepresented leadership across the entire venture chain — founders, executives, board members, and check-writers — while co-investing alongside established VCs in oversubscribed rounds rather than leading deals independently. That model has scaled dramatically: more than 4,000 members and $1 billion-plus deployed into 2,500-plus companies including 75-plus unicorns, supported by initiatives like the Diversity Term Sheet Rider and one of venture's largest diversity-aligned jobs boards.",
+    leadership: [
+      { name: "David Beatty", role: "Co-Founder & Managing Partner" },
+      { name: "Paul Grossinger", role: "Co-Founder", profileSlug: "paul-grossinger" },
+      { name: "Jennifer Jeronimo", role: "CEO & General Partner" }
+    ],
+    timeline: [
+      { year: "2014", event: "David Beatty and Paul Grossinger found Gaingels as an LGBTQIA+ angel group." },
+      { year: "2018", event: "Transitions from an angel group into a formal venture investment firm in January." },
+      { year: "2021", event: "Jennifer Jeronimo joins as CEO." },
+      { year: "2026", event: "Surpasses $1 billion in AUM across 2,500-plus companies and 75-plus unicorns." }
+    ],
+    holdings: []
+  },
    {
     rank: 74,
     name: "Shorooq Partners",
