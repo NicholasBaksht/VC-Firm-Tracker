@@ -109,9 +109,14 @@ function router() {
   document.getElementById('peopleView').style.display = 'none';
 document.getElementById('portfolioView').style.display = 'none';
   document.getElementById('companyView').style.display = 'none';
-  document.getElementById('shortlistView').style.display = 'none';
+ document.getElementById('shortlistView').style.display = 'none';
+  document.getElementById('worldMapView').style.display = 'none';
 
-  if (slug === 'compare') {
+  if (slug === 'world-map') {
+    document.getElementById('worldMapView').style.display = 'block';
+    renderWorldMap();
+    window.scrollTo(0, 0);
+  } else if (slug === 'compare') {
     document.getElementById('compareView').style.display = 'block';
     renderComparison();
     window.scrollTo(0, 0);
