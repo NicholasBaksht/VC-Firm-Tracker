@@ -2352,6 +2352,35 @@ const firms = [
       { name: "BuzzFeed", ticker: "BZFD", historicalPrice: null, price: null }
     ]
   },
+  {
+    rank: 32,
+    name: "Draper Associates",
+    sectors: ["Crypto", "AI", "Deep Tech", "Fintech"],
+    signatureExit: "Tesla's 2010 NASDAQ IPO and Baidu's 2005 NASDAQ IPO — two of Tim Draper's earliest and most iconic public-market bets, alongside Coinbase's 2021 direct listing decades later",
+    slug: "draper-associates",
+    website: "https://www.draper.vc",
+    short: "Draper Associates",
+    founded: 1985,
+    hq: "San Mateo, CA",
+    aum: "$2B",
+    thesis: "Draper Associates was founded in 1985 by Tim Draper, a fourth-generation venture capitalist whose father and grandfather were both pioneering Silicon Valley investors, launched with $6 million borrowed from the US Small Business Administration's SBIC program. Draper grew the firm into Draper Fisher Jurvetson after John Fisher and Steve Jurvetson joined, backing Hotmail (where he pioneered viral marketing), Skype, Baidu, and Tesla, before relaunching the original Draper Associates brand in 2008 to focus specifically on early-stage and frontier technology. He became one of Bitcoin's most visible public advocates after purchasing nearly 30,000 bitcoin at a 2014 US Marshals auction, and founded Draper University in 2012, a live-in entrepreneurship bootcamp that has graduated more than 6,000 alumni from 104 countries. The firm now manages roughly $2 billion and has backed more than 60 unicorns across four decades, spanning crypto, AI, space, and fintech.",
+    leadership: [
+      { name: "Tim Draper", role: "Founder & Managing Partner", profileSlug: "tim-draper" }
+    ],
+    timeline: [
+      { year: "1985", event: "Tim Draper founds Draper Associates in July." },
+      { year: "1996", event: "Backs Hotmail, coining the term 'viral marketing.'" },
+      { year: "2005", event: "Baidu completes its NASDAQ IPO." },
+      { year: "2010", event: "Tesla completes its NASDAQ IPO." },
+      { year: "2014", event: "Purchases nearly 30,000 bitcoin at a US Marshals auction." },
+      { year: "2025", event: "Raises $200 million for an eighth fund." }
+    ],
+    holdings: [
+      { name: "Tesla", ticker: "TSLA", historicalPrice: null, price: null },
+      { name: "Baidu", ticker: "BIDU", historicalPrice: null, price: null },
+      { name: "Coinbase", ticker: "COIN", historicalPrice: null, price: null }
+    ]
+  },
    {
     rank: 34,
     name: "Northzone",
