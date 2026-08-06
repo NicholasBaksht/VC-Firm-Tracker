@@ -124,3 +124,115 @@
     line-height: 1.5;
     max-width: 600px;
   }
+/* ---------- GENEALOGY-STYLE LAYOUT (added) ---------- */
+  .pg-header {
+    margin: 8px 0 24px;
+    padding-bottom: 20px;
+    border-bottom: 1px solid var(--hairline);
+  }
+
+  .pg-layout {
+    display: grid;
+    grid-template-columns: 260px 1fr 280px;
+    gap: 28px;
+    align-items: start;
+  }
+  @media (max-width: 1000px) {
+    .pg-layout {
+      grid-template-columns: 1fr;
+    }
+  }
+
+  .pg-side-label {
+    font-family: var(--mono);
+    font-size: 11px;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    color: var(--gold);
+    margin: 28px 0 12px;
+  }
+
+  .pg-stats-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 10px;
+    margin-bottom: 8px;
+  }
+  .pg-stat {
+    display: flex;
+    flex-direction: column;
+    background: var(--surface);
+    border: 1px solid var(--hairline);
+    border-radius: 6px;
+    padding: 12px 14px;
+  }
+  .pg-stat-num {
+    font-family: var(--mono);
+    font-size: 20px;
+    font-weight: 600;
+    color: var(--gold-bright);
+  }
+  .pg-stat-label {
+    font-family: var(--mono);
+    font-size: 10.5px;
+    color: var(--ink-dim);
+    margin-top: 3px;
+  }
+
+  .pg-path {
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+  }
+  .pg-path-step {
+    font-size: 13px;
+    line-height: 1.4;
+    color: var(--ink-dim);
+    background: var(--surface);
+    border: 1px solid var(--hairline);
+    border-radius: 5px;
+    padding: 10px 12px;
+  }
+  .pg-path-step.pg-path-current {
+    color: var(--gold-bright);
+    border-color: rgba(201,162,39,0.35);
+    background: rgba(201,162,39,0.06);
+    font-weight: 600;
+  }
+  .pg-path-arrow {
+    text-align: center;
+    color: var(--gold);
+    font-size: 13px;
+    padding: 2px 0;
+  }
+
+  .pg-panel {
+    background: var(--surface);
+    border: 1px solid var(--hairline);
+    border-radius: 6px;
+    padding: 16px 18px;
+    margin-bottom: 16px;
+  }
+  .pg-panel:last-child {
+    margin-bottom: 0;
+  }
+
+  .pg-investment-row, .pg-board-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 13.5px;
+    color: var(--ink);
+    padding: 9px 0;
+    border-bottom: 1px solid var(--hairline);
+  }
+  .pg-investment-row:last-child, .pg-board-row:last-child {
+    border-bottom: none;
+  }
+
+  .pg-empty {
+    font-size: 13px;
+    color: var(--ink-dim);
+    font-style: italic;
+    padding: 8px 0;
+  }
