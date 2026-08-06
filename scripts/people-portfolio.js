@@ -79,13 +79,19 @@ function renderPeopleResults() {
 
   document.getElementById('peopleCount').textContent = `${filtered.length} of ${allPeople.length} profiles`;
 
-  document.getElementById('peopleGrid').innerHTML = filtered.length > 0
+ document.getElementById('peopleGrid').innerHTML = filtered.length > 0
     ? filtered.map(p => `
-      <a href="#partner/${p.slug}" class="person-card">
-        <div class="person-card-name">${p.name}</div>
-        <div class="person-card-title">${p.title}</div>
-        <div class="person-card-firm">${p.firm}</div>
-      </a>
+      <div class="person-card">
+        <a href="#partner/${p.slug}" class="person-card-link">
+          <div class="person-card-name">${p.name}</div>
+          <div class="person-card-title">${p.title}</div>
+          <div class="person-card-firm">${p.firm}</div>
+        </a>
+        <label class="compare-check">
+          <input type="checkbox" class="compare-partner-checkbox" data-slug="${p.slug}" ${comparePartnerSet.has(p.slug) ? 'checked' : ''}>
+          Compare
+        </label>
+      </div>
     `).join('')
     : `<div class="people-empty">No profiles match "${peopleSearchTerm}".</div>`;
 }
