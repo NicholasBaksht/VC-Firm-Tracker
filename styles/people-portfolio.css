@@ -28,19 +28,32 @@
     grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
     gap: 14px;
   }
-  .person-card {
+.person-card {
     display: block;
     background: var(--surface);
     border: 1px solid var(--hairline);
     border-radius: 6px;
     padding: 18px 20px;
-    text-decoration: none;
-    cursor: pointer;
     transition: border-color 0.2s ease, transform 0.2s ease;
   }
   .person-card:hover {
     border-color: var(--gold);
     transform: translateY(-2px);
+  }
+  .person-card-link {
+    display: block;
+    text-decoration: none;
+    cursor: pointer;
+  }
+  .person-card .compare-check {
+    display: block;
+    margin-top: 10px;
+    padding-top: 10px;
+    border-top: 1px solid var(--hairline);
+    font-family: var(--mono);
+    font-size: 12px;
+    color: var(--ink-dim);
+    cursor: pointer;
   }
   .person-card-name {
     font-family: var(--serif);
