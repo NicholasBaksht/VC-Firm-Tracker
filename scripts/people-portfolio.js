@@ -133,11 +133,13 @@ function renderPortfolioResults() {
           returnCls = pct >= 0 ? 'return-positive' : 'return-negative';
           returnText = `${pct >= 0 ? '+' : ''}${pct.toFixed(1)}%`;
         }
+      const priceText = c.holding.price !== null ? `$${c.holding.price.toFixed(2)}` : '—';
         return `
           <a href="#company/${slugifyCompany(c.name)}" class="company-card">
             <div class="company-card-name">${c.name}</div>
             <div class="company-card-row">
               <span class="company-card-ticker">${c.holding.ticker}</span>
+              <span class="company-card-price">${priceText}</span>
               <span class="company-card-return ${returnCls}">${returnText}</span>
             </div>
           </a>
