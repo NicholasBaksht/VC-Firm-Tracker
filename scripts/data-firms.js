@@ -5625,7 +5625,7 @@ const firms = [
     short: "In-Q-Tel",
     founded: 1999,
     hq: "Arlington, VA",
-    aum: "Not publicly disclosed (Fortune estimates at least $1.8B deployed since 1999, based on 26 years of tax filings)",
+   aum: "Not publicly disclosed (Fortune's independent estimate: at least $1.8B deployed since 1999, based on 26 years of tax filings)",
     thesis: "In-Q-Tel was chartered by the CIA in February 1999 under Director George Tenet, founded by former Lockheed Martin CEO Norm Augustine and video-game-industry veteran Gilman Louie as founding CEO, built to close a widening gap between Silicon Valley's pace of innovation and the U.S. intelligence community's traditionally slow procurement processes. Structured as a nonprofit rather than a traditional fund, In-Q-Tel invests government and philanthropic-style capital directly into startups building frontier technology — AI, cybersecurity, biotech, and space — with the explicit goal of getting those capabilities into the hands of the CIA and allied intelligence and defense agencies faster than conventional contracting ever could. Over 26 years, the fund has helped launch more than 800 companies, is an investor in 32 of this year's NatSec 100 fastest-growing defense startups (more than any other fund), and produced early, formative bets on Palantir, Keyhole (which became Google Earth), and Ginkgo Bioworks.",
     leadership: [
       { name: "Gilman Louie", role: "Founding CEO", profileSlug: "gilman-louie" },
