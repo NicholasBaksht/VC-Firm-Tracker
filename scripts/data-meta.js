@@ -302,8 +302,22 @@ const firmStages = {
       "bdc-capital": ["Seed", "Series A", "Series B", "Growth", "Late Stage"],
       "vision-knight-capital": ["Series A", "Series B", "Series C", "Growth"],
    "threshold-ventures": ["Seed", "Series A", "Series B"],
-      "warburg-pincus": ["Growth", "Late Stage"],
-      "paradigm": ["Seed", "Series A", "Series B", "Growth", "Late Stage"]
+      "paradigm": ["Seed", "Series A", "Series B", "Growth", "Late Stage"],
+   "hustle-fund": ["Pre-Seed", "Seed"],
+      "addition": ["Series A", "Series B", "Growth"],
+      "almaz-capital": ["Seed", "Series A"],
+      "blumberg-capital": ["Seed", "Series A"],
+      "venrock": ["Seed", "Series A", "Series B"],
+      "abingworth": ["Seed", "Series A", "Series B", "Growth"],
+      "acton-capital": ["Series A", "Series B", "Growth"],
+      "eqt-ventures": ["Series A", "Series B", "Growth"],
+      "oxford-science-enterprises": ["Pre-Seed", "Seed", "Series A"],
+      "impact-x-capital": ["Seed", "Series A"],
+      "infinity-group": ["Series A", "Series B", "Growth"],
+      "quest-ventures": ["Seed", "Series A"],
+      "northern-light-venture-capital": ["Series A", "Series B", "Growth"],
+      "source-code-capital": ["Series A", "Series B", "Growth", "Late Stage"],
+      "stic-investments": ["Growth", "Late Stage"]
 };
 
 // ============================================================
