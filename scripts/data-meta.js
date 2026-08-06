@@ -290,7 +290,17 @@ const firmStages = {
    "legend-capital": ["Series A", "Series B", "Series C", "Growth"],
    "hillhouse-investment-group": ["Series A", "Series B", "Growth", "Late Stage"],
    "deerfield-management": ["Seed", "Series A", "Series B", "Growth"],
-   "octopus-ventures": ["Pre-Seed", "Seed", "Series A", "Series B", "Growth"]
+   "octopus-ventures": ["Pre-Seed", "Seed", "Series A", "Series B", "Growth"],
+   "gaingels": ["Series A", "Series B", "Growth"],
+      "sinovation-ventures": ["Seed", "Series A", "Series B"],
+      "target-global": ["Pre-Seed", "Seed", "Series A", "Series B", "Growth"],
+      "qiming-venture-partners": ["Series A", "Series B", "Growth"],
+      "oak-hc-ft": ["Series A", "Series B", "Growth"],
+      "blueyard-capital": ["Pre-Seed", "Seed", "Series A"],
+      "innovation-endeavors": ["Seed", "Series A", "Series B"],
+      "draper-associates": ["Seed", "Series A"],
+      "bdc-capital": ["Seed", "Series A", "Series B", "Growth", "Late Stage"],
+      "vision-knight-capital": ["Series A", "Series B", "Series C", "Growth"]
 };
 
 // ============================================================
