@@ -74,9 +74,8 @@ function renderWorldMap() {
     </div>
 
     <div class="worldmap-layout">
-      <div class="worldmap-canvas-wrap">
+    <div class="worldmap-canvas-wrap">
      <svg class="worldmap-canvas" viewBox="0 0 100 60" preserveAspectRatio="xMidYMid meet">
-          ${buildContinents()}
           ${buildDotGrid()}
        ${clusters.map(c => {
             const r = pinRadius(c.count);
