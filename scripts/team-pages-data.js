@@ -76,4 +76,6 @@ const TEAM_PAGES = {
   "index-ventures": "https://www.indexventures.com/team/",
   "founders-fund": "https://foundersfund.com/our_team/",
   "thrive-capital": null,
+  "bessemer": "https://www.bvp.com/team",
+  "bain-capital-ventures": "https://baincapitalventures.com/team/",
 };
