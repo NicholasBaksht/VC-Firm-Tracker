@@ -65,4 +65,8 @@ const TEAM_PAGES = {
   "root-ventures": null,
   "radical-ventures": "https://radical.vc/teams/",
   "pear-vc": "https://pear.vc/team/",
+  "upfront-ventures": null,
+  "acrew-capital": "https://www.acrewcapital.com/team",
+  "scale-venture-partners": "https://www.scalevp.com/team",
+  "arch-venture-partners": "https://www.archventure.com/team/",
 };
