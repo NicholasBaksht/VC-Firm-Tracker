@@ -1,0 +1,120 @@
+/* ============================================================
+   VC-ECOSYSTEM-GRAPH.CSS
+   The interactive D3 force-directed graph: legend, zoomable/
+   pannable SVG canvas, and the clicked-node connection panel.
+   ============================================================ */
+
+.graph-legend {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 20px;
+  padding: 14px 18px;
+  background: var(--surface);
+  border: 1px solid var(--hairline);
+  border-radius: 6px;
+  margin-bottom: 16px;
+}
+.graph-legend-item {
+  display: flex;
+  align-items: center;
+  gap: 7px;
+  font-family: var(--mono);
+  font-size: 12px;
+  color: var(--ink-dim);
+}
+.graph-legend-dot {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  display: inline-block;
+}
+.graph-legend-meta {
+  font-family: var(--mono);
+  font-size: 12px;
+  color: var(--gold);
+  margin-left: auto;
+}
+
+.graph-canvas-wrap {
+  background: var(--surface);
+  border: 1px solid var(--hairline);
+  border-radius: 8px;
+  overflow: hidden;
+  margin-bottom: 20px;
+}
+#ecosystemSvg {
+  display: block;
+  cursor: grab;
+}
+.graph-node {
+  cursor: pointer;
+  transition: opacity 0.2s ease;
+}
+.graph-node-label {
+  font-family: var(--mono);
+  font-size: 9px;
+  fill: var(--ink-dim);
+  pointer-events: none;
+}
+.graph-link {
+  transition: stroke-opacity 0.2s ease;
+}
+
+.graph-selection-panel {
+  background: var(--surface);
+  border: 1px solid var(--hairline);
+  border-radius: 8px;
+  padding: 18px 20px;
+}
+.graph-selection-empty {
+  color: var(--ink-dim);
+  font-style: italic;
+}
+.graph-selection-label {
+  font-family: var(--mono);
+  font-size: 11px;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--gold);
+  margin-bottom: 14px;
+}
+.graph-connection-row {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 9px 0;
+  border-bottom: 1px solid var(--hairline);
+  flex-wrap: wrap;
+}
+.graph-connection-row:last-child {
+  border-bottom: none;
+}
+.graph-connection-dot {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  flex-shrink: 0;
+}
+.graph-connection-firm {
+  font-family: var(--sans);
+  font-weight: 600;
+  font-size: 13.5px;
+  color: var(--ink);
+  text-decoration: none;
+  min-width: 140px;
+}
+.graph-connection-firm:hover {
+  color: var(--gold-bright);
+}
+.graph-connection-type {
+  font-family: var(--mono);
+  font-size: 10.5px;
+  color: var(--ink-dim);
+  min-width: 130px;
+}
+.graph-connection-label {
+  font-size: 12.5px;
+  color: var(--ink-dim);
+  flex: 1;
+}
