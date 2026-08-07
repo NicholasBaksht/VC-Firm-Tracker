@@ -82,4 +82,12 @@ const TEAM_PAGES = {
   "altos-ventures": null,
   "peak-xv-partners": "https://www.peakxv.com/our-team",
   "benchmark": null,
+  "ggv-capital": "https://www.ggvc.com/team/",
+  "ivp": "https://www.ivp.com/team/",
+  "redpoint": null,
+  "capitalg": "https://capitalg.com/team/",
+  "menlo-ventures": "https://menlovc.com/team/",
+  "salesforce-ventures": "https://salesforceventures.com/people_type/team/",
+  "lux-capital": null,
+  "greylock": "https://greylock.com/team/",
 };
