@@ -7881,7 +7881,8 @@ sources: [
     sources: [
       { label: "Reuters — Factbox on Fabricio Bloisi", url: "https://www.aol.com/news/factbox-prosus-naspers-ceo-fabricio-112515447.html" },
       { label: "Prosus Ventures", url: "https://www.prosus.com/prosus-ventures" }
-    ]
+  ]
+    },
     "magnus-grimeland": {
     name: "Magnus Grimeland",
     firm: "Antler",
