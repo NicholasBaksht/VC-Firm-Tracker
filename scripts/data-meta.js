@@ -17,14 +17,14 @@
 // ============================================================
 const newsItems = [
   {
-    date: "July 30, 2026",
+    date: "August 6, 2026",
     tag: "This week",
-    text: '<strong>Blue Origin raised $10 billion in its first-ever outside funding round</strong>, at a $130 billion pre-money valuation — the first time Jeff Bezos has taken outside capital in the rocket company\'s 26-year history. <strong>Coatue Management</strong> (see below) led with a $4 billion commitment, alongside $2 billion from Bezos personally and $4 billion more from other institutional investors. The round comes weeks after rival SpaceX\'s own record-setting Nasdaq debut in June.'
+    text: 'We set out to build a simple relationship map between firms on this page — nothing more than showing which firms had backed the same public companies. What came back surprised us: <strong>DoorDash alone connects nine different tracked firms</strong> — SoftBank Vision Fund, Sequoia Capital, Coatue Management, Dragoneer Investment Group, Pear VC, CRV, NFX, Haystack, and Y Combinator all hold a real stake in the same company. Across the full dataset, we found 62 real public companies held by two or more tracked firms, producing 324 verified relationships between 119 firms — now fully explorable in the new <strong>VC Ecosystem Graph</strong>.'
   },
   {
-    date: "July 22, 2026",
+    date: "July 30, 2026",
     tag: "Last week",
-    text: '<strong>Glow emerged from stealth with a $180 million Series A</strong> at a $1.2 billion valuation, building AI-era endpoint security software. The round was led by Sequoia Capital, with <strong>Redpoint Ventures</strong> and <strong>Index Ventures</strong> (see below) among the participating investors — a rare instance of three firms tracked on this page backing the same round.'
+    text: '<strong>Blue Origin raised $10 billion in its first-ever outside funding round</strong>, at a $130 billion pre-money valuation — the first time Jeff Bezos has taken outside capital in the rocket company\'s 26-year history. <strong>Coatue Management</strong> (see below) led with a $4 billion commitment, alongside $2 billion from Bezos personally and $4 billion more from other institutional investors. The round comes weeks after rival SpaceX\'s own record-setting Nasdaq debut in June.'
   },
 ];
 
