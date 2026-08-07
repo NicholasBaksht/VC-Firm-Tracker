@@ -78,4 +78,6 @@ const TEAM_PAGES = {
   "thrive-capital": null,
   "bessemer": "https://www.bvp.com/team",
   "bain-capital-ventures": "https://baincapitalventures.com/team/",
+  "eclipse-ventures": null,
+  "altos-ventures": null,
 };
