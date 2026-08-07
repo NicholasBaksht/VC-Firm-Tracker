@@ -80,4 +80,6 @@ const TEAM_PAGES = {
   "bain-capital-ventures": "https://baincapitalventures.com/team/",
   "eclipse-ventures": null,
   "altos-ventures": null,
+  "peak-xv-partners": "https://www.peakxv.com/our-team",
+  "benchmark": null,
 };
