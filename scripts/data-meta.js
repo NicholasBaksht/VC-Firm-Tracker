@@ -39,10 +39,9 @@ const newsItems = [
 // there's nothing to keep in sync by hand.
 // ============================================================
 const featuredFirm = {
-  slug: "tcv",
-  reason: "TCV invented the 'crossover' model of investing in the same company both before and after it goes public — and nowhere has that patience paid off more than at Netflix. Co-founder Jay Hoag joined Netflix's board in 1999, back when TCV owned roughly 43% of the pre-IPO company, and he's chaired the board ever since. Netflix is worth more than $400 billion today."
+  slug: "bond-capital",
+  reason: "Mary Meeker spent nearly a decade leading Kleiner Perkins' growth investing practice before an internal leadership dispute led her to leave in September 2018 and found Bond Capital. Her very first bet as an independent investor was Canva — a $70 million check in May 2019 that helped fuel the design platform's climb to a $42 billion valuation. Bond's lineage back to Kleiner Perkins is now fully mapped in the new VC Family Tree."
 };
-
 // ============================================================
 // FULL PROFILE PAGES — optional, works for ANY firm below.
 // Right now only Andreessen Horowitz (a16z) has one, but any
