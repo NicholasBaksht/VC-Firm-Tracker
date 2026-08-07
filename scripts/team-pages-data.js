@@ -74,4 +74,6 @@ const TEAM_PAGES = {
   "sapphire-ventures": "https://sapphireventures.com/team/",
   "intel-capital": "https://www.intelcapital.com/team/",
   "index-ventures": "https://www.indexventures.com/team/",
+  "founders-fund": "https://foundersfund.com/our_team/",
+  "thrive-capital": null,
 };
