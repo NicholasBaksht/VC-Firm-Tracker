@@ -54,9 +54,29 @@
 
 .worldmap-canvas-wrap {
   background: var(--surface);
+  background-image: url('https://upload.wikimedia.org/wikipedia/commons/thumb/9/9f/BlankMap-World-Equirectangular.svg/1920px-BlankMap-World-Equirectangular.svg.png');
+  background-size: 100% 100%;
+  background-position: center;
+  background-repeat: no-repeat;
   border: 1px solid var(--hairline);
   border-radius: 8px;
   padding: 12px;
+}
+.worldmap-canvas-wrap::before {
+  content: '';
+  position: absolute;
+  inset: 12px;
+  background: rgba(12,15,20,0.55);
+  border-radius: 4px;
+  pointer-events: none;
+  z-index: 0;
+}
+.worldmap-canvas-wrap {
+  position: relative;
+}
+.worldmap-canvas {
+  position: relative;
+  z-index: 1;
 }
 .worldmap-canvas {
   width: 100%;
