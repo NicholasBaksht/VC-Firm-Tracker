@@ -106,10 +106,11 @@ function renderNews() {
 }
 
 function router() {
-  const slug = window.location.hash.replace('#', '');
+ const slug = window.location.hash.replace('#', '');
   const firm = firms.find(f => f.slug === slug);
   const partnerMatch = slug.match(/^partner\/(.+)$/);
   const companyMatch = slug.match(/^company\/(.+)$/);
+  const reportMatch = slug.match(/^reports\/(.+)$/);
 
   document.getElementById('listView').style.display = 'none';
   document.getElementById('detailView').style.display = 'none';
