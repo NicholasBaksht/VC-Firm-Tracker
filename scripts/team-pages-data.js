@@ -72,4 +72,6 @@ const TEAM_PAGES = {
   "b-capital-group": "https://b.capital/team/",
   "gv": "https://www.gv.com/team",
   "sapphire-ventures": "https://sapphireventures.com/team/",
+  "intel-capital": "https://www.intelcapital.com/team/",
+  "index-ventures": "https://www.indexventures.com/team/",
 };
