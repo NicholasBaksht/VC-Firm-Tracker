@@ -104,7 +104,8 @@ ${renderWhyThisVC(firm)}
         <div class="holdings-label">All Notable Public Portfolio Companies</div>
         ${holdingsHTML}
       </div>
-   ${renderSimilarFirms(firm)}
+ ${renderFirmIntelligence(firm)}
+      ${renderSimilarFirms(firm)}
       ${renderPeerFirmLinks(firm)}
     </div>
   `;
