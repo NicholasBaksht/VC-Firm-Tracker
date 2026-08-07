@@ -69,4 +69,7 @@ const TEAM_PAGES = {
   "acrew-capital": "https://www.acrewcapital.com/team",
   "scale-venture-partners": "https://www.scalevp.com/team",
   "arch-venture-partners": "https://www.archventure.com/team/",
+  "b-capital-group": "https://b.capital/team/",
+  "gv": "https://www.gv.com/team",
+  "sapphire-ventures": "https://sapphireventures.com/team/",
 };
