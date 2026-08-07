@@ -27,7 +27,7 @@ const FAMILY_TREE = [
     ]
   },
   {
-    parentSlug: 'tiger-global-management',
+    parentSlug: 'tiger-global',
     children: [
       {
         slug: 'addition',
