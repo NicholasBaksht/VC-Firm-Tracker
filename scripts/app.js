@@ -133,8 +133,7 @@ document.getElementById('familyTreeView').style.display = 'none';
     document.getElementById('ecosystemGraphView').style.display = 'block';
     renderEcosystemGraph();
     window.scrollTo(0, 0);
-  } else if (slug === 'family-tree') {
-  if (slug === 'family-tree') {
+ } else if (slug === 'family-tree') {
     document.getElementById('familyTreeView').style.display = 'block';
     renderFamilyTree();
     window.scrollTo(0, 0);
