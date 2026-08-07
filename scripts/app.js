@@ -128,9 +128,14 @@ document.getElementById('shortlistView').style.display = 'none';
 document.getElementById('reportsHubView').style.display = 'none';
   document.getElementById('sectorReportView').style.display = 'none';
 document.getElementById('familyTreeView').style.display = 'none';
-  document.getElementById('ecosystemGraphView').style.display = 'none';
+document.getElementById('ecosystemGraphView').style.display = 'none';
+  document.getElementById('historicalSnapshotView').style.display = 'none';
 
-  if (slug === 'ecosystem-graph') {
+  if (slug === 'historical-snapshot') {
+    document.getElementById('historicalSnapshotView').style.display = 'block';
+    renderHistoricalSnapshot();
+    window.scrollTo(0, 0);
+  } else if (slug === 'ecosystem-graph') {
     document.getElementById('ecosystemGraphView').style.display = 'block';
     renderEcosystemGraph();
     window.scrollTo(0, 0);
