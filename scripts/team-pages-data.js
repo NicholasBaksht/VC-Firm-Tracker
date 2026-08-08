@@ -194,4 +194,12 @@ const TEAM_PAGES = {
   "costanoa-ventures": null,
   "equal-ventures": null,
   "susa-ventures": "https://www.susaventures.com/team",
+  "eniac-ventures": null,
+  "fika-ventures": "https://www.fika.vc/team",
+  "mercury-fund": "https://www.mercuryfund.com/team",
+  "new-markets-venture-partners": "https://www.newmarketsvp.com/team",
+  "work-bench": "https://www.work-bench.com/team",
+  "floodgate": "https://www.floodgate.com/team",
+  "bullpen-capital": null,
+  "harlem-capital": "https://harlem.capital/team/",
 };
