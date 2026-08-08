@@ -134,4 +134,10 @@ const TEAM_PAGES = {
   "rtp-global": null,
   "kaszek-ventures": "https://kaszek.com/people/",
   "sosv": null,
+  "monashees": null,
+  "partech": "https://partechpartners.com/team",
+  "healthquest-capital": null,
+  "target-global": null,
+  "dn-capital": "https://www.dncapital.com/team.html",
+  "chiratae-ventures": "https://www.chiratae.com/team/",
 };
