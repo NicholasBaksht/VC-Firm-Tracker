@@ -258,4 +258,9 @@ const TEAM_PAGES = {
   "cambrian-ventures": null,
   "symphonic-capital": "https://www.symphoniccapital.com/about",
   "the-fintech-fund": null,
+  "bdc-capital": "https://www.bdc.ca/en/bdc-capital/venture-capital/team",
+  "5y-capital": null,
+  "gobi-partners": null,
+  "rise-of-the-rest-seed-fund": "https://www.revolution.com/our-team",
+  "barclays-uk-ventures": null,
 };
