@@ -230,4 +230,10 @@ const TEAM_PAGES = {
   "octopus-ventures": "https://octopusventures.com/team/",
   "gradient-ventures": "https://www.gradient.com/team/",
   "norrsken22": null,
+  "addition": null,
+  "tcv": "https://www.tcv.com/team",
+  "lightspeed": "https://lsvp.com/lightspeed-team/",
+  "blueyard-capital": null,
+  "spark-capital": null,
+  "breakthrough-energy-ventures": null,
 };
