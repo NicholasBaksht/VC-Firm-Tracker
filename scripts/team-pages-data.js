@@ -252,4 +252,9 @@ const TEAM_PAGES = {
   "gobi-partners": null,
   "rise-of-the-rest-seed-fund": "https://www.revolution.com/our-team",
   "barclays-uk-ventures": null,
+  "bdc-capital": "https://www.bdc.ca/en/bdc-capital/venture-capital/team",
+  "5y-capital": null,
+  "gobi-partners": null,
+  "rise-of-the-rest-seed-fund": "https://www.revolution.com/our-team",
+  "barclays-uk-ventures": null,
 };
