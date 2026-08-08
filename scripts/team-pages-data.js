@@ -202,4 +202,10 @@ const TEAM_PAGES = {
   "floodgate": "https://www.floodgate.com/team",
   "bullpen-capital": null,
   "harlem-capital": "https://harlem.capital/team/",
+  "freestyle": "https://freestyle.vc/team/",
+  "baseline-ventures": null,
+  "founder-collective": "https://foundercollective.com/team/",
+  "k9-ventures": "https://www.k9ventures.com/team/",
+  "designer-fund": "https://designerfund.com/team",
+  "m25": "https://www.m25vc.com/team",
 };
