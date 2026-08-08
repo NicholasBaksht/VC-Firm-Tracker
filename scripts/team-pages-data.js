@@ -140,4 +140,12 @@ const TEAM_PAGES = {
   "target-global": null,
   "dn-capital": "https://www.dncapital.com/team.html",
   "chiratae-ventures": "https://www.chiratae.com/team/",
+  "seedcamp": "https://seedcamp.com/our-team/",
+  "high-tech-grunderfonds": null,
+  "forerunner-ventures": "https://www.forerunnerventures.com/about#team",
+  "third-rock-ventures": null,
+  "lowercarbon-capital": "https://lowercarbon.com/team/",
+  "forgepoint-capital": "https://forgepointcap.com/team/",
+  "nfx": "https://www.nfx.com/team",
+  "congruent-ventures": "https://www.congruentvc.com/team",
 };
