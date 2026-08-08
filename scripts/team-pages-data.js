@@ -224,4 +224,10 @@ const TEAM_PAGES = {
   "foundry-group": "https://foundry.vc/team/",
   "dcm-ventures": "https://www.dcm.com/team",
   "idg-capital": null,
+  "legend-capital": "https://www.legendcapitalco.com/c/we.html",
+  "hillhouse-investment-group": "https://www.hillhouseinvestment.com/team/",
+  "oak-hc-ft": "https://www.oakhcft.com/team",
+  "octopus-ventures": "https://octopusventures.com/team/",
+  "gradient-ventures": "https://www.gradient.com/team/",
+  "norrsken22": null,
 };
