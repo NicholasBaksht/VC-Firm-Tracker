@@ -156,4 +156,10 @@ const TEAM_PAGES = {
   "bmw-i-ventures": "https://www.bmwiventures.com/team",
   "felicis": "https://www.felicis.com/team",
   "amplify-partners": "https://www.amplifypartners.com/team",
+  "toyota-ventures": null,
+  "beco-capital": "https://www.becocapital.com/team/",
+  "wing-vc": "https://www.wing.vc/people",
+  "cherry-ventures": null,
+  "madrona": "https://www.madrona.com/team/",
+  "haystack": "https://haystack.vc/team",
 };
