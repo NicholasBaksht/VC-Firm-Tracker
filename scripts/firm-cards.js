@@ -8,6 +8,8 @@ function renderFirms() {
   const noResults = document.getElementById('noResults');
   container.innerHTML = '';
 
+  scrollToResultsIfNeeded();
+
   const visibleFirms = firms.filter(f => matchesFilter(f) && matchesSearch(f));
 
   noResults.style.display = visibleFirms.length === 0 ? 'block' : 'none';
