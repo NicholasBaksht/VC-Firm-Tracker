@@ -162,4 +162,10 @@ const TEAM_PAGES = {
   "cherry-ventures": null,
   "madrona": "https://www.madrona.com/team/",
   "haystack": "https://haystack.vc/team",
+  "matrix-partners": null,
+  "bold-capital-partners": "https://boldcapitalpartners.com/team/",
+  "bloomberg-beta": null,
+  "ventures-platform": "https://www.venturesplatform.com/team",
+  "comcast-ventures": "https://comcastventures.com/team/",
+  "tlcom-capital": "https://www.tlcomcapital.com/team",
 };
