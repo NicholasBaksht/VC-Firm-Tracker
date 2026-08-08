@@ -168,4 +168,10 @@ const TEAM_PAGES = {
   "ventures-platform": "https://www.venturesplatform.com/team",
   "comcast-ventures": "https://comcastventures.com/team/",
   "tlcom-capital": "https://www.tlcomcapital.com/team",
+  "yl-ventures": "https://www.ylventures.com/team/",
+  "cyberstarts": null,
+  "novastar-ventures": "https://www.novastarventures.com/team/",
+  "enza-capital": "https://enza.capital/team",
+  "kawisafi-ventures": "https://www.kawisafi.com/team/",
+  "crossboundary": "https://crossboundary.com/our-team/",
 };
