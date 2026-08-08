@@ -208,4 +208,12 @@ const TEAM_PAGES = {
   "k9-ventures": "https://www.k9ventures.com/team/",
   "designer-fund": "https://designerfund.com/team",
   "m25": "https://www.m25vc.com/team",
+  "samsung-next": "https://www.samsungnext.com/team/",
+  "m12": null,
+  "citi-ventures": "https://www.citi.com/ventures/team.html",
+  "echovc-partners": null,
+  "voltron-capital": "https://voltron.africa/team",
+  "sky-vc": null,
+  "amazon-alexa-fund": null,
+  "airbus-ventures": null,
 };
