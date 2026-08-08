@@ -148,4 +148,12 @@ const TEAM_PAGES = {
   "forgepoint-capital": "https://forgepointcap.com/team/",
   "nfx": "https://www.nfx.com/team",
   "congruent-ventures": "https://www.congruentvc.com/team",
+  "shield-capital": "https://shieldcap.com/team",
+  "point-nine": "https://www.pointnine.com/team",
+  "lakestar": null,
+  "east-ventures": "https://east.vc/about-us/our-team",
+  "atomico": "https://atomico.com/team",
+  "bmw-i-ventures": "https://www.bmwiventures.com/team",
+  "felicis": "https://www.felicis.com/team",
+  "amplify-partners": "https://www.amplifypartners.com/team",
 };
