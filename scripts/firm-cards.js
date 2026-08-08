@@ -112,5 +112,18 @@ if (e.target.classList.contains('compare-checkbox')) {
     }
     renderComparePartnersBar();
   }
+   // Auto-scrolls the results into view whenever a search or filter
+// interaction happens - but only if they're not already visible.
+// Checking first avoids repeatedly yanking the page on every
+// keystroke once the user has already scrolled down once.
+function scrollToResultsIfNeeded() {
+  const controls = document.querySelector('.controls');
+  if (!controls) return;
+  const rect = controls.getBoundingClientRect();
+  const alreadyVisible = rect.top >= 0 && rect.top < window.innerHeight * 0.5;
+  if (!alreadyVisible) {
+    controls.scrollIntoView({ behavior: 'smooth', block: 'start' });
+  }
+}
 });
 
