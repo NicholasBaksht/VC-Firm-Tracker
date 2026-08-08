@@ -121,7 +121,6 @@ const TEAM_PAGES = {
   "peakspan-capital": "https://www.peakspancapital.com/team",
   "inovia-capital": "https://www.inovia.vc/team/",
   "qualcomm-ventures": null,
-  "dell-technologies-capital": "https://www.delltechnologies.com/en-us/capital/ventures/team.htm",
   "union-square-ventures": null,
   "qed-investors": null,
   "canaan-partners": null,
