@@ -242,4 +242,10 @@ const TEAM_PAGES = {
   "munich-re-ventures": "https://www.munichre.com/mrv/en/team.html",
   "dawn-capital": "https://www.dawncapital.com/team",
   "notion-capital": "https://www.notioncapital.com/team",
+  "prosus-ventures": "https://www.prosus.com/prosus-ventures",
+  "vision-knight-capital": "http://www.vkc-partners.com/htmlsen/team.php",
+  "openview-venture-partners": null,
+  "future-africa": null,
+  "in-q-tel": null,
+  "gaingels": null,
 };
