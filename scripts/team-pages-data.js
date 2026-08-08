@@ -216,4 +216,12 @@ const TEAM_PAGES = {
   "sky-vc": null,
   "amazon-alexa-fund": null,
   "airbus-ventures": null,
+  "innovation-endeavors": "https://www.innovationendeavors.com/team",
+  "earlybird-venture-capital": null,
+  "trinity-ventures": "https://www.trinityventures.com/team",
+  "antler": null,
+  "shasta-ventures": "https://www.shasta.vc/team",
+  "foundry-group": "https://foundry.vc/team/",
+  "dcm-ventures": "https://www.dcm.com/team",
+  "idg-capital": null,
 };
