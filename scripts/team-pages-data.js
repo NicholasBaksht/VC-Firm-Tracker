@@ -236,4 +236,10 @@ const TEAM_PAGES = {
   "blueyard-capital": null,
   "spark-capital": null,
   "breakthrough-energy-ventures": null,
+  "645-ventures": "https://645ventures.com/team",
+  "nventures": null,
+  "applied-ventures": "https://www.appliedmaterials.com/us/en/applied-ventures/av-team.html",
+  "munich-re-ventures": "https://www.munichre.com/mrv/en/team.html",
+  "dawn-capital": "https://www.dawncapital.com/team",
+  "notion-capital": "https://www.notioncapital.com/team",
 };
