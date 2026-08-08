@@ -332,7 +332,25 @@ const firmStages = {
       "base10-partners": ["Seed", "Series A", "Series B"],
       "village-global": ["Pre-Seed", "Seed"],
       "tribe-capital": ["Seed", "Series A"],
-      "storm-ventures": ["Seed", "Series A"]
+      "storm-ventures": ["Seed", "Series A"],
+   'cavalry-ventures': ['Pre-Seed', 'Seed'],
+  'point72-ventures': ['Seed', 'Series A', 'Series B', 'Growth', 'Late Stage'],
+  'playground-global': ['Seed', 'Series A'],
+  'grishin-robotics': ['Seed', 'Series A'],
+  'defy-partners': ['Seed', 'Series A'],
+  'baukunst': ['Pre-Seed', 'Seed'],
+  'mucker-capital': ['Pre-Seed', 'Seed', 'Series A'],
+  'struck-capital': ['Pre-Seed', 'Seed'],
+  'science-inc': ['Pre-Seed', 'Seed'],
+  'wing-venture-capital': ['Seed', 'Series A'],
+  'soma-capital': ['Seed'],
+  'vy-capital': ['Growth', 'Late Stage'],
+  'iconiq-capital': ['Series A', 'Series B', 'Growth'],
+  'mfv-partners': ['Seed', 'Series A'],
+  'liquid2-ventures': ['Seed', 'Series A'],
+  'unusual-ventures': ['Seed'],
+  'collaborative-fund': ['Seed', 'Series A', 'Growth'],
+  'shrug-capital': ['Seed']
 };
 
 // ============================================================
